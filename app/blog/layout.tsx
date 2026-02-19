@@ -1,0 +1,35 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Blog Swiipx — Avis Google, SEO Local & NFC | Guides 2026',
+  description:
+    'Guides pratiques pour booster vos avis Google, votre visibilité locale et votre e-réputation. Stratégies NFC, SEO local, scripts de collecte et bonnes pratiques.',
+  keywords:
+    'blog avis google, guide SEO local, collecte avis, plaque NFC avis, e-réputation, visibilité locale, Google Business Profile',
+  alternates: {
+    canonical: 'https://swiipx.fr/blog',
+  },
+  openGraph: {
+    title: 'Blog Swiipx — Avis Google, SEO Local & NFC',
+    description:
+      'Guides pratiques pour booster vos avis Google et votre visibilité locale. Stratégies, scripts et outils NFC.',
+    url: 'https://swiipx.fr/blog',
+    siteName: 'Swiipx',
+    locale: 'fr_FR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog Swiipx — Avis Google, SEO Local & NFC',
+    description:
+      'Guides pratiques pour booster vos avis Google et votre visibilité locale.',
+  },
+}
+
+export default function BlogLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return <>{children}</>
+}

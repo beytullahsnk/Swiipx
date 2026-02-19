@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(npm run build:*)",
+      "Bash(php:*)",
+      "Bash(docker:*)",
+      "Bash(docker-compose:*)",
+      "Bash(npm create astro@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(lsof:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:www.nike.com)",
+      "WebFetch(domain:www.eurosportsoccer.com)",
+      "WebFetch(domain:www.soccervillage.com)",
+      "WebFetch(domain:www.soccerunlimitedusa.com)",
+      "WebFetch(domain:www.footballkitarchive.com)",
+      "Bash(curl:*)",
+      "Bash(file:*)",
+      "Bash(npx tsx:*)"
+    ]
+  }
+}
