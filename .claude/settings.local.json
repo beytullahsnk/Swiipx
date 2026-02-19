@@ -18,7 +18,12 @@
       "WebFetch(domain:www.footballkitarchive.com)",
       "Bash(curl:*)",
       "Bash(file:*)",
-      "Bash(npx tsx:*)"
+      "Bash(npx tsx:*)",
+      "Bash(git rev-list:*)",
+      "Bash(git cat-file:*)",
+      "Bash(sort:*)",
+      "Bash(git config:*)",
+      "Bash(git push:*)"
     ]
   }
 }
