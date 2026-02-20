@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { Resend } from 'resend'
+import { render } from '@react-email/render'
 import OrderConfirmation from '../../emails/OrderConfirmation'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -108,24 +109,35 @@ export async function POST(request: NextRequest) {
       // Get customer email and name
       const customerEmail = session.customer_details?.email
       const customerName = session.customer_details?.name || 'Client'
+      console.log('📧 Webhook: customerEmail =', customerEmail, ', customerName =', customerName)
 
       if (!customerEmail) {
-        console.error('No customer email found in session')
+        console.error('❌ No customer email found in session')
         return NextResponse.json({ received: true })
       }
 
-      // Get line items from Stripe
-      const lineItems = await stripe.checkout.sessions.listLineItems(session.id)
-
-      const items = lineItems.data.map((item) => ({
-        name: item.description || 'Plaque Swiipx',
-        quantity: item.quantity || 1,
-        amount: item.amount_total || 0,
-      }))
+      // Get line items from Stripe (avec fallback si ça échoue)
+      let items = [{ name: 'Plaque Swiipx', quantity: 1, amount: session.amount_total || 0 }]
+      try {
+        console.log('📦 Webhook: fetching line items for session', session.id)
+        const lineItems = await stripe.checkout.sessions.listLineItems(session.id)
+        console.log('📦 Webhook: lineItems count =', lineItems.data.length)
+        if (lineItems.data.length > 0) {
+          items = lineItems.data.map((item) => ({
+            name: item.description || 'Plaque Swiipx',
+            quantity: item.quantity || 1,
+            amount: item.amount_total || 0,
+          }))
+        }
+      } catch (lineItemsError: any) {
+        console.warn('⚠️ Impossible de récupérer les line items:', lineItemsError?.message)
+        console.log('📦 Webhook: utilisation du fallback')
+      }
 
       // Get business info from metadata
       const businessName = session.metadata?.business_name || ''
       const businessAddress = session.metadata?.business_address || ''
+      console.log('🏢 Webhook: business =', businessName)
 
       // Get shipping address
       const shipping = session.shipping_details
@@ -141,23 +153,25 @@ export async function POST(request: NextRequest) {
             .filter(Boolean)
             .join(', ')
         : ''
+      console.log('📫 Webhook: shippingAddress =', shippingAddress)
 
       // 1. Send confirmation email via Resend
-      await getResend().emails.send({
+      console.log('📧 Webhook: sending email to', customerEmail)
+      const emailHtml = await render(OrderConfirmation({
+        customerName,
+        businessName,
+        businessAddress,
+        items,
+        totalAmount: session.amount_total || 0,
+        shippingAddress,
+      }))
+      const emailResult = await getResend().emails.send({
         from: 'Swiipx <bonjour@swiipx.fr>',
         to: customerEmail,
         subject: 'Commande confirmée — Swiipx',
-        react: OrderConfirmation({
-          customerName,
-          businessName,
-          businessAddress,
-          items,
-          totalAmount: session.amount_total || 0,
-          shippingAddress,
-        }),
+        html: emailHtml,
       })
-
-      console.log(`✅ Email de confirmation envoyé à ${customerEmail}`)
+      console.log('✅ Email envoyé:', JSON.stringify(emailResult))
 
       // 2. Créer le colis sur Sendcloud
       if (shipping) {
@@ -165,10 +179,9 @@ export async function POST(request: NextRequest) {
         await createSendcloudParcel(shipping, customerEmail, orderNumber)
       }
 
-    } catch (error) {
-      console.error('Erreur webhook:', error)
-      // On ne retourne pas d'erreur 500 — le webhook doit toujours répondre 200
-      // sinon Stripe va re-tenter
+    } catch (error: any) {
+      console.error('❌ Erreur webhook:', error?.message || error)
+      console.error('❌ Stack:', error?.stack)
     }
   }
 

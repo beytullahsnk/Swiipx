@@ -11,7 +11,7 @@ const PRODUCT_MAP = {
   plaque1: {
     productId: 'prod_TOht805NFJflwU', // prod_TOht805NFJflwU
     name: 'Swiipx — 1 Plaque',
-    amountCents: 3990, // 39,90€ TTC
+    amountCents: 50, // ⚠️ TEST: 0,50€ — remettre 3990 après test
   },
   plaque2: {
     productId: 'prod_TOhuRHDGoAwXmX', // prod_TOhuRHDGoAwXmX
