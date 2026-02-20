@@ -1,11 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Check, ChevronDown, ChevronLeft, ChevronRight, Gift, MapPin, Package, Shield, Truck } from 'lucide-react'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart } from '../store/cart'
+import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
 
 // Product packs data (matching cart store IDs)
@@ -46,10 +47,25 @@ const productBenefits = [
 
 export default function ProductShowcase() {
   const { addItem, openCart } = useCart()
+  const { company } = useCompanyStore()
   const [selectedPack, setSelectedPack] = useState<typeof productPacks[0]['id']>('plaque2') // Default to pack 2 (most popular)
   const [selectedImage, setSelectedImage] = useState(0)
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [business, setBusiness] = useState<BusinessInfo | null>(null)
+
+  // Restaurer l'entreprise depuis le store Zustand au montage
+  useEffect(() => {
+    if (company && company.placeId && !business) {
+      setBusiness({
+        name: company.name,
+        address: company.address,
+        place_id: company.placeId,
+        phone: company.phone,
+        lat: company.lat,
+        lng: company.lng,
+      })
+    }
+  }, [company])
 
   // Product images - Chaque miniature a sa propre grande image
   const productImages = [
