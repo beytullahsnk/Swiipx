@@ -8,16 +8,17 @@ export default function Footer() {
 
   const footerLinks = {
     product: [
-      { name: 'Nos packs', href: '#product' },
-      { name: 'Comment ça marche', href: '#how-it-works' },
-      { name: 'Témoignages', href: '#testimonials' },
-      { name: 'FAQ', href: '#faq' },
+      { name: 'Nos packs', href: '/#product' },
+      { name: 'Comment ça marche', href: '/#how-it-works' },
+      { name: 'Témoignages', href: '/#testimonials' },
+      { name: 'FAQ', href: '/#faq' },
     ],
     livraison: [
       { name: 'Expédition et Livraison', href: '/livraison' },
       { name: 'Retours et échanges', href: '/retours' },
     ],
     swiipx: [
+      { name: 'Blog', href: '/blog' },
       { name: 'Contactez-nous', href: '/contact' },
       { name: 'Mentions légales', href: '/mentions-legales' },
       { name: 'CGV', href: '/cgv' },
@@ -53,22 +54,13 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
-                  {link.href.startsWith('#') ? (
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      prefetch={true}
-                      className="text-gray-400 hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  )}
+                  <Link
+                    href={link.href}
+                    prefetch={true}
+                    className="text-gray-400 hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>

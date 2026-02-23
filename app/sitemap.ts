@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://swiipx.fr'
+  const now = new Date().toISOString()
 
   const blogSlugs = [
     'obtenir-plus-avis-google',
@@ -12,22 +13,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'erreurs-demander-avis',
   ]
 
+  const productSlugs = ['starter', 'business', 'pro']
+
   const staticPages = [
-    { url: baseUrl, changeFrequency: 'weekly' as const, priority: 1 },
-    { url: `${baseUrl}/blog`, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/blog/doubler-avis-google-30-jours`, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${baseUrl}/contact`, changeFrequency: 'monthly' as const, priority: 0.5 },
-    { url: `${baseUrl}/livraison`, changeFrequency: 'monthly' as const, priority: 0.4 },
-    { url: `${baseUrl}/retours`, changeFrequency: 'monthly' as const, priority: 0.4 },
-    { url: `${baseUrl}/cgv`, changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/mentions-legales`, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: baseUrl, lastModified: now, changeFrequency: 'weekly' as const, priority: 1 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/blog/doubler-avis-google-30-jours`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/livraison`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/retours`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/cgv`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${baseUrl}/mentions-legales`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
   ]
+
+  const productPages = productSlugs.map((slug) => ({
+    url: `${baseUrl}/product/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }))
 
   const blogPages = blogSlugs.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
+    lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
-  return [...staticPages, ...blogPages]
+  return [...staticPages, ...productPages, ...blogPages]
 }

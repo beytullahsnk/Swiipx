@@ -13,7 +13,7 @@ const products = {
     name: 'Pack Starter',
     slug: 'starter',
     plaques: 1,
-    price: 49,
+    price: 39.90,
     originalPrice: null,
     description: 'Parfait pour débuter et tester la puissance du NFC pour votre entreprise.',
     features: [
@@ -41,8 +41,8 @@ const products = {
     name: 'Pack Business',
     slug: 'business',
     plaques: 2,
-    price: 79,
-    originalPrice: 98,
+    price: 59.90,
+    originalPrice: 79.90,
     popular: true,
     description: 'Le choix idéal pour les professionnels qui veulent multiplier les points de contact.',
     features: [
@@ -71,8 +71,8 @@ const products = {
     name: 'Pack Pro',
     slug: 'pro',
     plaques: 5,
-    price: 149,
-    originalPrice: 245,
+    price: 89.90,
+    originalPrice: 149.90,
     description: 'La solution complète pour les entreprises avec plusieurs emplacements stratégiques.',
     features: [
       '5 plaques NFC premium',

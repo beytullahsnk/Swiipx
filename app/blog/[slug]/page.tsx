@@ -1461,9 +1461,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </div>
         </div>
         <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mb-4">
+          <p className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mb-4">
             Boostez vos avis Google<br />avec Swiipx dès aujourd&apos;hui
-          </h2>
+          </p>
           <p className="text-gray-800 mb-6 max-w-xl mx-auto">
             Commandez votre plaque NFC et commencez à collecter des avis en 10 secondes. Utilisé par 500+ entreprises.
           </p>
@@ -1607,6 +1607,29 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 prose-img:rounded-2xl prose-img:shadow-lg"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
+
+            {/* Section Articles Connexes (visible sur tous les écrans) */}
+            <div className="mt-16 pt-10 border-t-2 border-gray-100">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Articles connexes
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {filteredRelated.map((relArticle) => (
+                  <Link
+                    key={relArticle.slug}
+                    href={`/blog/${relArticle.slug}`}
+                    className="group block p-5 bg-gray-50 rounded-xl hover:bg-blue-50 border border-gray-200 hover:border-primary/30 transition-all duration-300"
+                  >
+                    <div className="flex items-start space-x-3">
+                      <ArrowRight className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                      <span className="text-gray-800 font-medium group-hover:text-primary transition-colors">
+                        {relArticle.label}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
 
           </article>
 

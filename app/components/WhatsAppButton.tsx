@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import Script from 'next/script'
 
 /**
  * Tawk.to Live Chat Widget
@@ -16,18 +16,10 @@ const TAWK_PROPERTY_ID = '698f027e1f51081c3676f34d'
 const TAWK_WIDGET_ID = '1jhba3g6k'
 
 export default function WhatsAppButton() {
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.async = true
-    script.src = `https://embed.tawk.to/${TAWK_PROPERTY_ID}/${TAWK_WIDGET_ID}`
-    script.charset = 'UTF-8'
-    script.setAttribute('crossorigin', '*')
-    document.head.appendChild(script)
-
-    return () => {
-      document.head.removeChild(script)
-    }
-  }, [])
-
-  return null // Le widget Tawk.to s'injecte lui-même dans le DOM
+  return (
+    <Script
+      src={`https://embed.tawk.to/${TAWK_PROPERTY_ID}/${TAWK_WIDGET_ID}`}
+      strategy="lazyOnload"
+    />
+  )
 }

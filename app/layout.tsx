@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://swiipx.fr',
   },
+  other: {
+    'theme-color': '#2563EB',
+  },
 }
 
 export default function RootLayout({
@@ -51,6 +54,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Swiipx',
+              url: 'https://swiipx.fr',
+              logo: 'https://swiipx.fr/logo.png',
+              description: 'Plaques NFC pour collecter des avis Google automatiquement. Boostez votre visibilité locale.',
+              email: 'bonjour@swiipx.fr',
+              areaServed: 'FR',
+            }),
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <ClientLayout>
           {children}

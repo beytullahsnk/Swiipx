@@ -96,7 +96,7 @@ export default function HeroSection() {
                     <img
                       key={i}
                       src={avatar}
-                      alt=""
+                      alt="Client Swiipx satisfait"
                       className="w-10 h-10 rounded-full border-2 border-white object-cover"
                     />
                   ))}
