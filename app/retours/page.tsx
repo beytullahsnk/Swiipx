@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { RotateCcw, CheckCircle, Clock, Mail } from 'lucide-react'
+import Link from 'next/link'
 
 export const dynamic = 'force-static'
 
@@ -185,12 +186,12 @@ export default function RetoursPage() {
             Notre équipe est à votre disposition pour répondre à toutes vos questions concernant 
             les retours et échanges.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             Contactez-nous
-          </a>
+          </Link>
         </motion.section>
       </div>
     </div>

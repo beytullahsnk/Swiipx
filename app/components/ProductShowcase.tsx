@@ -65,15 +65,15 @@ export default function ProductShowcase() {
         lng: company.lng,
       })
     }
-  }, [company])
+  }, [company, business])
 
   // Product images - Chaque miniature a sa propre grande image
   const productImages = [
-    { id: 0, src: '/product-main.jpg', alt: 'Plaque NFC Swiipx', mainSrc: '/product-main.jpg' },
-    { id: 1, src: '/product-thumb-1.png', alt: 'Plaque NFC principale', mainSrc: '/product-thumb-1.png' },
-    { id: 2, src: '/product-thumb-2.jpg', alt: 'Plaque NFC vue de côté', mainSrc: '/product-thumb-2.jpg' },
-    { id: 3, src: '/product-thumb-3.jpg', alt: 'Plaque NFC en utilisation', mainSrc: '/product-thumb-3.jpg' },
-    { id: 4, src: '/product-thumb-4.jpg', alt: 'Pack complet', mainSrc: '/product-thumb-4.jpg' },
+    { id: 0, src: '/product-main.jpg', alt: 'Plaque avis Google NFC Swiipx', mainSrc: '/product-main.jpg' },
+    { id: 1, src: '/product-thumb-1.jpg', alt: 'Plaque avis Google NFC — vue principale', mainSrc: '/product-thumb-1.jpg' },
+    { id: 2, src: '/product-thumb-2.jpg', alt: 'Plaque avis Google NFC — vue de côté', mainSrc: '/product-thumb-2.jpg' },
+    { id: 3, src: '/product-thumb-3.jpg', alt: 'Plaque avis Google NFC — en utilisation', mainSrc: '/product-thumb-3.jpg' },
+    { id: 4, src: '/product-thumb-4.jpg', alt: 'Pack complet plaques avis Google Swiipx', mainSrc: '/product-thumb-4.jpg' },
   ]
 
   const handleAddToCart = () => {
@@ -180,7 +180,7 @@ export default function ProductShowcase() {
 
               {/* Badge */}
               <div className="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg z-20">
-                BLACK MONTH
+                LIVRAISON OFFERTE
               </div>
             </div>
 
@@ -233,9 +233,9 @@ export default function ProductShowcase() {
           >
             {/* Product Title */}
             <div>
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
                 Plaque Avis Google
-              </h1>
+              </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Démarrez votre collecte d&apos;avis dès aujourd&apos;hui avec notre méthode testée sur 500+ entreprises !
               </p>
@@ -249,6 +249,7 @@ export default function ProductShowcase() {
                     key={i}
                     className="w-5 h-5 text-yellow-400 fill-current"
                     viewBox="0 0 20 20"
+                    aria-hidden="true"
                   >
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
@@ -369,7 +370,7 @@ export default function ProductShowcase() {
               {/* Stock Warning */}
               <div className="flex items-center justify-center space-x-2 text-sm">
                 <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                <span className="font-semibold text-red-600">Stock limité — BLACK MONTH</span>
+                <span className="font-semibold text-red-600">Stock limité — Offre du moment</span>
               </div>
             </div>
 
@@ -389,6 +390,7 @@ export default function ProductShowcase() {
                 <div key={section.id} className="border border-gray-200 rounded-lg">
                   <button
                     onClick={() => toggleSection(section.id)}
+                    aria-expanded={expandedSection === section.id}
                     className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors rounded-lg"
                   >
                     <div className="flex items-center space-x-3">
@@ -423,7 +425,7 @@ export default function ProductShowcase() {
             <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 space-y-3">
               <p className="font-bold text-gray-900 flex items-center space-x-2">
                 <Gift className="w-5 h-5 text-primary" />
-                <span>Offre spéciale BLACK MONTH</span>
+                <span>Offre spéciale livraison offerte</span>
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start space-x-2">

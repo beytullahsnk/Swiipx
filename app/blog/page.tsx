@@ -5,8 +5,6 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const dynamic = 'force-static'
-
 export default function BlogPage() {
   const blogPosts = [
     {
@@ -89,22 +87,22 @@ export default function BlogPage() {
         </div>
         <div className="absolute right-6 top-32 hidden xl:block">
           <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-            <Image src="/product-thumb-1.png" alt="Plaque NFC Swiipx vue" width={192} height={192} className="w-full h-full object-cover" />
+            <Image src="/product-thumb-1.jpg" alt="Plaque NFC Swiipx vue" width={192} height={192} className="w-full h-full object-cover" />
           </div>
         </div>
         <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mb-4">
+          <p className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mb-4">
             Boostez vos avis Google<br />avec Swiipx dès aujourd&apos;hui
-          </h2>
+          </p>
           <p className="text-gray-800 mb-6 max-w-xl mx-auto">
-            Commandez votre plaque NFC et commencez à collecter des avis en 10 secondes. Utilisé par 500+ entreprises.
+            Commandez votre plaque avis Google NFC et commencez à collecter des avis en 10 secondes. Utilisé par 500+ entreprises.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/#product"
               className="px-8 py-3 bg-gray-900 text-white font-bold rounded-full hover:bg-gray-800 transition-colors shadow-lg"
             >
-              Commander maintenant
+              Découvrir nos plaques avis Google
             </Link>
             <Link
               href="/#how-it-works"
@@ -139,6 +137,7 @@ export default function BlogPage() {
           GRILLE D'ARTICLES
           ═══════════════════════════════════════════ */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="sr-only">Nos derniers articles</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {blogPosts.map((post, index) => {
             return (
@@ -224,6 +223,7 @@ export default function BlogPage() {
               <input
                 type="email"
                 placeholder="votre@email.fr"
+                aria-label="Adresse email pour la newsletter"
                 className="flex-1 px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none bg-white"
               />
               <button

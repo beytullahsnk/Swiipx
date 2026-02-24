@@ -108,8 +108,9 @@ export default function Navbar() {
           {/* CTA Buttons */}
           <div className="flex items-center space-x-4">
             {/* Cart Icon */}
-            <button 
+            <button
               onClick={openCart}
+              aria-label="Ouvrir le panier"
               className="relative p-2 text-gray-700 hover:text-primary transition-colors"
             >
               <ShoppingCart className="w-6 h-6" />
@@ -131,6 +132,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               className="md:hidden p-2 text-gray-700 hover:text-primary transition-colors"
             >
               {isMobileMenuOpen ? (
@@ -154,16 +156,27 @@ export default function Navbar() {
             className="md:hidden bg-white border-t border-gray-200 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-3">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navItems.map((item) =>
+                item.href.startsWith('/') && !item.href.includes('#') ? (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
+              )}
               <a
                 href="/#product"
                 className="block w-full text-center px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap"

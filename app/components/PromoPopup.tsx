@@ -107,6 +107,8 @@ export default function PromoPopup({ isOpen, onClose }: PromoPopupProps) {
 
       {/* Modal */}
       <div
+        role="dialog"
+        aria-label="Offre promotionnelle"
         className={`w-[90%] max-w-sm bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-200 ${
           isClosing ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
         }`}

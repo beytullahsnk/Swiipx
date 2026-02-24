@@ -1,0 +1,24 @@
+{
+  "name": "Swiipx — Plaques NFC Avis Google",
+  "short_name": "Swiipx",
+  "description": "Doublez vos avis Google avec la plaque NFC n°1. Installation en 30 secondes, livraison gratuite.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563EB",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

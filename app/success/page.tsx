@@ -4,6 +4,7 @@ import { CheckCircle } from 'lucide-react'
 import { useEffect, Suspense } from 'react'
 import { useCart } from '../store/cart'
 import { useSearchParams } from 'next/navigation'
+import Link from 'next/link'
 
 function SuccessContent() {
   const { clearCart } = useCart()
@@ -59,12 +60,12 @@ function SuccessContent() {
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-3">
-          <a
+          <Link
             href="/"
             className="flex-1 px-6 py-3 bg-gray-900 text-white rounded-lg font-medium text-sm hover:bg-gray-800 transition-colors text-center"
           >
             Retour à l&apos;accueil
-          </a>
+          </Link>
           <button
             onClick={() => { if ((window as any).Tawk_API) (window as any).Tawk_API.maximize() }}
             className="flex-1 px-6 py-3 bg-white text-gray-900 rounded-lg font-medium text-sm border border-gray-200 hover:border-gray-300 transition-colors"

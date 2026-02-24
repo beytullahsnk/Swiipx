@@ -34,6 +34,11 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
   return (
     <>
+      {/* Skip to main content */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:font-semibold">
+        Aller au contenu principal
+      </a>
+
       {/* Google Places API Script */}
       <GooglePlacesScript />
       
@@ -59,7 +64,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <Navbar />
       
       {/* Main content */}
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         {children}
       </main>
       

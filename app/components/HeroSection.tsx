@@ -22,37 +22,17 @@ export default function HeroSection() {
             transition={{ duration: 0.7 }}
             className="text-center lg:text-left"
           >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full shadow-md mb-6"
-            >
-              <span className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 text-accent fill-accent"
-                  />
-                ))}
-              </span>
-              <span className="text-sm font-semibold text-gray-700">
-                4.9/5 - 500+ entreprises nous font confiance
-              </span>
-            </motion.div>
-
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Doublez vos avis Google en{' '}
-              <span className="text-primary">3 mois 🚀</span>
+              La plaque avis Google qui{' '}
+              <span className="text-primary">double vos avis 🚀</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              Vos clients laissent un avis en{' '}
+              Avec notre plaque avis Google NFC, vos clients laissent un avis en{' '}
               <span className="font-semibold text-primary">10 secondes</span>
-              {' '}(vs 3-5 min sur Google). Plus besoin de leur expliquer comment faire : ils scannent, c&apos;est tout.
+              {' '}(vs 3-5 min sur Google). Ils scannent, c&apos;est tout. +200% d&apos;avis en 3 mois.
             </p>
 
             {/* CTA Buttons */}
@@ -92,11 +72,12 @@ export default function HeroSection() {
                     'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop',
                     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop',
                   ].map((avatar, i) => (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <Image
                       key={i}
                       src={avatar}
-                      alt="Client Swiipx satisfait"
+                      alt={`Client Swiipx satisfait ${i + 1}`}
+                      width={40}
+                      height={40}
                       className="w-10 h-10 rounded-full border-2 border-white object-cover"
                     />
                   ))}
@@ -118,19 +99,19 @@ export default function HeroSection() {
               className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-600"
             >
               <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="font-medium">Livraison 2-3 jours</span>
               </div>
               <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="font-medium">Garantie produit 2 ans</span>
               </div>
               <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="font-medium">Sans abonnement</span>
@@ -153,7 +134,7 @@ export default function HeroSection() {
               <div className="relative bg-white rounded-3xl shadow-2xl p-8 sm:p-12 flex items-center justify-center aspect-square overflow-hidden">
                 <Image
                   src="/hero-product.jpg"
-                  alt="Plaque NFC Swiipx"
+                  alt="Plaque avis Google NFC Swiipx"
                   width={800}
                   height={800}
                   className="w-full h-full object-contain"

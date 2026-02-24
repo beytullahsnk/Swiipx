@@ -70,7 +70,6 @@ export default function BusinessAutocomplete({
 
       // Vérifier uniquement le place_id (geometry est optionnel)
       if (!place.place_id) {
-        console.warn('Google Places: place_id manquant')
         return
       }
 

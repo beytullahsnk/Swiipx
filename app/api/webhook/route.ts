@@ -23,7 +23,6 @@ async function createSendcloudParcel(shipping: Stripe.Checkout.Session.ShippingD
   const secretKey = process.env.SENDCLOUD_SECRET_KEY
 
   if (!publicKey || !secretKey) {
-    console.error('Sendcloud API keys missing')
     return null
   }
 
@@ -65,14 +64,11 @@ async function createSendcloudParcel(shipping: Stripe.Checkout.Session.ShippingD
     const data = await response.json()
 
     if (!response.ok) {
-      console.error('Sendcloud error:', JSON.stringify(data))
       return null
     }
 
-    console.log(`📦 Colis Sendcloud créé — ID: ${data.parcel?.id}, Order: ${orderNumber}`)
     return data.parcel
   } catch (error) {
-    console.error('Sendcloud API error:', error)
     return null
   }
 }
@@ -97,7 +93,6 @@ export async function POST(request: NextRequest) {
       process.env.STRIPE_WEBHOOK_SECRET!
     )
   } catch (err: any) {
-    console.error('Webhook signature verification failed:', err.message)
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
 
@@ -109,19 +104,15 @@ export async function POST(request: NextRequest) {
       // Get customer email and name
       const customerEmail = session.customer_details?.email
       const customerName = session.customer_details?.name || 'Client'
-      console.log('📧 Webhook: customerEmail =', customerEmail, ', customerName =', customerName)
 
       if (!customerEmail) {
-        console.error('❌ No customer email found in session')
         return NextResponse.json({ received: true })
       }
 
       // Get line items from Stripe (avec fallback si ça échoue)
       let items = [{ name: 'Plaque Swiipx', quantity: 1, amount: session.amount_total || 0 }]
       try {
-        console.log('📦 Webhook: fetching line items for session', session.id)
         const lineItems = await stripe.checkout.sessions.listLineItems(session.id)
-        console.log('📦 Webhook: lineItems count =', lineItems.data.length)
         if (lineItems.data.length > 0) {
           items = lineItems.data.map((item) => ({
             name: item.description || 'Plaque Swiipx',
@@ -130,14 +121,12 @@ export async function POST(request: NextRequest) {
           }))
         }
       } catch (lineItemsError: any) {
-        console.warn('⚠️ Impossible de récupérer les line items:', lineItemsError?.message)
-        console.log('📦 Webhook: utilisation du fallback')
+        // Utilisation du fallback par défaut
       }
 
       // Get business info from metadata
       const businessName = session.metadata?.business_name || ''
       const businessAddress = session.metadata?.business_address || ''
-      console.log('🏢 Webhook: business =', businessName)
 
       // Get shipping address
       const shipping = session.shipping_details
@@ -153,10 +142,8 @@ export async function POST(request: NextRequest) {
             .filter(Boolean)
             .join(', ')
         : ''
-      console.log('📫 Webhook: shippingAddress =', shippingAddress)
 
       // 1. Send confirmation email via Resend
-      console.log('📧 Webhook: sending email to', customerEmail)
       const emailHtml = await render(OrderConfirmation({
         customerName,
         businessName,
@@ -165,13 +152,12 @@ export async function POST(request: NextRequest) {
         totalAmount: session.amount_total || 0,
         shippingAddress,
       }))
-      const emailResult = await getResend().emails.send({
+      await getResend().emails.send({
         from: 'Swiipx <bonjour@swiipx.fr>',
         to: customerEmail,
         subject: 'Commande confirmée — Swiipx',
         html: emailHtml,
       })
-      console.log('✅ Email envoyé:', JSON.stringify(emailResult))
 
       // 2. Créer le colis sur Sendcloud
       if (shipping) {
@@ -180,8 +166,7 @@ export async function POST(request: NextRequest) {
       }
 
     } catch (error: any) {
-      console.error('❌ Erreur webhook:', error?.message || error)
-      console.error('❌ Stack:', error?.stack)
+      // Erreur silencieuse côté serveur — ne pas exposer les détails
     }
   }
 

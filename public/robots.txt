@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /cart
+Disallow: /cart/
 Disallow: /success
+Disallow: /success/
 
 Sitemap: https://swiipx.fr/sitemap.xml

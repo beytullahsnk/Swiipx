@@ -90,14 +90,14 @@ export default function DoublerAvisGoogle30Jours() {
         </div>
         <div className="absolute right-6 top-32 hidden lg:block">
           <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-            <Image src="/product-thumb-1.png" alt="Plaque NFC Swiipx vue de face" width={192} height={192} className="w-full h-full object-cover" />
+            <Image src="/product-thumb-1.jpg" alt="Plaque NFC Swiipx vue de face" width={192} height={192} className="w-full h-full object-cover" />
           </div>
         </div>
 
         <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mb-4">
+          <p className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mb-4">
             Boostez vos avis Google<br />avec Swiipx dès aujourd&apos;hui
-          </h2>
+          </p>
           <p className="text-gray-800 mb-6 max-w-xl mx-auto">
             Commandez votre plaque NFC et commencez à collecter des avis en 10 secondes. Utilisé par 500+ entreprises en France.
           </p>
@@ -106,7 +106,7 @@ export default function DoublerAvisGoogle30Jours() {
               href="/#product"
               className="px-8 py-3 bg-gray-900 text-white font-bold rounded-full hover:bg-gray-800 transition-colors shadow-lg"
             >
-              Commander maintenant
+              Découvrir nos plaques avis Google
             </Link>
             <Link
               href="/#how-it-works"
@@ -166,7 +166,7 @@ export default function DoublerAvisGoogle30Jours() {
               <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4">
                 SOMMAIRE
               </h3>
-              <nav className="space-y-0.5 max-h-[calc(100vh-340px)] overflow-y-auto pr-2 mb-8">
+              <nav aria-label="Table des matières" className="space-y-0.5 max-h-[calc(100vh-340px)] overflow-y-auto pr-2 mb-8">
                 {tocSections.map((section, idx) => (
                   <a
                     key={section.id}
@@ -209,7 +209,7 @@ export default function DoublerAvisGoogle30Jours() {
                     href="/#product"
                     className="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-blue-700 transition-colors text-sm shadow-md hover:shadow-lg"
                   >
-                    Voir le produit →
+                    Voir la plaque avis Google →
                   </Link>
                   <div className="flex items-center justify-center gap-1 mt-2">
                     <span className="text-yellow-400 text-xs">★★★★★</span>
@@ -804,7 +804,7 @@ export default function DoublerAvisGoogle30Jours() {
                     <a
                       href="https://skyaksa.fr"
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer sponsored"
                       className="block w-full py-3 bg-indigo-600 text-white text-center font-bold rounded-lg hover:bg-indigo-700 transition-colors text-sm"
                     >
                       Demander un devis gratuit

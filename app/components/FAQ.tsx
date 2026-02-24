@@ -16,16 +16,16 @@ export default function FAQ() {
       answer: 'Nous expédions sous 24h ouvrées. La livraison prend entre 2 à 3 jours ouvrés en France métropolitaine. Vous recevrez un numéro de suivi par email dès l\'expédition de votre commande.',
     },
     {
-      question: 'La plaque est-elle personnalisable ?',
-      answer: 'Oui, absolument ! Vous pouvez personnaliser la plaque avec votre logo, vos couleurs et même un message personnalisé. La personnalisation est gratuite pour les packs Business et Pro. Contactez-nous après votre commande pour nous envoyer vos fichiers.',
+      question: 'La plaque avis Google est-elle personnalisable ?',
+      answer: 'Oui, absolument ! Vous pouvez personnaliser votre plaque avis Google avec votre logo, vos couleurs et même un message personnalisé. La personnalisation est gratuite pour les packs Business et Pro. Contactez-nous après votre commande pour nous envoyer vos fichiers.',
     },
     {
       question: 'Y a-t-il un abonnement ?',
       answer: 'Non, aucun abonnement ! Vous payez une seule fois pour votre plaque NFC et elle fonctionne à vie. Pas de frais cachés, pas de renouvellement mensuel. C\'est un investissement unique pour booster vos avis Google.',
     },
     {
-      question: 'Comment fonctionne la technologie NFC ?',
-      answer: 'Le NFC (Near Field Communication) permet à vos clients de scanner la plaque simplement en approchant leur smartphone. Aucune application n\'est nécessaire, ça fonctionne nativement sur tous les smartphones récents (iPhone et Android). Pour les téléphones plus anciens, un QR code est également présent sur la plaque.',
+      question: 'Comment fonctionne une plaque avis Google NFC ?',
+      answer: 'La plaque avis Google NFC fonctionne grâce à la technologie NFC (Near Field Communication). Vos clients approchent leur smartphone de la plaque et sont redirigés directement vers votre page avis Google. Aucune application nécessaire, compatible iPhone et Android. Un QR code est aussi présent en secours.',
     },
     {
       question: 'Puis-je modifier le lien de redirection plus tard ?',
@@ -36,8 +36,8 @@ export default function FAQ() {
       answer: 'Nos plaques sont garanties 2 ans (3 ans pour le pack Pro) contre tout défaut de fabrication. En cas de problème, contactez notre support client qui se fera un plaisir de vous aider.',
     },
     {
-      question: 'La plaque résiste-t-elle à l\'extérieur ?',
-      answer: 'Oui, nos plaques sont conçues pour résister aux intempéries. Elles sont fabriquées en matériau résistant à l\'eau, aux UV et aux températures extrêmes. Vous pouvez les installer en extérieur sans problème.',
+      question: 'La plaque avis Google résiste-t-elle à l\'extérieur ?',
+      answer: 'Oui, nos plaques avis Google sont conçues pour résister aux intempéries. Fabriquées en matériau résistant à l\'eau, aux UV et aux températures extrêmes. Installation en extérieur sans problème.',
     },
     {
       question: 'Puis-je commander plusieurs plaques pour différents lieux ?',
@@ -60,10 +60,10 @@ export default function FAQ() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Questions fréquentes
+            Questions fréquentes sur nos plaques avis Google
           </h2>
           <p className="text-lg sm:text-xl text-gray-600">
-            Tout ce que vous devez savoir sur Swiipx
+            Tout ce que vous devez savoir sur nos plaques avis Google NFC
           </p>
         </motion.div>
 
@@ -78,6 +78,7 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
+                aria-expanded={openIndex === index}
                 className="w-full bg-gray-50 hover:bg-gray-100 rounded-2xl p-6 text-left transition-all duration-300 border-2 border-transparent hover:border-primary/20"
               >
                 <div className="flex items-center justify-between">

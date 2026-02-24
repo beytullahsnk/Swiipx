@@ -111,8 +111,6 @@ export async function POST(request: NextRequest) {
     // Return checkout URL
     return NextResponse.json({ url: session.url })
   } catch (error: any) {
-    console.error('Stripe checkout error:', error?.type, error?.message, error?.raw?.message)
-
     // En dev, renvoyer le détail de l'erreur Stripe
     const isDev = process.env.NODE_ENV === 'development'
     const errorMessage = isDev

@@ -8,7 +8,7 @@ export default function Footer() {
 
   const footerLinks = {
     product: [
-      { name: 'Nos packs', href: '/#product' },
+      { name: 'Nos plaques avis Google', href: '/#product' },
       { name: 'Comment ça marche', href: '/#how-it-works' },
       { name: 'Témoignages', href: '/#testimonials' },
       { name: 'FAQ', href: '/#faq' },

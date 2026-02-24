@@ -129,7 +129,6 @@ export default function SideCart() {
         window.location.href = data.url
       }
     } catch (error: any) {
-      console.error('Checkout error:', error)
       toast.error(error?.message || 'Erreur lors du paiement. Veuillez réessayer.')
       setIsCheckingOut(false)
     }
@@ -170,6 +169,8 @@ export default function SideCart() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            role="dialog"
+            aria-label="Panier"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
@@ -184,6 +185,7 @@ export default function SideCart() {
               </h2>
               <button
                 onClick={closeCart}
+                aria-label="Fermer le panier"
                 className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
               >
                 <X className="w-6 h-6" />
@@ -256,6 +258,7 @@ export default function SideCart() {
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => setQty(item.id, item.qty - 1)}
+                            aria-label="Réduire la quantité"
                             className="w-8 h-8 flex items-center justify-center bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                           >
                             <Minus className="w-4 h-4" />
@@ -265,12 +268,14 @@ export default function SideCart() {
                           </span>
                           <button
                             onClick={() => setQty(item.id, item.qty + 1)}
+                            aria-label="Augmenter la quantité"
                             className="w-8 h-8 flex items-center justify-center bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                           >
                             <Plus className="w-4 h-4" />
                           </button>
                           <button
                             onClick={() => removeItem(item.id)}
+                            aria-label="Supprimer l'article"
                             className="ml-2 p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
                           >
                             <Trash2 className="w-4 h-4" />

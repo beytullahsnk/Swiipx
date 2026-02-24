@@ -1,6 +1,5 @@
 import HeroSection from './components/HeroSection'
 import HowItWorks from './components/HowItWorks'
-import ProductSection from './components/ProductSection'
 import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
@@ -20,8 +19,8 @@ export default function Home() {
       },
       {
         '@type': 'Question',
-        name: 'La plaque est-elle personnalisable ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Oui ! Vous pouvez personnaliser la plaque avec votre logo, vos couleurs et un message personnalisé. La personnalisation est gratuite pour les packs Business et Pro.' },
+        name: 'La plaque avis Google est-elle personnalisable ?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Oui ! Vous pouvez personnaliser votre plaque avis Google avec votre logo, vos couleurs et un message personnalisé. La personnalisation est gratuite pour les packs Business et Pro.' },
       },
       {
         '@type': 'Question',
@@ -30,8 +29,8 @@ export default function Home() {
       },
       {
         '@type': 'Question',
-        name: 'Comment fonctionne la technologie NFC ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Le NFC permet à vos clients de scanner la plaque en approchant leur smartphone. Aucune application nécessaire, compatible avec tous les smartphones récents. Un QR code est aussi présent sur la plaque.' },
+        name: 'Comment fonctionne une plaque avis Google NFC ?',
+        acceptedAnswer: { '@type': 'Answer', text: 'La plaque avis Google NFC redirige vos clients directement vers votre page avis Google quand ils approchent leur smartphone. Aucune application nécessaire, compatible iPhone et Android. Un QR code est aussi présent en secours.' },
       },
       {
         '@type': 'Question',
@@ -45,8 +44,8 @@ export default function Home() {
       },
       {
         '@type': 'Question',
-        name: 'La plaque résiste-t-elle à l\'extérieur ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Oui, nos plaques résistent à l\'eau, aux UV et aux températures extrêmes. Installation en extérieur sans problème.' },
+        name: 'La plaque avis Google résiste-t-elle à l\'extérieur ?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Oui, nos plaques avis Google résistent à l\'eau, aux UV et aux températures extrêmes. Installation en extérieur sans problème.' },
       },
       {
         '@type': 'Question',
@@ -59,9 +58,14 @@ export default function Home() {
   const productJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Plaque NFC Avis Google — Swiipx',
-    description: 'Plaque NFC pour collecter des avis Google automatiquement. Vos clients scannent, laissent un avis en 10 secondes. Sans abonnement.',
-    image: 'https://swiipx.fr/product-main.jpg',
+    name: 'Plaque Avis Google NFC & QR Code — Swiipx',
+    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Vos clients scannent la plaque, laissent un avis en 10 secondes. Sans abonnement.',
+    sku: 'SWIIPX-RANGE',
+    image: [
+      'https://swiipx.fr/product-main.jpg',
+      'https://swiipx.fr/product-thumb-1.jpg',
+      'https://swiipx.fr/product-thumb-2.jpg',
+    ],
     brand: {
       '@type': 'Brand',
       name: 'Swiipx',
@@ -83,35 +87,41 @@ export default function Home() {
       ratingValue: '4.9',
       reviewCount: '500',
       bestRating: '5',
+      worstRating: '1',
     },
     review: [
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Marie Dubois' },
+        datePublished: '2025-10-15',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Depuis que j\'ai installé les plaques Swiipx, mes avis Google ont explosé ! +180% en 2 mois.',
       },
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Thomas Bernard' },
+        datePublished: '2025-10-22',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Un investissement qui s\'est payé en quelques semaines ! Mes clients adorent scanner la plaque.',
       },
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Sophie Martin' },
+        datePublished: '2025-11-03',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Simple, efficace et ultra rapide à mettre en place. Le retour sur investissement est impressionnant !',
       },
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Alexandre Petit' },
+        datePublished: '2025-11-18',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Ma note Google est passée de 4.2 à 4.8 en 3 mois. Enfin une solution qui fonctionne !',
       },
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Isabelle Rousseau' },
+        datePublished: '2025-12-05',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Nos clients adorent la technologie NFC ! Un must-have pour tout commerce.',
       },

@@ -12,8 +12,8 @@ export default function HowItWorks() {
   const steps = [
     {
       icon: Smartphone,
-      title: 'Scannez la plaque',
-      description: 'Vos clients scannent la plaque NFC avec leur téléphone ou utilisent le QR code. Aucune application nécessaire.',
+      title: 'Scannez la plaque avis Google',
+      description: 'Vos clients approchent leur téléphone de la plaque avis Google NFC ou scannent le QR code. Aucune application nécessaire.',
       color: 'from-blue-500 to-blue-600',
     },
     {
@@ -41,10 +41,10 @@ export default function HowItWorks() {
           className="text-center mb-16 sm:mb-20"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Comment ça marche ?
+            Comment fonctionne notre plaque avis Google ?
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Un processus ultra-simple en 3 étapes pour transformer vos clients en ambassadeurs
+            3 étapes ultra-simples pour transformer chaque client en avis Google 5 étoiles
           </p>
         </motion.div>
 
@@ -85,6 +85,7 @@ export default function HowItWorks() {
                       className="w-12 lg:w-16 h-6 text-primary/30"
                       fill="none"
                       stroke="currentColor"
+                      aria-hidden="true"
                       viewBox="0 0 24 24"
                     >
                       <path

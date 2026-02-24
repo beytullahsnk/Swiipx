@@ -11,7 +11,7 @@ const seoData: Record<string, {
   faq: { q: string; a: string }[]
 }> = {
   'obtenir-plus-avis-google': {
-    title: 'Comment obtenir plus d\'avis Google en 2025 : 10 méthodes testées',
+    title: 'Comment obtenir plus d\'avis Google en 2026 : 10 méthodes testées',
     description: 'Découvrez 10 méthodes testées pour obtenir plus d\'avis Google rapidement. NFC, QR code, scripts, email, SMS : guide pratique avec résultats concrets (+250 % en 3 mois).',
     keywords: 'obtenir avis google, plus avis google, augmenter avis google, collecte avis, méthodes avis google, NFC avis, QR code avis, script demande avis',
     date: '2026-01-15',
@@ -97,6 +97,11 @@ const seoData: Record<string, {
   },
 }
 
+/* ── generateStaticParams — pre-build all article pages ── */
+export function generateStaticParams() {
+  return Object.keys(seoData).map((slug) => ({ slug }))
+}
+
 /* ── generateMetadata dynamique ── */
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const seo = seoData[params.slug]
@@ -105,7 +110,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: `${seo.title} - Swiipx`,
+    title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
     alternates: {
@@ -118,11 +123,23 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       siteName: 'Swiipx',
       locale: 'fr_FR',
       type: 'article',
+      publishedTime: seo.date,
+      modifiedTime: seo.dateModified,
+      authors: ['Équipe Swiipx'],
+      images: [
+        {
+          url: '/product-main.jpg',
+          width: 1200,
+          height: 630,
+          alt: seo.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: seo.title,
       description: seo.description,
+      images: ['/product-main.jpg'],
     },
   }
 }
@@ -146,6 +163,7 @@ function buildJsonLd(slug: string) {
       url: 'https://swiipx.fr',
       logo: { '@type': 'ImageObject', url: 'https://swiipx.fr/logo.png' },
     },
+    image: 'https://swiipx.fr/product-main.jpg',
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://swiipx.fr/blog/${slug}`,

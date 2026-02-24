@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Star, Quote } from 'lucide-react'
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
@@ -116,7 +117,7 @@ export default function Testimonials() {
                   {/* Quote Icon */}
                   <div className="mb-6">
                     <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
-                      <Quote className="w-6 h-6 text-primary" />
+                      <Quote className="w-6 h-6 text-primary" aria-hidden="true" />
                     </div>
                   </div>
 
@@ -126,6 +127,7 @@ export default function Testimonials() {
                       <Star
                         key={i}
                         className="w-5 h-5 text-accent fill-accent"
+                        aria-hidden="true"
                       />
                     ))}
                   </div>
@@ -139,10 +141,11 @@ export default function Testimonials() {
                   <div className="flex items-center space-x-4 pt-6 border-t border-gray-100">
                     <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center text-white font-bold text-lg overflow-hidden flex-shrink-0 ring-2 ring-primary/20">
                       {testimonial.avatar ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
+                        <Image
                           src={testimonial.avatar}
                           alt={testimonial.name}
+                          width={56}
+                          height={56}
                           className="w-full h-full object-cover"
                         />
                       ) : (
@@ -157,7 +160,7 @@ export default function Testimonials() {
                         {testimonial.business}
                       </p>
                       <p className="text-xs text-gray-500 flex items-center mt-1">
-                        <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                         </svg>
                         {testimonial.location}

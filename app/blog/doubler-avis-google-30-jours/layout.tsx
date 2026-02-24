@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Comment doubler vos avis Google en 30 jours | Guide 2026 - Swiipx',
+  title: 'Comment doubler vos avis Google en 30 jours | Guide 2026',
   description:
     'Méthode complète en 4 phases pour doubler vos avis Google en 30 jours. Optimisation Google Business Profile, plaque NFC, scripts de demande et templates de réponse. Cas pratique : +740 % d\'avis.',
   keywords:
@@ -17,12 +17,24 @@ export const metadata: Metadata = {
     siteName: 'Swiipx',
     locale: 'fr_FR',
     type: 'article',
+    publishedTime: '2026-01-19',
+    modifiedTime: '2026-01-19',
+    authors: ['Équipe Swiipx'],
+    images: [
+      {
+        url: '/product-main.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Comment doubler vos avis Google en 30 jours',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Comment doubler vos avis Google en 30 jours | Guide 2026',
     description:
       'Méthode complète en 4 phases + cas pratique (+740 % d\'avis). Scripts, templates et outils NFC.',
+    images: ['/product-main.jpg'],
   },
 }
 
@@ -49,6 +61,7 @@ const jsonLdArticle = {
       url: 'https://swiipx.fr/logo.png',
     },
   },
+  image: 'https://swiipx.fr/product-main.jpg',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://swiipx.fr/blog/doubler-avis-google-30-jours',

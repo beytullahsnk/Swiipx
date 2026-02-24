@@ -17,12 +17,14 @@ export const metadata: Metadata = {
     siteName: 'Swiipx',
     locale: 'fr_FR',
     type: 'website',
+    images: [{ url: '/product-main.jpg', width: 1200, height: 630, alt: 'Blog Swiipx — Guides avis Google et SEO local' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Blog Swiipx — Avis Google, SEO Local & NFC',
     description:
       'Guides pratiques pour booster vos avis Google et votre visibilité locale.',
+    images: ['/product-main.jpg'],
   },
 }
 

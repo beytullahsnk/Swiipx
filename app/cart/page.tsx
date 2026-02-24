@@ -67,7 +67,6 @@ export default function CartPage() {
         window.location.href = data.url
       }
     } catch (error: any) {
-      console.error('Checkout error:', error)
       toast.error(error?.message || 'Erreur lors du paiement. Veuillez réessayer.')
       setIsCheckingOut(false)
     }
@@ -212,6 +211,7 @@ export default function CartPage() {
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => setQty(item.id, item.qty - 1)}
+                            aria-label="Réduire la quantité"
                             className="w-10 h-10 flex items-center justify-center bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
                           >
                             <Minus className="w-5 h-5" />
@@ -220,6 +220,7 @@ export default function CartPage() {
                             type="number"
                             min="1"
                             value={item.qty}
+                            aria-label="Quantité"
                             onChange={(e) => {
                               const qty = parseInt(e.target.value) || 1
                               setQty(item.id, qty)
@@ -228,6 +229,7 @@ export default function CartPage() {
                           />
                           <button
                             onClick={() => setQty(item.id, item.qty + 1)}
+                            aria-label="Augmenter la quantité"
                             className="w-10 h-10 flex items-center justify-center bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 transition-colors"
                           >
                             <Plus className="w-5 h-5" />
@@ -248,6 +250,7 @@ export default function CartPage() {
                         }}
                         className="p-3 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
                         title="Supprimer"
+                        aria-label="Supprimer l'article"
                       >
                         <Trash2 className="w-5 h-5" />
                       </button>

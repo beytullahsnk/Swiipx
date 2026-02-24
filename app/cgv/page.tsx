@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FileText, ShoppingCart, CreditCard, Shield, RefreshCw } from 'lucide-react'
+import Link from 'next/link'
 
 export const dynamic = 'force-static'
 
@@ -157,9 +158,9 @@ export default function CGVPage() {
             </p>
             <p>
               Pour plus d&apos;informations, consultez notre page{' '}
-              <a href="/livraison" className="text-primary font-semibold hover:underline">
+              <Link href="/livraison" className="text-primary font-semibold hover:underline">
                 Expédition & Livraison
-              </a>.
+              </Link>.
             </p>
           </div>
         </motion.section>
@@ -196,9 +197,9 @@ export default function CGVPage() {
             </p>
             <p>
               Pour plus d&apos;informations, consultez notre page{' '}
-              <a href="/retours" className="text-primary font-semibold hover:underline">
+              <Link href="/retours" className="text-primary font-semibold hover:underline">
                 Retours & Échanges
-              </a>.
+              </Link>.
             </p>
           </div>
         </motion.section>
@@ -264,9 +265,9 @@ export default function CGVPage() {
             </p>
             <p>
               Pour plus d&apos;informations, consultez notre page{' '}
-              <a href="/mentions-legales" className="text-primary font-semibold hover:underline">
+              <Link href="/mentions-legales" className="text-primary font-semibold hover:underline">
                 Mentions Légales
-              </a>.
+              </Link>.
             </p>
           </div>
         </motion.section>
@@ -308,12 +309,12 @@ export default function CGVPage() {
           <p className="text-gray-700 leading-relaxed mb-6">
             Notre équipe est à votre disposition pour toute question relative à nos Conditions Générales de Vente.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             Contactez-nous
-          </a>
+          </Link>
         </motion.section>
       </div>
     </div>
