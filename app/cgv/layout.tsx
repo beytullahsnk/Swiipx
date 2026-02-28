@@ -16,9 +16,10 @@ export const metadata: Metadata = {
     images: [{ url: '/product-main.jpg', width: 1200, height: 630, alt: 'Swiipx — Plaques avis Google NFC' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'CGV — Swiipx',
     description: 'Conditions générales de vente de Swiipx. Commandes, paiements, livraisons et garanties.',
+    images: ['/product-main.jpg'],
   },
 }
 

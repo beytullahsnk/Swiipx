@@ -104,7 +104,7 @@ export default function OrderConfirmation({
             1. Vous recevrez un email avec votre numéro de suivi dès l&apos;expédition.
           </Text>
           <Text style={paragraph}>
-            2. Livraison estimée sous 2-4 jours ouvrés.
+            2. Livraison estimée sous 2-3 jours ouvrés.
           </Text>
 
           <Hr style={hr} />

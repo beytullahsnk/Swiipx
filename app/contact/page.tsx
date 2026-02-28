@@ -25,9 +25,9 @@ export default function ContactPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Breadcrumb */}
-        <nav className="flex items-center text-sm text-gray-500 mb-8">
+        <nav aria-label="Fil d'Ariane" className="flex items-center text-sm text-gray-500 mb-8">
           <Link href="/" className="hover:text-primary transition-colors">Accueil</Link>
-          <ChevronRight className="w-4 h-4 mx-2" />
+          <ChevronRight className="w-4 h-4 mx-2" aria-hidden="true" />
           <span className="text-gray-900 font-medium">Contact</span>
         </nav>
 

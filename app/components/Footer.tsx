@@ -9,8 +9,10 @@ export default function Footer() {
   const footerLinks = {
     product: [
       { name: 'Nos plaques avis Google', href: '/#product' },
+      { name: 'Pack Starter — 1 plaque', href: '/product/starter' },
+      { name: 'Pack Business — 2 plaques', href: '/product/business' },
+      { name: 'Pack Pro — 5 plaques', href: '/product/pro' },
       { name: 'Comment ça marche', href: '/#how-it-works' },
-      { name: 'Témoignages', href: '/#testimonials' },
       { name: 'FAQ', href: '/#faq' },
     ],
     livraison: [

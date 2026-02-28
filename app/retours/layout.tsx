@@ -16,9 +16,10 @@ export const metadata: Metadata = {
     images: [{ url: '/product-main.jpg', width: 1200, height: 630, alt: 'Swiipx — Plaques avis Google NFC' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Retours & Remboursements — Swiipx',
     description: 'Retour gratuit sous 14 jours, remboursement intégral pour vos plaques NFC Swiipx.',
+    images: ['/product-main.jpg'],
   },
 }
 

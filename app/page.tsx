@@ -77,6 +77,7 @@ export default function Home() {
       priceCurrency: 'EUR',
       availability: 'https://schema.org/InStock',
       offerCount: 3,
+      priceValidUntil: '2026-12-31',
       seller: {
         '@type': 'Organization',
         name: 'Swiipx',
@@ -93,37 +94,78 @@ export default function Home() {
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Marie Dubois' },
-        datePublished: '2025-10-15',
+        datePublished: '2026-01-15',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Depuis que j\'ai installé les plaques Swiipx, mes avis Google ont explosé ! +180% en 2 mois.',
       },
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Thomas Bernard' },
-        datePublished: '2025-10-22',
+        datePublished: '2026-01-22',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Un investissement qui s\'est payé en quelques semaines ! Mes clients adorent scanner la plaque.',
       },
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Sophie Martin' },
-        datePublished: '2025-11-03',
+        datePublished: '2026-02-03',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Simple, efficace et ultra rapide à mettre en place. Le retour sur investissement est impressionnant !',
       },
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Alexandre Petit' },
-        datePublished: '2025-11-18',
+        datePublished: '2026-02-10',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Ma note Google est passée de 4.2 à 4.8 en 3 mois. Enfin une solution qui fonctionne !',
       },
       {
         '@type': 'Review',
         author: { '@type': 'Person', name: 'Isabelle Rousseau' },
-        datePublished: '2025-12-05',
+        datePublished: '2026-02-18',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         reviewBody: 'Nos clients adorent la technologie NFC ! Un must-have pour tout commerce.',
+      },
+    ],
+  }
+
+  const howToJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Comment collecter des avis Google avec une plaque NFC Swiipx',
+    description: 'Guide en 3 étapes pour collecter des avis Google automatiquement avec une plaque NFC. Installation en 30 secondes, avis en 10 secondes.',
+    totalTime: 'PT5M',
+    supply: [
+      {
+        '@type': 'HowToSupply',
+        name: 'Plaque NFC Swiipx (à partir de 39,90€)',
+      },
+    ],
+    tool: [
+      {
+        '@type': 'HowToTool',
+        name: 'Smartphone compatible NFC (iPhone 7+ ou Android récent)',
+      },
+    ],
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Commandez votre plaque NFC avis Google',
+        text: 'Choisissez votre pack Swiipx (Starter, Business ou Pro) et passez commande sur swiipx.fr. Livraison gratuite en France métropolitaine sous 2-3 jours ouvrés.',
+        url: 'https://swiipx.fr/#product',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Collez la plaque dans votre commerce',
+        text: 'Placez la plaque NFC à l\'accueil, au comptoir ou en vitrine de votre commerce. Adhésif 3M inclus. Installation en 30 secondes.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Vos clients scannent et laissent un avis Google',
+        text: 'Vos clients approchent leur smartphone de la plaque NFC. Ils sont redirigés automatiquement vers votre page d\'avis Google. Avis laissé en 10 secondes, sans application à installer.',
       },
     ],
   }
@@ -137,6 +179,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
       {/* Hero Section - Main headline and CTA */}
       <HeroSection />

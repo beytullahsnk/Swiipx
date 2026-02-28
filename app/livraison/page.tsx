@@ -11,9 +11,9 @@ export default function LivraisonPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Breadcrumb */}
-        <nav className="flex items-center text-sm text-gray-500 mb-8">
+        <nav aria-label="Fil d'Ariane" className="flex items-center text-sm text-gray-500 mb-8">
           <Link href="/" className="hover:text-primary transition-colors">Accueil</Link>
-          <ChevronRight className="w-4 h-4 mx-2" />
+          <ChevronRight className="w-4 h-4 mx-2" aria-hidden="true" />
           <span className="text-gray-900 font-medium">Expédition & Livraison</span>
         </nav>
 
@@ -38,7 +38,7 @@ export default function LivraisonPage() {
               <div className="p-5">
                 <div className="flex items-center justify-between mb-1">
                   <span className="font-semibold text-gray-900">France Métropolitaine</span>
-                  <span className="text-sm font-semibold text-primary bg-blue-50 px-3 py-1 rounded-full">2-4 jours ouvrés</span>
+                  <span className="text-sm font-semibold text-primary bg-blue-50 px-3 py-1 rounded-full">2-3 jours ouvrés</span>
                 </div>
                 <p className="text-sm text-gray-600">
                   Expédition sous 24h après validation. Livraison par Colissimo ou Chronopost.

@@ -40,7 +40,6 @@ export default function ProductSection() {
         'Livraison gratuite',
         'Support prioritaire',
         'Garantie 2 ans',
-        'Personnalisation gratuite',
       ],
     },
     {
@@ -56,7 +55,6 @@ export default function ProductSection() {
         'Livraison express gratuite',
         'Support prioritaire 24/7',
         'Garantie 3 ans',
-        'Personnalisation gratuite',
         'Tableaux de bord analytics',
       ],
     },

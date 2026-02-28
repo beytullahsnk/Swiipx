@@ -24,7 +24,8 @@
       "Bash(sort:*)",
       "Bash(git config:*)",
       "Bash(git push:*)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(test -f \"/Users/beytullahsonkaya/Documents/Swiipx31.10.2025/.env.local\")"
     ]
   }
 }

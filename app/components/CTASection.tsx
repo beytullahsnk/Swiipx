@@ -98,6 +98,19 @@ export default function CTASection() {
               <span className="font-medium text-sm">Support 7j/7</span>
             </div>
           </motion.div>
+
+          {/* Internal link to blog for SEO authority flow */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="mt-6 text-blue-200/70 text-sm"
+          >
+            📖 Découvrez notre{' '}
+            <a href="/blog/doubler-avis-google-30-jours" className="text-white underline hover:text-accent transition-colors font-medium">
+              guide pour doubler vos avis Google en 30 jours
+            </a>
+          </motion.p>
         </motion.div>
       </div>
     </section>

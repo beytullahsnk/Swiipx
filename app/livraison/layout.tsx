@@ -16,9 +16,10 @@ export const metadata: Metadata = {
     images: [{ url: '/product-main.jpg', width: 1200, height: 630, alt: 'Swiipx — Plaques avis Google NFC' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Livraison — Swiipx',
     description: 'Livraison gratuite en France métropolitaine sous 2-3 jours ouvrés pour vos plaques NFC.',
+    images: ['/product-main.jpg'],
   },
 }
 

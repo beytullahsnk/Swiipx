@@ -69,7 +69,10 @@ export default function RootLayout({
               description: 'Plaque avis Google NFC & QR Code. Collectez des avis Google automatiquement. La solution n°1 pour booster votre visibilité locale.',
               email: 'bonjour@swiipx.fr',
               areaServed: 'FR',
-              sameAs: [],
+              sameAs: [
+                'https://www.instagram.com/swiipx.fr',
+                'https://www.facebook.com/swiipx',
+              ],
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '9 Rue Marcel Sembat',
@@ -90,6 +93,39 @@ export default function RootLayout({
               url: 'https://swiipx.fr',
               name: 'Swiipx',
               publisher: { '@id': 'https://swiipx.fr/#organization' },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              '@id': 'https://swiipx.fr/#localbusiness',
+              name: 'Swiipx',
+              image: 'https://swiipx.fr/logo.png',
+              url: 'https://swiipx.fr',
+              email: 'bonjour@swiipx.fr',
+              description: 'Vente de plaques NFC & QR Code pour collecter des avis Google automatiquement. Solution n°1 en France.',
+              priceRange: '€€',
+              areaServed: 'FR',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '9 Rue Marcel Sembat',
+                postalCode: '93100',
+                addressLocality: 'Montreuil',
+                addressCountry: 'FR',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 48.8534,
+                longitude: 2.4488,
+              },
+              sameAs: [
+                'https://www.instagram.com/swiipx.fr',
+                'https://www.facebook.com/swiipx',
+              ],
             }),
           }}
         />
