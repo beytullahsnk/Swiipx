@@ -25,7 +25,13 @@
       "Bash(git config:*)",
       "Bash(git push:*)",
       "Bash(npm ls:*)",
-      "Bash(test -f \"/Users/beytullahsonkaya/Documents/Swiipx31.10.2025/.env.local\")"
+      "Bash(test -f \"/Users/beytullahsonkaya/Documents/Swiipx31.10.2025/.env.local\")",
+      "Bash(npm -v)",
+      "Read(//Users/beytullahsonkaya/.nvm/versions/node/**)",
+      "Read(//Users/beytullahsonkaya/**)",
+      "Bash(brew list:*)",
+      "Bash(find /Users/beytullahsonkaya/Documents/Swiipx31.10.2025/app -type f -name *.ts -o -name *.tsx)",
+      "Bash(find /Users/beytullahsonkaya/Documents/Swiipx31.10.2025 -maxdepth 1 -type f \\\\\\(-name *.json -o -name .*config* \\\\\\) ! -path */node_modules/*)"
     ]
   }
 }

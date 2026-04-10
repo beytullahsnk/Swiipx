@@ -79,7 +79,7 @@ const productSpecs: Record<string, Array<{ name: string; value: string }>> = {
     { name: 'Compatibilité', value: 'Tous smartphones récents (iPhone & Android)' },
     { name: 'Résistance', value: 'Eau, UV, rayures' },
     { name: 'Nombre de plaques', value: '5' },
-    { name: 'Garantie', value: '3 ans' },
+    { name: 'Garantie', value: '2 ans' },
   ],
 }
 
@@ -112,7 +112,7 @@ const productFAQs: Record<string, Array<{ question: string; answer: string }>> =
   pro: [
     { question: 'Que comprend le tableau de bord analytics du Pack Pro Swiipx ?', answer: 'Le tableau de bord vous permet de suivre le nombre de scans par plaque, les heures de pointe et les performances de chaque emplacement. Idéal pour optimiser votre stratégie de collecte d\'avis Google sur plusieurs sites.' },
     { question: 'Comment fonctionnent les liens personnalisables par plaque NFC ?', answer: 'Chaque plaque NFC du Pack Pro peut pointer vers une URL différente. Vous pouvez rediriger vers votre page Google Business, un formulaire de satisfaction client, ou tout autre lien. La configuration est incluse et notre support vous accompagne.' },
-    { question: 'La garantie 3 ans du Pack Pro couvre quoi exactement ?', answer: 'Le Pack Pro bénéficie d\'une garantie 3 ans contre tout défaut de fabrication des plaques NFC en acrylique. En cas de défaillance technique non imputable à une mauvaise utilisation, nous remplaçons la plaque gratuitement.' },
+    { question: 'La garantie 2 ans du Pack Pro couvre quoi exactement ?', answer: 'Le Pack Pro bénéficie d\'une garantie 2 ans contre tout défaut de fabrication des plaques NFC en acrylique. En cas de défaillance technique non imputable à une mauvaise utilisation, nous remplaçons la plaque gratuitement.' },
   ],
 }
 

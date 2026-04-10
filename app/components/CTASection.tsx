@@ -28,7 +28,7 @@ export default function CTASection() {
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
             ))}
-            <span className="text-white/80 text-sm ml-2 font-medium">4.9/5 — 200+ clients satisfaits</span>
+            <span className="text-white/80 text-sm ml-2 font-medium">4.9/5 — 500+ clients satisfaits</span>
           </div>
 
           {/* Headline */}

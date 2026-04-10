@@ -40,7 +40,7 @@ export default function Home() {
       {
         '@type': 'Question',
         name: 'Quelle est la garantie ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Nos plaques sont garanties 2 ans (3 ans pour le pack Pro) contre tout défaut de fabrication.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Nos plaques sont garanties 2 ans contre tout défaut de fabrication.' },
       },
       {
         '@type': 'Question',

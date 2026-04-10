@@ -54,7 +54,7 @@ export default function ProductSection() {
         'QR code inclus',
         'Livraison express gratuite',
         'Support prioritaire 24/7',
-        'Garantie 3 ans',
+        'Garantie 2 ans',
         'Tableaux de bord analytics',
       ],
     },
@@ -141,7 +141,7 @@ export default function ProductSection() {
                   </div>
                   {pack.discount && (
                     <p className="text-sm text-gray-500 mt-2 line-through">
-                      {pack.plaques === 2 ? '98€' : '245€'} au lieu
+                      {pack.plaques === 2 ? '79,90€' : '149,90€'}
                     </p>
                   )}
                 </div>

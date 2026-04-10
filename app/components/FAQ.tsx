@@ -33,7 +33,7 @@ export default function FAQ() {
     },
     {
       question: 'Quelle est la garantie ?',
-      answer: 'Nos plaques sont garanties 2 ans (3 ans pour le pack Pro) contre tout défaut de fabrication. En cas de problème, contactez notre support client qui se fera un plaisir de vous aider.',
+      answer: 'Nos plaques sont garanties 2 ans contre tout défaut de fabrication. En cas de problème, contactez notre support client qui se fera un plaisir de vous aider.',
     },
     {
       question: 'La plaque avis Google résiste-t-elle à l\'extérieur ?',

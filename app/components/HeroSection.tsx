@@ -43,7 +43,7 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.95 }}
                 className="group px-8 py-4 bg-primary text-white rounded-xl font-semibold text-lg shadow-xl hover:bg-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 whitespace-nowrap"
               >
-                <span>Commander</span>
+                <span>Commander dès 39,90€</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
 
@@ -84,9 +84,9 @@ export default function HeroSection() {
                 </div>
                 <div className="flex items-center space-x-1">
                   <Star className="w-4 h-4 text-accent fill-accent" />
-                  <span className="font-semibold text-gray-900">+200% d&apos;avis</span>
+                  <span className="font-semibold text-gray-900">4.9/5</span>
                   <span className="text-gray-500">·</span>
-                      <span className="text-gray-600">Marie, Thomas, Sophie&hellip;</span>
+                  <span className="text-gray-600">500+ entreprises satisfaites</span>
                 </div>
               </div>
             </motion.div>
@@ -108,7 +108,7 @@ export default function HeroSection() {
                 <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="font-medium">Garantie produit 2 ans</span>
+                <span className="font-medium">Garantie 2 ans</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
