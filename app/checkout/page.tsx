@@ -285,15 +285,32 @@ function ExpressCheckoutSection({
 
 function CheckoutShippingPicker() {
   const { method, servicePoint, setMethod, setServicePoint } = useShippingStore()
+  const [sendcloudKey, setSendcloudKey] = useState<string | null>(null)
+
+  // Récupère la clé publique Sendcloud depuis l'API serveur (au lieu de l'embarquer dans le bundle)
+  useEffect(() => {
+    fetch('/api/sendcloud-config')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data?.publicKey) setSendcloudKey(data.publicKey)
+      })
+      .catch(() => {
+        // silencieux — le bouton sera désactivé tant que la clé n'est pas dispo
+      })
+  }, [])
 
   const openServicePointPicker = () => {
+    if (!sendcloudKey) {
+      toast.error('Configuration en cours, réessayez dans un instant.')
+      return
+    }
     if (!window.sendcloud?.servicePoints?.open) {
       setTimeout(openServicePointPicker, 500)
       return
     }
     window.sendcloud.servicePoints.open(
       {
-        apiKey: process.env.NEXT_PUBLIC_SENDCLOUD_PUBLIC_KEY || '',
+        apiKey: sendcloudKey,
         country: 'fr',
         carriers: ['mondial_relay'],
         language: 'fr',

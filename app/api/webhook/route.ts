@@ -23,6 +23,7 @@ async function createSendcloudParcel(shipping: Stripe.Checkout.Session.ShippingD
   const secretKey = process.env.SENDCLOUD_SECRET_KEY
 
   if (!publicKey || !secretKey) {
+    console.error('[Sendcloud domicile] Missing API keys (SENDCLOUD_PUBLIC_KEY or SENDCLOUD_SECRET_KEY)')
     return null
   }
 
@@ -77,10 +78,11 @@ async function createSendcloudParcel(shipping: Stripe.Checkout.Session.ShippingD
 
 // Sendcloud API helper — Point Relais (Mondial Relay)
 async function createSendcloudServicePointParcel(metadata: Record<string, string>, customerEmail: string, orderNumber: string) {
-  const publicKey = process.env.SENDCLOUD_PUBLIC_KEY
+  const publicKey = process.env.NEXT_PUBLIC_SENDCLOUD_PUBLIC_KEY || process.env.SENDCLOUD_PUBLIC_KEY
   const secretKey = process.env.SENDCLOUD_SECRET_KEY
 
   if (!publicKey || !secretKey) {
+    console.error('[Sendcloud point-relais] Missing API keys (SENDCLOUD_PUBLIC_KEY or SENDCLOUD_SECRET_KEY)')
     return null
   }
 

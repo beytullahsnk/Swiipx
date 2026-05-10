@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { Home, MapPin, Edit3, CheckCircle } from 'lucide-react'
 import { useShippingStore, SHIPPING_DOMICILE_CENTS } from '../store/shipping'
 import { formatPrice } from '../store/cart'
@@ -35,8 +36,19 @@ declare global {
 
 export default function ShippingMethodPicker() {
   const { method, servicePoint, setMethod, setServicePoint } = useShippingStore()
+  const [sendcloudKey, setSendcloudKey] = useState<string | null>(null)
+
+  useEffect(() => {
+    fetch('/api/sendcloud-config')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data?.publicKey) setSendcloudKey(data.publicKey)
+      })
+      .catch(() => {})
+  }, [])
 
   const openServicePointPicker = () => {
+    if (!sendcloudKey) return
     if (!window.sendcloud?.servicePoints?.open) {
       // Script pas encore chargé, réessayer dans 500ms
       setTimeout(openServicePointPicker, 500)
@@ -45,7 +57,7 @@ export default function ShippingMethodPicker() {
 
     window.sendcloud.servicePoints.open(
       {
-        apiKey: process.env.NEXT_PUBLIC_SENDCLOUD_PUBLIC_KEY || '',
+        apiKey: sendcloudKey,
         country: 'fr',
         carriers: ['mondial_relay'],
         language: 'fr',
