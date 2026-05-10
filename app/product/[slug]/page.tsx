@@ -30,7 +30,7 @@ const products = {
     name: 'Pack Starter — 1 Plaque Avis Google NFC',
     slug: 'starter',
     plaques: 1,
-    price: 0.50, // TEST PROD — remettre à 39.90
+    price: 39.90,
     originalPrice: null as number | null,
     description: 'La plaque avis Google NFC idéale pour débuter. Collez-la à l\'accueil ou au comptoir : vos clients scannent et laissent un avis Google en 10 secondes, sans application. Plaque en acrylique premium 120×120 mm, garantie 2 ans.',
     ratingValue: 4.8,

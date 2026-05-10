@@ -44,7 +44,7 @@ interface CartStore {
 const PRODUCT_DATA: Record<CartItem['id'], Omit<CartItem, 'id' | 'qty'>> = {
   plaque1: {
     name: 'Swiipx — 1 Plaque',
-    priceCents: 50, // TEST PROD — remettre à 3990
+    priceCents: 3990, // 39,90€
     image: '/products/plaque1.jpg',
   },
   plaque2: {

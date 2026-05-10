@@ -255,7 +255,7 @@ export async function POST(request: NextRequest) {
           plaque5: 'Swiipx — 5 Plaques',
         }
         const PRODUCT_PRICES: Record<string, number> = {
-          plaque1: 50, // TEST PROD — remettre à 3990
+          plaque1: 3990,
           plaque2: 5990,
           plaque5: 8990,
         }

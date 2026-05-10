@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 })
 
 const PRODUCT_MAP: Record<string, { amountCents: number }> = {
-  plaque1: { amountCents: 50 }, // TEST PROD — remettre à 3990
+  plaque1: { amountCents: 3990 },
   plaque2: { amountCents: 5990 },
   plaque5: { amountCents: 8990 },
 }

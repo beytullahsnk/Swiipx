@@ -15,8 +15,8 @@ const productPacks = [
     id: 'plaque1' as const,
     quantity: 1,
     name: '1 Plaque',
-    price: 0.50, // TEST PROD — remettre à 39.90
-    priceHT: '0,50€', // TEST PROD — remettre à '39,90€'
+    price: 39.90,
+    priceHT: '39,90€',
     badge: null,
   },
   {
