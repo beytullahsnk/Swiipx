@@ -30,6 +30,7 @@ export default function Navbar() {
     { name: 'Témoignages', href: '/#testimonials' },
     { name: 'FAQ', href: '/#faq' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (

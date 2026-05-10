@@ -12,12 +12,12 @@ export default function WhatsAppButton() {
         src={`https://embed.tawk.to/${TAWK_PROPERTY_ID}/${TAWK_WIDGET_ID}`}
         strategy="lazyOnload"
       />
-      {/* Reposer Tawk : approche brute force (polling + observer + plusieurs sélecteurs)
-          car Tawk met du temps à monter et peut ré-appliquer son bottom. */}
-      <Script id="tawk-reposition" strategy="afterInteractive">
+      {/* Tawk : masqué sur mobile (le client a déjà la page contact dans le menu).
+          Sur desktop, le widget reste visible en bas à droite. */}
+      <Script id="tawk-mobile-hide" strategy="afterInteractive">
         {`
           (function() {
-            var MOBILE_OFFSET = 90;
+            var MOBILE_BREAKPOINT = 1024;
 
             function isTawkIframe(f) {
               if (!f || f.tagName !== 'IFRAME') return false;
@@ -43,41 +43,44 @@ export default function WhatsAppButton() {
               return null;
             }
 
-            function applyOffset() {
-              var isMobile = window.innerWidth < 1024;
-              var offset = isMobile ? MOBILE_OFFSET : 0;
+            function applyVisibility() {
+              var isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+              // Tawk API officielle (si dispo)
+              try {
+                if (window.Tawk_API) {
+                  if (isMobile && typeof window.Tawk_API.hideWidget === 'function') {
+                    window.Tawk_API.hideWidget();
+                  } else if (!isMobile && typeof window.Tawk_API.showWidget === 'function') {
+                    window.Tawk_API.showWidget();
+                  }
+                }
+              } catch (e) {}
+
+              // Fallback DOM : force display none/block sur l'iframe Tawk
               var iframes = document.getElementsByTagName('iframe');
-              var changed = false;
               for (var i = 0; i < iframes.length; i++) {
                 if (!isTawkIframe(iframes[i])) continue;
                 var target = findPositionedAncestor(iframes[i]) || iframes[i];
-                target.style.setProperty('bottom', offset + 'px', 'important');
-                if (target !== iframes[i] && !target.style.getPropertyValue('transition')) {
-                  target.style.setProperty('transition', 'bottom 0.2s ease');
-                }
-                changed = true;
+                target.style.setProperty('display', isMobile ? 'none' : '', 'important');
               }
-              return changed;
             }
 
-            // Polling agressif pendant 30 secondes
+            // Polling pendant 30s pour attraper Tawk au montage
             var attempts = 0;
             var pollInterval = setInterval(function() {
-              applyOffset();
+              applyVisibility();
               attempts++;
-              if (attempts > 60) clearInterval(pollInterval); // 60 * 500ms = 30s
+              if (attempts > 60) clearInterval(pollInterval);
             }, 500);
 
-            // Observe les modifications du DOM (Tawk peut ré-injecter)
-            var observer = new MutationObserver(function() {
-              applyOffset();
-            });
+            // MutationObserver — Tawk peut ré-injecter
+            var observer = new MutationObserver(applyVisibility);
             observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style'] });
             setTimeout(function() { observer.disconnect() }, 30000);
 
-            // Re-applique sur resize (changement orientation/breakpoint)
-            window.addEventListener('resize', applyOffset);
-            window.addEventListener('load', applyOffset);
+            // Resize / orientation : re-apply (rotation mobile <-> desktop)
+            window.addEventListener('resize', applyVisibility);
+            window.addEventListener('load', applyVisibility);
           })();
         `}
       </Script>

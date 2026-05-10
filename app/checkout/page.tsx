@@ -625,15 +625,6 @@ function CheckoutForm({
 
   return (
     <>
-      {/* Divider si express checkout dispo */}
-      {expressAvailable && (
-        <div className="flex items-center gap-4 my-6">
-          <div className="flex-1 h-px bg-gray-200" />
-          <span className="text-sm text-gray-400 font-medium whitespace-nowrap">ou payer par carte</span>
-          <div className="flex-1 h-px bg-gray-200" />
-        </div>
-      )}
-
       <form onSubmit={handleSubmit}>
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 divide-y divide-gray-100">
           {/* Coordonnées */}
@@ -1079,14 +1070,9 @@ export default function CheckoutPage() {
                 locale: 'fr',
               }}
             >
-              {/* Express Checkout (Apple Pay / Google Pay) */}
-              <ExpressCheckoutSection
-                paymentIntentId={paymentIntentId!}
-                totalCents={grandTotal}
-                onExpressAvailable={setExpressAvailable}
-              />
-
-              {/* Formulaire carte */}
+              {/* Formulaire — Apple Pay / Google Pay sont disponibles en onglets
+                  dans le PaymentElement (en bas), pour qu'ils restent toujours
+                  visibles peu importe l'état du formulaire. */}
               <CheckoutForm
                 paymentIntentId={paymentIntentId!}
                 totalCents={grandTotal}
