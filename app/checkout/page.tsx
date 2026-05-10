@@ -286,22 +286,38 @@ function ExpressCheckoutSection({
 function CheckoutShippingPicker() {
   const { method, servicePoint, setMethod, setServicePoint } = useShippingStore()
   const [sendcloudKey, setSendcloudKey] = useState<string | null>(null)
+  const [keyError, setKeyError] = useState<string | null>(null)
 
   // Récupère la clé publique Sendcloud depuis l'API serveur (au lieu de l'embarquer dans le bundle)
   useEffect(() => {
     fetch('/api/sendcloud-config')
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (data?.publicKey) setSendcloudKey(data.publicKey)
+      .then(async (res) => {
+        if (!res.ok) {
+          const txt = await res.text().catch(() => '')
+          throw new Error(`HTTP ${res.status} — ${txt.slice(0, 100)}`)
+        }
+        return res.json()
       })
-      .catch(() => {
-        // silencieux — le bouton sera désactivé tant que la clé n'est pas dispo
+      .then((data) => {
+        if (data?.publicKey) {
+          setSendcloudKey(data.publicKey)
+        } else {
+          setKeyError('Réponse API sans publicKey')
+          console.error('[Sendcloud] API returned no publicKey', data)
+        }
+      })
+      .catch((err) => {
+        setKeyError(err?.message || 'Erreur réseau')
+        console.error('[Sendcloud] /api/sendcloud-config fetch failed:', err)
       })
   }, [])
 
   const openServicePointPicker = () => {
     if (!sendcloudKey) {
-      toast.error('Configuration en cours, réessayez dans un instant.')
+      const msg = keyError
+        ? `Service indisponible : ${keyError}. Choisissez la livraison à domicile.`
+        : 'Configuration en cours, réessayez dans 2s.'
+      toast.error(msg)
       return
     }
     if (!window.sendcloud?.servicePoints?.open) {
