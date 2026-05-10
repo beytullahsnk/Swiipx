@@ -64,11 +64,67 @@ async function createSendcloudParcel(shipping: Stripe.Checkout.Session.ShippingD
     const data = await response.json()
 
     if (!response.ok) {
+      console.error('[Sendcloud domicile] HTTP', response.status, JSON.stringify(data))
       return null
     }
 
     return data.parcel
-  } catch (error) {
+  } catch (error: any) {
+    console.error('[Sendcloud domicile] Network error:', error?.message || error)
+    return null
+  }
+}
+
+// Sendcloud API helper — Point Relais (Mondial Relay)
+async function createSendcloudServicePointParcel(metadata: Record<string, string>, customerEmail: string, orderNumber: string) {
+  const publicKey = process.env.SENDCLOUD_PUBLIC_KEY
+  const secretKey = process.env.SENDCLOUD_SECRET_KEY
+
+  if (!publicKey || !secretKey) {
+    return null
+  }
+
+  const parcelData = {
+    parcel: {
+      name: metadata.sp_name || 'Client',
+      company_name: '',
+      address: metadata.sp_street || '',
+      address_2: metadata.sp_house_number || '',
+      city: metadata.sp_city || '',
+      postal_code: metadata.sp_postal_code || '',
+      country: metadata.sp_country || 'FR',
+      email: customerEmail,
+      telephone: '',
+      order_number: orderNumber,
+      weight: '0.100',
+      request_label: false,
+      to_service_point: parseInt(metadata.sp_id),
+      shipment: {
+        id: 465, // Mondial Relay — vérifier l'ID dans le dashboard Sendcloud
+      },
+    },
+  }
+
+  try {
+    const response = await fetch('https://panel.sendcloud.sc/api/v2/parcels', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${Buffer.from(`${publicKey}:${secretKey}`).toString('base64')}`,
+      },
+      body: JSON.stringify(parcelData),
+    })
+
+    const data = await response.json()
+
+    if (!response.ok) {
+      console.error('[Sendcloud point-relais] HTTP', response.status, JSON.stringify(data))
+      return null
+    }
+
+    return data.parcel
+  } catch (error: any) {
+    console.error('[Sendcloud point-relais] Network error:', error?.message || error)
     return null
   }
 }
@@ -93,15 +149,121 @@ export async function POST(request: NextRequest) {
       process.env.STRIPE_WEBHOOK_SECRET!
     )
   } catch (err: any) {
+    console.error('[Webhook] Invalid signature:', err?.message || err)
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
 
-  // Handle checkout.session.completed
+  // ─── Handler pour le checkout custom (PaymentIntent) ─────────────────────
+  if (event.type === 'payment_intent.succeeded') {
+    const paymentIntent = event.data.object as Stripe.PaymentIntent
+    const metadata = paymentIntent.metadata || {}
+
+    try {
+      const customerEmail = metadata.customer_email || paymentIntent.receipt_email
+      const customerName = metadata.customer_name || 'Client'
+
+      if (!customerEmail) {
+        return NextResponse.json({ received: true })
+      }
+
+      // Reconstruire les items depuis les metadata
+      let items = [{ name: 'Plaque Swiipx', quantity: 1, amount: paymentIntent.amount }]
+      try {
+        const parsedItems = JSON.parse(metadata.items || '[]')
+        const PRODUCT_NAMES: Record<string, string> = {
+          plaque1: 'Swiipx — 1 Plaque',
+          plaque2: 'Swiipx — 2 Plaques',
+          plaque5: 'Swiipx — 5 Plaques',
+        }
+        const PRODUCT_PRICES: Record<string, number> = {
+          plaque1: 50, // TEST PROD — remettre à 3990
+          plaque2: 5990,
+          plaque5: 8990,
+        }
+        if (parsedItems.length > 0) {
+          items = parsedItems.map((i: any) => ({
+            name: PRODUCT_NAMES[i.id] || 'Plaque Swiipx',
+            quantity: i.qty || 1,
+            amount: (PRODUCT_PRICES[i.id] || 0) * (i.qty || 1),
+          }))
+        }
+      } catch {}
+
+      const businessName = metadata.business_name || ''
+      const businessAddress = metadata.business_address || ''
+      const shippingMethod = metadata.shipping_method || 'domicile'
+
+      // Construire l'adresse de livraison
+      let shippingAddress = ''
+      if (shippingMethod === 'point_relais') {
+        shippingAddress = `Point Relais : ${metadata.sp_name || ''}, ${metadata.sp_street || ''} ${metadata.sp_house_number || ''}, ${metadata.sp_postal_code || ''} ${metadata.sp_city || ''}`
+      } else {
+        shippingAddress = [
+          metadata.shipping_name,
+          metadata.shipping_line1,
+          metadata.shipping_line2,
+          `${metadata.shipping_postal_code || ''} ${metadata.shipping_city || ''}`,
+          metadata.shipping_country,
+        ].filter(Boolean).join(', ')
+      }
+
+      // 1. Email de confirmation (isolé : si Resend échoue, on continue avec Sendcloud)
+      try {
+        const emailHtml = await render(OrderConfirmation({
+          customerName,
+          businessName,
+          businessAddress,
+          items,
+          totalAmount: paymentIntent.amount,
+          shippingAddress,
+        }))
+        const { error: resendError } = await getResend().emails.send({
+          from: 'Swiipx <bonjour@swiipx.fr>',
+          to: customerEmail,
+          subject: 'Commande confirmée — Swiipx',
+          html: emailHtml,
+        })
+        if (resendError) {
+          console.error('[Webhook] Resend error:', resendError)
+        }
+      } catch (emailErr: any) {
+        console.error('[Webhook] Email render/send failed:', emailErr?.message || emailErr)
+      }
+
+      // 2. Créer le colis Sendcloud (isolé : indépendant de l'email)
+      const orderNumber = `SW-${paymentIntent.id.slice(-8).toUpperCase()}`
+      try {
+        if (shippingMethod === 'point_relais' && metadata.sp_id) {
+          await createSendcloudServicePointParcel(metadata, customerEmail, orderNumber)
+        } else if (shippingMethod === 'domicile' && metadata.shipping_line1) {
+          const shippingDetails = {
+            name: metadata.shipping_name || customerName,
+            address: {
+              line1: metadata.shipping_line1 || '',
+              line2: metadata.shipping_line2 || '',
+              city: metadata.shipping_city || '',
+              postal_code: metadata.shipping_postal_code || '',
+              country: metadata.shipping_country || 'FR',
+            },
+          } as Stripe.Checkout.Session.ShippingDetails
+          await createSendcloudParcel(shippingDetails, customerEmail, orderNumber)
+        } else {
+          console.warn(`[Webhook] No shipping data for order ${orderNumber} (method=${shippingMethod})`)
+        }
+      } catch (parcelErr: any) {
+        console.error('[Webhook] Sendcloud parcel creation failed:', parcelErr?.message || parcelErr)
+      }
+
+    } catch (error: any) {
+      console.error('[Webhook] Order processing error:', error?.message || error)
+    }
+  }
+
+  // ─── Handler legacy pour Stripe Checkout (rétrocompatibilité) ───────────
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object as Stripe.Checkout.Session
 
     try {
-      // Get customer email and name
       const customerEmail = session.customer_details?.email
       const customerName = session.customer_details?.name || 'Client'
 
@@ -109,7 +271,6 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ received: true })
       }
 
-      // Get line items from Stripe (avec fallback si ça échoue)
       let items = [{ name: 'Plaque Swiipx', quantity: 1, amount: session.amount_total || 0 }]
       try {
         const lineItems = await stripe.checkout.sessions.listLineItems(session.id)
@@ -120,53 +281,64 @@ export async function POST(request: NextRequest) {
             amount: item.amount_total || 0,
           }))
         }
-      } catch (lineItemsError: any) {
-        // Utilisation du fallback par défaut
-      }
+      } catch {}
 
-      // Get business info from metadata
       const businessName = session.metadata?.business_name || ''
       const businessAddress = session.metadata?.business_address || ''
+      const shippingMethod = session.metadata?.shipping_method || 'domicile'
 
-      // Get shipping address
       const shipping = session.shipping_details
+      let shippingAddress = ''
 
-      const shippingAddress = shipping
-        ? [
-            shipping.name,
-            shipping.address?.line1,
-            shipping.address?.line2,
-            `${shipping.address?.postal_code} ${shipping.address?.city}`,
-            shipping.address?.country,
-          ]
-            .filter(Boolean)
-            .join(', ')
-        : ''
+      if (shippingMethod === 'point_relais') {
+        shippingAddress = `Point Relais : ${session.metadata?.sp_name || ''}, ${session.metadata?.sp_street || ''} ${session.metadata?.sp_house_number || ''}, ${session.metadata?.sp_postal_code || ''} ${session.metadata?.sp_city || ''}`
+      } else if (shipping) {
+        shippingAddress = [
+          shipping.name,
+          shipping.address?.line1,
+          shipping.address?.line2,
+          `${shipping.address?.postal_code} ${shipping.address?.city}`,
+          shipping.address?.country,
+        ].filter(Boolean).join(', ')
+      }
 
-      // 1. Send confirmation email via Resend
-      const emailHtml = await render(OrderConfirmation({
-        customerName,
-        businessName,
-        businessAddress,
-        items,
-        totalAmount: session.amount_total || 0,
-        shippingAddress,
-      }))
-      await getResend().emails.send({
-        from: 'Swiipx <bonjour@swiipx.fr>',
-        to: customerEmail,
-        subject: 'Commande confirmée — Swiipx',
-        html: emailHtml,
-      })
+      // Email isolé
+      try {
+        const emailHtml = await render(OrderConfirmation({
+          customerName,
+          businessName,
+          businessAddress,
+          items,
+          totalAmount: session.amount_total || 0,
+          shippingAddress,
+        }))
+        const { error: resendError } = await getResend().emails.send({
+          from: 'Swiipx <bonjour@swiipx.fr>',
+          to: customerEmail,
+          subject: 'Commande confirmée — Swiipx',
+          html: emailHtml,
+        })
+        if (resendError) {
+          console.error('[Webhook legacy] Resend error:', resendError)
+        }
+      } catch (emailErr: any) {
+        console.error('[Webhook legacy] Email render/send failed:', emailErr?.message || emailErr)
+      }
 
-      // 2. Créer le colis sur Sendcloud
-      if (shipping) {
-        const orderNumber = `SW-${session.id.slice(-8).toUpperCase()}`
-        await createSendcloudParcel(shipping, customerEmail, orderNumber)
+      // Sendcloud isolé
+      const orderNumber = `SW-${session.id.slice(-8).toUpperCase()}`
+      try {
+        if (shippingMethod === 'point_relais' && session.metadata?.sp_id) {
+          await createSendcloudServicePointParcel(session.metadata!, customerEmail, orderNumber)
+        } else if (shipping) {
+          await createSendcloudParcel(shipping, customerEmail, orderNumber)
+        }
+      } catch (parcelErr: any) {
+        console.error('[Webhook legacy] Sendcloud parcel creation failed:', parcelErr?.message || parcelErr)
       }
 
     } catch (error: any) {
-      // Erreur silencieuse côté serveur — ne pas exposer les détails
+      console.error('[Webhook] Order processing error:', error?.message || error)
     }
   }
 

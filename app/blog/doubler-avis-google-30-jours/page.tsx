@@ -162,7 +162,7 @@ export default function DoublerAvisGoogle30Jours() {
 
           {/* ── COLONNE GAUCHE : TOC sticky (style Shopify) ── */}
           <aside className="hidden lg:block">
-            <div className="sticky top-28">
+            <div className="sticky top-36">
               <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4">
                 SOMMAIRE
               </h3>
@@ -758,7 +758,7 @@ export default function DoublerAvisGoogle30Jours() {
 
           {/* ── COLONNE DROITE : ADS carousel au scroll ── */}
           <aside className="hidden lg:block">
-            <div className="sticky top-28">
+            <div className="sticky top-36">
               <div className="relative">
 
                 {/* Ad 0: Swiipx */}

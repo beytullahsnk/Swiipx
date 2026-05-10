@@ -102,7 +102,7 @@ const productFAQs: Record<string, Array<{ question: string; answer: string }>> =
   starter: [
     { question: 'Comment fonctionne la plaque NFC avis Google Swiipx ?', answer: 'Vos clients approchent simplement leur smartphone de la plaque NFC. Ils sont automatiquement redirigés vers votre page d\'avis Google pour laisser un avis en quelques secondes. Aucune application requise, compatible tous smartphones récents.' },
     { question: 'La plaque NFC est-elle compatible avec tous les smartphones ?', answer: 'Oui, la plaque NFC NTAG215 est compatible avec tous les smartphones récents (iPhone et Android). Un QR code de secours est également intégré pour les appareils plus anciens ne disposant pas du NFC.' },
-    { question: 'Combien de temps dure la livraison de la plaque avis Google ?', answer: 'La livraison est gratuite en France métropolitaine et prend 2 à 3 jours ouvrés. Expédition sous 24h après commande. Un numéro de suivi vous est envoyé par email dès l\'expédition.' },
+    { question: 'Combien de temps dure la livraison de la plaque avis Google ?', answer: 'La livraison est gratuite en France métropolitaine et prend 2 à 5 jours ouvrés. Expédition sous 24h après commande. Un numéro de suivi vous est envoyé par email dès l\'expédition.' },
   ],
   business: [
     { question: 'Pourquoi choisir le pack Business avec 2 plaques avis Google NFC ?', answer: 'Le pack Business permet de couvrir 2 emplacements stratégiques (accueil, comptoir, vitrine, salle d\'attente). Multiplier les points de contact augmente significativement le nombre d\'avis Google collectés, en moyenne +150% en 2 mois.' },

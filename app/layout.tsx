@@ -92,7 +92,16 @@ export default function RootLayout({
               '@id': 'https://swiipx.fr/#website',
               url: 'https://swiipx.fr',
               name: 'Swiipx',
+              inLanguage: 'fr-FR',
               publisher: { '@id': 'https://swiipx.fr/#organization' },
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: 'https://swiipx.fr/blog?q={search_term_string}',
+                },
+                'query-input': 'required name=search_term_string',
+              },
             }),
           }}
         />

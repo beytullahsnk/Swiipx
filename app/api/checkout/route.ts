@@ -11,7 +11,7 @@ const PRODUCT_MAP = {
   plaque1: {
     productId: 'prod_TOht805NFJflwU', // prod_TOht805NFJflwU
     name: 'Swiipx — 1 Plaque',
-    amountCents: 3990, // 39,90€ TTC
+    amountCents: 50, // TEST PROD — remettre à 3990 (39,90€ TTC)
   },
   plaque2: {
     productId: 'prod_TOhuRHDGoAwXmX', // prod_TOhuRHDGoAwXmX
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
   try {
     // Parse request body
     const body = await request.json()
-    const { items, company } = body
+    const { items, company, shippingMethod, servicePoint } = body
 
     // Validate items
     if (!items || !Array.isArray(items) || items.length === 0) {
@@ -87,26 +87,71 @@ export async function POST(request: NextRequest) {
       metadata.business_lng = biz.lng?.toString() || ''
     }
 
-    // Get base URL from environment or request
-    const baseUrl = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000'
+    // Ajouter les infos de livraison
+    metadata.shipping_method = shippingMethod || 'domicile'
 
-    // Create Stripe Checkout Session
-    const session = await stripe.checkout.sessions.create({
+    if (shippingMethod === 'point_relais' && servicePoint) {
+      metadata.sp_id = servicePoint.id || ''
+      metadata.sp_name = servicePoint.name || ''
+      metadata.sp_carrier = servicePoint.carrier || ''
+      metadata.sp_street = servicePoint.street || ''
+      metadata.sp_house_number = servicePoint.houseNumber || ''
+      metadata.sp_postal_code = servicePoint.postalCode || ''
+      metadata.sp_city = servicePoint.city || ''
+      metadata.sp_country = servicePoint.country || ''
+      metadata.sp_post_number = servicePoint.postNumber || ''
+    }
+
+    // Get base URL : env var → request headers (host + protocol) → localhost
+    // En prod, même si NEXT_PUBLIC_URL n'est pas configuré, on dérive du header Host
+    const envUrl = process.env.NEXT_PUBLIC_URL
+    let baseUrl: string
+    if (envUrl && !envUrl.includes('localhost')) {
+      baseUrl = envUrl
+    } else {
+      const host = request.headers.get('host') || 'swiipx.fr'
+      const proto = request.headers.get('x-forwarded-proto') || (host.includes('localhost') ? 'http' : 'https')
+      baseUrl = `${proto}://${host}`
+    }
+
+    // Ajouter les frais de livraison à domicile (4,90€)
+    if (shippingMethod === 'domicile') {
+      lineItems.push({
+        price_data: {
+          currency: 'eur',
+          product_data: {
+            name: 'Frais de livraison à domicile',
+          },
+          unit_amount: 490, // 4,90€
+        },
+        quantity: 1,
+      })
+    }
+
+    // Paramètres de la session Stripe
+    const sessionParams: Stripe.Checkout.SessionCreateParams = {
       mode: 'payment',
       line_items: lineItems,
       success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/cart`,
-      shipping_address_collection: {
-        allowed_countries: ['FR', 'BE', 'CH', 'LU', 'MC'], // France + pays limitrophes
-      },
       billing_address_collection: 'required',
       payment_method_types: ['card'],
       locale: 'fr',
-      metadata: metadata, // Business info sur la session
+      metadata: metadata,
       payment_intent_data: {
-        metadata: metadata, // Business info sur le paiement (visible dans Transactions)
+        metadata: metadata,
       },
-    })
+    }
+
+    // Collecter l'adresse de livraison uniquement pour la livraison à domicile
+    if (shippingMethod !== 'point_relais') {
+      sessionParams.shipping_address_collection = {
+        allowed_countries: ['FR', 'BE', 'CH', 'LU', 'MC'],
+      }
+    }
+
+    // Create Stripe Checkout Session
+    const session = await stripe.checkout.sessions.create(sessionParams)
 
     // Return checkout URL
     return NextResponse.json({ url: session.url })

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowLeft, Minus, Plus, Trash2, ShoppingBag, AlertTriangle } from 'lucide-react'
+import { ArrowLeft, Minus, Plus, Trash2, ShoppingBag } from 'lucide-react'
 import { useCart, formatPrice } from '../store/cart'
 import { useCompanyStore } from '../store/company'
 import { useRouter } from 'next/navigation'
@@ -16,60 +16,13 @@ export default function CartPage() {
   const { company } = useCompanyStore()
   const [isCheckingOut, setIsCheckingOut] = useState(false)
 
-  // Handle checkout
-  const handleCheckout = async () => {
+  // Rediriger vers la page checkout custom (entreprise sera demandée au checkout si absente)
+  const handleCheckout = () => {
     if (items.length === 0) {
       toast.error('Votre panier est vide')
       return
     }
-
-    // Vérifier qu'une entreprise est sélectionnée
-    if (!company) {
-      toast.error('⚠️ Veuillez sélectionner votre entreprise avant de commander')
-      router.push('/')
-      return
-    }
-
-    setIsCheckingOut(true)
-
-    try {
-      // Prepare cart data for Stripe (avec infos entreprise)
-      const cartData = items.map((item) => ({
-        id: item.id,
-        qty: item.qty,
-        businessInfo: item.businessInfo || {
-          name: company?.name || '',
-          address: company?.address || '',
-          place_id: company?.placeId || '',
-          phone: company?.phone || '',
-          lat: company?.lat,
-          lng: company?.lng,
-        },
-      }))
-
-      // Call checkout API
-      const response = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ items: cartData, company }),
-      })
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Erreur lors du paiement')
-      }
-
-      // Redirect to Stripe Checkout
-      if (data.url) {
-        window.location.href = data.url
-      }
-    } catch (error: any) {
-      toast.error(error?.message || 'Erreur lors du paiement. Veuillez réessayer.')
-      setIsCheckingOut(false)
-    }
+    router.push('/checkout')
   }
 
   // Afficher un loader tant que le store n'est pas hydraté (évite les erreurs SSR)
@@ -106,77 +59,45 @@ export default function CartPage() {
           </h1>
         </motion.div>
 
-        {/* Company Info */}
-        {items.length > 0 && (
+        {/* Company Info — affiché seulement si déjà sélectionnée */}
+        {items.length > 0 && company && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-8"
           >
-            {company ? (
-              <div>
-                <h3 className="font-bold text-gray-900 text-lg mb-3">Entreprise sélectionnée</h3>
-                <CompanySelectedCard />
-              </div>
-            ) : (
-              <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <AlertTriangle className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-red-900 text-lg mb-1">⚠️ Entreprise non sélectionnée</h3>
-                    <p className="text-red-700 text-sm mb-3">
-                      Vous devez sélectionner votre établissement avant de pouvoir commander.
-                    </p>
-                    <button
-                      onClick={() => router.push('/')}
-                      className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-semibold transition-colors"
-                    >
-                      Retour à la page produit
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
+            <h3 className="font-bold text-gray-900 text-lg mb-3">Entreprise sélectionnée</h3>
+            <CompanySelectedCard />
           </motion.div>
         )}
 
         {items.length === 0 ? (
-          /* Empty Cart */
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white rounded-3xl shadow-lg p-12 text-center"
-          >
-            <ShoppingBag className="w-20 h-20 text-gray-300 mx-auto mb-6" />
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          /* Empty Cart — sobre */
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center max-w-md mx-auto">
+            <ShoppingBag className="w-14 h-14 text-gray-300 mx-auto mb-4" />
+            <h2 className="text-xl font-bold text-gray-900 mb-2">
               Votre panier est vide
             </h2>
-            <p className="text-gray-600 mb-8">
-              Découvrez nos plaques NFC pour booster vos avis Google !
+            <p className="text-gray-500 mb-6 text-sm">
+              Reprenez où vous étiez ou découvrez nos packs.
             </p>
             <button
               onClick={() => router.push('/')}
-              className="px-8 py-4 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors"
             >
-              Découvrir nos produits
+              Voir les packs
             </button>
-          </motion.div>
+          </div>
         ) : (
           /* Cart with items */
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Cart Items - 2/3 width */}
             <div className="lg:col-span-2 space-y-4">
-              {items.map((item, index) => (
-                <motion.div
+              {items.map((item) => (
+                <div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-lg p-6"
+                  className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
                     {/* Product Image */}
@@ -256,7 +177,7 @@ export default function CartPage() {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
 
               {/* Clear Cart Button */}
@@ -295,7 +216,10 @@ export default function CartPage() {
                   </div>
                   <div className="flex justify-between text-gray-700">
                     <span>Livraison</span>
-                    <span className="font-semibold text-green-600">Gratuite</span>
+                    <span className="font-semibold text-green-600 text-right text-sm">
+                      Gratuite (Point Relais)<br />
+                      <span className="text-gray-500 font-normal">ou 4,90€ (domicile)</span>
+                    </span>
                   </div>
                   <div className="border-t border-gray-200 pt-4">
                     <div className="flex justify-between text-xl font-bold text-gray-900">
@@ -307,35 +231,18 @@ export default function CartPage() {
                   </div>
                 </div>
 
-                {/* Info Box */}
-                <div className="bg-blue-50 rounded-xl p-4 mb-6">
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-green-600 mt-0.5">✓</span>
-                      <span>Paiement 100% sécurisé</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-green-600 mt-0.5">✓</span>
-                      <span>Livraison gratuite en France</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-green-600 mt-0.5">✓</span>
-                      <span>Garantie produit 2 ans</span>
-                    </li>
-                  </ul>
-                </div>
+                {/* Info — ligne discrète */}
+                <p className="text-xs text-gray-500 mb-6 leading-relaxed">
+                  Paiement 100% sécurisé · Garantie 2 ans · Satisfait ou remboursé sous 14 jours.
+                </p>
 
                 {/* Checkout Button */}
                 <button
                   onClick={handleCheckout}
-                  disabled={isCheckingOut || !company}
-                  className={`w-full py-4 rounded-xl font-bold text-lg shadow-lg transition-all duration-300 mb-3 ${
-                    company && !isCheckingOut
-                      ? 'bg-primary text-white hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] cursor-pointer'
-                      : 'bg-gray-300 text-gray-500 cursor-not-allowed opacity-70'
-                  }`}
+                  disabled={isCheckingOut}
+                  className="w-full py-4 rounded-xl font-bold text-lg shadow-lg transition-all duration-300 mb-3 bg-primary text-white hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {isCheckingOut ? 'Chargement...' : !company ? '🔒 Sélectionnez votre entreprise' : 'Commander maintenant'}
+                  Commander maintenant
                 </button>
 
                 {/* Continue Shopping */}

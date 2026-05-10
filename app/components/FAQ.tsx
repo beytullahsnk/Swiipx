@@ -1,19 +1,23 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from './ui/accordion'
+import { Button } from './ui/button'
 
 export default function FAQ() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const faqs = [
     {
       question: 'Combien de temps pour la livraison ?',
-      answer: 'Nous expédions sous 24h ouvrées. La livraison prend entre 2 à 3 jours ouvrés en France métropolitaine. Vous recevrez un numéro de suivi par email dès l\'expédition de votre commande.',
+      answer: "Nous expédions sous 24h ouvrées. La livraison prend entre 2 à 5 jours ouvrés en France métropolitaine. Vous recevrez un numéro de suivi par email dès l'expédition de votre commande.",
     },
     {
       question: 'La plaque avis Google est-elle personnalisable ?',
@@ -21,15 +25,15 @@ export default function FAQ() {
     },
     {
       question: 'Y a-t-il un abonnement ?',
-      answer: 'Non, aucun abonnement ! Vous payez une seule fois pour votre plaque NFC et elle fonctionne à vie. Pas de frais cachés, pas de renouvellement mensuel. C\'est un investissement unique pour booster vos avis Google.',
+      answer: "Non, aucun abonnement ! Vous payez une seule fois pour votre plaque NFC et elle fonctionne à vie. Pas de frais cachés, pas de renouvellement mensuel. C'est un investissement unique pour booster vos avis Google.",
     },
     {
       question: 'Comment fonctionne une plaque avis Google NFC ?',
-      answer: 'La plaque avis Google NFC fonctionne grâce à la technologie NFC (Near Field Communication). Vos clients approchent leur smartphone de la plaque et sont redirigés directement vers votre page avis Google. Aucune application nécessaire, compatible iPhone et Android. Un QR code est aussi présent en secours.',
+      answer: "La plaque avis Google NFC fonctionne grâce à la technologie NFC (Near Field Communication). Vos clients approchent leur smartphone de la plaque et sont redirigés directement vers votre page avis Google. Aucune application nécessaire, compatible iPhone et Android. Un QR code est aussi présent en secours.",
     },
     {
       question: 'Puis-je modifier le lien de redirection plus tard ?',
-      answer: 'Oui ! Vous pouvez modifier le lien de redirection à tout moment depuis votre espace client. C\'est très pratique si vous changez de page Google ou si vous voulez rediriger vers une autre plateforme d\'avis.',
+      answer: "Oui ! Vous pouvez modifier le lien de redirection à tout moment depuis votre espace client. C'est très pratique si vous changez de page Google ou si vous voulez rediriger vers une autre plateforme d'avis.",
     },
     {
       question: 'Quelle est la garantie ?',
@@ -44,10 +48,6 @@ export default function FAQ() {
       answer: 'Bien sûr ! Nos packs sont justement conçus pour ça. Le pack Pro (5 plaques) est idéal si vous avez plusieurs points de vente ou emplacements stratégiques. Chaque plaque peut être configurée avec un lien différent si besoin.',
     },
   ]
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
 
   return (
     <section id="faq" className="py-20 sm:py-32 bg-white" ref={ref}>
@@ -68,47 +68,24 @@ export default function FAQ() {
         </motion.div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <Accordion type="single" collapsible defaultValue="faq-0" className="space-y-3">
           {faqs.map((faq, index) => (
-            <motion.div
+            <AccordionItem
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
+              value={`faq-${index}`}
+              className="bg-gray-50 hover:bg-gray-100 transition-colors border-2 border-transparent hover:border-primary/20 rounded-2xl"
             >
-              <button
-                onClick={() => toggleFAQ(index)}
-                aria-expanded={openIndex === index}
-                className="w-full bg-gray-50 hover:bg-gray-100 rounded-2xl p-6 text-left transition-all duration-300 border-2 border-transparent hover:border-primary/20"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-gray-900 pr-8">
-                    {faq.question}
-                  </h3>
-                  <ChevronDown
-                    className={`w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300 ${
-                      openIndex === index ? 'rotate-180' : ''
-                    }`}
-                  />
-                </div>
-                
-                <motion.div
-                  initial={false}
-                  animate={{
-                    height: openIndex === index ? 'auto' : 0,
-                    opacity: openIndex === index ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <p className="text-gray-600 mt-4 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </motion.div>
-              </button>
-            </motion.div>
+              <AccordionTrigger className="px-6 py-5 hover:no-underline">
+                <h3 className="text-lg font-semibold text-gray-900 text-left pr-4">
+                  {faq.question}
+                </h3>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-5 text-gray-600 leading-relaxed">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
 
         {/* Contact CTA */}
         <motion.div
@@ -124,22 +101,21 @@ export default function FAQ() {
             Notre équipe est là pour vous aider. Contactez-nous par email ou via le chat.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:bonjour@swiipx.fr"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Envoyer un email
-            </a>
-            <button
-              onClick={() => { if ((window as any).Tawk_API) (window as any).Tawk_API.maximize() }}
-              className="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-900 rounded-xl font-semibold border-2 border-gray-200 hover:border-primary transition-all duration-300"
+            <Button asChild size="lg">
+              <a href="mailto:bonjour@swiipx.fr">Envoyer un email</a>
+            </Button>
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => {
+                if ((window as any).Tawk_API) (window as any).Tawk_API.maximize()
+              }}
             >
               Ouvrir le chat
-            </button>
+            </Button>
           </div>
         </motion.div>
       </div>
     </section>
   )
 }
-

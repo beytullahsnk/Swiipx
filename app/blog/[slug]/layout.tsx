@@ -12,7 +12,7 @@ const seoData: Record<string, {
 }> = {
   'obtenir-plus-avis-google': {
     title: 'Comment obtenir plus d\'avis Google en 2026 : 10 méthodes testées',
-    description: 'Découvrez 10 méthodes testées pour obtenir plus d\'avis Google rapidement. NFC, QR code, scripts, email, SMS : guide pratique avec résultats concrets (+250 % en 3 mois).',
+    description: '10 méthodes testées pour obtenir plus d\'avis Google rapidement (+250 % en 3 mois). NFC, QR code, scripts email/SMS : guide pratique 2026.',
     keywords: 'obtenir avis google, plus avis google, augmenter avis google, collecte avis, méthodes avis google, NFC avis, QR code avis, script demande avis',
     date: '2026-01-15',
     dateModified: '2026-01-15',
@@ -26,7 +26,7 @@ const seoData: Record<string, {
   },
   'avis-clients-influencent-business': {
     title: 'Pourquoi les avis clients influencent votre business | Guide 2026',
-    description: 'Impact des avis Google sur le chiffre d\'affaires, la conversion, le SEO local et la confiance client. Données 2026, stratégies par secteur, templates de réponse et calcul du ROI.',
+    description: 'Impact des avis Google sur le chiffre d\'affaires, la conversion et le SEO local. Données 2026, stratégies par secteur et calcul du ROI.',
     keywords: 'avis clients business, impact avis google, avis et chiffre affaires, avis clients conversion, e-réputation, gestion avis négatifs, ROI avis google',
     date: '2026-01-20',
     dateModified: '2026-01-20',
@@ -40,7 +40,7 @@ const seoData: Record<string, {
   },
   'booster-visibilite-locale': {
     title: '5 astuces pour booster votre visibilité locale | Guide SEO 2026',
-    description: 'Guide complet pour dominer le pack local Google : optimisation Google Business Profile, collecte d\'avis, citations NAP, pages locales et backlinks. Plan d\'action 30/60/90 jours inclus.',
+    description: 'Dominer le pack local Google : optimisation Google Business Profile, avis, citations NAP, pages locales, backlinks. Plan d\'action 30/60/90 jours.',
     keywords: 'visibilité locale, SEO local, pack local google, Google Business Profile, citations NAP, avis google local, référencement local, backlinks locaux',
     date: '2026-01-21',
     dateModified: '2026-01-21',
@@ -54,7 +54,7 @@ const seoData: Record<string, {
   },
   'nfc-avis-clients': {
     title: 'NFC : la nouvelle arme pour collecter des avis clients | Guide 2026',
-    description: 'Comment collecter plus d\'avis Google avec une plaque NFC : fonctionnement, taux de conversion (35-45 %), mise en place, placements par métier, scripts d\'équipe et calcul du ROI.',
+    description: 'Collecter plus d\'avis Google avec une plaque NFC : fonctionnement, taux de conversion (35-45 %), mise en place et ROI. Guide 2026.',
     keywords: 'NFC avis clients, plaque NFC avis google, collecte avis NFC, NFC vs QR code, plaque avis restaurant, NFC commerce, avis google automatique',
     date: '2026-01-22',
     dateModified: '2026-01-22',
@@ -69,7 +69,7 @@ const seoData: Record<string, {
   },
   'seo-local-recherches-google': {
     title: 'SEO Local : comment grimper en tête des recherches Google | Guide 2026',
-    description: 'Méthode complète pour gagner le pack local Google Maps : Google Business Profile, avis, pages locales, citations NAP, schema markup, backlinks et plan d\'action 30 jours avec templates.',
+    description: 'Méthode 2026 pour gagner le pack local Google Maps : Google Business Profile, avis, pages locales, citations NAP, backlinks. Plan d\'action 30 jours.',
     keywords: 'SEO local, référencement local, pack local google, google maps seo, Google Business Profile, schema LocalBusiness, citations NAP, backlinks locaux, visibilité locale',
     date: '2026-01-23',
     dateModified: '2026-01-23',
@@ -83,7 +83,7 @@ const seoData: Record<string, {
   },
   'erreurs-demander-avis': {
     title: 'Les erreurs fatales à éviter avec vos avis Google | Guide 2026',
-    description: 'Acheter des faux avis, harceler vos clients, offrir des récompenses... Ces erreurs peuvent vous faire bannir de Google. Guide complet des pratiques interdites et des bonnes alternatives.',
+    description: 'Acheter des faux avis, offrir des récompenses, harceler les clients : les erreurs qui font bannir votre fiche Google. Guide complet 2026.',
     keywords: 'erreurs avis google, faux avis google, acheter avis google, avis google interdits, règles avis google, sanctions google avis, bonnes pratiques avis',
     date: '2026-01-24',
     dateModified: '2026-01-24',

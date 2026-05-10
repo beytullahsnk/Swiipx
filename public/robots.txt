@@ -4,6 +4,8 @@ Allow: /
 Disallow: /api/
 Disallow: /cart
 Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
 Disallow: /success
 Disallow: /success/
 

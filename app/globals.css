@@ -12,7 +12,19 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Masquer la scrollbar (mobile sliders) */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE / Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome / Safari / Opera */
+  }
 }
+
+/* Le positionnement du widget Tawk.to est géré par leur API officielle
+   via window.Tawk_API.customStyle (cf. app/components/WhatsAppButton.tsx). */
 
 /* Smooth scrolling */
 html {

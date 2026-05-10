@@ -6,6 +6,7 @@ import Footer from './Footer'
 import PromoPopup from './PromoPopup'
 import WhatsAppButton from './WhatsAppButton'
 import GooglePlacesScript from './GooglePlacesScript'
+import SendcloudScript from './SendcloudScript'
 import GiftNotch from './GiftNotch'
 import AnnouncementBar from './AnnouncementBar'
 import { Toaster } from 'react-hot-toast'
@@ -15,20 +16,37 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const [showNotch, setShowNotch] = useState(false)
   const POPUP_STORAGE_KEY = 'swiipx-promo-popup-shown'
 
-  // Afficher le popup après 1 minute
+  // Afficher le popup après 2 minutes OU en exit-intent (desktop)
   useEffect(() => {
     if (typeof window === 'undefined') return
-    
+
     const hasBeenShown = sessionStorage.getItem(POPUP_STORAGE_KEY)
 
     if (hasBeenShown) {
       setShowNotch(true)
-    } else {
-      const timer = setTimeout(() => {
-        setIsPopupOpen(true)
-      }, 60000) // 60000ms = 1 minute
+      return
+    }
 
-      return () => clearTimeout(timer)
+    const openPopup = () => {
+      setIsPopupOpen(true)
+    }
+
+    // Timer fallback (2 minutes — surtout utile sur mobile)
+    const timer = setTimeout(openPopup, 120000)
+
+    // Exit-intent : détecte quand la souris quitte la fenêtre (desktop uniquement)
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0) {
+        openPopup()
+        document.documentElement.removeEventListener('mouseleave', handleMouseLeave)
+        clearTimeout(timer)
+      }
+    }
+    document.documentElement.addEventListener('mouseleave', handleMouseLeave)
+
+    return () => {
+      clearTimeout(timer)
+      document.documentElement.removeEventListener('mouseleave', handleMouseLeave)
     }
   }, [])
 
@@ -41,6 +59,9 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
       {/* Google Places API Script */}
       <GooglePlacesScript />
+
+      {/* Sendcloud Service Point Picker Script */}
+      <SendcloudScript />
       
       {/* Toast notifications */}
       <Toaster

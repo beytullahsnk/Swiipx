@@ -1,9 +1,9 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import {
   Star, Check, ShoppingCart, Truck, Shield,
-  ChevronLeft, ChevronRight, ChevronDown, Package, MapPin, Gift, Minus, Plus
+  ChevronLeft, ChevronRight, Package, MapPin, Gift, Minus, Plus, ArrowRight
 } from 'lucide-react'
 import { useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
@@ -11,6 +11,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart, CartItem } from '../../store/cart'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '../../components/ui/accordion'
 
 const slugToCartId: Record<string, CartItem['id']> = {
   starter: 'plaque1',
@@ -24,7 +30,7 @@ const products = {
     name: 'Pack Starter — 1 Plaque Avis Google NFC',
     slug: 'starter',
     plaques: 1,
-    price: 39.90,
+    price: 0.50, // TEST PROD — remettre à 39.90
     originalPrice: null as number | null,
     description: 'La plaque avis Google NFC idéale pour débuter. Collez-la à l\'accueil ou au comptoir : vos clients scannent et laissent un avis Google en 10 secondes, sans application. Plaque en acrylique premium 120×120 mm, garantie 2 ans.',
     ratingValue: 4.8,
@@ -34,9 +40,10 @@ const products = {
       '1 plaque NFC premium',
       'QR code de secours intégré',
       'Livraison gratuite en France',
-      'Support par email',
+      'Support client dédié',
       'Garantie 2 ans',
       'Configuration incluse',
+      'Tableau de bord analytics',
     ],
     technicalSpecs: [
       { label: 'Dimensions', value: '120 x 120 x 3 mm' },
@@ -69,9 +76,10 @@ const products = {
       '2 plaques NFC premium',
       'QR code de secours intégré',
       'Livraison gratuite en France',
-      'Support prioritaire',
+      'Support client dédié',
       'Garantie 2 ans',
       'Configuration incluse',
+      'Tableau de bord analytics',
     ],
     technicalSpecs: [
       { label: 'Dimensions', value: '120 x 120 x 3 mm' },
@@ -103,7 +111,7 @@ const products = {
       '5 plaques NFC premium',
       'QR code de secours intégré',
       'Livraison express gratuite',
-      'Support prioritaire 24/7',
+      'Support client dédié',
       'Garantie 2 ans',
       'Configuration incluse',
       'Tableau de bord analytics',
@@ -140,8 +148,8 @@ function getInfoSections(slug: string) {
       title: 'Livraison & Expédition',
       icon: Truck,
       content: slug === 'pro'
-        ? 'Livraison express gratuite en France métropolitaine sous 2-3 jours ouvrés. Expédition sous 24h après commande. Numéro de suivi envoyé par email. Livraison en Corse et DOM-TOM sous 5-7 jours ouvrés.'
-        : 'Livraison gratuite en France métropolitaine sous 2-3 jours ouvrés. Expédition sous 24h après commande. Numéro de suivi envoyé par email dès l\'expédition. Livraison en Corse et DOM-TOM disponible.',
+        ? 'Livraison express gratuite en France métropolitaine sous 2-5 jours ouvrés. Expédition sous 24h après commande. Numéro de suivi envoyé par email. Livraison en Corse et DOM-TOM sous 5-7 jours ouvrés.'
+        : 'Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés. Expédition sous 24h après commande. Numéro de suivi envoyé par email dès l\'expédition. Livraison en Corse et DOM-TOM disponible.',
     },
     {
       id: 'guarantee',
@@ -161,7 +169,6 @@ export default function ProductDetailPage() {
   const { addItem, openCart } = useCart()
   const [quantity, setQuantity] = useState(1)
   const [selectedImage, setSelectedImage] = useState(0)
-  const [expandedSection, setExpandedSection] = useState<string | null>(null)
 
   if (!product) {
     return (
@@ -189,21 +196,16 @@ export default function ProductDetailPage() {
     openCart()
   }
 
-  const toggleSection = (section: string) => {
-    setExpandedSection(expandedSection === section ? null : section)
-  }
 
   const discountPercent = product.originalPrice
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : null
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-32 pb-20">
+    <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
-        <motion.nav
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+        <nav
           className="flex items-center text-sm text-gray-500 mb-8"
           aria-label="Fil d'Ariane"
         >
@@ -212,18 +214,13 @@ export default function ProductDetailPage() {
           <Link href="/#product" className="hover:text-primary transition-colors">Nos plaques</Link>
           <ChevronRight className="w-4 h-4 mx-1.5 flex-shrink-0" />
           <span className="text-gray-900 font-medium truncate">{product.name}</span>
-        </motion.nav>
+        </nav>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* ══════════════════════════════════════════════ */}
           {/* LEFT COLUMN — Image Gallery (sticky desktop)  */}
           {/* ══════════════════════════════════════════════ */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-4 lg:sticky lg:top-28"
-          >
+          <div className="space-y-4 lg:sticky lg:top-28">
             {/* Main Image Container */}
             <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden aspect-square group">
               {/* Subtle gradient overlay */}
@@ -336,17 +333,12 @@ export default function ProductDetailPage() {
                 <span className="font-medium">Livraison gratuite</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* ══════════════════════════════════════════════ */}
           {/* RIGHT COLUMN — Product Details               */}
           {/* ══════════════════════════════════════════════ */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
-          >
+          <div className="space-y-6">
             {/* Title + Description */}
             <div>
               <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -394,24 +386,21 @@ export default function ProductDetailPage() {
             {/* Benefits */}
             <div className="space-y-3 bg-blue-50 rounded-xl p-5">
               {[
-                { emoji: '🇫🇷', text: 'Entreprise Française' },
-                { emoji: '⚡', text: 'Collectez des avis en 3 secondes !' },
-                { emoji: '💳', text: 'Paiement en une fois, sans abonnement' },
+                { text: 'Entreprise française' },
+                { text: 'Collectez des avis en 3 secondes' },
+                { text: 'Paiement en une fois, sans abonnement' },
               ].map((benefit, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                   className="flex items-center space-x-3"
                 >
                   <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-green-600" />
                   </div>
                   <span className="text-base font-medium text-gray-900">
-                    {benefit.emoji} {benefit.text}
+                    {benefit.text}
                   </span>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -440,21 +429,21 @@ export default function ProductDetailPage() {
             </div>
 
             {/* Add to Cart CTA */}
-            <motion.button
+            <button
               onClick={handleAddToCart}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
               aria-label={`Ajouter ${quantity} ${product.name} au panier`}
-              className="w-full py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center space-x-3"
+              className="w-full py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center space-x-3"
             >
               <ShoppingCart className="w-6 h-6" />
               <span>Ajouter au panier — {(product.price * quantity).toFixed(2).replace('.', ',')}€</span>
-            </motion.button>
+            </button>
 
-            {/* Stock Warning */}
+            {/* Social proof */}
             <div className="flex items-center justify-center space-x-2 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-              <span className="font-semibold text-red-600">Stock limité — Offre du moment</span>
+              <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="font-medium text-gray-600">500+ entreprises nous font confiance</span>
             </div>
 
             {/* Included Features */}
@@ -464,82 +453,40 @@ export default function ProductDetailPage() {
               </h2>
               <ul className="space-y-3">
                 {product.features.map((feature, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
-                    className="flex items-start space-x-3"
-                  >
+                  <li key={index} className="flex items-start space-x-3">
                     <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             </div>
 
-            {/* Collapsible Info Sections */}
-            <div className="space-y-2 border-t border-gray-200 pt-6">
-              {getInfoSections(slug).map((section) => (
-                <div key={section.id} className="border border-gray-200 rounded-xl overflow-hidden">
-                  <button
-                    onClick={() => toggleSection(section.id)}
-                    aria-expanded={expandedSection === section.id}
-                    className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center space-x-3">
-                      <section.icon className="w-5 h-5 text-primary" />
-                      <h3 className="font-semibold text-gray-900 text-base">{section.title}</h3>
-                    </div>
-                    <ChevronDown
-                      className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
-                        expandedSection === section.id ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      height: expandedSection === section.id ? 'auto' : 0,
-                      opacity: expandedSection === section.id ? 1 : 0,
-                    }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-4 pb-4 text-gray-600 leading-relaxed">
+            {/* Collapsible Info Sections — shadcn Accordion */}
+            <div className="border-t border-gray-200 pt-6">
+              <Accordion type="single" collapsible className="space-y-2">
+                {getInfoSections(slug).map((section) => (
+                  <AccordionItem key={section.id} value={section.id}>
+                    <AccordionTrigger>
+                      <div className="flex items-center space-x-3">
+                        <section.icon className="w-5 h-5 text-primary" aria-hidden="true" />
+                        <span className="font-semibold text-gray-900 text-base">{section.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
                       {section.content}
-                    </div>
-                  </motion.div>
-                </div>
-              ))}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
 
-              {/* Technical Specs — collapsible */}
-              <div className="border border-gray-200 rounded-xl overflow-hidden">
-                <button
-                  onClick={() => toggleSection('specs')}
-                  aria-expanded={expandedSection === 'specs'}
-                  className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
-                >
-                  <div className="flex items-center space-x-3">
-                    <Package className="w-5 h-5 text-primary" />
-                    <h3 className="font-semibold text-gray-900 text-base">Spécifications techniques</h3>
-                  </div>
-                  <ChevronDown
-                    className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
-                      expandedSection === 'specs' ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                <motion.div
-                  initial={false}
-                  animate={{
-                    height: expandedSection === 'specs' ? 'auto' : 0,
-                    opacity: expandedSection === 'specs' ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <div className="px-4 pb-4">
+                {/* Technical Specs */}
+                <AccordionItem value="specs">
+                  <AccordionTrigger>
+                    <div className="flex items-center space-x-3">
+                      <Package className="w-5 h-5 text-primary" aria-hidden="true" />
+                      <span className="font-semibold text-gray-900 text-base">Spécifications techniques</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
                     <dl className="space-y-3">
                       {product.technicalSpecs.map((spec, index) => (
                         <div key={index} className="flex justify-between">
@@ -548,9 +495,9 @@ export default function ProductDetailPage() {
                         </div>
                       ))}
                     </dl>
-                  </div>
-                </motion.div>
-              </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
 
             {/* Special Offer Box */}
@@ -584,9 +531,108 @@ export default function ProductDetailPage() {
                 <div className="w-10 h-6 bg-gray-100 border border-gray-200 rounded flex items-center justify-center text-xs font-bold text-gray-600">MC</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
+
+        {/* Section "Comparer les autres packs" — internal linking SEO + cross-sell */}
+        <RelatedProducts currentSlug={slug} />
       </div>
     </div>
+  )
+}
+
+// ─── Composant Produits liés ─────────────────────────────────────────────────
+
+const allPackSummary: Record<string, { name: string; plaques: number; price: number; originalPrice: number | null; image: string; popular?: boolean }> = {
+  starter: {
+    name: 'Pack Starter',
+    plaques: 1,
+    price: 39.90,
+    originalPrice: null,
+    image: '/products/plaque1.jpg',
+  },
+  business: {
+    name: 'Pack Business',
+    plaques: 2,
+    price: 59.90,
+    originalPrice: 79.90,
+    image: '/products/plaque2.jpg',
+    popular: true,
+  },
+  pro: {
+    name: 'Pack Pro',
+    plaques: 5,
+    price: 89.90,
+    originalPrice: 149.90,
+    image: '/products/plaque5.jpg',
+  },
+}
+
+function RelatedProducts({ currentSlug }: { currentSlug: string }) {
+  const otherSlugs = Object.keys(allPackSummary).filter(s => s !== currentSlug)
+
+  return (
+    <section className="mt-20 pt-12 border-t border-gray-200">
+      <div className="text-center mb-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-2">
+          Comparer
+        </p>
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          Les autres packs Swiipx
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        {otherSlugs.map((slug) => {
+          const p = allPackSummary[slug]
+          return (
+            <Link
+              key={slug}
+              href={`/product/${slug}`}
+              className="group flex flex-col bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary hover:shadow-md transition-all"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-20 h-20 bg-gray-50 rounded-xl flex-shrink-0 overflow-hidden">
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {p.popular && (
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-gray-900 bg-accent px-2 py-1 rounded-full">
+                    Populaire
+                  </span>
+                )}
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">
+                {p.name}
+              </h3>
+              <p className="text-sm text-gray-500 mb-3">
+                {p.plaques} plaque{p.plaques > 1 ? 's' : ''} NFC
+              </p>
+
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-xl font-bold text-gray-900">
+                  {p.price.toFixed(2).replace('.', ',')}€
+                </span>
+                {p.originalPrice && (
+                  <span className="text-sm text-gray-400 line-through">
+                    {p.originalPrice.toFixed(2).replace('.', ',')}€
+                  </span>
+                )}
+              </div>
+
+              <span className="mt-auto inline-flex items-center text-sm font-semibold text-primary group-hover:translate-x-1 transition-transform">
+                Voir le pack
+                <ArrowRight className="w-4 h-4 ml-1.5" aria-hidden="true" />
+              </span>
+            </Link>
+          )
+        })}
+      </div>
+    </section>
   )
 }

@@ -3,18 +3,21 @@
 import { CheckCircle } from 'lucide-react'
 import { useEffect, Suspense } from 'react'
 import { useCart } from '../store/cart'
+import { useShippingStore } from '../store/shipping'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 function SuccessContent() {
   const { clearCart } = useCart()
+  const { reset: resetShipping } = useShippingStore()
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
   useEffect(() => {
     if (sessionId) {
       clearCart()
+      resetShipping()
     }
-  }, [clearCart, sessionId])
+  }, [clearCart, resetShipping, sessionId])
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 pt-32 pb-20">
@@ -29,9 +32,20 @@ function SuccessContent() {
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
           Commande confirmée
         </h1>
-        <p className="text-gray-500 mb-10">
-          Merci pour votre commande. Vous recevrez un email de confirmation dans quelques minutes.
+        <p className="text-gray-500 mb-2">
+          Merci pour votre commande. Un email de confirmation vient d&apos;être envoyé.
         </p>
+
+        {/* Order ID */}
+        {sessionId && (
+          <p className="text-sm text-gray-400 mb-10">
+            Référence commande{' '}
+            <span className="font-mono font-semibold text-gray-700">
+              #{sessionId.slice(-8).toUpperCase()}
+            </span>
+          </p>
+        )}
+        {!sessionId && <div className="mb-10" />}
 
         {/* Steps */}
         <div className="text-left border border-gray-200 rounded-xl divide-y divide-gray-200 mb-10">
@@ -52,7 +66,7 @@ function SuccessContent() {
           <div className="p-5 flex gap-4">
             <span className="text-sm font-semibold text-gray-400 mt-0.5">03</span>
             <div>
-              <p className="font-semibold text-gray-900 text-sm">Livraison en 2-3 jours ouvrés</p>
+              <p className="font-semibold text-gray-900 text-sm">Livraison en 2-5 jours ouvrés</p>
               <p className="text-gray-500 text-sm mt-0.5">Livraison gratuite partout en France.</p>
             </div>
           </div>
@@ -73,6 +87,17 @@ function SuccessContent() {
             Une question ? Chattez avec nous
           </button>
         </div>
+
+        {/* Internal link to blog (SEO + engagement post-achat) */}
+        <p className="mt-10 pt-8 border-t border-gray-100 text-sm text-gray-500">
+          En attendant la livraison, découvrez notre guide :{' '}
+          <Link
+            href="/blog/doubler-avis-google-30-jours"
+            className="text-primary hover:text-blue-700 font-medium underline underline-offset-2"
+          >
+            Doubler vos avis Google en 30 jours
+          </Link>
+        </p>
 
       </div>
     </div>

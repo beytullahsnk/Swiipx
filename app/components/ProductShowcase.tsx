@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import { Check, ChevronDown, ChevronLeft, ChevronRight, Gift, MapPin, Package, Shield, Truck } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { Building2, Check, ChevronDown, ChevronLeft, ChevronRight, Gift, MapPin, Package, Shield, ShoppingCart, Truck } from 'lucide-react'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart } from '../store/cart'
@@ -15,8 +15,8 @@ const productPacks = [
     id: 'plaque1' as const,
     quantity: 1,
     name: '1 Plaque',
-    price: 39.90,
-    priceHT: '39,90€',
+    price: 0.50, // TEST PROD — remettre à 39.90
+    priceHT: '0,50€', // TEST PROD — remettre à '39,90€'
     badge: null,
   },
   {
@@ -39,10 +39,10 @@ const productPacks = [
 ]
 
 const productBenefits = [
-  { icon: '🇫🇷', text: 'Entreprise Française' },
-  { icon: '⚡', text: 'Collectez des avis en 3 secondes !' },
-  { icon: '💳', text: 'Paiement en une fois, sans abonnement' },
-  { icon: '🚀', text: 'Soyez 1er dans les recherches Google' },
+  { text: 'Entreprise française' },
+  { text: 'Collectez des avis en 3 secondes' },
+  { text: 'Paiement en une fois, sans abonnement' },
+  { text: 'Aide à grimper dans les recherches Google' },
 ]
 
 export default function ProductShowcase() {
@@ -52,6 +52,8 @@ export default function ProductShowcase() {
   const [selectedImage, setSelectedImage] = useState(0)
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [business, setBusiness] = useState<BusinessInfo | null>(null)
+  const [showStickyBar, setShowStickyBar] = useState(false)
+  const ctaButtonRef = useRef<HTMLButtonElement>(null)
 
   // Restaurer l'entreprise depuis le store Zustand au montage
   useEffect(() => {
@@ -67,6 +69,17 @@ export default function ProductShowcase() {
     }
   }, [company, business])
 
+  // Sticky CTA bar : visible sur mobile quand le bouton principal est hors viewport
+  useEffect(() => {
+    if (!ctaButtonRef.current) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowStickyBar(!entry.isIntersecting),
+      { threshold: 0 }
+    )
+    observer.observe(ctaButtonRef.current)
+    return () => observer.disconnect()
+  }, [])
+
   // Product images - Chaque miniature a sa propre grande image
   const productImages = [
     { id: 0, src: '/product-main.jpg', alt: 'Plaque avis Google NFC Swiipx', mainSrc: '/product-main.jpg' },
@@ -77,15 +90,9 @@ export default function ProductShowcase() {
   ]
 
   const handleAddToCart = () => {
-    // Vérifier si l'entreprise est sélectionnée
-    if (!business || !business.place_id) {
-      toast.error("⚠️ Veuillez sélectionner votre entreprise avant d'ajouter au panier")
-      return
-    }
-
     const selectedProduct = productPacks.find(p => p.id === selectedPack)
     if (selectedProduct) {
-      addItem(selectedProduct.id, business)
+      addItem(selectedProduct.id, business || undefined)
       toast.success(`${selectedProduct.name} ajouté au panier ! 🎉`)
       setTimeout(() => {
         openCart()
@@ -109,7 +116,7 @@ export default function ProductShowcase() {
       id: 'delivery',
       title: 'Livraison',
       icon: Truck,
-      content: 'Livraison gratuite en France métropolitaine sous 2-3 jours ouvrés. Vous recevrez un numéro de suivi par email dès l\'expédition de votre commande.',
+      content: 'Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés. Vous recevrez un numéro de suivi par email dès l\'expédition de votre commande.',
     },
     {
       id: 'guarantee',
@@ -124,12 +131,7 @@ export default function ProductShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* LEFT COLUMN - Product Images (Sticky) */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-4 lg:sticky lg:top-24"
-          >
+          <div className="space-y-4 lg:sticky lg:top-24">
             {/* Main Image */}
             <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden aspect-square group">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent" />
@@ -222,15 +224,10 @@ export default function ProductShowcase() {
                 <span className="font-medium">Livraison gratuite</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* RIGHT COLUMN - Product Information */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
-          >
+          <div className="space-y-6">
             {/* Product Title */}
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -261,20 +258,14 @@ export default function ProductShowcase() {
             {/* Benefits List */}
             <div className="space-y-3 bg-blue-50 rounded-xl p-6">
               {productBenefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center space-x-3"
-                >
+                <div key={index} className="flex items-center space-x-3">
                   <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-green-600" />
                   </div>
                   <span className="text-lg font-medium text-gray-900">
-                    {benefit.icon} {benefit.text}
+                    {benefit.text}
                   </span>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -334,18 +325,31 @@ export default function ProductShowcase() {
               ))}
             </div>
 
-            {/* Business Selection */}
+            {/* Price justification — pourquoi ce prix ? */}
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                Pourquoi ce prix ?
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Plaque NFC NTAG215 + acrylique premium 3 mm + configuration personnalisée
+                + livraison gratuite + garantie 2 ans. Rentabilisé en 2 semaines avec
+                3 nouveaux clients moyens.
+              </p>
+            </div>
+
+            {/* Business Selection (optionnel) */}
             <div className="space-y-3 border-t border-gray-200 pt-6">
               <div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  🏢 Sélectionnez votre entreprise
+                <h3 className="text-lg font-bold text-gray-900 mb-1 flex items-center gap-2">
+                  <Building2 className="w-5 h-5 text-primary" aria-hidden="true" />
+                  Votre entreprise
                 </h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Recherchez votre établissement pour personnaliser votre plaque NFC
+                <p className="text-sm text-gray-500 mb-4">
+                  Optionnel — vous pourrez le faire au checkout
                 </p>
               </div>
-              
-              <BusinessAutocomplete 
+
+              <BusinessAutocomplete
                 onSelect={(businessData) => {
                   setBusiness(businessData)
                 }}
@@ -356,21 +360,30 @@ export default function ProductShowcase() {
             {/* Add to Cart Button */}
             <div className="space-y-3">
               <button
+                ref={ctaButtonRef}
                 onClick={handleAddToCart}
-                disabled={!business || !business.place_id}
-                className={`w-full py-4 rounded-xl font-bold text-lg shadow-lg transition-all duration-300 ${
-                  business && business.place_id
-                    ? 'bg-primary text-white hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] cursor-pointer'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                }`}
+                className="w-full py-4 rounded-xl font-bold text-lg shadow-lg transition-all duration-300 bg-primary text-white hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
               >
-                {business && business.place_id ? 'Ajouter au panier' : '🔒 Sélectionnez votre entreprise'}
+                Ajouter au panier
               </button>
 
-              {/* Stock Warning */}
+              {/* Social proof */}
               <div className="flex items-center justify-center space-x-2 text-sm">
-                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                <span className="font-semibold text-red-600">Stock limité — Offre du moment</span>
+                <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium text-gray-600">500+ entreprises nous font confiance</span>
+              </div>
+
+              {/* Garantie 14 jours */}
+              <div className="flex items-start space-x-2.5 p-3 bg-green-50 border border-green-200 rounded-lg">
+                <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <div className="text-sm">
+                  <p className="font-semibold text-green-900">Satisfait ou remboursé sous 14 jours</p>
+                  <p className="text-green-700 text-xs">Retour gratuit, plaque non collée — remboursement intégral.</p>
+                </div>
               </div>
             </div>
 
@@ -445,9 +458,29 @@ export default function ProductShowcase() {
                 </li>
               </ul>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
+
+      {/* Sticky mobile CTA bar */}
+      {showStickyBar && (
+        <div className="fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] p-3 lg:hidden">
+          <div className="flex items-center justify-between max-w-lg mx-auto gap-3">
+            <div className="flex-shrink-0">
+              <p className="text-lg font-bold text-gray-900">
+                {productPacks.find(p => p.id === selectedPack)?.priceHT}
+              </p>
+            </div>
+            <button
+              onClick={handleAddToCart}
+              className="flex-1 flex items-center justify-center space-x-2 py-3 rounded-xl font-bold text-base bg-primary text-white hover:bg-blue-700 active:scale-[0.98] transition-all"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              <span>Ajouter au panier</span>
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

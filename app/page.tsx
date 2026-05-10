@@ -1,5 +1,7 @@
 import HeroSection from './components/HeroSection'
 import HowItWorks from './components/HowItWorks'
+import VideoShowcase from './components/VideoShowcase'
+import IndustryResults from './components/IndustryResults'
 import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
@@ -15,7 +17,7 @@ export default function Home() {
       {
         '@type': 'Question',
         name: 'Combien de temps pour la livraison ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Nous expédions sous 24h ouvrées. La livraison prend entre 2 à 3 jours ouvrés en France métropolitaine. Vous recevrez un numéro de suivi par email.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Nous expédions sous 24h ouvrées. La livraison prend entre 2 à 5 jours ouvrés en France métropolitaine. Vous recevrez un numéro de suivi par email.' },
       },
       {
         '@type': 'Question',
@@ -129,6 +131,20 @@ export default function Home() {
     ],
   }
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': 'https://swiipx.fr/#breadcrumb',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Accueil',
+        item: 'https://swiipx.fr',
+      },
+    ],
+  }
+
   const howToJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -152,7 +168,7 @@ export default function Home() {
         '@type': 'HowToStep',
         position: 1,
         name: 'Commandez votre plaque NFC avis Google',
-        text: 'Choisissez votre pack Swiipx (Starter, Business ou Pro) et passez commande sur swiipx.fr. Livraison gratuite en France métropolitaine sous 2-3 jours ouvrés.',
+        text: 'Choisissez votre pack Swiipx (Starter, Business ou Pro) et passez commande sur swiipx.fr. Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés.',
         url: 'https://swiipx.fr/#product',
       },
       {
@@ -184,12 +200,22 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero Section - Main headline and CTA */}
       <HeroSection />
       
       {/* How It Works - 3-step process explanation */}
       <HowItWorks />
-      
+
+      {/* Video Showcase - 3 vidéos format mobile */}
+      <VideoShowcase />
+
+      {/* Industry Results — résultats par secteur */}
+      <IndustryResults />
+
       {/* Product Showcase - Shopify-style product display */}
       <ProductShowcase />
       

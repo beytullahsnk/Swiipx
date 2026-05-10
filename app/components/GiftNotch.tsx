@@ -19,12 +19,12 @@ export default function GiftNotch({ onClick, isVisible }: GiftNotchProps) {
           transition={{ duration: 0.3 }}
           onClick={onClick}
           aria-label="Télécharger le guide gratuit"
-          className="fixed left-0 top-[30%] z-[300] bg-black text-white px-3 py-6 rounded-r-2xl shadow-2xl hover:bg-gray-900 transition-colors group"
+          className="fixed left-0 top-1/2 -translate-y-1/2 z-[300] bg-black text-white px-2 py-3 sm:px-3 sm:py-5 rounded-r-xl sm:rounded-r-2xl shadow-xl hover:bg-gray-900 transition-colors group"
           style={{ writingMode: 'vertical-rl' }}
         >
-          <div className="flex items-center space-y-2">
-            <BookOpen className="w-5 h-5 group-hover:rotate-12 transition-transform" aria-hidden="true" />
-            <span className="font-bold text-sm tracking-wide">E-BOOK GRATUIT</span>
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:rotate-12 transition-transform" aria-hidden="true" />
+            <span className="font-bold text-[10px] sm:text-xs tracking-wide">E-BOOK GRATUIT</span>
           </div>
         </motion.button>
       )}

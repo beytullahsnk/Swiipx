@@ -31,7 +31,9 @@
       "Read(//Users/beytullahsonkaya/**)",
       "Bash(brew list:*)",
       "Bash(find /Users/beytullahsonkaya/Documents/Swiipx31.10.2025/app -type f -name *.ts -o -name *.tsx)",
-      "Bash(find /Users/beytullahsonkaya/Documents/Swiipx31.10.2025 -maxdepth 1 -type f \\\\\\(-name *.json -o -name .*config* \\\\\\) ! -path */node_modules/*)"
+      "Bash(find /Users/beytullahsonkaya/Documents/Swiipx31.10.2025 -maxdepth 1 -type f \\\\\\(-name *.json -o -name .*config* \\\\\\) ! -path */node_modules/*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(/Users/beytullahsonkaya/.nvm/versions/node/v22.17.0/bin/npx next *)"
     ]
   }
 }

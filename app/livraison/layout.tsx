@@ -1,14 +1,14 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Livraison Gratuite en 2-3 Jours',
-  description: 'Livraison gratuite en France métropolitaine sous 2-3 jours ouvrés. Découvrez nos options d\'expédition pour vos plaques NFC Swiipx.',
+  title: 'Livraison Gratuite en 2-5 Jours',
+  description: 'Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés. Découvrez nos options d\'expédition pour vos plaques NFC Swiipx.',
   alternates: {
     canonical: 'https://swiipx.fr/livraison',
   },
   openGraph: {
     title: 'Livraison — Swiipx',
-    description: 'Livraison gratuite en France métropolitaine sous 2-3 jours ouvrés pour vos plaques NFC.',
+    description: 'Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés pour vos plaques NFC.',
     url: 'https://swiipx.fr/livraison',
     siteName: 'Swiipx',
     locale: 'fr_FR',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Livraison — Swiipx',
-    description: 'Livraison gratuite en France métropolitaine sous 2-3 jours ouvrés pour vos plaques NFC.',
+    description: 'Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés pour vos plaques NFC.',
     images: ['/product-main.jpg'],
   },
 }

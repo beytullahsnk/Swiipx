@@ -1,8 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 import { Star, Quote } from 'lucide-react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -12,9 +9,6 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 export default function Testimonials() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
-
   const testimonials = [
     {
       id: 1,
@@ -64,30 +58,20 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="py-20 sm:py-32 bg-gradient-to-br from-blue-50 to-white" ref={ref}>
+    <section id="testimonials" className="py-20 sm:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Ils ont boosté leurs avis avec Swiipx
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
             Rejoignez 500+ restaurants, salons, cabinets et boutiques qui ont doublé leurs avis Google en 3 mois
           </p>
-        </motion.div>
+        </div>
 
         {/* Testimonials Carousel */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative"
-        >
+        <div className="relative">
           <Swiper
             modules={[Autoplay, Pagination, Navigation]}
             spaceBetween={30}
@@ -171,15 +155,10 @@ export default function Testimonials() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </motion.div>
+        </div>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { value: '500+', label: 'Clients satisfaits' },
             { value: '4.9/5', label: 'Note moyenne' },
@@ -193,7 +172,7 @@ export default function Testimonials() {
               <p className="text-gray-600 font-medium">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Custom Swiper Styles */}

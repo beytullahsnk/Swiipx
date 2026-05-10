@@ -32,12 +32,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  const blogPages = blogArticles.map(({ slug, date }) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: date,
-    changeFrequency: 'monthly' as const,
-    priority: slug === 'doubler-avis-google-30-jours' ? 0.8 : 0.7,
-  }))
+  // Trouver l'article le plus récent (priorité dynamique = 0.9)
+  const sortedByDate = [...blogArticles].sort((a, b) =>
+    b.date.localeCompare(a.date)
+  )
+  const newestSlug = sortedByDate[0]?.slug
+  const secondNewestSlug = sortedByDate[1]?.slug
+
+  const blogPages = blogArticles.map(({ slug, date }) => {
+    let priority = 0.7
+    if (slug === newestSlug) priority = 0.9
+    else if (slug === secondNewestSlug) priority = 0.8
+    return {
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: date,
+      changeFrequency: 'monthly' as const,
+      priority,
+    }
+  })
 
   return [...staticPages, ...productPages, ...blogPages]
 }
