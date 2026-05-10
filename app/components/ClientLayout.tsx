@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import PromoPopup from './PromoPopup'
@@ -11,14 +12,22 @@ import GiftNotch from './GiftNotch'
 import AnnouncementBar from './AnnouncementBar'
 import { Toaster } from 'react-hot-toast'
 
+// Pages où on désactive les popups / chat / e-book — flow d'achat focused
+const POPUPLESS_PATHS = ['/checkout', '/cart', '/success']
+
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [showNotch, setShowNotch] = useState(false)
   const POPUP_STORAGE_KEY = 'swiipx-promo-popup-shown'
 
-  // Afficher le popup après 2 minutes OU en exit-intent (desktop)
+  // Désactive popups + chat sur les pages transactionnelles
+  const hidePopups = POPUPLESS_PATHS.some((p) => pathname?.startsWith(p))
+
+  // Afficher le popup après 2 minutes OU en exit-intent (desktop) — sauf en checkout/cart/success
   useEffect(() => {
     if (typeof window === 'undefined') return
+    if (hidePopups) return // skip toute la logique si on est en flow d'achat
 
     const hasBeenShown = sessionStorage.getItem(POPUP_STORAGE_KEY)
 
@@ -48,7 +57,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       clearTimeout(timer)
       document.documentElement.removeEventListener('mouseleave', handleMouseLeave)
     }
-  }, [])
+  }, [hidePopups])
 
   return (
     <>
@@ -92,23 +101,23 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       {/* Footer */}
       <Footer />
       
-      {/* Promo Popup */}
-      <PromoPopup 
-        isOpen={isPopupOpen} 
-        onClose={() => {
-          setIsPopupOpen(false)
-          setShowNotch(true)
-        }} 
-      />
-      
-      {/* Gift Notch - Visible uniquement si popup fermé */}
-      <GiftNotch 
-        onClick={() => setIsPopupOpen(true)}
-        isVisible={!isPopupOpen && showNotch}
-      />
-      
-      {/* WhatsApp Button */}
-      <WhatsAppButton />
+      {/* Popups + chat — désactivés sur les pages transactionnelles (checkout, cart, success) */}
+      {!hidePopups && (
+        <>
+          <PromoPopup
+            isOpen={isPopupOpen}
+            onClose={() => {
+              setIsPopupOpen(false)
+              setShowNotch(true)
+            }}
+          />
+          <GiftNotch
+            onClick={() => setIsPopupOpen(true)}
+            isVisible={!isPopupOpen && showNotch}
+          />
+          <WhatsAppButton />
+        </>
+      )}
     </>
   )
 }

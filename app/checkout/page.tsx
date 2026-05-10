@@ -206,10 +206,12 @@ function ExpressCheckoutSection({
   paymentIntentId,
   totalCents,
   onExpressAvailable,
+  position = 'top',
 }: {
   paymentIntentId: string
   totalCents: number
   onExpressAvailable: (available: boolean) => void
+  position?: 'top' | 'bottom'
 }) {
   const stripe = useStripe()
   const elements = useElements()
@@ -218,14 +220,29 @@ function ExpressCheckoutSection({
   const { method: shippingMethod, servicePoint } = useShippingStore()
   const [isAvailable, setIsAvailable] = useState(true)
 
+  const hasBusinessSelected = !!(company && company.placeId)
+  const needsServicePoint = shippingMethod === 'point_relais' && !servicePoint
+  const isReady = hasBusinessSelected && !needsServicePoint
+
   const onReady = ({ availablePaymentMethods }: { availablePaymentMethods?: Record<string, boolean> }) => {
     const hasExpress = !!(availablePaymentMethods?.applePay || availablePaymentMethods?.googlePay)
     setIsAvailable(hasExpress)
-    onExpressAvailable(hasExpress)
+    onExpressAvailable(hasExpress && isReady)
   }
 
   const onConfirm = async () => {
     if (!stripe || !elements) return
+
+    // Vérification : entreprise requise même pour Apple Pay / Google Pay
+    if (!hasBusinessSelected) {
+      toast.error('Sélectionnez votre entreprise dans le formulaire avant de payer.')
+      return
+    }
+    // Vérification : si Point Relais, il doit être sélectionné
+    if (needsServicePoint) {
+      toast.error('Choisissez votre point relais avant de payer.')
+      return
+    }
 
     try {
       // 1. Mettre à jour le PaymentIntent avec les metadata
@@ -266,10 +283,41 @@ function ExpressCheckoutSection({
     }
   }
 
+  // Apple Pay / Google Pay non dispo (autre navigateur / pas de wallet) → ne rien afficher
   if (!isAvailable) return null
 
+  // Pré-requis manquants → message informatif (uniquement en haut, on ne pollue pas le bas)
+  if (!isReady) {
+    if (position === 'bottom') return null // pas de message dupliqué en bas
+
+    const missing: string[] = []
+    if (!hasBusinessSelected) missing.push('votre entreprise')
+    if (needsServicePoint) missing.push('votre point relais')
+    const missingText = missing.join(' et ')
+
+    return (
+      <div className="mb-4 p-4 bg-blue-50 border border-blue-200 rounded-xl text-sm text-gray-700">
+        <p className="flex items-start gap-2">
+          <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+          </svg>
+          <span>
+            <strong>Apple Pay / Google Pay disponibles</strong> — sélectionnez d&apos;abord {missingText} dans le formulaire ci-dessous pour payer en 1 clic.
+          </span>
+        </p>
+      </div>
+    )
+  }
+
   return (
-    <div className="mb-2">
+    <div className={position === 'top' ? 'mb-2' : 'mt-4 mb-4'}>
+      {position === 'bottom' && (
+        <div className="flex items-center gap-4 mb-4">
+          <div className="flex-1 h-px bg-gray-200" />
+          <span className="text-xs text-gray-400 font-medium whitespace-nowrap">ou payer en 1 clic</span>
+          <div className="flex-1 h-px bg-gray-200" />
+        </div>
+      )}
       <ExpressCheckoutElement
         onReady={onReady}
         onConfirm={onConfirm}
@@ -847,6 +895,14 @@ function CheckoutForm({
             </div>
           </div>
         </div>
+
+        {/* Apple Pay / Google Pay aussi en bas (en plus du haut) */}
+        <ExpressCheckoutSection
+          paymentIntentId={paymentIntentId}
+          totalCents={totalCents}
+          onExpressAvailable={() => {}}
+          position="bottom"
+        />
 
         {/* Bouton de paiement */}
         <button
