@@ -140,8 +140,16 @@ export async function POST(request: NextRequest) {
   const body = await request.text()
   const signature = request.headers.get('stripe-signature')
 
+  console.log('[Webhook] Received POST request, signature present:', !!signature)
+
   if (!signature) {
+    console.error('[Webhook] Missing signature header')
     return NextResponse.json({ error: 'Missing signature' }, { status: 400 })
+  }
+
+  if (!process.env.STRIPE_WEBHOOK_SECRET) {
+    console.error('[Webhook] STRIPE_WEBHOOK_SECRET env var is missing')
+    return NextResponse.json({ error: 'Webhook secret not configured' }, { status: 500 })
   }
 
   let event: Stripe.Event
@@ -157,16 +165,23 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
 
+  console.log('[Webhook] Event received:', event.type, '| ID:', event.id)
+
   // ─── Handler pour le checkout custom (PaymentIntent) ─────────────────────
   if (event.type === 'payment_intent.succeeded') {
     const paymentIntent = event.data.object as Stripe.PaymentIntent
     const metadata = paymentIntent.metadata || {}
 
+    console.log('[Webhook] payment_intent.succeeded | PI:', paymentIntent.id, '| Amount:', paymentIntent.amount, '| Metadata keys:', Object.keys(metadata).join(','))
+
     try {
       const customerEmail = metadata.customer_email || paymentIntent.receipt_email
       const customerName = metadata.customer_name || 'Client'
 
+      console.log('[Webhook] customerEmail:', customerEmail ? `${customerEmail.slice(0, 3)}***` : 'MISSING', '| receipt_email:', paymentIntent.receipt_email ? 'present' : 'missing')
+
       if (!customerEmail) {
+        console.warn('[Webhook] No customer email — skipping email + sendcloud. PI metadata:', JSON.stringify(metadata))
         return NextResponse.json({ received: true })
       }
 
@@ -212,23 +227,30 @@ export async function POST(request: NextRequest) {
       }
 
       // 1. Email de confirmation (isolé : si Resend échoue, on continue avec Sendcloud)
+      console.log('[Webhook] Sending confirmation email via Resend...')
       try {
-        const emailHtml = await render(OrderConfirmation({
-          customerName,
-          businessName,
-          businessAddress,
-          items,
-          totalAmount: paymentIntent.amount,
-          shippingAddress,
-        }))
-        const { error: resendError } = await getResend().emails.send({
-          from: 'Swiipx <bonjour@swiipx.fr>',
-          to: customerEmail,
-          subject: 'Commande confirmée — Swiipx',
-          html: emailHtml,
-        })
-        if (resendError) {
-          console.error('[Webhook] Resend error:', resendError)
+        if (!process.env.RESEND_API_KEY) {
+          console.error('[Webhook] RESEND_API_KEY env var is missing')
+        } else {
+          const emailHtml = await render(OrderConfirmation({
+            customerName,
+            businessName,
+            businessAddress,
+            items,
+            totalAmount: paymentIntent.amount,
+            shippingAddress,
+          }))
+          const { data: resendData, error: resendError } = await getResend().emails.send({
+            from: 'Swiipx <bonjour@swiipx.fr>',
+            to: customerEmail,
+            subject: 'Commande confirmée — Swiipx',
+            html: emailHtml,
+          })
+          if (resendError) {
+            console.error('[Webhook] Resend error:', JSON.stringify(resendError))
+          } else {
+            console.log('[Webhook] Resend OK — email ID:', resendData?.id)
+          }
         }
       } catch (emailErr: any) {
         console.error('[Webhook] Email render/send failed:', emailErr?.message || emailErr)
@@ -236,6 +258,7 @@ export async function POST(request: NextRequest) {
 
       // 2. Créer le colis Sendcloud (isolé : indépendant de l'email)
       const orderNumber = `SW-${paymentIntent.id.slice(-8).toUpperCase()}`
+      console.log('[Webhook] Creating Sendcloud parcel | order:', orderNumber, '| method:', shippingMethod)
       try {
         if (shippingMethod === 'point_relais' && metadata.sp_id) {
           await createSendcloudServicePointParcel(metadata, customerEmail, orderNumber)
