@@ -18,7 +18,12 @@ function getResend() {
 }
 
 // Sendcloud API helper
-async function createSendcloudParcel(shipping: Stripe.Checkout.Session.ShippingDetails, customerEmail: string, orderNumber: string) {
+async function createSendcloudParcel(
+  shipping: Stripe.Checkout.Session.ShippingDetails,
+  customerEmail: string,
+  orderNumber: string,
+  customerPhone?: string
+) {
   const publicKey = process.env.SENDCLOUD_PUBLIC_KEY
   const secretKey = process.env.SENDCLOUD_SECRET_KEY
 
@@ -26,11 +31,6 @@ async function createSendcloudParcel(shipping: Stripe.Checkout.Session.ShippingD
     console.error('[Sendcloud domicile] Missing API keys (SENDCLOUD_PUBLIC_KEY or SENDCLOUD_SECRET_KEY)')
     return null
   }
-
-  // Parse le nom en prénom/nom
-  const nameParts = (shipping.name || 'Client').split(' ')
-  const firstName = nameParts[0] || 'Client'
-  const lastName = nameParts.slice(1).join(' ') || '-'
 
   const parcelData = {
     parcel: {
@@ -42,7 +42,7 @@ async function createSendcloudParcel(shipping: Stripe.Checkout.Session.ShippingD
       postal_code: shipping.address?.postal_code || '',
       country: shipping.address?.country || 'FR',
       email: customerEmail,
-      telephone: '',
+      telephone: customerPhone || '',
       order_number: orderNumber,
       weight: '0.100', // 100g — poids d'une plaque NFC
       request_label: false, // Ne pas générer l'étiquette automatiquement
@@ -88,7 +88,9 @@ async function createSendcloudServicePointParcel(metadata: Record<string, string
 
   const parcelData = {
     parcel: {
-      name: metadata.sp_name || 'Client',
+      // Pour un point relais, le "name" du parcel doit rester celui du destinataire (le client),
+      // pas celui du point relais — le transporteur a besoin de savoir qui doit récupérer.
+      name: metadata.customer_name || metadata.sp_name || 'Client',
       company_name: '',
       address: metadata.sp_street || '',
       address_2: metadata.sp_house_number || '',
@@ -96,7 +98,7 @@ async function createSendcloudServicePointParcel(metadata: Record<string, string
       postal_code: metadata.sp_postal_code || '',
       country: metadata.sp_country || 'FR',
       email: customerEmail,
-      telephone: '',
+      telephone: metadata.customer_phone || '',
       order_number: orderNumber,
       weight: '0.100',
       request_label: false,
@@ -248,7 +250,7 @@ export async function POST(request: NextRequest) {
               country: metadata.shipping_country || 'FR',
             },
           } as Stripe.Checkout.Session.ShippingDetails
-          await createSendcloudParcel(shippingDetails, customerEmail, orderNumber)
+          await createSendcloudParcel(shippingDetails, customerEmail, orderNumber, metadata.customer_phone)
         } else {
           console.warn(`[Webhook] No shipping data for order ${orderNumber} (method=${shippingMethod})`)
         }
@@ -329,11 +331,15 @@ export async function POST(request: NextRequest) {
 
       // Sendcloud isolé
       const orderNumber = `SW-${session.id.slice(-8).toUpperCase()}`
+      // Récupérer le téléphone depuis customer_details Stripe (legacy mode collecte le téléphone)
+      const customerPhone = session.customer_details?.phone || session.metadata?.customer_phone || undefined
       try {
         if (shippingMethod === 'point_relais' && session.metadata?.sp_id) {
-          await createSendcloudServicePointParcel(session.metadata!, customerEmail, orderNumber)
+          // Pour le legacy, on enrichit metadata avec customer_phone si dispo
+          const enrichedMetadata = { ...session.metadata, customer_phone: customerPhone || session.metadata?.customer_phone || '' }
+          await createSendcloudServicePointParcel(enrichedMetadata, customerEmail, orderNumber)
         } else if (shipping) {
-          await createSendcloudParcel(shipping, customerEmail, orderNumber)
+          await createSendcloudParcel(shipping, customerEmail, orderNumber, customerPhone)
         }
       } catch (parcelErr: any) {
         console.error('[Webhook legacy] Sendcloud parcel creation failed:', parcelErr?.message || parcelErr)
