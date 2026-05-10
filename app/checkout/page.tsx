@@ -283,7 +283,12 @@ function ExpressCheckoutSection({
 
 // ─── Shipping Picker (Point Relais / Domicile) ─────────────────────────────
 
-function CheckoutShippingPicker() {
+interface CheckoutShippingPickerProps {
+  billingPostalCode?: string
+  billingCity?: string
+}
+
+function CheckoutShippingPicker({ billingPostalCode, billingCity }: CheckoutShippingPickerProps) {
   const { method, servicePoint, setMethod, setServicePoint } = useShippingStore()
   const [sendcloudKey, setSendcloudKey] = useState<string | null>(null)
   const [keyError, setKeyError] = useState<string | null>(null)
@@ -330,6 +335,9 @@ function CheckoutShippingPicker() {
         country: 'fr',
         carriers: ['mondial_relay'],
         language: 'fr',
+        // Pré-centre le picker sur l'adresse de facturation déjà saisie
+        ...(billingPostalCode && { postalCode: billingPostalCode }),
+        ...(billingCity && { city: billingCity }),
       },
       (point: any) => {
         setServicePoint({
@@ -721,7 +729,10 @@ function CheckoutForm({
           {/* Livraison */}
           <div className="p-5 sm:p-6">
             <h2 className="text-base font-semibold text-gray-900 mb-4">Livraison</h2>
-            <CheckoutShippingPicker />
+            <CheckoutShippingPicker
+              billingPostalCode={billingPostalCode}
+              billingCity={billingCity}
+            />
 
             {/* Option adresse de livraison différente (domicile uniquement) */}
             {shippingMethod === 'domicile' && (
