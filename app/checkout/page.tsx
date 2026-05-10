@@ -886,7 +886,9 @@ function CheckoutForm({
               onChange={(e) => setPaymentReady(e.complete)}
               options={{
                 layout: 'tabs',
-                wallets: { applePay: 'never', googlePay: 'never' },
+                // Wallets activés ici → Apple Pay / Google Pay apparaissent
+                // comme onglets supplémentaires (en plus du bouton express en haut).
+                wallets: { applePay: 'auto', googlePay: 'auto' },
               }}
             />
             <div className="flex items-center space-x-1.5 mt-3 text-xs text-gray-400">
@@ -895,14 +897,6 @@ function CheckoutForm({
             </div>
           </div>
         </div>
-
-        {/* Apple Pay / Google Pay aussi en bas (en plus du haut) */}
-        <ExpressCheckoutSection
-          paymentIntentId={paymentIntentId}
-          totalCents={totalCents}
-          onExpressAvailable={() => {}}
-          position="bottom"
-        />
 
         {/* Bouton de paiement */}
         <button
