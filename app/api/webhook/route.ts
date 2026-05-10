@@ -17,12 +17,62 @@ function getResend() {
   return resend
 }
 
+// ─── Calcul du poids et choix du shipment ID Sendcloud ──────────────────────
+// Poids unitaire par produit (avec enveloppe d'envoi), en grammes
+const ITEM_WEIGHT_GRAMS: Record<string, number> = {
+  plaque1: 65,   // 1 plaque + enveloppe
+  plaque2: 115,  // 2 plaques + enveloppe
+  plaque5: 275,  // 5 plaques + enveloppe
+}
+
+function calculateOrderWeightKg(itemsJson: string): { kg: string; grams: number } {
+  let totalGrams = 0
+  try {
+    const items = JSON.parse(itemsJson || '[]') as Array<{ id: string; qty: number }>
+    for (const item of items) {
+      const w = ITEM_WEIGHT_GRAMS[item.id] ?? 100
+      totalGrams += w * (item.qty || 1)
+    }
+  } catch {
+    // fallback si parse échoue
+    totalGrams = 100
+  }
+  // Sendcloud attend le poids en kg avec 3 décimales (ex: "0.275")
+  return { kg: (totalGrams / 1000).toFixed(3), grams: totalGrams }
+}
+
+// Mondial Relay Point Relais (FR domestic) — IDs depuis le compte Sendcloud
+function getMondialRelayPointRelaisShipmentId(grams: number): number {
+  if (grams <= 250) return 28035   // 0-0.25kg
+  if (grams <= 500) return 28036   // 0.25-0.5kg
+  if (grams <= 1000) return 28037  // 0.5-1kg
+  if (grams <= 2000) return 28038  // 1-2kg
+  if (grams <= 3000) return 28039  // 2-3kg
+  if (grams <= 5000) return 28040  // 3-5kg
+  if (grams <= 7000) return 28041  // 5-7kg
+  if (grams <= 10000) return 28042 // 7-10kg
+  return 28043                      // 10-15kg (fallback haut)
+}
+
+// Colissimo Home (FR domestic) — IDs depuis le compte Sendcloud
+function getColissimoHomeShipmentId(grams: number): number {
+  if (grams <= 250) return 371    // 0-0.25kg
+  if (grams <= 500) return 366    // 0.25-0.5kg
+  if (grams <= 750) return 367    // 0.5-0.75kg
+  if (grams <= 1000) return 364   // 0.75-1kg
+  if (grams <= 2000) return 1066  // 1-2kg
+  if (grams <= 3000) return 1067  // 2-3kg
+  if (grams <= 5000) return 1069  // 4-5kg (approx)
+  return 1074                      // 9-10kg (fallback haut)
+}
+
 // Sendcloud API helper
 async function createSendcloudParcel(
   shipping: Stripe.Checkout.Session.ShippingDetails,
   customerEmail: string,
   orderNumber: string,
-  customerPhone?: string
+  customerPhone?: string,
+  itemsJson?: string
 ) {
   const publicKey = process.env.SENDCLOUD_PUBLIC_KEY
   const secretKey = process.env.SENDCLOUD_SECRET_KEY
@@ -31,6 +81,11 @@ async function createSendcloudParcel(
     console.error('[Sendcloud domicile] Missing API keys (SENDCLOUD_PUBLIC_KEY or SENDCLOUD_SECRET_KEY)')
     return null
   }
+
+  // Calcul dynamique du poids et choix de la tranche Colissimo
+  const { kg, grams } = calculateOrderWeightKg(itemsJson || '[]')
+  const shipmentId = getColissimoHomeShipmentId(grams)
+  console.log(`[Sendcloud domicile] Weight: ${grams}g (${kg}kg) → shipment ID ${shipmentId}`)
 
   const parcelData = {
     parcel: {
@@ -44,10 +99,10 @@ async function createSendcloudParcel(
       email: customerEmail,
       telephone: customerPhone || '',
       order_number: orderNumber,
-      weight: '0.100', // 100g — poids d'une plaque NFC
-      request_label: false, // Ne pas générer l'étiquette automatiquement
+      weight: kg,
+      request_label: false,
       shipment: {
-        id: 8, // Colissimo domicile (tu pourras changer l'ID selon le transporteur)
+        id: shipmentId,
       },
     },
   }
@@ -86,6 +141,11 @@ async function createSendcloudServicePointParcel(metadata: Record<string, string
     return null
   }
 
+  // Calcul dynamique du poids et choix de la tranche Mondial Relay
+  const { kg, grams } = calculateOrderWeightKg(metadata.items || '[]')
+  const shipmentId = getMondialRelayPointRelaisShipmentId(grams)
+  console.log(`[Sendcloud point-relais] Weight: ${grams}g (${kg}kg) → shipment ID ${shipmentId}`)
+
   const parcelData = {
     parcel: {
       // Pour un point relais, le "name" du parcel doit rester celui du destinataire (le client),
@@ -100,11 +160,11 @@ async function createSendcloudServicePointParcel(metadata: Record<string, string
       email: customerEmail,
       telephone: metadata.customer_phone || '',
       order_number: orderNumber,
-      weight: '0.100',
+      weight: kg,
       request_label: false,
       to_service_point: parseInt(metadata.sp_id),
       shipment: {
-        id: 465, // Mondial Relay — vérifier l'ID dans le dashboard Sendcloud
+        id: shipmentId,
       },
     },
   }
@@ -273,7 +333,7 @@ export async function POST(request: NextRequest) {
               country: metadata.shipping_country || 'FR',
             },
           } as Stripe.Checkout.Session.ShippingDetails
-          await createSendcloudParcel(shippingDetails, customerEmail, orderNumber, metadata.customer_phone)
+          await createSendcloudParcel(shippingDetails, customerEmail, orderNumber, metadata.customer_phone, metadata.items)
         } else {
           console.warn(`[Webhook] No shipping data for order ${orderNumber} (method=${shippingMethod})`)
         }
@@ -362,7 +422,7 @@ export async function POST(request: NextRequest) {
           const enrichedMetadata = { ...session.metadata, customer_phone: customerPhone || session.metadata?.customer_phone || '' }
           await createSendcloudServicePointParcel(enrichedMetadata, customerEmail, orderNumber)
         } else if (shipping) {
-          await createSendcloudParcel(shipping, customerEmail, orderNumber, customerPhone)
+          await createSendcloudParcel(shipping, customerEmail, orderNumber, customerPhone, session.metadata?.items)
         }
       } catch (parcelErr: any) {
         console.error('[Webhook legacy] Sendcloud parcel creation failed:', parcelErr?.message || parcelErr)
