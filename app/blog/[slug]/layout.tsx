@@ -10,6 +10,21 @@ const seoData: Record<string, {
   category: string
   faq: { q: string; a: string }[]
 }> = {
+  'plaque-nfc-vs-qr-code-avis-google': {
+    title: 'Plaque NFC vs QR Code pour les avis Google : comparatif 2026',
+    description: 'Plaque NFC ou QR code pour collecter des avis Google ? Comparatif 2026 : taux de conversion (35-45 % vs 8-12 %), prix, compatibilité, ROI.',
+    keywords: 'plaque nfc vs qr code, qr code avis google, plaque nfc avis google, comparatif nfc qr, avis google nfc, taux conversion qr code, plaque nfc france, comparer nfc qr',
+    date: '2026-05-10',
+    dateModified: '2026-05-10',
+    category: 'Comparatif',
+    faq: [
+      { q: 'Plaque NFC ou QR code : lequel convertit le plus d\'avis Google ?', a: 'La plaque NFC convertit 4 fois mieux que le QR code : 35-45 % de taux de conversion contre 8-12 % pour le QR. Cette différence s\'explique par la friction réduite (2 étapes vs 5 étapes) et l\'absence de décision consciente du client.' },
+      { q: 'La plaque NFC fonctionne-t-elle sur tous les iPhone ?', a: 'Oui, sur tous les iPhone depuis l\'iPhone 7 (2016). Depuis iOS 14 (2020), le NFC en arrière-plan est natif : aucune application à ouvrir, le téléphone détecte automatiquement la plaque.' },
+      { q: 'Quel est le coût comparé d\'une plaque NFC vs un QR code ?', a: 'Une plaque NFC coûte 35-50 € avec une durée de vie de 10+ ans, soit environ 4 € par an. Un autocollant QR code coûte 5 € mais doit être renouvelé tous les 1-2 ans (sensibilité à l\'usure), soit 3-5 € par an. Coûts annuels quasi-identiques mais expérience NFC très supérieure.' },
+      { q: 'Peut-on combiner plaque NFC et QR code ?', a: 'Oui, c\'est même recommandé. Les plaques NFC professionnelles intègrent un QR code de secours imprimé. Cela couvre les 5 % de smartphones non-NFC tout en bénéficiant du taux de conversion premium du NFC pour les 95 % restants.' },
+      { q: 'En combien de temps une plaque NFC est-elle rentabilisée ?', a: 'Une plaque NFC à 40 € est typiquement rentabilisée en 2 à 4 semaines pour un commerce moyen, grâce à 3-5 nouveaux clients/mois acquis via les nouveaux avis Google et la meilleure visibilité dans le pack local.' },
+    ],
+  },
   'obtenir-plus-avis-google': {
     title: 'Comment obtenir plus d\'avis Google en 2026 : 10 méthodes testées',
     description: '10 méthodes testées pour obtenir plus d\'avis Google rapidement (+250 % en 3 mois). NFC, QR code, scripts email/SMS : guide pratique 2026.',

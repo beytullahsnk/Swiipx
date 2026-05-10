@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://swiipx.fr'
 
   const blogArticles: { slug: string; date: string }[] = [
+    { slug: 'plaque-nfc-vs-qr-code-avis-google', date: '2026-05-10' },
     { slug: 'doubler-avis-google-30-jours', date: '2026-01-19' },
     { slug: 'obtenir-plus-avis-google', date: '2026-01-15' },
     { slug: 'avis-clients-influencent-business', date: '2026-01-20' },

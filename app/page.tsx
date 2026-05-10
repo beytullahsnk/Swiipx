@@ -210,14 +210,14 @@ export default function Home() {
       {/* How It Works - 3-step process explanation */}
       <HowItWorks />
 
-      {/* Video Showcase - 3 vidéos format mobile */}
-      <VideoShowcase />
-
-      {/* Industry Results — résultats par secteur */}
-      <IndustryResults />
-
       {/* Product Showcase - Shopify-style product display */}
       <ProductShowcase />
+
+      {/* Video Showcase - 3 vidéos format mobile (placé après le produit) */}
+      <VideoShowcase />
+
+      {/* Industry Results — résultats par secteur (placé après le produit) */}
+      <IndustryResults />
       
       {/* Testimonials - Customer reviews carousel */}
       <Testimonials />

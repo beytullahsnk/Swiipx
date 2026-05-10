@@ -12,7 +12,7 @@ const industries = [
 export default function IndustryResults() {
   return (
     <section className="py-16 sm:py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
             Résultats par secteur

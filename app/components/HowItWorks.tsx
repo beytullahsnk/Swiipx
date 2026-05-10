@@ -24,7 +24,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-20 sm:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -39,13 +39,14 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              {/* Step Number */}
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md z-10">
+              {/* Step Number — positionné à l'intérieur de la card sur mobile (évite débordement),
+                  garde le look "qui dépasse" sur desktop */}
+              <div className="absolute top-3 left-3 sm:-top-4 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl shadow-md z-10">
                 {index + 1}
               </div>
 
               {/* Card */}
-              <div className="relative bg-gray-50 border border-gray-200 rounded-3xl p-8 hover:border-primary/30 transition-colors h-full">
+              <div className="relative bg-gray-50 border border-gray-200 rounded-3xl p-8 pt-16 sm:pt-8 hover:border-primary/30 transition-colors h-full">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                   <step.icon className="w-6 h-6 text-primary" aria-hidden="true" />
                 </div>

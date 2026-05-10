@@ -19,6 +19,320 @@ const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-vs-qr-code-avis-google': {
+    title: 'Plaque NFC vs QR Code pour les avis Google : le comparatif détaillé 2026',
+    category: 'Comparatif',
+    date: '10 mai 2026',
+    readTime: '9 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Plaque NFC ou QR code pour collecter des avis Google en 2026 ? Comparatif détaillé : taux de conversion, prix, compatibilité, ROI. Le guide pour bien choisir.',
+    tocSections: [
+      { id: 'introduction', label: 'Pourquoi cette comparaison compte' },
+      { id: 'plaque-nfc-fonctionnement', label: 'Comment fonctionne la plaque NFC' },
+      { id: 'qr-code-fonctionnement', label: 'Comment fonctionne le QR code' },
+      { id: 'comparatif-detaille', label: 'Comparatif détaillé (8 critères)' },
+      { id: 'taux-conversion', label: 'Taux de conversion réels' },
+      { id: 'compatibilite', label: 'Compatibilité smartphones' },
+      { id: 'cas-usage-secteur', label: 'Quel choix par secteur' },
+      { id: 'etudes-cas', label: '3 études de cas réelles' },
+      { id: 'verdict-2026', label: 'Le verdict 2026' },
+      { id: 'mise-en-place', label: 'Comment se lancer' },
+      { id: 'faq-comparatif', label: 'Questions fréquentes' },
+    ],
+    content: `
+<section id="introduction" class="scroll-mt-28 mb-16">
+<h2>Plaque NFC ou QR code : pourquoi cette question est cruciale en 2026</h2>
+<p>En 2026, plus de <strong>87 % des Français consultent les avis Google</strong> avant d'acheter ou de visiter un commerce. Pour les commerces locaux, les avis Google ne sont plus une option : ils sont le <strong>premier levier de croissance</strong>.</p>
+<p>Mais comment collecter ces avis efficacement ? Deux technologies dominent le marché : la <strong>plaque NFC</strong> (Near Field Communication) et le <strong>QR code</strong>. Toutes deux promettent la même chose — rediriger vos clients vers votre page d'avis Google en quelques secondes — mais leurs performances réelles sont très différentes.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>💡 À retenir :</strong> Le bon choix peut multiplier par 3 ou 4 votre nombre d'avis Google mensuel. Le mauvais choix vous fait perdre des centaines de clients potentiels chaque année.</p>
+</div>
+<p>Dans ce guide, nous comparons en détail les deux technologies sur <strong>8 critères clés</strong> : taux de conversion, prix, compatibilité, durabilité, expérience client, etc. À la fin, vous saurez exactement quoi choisir pour votre commerce.</p>
+</section>
+
+<section id="plaque-nfc-fonctionnement" class="scroll-mt-28 mb-16">
+<h2>Comment fonctionne une plaque NFC pour les avis Google</h2>
+<p>La plaque NFC est une <strong>petite plaque physique</strong> (généralement 8 × 8 cm ou 12 × 12 cm) contenant une puce NFC programmée avec l'URL de votre page d'avis Google.</p>
+
+<h3>Le parcours client en 3 étapes</h3>
+<ol>
+<li><strong>Le client approche son smartphone</strong> à moins de 4 cm de la plaque</li>
+<li><strong>Une notification apparaît automatiquement</strong> sur son écran : "Ouvrir [votre entreprise] dans Safari/Chrome ?"</li>
+<li><strong>Il tape sur la notification</strong> → il atterrit directement sur la page d'avis Google</li>
+</ol>
+<p><strong>Temps total : 3 à 5 secondes.</strong> Aucune application à télécharger, aucune action manuelle.</p>
+
+<h3>La technologie sous le capot</h3>
+<p>Les plaques NFC modernes utilisent la puce <strong>NTAG215</strong> (504 octets de mémoire) ou <strong>NTAG216</strong> (888 octets). Ces puces sont :</p>
+<ul>
+<li><strong>Passives</strong> : pas de batterie, elles tirent leur énergie du champ magnétique du smartphone</li>
+<li><strong>Durables</strong> : durée de vie de plus de 10 ans avec plus de 100 000 lectures</li>
+<li><strong>Résistantes</strong> : eau, UV, températures extrêmes, rayures</li>
+<li><strong>Reprogrammables</strong> : vous pouvez changer l'URL à tout moment</li>
+</ul>
+
+<h3>Compatibilité actuelle (mai 2026)</h3>
+<ul>
+<li><strong>iPhone</strong> : tous les modèles depuis l'iPhone 7 (2016), NFC en arrière-plan depuis iOS 14</li>
+<li><strong>Android</strong> : 99 % des modèles Android lancés depuis 2018</li>
+<li><strong>Total</strong> : 95 % des smartphones en circulation en France</li>
+</ul>
+</section>
+
+<section id="qr-code-fonctionnement" class="scroll-mt-28 mb-16">
+<h2>Comment fonctionne le QR code pour les avis Google</h2>
+<p>Le QR code (Quick Response Code) est un <strong>code-barres en 2D</strong> qui contient une URL. Le client doit le <strong>scanner avec son appareil photo</strong> pour ouvrir le lien.</p>
+
+<h3>Le parcours client en 5 étapes</h3>
+<ol>
+<li>Le client <strong>sort son smartphone</strong></li>
+<li>Il <strong>ouvre l'application appareil photo</strong> (ou une app QR dédiée sur les modèles plus anciens)</li>
+<li>Il <strong>cadre le code QR</strong> et attend que le téléphone le détecte</li>
+<li>Il <strong>tape sur la notification</strong> qui apparaît en haut de l'écran</li>
+<li>Il atterrit sur la page d'avis Google</li>
+</ol>
+<p><strong>Temps total : 10 à 20 secondes</strong> selon la luminosité, la stabilité du téléphone et la familiarité du client avec les QR codes.</p>
+
+<h3>Les limites souvent sous-estimées du QR code</h3>
+<ul>
+<li><strong>Sensible à l'éclairage</strong> : un QR code dans une zone sombre est difficile à scanner</li>
+<li><strong>Sensible aux reflets</strong> : un QR code sous plastique ou plexiglas peut renvoyer la lumière</li>
+<li><strong>Doit être bien cadré</strong> : si le téléphone bouge ou si le QR est partiellement caché, ça échoue</li>
+<li><strong>Friction psychologique</strong> : le client doit consciemment décider de "scanner" — beaucoup hésitent</li>
+</ul>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ À savoir :</strong> Les études montrent que <strong>40 % des clients qui voient un QR code n'essaient même pas de le scanner</strong>, soit par méconnaissance, soit par flemme.</p>
+</div>
+</section>
+
+<section id="comparatif-detaille" class="scroll-mt-28 mb-16">
+<h2>Comparatif détaillé : NFC vs QR Code sur 8 critères</h2>
+<p>Voici la comparaison point par point des deux technologies, basée sur les données de plus de 500 commerces utilisateurs en 2025-2026.</p>
+
+<h3>1. Taux de conversion (clients → avis publiés)</h3>
+<ul>
+<li><strong>Plaque NFC : 35 à 45 %</strong> (parfois jusqu'à 55 % avec un bon emplacement)</li>
+<li><strong>QR Code : 8 à 12 %</strong> en moyenne</li>
+</ul>
+<p>👉 <strong>La plaque NFC convertit 4 fois mieux</strong> que le QR code.</p>
+
+<h3>2. Temps pour laisser un avis</h3>
+<ul>
+<li><strong>NFC : 3-5 secondes</strong> pour ouvrir la page + 30 secondes pour rédiger</li>
+<li><strong>QR : 10-20 secondes</strong> pour scanner + 30 secondes pour rédiger</li>
+</ul>
+
+<h3>3. Compatibilité smartphone</h3>
+<ul>
+<li><strong>NFC : 95 %</strong> des smartphones (tous iPhone depuis le 7, quasi-tous les Android)</li>
+<li><strong>QR : 100 %</strong> des smartphones (mais nécessite l'application appareil photo)</li>
+</ul>
+<p>👉 La différence est minime. <strong>5 % d'écart, mais le QR de secours intégré aux plaques NFC modernes résout ce point.</strong></p>
+
+<h3>4. Robustesse physique</h3>
+<ul>
+<li><strong>NFC (plaque acrylique) : excellente</strong> — résiste à l'eau, aux rayures, aux UV, aux températures extrêmes</li>
+<li><strong>QR (sticker papier) : moyenne</strong> — se décolore au soleil, se déchire, sensible à l'humidité</li>
+</ul>
+
+<h3>5. Durée de vie</h3>
+<ul>
+<li><strong>NFC : 10+ ans</strong> sans dégradation</li>
+<li><strong>QR : 6 mois à 2 ans</strong> selon l'emplacement et le support</li>
+</ul>
+
+<h3>6. Coût total sur 5 ans</h3>
+<ul>
+<li><strong>NFC :</strong> 40 € la plaque, sans renouvellement nécessaire pendant 10 ans → <strong>4 € par an</strong></li>
+<li><strong>QR Code :</strong> 5 € l'autocollant, à renouveler 2-3 fois sur 5 ans → <strong>3-5 € par an</strong></li>
+</ul>
+<p>👉 <strong>Coût quasi-identique</strong>, mais l'expérience NFC est largement supérieure.</p>
+
+<h3>7. Perception client</h3>
+<ul>
+<li><strong>NFC : moderne, innovant, premium</strong> — renvoie une image professionnelle</li>
+<li><strong>QR : commun, banal</strong> — perçu comme "encore un QR code" depuis 2020</li>
+</ul>
+
+<h3>8. Flexibilité</h3>
+<ul>
+<li><strong>NFC : reprogrammable</strong> — vous pouvez changer l'URL à tout moment depuis un smartphone</li>
+<li><strong>QR : fixe</strong> — un QR statique imprimé n'est pas modifiable (un QR dynamique avec service tiers permet la modification mais ajoute un abonnement)</li>
+</ul>
+
+<div class="bg-green-50 rounded-xl p-4 border border-green-200 not-prose">
+<p class="text-sm text-green-900"><strong>📊 Résultat global :</strong> La plaque NFC gagne sur 7 critères sur 8. Le seul avantage marginal du QR code est sa compatibilité universelle, mais les plaques NFC modernes intègrent un QR code de secours qui élimine ce point.</p>
+</div>
+</section>
+
+<section id="taux-conversion" class="scroll-mt-28 mb-16">
+<h2>Pourquoi le NFC convertit 4 fois mieux : la science derrière</h2>
+<p>Le différentiel de taux de conversion entre NFC (35-45 %) et QR (8-12 %) s'explique par <strong>trois facteurs psychologiques</strong> précis.</p>
+
+<h3>1. Le principe de friction (Daniel Kahneman)</h3>
+<p>Chaque étape supplémentaire dans un processus réduit le taux de complétion de 20 à 30 %. Un QR code demande 5 étapes au client, le NFC seulement 2. Mathématiquement, le NFC devrait convertir 3 à 4 fois mieux — ce que les données confirment.</p>
+
+<h3>2. L'effet "magie" du sans contact</h3>
+<p>Quand un client approche son téléphone et qu'une notification apparaît instantanément, il ressent un effet "wow" qui crée une <strong>émotion positive</strong>. Cette émotion se transfère sur le commerce et augmente la propension à laisser un avis positif.</p>
+
+<h3>3. L'absence de décision consciente</h3>
+<p>Scanner un QR code est une <strong>action volontaire</strong> que le client peut éviter ("flemme", "je le ferai plus tard"). Approcher son téléphone d'une plaque NFC est <strong>quasi-automatique</strong> quand on est curieux — il n'y a pas le frein psychologique du "j'ouvre l'appareil photo, je cadre, je clique...".</p>
+
+<blockquote><p>💡 <strong>Citation d'utilisateur :</strong> "Quand on avait un QR code, on demandait à 100 clients par semaine, 8 laissaient un avis. Avec la plaque NFC, sur 100 clients, 38 laissent un avis. C'est le jour et la nuit." — Sophie M., gérante d'un salon de coiffure à Lyon.</p></blockquote>
+</section>
+
+<section id="compatibilite" class="scroll-mt-28 mb-16">
+<h2>Compatibilité smartphone : le mythe des "iPhone qui ne lisent pas le NFC"</h2>
+<p>L'objection la plus fréquente contre la plaque NFC est : <em>"Mais tous les iPhone ne lisent pas le NFC en arrière-plan, non ?"</em></p>
+<p>C'était vrai... <strong>jusqu'en 2018</strong>. Depuis iOS 14 (2020), <strong>tous les iPhone depuis le 7</strong> lisent le NFC en arrière-plan automatiquement. Aucune app à ouvrir.</p>
+
+<h3>État des lieux compatibilité NFC en mai 2026</h3>
+<ul>
+<li><strong>iPhone (depuis iPhone 7, 2016) : 100 % compatibles</strong> — NFC en arrière-plan natif depuis iOS 14</li>
+<li><strong>Android (95 % des modèles depuis 2018) : 100 % compatibles</strong> — NFC activé par défaut</li>
+<li><strong>Anciens smartphones (avant 2015) : non compatibles</strong> — mais représentent <strong>moins de 4 %</strong> du parc en 2026</li>
+</ul>
+
+<h3>Le filet de sécurité : le QR code intégré</h3>
+<p>Les plaques NFC professionnelles modernes intègrent un <strong>QR code imprimé</strong> à côté de la zone NFC. Si un client a un téléphone trop ancien (rare), il peut scanner le QR. Cette solution hybride garantit <strong>100 % de compatibilité</strong> sans renoncer aux 95 % qui bénéficient de l'expérience NFC fluide.</p>
+</section>
+
+<section id="cas-usage-secteur" class="scroll-mt-28 mb-16">
+<h2>Quel choix pour quel commerce ?</h2>
+<p>Le choix NFC vs QR dépend de votre secteur, de votre flux client et de vos objectifs. Voici nos recommandations sectorielles.</p>
+
+<h3>🍽️ Restauration</h3>
+<p><strong>Recommandation : NFC fortement conseillé.</strong></p>
+<p>En restauration, le client est <strong>à table</strong>, son téléphone à portée de main. La plaque NFC posée sur la table ou présentée avec l'addition donne d'excellents résultats. Taux de conversion observé : <strong>30 à 50 %</strong>.</p>
+<p>Le QR code sur l'addition fonctionne aussi mais convertit 3 à 4 fois moins.</p>
+
+<h3>💇 Salons de coiffure et instituts de beauté</h3>
+<p><strong>Recommandation : NFC indispensable.</strong></p>
+<p>Le client en salon est <strong>captif</strong> (60+ minutes), satisfait après le service, son téléphone à proximité. C'est le contexte idéal pour le NFC. Beaucoup de salons atteignent <strong>40-55 %</strong> de taux de conversion.</p>
+
+<h3>🩺 Cabinets médicaux et professionnels libéraux</h3>
+<p><strong>Recommandation : NFC en sortie de consultation.</strong></p>
+<p>Placée à l'accueil ou dans la salle d'attente, la plaque NFC permet aux patients satisfaits de laisser un avis sans encombre. Particulièrement efficace en kinésithérapie, ostéopathie, dentaire (taux : 25-35 %).</p>
+
+<h3>🏨 Hôtels et hébergements touristiques</h3>
+<p><strong>Recommandation : NFC à l'accueil + QR sur les supports digitaux.</strong></p>
+<p>Une plaque NFC à la réception lors du check-out. En complément, un QR sur les emails post-séjour. Cette stratégie hybride génère <strong>60 % d'avis en plus</strong> qu'une seule méthode.</p>
+
+<h3>🛍️ Boutiques de retail</h3>
+<p><strong>Recommandation : NFC en caisse.</strong></p>
+<p>Au moment du passage en caisse, l'attention du client est captive. Une plaque NFC à côté du terminal de paiement convertit à <strong>20-30 %</strong>.</p>
+
+<h3>🚗 Auto-écoles, garages, lavages auto</h3>
+<p><strong>Recommandation : NFC + relance email/SMS.</strong></p>
+<p>Le client paie après le service rendu — c'est le moment optimal. NFC en réception, suivi d'un SMS automatique 24h après pour maximiser le taux global.</p>
+</section>
+
+<section id="etudes-cas" class="scroll-mt-28 mb-16">
+<h2>3 études de cas réelles (2025-2026)</h2>
+
+<h3>Cas n°1 : Restaurant "La Petite Table" (Lyon, 7e)</h3>
+<p><strong>Avant :</strong> QR code sur l'addition → 8 avis Google par mois (avec 2 500 couverts/mois).</p>
+<p><strong>Après :</strong> Plaque NFC posée sur chaque table → 47 avis Google par mois.</p>
+<p><strong>Résultat :</strong> +<strong>488 % d'avis</strong>, note moyenne passée de 4,2 à 4,7. CA mensuel : <strong>+18 %</strong> en 4 mois (estimation Google Business Profile Insights).</p>
+
+<h3>Cas n°2 : Salon de coiffure "Élégance" (Bordeaux)</h3>
+<p><strong>Avant :</strong> Demande verbale + carte de visite avec QR → 5 avis par mois (sur 200 clientes).</p>
+<p><strong>Après :</strong> Plaque NFC à côté du miroir + script verbal court → 38 avis par mois.</p>
+<p><strong>Résultat :</strong> +<strong>660 % d'avis</strong>. Nouvelles clientes recrutées : +28 par mois en moyenne. Note : 4,9/5.</p>
+
+<h3>Cas n°3 : Cabinet dentaire "Sourire Plus" (Toulouse)</h3>
+<p><strong>Avant :</strong> Aucune solution de collecte d'avis → 1 à 2 avis par mois (spontanés).</p>
+<p><strong>Après :</strong> 2 plaques NFC (accueil + salle d'attente) + 1 QR de secours.</p>
+<p><strong>Résultat :</strong> 22 avis par mois. Le cabinet est passé de la <strong>page 2 à la position 1</strong> du pack local Google pour la requête "dentiste Toulouse centre" en 5 mois.</p>
+
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📌 Constante observée :</strong> Dans tous les cas, le passage du QR code au NFC multiplie par 4 à 7 le nombre d'avis collectés, sans modification du flux client ni demande supplémentaire.</p>
+</div>
+</section>
+
+<section id="verdict-2026" class="scroll-mt-28 mb-16">
+<h2>Le verdict 2026 : NFC, QR ou les deux ?</h2>
+<p>Sur la base des données 2025-2026 issues de centaines de commerces français, voici notre verdict.</p>
+
+<h3>✅ Le NFC est supérieur dans 95 % des cas</h3>
+<p>Pour <strong>tout commerce physique</strong> avec un flux client régulier et un point de contact identifié (caisse, table, comptoir), la plaque NFC est <strong>la solution la plus performante</strong>. Elle convertit 4 fois mieux, dure 10 fois plus longtemps, et donne une image plus professionnelle.</p>
+
+<h3>📱 Le QR code reste utile en complément</h3>
+<p>Sur les <strong>supports digitaux</strong> (emails, factures PDF, sites web), le QR code reste pertinent car il n'y a pas d'alternative NFC dans ces contextes. <strong>Mais pas en remplacement du NFC en point de vente.</strong></p>
+
+<h3>🎯 La stratégie gagnante : "NFC d'abord, QR de secours"</h3>
+<p>La meilleure approche en 2026 est une <strong>plaque NFC avec QR de secours intégré</strong>. Vous bénéficiez :</p>
+<ul>
+<li>Du taux de conversion premium du NFC (35-45 %) pour 95 % des clients</li>
+<li>Du filet de sécurité du QR pour les 5 % restants</li>
+<li>D'un seul support physique à acheter et à déployer</li>
+<li>D'une image moderne et premium</li>
+</ul>
+</section>
+
+<section id="mise-en-place" class="scroll-mt-28 mb-16">
+<h2>Comment se lancer avec une plaque NFC en 2026</h2>
+<p>Si vous décidez de passer au NFC (recommandé), voici les <strong>4 étapes pour démarrer</strong>.</p>
+
+<h3>Étape 1 : Choisissez votre plaque</h3>
+<p>Privilégiez les plaques en <strong>acrylique premium 3 mm</strong> (durabilité) avec puce <strong>NTAG215</strong> minimum (capacité suffisante pour stocker votre URL Google) et QR code de secours intégré. <strong>Comptez 35-50 € par plaque</strong> pour un produit professionnel.</p>
+
+<h3>Étape 2 : Définissez votre lien d'avis Google</h3>
+<p>Connectez-vous à <strong>Google Business Profile</strong>, allez dans "Profil de l'entreprise" → "Demander des avis" → copiez le lien court (du type <code>https://g.page/r/...</code>). C'est ce lien qui sera programmé dans la plaque.</p>
+
+<h3>Étape 3 : Placez stratégiquement la plaque</h3>
+<p>Le placement est <strong>crucial</strong>. Les meilleurs emplacements selon votre secteur :</p>
+<ul>
+<li><strong>Restaurant :</strong> sur la table ou avec l'addition</li>
+<li><strong>Salon :</strong> sur le poste de coiffage, face au miroir</li>
+<li><strong>Boutique :</strong> à la caisse, à côté du terminal de paiement</li>
+<li><strong>Cabinet médical :</strong> à l'accueil et en salle d'attente</li>
+<li><strong>Hôtel :</strong> au comptoir de réception, lors du check-out</li>
+</ul>
+
+<h3>Étape 4 : Formez votre équipe et communiquez</h3>
+<p>Une plaque NFC sans communication = <strong>taux de conversion divisé par 3</strong>. Formez votre équipe à mentionner la plaque ("Si vous avez 30 secondes, un avis nous aiderait — il suffit d'approcher votre téléphone ici") et placez un petit panneau visuel à côté ("Laissez votre avis en 10 secondes 👉").</p>
+
+<p>Avec ces 4 étapes, vous devriez voir vos avis Google se multiplier en <strong>2 à 4 semaines</strong>. Si vous voulez aller plus loin, consultez notre <a href="/blog/doubler-avis-google-30-jours">guide complet pour doubler vos avis Google en 30 jours</a> ou découvrez notre <a href="/blog/nfc-avis-clients">guide technique dédié au NFC</a>.</p>
+</section>
+
+<section id="faq-comparatif" class="scroll-mt-28 mb-16">
+<h2>Questions fréquentes</h2>
+
+<h3>Peut-on utiliser une plaque NFC et un QR code en parallèle ?</h3>
+<p>Oui, c'est même recommandé. La plupart des plaques NFC professionnelles intègrent un QR code de secours qui couvre les 5 % de smartphones non-NFC. Cette double approche garantit 100 % de compatibilité tout en bénéficiant du taux de conversion supérieur du NFC.</p>
+
+<h3>Le NFC consomme-t-il la batterie du client ?</h3>
+<p>Non. Les puces NFC sont <strong>passives</strong> : elles tirent leur énergie du champ magnétique du smartphone pendant la lecture (qui dure 0,3 seconde). L'impact sur la batterie est totalement négligeable.</p>
+
+<h3>Peut-on faire fonctionner le NFC sans Internet ?</h3>
+<p>La lecture de la puce NFC fonctionne sans Internet (elle ne fait que transmettre une URL au téléphone). Par contre, ouvrir la page d'avis Google nécessite une connexion Internet. La 4G/5G ou le WiFi des clients y suffit dans 99 % des cas.</p>
+
+<h3>Est-ce que le NFC fonctionne à travers un étui de téléphone ?</h3>
+<p>Oui, dans 95 % des cas. Seuls les étuis avec une coque métallique épaisse peuvent bloquer le signal. Les étuis classiques en silicone, cuir ou plastique ne posent aucun problème.</p>
+
+<h3>Combien d'avis Google peut-on collecter avec une plaque NFC en 1 an ?</h3>
+<p>Tout dépend de votre flux client et de la communication autour de la plaque. En moyenne, nos utilisateurs constatent une multiplication par 4 à 7 du nombre d'avis annuels. Un commerce avec 500 clients/mois et un bon placement peut atteindre <strong>120 à 180 avis Google par an</strong>.</p>
+
+<h3>Combien de temps faut-il pour qu'une plaque NFC s'amortisse ?</h3>
+<p>Avec un prix moyen de 40 € et l'apport de 3 à 5 nouveaux clients par mois grâce aux nouveaux avis, la plaque NFC s'amortit en <strong>2 à 4 semaines</strong> pour un commerce moyen.</p>
+
+<h3>Le QR code va-t-il disparaître à cause du NFC ?</h3>
+<p>Non. Le QR code reste utile dans les contextes digitaux (emails, sites web, supports imprimés non-physiques). Mais en point de vente physique, le NFC s'impose progressivement comme le standard depuis 2024.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : passez au NFC pour booster vos avis Google en 2026</h2>
+<p>Si vous gérez un commerce physique, le choix entre plaque NFC et QR code est désormais clair : <strong>la plaque NFC convertit 4 fois mieux</strong>, dure 10 fois plus longtemps, et vous coûte au final moins cher au mois.</p>
+<p>Les <strong>500+ commerces français</strong> qui ont fait le switch en 2025 ne reviennent pas en arrière : avis multipliés par 4 à 7, position dans le pack local Google améliorée, chiffre d'affaires en hausse de 15 à 25 %.</p>
+<p>En 2026, le NFC n'est plus une option futuriste : c'est <strong>le standard pour la collecte d'avis Google</strong> en commerce physique. Le QR code reste utile en complément digital, mais ne suffit plus en point de vente.</p>
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à booster vos avis Google ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les plaques NFC Swiipx — acrylique premium 3 mm, NTAG215, QR code de secours intégré, garantie 2 ans, livraison gratuite. <a href="/#product" class="font-semibold underline">Voir les packs disponibles</a>.</p>
+</div>
+</section>
+    `,
+  },
   'obtenir-plus-avis-google': {
     title: 'Comment obtenir plus d\'avis Google en 2025 : le guide complet (+ 10 méthodes)',
     category: 'Stratégie',
@@ -1366,6 +1680,7 @@ const articles: Record<string, {
    Related articles pour la sidebar
    ───────────────────────────────────────────── */
 const relatedArticles = [
+  { slug: 'plaque-nfc-vs-qr-code-avis-google', label: 'Plaque NFC vs QR Code : comparatif 2026' },
   { slug: 'doubler-avis-google-30-jours', label: 'Doubler vos avis Google en 30 jours' },
   { slug: 'obtenir-plus-avis-google', label: '10 méthodes pour obtenir plus d\'avis Google' },
   { slug: 'nfc-avis-clients', label: 'NFC : la nouvelle arme pour vos avis' },

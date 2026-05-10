@@ -26,7 +26,7 @@ export default function HeroSection() {
       {/* Filet accent discret en bas */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         {/* Layout asymétrique : texte 7/12, image 5/12 décalée */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Colonne texte (7/12) */}

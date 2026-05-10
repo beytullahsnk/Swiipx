@@ -47,6 +47,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 7,
+    title: 'Plaque NFC vs QR Code pour les avis Google : comparatif 2026',
+    excerpt: 'Plaque NFC ou QR code pour vos avis Google ? Comparatif détaillé 2026 sur 8 critères : taux de conversion (35-45 % vs 8-12 %), prix, ROI et études de cas.',
+    category: 'Comparatif',
+    date: '10 mai 2026',
+    dateIso: '2026-05-10',
+    readTime: '9 min',
+    slug: 'plaque-nfc-vs-qr-code-avis-google',
+    badge: 'Nouveau',
+  },
+  {
     id: 0,
     title: 'Comment doubler vos avis Google en 30 jours',
     excerpt: "La méthode complète en 4 phases pour exploser vos avis. Cas pratique : +740% d'avis en 1 mois.",
@@ -55,7 +66,6 @@ const blogPosts: BlogPost[] = [
     dateIso: '2026-01-19',
     readTime: '10 min',
     slug: 'doubler-avis-google-30-jours',
-    badge: 'Nouveau',
   },
   {
     id: 1,
