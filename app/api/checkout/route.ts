@@ -19,8 +19,8 @@ const PRODUCT_MAP = {
     amountCents: 5990, // 59,90€ TTC
   },
   plaque5: {
-    productId: 'prod_TOiZBuKlMrDfpR', // prod_TOhuUHZ3CPLbUw
-    name: 'Swiipx — 5 Plaques',
+    productId: 'prod_TOhuUHZ3CPLbUw', // prod_TOhuUHZ3CPLbUw
+    name: 'Swiipx — 5 Plaques', // test prod_TOiZBuKlMrDfpR
     amountCents: 8990, // 89,90€ TTC
   },
 } as const
