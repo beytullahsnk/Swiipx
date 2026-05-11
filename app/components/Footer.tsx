@@ -16,6 +16,11 @@ export default function Footer() {
       { name: 'Comment ça marche', href: '/#how-it-works' },
       { name: 'FAQ', href: '/#faq' },
     ],
+    secteurs: [
+      { name: 'Plaque NFC restaurant', href: '/secteur/restaurant' },
+      { name: 'Plaque NFC salon de coiffure', href: '/secteur/salon-coiffure' },
+      { name: 'Plaque NFC cabinet médical', href: '/secteur/cabinet-medical' },
+    ],
     livraison: [
       { name: 'Expédition et Livraison', href: '/livraison' },
       { name: 'Retours et échanges', href: '/retours' },
@@ -32,7 +37,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
@@ -56,6 +61,24 @@ export default function Footer() {
             <h3 className="text-white font-bold text-lg mb-4">Produit</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    prefetch={true}
+                    className="text-gray-400 hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Secteurs Links */}
+          <div>
+            <h3 className="text-white font-bold text-lg mb-4">Secteurs</h3>
+            <ul className="space-y-3">
+              {footerLinks.secteurs.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

@@ -186,11 +186,88 @@ export default function Home() {
     ],
   }
 
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Plaque NFC avis Google Swiipx',
+    serviceType: 'Plaque NFC avis Google',
+    description: 'Solution NFC clé en main pour collecter des avis Google sans abonnement. Livraison gratuite en France, garantie 2 ans.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Swiipx',
+      url: 'https://swiipx.fr',
+    },
+    areaServed: { '@type': 'Country', name: 'France' },
+    audience: {
+      '@type': 'BusinessAudience',
+      audienceType: 'Restaurants, salons de coiffure, cabinets médicaux, commerces de proximité',
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'EUR',
+      lowPrice: '39.90',
+      highPrice: '89.90',
+      offerCount: 3,
+    },
+  }
+
+  const offerCatalogJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'OfferCatalog',
+    name: 'Packs Plaques NFC Swiipx',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Pack Starter — 1 plaque',
+        url: 'https://swiipx.fr/product/starter',
+        price: '39.90',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        itemOffered: {
+          '@type': 'Product',
+          name: 'Pack Starter — 1 plaque NFC avis Google',
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Pack Business — 2 plaques',
+        url: 'https://swiipx.fr/product/business',
+        price: '59.90',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        itemOffered: {
+          '@type': 'Product',
+          name: 'Pack Business — 2 plaques NFC avis Google',
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Pack Pro — 5 plaques',
+        url: 'https://swiipx.fr/product/pro',
+        price: '89.90',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        itemOffered: {
+          '@type': 'Product',
+          name: 'Pack Pro — 5 plaques NFC avis Google',
+        },
+      },
+    ],
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogJsonLd) }}
       />
       <script
         type="application/ld+json"

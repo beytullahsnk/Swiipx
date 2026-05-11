@@ -4,6 +4,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://swiipx.fr'
 
   const blogArticles: { slug: string; date: string }[] = [
+    { slug: 'plaque-nfc-restaurant', date: '2026-05-10' },
+    { slug: 'plaque-avis-google-sans-abonnement', date: '2026-05-10' },
+    { slug: 'plaque-nfc-salon-coiffure', date: '2026-05-10' },
+    { slug: 'prix-plaque-nfc-avis-google', date: '2026-05-10' },
+    { slug: 'ou-placer-plaque-avis-google', date: '2026-05-10' },
     { slug: 'plaque-nfc-vs-qr-code-avis-google', date: '2026-05-10' },
     { slug: 'doubler-avis-google-30-jours', date: '2026-01-19' },
     { slug: 'obtenir-plus-avis-google', date: '2026-01-15' },
@@ -15,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const productSlugs = ['starter', 'business', 'pro']
+  const sectorSlugs = ['restaurant', 'salon-coiffure', 'cabinet-medical']
 
   const staticPages = [
     { url: baseUrl, lastModified: '2026-02-24', changeFrequency: 'weekly' as const, priority: 1 },
@@ -31,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: '2026-02-24',
     changeFrequency: 'monthly' as const,
     priority: 0.9,
+  }))
+
+  const sectorPages = sectorSlugs.map((slug) => ({
+    url: `${baseUrl}/secteur/${slug}`,
+    lastModified: '2026-05-10',
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
   }))
 
   // Trouver l'article le plus récent (priorité dynamique = 0.9)
@@ -52,5 +65,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  return [...staticPages, ...productPages, ...blogPages]
+  return [...staticPages, ...productPages, ...sectorPages, ...blogPages]
 }
