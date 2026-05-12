@@ -173,7 +173,7 @@ export default function Footer() {
               © {currentYear} Swiipx. Tous droits réservés.
             </p>
             <p className="text-gray-500 text-xs">
-              Une marque <span className="text-gray-400 font-medium">SKYAKSA</span>
+              Développé par <a href="https://skyaksa.fr" target="_blank" rel="noopener noreferrer" className="text-gray-400 font-medium hover:text-primary transition-colors">SKYAKSA</a>
             </p>
           </div>
         </div>

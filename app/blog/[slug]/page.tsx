@@ -22,7 +22,7 @@ const articles: Record<string, {
   'ou-placer-plaque-avis-google': {
     title: 'Où placer votre plaque avis Google ? 7 emplacements stratégiques 2026',
     category: 'Conseils',
-    date: '10 mai 2026',
+    date: '12 mai 2026',
     readTime: '8 min',
     author: 'Équipe Swiipx',
     excerpt: 'Le placement de votre plaque avis Google détermine 80% du taux de conversion. Guide 2026 : 7 emplacements stratégiques par secteur (restaurant, salon, retail).',
@@ -231,7 +231,7 @@ const articles: Record<string, {
   'prix-plaque-nfc-avis-google': {
     title: 'Combien coûte une plaque NFC avis Google ? Prix réels et ROI 2026',
     category: 'Comparatif',
-    date: '10 mai 2026',
+    date: '12 mai 2026',
     readTime: '8 min',
     author: 'Équipe Swiipx',
     excerpt: 'Prix d\'une plaque NFC avis Google en 2026 : tarifs par marque, packs multi-plaques, options personnalisation, et calcul du ROI réel pour votre commerce.',
@@ -484,7 +484,7 @@ const articles: Record<string, {
   'plaque-nfc-salon-coiffure': {
     title: 'Plaque NFC avis Google pour salon de coiffure : guide complet ROI 2026',
     category: 'Secteur',
-    date: '10 mai 2026',
+    date: '11 mai 2026',
     readTime: '9 min',
     author: 'Équipe Swiipx',
     excerpt: 'Salon de coiffure : comment collecter +150 avis Google par an avec une plaque NFC. Guide complet 2026 : placement, script, ROI réel, études de cas.',
@@ -692,7 +692,7 @@ const articles: Record<string, {
   'plaque-avis-google-sans-abonnement': {
     title: 'Plaque avis Google sans abonnement : comparatif 2026 (5 marques testées)',
     category: 'Comparatif',
-    date: '10 mai 2026',
+    date: '11 mai 2026',
     readTime: '10 min',
     author: 'Équipe Swiipx',
     excerpt: 'Plaque avis Google sans abonnement : comparatif honnête de 5 marques en 2026 (Swiipx, Reputaz, Coollet, Fivvy, Cogimix). Prix, qualité, fonctionnalités, ROI.',
@@ -884,7 +884,7 @@ const articles: Record<string, {
   'plaque-nfc-restaurant': {
     title: 'Plaque NFC pour restaurant : guide complet pour collecter +200 avis Google en 2026',
     category: 'Secteur',
-    date: '10 mai 2026',
+    date: '11 mai 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
     excerpt: 'Restaurant : comment installer une plaque NFC pour collecter +200 avis Google par an. Guide complet 2026 : placement optimal, scripts serveur, ROI, études de cas.',
