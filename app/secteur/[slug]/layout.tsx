@@ -65,6 +65,27 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
+const sectorFaq: Record<string, { q: string; a: string }[]> = {
+  restaurant: [
+    { q: 'Combien d\'avis Google peut collecter mon restaurant ?', a: 'En moyenne, les restaurants utilisateurs passent de 5-8 avis/mois à 25-40 avis/mois, soit une multiplication par 4-7. Les meilleurs résultats observés : 60 avis/mois sur des brasseries 80+ couverts.' },
+    { q: 'La plaque résiste-t-elle au nettoyage quotidien ?', a: 'Oui. L\'acrylique 3 mm résiste à l\'eau, aux désinfectants, aux UV et aux rayures. Vous pouvez la nettoyer comme une table normale.' },
+    { q: 'Faut-il former mes serveurs ?', a: 'Oui, c\'est crucial. Une plaque NFC sans communication verbale convertit 3-4 fois moins. Comptez 15-30 min de briefing pour expliquer le script aux serveurs.' },
+    { q: 'Quel pack pour un restaurant de 80 couverts ?', a: 'Pack Pro (5 plaques) : 1 plaque par groupe de 15-20 couverts. C\'est le ratio optimal pour ne pas créer de "bouchon" sur une seule plaque.' },
+  ],
+  'salon-coiffure': [
+    { q: 'Mes clientes seniors vont-elles savoir utiliser le NFC ?', a: 'Oui. Le NFC fonctionne avec tout smartphone récent. La cliente n\'a rien à comprendre : elle approche son téléphone, ça s\'ouvre automatiquement. Plus simple qu\'un QR code.' },
+    { q: 'La plaque résiste-t-elle aux produits capillaires ?', a: 'Oui. L\'acrylique 3 mm résiste à l\'eau, aux laques, colorations et shampoings. Nettoyage avec un chiffon humide ou un spray désinfectant.' },
+    { q: 'Quel pack pour un institut multi-cabines ?', a: 'Pack Pro (5 plaques) : 1 plaque par cabine + 1 à l\'accueil. Maximisation du taux d\'avis par tranche de clientèle.' },
+    { q: 'Combien d\'avis attendre par mois ?', a: 'En moyenne, multiplication par 5-10. Pour un salon avec 5 avis/mois actuellement, comptez 25-50 avis/mois avec une plaque NFC bien placée + script.' },
+  ],
+  'cabinet-medical': [
+    { q: 'Est-ce conforme à mon code de déontologie ?', a: 'Oui. La plaque est discrète, sans message commercial agressif, et le patient choisit librement de l\'utiliser. C\'est l\'équivalent d\'un panneau "votre avis nous intéresse" classique. Aucune contrepartie offerte, aucune incitation = conforme.' },
+    { q: 'Puis-je demander verbalement à mes patients ?', a: 'Évitez la sollicitation directe ("laissez-nous un avis"). Préférez une mention factuelle : "Nous avons mis une plaque à l\'accueil si vous souhaitez laisser un retour." Le patient décide.' },
+    { q: 'Quel pack pour un cabinet pluridisciplinaire ?', a: 'Pack Pro (5 plaques) : 1 par cabine de consultation + accueil. Adapté aux cabinets avec 3+ praticiens.' },
+    { q: 'Que faire d\'un avis négatif (RGPD, secret médical) ?', a: 'Répondez de manière générale ("Nous sommes désolés que votre expérience n\'ait pas été à la hauteur, contactez-nous à [email]") sans mentionner de détail médical. Si l\'avis viole le secret médical du patient, signalez-le à Google pour suppression.' },
+  ],
+}
+
 function buildJsonLd(slug: string) {
   const data = sectorData[slug]
   if (!data) return null
@@ -74,14 +95,21 @@ function buildJsonLd(slug: string) {
     '@type': 'Service',
     name: data.h1,
     description: data.description,
-    provider: {
-      '@type': 'Organization',
-      name: 'Swiipx',
-      url: 'https://swiipx.fr',
-    },
-    areaServed: 'FR',
+    provider: { '@id': 'https://swiipx.fr/#organization' },
+    areaServed: [
+      { '@type': 'Country', name: 'France' },
+      { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+      { '@type': 'City', name: 'Paris' },
+    ],
     serviceType: 'Plaque NFC avis Google',
     audience: { '@type': 'Audience', audienceType: slug },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'EUR',
+      lowPrice: '39.90',
+      highPrice: '89.90',
+      offerCount: 3,
+    },
   }
 
   const breadcrumb = {
@@ -94,7 +122,20 @@ function buildJsonLd(slug: string) {
     ],
   }
 
-  return { service, breadcrumb }
+  const faqList = sectorFaq[slug]
+  const faqPage = faqList
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqList.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      }
+    : null
+
+  return { service, breadcrumb, faqPage }
 }
 
 export default function SectorLayout({
@@ -118,6 +159,12 @@ export default function SectorLayout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.breadcrumb) }}
           />
+          {jsonLd.faqPage && (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.faqPage) }}
+            />
+          )}
         </>
       )}
       {children}

@@ -47,6 +47,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 13,
+    title: 'Plaque NFC cabinet médical : avis Google et déontologie',
+    excerpt: 'Médecins, dentistes, kinés, ostéopathes : collectez des avis Google avec une plaque NFC en respectant la déontologie. Placements, scripts conformes, FAQ.',
+    category: 'Secteur',
+    date: '8 juin 2026',
+    dateIso: '2026-06-08',
+    readTime: '9 min',
+    slug: 'plaque-nfc-cabinet-medical',
+    badge: 'Nouveau',
+  },
+  {
     id: 12,
     title: 'Où placer votre plaque avis Google ? 7 emplacements stratégiques',
     excerpt: 'Le placement de votre plaque avis Google détermine 80 % du taux de conversion. Guide 2026 : 7 emplacements optimaux par secteur.',

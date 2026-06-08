@@ -10,6 +10,21 @@ const seoData: Record<string, {
   category: string
   faq: { q: string; a: string }[]
 }> = {
+  'plaque-nfc-cabinet-medical': {
+    title: 'Plaque NFC cabinet médical : avis Google et déontologie (guide 2026)',
+    description: 'Médecins, dentistes, kinés, ostéopathes : collectez des avis Google avec une plaque NFC en respectant la déontologie. Guide 2026 : placements, scripts conformes, FAQ.',
+    keywords: 'plaque nfc cabinet medical, avis google dentiste, avis google medecin, plaque nfc dentiste, avis google kinesitherapeute, plaque nfc osteopathe, deontologie avis google',
+    date: '2026-06-08',
+    dateModified: '2026-06-08',
+    category: 'Secteur',
+    faq: [
+      { q: 'Est-ce déontologique de demander des avis à ses patients ?', a: 'Oui, à condition de rester passif et non insistant, sans contrepartie ni tri des patients. La plaque NFC est un moyen passif : le patient choisit librement de l\'utiliser ou non, ce qui est conforme aux recommandations des ordres professionnels.' },
+      { q: 'Puis-je répondre aux avis de mes patients ?', a: 'Oui, mais sans jamais révéler d\'information de santé ni confirmer qu\'une personne est votre patient (secret médical). Restez neutre : "Merci pour votre retour" suffit. Ne mentionnez jamais le motif de consultation.' },
+      { q: 'Combien d\'avis un cabinet médical peut-il espérer collecter ?', a: 'Un cabinet moyen passe de 5-10 avis/an à 30-60 avis/an avec une plaque NFC bien placée, soit une multiplication par 4 à 6, tout en respectant la discrétion attendue dans le secteur médical.' },
+      { q: 'Où placer la plaque NFC dans un cabinet médical ?', a: 'Le meilleur emplacement est sur le bureau, évoqué une seule fois en fin de consultation (25-35 % de conversion). À l\'accueil/secrétariat au moment de reprendre rendez-vous (15-25 %). En salle d\'attente de façon discrète (10-15 %).' },
+      { q: 'Faut-il un abonnement pour la plaque NFC ?', a: 'Non. La plaque Swiipx fonctionne sans abonnement : un paiement unique et elle fonctionne pendant des années, sans frais récurrents ni renouvellement mensuel.' },
+    ],
+  },
   'plaque-nfc-restaurant': {
     title: 'Plaque NFC restaurant : collecter +200 avis Google en 2026 (guide complet)',
     description: 'Restaurant : comment collecter +200 avis Google par an avec une plaque NFC. Guide 2026 : placements, scripts serveur, ROI, 3 études de cas réelles.',
@@ -246,14 +261,25 @@ function buildJsonLd(slug: string) {
     description: seo.description,
     datePublished: seo.date,
     dateModified: seo.dateModified,
-    author: { '@type': 'Organization', name: 'Swiipx', url: 'https://swiipx.fr' },
-    publisher: {
+    inLanguage: 'fr-FR',
+    keywords: seo.keywords,
+    articleSection: seo.category,
+    author: {
       '@type': 'Organization',
       name: 'Swiipx',
       url: 'https://swiipx.fr',
-      logo: { '@type': 'ImageObject', url: 'https://swiipx.fr/logo.png' },
+      '@id': 'https://swiipx.fr/#organization',
+    },
+    publisher: { '@id': 'https://swiipx.fr/#organization' },
+    about: {
+      '@type': 'Thing',
+      name: 'Plaque NFC avis Google',
     },
     image: 'https://swiipx.fr/product-main.jpg',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '.article-excerpt'],
+    },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://swiipx.fr/blog/${slug}`,

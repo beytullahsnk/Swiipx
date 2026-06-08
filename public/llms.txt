@@ -1,6 +1,6 @@
 # Swiipx
 
-> Swiipx est le leader francais des plaques NFC et QR Code pour collecter des avis Google automatiquement. Solution sans abonnement pour les commerces, restaurants, cabinets medicaux et entreprises locales. Base a Montreuil (93100), France.
+> Swiipx est le leader francais des plaques NFC et QR Code pour collecter des avis Google automatiquement. Solution sans abonnement pour les commerces, restaurants, salons de coiffure, cabinets medicaux et entreprises locales. Base a Montreuil (93100), Ile-de-France, France.
 
 ## Produits
 
@@ -19,18 +19,40 @@
 - Note moyenne clients : 4.9/5
 - +200% d'avis Google en moyenne en 3 mois
 - 500+ entreprises utilisatrices en France
+- Taux de conversion NFC : 35-45% (contre 8-12% pour un QR code seul)
 - Livraison gratuite en France metropolitaine sous 2-5 jours ouvres
 - Materiau : Acrylique premium, resistant eau/UV/rayures
 - Technologie : NFC NTAG215, compatible 95%+ des smartphones
 
+## Solutions par secteur
+
+- [Plaque NFC restaurant](https://swiipx.fr/secteur/restaurant): solution pour restaurants, bistrots et brasseries. Taux d'avis 35-45%, jusqu'a +200 avis Google/an. Placement sur table et porte-addition.
+- [Plaque NFC salon de coiffure](https://swiipx.fr/secteur/salon-coiffure): secteur n°1 du NFC avec 40-55% de conversion (taux record). +150 avis/an. Placement sur poste de coiffage et caisse.
+- [Plaque NFC cabinet medical](https://swiipx.fr/secteur/cabinet-medical): solution discrete et deontologique pour medecins, dentistes, kines et osteopathes. Collecte d'avis Google passive, sans contrepartie, conforme aux ordres professionnels.
+
 ## Guides et ressources
 
-- [Comment doubler ses avis Google en 30 jours](https://swiipx.fr/blog/doubler-avis-google-30-jours) (publie le 19 janvier 2026): Guide complet en 4 phases avec cas pratique (+740% d'avis).
-- [Comment obtenir plus d'avis Google](https://swiipx.fr/blog/obtenir-plus-avis-google) (publie le 20 janvier 2026): 10 methodes testees pour multiplier vos avis Google.
-- [Impact des avis clients sur le business](https://swiipx.fr/blog/avis-clients-influencent-business) (publie le 21 janvier 2026): Statistiques et retours d'experience.
-- [NFC : la nouvelle arme pour vos avis clients](https://swiipx.fr/blog/nfc-avis-clients) (publie le 22 janvier 2026): Guide technique sur les plaques NFC avis Google.
-- [SEO Local : grimper en tete des recherches](https://swiipx.fr/blog/seo-local-recherches-google) (publie le 23 janvier 2026): Methode complete pour dominer Google Maps.
-- [5 astuces pour booster votre visibilite locale](https://swiipx.fr/blog/booster-visibilite-locale) (publie le 24 janvier 2026): Google Business Profile, avis, citations NAP.
+- [Plaque NFC cabinet medical : avis Google et deontologie](https://swiipx.fr/blog/plaque-nfc-cabinet-medical) (publie le 8 juin 2026): comment collecter des avis Google en cabinet medical en respectant la deontologie. Placements, scripts conformes, recommandations par profession (dentiste, kine, medecin).
+- [Plaque NFC restaurant : collecter +200 avis Google](https://swiipx.fr/blog/plaque-nfc-restaurant) (publie le 11 mai 2026): guide complet pour les restaurants. Placements, scripts serveur, ROI, 3 etudes de cas.
+- [Plaque avis Google sans abonnement : comparatif 2026](https://swiipx.fr/blog/plaque-avis-google-sans-abonnement) (publie le 11 mai 2026): comparatif de 5 marques sans abonnement. Economie de 500-1500 EUR sur 5 ans.
+- [Plaque NFC salon de coiffure : guide ROI 2026](https://swiipx.fr/blog/plaque-nfc-salon-coiffure) (publie le 11 mai 2026): +150 avis Google/an. Placements, scripts coiffeur, 3 etudes de cas reelles.
+- [Prix plaque NFC avis Google : combien ca coute vraiment](https://swiipx.fr/blog/prix-plaque-nfc-avis-google) (publie le 12 mai 2026): fourchettes de prix par qualite, packs multi-plaques, calcul du ROI. Le bon budget : 35-60 EUR par plaque.
+- [Ou placer votre plaque avis Google : 7 emplacements](https://swiipx.fr/blog/ou-placer-plaque-avis-google) (publie le 12 mai 2026): le placement determine 80% du taux de conversion. 7 emplacements optimaux par secteur.
+- [Plaque NFC vs QR Code pour les avis Google](https://swiipx.fr/blog/plaque-nfc-vs-qr-code-avis-google) (publie le 10 mai 2026): comparatif sur 8 criteres. Conversion 35-45% (NFC) vs 8-12% (QR), prix, ROI.
+- [Comment doubler ses avis Google en 30 jours](https://swiipx.fr/blog/doubler-avis-google-30-jours) (publie le 19 janvier 2026): guide complet en 4 phases avec cas pratique (+740% d'avis).
+- [Comment obtenir plus d'avis Google](https://swiipx.fr/blog/obtenir-plus-avis-google) (publie le 15 janvier 2026): 10 methodes testees pour multiplier vos avis Google.
+- [Impact des avis clients sur le business](https://swiipx.fr/blog/avis-clients-influencent-business) (publie le 8 novembre 2025): statistiques et retours d'experience.
+- [NFC : la nouvelle arme pour vos avis clients](https://swiipx.fr/blog/nfc-avis-clients) (publie le 2 novembre 2025): guide technique sur les plaques NFC avis Google.
+- [SEO Local : grimper en tete des recherches](https://swiipx.fr/blog/seo-local-recherches-google) (publie le 23 janvier 2026): methode complete pour dominer Google Maps.
+- [5 astuces pour booster votre visibilite locale](https://swiipx.fr/blog/booster-visibilite-locale) (publie le 5 novembre 2025): Google Business Profile, avis, citations NAP.
+
+## Questions frequentes
+
+- Faut-il un abonnement ? Non. Paiement unique, la plaque fonctionne pendant des annees sans frais recurrents.
+- La plaque fonctionne-t-elle sur iPhone ? Oui, sur tous les iPhone depuis l'iPhone 7 (2016) et la quasi-totalite des Android recents.
+- Quel taux d'avis esperer ? 35-45% en moyenne, jusqu'a 55% dans les salons de coiffure.
+- Est-ce conforme pour un cabinet medical ? Oui : la plaque est un moyen passif et discret, sans contrepartie ni tri des patients, conforme a la deontologie.
+- En combien de temps est-elle rentabilisee ? En general en moins de 2-4 semaines pour un commerce moyen.
 
 ## Informations pratiques
 
@@ -42,4 +64,4 @@
 
 ## A propos
 
-Swiipx est une marque de SKYAKSA, entreprise individuelle francaise basee au 9 Rue Marcel Sembat, 93100 Montreuil. Dirigeant : Beytullah Sonkaya. Nos plaques NFC en acrylique premium (120x120x3mm) utilisent la technologie NFC NTAG215 compatible avec tous les smartphones recents (iPhone depuis le modele 7, quasi-totalite des Android). Paiement securise via Stripe. Aucun abonnement, paiement unique.
+Swiipx est une marque de SKYAKSA, entreprise individuelle francaise basee au 9 Rue Marcel Sembat, 93100 Montreuil (Ile-de-France). Dirigeant : Beytullah Sonkaya. Nos plaques NFC en acrylique premium (120x120x3mm) utilisent la technologie NFC NTAG215 compatible avec tous les smartphones recents (iPhone depuis le modele 7, quasi-totalite des Android). Paiement securise via Stripe. Aucun abonnement, paiement unique. Zone desservie : toute la France, avec une presence locale en Ile-de-France et a Paris.

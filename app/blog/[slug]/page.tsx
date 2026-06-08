@@ -19,6 +19,144 @@ const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-cabinet-medical': {
+    title: 'Plaque NFC cabinet médical : collecter des avis Google en respectant la déontologie',
+    category: 'Secteur',
+    date: '8 juin 2026',
+    readTime: '9 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Médecins, dentistes, kinés, ostéopathes : comment collecter des avis Google avec une plaque NFC tout en respectant la déontologie médicale. Guide 2026 complet.',
+    tocSections: [
+      { id: 'pourquoi-avis-medical', label: 'Pourquoi les avis comptent en cabinet' },
+      { id: 'deontologie', label: 'Déontologie : ce qui est autorisé' },
+      { id: 'fonctionnement-nfc', label: 'Comment fonctionne la plaque NFC' },
+      { id: 'placement-cabinet', label: 'Où placer la plaque en cabinet' },
+      { id: 'scripts-discrets', label: 'Scripts discrets et conformes' },
+      { id: 'profession-par-profession', label: 'Recommandations par profession' },
+      { id: 'faq-medical', label: 'FAQ' },
+    ],
+    content: `
+<section id="pourquoi-avis-medical" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google comptent (aussi) pour un cabinet médical</h2>
+<p>Contrairement à une idée reçue, les patients choisissent de plus en plus leur praticien comme ils choisissent un restaurant : <strong>en consultant Google avant de prendre rendez-vous</strong>. 7 patients sur 10 lisent les avis Google d'un professionnel de santé avant leur premier rendez-vous, surtout pour les nouvelles installations.</p>
+<p>Un cabinet avec 5 avis et 3,8 étoiles inspire moins confiance qu'un confrère voisin avec 80 avis et 4,7 étoiles — à compétence égale. Les avis Google influencent aussi votre <strong>visibilité locale</strong> : Google met en avant dans le "pack local" (la carte avec 3 résultats) les fiches les mieux notées et les plus actives.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> un cabinet qui passe de 8 à 50 avis Google gagne en moyenne 2 à 3 places dans le pack local, soit jusqu'à <strong>+40 % de nouvelles demandes de rendez-vous</strong> via Google.</p>
+</div>
+</section>
+
+<section id="deontologie" class="scroll-mt-28 mb-16">
+<h2>Déontologie : ce qui est autorisé (et ce qui ne l'est pas)</h2>
+<p>Les professions médicales et paramédicales sont encadrées par des règles déontologiques strictes. Collecter des avis est <strong>autorisé</strong>, à condition de respecter quelques principes.</p>
+
+<h3>✅ Ce qui est autorisé</h3>
+<ul>
+<li>Mettre à disposition un moyen <strong>passif et discret</strong> de laisser un avis (plaque, QR code)</li>
+<li>Inviter le patient à partager son ressenti <strong>sans insistance</strong></li>
+<li>Répondre aux avis de manière neutre, sans jamais révéler d'information de santé</li>
+</ul>
+
+<h3>❌ Ce qui est à éviter</h3>
+<ul>
+<li>La <strong>sollicitation active et répétée</strong> (relances par SMS, insistance verbale)</li>
+<li>Toute forme de <strong>contrepartie</strong> (remise, cadeau) en échange d'un avis</li>
+<li>Le <strong>tri</strong> des patients (ne solliciter que ceux qui sont contents)</li>
+<li>Répondre publiquement en mentionnant le motif de consultation (secret médical)</li>
+</ul>
+<p>La plaque NFC respecte parfaitement ces principes : elle est <strong>passive</strong> (le patient choisit ou non de la scanner), <strong>discrète</strong> (un simple objet posé sur le bureau), et sans contrepartie.</p>
+</section>
+
+<section id="fonctionnement-nfc" class="scroll-mt-28 mb-16">
+<h2>Comment fonctionne la plaque NFC en cabinet</h2>
+<p>La plaque NFC est un petit objet en acrylique premium que le patient approche avec son smartphone. En une seconde, il est redirigé vers votre page d'avis Google — <strong>sans application à installer</strong>, sans saisie d'adresse, sans friction.</p>
+<ol>
+<li>Le patient approche son téléphone à moins de 4 cm de la plaque</li>
+<li>Le smartphone ouvre automatiquement votre page Google d'avis</li>
+<li>Le patient laisse une note et un commentaire en 10 secondes</li>
+</ol>
+<p>Un QR code de secours est imprimé sur la plaque pour les rares smartphones non compatibles NFC. La solution fonctionne sur tous les iPhone depuis 2016 et la quasi-totalité des Android récents.</p>
+</section>
+
+<section id="placement-cabinet" class="scroll-mt-28 mb-16">
+<h2>Où placer la plaque NFC dans un cabinet médical</h2>
+
+<h3>1. Sur le bureau, en fin de consultation (conversion 25-35 %)</h3>
+<p>L'emplacement le plus efficace et le plus déontologique : la plaque est posée discrètement sur votre bureau. À la fin de la consultation, si le patient est satisfait, il la remarque naturellement. Vous pouvez l'évoquer une seule fois, sans insister.</p>
+
+<h3>2. À l'accueil / secrétariat (conversion 15-25 %)</h3>
+<p>Au moment de reprendre rendez-vous ou de régler, la plaque est visible sur le comptoir. La secrétaire peut l'évoquer une fois, de manière neutre.</p>
+
+<h3>3. En salle d'attente (conversion 10-15 %)</h3>
+<p>Une plaque discrète avec un petit message « Votre avis nous aide » permet aux patients satisfaits de laisser un retour pendant l'attente. À utiliser avec sobriété, sans affichage publicitaire agressif.</p>
+
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>💡 Conseil :</strong> pour un cabinet, privilégiez <strong>la discrétion</strong> à l'efficacité maximale. Une plaque sobre sur le bureau respecte mieux la relation de soin qu'un dispositif tape-à-l'œil. Consultez notre <a href="/blog/ou-placer-plaque-avis-google">guide complet des emplacements</a>.</p>
+</div>
+</section>
+
+<section id="scripts-discrets" class="scroll-mt-28 mb-16">
+<h2>Scripts discrets et conformes à la déontologie</h2>
+<p>La clé en cabinet : une <strong>mention unique et neutre</strong>, jamais insistante. Voici des formulations conformes :</p>
+<ul>
+<li>« Si vous avez été satisfait de votre prise en charge, vous pouvez laisser un avis ici, mais c'est totalement libre. »</li>
+<li>« Pour ceux qui le souhaitent, un avis Google est possible via cette plaque — sans aucune obligation. »</li>
+<li>(Secrétariat) « Vous pouvez approcher votre téléphone ici si vous souhaitez nous laisser un retour. »</li>
+</ul>
+<p>L'objectif n'est pas de maximiser le nombre d'avis à tout prix, mais de <strong>faciliter</strong> le geste pour les patients déjà satisfaits qui, sans cet outil, ne penseraient pas à le faire.</p>
+</section>
+
+<section id="profession-par-profession" class="scroll-mt-28 mb-16">
+<h2>Recommandations par profession</h2>
+
+<h3>🦷 Dentiste / orthodontiste</h3>
+<p>Forte concurrence locale et patients qui comparent beaucoup en ligne. Plaque sur le bureau en fin de soin + plaque à l'accueil. Idéal : pack 2 plaques.</p>
+
+<h3>🤲 Kinésithérapeute / ostéopathe</h3>
+<p>Relation de suivi sur plusieurs séances : le patient fidèle est le meilleur ambassadeur. Plaque à l'accueil, évoquée une fois en fin de cycle de soins.</p>
+
+<h3>🩺 Médecin généraliste / spécialiste</h3>
+<p>Discrétion maximale recommandée. Une seule plaque sobre sur le bureau suffit. Pack Starter 1 plaque.</p>
+
+<h3>💆 Professions du bien-être (sophrologie, psychologie, diététique)</h3>
+<p>Moins de contraintes déontologiques mais même exigence de sobriété. Plaque sur le bureau ou à l'accueil.</p>
+
+<p>Pour aller plus loin, découvrez notre <a href="/secteur/cabinet-medical">page dédiée aux cabinets médicaux</a> et notre <a href="/blog/seo-local-recherches-google">guide SEO local</a>.</p>
+</section>
+
+<section id="faq-medical" class="scroll-mt-28 mb-16">
+<h2>FAQ — Plaque NFC en cabinet médical</h2>
+
+<h3>Est-ce déontologique de demander des avis à ses patients ?</h3>
+<p>Oui, à condition de rester passif et non insistant, sans contrepartie ni tri des patients. La plaque NFC est un moyen passif : le patient choisit librement de l'utiliser ou non. C'est conforme aux recommandations des ordres professionnels.</p>
+
+<h3>Puis-je répondre aux avis de mes patients ?</h3>
+<p>Oui, mais sans jamais révéler d'information de santé ni confirmer qu'une personne est votre patient (secret médical). Restez neutre : « Merci pour votre retour » suffit. Ne mentionnez jamais le motif de consultation.</p>
+
+<h3>Combien d'avis un cabinet peut-il espérer collecter ?</h3>
+<p>Un cabinet moyen passe de 5-10 avis/an à 30-60 avis/an avec une plaque NFC bien placée, soit une multiplication par 4 à 6, tout en respectant la discrétion attendue.</p>
+
+<h3>La plaque nécessite-t-elle un abonnement ?</h3>
+<p>Non. La plaque Swiipx fonctionne sans abonnement : un paiement unique, et elle fonctionne pendant des années. Pas de frais récurrents. Découvrez nos <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a>.</p>
+
+<h3>Faut-il l'accord du patient pour qu'il laisse un avis ?</h3>
+<p>Non : c'est le patient lui-même qui rédige et publie son avis, de son plein gré. Vous ne collectez aucune donnée. La plaque ne fait que faciliter la redirection vers votre page Google publique.</p>
+
+<h3>Quel pack choisir pour un cabinet ?</h3>
+<p>Cabinet individuel : pack Starter (1 plaque) sur le bureau. Cabinet avec accueil/secrétariat ou cabinet de groupe : pack Business (2 plaques). Centre médical multi-praticiens : pack Pro (5 plaques).</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : visibilité et déontologie ne s'opposent pas</h2>
+<p>Collecter des avis Google en cabinet médical est non seulement possible mais <strong>bénéfique pour vos patients</strong> : cela les aide à choisir un praticien en confiance, et cela renforce votre visibilité locale. La condition : rester <strong>passif, discret et sans contrepartie</strong>.</p>
+<p>La plaque NFC est l'outil idéal pour cela : un objet sobre, un geste libre pour le patient, zéro sollicitation agressive. Découvrez nos guides complémentaires : <a href="/blog/plaque-nfc-restaurant">restaurant</a>, <a href="/blog/plaque-nfc-salon-coiffure">salon de coiffure</a>, ou notre <a href="/blog/doubler-avis-google-30-jours">méthode pour doubler vos avis en 30 jours</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à booster vos avis Google en toute discrétion ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> avec adhésif 3M inclus, garantie 2 ans, sans abonnement. À partir de 39,90 € pour 1 plaque.</p>
+</div>
+</section>
+    `,
+  },
   'ou-placer-plaque-avis-google': {
     title: 'Où placer votre plaque avis Google ? 7 emplacements stratégiques 2026',
     category: 'Conseils',
@@ -2819,6 +2957,7 @@ const articles: Record<string, {
    Related articles pour la sidebar
    ───────────────────────────────────────────── */
 const relatedArticles = [
+  { slug: 'plaque-nfc-cabinet-medical', label: 'Plaque NFC cabinet médical : guide déontologie' },
   { slug: 'plaque-nfc-restaurant', label: 'Plaque NFC restaurant : guide complet' },
   { slug: 'plaque-nfc-salon-coiffure', label: 'Plaque NFC salon de coiffure' },
   { slug: 'plaque-avis-google-sans-abonnement', label: 'Plaques sans abonnement : comparatif' },

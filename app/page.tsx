@@ -211,6 +211,14 @@ export default function Home() {
     },
   }
 
+  const packAggregateRating = {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '500',
+    bestRating: '5',
+    worstRating: '1',
+  }
+
   const offerCatalogJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'OfferCatalog',
@@ -219,37 +227,61 @@ export default function Home() {
       {
         '@type': 'Offer',
         name: 'Pack Starter — 1 plaque',
-        url: 'https://swiipx.fr/product/starter',
-        price: '39.90',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/InStock',
         itemOffered: {
           '@type': 'Product',
           name: 'Pack Starter — 1 plaque NFC avis Google',
+          image: 'https://swiipx.fr/product-main.jpg',
+          brand: { '@type': 'Brand', name: 'Swiipx' },
+          aggregateRating: packAggregateRating,
+          offers: {
+            '@type': 'Offer',
+            url: 'https://swiipx.fr/product/starter',
+            price: '39.90',
+            priceCurrency: 'EUR',
+            availability: 'https://schema.org/InStock',
+            priceValidUntil: '2026-12-31',
+            seller: { '@type': 'Organization', name: 'Swiipx' },
+          },
         },
       },
       {
         '@type': 'Offer',
         name: 'Pack Business — 2 plaques',
-        url: 'https://swiipx.fr/product/business',
-        price: '59.90',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/InStock',
         itemOffered: {
           '@type': 'Product',
           name: 'Pack Business — 2 plaques NFC avis Google',
+          image: 'https://swiipx.fr/product-main.jpg',
+          brand: { '@type': 'Brand', name: 'Swiipx' },
+          aggregateRating: packAggregateRating,
+          offers: {
+            '@type': 'Offer',
+            url: 'https://swiipx.fr/product/business',
+            price: '59.90',
+            priceCurrency: 'EUR',
+            availability: 'https://schema.org/InStock',
+            priceValidUntil: '2026-12-31',
+            seller: { '@type': 'Organization', name: 'Swiipx' },
+          },
         },
       },
       {
         '@type': 'Offer',
         name: 'Pack Pro — 5 plaques',
-        url: 'https://swiipx.fr/product/pro',
-        price: '89.90',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/InStock',
         itemOffered: {
           '@type': 'Product',
           name: 'Pack Pro — 5 plaques NFC avis Google',
+          image: 'https://swiipx.fr/product-main.jpg',
+          brand: { '@type': 'Brand', name: 'Swiipx' },
+          aggregateRating: packAggregateRating,
+          offers: {
+            '@type': 'Offer',
+            url: 'https://swiipx.fr/product/pro',
+            price: '89.90',
+            priceCurrency: 'EUR',
+            availability: 'https://schema.org/InStock',
+            priceValidUntil: '2026-12-31',
+            seller: { '@type': 'Organization', name: 'Swiipx' },
+          },
         },
       },
     ],
