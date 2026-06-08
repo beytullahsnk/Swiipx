@@ -48,12 +48,19 @@ const productBenefits = [
 export default function ProductShowcase() {
   const { addItem, openCart } = useCart()
   const { company } = useCompanyStore()
-  const [selectedPack, setSelectedPack] = useState<typeof productPacks[0]['id']>('plaque2') // Default to pack 2 (most popular)
+  const [selectedPack, setSelectedPack] = useState<typeof productPacks[0]['id']>('plaque2') // Default to pack 2 (most popular) — overridden to 'plaque1' on mobile in useEffect below
   const [selectedImage, setSelectedImage] = useState(0)
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [business, setBusiness] = useState<BusinessInfo | null>(null)
   const [showStickyBar, setShowStickyBar] = useState(false)
   const ctaButtonRef = useRef<HTMLButtonElement>(null)
+
+  // Sur mobile (<768px), pré-sélectionner le pack 1 plaque pour afficher le prix le plus bas par défaut
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches) {
+      setSelectedPack('plaque1')
+    }
+  }, [])
 
   // Restaurer l'entreprise depuis le store Zustand au montage
   useEffect(() => {
