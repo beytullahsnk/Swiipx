@@ -47,6 +47,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 14,
+    title: 'Plaque NFC garage automobile : x4 avis Google en 2026',
+    excerpt: 'Garages, centres auto, carrosseries : multipliez vos avis Google par 4 avec une plaque NFC. Emplacements, scripts garagiste, 3 études de cas et ROI chiffré.',
+    category: 'Secteur',
+    date: '13 juillet 2026',
+    dateIso: '2026-07-13',
+    readTime: '10 min',
+    slug: 'plaque-nfc-garage-automobile',
+    badge: 'Nouveau',
+  },
+  {
     id: 13,
     title: 'Plaque NFC cabinet médical : avis Google et déontologie',
     excerpt: 'Médecins, dentistes, kinés, ostéopathes : collectez des avis Google avec une plaque NFC en respectant la déontologie. Placements, scripts conformes, FAQ.',

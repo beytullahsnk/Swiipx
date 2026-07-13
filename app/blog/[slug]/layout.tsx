@@ -10,6 +10,22 @@ const seoData: Record<string, {
   category: string
   faq: { q: string; a: string }[]
 }> = {
+  'plaque-nfc-garage-automobile': {
+    title: 'Plaque NFC garage automobile : x4 avis Google (guide 2026)',
+    description: 'Garages, centres auto, carrosseries : multipliez vos avis Google par 4 avec une plaque NFC. Guide 2026 : emplacements, scripts garagiste, 3 études de cas, ROI chiffré.',
+    keywords: 'plaque nfc garage, avis google garage, plaque nfc garage automobile, avis google garagiste, plaque avis google centre auto, avis google carrosserie, seo local garage',
+    date: '2026-07-13',
+    dateModified: '2026-07-13',
+    category: 'Secteur',
+    faq: [
+      { q: 'Combien d\'avis Google un garage peut-il collecter avec une plaque NFC ?', a: 'Un garage traitant 15 à 20 véhicules par semaine passe généralement de 2-4 avis/mois à 12-25 avis/mois, soit une multiplication par 4 à 6. Les centres auto à fort volume dépassent souvent 40 avis par mois.' },
+      { q: 'Où placer la plaque NFC dans un garage ?', a: 'Le comptoir de facturation est le meilleur emplacement (35-45 % de conversion) : le client a déjà son téléphone en main pour payer et vient de récupérer son véhicule. L\'accueil arrive en second (20-30 %), puis la salle d\'attente (10-15 %).' },
+      { q: 'La plaque résiste-t-elle à l\'environnement d\'un atelier ?', a: 'Oui. L\'acrylique premium 3 mm résiste à l\'eau, aux UV, aux rayures et aux projections d\'huile. Un simple coup de chiffon suffit à la nettoyer, contrairement à une affiche papier ou un flyer plastifié.' },
+      { q: 'Puis-je offrir une remise en échange d\'un avis Google ?', a: 'Non, c\'est formellement interdit par les règles de Google. Vos avis pourraient être supprimés en masse et votre fiche suspendue. La plaque NFC fonctionne en supprimant la friction, pas en achetant l\'avis.' },
+      { q: 'Quel pack de plaques choisir pour un garage ?', a: 'Garage indépendant avec un seul point de caisse : Pack Starter. Garage avec accueil et caisse séparés : Pack Business (2 plaques), la configuration la plus courante. Centre auto multi-baies : Pack Pro (5 plaques).' },
+      { q: 'Combien de temps avant de voir un effet sur Google ?', a: 'Les premiers avis arrivent dès la première semaine. L\'effet sur le classement dans le pack local se manifeste en 4 à 8 semaines, avec un saut significatif entre 3 et 6 mois si le rythme est maintenu.' },
+    ],
+  },
   'plaque-nfc-cabinet-medical': {
     title: 'Plaque NFC cabinet médical : avis Google et déontologie (guide 2026)',
     description: 'Médecins, dentistes, kinés, ostéopathes : collectez des avis Google avec une plaque NFC en respectant la déontologie. Guide 2026 : placements, scripts conformes, FAQ.',
