@@ -10,6 +10,22 @@ const seoData: Record<string, {
   category: string
   faq: { q: string; a: string }[]
 }> = {
+  'repondre-avis-negatifs-google': {
+    title: 'Répondre aux avis négatifs Google : méthode 2026',
+    description: 'Répondre aux avis négatifs Google : méthode en 5 étapes, 6 modèles de réponses prêts à l\'emploi, procédure de suppression et stratégie pour diluer le négatif. Guide 2026.',
+    keywords: 'repondre avis negatif google, avis negatif google, supprimer avis google, reponse avis google, gerer avis negatifs, modele reponse avis negatif, e-reputation locale, google business profile avis',
+    date: '2026-07-13',
+    dateModified: '2026-07-13',
+    category: 'SEO Local',
+    faq: [
+      { q: 'Faut-il répondre à tous les avis négatifs ?', a: 'Oui, sans exception. Un avis négatif sans réponse est interprété par les lecteurs comme un aveu. Répondez aussi aux avis à 1 étoile sans commentaire, en invitant poliment la personne à préciser son problème.' },
+      { q: 'En combien de temps faut-il répondre à un avis négatif ?', a: 'Sous 24 à 48 heures maximum. Passé une semaine, la réponse perd l\'essentiel de son effet : le taux de modification de l\'avis par le client tombe de 30-40 % à moins de 8 %.' },
+      { q: 'Peut-on faire supprimer un avis Google négatif ?', a: 'Uniquement s\'il viole les règles de Google : contenu injurieux, spam, avis d\'un concurrent, conflit d\'intérêts, informations personnelles ou avis d\'une personne qui n\'a jamais été cliente. Un avis simplement injuste ne sera pas supprimé : moins de 20 % des signalements aboutissent.' },
+      { q: 'Que faire face à un avis manifestement faux ?', a: 'Répondez publiquement de façon factuelle et calme, par exemple en indiquant que vous ne retrouvez aucune trace du passage de cette personne, puis signalez l\'avis via les trois points puis Signaler comme inapproprié. Ne l\'attaquez jamais frontalement.' },
+      { q: 'Les réponses aux avis améliorent-elles le référencement local ?', a: 'Oui, indirectement mais réellement. Elles ajoutent du contenu textuel indexable à votre fiche, envoient un signal de fraîcheur à Google et augmentent le taux de clic de 15 à 25 %. Elles ne remplacent toutefois pas le volume d\'avis, premier critère du pack local.' },
+      { q: 'Comment limiter l\'impact d\'un avis négatif ?', a: 'En augmentant votre volume d\'avis positifs. Un avis à 1 étoile fait chuter une note de 4,5 à 4,33 quand vous avez 20 avis, mais seulement à 4,49 avec 300 avis. Une plaque NFC convertit 35 à 45 % des clients sollicités et permet de noyer un avis négatif en quelques jours.' },
+    ],
+  },
   'plaque-nfc-garage-automobile': {
     title: 'Plaque NFC garage automobile : x4 avis Google (guide 2026)',
     description: 'Garages, centres auto, carrosseries : multipliez vos avis Google par 4 avec une plaque NFC. Guide 2026 : emplacements, scripts garagiste, 3 études de cas, ROI chiffré.',

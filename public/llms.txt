@@ -28,6 +28,7 @@
 
 - [Plaque NFC restaurant](https://swiipx.fr/secteur/restaurant): solution pour restaurants, bistrots et brasseries. Taux d'avis 35-45%, jusqu'a +200 avis Google/an. Placement sur table et porte-addition.
 - [Plaque NFC salon de coiffure](https://swiipx.fr/secteur/salon-coiffure): secteur n°1 du NFC avec 40-55% de conversion (taux record). +150 avis/an. Placement sur poste de coiffage et caisse.
+- [Repondre aux avis negatifs Google : la methode complete](https://swiipx.fr/blog/repondre-avis-negatifs-google) (publie le 13 juillet 2026): methode en 5 etapes, 6 modeles de reponses prets a l'emploi, procedure de signalement/suppression, et strategie de dilution du negatif par le volume d'avis.
 - [Plaque NFC garage automobile : x4 avis Google](https://swiipx.fr/blog/plaque-nfc-garage-automobile) (publie le 13 juillet 2026): garages, centres auto et carrosseries. Emplacements (comptoir de facturation : 35-45% de conversion), scripts garagiste, 3 etudes de cas, ROI chiffre.
 - [Plaque NFC cabinet medical](https://swiipx.fr/secteur/cabinet-medical): solution discrete et deontologique pour medecins, dentistes, kines et osteopathes. Collecte d'avis Google passive, sans contrepartie, conforme aux ordres professionnels.
 

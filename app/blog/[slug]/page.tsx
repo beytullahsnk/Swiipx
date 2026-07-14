@@ -19,6 +19,239 @@ const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'repondre-avis-negatifs-google': {
+    title: 'Répondre aux avis négatifs Google : la méthode complète en 5 étapes',
+    category: 'SEO Local',
+    date: '13 juillet 2026',
+    readTime: '10 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Un avis à 1 étoile ne s\'adresse pas à vous, il s\'adresse à vos 300 prochains prospects. Méthode en 5 étapes, 6 modèles de réponses, procédure de suppression et stratégie de dilution.',
+    tocSections: [
+      { id: 'pourquoi-repondre', label: 'Pourquoi répondre' },
+      { id: 'impact-seo', label: 'L\'impact SEO des réponses' },
+      { id: 'delai-reponse', label: 'Le délai de réponse' },
+      { id: 'methode-5-etapes', label: 'La méthode en 5 étapes' },
+      { id: 'modeles-reponses', label: '6 modèles de réponses' },
+      { id: 'erreurs-a-eviter', label: '7 erreurs à éviter' },
+      { id: 'supprimer-avis', label: 'Faire supprimer un avis' },
+      { id: 'diluer-negatifs', label: 'Diluer le négatif' },
+      { id: 'process-equipe', label: 'Le process d\'équipe' },
+      { id: 'faq-avis-negatifs', label: 'FAQ' },
+    ],
+    content: `
+<section id="pourquoi-repondre" class="scroll-mt-28 mb-16">
+<h2>Pourquoi répondre à un avis négatif est plus rentable que de l'ignorer</h2>
+<p>Un avis à 1 étoile fait mal. Le réflexe naturel est de fermer l'onglet, de râler cinq minutes et de passer à autre chose. C'est exactement la pire décision commerciale que vous puissiez prendre : <strong>l'avis négatif ne s'adresse pas à vous, il s'adresse à vos 300 prochains prospects</strong>.</p>
+<p>Les chiffres sont sans ambiguïté : <strong>89 % des consommateurs lisent les réponses des entreprises aux avis</strong> avant de choisir un commerce local, et 45 % déclarent être <strong>plus enclins à se rendre chez un professionnel qui répond aux critiques</strong> que chez un concurrent qui affiche une meilleure note mais reste muet. Une fiche à 4,2/5 avec des réponses argumentées convertit souvent mieux qu'une fiche à 4,8/5 silencieuse.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> un avis négatif bien traité génère en moyenne <strong>1,7 fois plus de confiance</strong> qu'une fiche sans aucun avis négatif — parce qu'une note parfaite est perçue comme suspecte. 62 % des acheteurs se méfient d'un 5,0/5 sans la moindre critique.</p>
+</div>
+<p>La réponse à un avis négatif remplit trois fonctions simultanées, qu'il faut garder en tête à chaque fois que vous ouvrez votre fiche Google Business Profile :</p>
+<ul>
+<li><strong>Fonction commerciale</strong> : rassurer les lecteurs futurs, qui sont 50 à 200 fois plus nombreux que l'auteur de l'avis.</li>
+<li><strong>Fonction relationnelle</strong> : récupérer le client mécontent. Entre 30 et 40 % des clients dont la plainte est traitée modifient ou suppriment leur avis.</li>
+<li><strong>Fonction SEO</strong> : envoyer à Google un signal d'activité et de légitimité sur votre fiche.</li>
+</ul>
+</section>
+
+<section id="impact-seo" class="scroll-mt-28 mb-16">
+<h2>L'impact SEO réel des réponses aux avis</h2>
+<p>Google est explicite dans sa documentation destinée aux professionnels : « <em>répondre aux avis montre que vous accordez de l'importance à vos clients</em> ». Ce n'est pas une formule de politesse, c'est une indication de pondération. Les avis, leur volume, leur fraîcheur et <strong>l'engagement du gérant</strong> pèsent lourd dans le classement du pack local (les trois résultats affichés sur la carte).</p>
+<h3>Ce que les réponses apportent concrètement</h3>
+<ul>
+<li><strong>Du contenu textuel indexable</strong> : votre réponse est un texte associé à votre fiche. Y glisser naturellement votre métier et votre ville (« notre équipe du salon à Montreuil ») renforce la pertinence sémantique locale.</li>
+<li><strong>Un signal de fraîcheur</strong> : une fiche où le gérant répond chaque semaine est une fiche vivante. Les fiches abandonnées perdent mécaniquement du terrain.</li>
+<li><strong>Un taux de clic supérieur</strong> : sur les fiches où le gérant répond, le taux de clic vers le site et l'appel téléphonique augmentent de 15 à 25 %.</li>
+</ul>
+<p>Attention toutefois : répondre ne compense pas un déficit d'avis. Si vous avez 18 avis et que votre concurrent en a 190, aucune réponse brillante ne vous fera passer devant. Le levier n°1 reste le <strong>volume et la régularité de collecte</strong> — voir notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis Google en 30 jours</a> et notre guide <a href="/blog/seo-local-recherches-google">SEO local</a>.</p>
+</section>
+
+<section id="delai-reponse" class="scroll-mt-28 mb-16">
+<h2>Le délai : la variable la plus sous-estimée</h2>
+<p>La qualité de votre réponse compte. Sa rapidité compte davantage. Un avis négatif non traité pendant deux semaines est lu par des centaines de personnes qui en concluent une seule chose : <strong>ce commerce s'en moque</strong>.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead>
+<tr class="bg-gray-50">
+<th class="border border-gray-200 p-3 text-left">Délai de réponse</th>
+<th class="border border-gray-200 p-3 text-left">Perception du lecteur</th>
+<th class="border border-gray-200 p-3 text-left">Taux de modification de l'avis</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="border border-gray-200 p-3">Moins de 24 h</td><td class="border border-gray-200 p-3">Entreprise réactive et pro</td><td class="border border-gray-200 p-3"><strong>30-40 %</strong></td></tr>
+<tr><td class="border border-gray-200 p-3">2 à 3 jours</td><td class="border border-gray-200 p-3">Correct, standard</td><td class="border border-gray-200 p-3">15-20 %</td></tr>
+<tr><td class="border border-gray-200 p-3">1 à 2 semaines</td><td class="border border-gray-200 p-3">Réponse « de façade »</td><td class="border border-gray-200 p-3">5-8 %</td></tr>
+<tr><td class="border border-gray-200 p-3">Jamais</td><td class="border border-gray-200 p-3">Commerce négligent</td><td class="border border-gray-200 p-3">0 %</td></tr>
+</tbody>
+</table>
+</div>
+<p>La règle opérationnelle : <strong>24 à 48 heures maximum</strong> pour tout avis en dessous de 3 étoiles. Activez les notifications par e-mail dans votre fiche Google Business Profile (Paramètres → Notifications) et traitez les avis négatifs comme un appel client, pas comme une tâche administrative.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>⏱️ Exception utile :</strong> si l'avis vous met en colère, attendez <strong>deux heures</strong>. Jamais deux jours. Une réponse écrite sous le coup de l'émotion est le scénario n°1 des bad buzz locaux.</p>
+</div>
+</section>
+
+<section id="methode-5-etapes" class="scroll-mt-28 mb-16">
+<h2>La méthode en 5 étapes pour répondre à un avis négatif</h2>
+<p>Toute bonne réponse suit la même architecture. Elle tient en 4 à 6 lignes — au-delà, vous donnez l'impression de vous justifier.</p>
+<h3>1. Remercier (1 ligne)</h3>
+<p>Sans ironie et sans servilité. « Merci d'avoir pris le temps de nous faire ce retour. » Vous montrez au lecteur futur que la critique ne vous fait pas peur.</p>
+<h3>2. Reconnaître le ressenti (1 ligne)</h3>
+<p>Reconnaître le ressenti n'est pas admettre une faute. « Je comprends votre frustration face à cette attente » est très différent de « nous avons mal travaillé ». Ne vous auto-incriminez jamais sur un fait que vous n'avez pas vérifié.</p>
+<h3>3. Apporter un fait ou un contexte (1 à 2 lignes)</h3>
+<p>C'est ici que se joue toute la crédibilité auprès du lecteur. Un fait vérifiable et neutre vaut mieux qu'une excuse générique : « Le samedi 12, nous avons effectivement eu deux absences imprévues dans l'équipe, ce qui a allongé les délais. » Le lecteur comprend que le problème est exceptionnel, pas structurel.</p>
+<h3>4. Annoncer l'action corrective (1 ligne)</h3>
+<p>Concrète, pas cosmétique. « Nous avons depuis mis en place un binôme de remplacement le week-end. » Le lecteur retient : ce commerce corrige ses erreurs.</p>
+<h3>5. Sortir de la conversation publique (1 ligne)</h3>
+<p>Donnez un canal direct : « Contactez-nous au 01 XX XX XX XX ou à contact@… , je m'en occupe personnellement. » Vous transformez un contentieux public en dialogue privé — et vous augmentez fortement vos chances de voir l'avis modifié.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>✍️ Signez toujours.</strong> « Karim, gérant » ou « L'équipe de [nom du commerce] ». Une réponse signée est perçue comme 2 fois plus sincère qu'une réponse anonyme.</p>
+</div>
+</section>
+
+<section id="modeles-reponses" class="scroll-mt-28 mb-16">
+<h2>6 modèles de réponses prêts à adapter</h2>
+<p>À personnaliser systématiquement : Google détecte les copier-coller, et vos clients aussi. Ces modèles sont des ossatures, pas des textes à recopier tels quels.</p>
+<h3>Cas 1 — Attente trop longue</h3>
+<p><em>« Merci pour votre retour, et désolé pour cette attente. Le samedi entre 12 h et 14 h, nous sommes régulièrement à flux tendu ; ce n'est pas une excuse mais une réalité que nous corrigeons : deux personnes supplémentaires renforcent désormais ce créneau. Passez nous voir, j'aimerais vous montrer la différence. — Sophie, gérante »</em></p>
+<h3>Cas 2 — Prix jugé trop élevé</h3>
+<p><em>« Merci de votre franchise. Nos tarifs sont affichés en vitrine et sur notre site car nous travaillons avec des produits certifiés et un service garanti 2 ans, ce qui a un coût. Si un point du devis vous a semblé flou, appelez-moi : je vous le détaille ligne par ligne. — Marc »</em></p>
+<h3>Cas 3 — Accueil ou attitude du personnel</h3>
+<p><em>« Votre retour me préoccupe : ce n'est pas la façon dont nous voulons accueillir nos clients. J'en ai parlé avec l'équipe ce matin. J'aimerais comprendre ce qui s'est passé exactement, pouvez-vous me joindre au 01 XX XX XX XX ? — Julie, responsable »</em></p>
+<h3>Cas 4 — Erreur réelle de votre part</h3>
+<p><em>« Vous avez raison, nous nous sommes trompés et je vous prie de nous en excuser. Nous reprenons la prestation à nos frais. Contactez-nous quand vous le souhaitez pour convenir d'un rendez-vous. — L'équipe »</em></p>
+<h3>Cas 5 — Avis manifestement faux ou concurrent</h3>
+<p><em>« Bonjour, nous ne retrouvons aucune trace de votre passage dans nos dossiers, et le service que vous décrivez n'est pas proposé chez nous. Si nous nous trompons, écrivez-nous à contact@… avec votre numéro de commande, nous le traiterons immédiatement. »</em> Réponse factuelle, calme : le lecteur comprend seul. Puis signalez l'avis (voir plus bas).</p>
+<h3>Cas 6 — Avis à 1 étoile sans commentaire</h3>
+<p><em>« Bonjour, nous voyons votre note mais sans commentaire nous ne pouvons pas comprendre ce qui n'a pas fonctionné. Nous serions sincèrement heureux d'en savoir plus : contact@… . — L'équipe »</em></p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>🎯 Le vrai destinataire :</strong> écrivez chaque réponse en imaginant qu'elle sera lue par un prospect hésitant entre vous et le concurrent d'en face. Vous ne cherchez pas à gagner un débat, vous cherchez à gagner un client.</p>
+</div>
+</section>
+
+<section id="erreurs-a-eviter" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs qui transforment un avis négatif en catastrophe</h2>
+<ul>
+<li><strong>Se justifier longuement.</strong> Une réponse de 15 lignes hurle « je suis coupable et je panique ». Restez sous 6 lignes.</li>
+<li><strong>Attaquer le client.</strong> « Vous êtes le seul à vous plaindre » est la phrase qui a coulé le plus de commerces locaux sur les réseaux.</li>
+<li><strong>Copier-coller la même réponse partout.</strong> Dix réponses identiques signalent au lecteur que personne ne lit vraiment.</li>
+<li><strong>Répondre uniquement aux avis négatifs.</strong> Répondez aussi aux positifs : c'est là que se construit la chaleur perçue de votre fiche.</li>
+<li><strong>Divulguer des informations personnelles</strong> (montant de la facture, motif de consultation, adresse). Interdit, et particulièrement grave en secteur médical.</li>
+<li><strong>Proposer une compensation publique.</strong> « Nous vous offrons un repas » attire les faux avis opportunistes. La compensation se règle en privé.</li>
+<li><strong>Ne rien faire en amont.</strong> L'erreur la plus coûteuse : subir les avis au lieu d'en <a href="/blog/obtenir-plus-avis-google">provoquer activement</a>.</li>
+</ul>
+</section>
+
+<section id="supprimer-avis" class="scroll-mt-28 mb-16">
+<h2>Faire supprimer un avis : ce qui est possible, ce qui ne l'est pas</h2>
+<p>Soyons clairs : <strong>vous ne pouvez pas faire supprimer un avis simplement parce qu'il est négatif ou injuste</strong>. Google ne retire que les avis qui violent ses règles.</p>
+<h3>Les motifs de suppression recevables</h3>
+<ul>
+<li>Contenu injurieux, haineux, discriminatoire ou sexuellement explicite</li>
+<li>Spam, contenu publicitaire, ou avis publié par un concurrent</li>
+<li>Conflit d'intérêts (avis d'un ancien salarié, d'un proche, avis acheté)</li>
+<li>Informations personnelles divulguées (nom d'un salarié nommément attaqué, coordonnées)</li>
+<li>Avis hors sujet : la personne n'a jamais été cliente, ou parle d'un autre établissement</li>
+</ul>
+<h3>La procédure, étape par étape</h3>
+<ul>
+<li><strong>1.</strong> Sur votre fiche Google, ouvrez l'avis, cliquez sur les trois points, puis « Signaler comme inapproprié ».</li>
+<li><strong>2.</strong> Répondez publiquement quand même, de façon factuelle : la modération peut prendre des semaines, et l'avis reste visible pendant ce temps.</li>
+<li><strong>3.</strong> Si aucune réponse sous 5 à 7 jours, utilisez l'outil « Gérer les avis » de l'assistance Google Business Profile pour vérifier le statut du signalement.</li>
+<li><strong>4.</strong> En cas de diffamation caractérisée (accusation mensongère de fait précis), une mise en demeure d'avocat reste possible — mais c'est un dernier recours coûteux et long.</li>
+</ul>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>⚠️ Réalité du terrain :</strong> moins de <strong>20 % des signalements aboutissent</strong>. Ne construisez jamais votre stratégie de réputation sur la suppression. Construisez-la sur le volume.</p>
+</div>
+</section>
+
+<section id="diluer-negatifs" class="scroll-mt-28 mb-16">
+<h2>La vraie parade : diluer le négatif sous le positif</h2>
+<p>C'est la partie que la plupart des commerçants négligent, alors que c'est mathématiquement la plus efficace. Un avis négatif n'a pas de poids absolu : il a un <strong>poids relatif</strong>.</p>
+<h3>L'arithmétique de la note moyenne</h3>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead>
+<tr class="bg-gray-50">
+<th class="border border-gray-200 p-3 text-left">Situation</th>
+<th class="border border-gray-200 p-3 text-left">Effet d'un nouvel avis à 1 étoile</th>
+<th class="border border-gray-200 p-3 text-left">Visibilité de l'avis négatif</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="border border-gray-200 p-3">20 avis, note 4,5</td><td class="border border-gray-200 p-3">Note tombe à <strong>4,33</strong></td><td class="border border-gray-200 p-3">En 1re page, visible des mois</td></tr>
+<tr><td class="border border-gray-200 p-3">100 avis, note 4,5</td><td class="border border-gray-200 p-3">Note tombe à 4,47</td><td class="border border-gray-200 p-3">Repoussé, invisible en 2 semaines</td></tr>
+<tr><td class="border border-gray-200 p-3">300 avis, note 4,5</td><td class="border border-gray-200 p-3">Note reste à <strong>4,49</strong></td><td class="border border-gray-200 p-3">Noyé quasi immédiatement</td></tr>
+</tbody>
+</table>
+</div>
+<p>Le même avis, le même client mécontent, la même colère : impact catastrophique à 20 avis, quasi nul à 300. La réponse à un avis négatif est une opération de <em>défense</em> ; la collecte massive d'avis positifs est une opération de <em>blindage</em>. Il faut les deux, mais la seconde est celle qui vous protège durablement.</p>
+<h3>Où le NFC entre en jeu</h3>
+<p>Le client satisfait ne pense jamais spontanément à laisser un avis — c'est le mécontent qui se déplace. Pour rétablir l'équilibre, il faut supprimer la friction au moment exact de la satisfaction : <strong>une plaque NFC posée au comptoir ou sur la table</strong> permet au client d'ouvrir votre page d'avis en approchant simplement son téléphone, sans application ni recherche.</p>
+<p>Les taux observés sont sans commune mesure avec les autres méthodes : <strong>35 à 45 % de conversion pour une plaque NFC</strong>, contre 8 à 12 % pour un QR code seul et 1 à 3 % pour une carte de visite. Détail du comparatif dans notre article <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC vs QR code</a>, et guide de placement dans <a href="/blog/ou-placer-plaque-avis-google">où placer votre plaque</a>.</p>
+<p>Concrètement, un commerce qui passe de 3 à 25 avis par mois voit son avis négatif repoussé hors de la première page en moins de dix jours — sans supplier personne, sans supprimer quoi que ce soit.</p>
+</section>
+
+<section id="process-equipe" class="scroll-mt-28 mb-16">
+<h2>Mettre en place un process d'équipe en 30 minutes</h2>
+<p>Une stratégie de réponse qui repose sur la bonne volonté du gérant s'effondre dès la première semaine chargée. Formalisez-la.</p>
+<h3>Le protocole en 5 points</h3>
+<ul>
+<li><strong>Alertes activées</strong> : notifications e-mail des nouveaux avis dans Google Business Profile, sur au moins deux adresses (gérant + responsable).</li>
+<li><strong>Un responsable unique</strong> désigné pour les réponses, avec un remplaçant nommé pendant les congés.</li>
+<li><strong>Un créneau fixe</strong> : 15 minutes chaque lundi et jeudi matin pour traiter tous les avis en attente. Les avis à 1 ou 2 étoiles sont traités <strong>hors créneau, sous 24 h</strong>.</li>
+<li><strong>Une bibliothèque de 6 modèles</strong> (les cas ci-dessus) dans un document partagé, à personnaliser à chaque usage.</li>
+<li><strong>Un point mensuel</strong> de 10 minutes en équipe : nombre d'avis collectés, note moyenne, motifs récurrents des critiques. Les avis négatifs sont votre meilleur audit qualité gratuit.</li>
+</ul>
+<h3>Le tableau de bord minimal</h3>
+<ul>
+<li>Nombre d'avis collectés dans le mois (objectif : 15 à 30 pour un commerce à flux régulier)</li>
+<li>Note moyenne des 30 derniers jours (plus révélatrice que la moyenne historique)</li>
+<li>Délai moyen de réponse (objectif : moins de 48 h)</li>
+<li>Taux de réponse (objectif : 100 % des négatifs, au moins 50 % des positifs)</li>
+</ul>
+<p>Pour les commerces multi-sites, le <a href="/product/pro">Pack Pro</a> permet de suivre les performances par plaque et par emplacement via un tableau de bord dédié.</p>
+</section>
+
+<section id="faq-avis-negatifs" class="scroll-mt-28 mb-16">
+<h2>FAQ — Répondre aux avis négatifs Google</h2>
+
+<h3>Faut-il répondre à tous les avis négatifs ?</h3>
+<p>Oui, sans exception. Un avis négatif sans réponse est interprété par les lecteurs comme un aveu. Répondez aussi aux avis à 1 étoile sans commentaire, en invitant poliment la personne à préciser son problème.</p>
+
+<h3>En combien de temps faut-il répondre à un avis négatif ?</h3>
+<p>Sous 24 à 48 heures maximum. Passé une semaine, la réponse perd l'essentiel de son effet : le taux de modification de l'avis par le client tombe de 30-40 % à moins de 8 %.</p>
+
+<h3>Peut-on faire supprimer un avis Google négatif ?</h3>
+<p>Uniquement s'il viole les règles de Google : contenu injurieux, spam, avis d'un concurrent, conflit d'intérêts, informations personnelles ou avis d'une personne qui n'a jamais été cliente. Un avis simplement injuste ou sévère ne sera pas supprimé. Moins de 20 % des signalements aboutissent.</p>
+
+<h3>Que faire face à un avis manifestement faux ?</h3>
+<p>Répondez publiquement de façon factuelle et calme (« nous ne retrouvons aucune trace de votre passage »), puis signalez l'avis via les trois points → « Signaler comme inapproprié ». Ne l'attaquez jamais frontalement : les lecteurs identifient très bien les faux avis quand la réponse reste posée.</p>
+
+<h3>Les réponses aux avis améliorent-elles le référencement local ?</h3>
+<p>Oui, indirectement mais réellement. Elles ajoutent du contenu textuel indexable à votre fiche, envoient un signal de fraîcheur et d'engagement à Google, et augmentent le taux de clic de 15 à 25 %. Elles ne remplacent toutefois pas le volume d'avis, qui reste le premier critère du pack local.</p>
+
+<h3>Comment limiter l'impact d'un avis négatif ?</h3>
+<p>En augmentant votre volume d'avis positifs. Un avis à 1 étoile fait chuter une note de 4,5 à 4,33 quand vous avez 20 avis, mais seulement à 4,49 quand vous en avez 300. Une <a href="/blog/nfc-avis-clients">plaque NFC</a> placée au bon endroit convertit 35 à 45 % des clients sollicités et permet de noyer un avis négatif en quelques jours.</p>
+
+<h3>Peut-on offrir une remise pour qu'un client retire son avis ?</h3>
+<p>Non. C'est contraire aux règles de Google et cela expose votre fiche à une suspension. Vous pouvez en revanche régler le problème réel du client en privé : entre 30 et 40 % modifient ou suppriment spontanément leur avis une fois satisfaits.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : la réponse défend, le volume protège</h2>
+<p>Répondre à un avis négatif est un geste de 5 minutes qui parle à des centaines de prospects. Le faire vite, brièvement, avec un fait et une action concrète, transforme une critique en démonstration de professionnalisme. C'est votre meilleure arme <strong>défensive</strong>.</p>
+<p>Mais aucune réponse, aussi bien écrite soit-elle, ne compensera une fiche à 22 avis. La seule protection durable est le <strong>volume</strong> : quand vos clients satisfaits s'expriment aussi souvent que les mécontents, un avis à 1 étoile n'est plus une crise, c'est une ligne parmi trois cents.</p>
+<p>Pour aller plus loin : <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>, <a href="/blog/erreurs-demander-avis">les erreurs à éviter en demandant un avis</a>, <a href="/blog/seo-local-recherches-google">le guide SEO local complet</a>, ou nos guides sectoriels <a href="/blog/plaque-nfc-restaurant">restaurant</a> et <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Arrêtez de subir vos avis, provoquez-les.</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie 2 ans, <strong>sans abonnement</strong>. Du <a href="/product/starter">Pack Starter</a> (39,90 €) au <a href="/product/business">Pack Business</a> et au <a href="/product/pro">Pack Pro</a>.</p>
+</div>
+</section>
+    `,
+  },
   'plaque-nfc-garage-automobile': {
     title: 'Plaque NFC garage automobile : collecter des avis Google après chaque réparation',
     category: 'Secteur',
@@ -3188,6 +3421,7 @@ const articles: Record<string, {
    Related articles pour la sidebar
    ───────────────────────────────────────────── */
 const relatedArticles = [
+  { slug: 'repondre-avis-negatifs-google', label: 'Répondre aux avis négatifs Google' },
   { slug: 'plaque-nfc-garage-automobile', label: 'Plaque NFC garage automobile : guide 2026' },
   { slug: 'plaque-nfc-cabinet-medical', label: 'Plaque NFC cabinet médical : guide déontologie' },
   { slug: 'plaque-nfc-restaurant', label: 'Plaque NFC restaurant : guide complet' },

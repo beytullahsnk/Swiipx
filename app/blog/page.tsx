@@ -47,6 +47,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 15,
+    title: 'Répondre aux avis négatifs Google : la méthode complète',
+    excerpt: 'Un avis à 1 étoile ne s\'adresse pas à vous, mais à vos 300 prochains prospects. Méthode en 5 étapes, 6 modèles de réponses, suppression et dilution.',
+    category: 'SEO Local',
+    date: '13 juillet 2026',
+    dateIso: '2026-07-13',
+    readTime: '10 min',
+    slug: 'repondre-avis-negatifs-google',
+    badge: 'Nouveau',
+  },
+  {
     id: 14,
     title: 'Plaque NFC garage automobile : x4 avis Google en 2026',
     excerpt: 'Garages, centres auto, carrosseries : multipliez vos avis Google par 4 avec une plaque NFC. Emplacements, scripts garagiste, 3 études de cas et ROI chiffré.',
