@@ -195,6 +195,10 @@ async function createSendcloudServicePointParcel(metadata: Record<string, string
 
 // Disable body parsing — Stripe webhook needs raw body
 export const runtime = 'nodejs'
+// Vercel : laisse le temps au webhook de faire Resend + Sendcloud (défaut = 10s)
+export const maxDuration = 30
+// Toujours exécuté à la demande, jamais mis en cache
+export const dynamic = 'force-dynamic'
 
 export async function POST(request: NextRequest) {
   const body = await request.text()
