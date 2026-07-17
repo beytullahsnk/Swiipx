@@ -47,6 +47,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 16,
+    title: 'Statistiques avis Google 2026 : 45 chiffres clés à connaître',
+    excerpt: '45 statistiques 2026 sur les avis Google : lecture, SEO local, conversion, effet de la note, réponses. Les chiffres qui prouvent le ROI d\'une stratégie d\'avis.',
+    category: 'Statistiques',
+    date: '17 juillet 2026',
+    dateIso: '2026-07-17',
+    readTime: '11 min',
+    slug: 'statistiques-avis-google-2026',
+    badge: 'Nouveau',
+  },
+  {
     id: 15,
     title: 'Répondre aux avis négatifs Google : la méthode complète',
     excerpt: 'Un avis à 1 étoile ne s\'adresse pas à vous, mais à vos 300 prochains prospects. Méthode en 5 étapes, 6 modèles de réponses, suppression et dilution.',
