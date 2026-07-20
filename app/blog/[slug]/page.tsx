@@ -19,6 +19,196 @@ const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'comment-choisir-plaque-nfc-avis-google': {
+    title: 'Comment choisir sa plaque NFC avis Google : le guide d\'achat 2026',
+    category: 'Comparatif',
+    date: '20 juillet 2026',
+    readTime: '10 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Puce, materiau, abonnement, nombre de plaques : les 7 criteres pour choisir la bonne plaque NFC avis Google du premier coup. Comparatif, pieges a eviter et grille de decision.',
+    tocSections: [
+      { id: 'pourquoi-choix', label: 'Pourquoi le choix compte' },
+      { id: 'criteres', label: 'Les 7 criteres' },
+      { id: 'materiaux', label: 'Quel materiau' },
+      { id: 'puce', label: 'La puce NFC' },
+      { id: 'abonnement', label: 'Avec ou sans abonnement' },
+      { id: 'nombre-plaques', label: 'Combien de plaques' },
+      { id: 'config', label: 'La configuration' },
+      { id: 'pieges', label: '6 pieges a eviter' },
+      { id: 'grille', label: 'Grille de decision' },
+      { id: 'faq-choix', label: 'FAQ' },
+    ],
+    content: `
+<section id="pourquoi-choix" class="scroll-mt-28 mb-16">
+<h2>Pourquoi le choix de la plaque NFC change tout</h2>
+<p>Une plaque NFC pour avis Google, c'est un objet de quelques centimetres qui a une seule mission : transformer un client satisfait en avis a 5 etoiles, en 20 secondes, sans friction. Sur le papier, toutes les plaques se ressemblent. Dans la realite, l'ecart de resultat entre une bonne et une mauvaise plaque se mesure en <strong>centaines d'avis par an</strong> et en positions gagnees ou perdues dans le pack local Google.</p>
+<p>Le marche est devenu un champ de mines : puces bas de gamme qui se desactivent, redirections qui cassent au bout de six mois, abonnements deguises qui transforment un achat unique en location a vie, materiaux qui jaunissent en vitrine. Ce guide vous donne les <strong>7 criteres objectifs</strong> pour choisir la bonne plaque du premier coup, quel que soit votre metier, et eviter les pieges qui coutent cher.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>En resume :</strong> une bonne plaque NFC coche 4 cases non negociables — puce NTAG215 (ou superieure), redirection sans abonnement, acrylique premium, et QR code de secours imprime. Le reste (nombre de plaques, personnalisation) depend de votre configuration. Budget cible : <strong>35 a 60 EUR par plaque, en paiement unique</strong>.</p>
+</div>
+</section>
+
+<section id="criteres" class="scroll-mt-28 mb-16">
+<h2>Les 7 criteres d'une bonne plaque NFC pour avis Google</h2>
+<p>Avant de comparer les marques, fixez votre grille de lecture. Voici les sept criteres qui separent une plaque qui travaille pour vous d'un gadget qui finit dans un tiroir.</p>
+<ol>
+<li><strong>La puce</strong> : une NTAG215 (504 octets) au minimum, compatible avec tous les smartphones depuis 2016.</li>
+<li><strong>Le mode de redirection</strong> : un lien direct vers votre formulaire d'avis Google, idealement sans passer par une plateforme intermediaire payante.</li>
+<li><strong>L'absence d'abonnement</strong> : la plaque doit fonctionner a vie apres un paiement unique. Fuyez tout systeme mensuel.</li>
+<li><strong>Le materiau</strong> : acrylique premium 3 mm, resistant a l'eau, aux UV et aux rayures.</li>
+<li><strong>Le QR code de secours</strong> : imprime sur la plaque pour les rares telephones sans NFC actif.</li>
+<li><strong>L'adhesif</strong> : un adhesif 3M repositionnable ou un socle stable, selon l'usage comptoir ou mural.</li>
+<li><strong>La garantie et le SAV</strong> : une garantie de 2 ans minimum et un interlocuteur francais pour reparametrer la redirection si besoin.</li>
+</ol>
+<p>Si une plaque echoue sur un seul des quatre premiers criteres, ecartez-la : ce sont les non-negociables. Pour comprendre pourquoi la technologie NFC surclasse les alternatives, lisez notre dossier <a href="/blog/nfc-avis-clients">NFC : la nouvelle arme pour vos avis clients</a>.</p>
+</section>
+
+<section id="materiaux" class="scroll-mt-28 mb-16">
+<h2>Materiaux : acrylique, PVC, metal ou bois ?</h2>
+<p>Le materiau determine la duree de vie de la plaque, son rendu sur votre comptoir et sa resistance a votre environnement de travail. Voici ce que valent reellement les quatre familles du marche.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Materiau</th><th class="border p-3 text-left">Rendu</th><th class="border p-3 text-left">Resistance</th><th class="border p-3 text-left">Verdict</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Acrylique premium 3 mm</strong></td><td class="border p-3">Brillant, effet verre, premium</td><td class="border p-3">Eau, UV, rayures, graisse</td><td class="border p-3">Le meilleur rapport rendu/durabilite</td></tr>
+<tr><td class="border p-3">PVC / plastique fin</td><td class="border p-3">Correct mais leger</td><td class="border p-3">Se raye et jaunit vite</td><td class="border p-3">A eviter en vitrine ou atelier</td></tr>
+<tr><td class="border p-3">Metal (alu brosse)</td><td class="border p-3">Haut de gamme, lourd</td><td class="border p-3">Excellente, mais peut gener le signal NFC</td><td class="border p-3">Correct si la puce est bien isolee</td></tr>
+<tr><td class="border p-3">Bois</td><td class="border p-3">Chaleureux, artisanal</td><td class="border p-3">Sensible a l'humidite</td><td class="border p-3">Deco uniquement, hors cuisine/atelier</td></tr>
+</tbody>
+</table>
+</div>
+<p>L'acrylique premium s'impose pour la grande majorite des commerces : il resiste aux projections en cuisine, a la poussiere en atelier, aux UV en vitrine, et se nettoie d'un simple coup de chiffon. Attention au metal : une plaque 100 % metallique mal concue attenue le champ NFC et oblige le client a coller son telephone plusieurs secondes — chaque seconde de friction fait chuter le taux de conversion.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>Le detail qui compte :</strong> demandez l'epaisseur. En dessous de 2 mm, la plaque gondole et parait bon marche. 3 mm est le standard qui donne cet effet verre qui inspire confiance et invite le client a poser son telephone.</p>
+</div>
+</section>
+
+<section id="puce" class="scroll-mt-28 mb-16">
+<h2>La puce NFC : NTAG213, 215 ou 216 ?</h2>
+<p>C'est le coeur invisible de la plaque, et c'est la que les fabricants low-cost economisent. Trois references dominent le marche des puces NFC passives (sans batterie, duree de vie superieure a 10 ans).</p>
+<ul>
+<li><strong>NTAG213</strong> (144 octets) : suffisante pour un lien court, mais limitee. On la trouve sur les cartes et autocollants les moins chers.</li>
+<li><strong>NTAG215</strong> (504 octets) : <strong>le bon standard</strong> pour une plaque avis Google. Memoire confortable, compatibilite maximale, lecture instantanee. C'est la puce a exiger.</li>
+<li><strong>NTAG216</strong> (888 octets) : plus de memoire, utile pour des usages avances (vCard, multi-liens), rarement necessaire pour un simple avis.</li>
+</ul>
+<p>Pour un usage avis Google, la NTAG215 est le juste equilibre : elle ouvre la fiche <strong>instantanement</strong>, fonctionne sur tous les iPhone depuis 2016 et la quasi-totalite des Android, et sa memoire permet une redirection propre. Mefiez-vous des annonces qui ne precisent pas la reference de puce : c'est souvent le signe d'une NTAG213 bas de gamme.</p>
+</section>
+
+<section id="abonnement" class="scroll-mt-28 mb-16">
+<h2>Avec ou sans abonnement : le vrai piege du marche</h2>
+<p>C'est le point ou beaucoup de commercants se font avoir. Certaines solutions vendent la plaque a bas prix, puis facturent un <strong>abonnement mensuel</strong> (souvent 5 a 20 EUR/mois) pour maintenir la redirection active. Coupez l'abonnement, et la plaque devient un morceau d'acrylique mort.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Modele</th><th class="border p-3 text-left">Cout an 1</th><th class="border p-3 text-left">Cout sur 5 ans</th><th class="border p-3 text-left">Risque</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Paiement unique (Swiipx)</strong></td><td class="border p-3">~40 EUR</td><td class="border p-3"><strong>~40 EUR</strong></td><td class="border p-3">Aucun, fonctionne a vie</td></tr>
+<tr><td class="border p-3">Plaque + abonnement 9 EUR/mois</td><td class="border p-3">~148 EUR</td><td class="border p-3"><strong>~580 EUR</strong></td><td class="border p-3">Plaque morte si arret de paiement</td></tr>
+<tr><td class="border p-3">Plaque + abonnement 15 EUR/mois</td><td class="border p-3">~220 EUR</td><td class="border p-3"><strong>~940 EUR</strong></td><td class="border p-3">Dependance totale au prestataire</td></tr>
+</tbody>
+</table>
+</div>
+<p>Sur cinq ans, l'abonnement coute 15 a 25 fois plus cher qu'un achat unique, pour un service strictement identique du point de vue du client. La seule question a poser au vendeur est simple : <strong>Si j'arrete de payer, la plaque continue-t-elle de fonctionner ?</strong> Si la reponse est non, passez votre chemin. Notre comparatif detaille des <a href="/blog/plaque-avis-google-sans-abonnement">plaques sans abonnement</a> chiffre l'economie reelle.</p>
+</section>
+
+<section id="nombre-plaques" class="scroll-mt-28 mb-16">
+<h2>Combien de plaques faut-il ? Starter, Business ou Pro</h2>
+<p>Le nombre de plaques ne depend pas de votre chiffre d'affaires, mais du <strong>nombre de points de contact ou le client a son telephone en main et vient de vivre une experience positive</strong> : caisse, comptoir, table, poste de restitution. Chaque point de contact non equipe est un avis perdu.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Pack</th><th class="border p-3 text-left">Plaques</th><th class="border p-3 text-left">Profil ideal</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><a href="/product/starter" class="font-semibold underline">Starter</a></td><td class="border p-3">1</td><td class="border p-3">Commerce a point de caisse unique : coiffeur solo, petit institut, artisan, food truck</td></tr>
+<tr><td class="border p-3"><a href="/product/business" class="font-semibold underline">Business</a></td><td class="border p-3">2</td><td class="border p-3">Caisse + accueil ou 2 postes : garage, restaurant, boutique, cabinet</td></tr>
+<tr><td class="border p-3"><a href="/product/pro" class="font-semibold underline">Pro</a></td><td class="border p-3">5</td><td class="border p-3">Multi-postes ou multi-salles : centre auto, brasserie, salle de sport, salon a plusieurs fauteuils</td></tr>
+</tbody>
+</table>
+</div>
+<p>La configuration la plus courante est le Pack Business : deux plaques permettent de couvrir la caisse et un second point (accueil, salle d'attente, terrasse) sans se ruiner. Pour affiner l'emplacement exact de chaque plaque, notre guide <a href="/blog/ou-placer-plaque-avis-google">ou placer votre plaque avis Google</a> detaille 7 emplacements par secteur — le placement determine 80 % du taux de conversion.</p>
+</section>
+
+<section id="config" class="scroll-mt-28 mb-16">
+<h2>La configuration : le detail qui fait 80 % du resultat</h2>
+<p>Une plaque parfaite reliee a un mauvais lien ne sert a rien. La redirection doit envoyer le client <strong>directement sur le formulaire d'avis</strong> de votre fiche Google Business Profile, la ou les 5 etoiles et le champ de texte sont deja affiches — pas sur votre page d'accueil, pas sur Google Maps a chercher votre fiche.</p>
+<h3>Le bon lien : le format write a review</h3>
+<p>Le lien optimal ouvre l'ecran de notation en un tap. Une bonne plaque est livree pre-configuree avec ce lien, ou fournit une interface simple pour le coller. Verifiez ce point avant l'achat : c'est ce qui separe un taux de conversion de 40 % d'un taux de 10 %.</p>
+<h3>Modifiable a volonte</h3>
+<p>Votre fiche peut changer (demenagement, nouvel etablissement). Une plaque serieuse permet de <strong>reparametrer la destination sans racheter de plaque</strong>, via une redirection modifiable. Assurez-vous que ce reparametrage est gratuit et illimite — sinon, on revient a un abonnement deguise.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>Test avant deploiement :</strong> approchez votre propre telephone de la plaque. Si Google s'ouvre directement sur les 5 etoiles en moins de 2 secondes, c'est parfait. Si vous devez chercher, taper ou attendre, la conversion s'effondrera sur le terrain.</p>
+</div>
+</section>
+
+<section id="pieges" class="scroll-mt-28 mb-16">
+<h2>6 pieges a eviter a l'achat</h2>
+<p>Voici les erreurs les plus frequentes reperees chez les commercants qui ont du racheter une plaque apres un premier mauvais choix.</p>
+<ul>
+<li><strong>Le prix trop bas (moins de 15 EUR)</strong> : puce NTAG213, plastique fin, pas de QR de secours. Vous rachetez dans l'annee.</li>
+<li><strong>L'abonnement cache</strong> : verifiez toujours que la plaque fonctionne sans paiement recurrent.</li>
+<li><strong>Pas de QR code imprime</strong> : 5 a 10 % des telephones n'ont pas le NFC actif. Sans QR de secours, ces clients repartent sans laisser d'avis.</li>
+<li><strong>La redirection vers la mauvaise page</strong> : si le lien n'ouvre pas directement le formulaire d'avis, votre conversion est divisee par 3 ou 4.</li>
+<li><strong>Le filtrage des avis (gating)</strong> : certaines solutions proposent d'intercepter les clients mecontents. C'est contraire aux regles de Google et expose votre fiche a une suspension.</li>
+<li><strong>Offrir une contrepartie</strong> : jamais de remise ou de cadeau contre un avis. Google supprime ces avis en masse.</li>
+</ul>
+<p>Pour situer le juste prix face a ces pieges, consultez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a> et la comparaison <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC vs QR code</a>.</p>
+</section>
+
+<section id="grille" class="scroll-mt-28 mb-16">
+<h2>Grille de decision rapide par profil</h2>
+<p>Pour aller droit au but, voici la recommandation par type d'etablissement, en partant du principe que les non-negociables (NTAG215, sans abonnement, acrylique, QR de secours) sont acquis.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Profil</th><th class="border p-3 text-left">Pack conseille</th><th class="border p-3 text-left">Emplacement cle</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Coiffeur / esthetique solo</td><td class="border p-3">Starter (1)</td><td class="border p-3">Comptoir d'encaissement</td></tr>
+<tr><td class="border p-3">Restaurant / bar</td><td class="border p-3">Business (2)</td><td class="border p-3">Addition + comptoir</td></tr>
+<tr><td class="border p-3">Garage / centre auto</td><td class="border p-3">Business a Pro</td><td class="border p-3">Caisse + accueil</td></tr>
+<tr><td class="border p-3">Boutique / commerce</td><td class="border p-3">Business (2)</td><td class="border p-3">Caisse + sortie</td></tr>
+<tr><td class="border p-3">Salle de sport / grande surface</td><td class="border p-3">Pro (5)</td><td class="border p-3">Accueil + plusieurs zones</td></tr>
+<tr><td class="border p-3">Artisan mobile / food truck</td><td class="border p-3">Starter (1)</td><td class="border p-3">Point d'encaissement</td></tr>
+</tbody>
+</table>
+</div>
+<p>Dans le doute, partez sur le Pack Business : il couvre 80 % des configurations et offre le meilleur cout par avis genere. Vous pourrez toujours ajouter des plaques ensuite si votre organisation le justifie.</p>
+</section>
+
+<section id="faq-choix" class="scroll-mt-28 mb-16">
+<h2>FAQ — Choisir sa plaque NFC avis Google</h2>
+
+<h3>Quelle puce NFC choisir pour une plaque avis Google ?</h3>
+<p>La NTAG215 (504 octets) est le bon standard : elle ouvre la fiche Google instantanement, est compatible avec tous les iPhone depuis 2016 et la quasi-totalite des Android. Evitez la NTAG213 des modeles bas de gamme et exigez toujours que la reference de puce soit precisee.</p>
+
+<h3>Faut-il payer un abonnement pour une plaque NFC ?</h3>
+<p>Non, et c'est le principal piege a eviter. Une bonne plaque fonctionne a vie apres un paiement unique de 35 a 60 EUR. Les formules avec abonnement mensuel coutent 15 a 25 fois plus cher sur 5 ans pour un service identique, et rendent la plaque inutilisable si vous arretez de payer.</p>
+
+<h3>Quel materiau est le plus durable pour une plaque NFC ?</h3>
+<p>L'acrylique premium de 3 mm : il resiste a l'eau, aux UV, aux rayures et aux projections de graisse, se nettoie d'un coup de chiffon et garde un rendu premium pendant des annees. Le PVC fin jaunit et se raye, le bois craint l'humidite, et le metal peut gener le signal NFC s'il est mal concu.</p>
+
+<h3>Combien de plaques NFC faut-il pour mon commerce ?</h3>
+<p>Comptez une plaque par point de contact ou le client a son telephone en main apres une experience positive. Un point de caisse unique : Pack Starter (1). Caisse plus accueil : Pack Business (2), la configuration la plus courante. Multi-postes ou multi-salles : Pack Pro (5).</p>
+
+<h3>La plaque NFC fonctionne-t-elle sur tous les telephones ?</h3>
+<p>Oui pour la quasi-totalite : tous les iPhone depuis 2016 et la grande majorite des Android lisent le NFC. Pour les rares appareils sans NFC actif (5 a 10 %), un QR code de secours imprime sur la plaque permet quand meme de laisser un avis. Exigez ce QR code a l'achat.</p>
+
+<h3>Peut-on modifier la destination d'une plaque NFC apres l'achat ?</h3>
+<p>Avec une plaque serieuse, oui : la redirection est modifiable gratuitement et sans limite, ce qui est indispensable en cas de demenagement ou de changement de fiche. Verifiez ce point avant d'acheter, car certaines solutions facturent ce reparametrage — un abonnement deguise.</p>
+
+<h3>Quel est le bon budget pour une plaque NFC avis Google ?</h3>
+<p>Entre 35 et 60 EUR par plaque en paiement unique. En dessous de 15 EUR, la qualite (puce, materiau, QR de secours) n'y est generalement pas. Au-dessus, vous payez surtout une marque ou un abonnement. Le retour sur investissement est atteint des le premier ou deuxieme client supplementaire.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : une bonne plaque se choisit sur 4 criteres</h2>
+<p>Choisir sa plaque NFC n'a rien de complique une fois qu'on connait la grille : une <strong>puce NTAG215</strong>, une <strong>redirection directe sans abonnement</strong>, un <strong>acrylique premium</strong> et un <strong>QR code de secours</strong>. Ces quatre non-negociables ecartent 90 % des mauvais produits. Le reste — nombre de plaques, personnalisation — se decide selon votre configuration.</p>
+<p>La plaque n'est pas une depense marketing de plus : c'est l'un des rares investissements a retour quasi immediat pour un commerce local, sans cout recurrent, qui travaille chaque jour a rendre visible la satisfaction que vous produisez deja.</p>
+<p>Guides complementaires : <a href="/blog/prix-plaque-nfc-avis-google">prix des plaques NFC</a>, <a href="/blog/plaque-nfc-vs-qr-code-avis-google">NFC vs QR code</a>, <a href="/blog/plaque-avis-google-sans-abonnement">plaques sans abonnement</a>, et <a href="/blog/ou-placer-plaque-avis-google">ou placer votre plaque</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>Prete a l'emploi, sans abonnement, garantie 2 ans</strong></p>
+<p class="text-sm text-blue-900">Decouvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215, adhesif 3M inclus, QR code de secours, redirection modifiable a vie, <strong>sans abonnement</strong>. A partir de 39,90 EUR.</p>
+</div>
+</section>
+`,
+  },
   'statistiques-avis-google-2026': {
     title: 'Statistiques avis Google 2026 : 45 chiffres clés à connaître',
     category: 'Statistiques',
@@ -3633,6 +3823,7 @@ const articles: Record<string, {
    Related articles pour la sidebar
    ───────────────────────────────────────────── */
 const relatedArticles = [
+  { slug: 'comment-choisir-plaque-nfc-avis-google', label: 'Choisir sa plaque NFC : guide d\'achat 2026' },
   { slug: 'statistiques-avis-google-2026', label: 'Statistiques avis Google 2026 : 45 chiffres clés' },
   { slug: 'repondre-avis-negatifs-google', label: 'Répondre aux avis négatifs Google' },
   { slug: 'plaque-nfc-garage-automobile', label: 'Plaque NFC garage automobile : guide 2026' },

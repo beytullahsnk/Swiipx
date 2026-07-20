@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://swiipx.fr'
 
   const blogArticles: { slug: string; date: string }[] = [
+    { slug: 'comment-choisir-plaque-nfc-avis-google', date: '2026-07-20' },
     { slug: 'statistiques-avis-google-2026', date: '2026-07-17' },
     { slug: 'repondre-avis-negatifs-google', date: '2026-07-13' },
     { slug: 'plaque-nfc-garage-automobile', date: '2026-07-13' },

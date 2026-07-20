@@ -10,6 +10,22 @@ const seoData: Record<string, {
   category: string
   faq: { q: string; a: string }[]
 }> = {
+  'comment-choisir-plaque-nfc-avis-google': {
+    title: 'Comment choisir sa plaque NFC avis Google (guide 2026)',
+    description: 'Comment choisir sa plaque NFC avis Google : puce NTAG215, materiau, sans abonnement, nombre de plaques. 7 criteres, comparatif et pieges a eviter. Guide d\'achat 2026.',
+    keywords: 'choisir plaque nfc, plaque nfc avis google, guide achat plaque nfc, puce ntag215, plaque nfc sans abonnement, meilleure plaque nfc avis google, comparatif plaque nfc',
+    date: '2026-07-20',
+    dateModified: '2026-07-20',
+    category: 'Comparatif',
+    faq: [
+      { q: 'Quelle puce NFC choisir pour une plaque avis Google ?', a: 'La NTAG215 (504 octets) est le bon standard : elle ouvre la fiche Google instantanement et est compatible avec tous les iPhone depuis 2016 et la quasi-totalite des Android. Evitez la NTAG213 des modeles bas de gamme et exigez toujours que la reference de puce soit precisee.' },
+      { q: 'Faut-il payer un abonnement pour une plaque NFC ?', a: 'Non, et c\'est le principal piege a eviter. Une bonne plaque fonctionne a vie apres un paiement unique de 35 a 60 EUR. Les formules avec abonnement mensuel coutent 15 a 25 fois plus cher sur 5 ans pour un service identique, et rendent la plaque inutilisable si vous arretez de payer.' },
+      { q: 'Quel materiau est le plus durable pour une plaque NFC ?', a: 'L\'acrylique premium de 3 mm : il resiste a l\'eau, aux UV, aux rayures et aux projections de graisse, et garde un rendu premium pendant des annees. Le PVC fin jaunit et se raye, le bois craint l\'humidite, et le metal peut gener le signal NFC s\'il est mal concu.' },
+      { q: 'Combien de plaques NFC faut-il pour mon commerce ?', a: 'Comptez une plaque par point de contact ou le client a son telephone en main apres une experience positive. Un point de caisse unique : Pack Starter. Caisse plus accueil : Pack Business (2 plaques), la configuration la plus courante. Multi-postes ou multi-salles : Pack Pro (5 plaques).' },
+      { q: 'La plaque NFC fonctionne-t-elle sur tous les telephones ?', a: 'Oui pour la quasi-totalite : tous les iPhone depuis 2016 et la grande majorite des Android lisent le NFC. Pour les rares appareils sans NFC actif (5 a 10 %), un QR code de secours imprime sur la plaque permet quand meme de laisser un avis. Exigez ce QR code a l\'achat.' },
+      { q: 'Quel est le bon budget pour une plaque NFC avis Google ?', a: 'Entre 35 et 60 EUR par plaque en paiement unique. En dessous de 15 EUR, la qualite (puce, materiau, QR de secours) n\'y est generalement pas. Le retour sur investissement est atteint des le premier ou deuxieme client supplementaire grace aux nouveaux avis collectes.' },
+    ],
+  },
   'statistiques-avis-google-2026': {
     title: 'Statistiques avis Google 2026 : 45 chiffres clés',
     description: '45 statistiques 2026 sur les avis Google : comportement des consommateurs, impact SEO local et pack local, conversion, effet de la note et réponses. Le ROI prouvé.',

@@ -47,6 +47,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 17,
+    title: 'Comment choisir sa plaque NFC avis Google : le guide 2026',
+    excerpt: 'Puce, materiau, abonnement, nombre de plaques : les 7 criteres pour choisir la bonne plaque NFC avis Google du premier coup. Comparatif, pieges a eviter et grille de decision.',
+    category: 'Comparatif',
+    date: '20 juillet 2026',
+    dateIso: '2026-07-20',
+    readTime: '10 min',
+    slug: 'comment-choisir-plaque-nfc-avis-google',
+    badge: 'Nouveau',
+  },
+  {
     id: 16,
     title: 'Statistiques avis Google 2026 : 45 chiffres clés à connaître',
     excerpt: '45 statistiques 2026 sur les avis Google : lecture, SEO local, conversion, effet de la note, réponses. Les chiffres qui prouvent le ROI d\'une stratégie d\'avis.',
