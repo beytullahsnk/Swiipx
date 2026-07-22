@@ -42,7 +42,6 @@ interface BlogPost {
   dateIso: string
   readTime: string
   slug: string
-  badge?: string
 }
 
 const blogPosts: BlogPost[] = [
@@ -54,9 +53,7 @@ const blogPosts: BlogPost[] = [
     date: '22 juillet 2026',
     dateIso: '2026-07-22',
     readTime: '10 min',
-    slug: 'plaque-nfc-institut-beaute',
-    badge: 'Nouveau',
-  },
+    slug: 'plaque-nfc-institut-beaute',  },
   {
     id: 17,
     title: 'Comment choisir sa plaque NFC avis Google : le guide 2026',
@@ -65,9 +62,7 @@ const blogPosts: BlogPost[] = [
     date: '20 juillet 2026',
     dateIso: '2026-07-20',
     readTime: '10 min',
-    slug: 'comment-choisir-plaque-nfc-avis-google',
-    badge: 'Nouveau',
-  },
+    slug: 'comment-choisir-plaque-nfc-avis-google',  },
   {
     id: 16,
     title: 'Statistiques avis Google 2026 : 45 chiffres clés à connaître',
@@ -76,9 +71,7 @@ const blogPosts: BlogPost[] = [
     date: '17 juillet 2026',
     dateIso: '2026-07-17',
     readTime: '11 min',
-    slug: 'statistiques-avis-google-2026',
-    badge: 'Nouveau',
-  },
+    slug: 'statistiques-avis-google-2026',  },
   {
     id: 15,
     title: 'Répondre aux avis négatifs Google : la méthode complète',
@@ -87,9 +80,7 @@ const blogPosts: BlogPost[] = [
     date: '13 juillet 2026',
     dateIso: '2026-07-13',
     readTime: '10 min',
-    slug: 'repondre-avis-negatifs-google',
-    badge: 'Nouveau',
-  },
+    slug: 'repondre-avis-negatifs-google',  },
   {
     id: 14,
     title: 'Plaque NFC garage automobile : x4 avis Google en 2026',
@@ -98,9 +89,7 @@ const blogPosts: BlogPost[] = [
     date: '13 juillet 2026',
     dateIso: '2026-07-13',
     readTime: '10 min',
-    slug: 'plaque-nfc-garage-automobile',
-    badge: 'Nouveau',
-  },
+    slug: 'plaque-nfc-garage-automobile',  },
   {
     id: 13,
     title: 'Plaque NFC cabinet médical : avis Google et déontologie',
@@ -109,9 +98,7 @@ const blogPosts: BlogPost[] = [
     date: '8 juin 2026',
     dateIso: '2026-06-08',
     readTime: '9 min',
-    slug: 'plaque-nfc-cabinet-medical',
-    badge: 'Nouveau',
-  },
+    slug: 'plaque-nfc-cabinet-medical',  },
   {
     id: 12,
     title: 'Où placer votre plaque avis Google ? 7 emplacements stratégiques',
@@ -120,9 +107,7 @@ const blogPosts: BlogPost[] = [
     date: '12 mai 2026',
     dateIso: '2026-05-12',
     readTime: '8 min',
-    slug: 'ou-placer-plaque-avis-google',
-    badge: 'Nouveau',
-  },
+    slug: 'ou-placer-plaque-avis-google',  },
   {
     id: 11,
     title: 'Prix plaque NFC avis Google : combien ça coûte vraiment en 2026 ?',
@@ -131,9 +116,7 @@ const blogPosts: BlogPost[] = [
     date: '12 mai 2026',
     dateIso: '2026-05-12',
     readTime: '8 min',
-    slug: 'prix-plaque-nfc-avis-google',
-    badge: 'Nouveau',
-  },
+    slug: 'prix-plaque-nfc-avis-google',  },
   {
     id: 10,
     title: 'Plaque NFC salon coiffure : guide ROI 2026',
@@ -142,9 +125,7 @@ const blogPosts: BlogPost[] = [
     date: '11 mai 2026',
     dateIso: '2026-05-11',
     readTime: '9 min',
-    slug: 'plaque-nfc-salon-coiffure',
-    badge: 'Nouveau',
-  },
+    slug: 'plaque-nfc-salon-coiffure',  },
   {
     id: 9,
     title: 'Plaque avis Google sans abonnement : comparatif 2026',
@@ -153,9 +134,7 @@ const blogPosts: BlogPost[] = [
     date: '11 mai 2026',
     dateIso: '2026-05-11',
     readTime: '10 min',
-    slug: 'plaque-avis-google-sans-abonnement',
-    badge: 'Nouveau',
-  },
+    slug: 'plaque-avis-google-sans-abonnement',  },
   {
     id: 8,
     title: 'Plaque NFC restaurant : collecter +200 avis Google en 2026',
@@ -164,9 +143,7 @@ const blogPosts: BlogPost[] = [
     date: '11 mai 2026',
     dateIso: '2026-05-11',
     readTime: '11 min',
-    slug: 'plaque-nfc-restaurant',
-    badge: 'Nouveau',
-  },
+    slug: 'plaque-nfc-restaurant',  },
   {
     id: 7,
     title: 'Plaque NFC vs QR Code pour les avis Google : comparatif 2026',
@@ -248,6 +225,16 @@ const blogPosts: BlogPost[] = [
     slug: 'erreurs-demander-avis',
   },
 ]
+
+// Badge "Nouveau" calculé automatiquement sur les N articles les plus récents.
+// Plus besoin d'ajouter/retirer le badge à la main quand on publie un article.
+const NEW_BADGE_COUNT = 3
+const recentSlugs = new Set(
+  [...blogPosts]
+    .sort((a, b) => b.dateIso.localeCompare(a.dateIso))
+    .slice(0, NEW_BADGE_COUNT)
+    .map((post) => post.slug)
+)
 
 export default function BlogPage() {
   // CollectionPage + ItemList JSON-LD
@@ -358,9 +345,9 @@ export default function BlogPage() {
                       <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full uppercase tracking-wider">
                         {post.category}
                       </span>
-                      {post.badge && (
+                      {recentSlugs.has(post.slug) && (
                         <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                          {post.badge}
+                          Nouveau
                         </span>
                       )}
                     </div>
