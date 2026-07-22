@@ -10,6 +10,22 @@ const seoData: Record<string, {
   category: string
   faq: { q: string; a: string }[]
 }> = {
+  'plaque-nfc-institut-beaute': {
+    title: 'Plaque NFC institut de beauté : x5 avis Google (guide 2026)',
+    description: 'Instituts de beauté, esthétique, onglerie, spa : multipliez vos avis Google par 5 avec une plaque NFC. Guide 2026 : emplacements, scripts, 3 études de cas, ROI chiffré.',
+    keywords: 'plaque nfc institut de beaute, avis google institut de beaute, plaque nfc esthetique, avis google estheticienne, plaque nfc onglerie, avis google spa, seo local institut beaute',
+    date: '2026-07-22',
+    dateModified: '2026-07-22',
+    category: 'Secteur',
+    faq: [
+      { q: 'Combien d\'avis Google un institut peut-il collecter avec une plaque NFC ?', a: 'Un institut recevant 30 à 40 clientes par semaine passe généralement de 3-6 avis/mois à 15-30 avis/mois, soit une multiplication par 4 à 6. Les bars à ongles à forte rotation dépassent souvent 35 avis par mois.' },
+      { q: 'Où placer la plaque NFC dans un institut de beauté ?', a: 'Le comptoir de caisse est le meilleur emplacement (35-45 % de conversion) : la cliente a déjà son téléphone en main pour régler et vient de vivre un moment agréable. La table de manucure (25-35 %) et la cabine près du miroir (20-30 %) sont d\'excellents compléments.' },
+      { q: 'La plaque résiste-t-elle aux crèmes, vernis et à l\'humidité ?', a: 'Oui. L\'acrylique premium 3 mm résiste à l\'eau, aux UV, aux rayures et aux projections. Un simple coup de chiffon suffit à la nettoyer, contrairement à une affiche papier ou un flyer plastifié qui devient vite illisible.' },
+      { q: 'Puis-je offrir une remise ou un soin en échange d\'un avis ?', a: 'Non, c\'est formellement interdit par les règles de Google. Vos avis pourraient être supprimés en masse et votre fiche suspendue. La plaque NFC fonctionne en supprimant la friction, pas en achetant l\'avis.' },
+      { q: 'Faut-il un abonnement pour la plaque NFC ?', a: 'Non. La plaque Swiipx est un paiement unique : elle fonctionne pendant des années sans frais récurrents ni renouvellement mensuel.' },
+      { q: 'Quel pack choisir pour un institut de beauté ?', a: 'Institut mono-poste : Pack Starter. Institut avec caisse et cabine ou table de manucure : Pack Business (2 plaques), la configuration la plus courante. Spa ou institut multi-cabines : Pack Pro (5 plaques).' },
+    ],
+  },
   'comment-choisir-plaque-nfc-avis-google': {
     title: 'Comment choisir sa plaque NFC avis Google (guide 2026)',
     description: 'Comment choisir sa plaque NFC avis Google : puce NTAG215, materiau, sans abonnement, nombre de plaques. 7 criteres, comparatif et pieges a eviter. Guide d\'achat 2026.',

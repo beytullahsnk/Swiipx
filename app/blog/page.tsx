@@ -47,6 +47,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 18,
+    title: 'Plaque NFC institut de beauté : x5 avis Google après chaque soin',
+    excerpt: 'Instituts de beauté, esthétique, onglerie, spa : multipliez vos avis Google par 5 avec une plaque NFC. Emplacements, scripts esthéticienne, 3 études de cas et ROI chiffré.',
+    category: 'Secteur',
+    date: '22 juillet 2026',
+    dateIso: '2026-07-22',
+    readTime: '10 min',
+    slug: 'plaque-nfc-institut-beaute',
+    badge: 'Nouveau',
+  },
+  {
     id: 17,
     title: 'Comment choisir sa plaque NFC avis Google : le guide 2026',
     excerpt: 'Puce, materiau, abonnement, nombre de plaques : les 7 criteres pour choisir la bonne plaque NFC avis Google du premier coup. Comparatif, pieges a eviter et grille de decision.',

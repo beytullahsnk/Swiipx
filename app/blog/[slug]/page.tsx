@@ -19,6 +19,237 @@ const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-institut-beaute': {
+    title: 'Plaque NFC institut de beauté : collecter des avis Google après chaque soin',
+    category: 'Secteur',
+    date: '22 juillet 2026',
+    readTime: '10 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Instituts de beauté, esthétique, onglerie, spa : comment multiplier vos avis Google par 5 avec une plaque NFC. Placements, scripts, 3 études de cas et ROI chiffré.',
+    tocSections: [
+      { id: 'pourquoi-avis-institut', label: 'Pourquoi les avis sont décisifs' },
+      { id: 'probleme-institut', label: 'Satisfaction vs avis' },
+      { id: 'fonctionnement', label: 'Comment fonctionne la plaque NFC' },
+      { id: 'placements-institut', label: '5 emplacements testés' },
+      { id: 'scripts-estheticienne', label: 'Les scripts qui marchent' },
+      { id: 'cas-pratiques', label: '3 études de cas' },
+      { id: 'roi-institut', label: 'Le ROI chiffré' },
+      { id: 'repondre-avis', label: 'Répondre aux avis' },
+      { id: 'plan-90-jours', label: 'Le plan 90 jours' },
+      { id: 'faq-institut', label: 'FAQ' },
+    ],
+    content: `
+<section id="pourquoi-avis-institut" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google sont décisifs pour un institut de beauté</h2>
+<p>Choisir un institut de beauté, c'est confier son visage, sa peau ou son corps à quelqu'un qu'on ne connaît pas encore. Avant de réserver un soin visage, une épilation ou une pose d'ongles, la cliente fait un geste devenu automatique : elle tape « institut de beauté + sa ville » sur Google et elle lit les avis. La note et le nombre d'avis décident, en quelques secondes, si elle réserve chez vous ou passe à l'institut d'à côté.</p>
+<p>Les chiffres du secteur beauté sont sans appel : <strong>plus de 80 % des clientes consultent les avis en ligne avant de réserver un institut</strong>, et 9 sur 10 ne regardent jamais au-delà des trois premiers résultats du pack local (la carte Google Maps). Un institut avec 15 avis à 4,0 étoiles est structurellement invisible face à celui qui affiche 160 avis à 4,8.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> dans la beauté, une nouvelle cliente vaut bien plus qu'un soin isolé. Avec un panier moyen de 45 à 80 € et une fréquence de 4 à 10 visites par an, la valeur d'une cliente fidèle dépasse souvent <strong>400 à 900 € sur un an</strong>. Gagner 2 places dans le pack local, c'est fréquemment 8 à 20 nouvelles clientes par mois.</p>
+</div>
+<p>Le problème n'est presque jamais la satisfaction : les clientes ressortent détendues, bichonnées, contentes du résultat. Le problème est le <strong>passage à l'acte</strong>. Une cliente satisfaite ne pense pas spontanément à écrire un avis — sauf si on lui met un moyen de le faire à 10 centimètres de la main, au moment exact où elle règle et où elle se sent bien.</p>
+</section>
+
+<section id="probleme-institut" class="scroll-mt-28 mb-16">
+<h2>Le vrai problème : le décalage entre satisfaction et avis</h2>
+<p>Dans un institut, la cliente heureuse repart le teint frais et l'esprit ailleurs... et oublie. La cliente déçue, elle, rentre chez elle et écrit un avis dans l'heure. C'est le biais classique de l'asymétrie émotionnelle : <strong>la frustration écrit, la satisfaction se tait</strong>.</p>
+<p>Résultat : la note moyenne des instituts de beauté en France tourne autour de 4,2/5, alors que le taux de satisfaction réel mesuré en interne dépasse largement 90 %. Vos avis ne reflètent pas votre travail — ils reflètent votre absence de méthode de collecte.</p>
+<h3>Les 4 tentatives qui ne fonctionnent pas</h3>
+<ul>
+<li><strong>La carte de fidélité avec un QR code au dos</strong> : la cliente la range dans son sac et l'oublie. Taux de retour : 1 à 3 %.</li>
+<li><strong>Le SMS de relance</strong> : perçu comme du spam, souvent ignoré, taux de clic 5-8 %, et vous risquez de relancer une cliente mécontente qui n'y pensait plus.</li>
+<li><strong>Le « n'hésitez pas à nous laisser un avis »</strong> lancé en fin de rendez-vous : sans support physique, moins de 5 % passent à l'acte.</li>
+<li><strong>L'affiche A4 scotchée à l'accueil</strong> : invisible au bout de trois jours, personne ne sort son téléphone pour photographier un QR code sur un mur.</li>
+</ul>
+<p>Ce qui fonctionne, c'est un <strong>objet posé sur le comptoir, au moment de l'encaissement, que la cliente touche avec son téléphone</strong>. C'est exactement ce que fait une plaque NFC. Notre <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif plaque NFC vs QR code</a> détaille pourquoi l'écart de conversion est aussi net.</p>
+</section>
+
+<section id="fonctionnement" class="scroll-mt-28 mb-16">
+<h2>Comment fonctionne la plaque NFC dans un institut</h2>
+<p>La plaque NFC est une plaque en acrylique premium (120 × 120 × 3 mm) qui contient une puce NTAG215. La cliente approche son smartphone à moins de 4 cm : sa page d'avis Google s'ouvre <strong>automatiquement</strong>, sans application, sans saisie, sans friction.</p>
+<ol>
+<li>La cliente règle son soin à la caisse</li>
+<li>Vous approchez la plaque : « Approchez votre téléphone ici, ça prend 20 secondes »</li>
+<li>Google s'ouvre directement sur le formulaire d'avis de votre fiche</li>
+<li>Elle met 5 étoiles et deux lignes — c'est terminé</li>
+</ol>
+<p>Un <strong>QR code de secours</strong> est imprimé sur la plaque pour les rares téléphones sans NFC actif. La solution est compatible avec tous les iPhone depuis 2016 et la quasi-totalité des Android.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>💅 Spécificité institut :</strong> l'ambiance compte. Une plaque en acrylique premium au fini brillant s'intègre dans une décoration soignée, contrairement à un flyer plastifié ou une affiche papier. Elle résiste aussi aux crèmes, aux vernis et aux projections d'eau — un simple coup de chiffon suffit à la nettoyer.</p>
+</div>
+</section>
+
+<section id="placements-institut" class="scroll-mt-28 mb-16">
+<h2>Où placer la plaque dans un institut : 5 emplacements testés</h2>
+<p>Le placement détermine 80 % du résultat. Voici les taux de conversion observés chez les instituts équipés (pourcentage de clientes qui laissent effectivement un avis). Pour approfondir, consultez notre guide <a href="/blog/ou-placer-plaque-avis-google">où placer votre plaque avis Google</a>.</p>
+
+<h3>1. Le comptoir de caisse / accueil — 35 à 45 % ✅</h3>
+<p>C'est <strong>de loin le meilleur emplacement</strong>. La cliente est debout, son téléphone est déjà en main (paiement sans contact), elle vient de vivre un moment agréable et se sent détendue. Posez la plaque à droite du terminal de paiement, orientée vers elle.</p>
+
+<h3>2. La table de manucure / onglerie — 25 à 35 %</h3>
+<p>Excellent pour les bars à ongles et les prestations manucure/pédicure : la cliente admire ses ongles fraîchement posés, c'est le pic de satisfaction. Une petite plaque sur la table, évoquée en fin de pose, convertit très bien.</p>
+
+<h3>3. La coiffeuse / miroir de cabine — 20 à 30 %</h3>
+<p>Après un soin visage ou un maquillage, la cliente découvre le résultat dans le miroir. Une plaque posée près du miroir capte cet instant précis où elle est la plus enthousiaste.</p>
+
+<h3>4. L'espace détente / tisane après soin — 10 à 15 %</h3>
+<p>Beaucoup d'instituts et de spas offrent une tisane après le soin. Ce temps calme, téléphone en main, est un bon complément — jamais l'emplacement principal, mais un point de collecte supplémentaire.</p>
+
+<h3>5. La vitrine / porte d'entrée — 3 à 5 %</h3>
+<p>Aucun intérêt pour la collecte (on ne scanne pas en entrant), mais un vrai intérêt <strong>réputationnel</strong> : elle signale que vous assumez vos avis. À utiliser en complément, jamais seule.</p>
+
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 La règle des 2 plaques :</strong> la configuration optimale d'un institut est <strong>caisse + cabine (ou table de manucure)</strong>. C'est exactement le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a>. Un institut mono-poste peut démarrer avec le <a href="/product/starter" class="font-semibold underline">Pack Starter</a> ; les spas et instituts multi-cabines passent au <a href="/product/pro" class="font-semibold underline">Pack Pro (5 plaques)</a>.</p>
+</div>
+</section>
+
+<section id="scripts-estheticienne" class="scroll-mt-28 mb-16">
+<h2>Les scripts qui marchent (et ceux qui tuent la conversion)</h2>
+<p>Une plaque posée sans un mot convertit <strong>3 à 4 fois moins</strong> qu'une plaque mentionnée à voix haute. La phrase compte autant que l'objet. Voici les formulations testées sur le terrain.</p>
+
+<h3>✅ Le script « caisse » (le plus efficace)</h3>
+<p class="italic">« Voilà, c'est parfait. Si vous êtes contente de votre soin, un petit avis Google nous aide énormément — vous approchez juste votre téléphone ici, ça prend 20 secondes. »</p>
+<p>Pourquoi ça marche : la demande arrive <strong>après</strong> le moment de plaisir, elle est conditionnelle (« si vous êtes contente »), chiffrée dans le temps (20 secondes) et le geste est montré.</p>
+
+<h3>✅ Le script « cliente fidèle »</h3>
+<p class="italic">« Ça fait un moment que vous me faites confiance, ça me ferait vraiment plaisir si vous laissiez un mot sur Google. C'est là, un coup de téléphone dessus. »</p>
+<p>Sur les clientes régulières, le taux monte à 50-60 %. Ce sont vos meilleures ambassadrices : elles écrivent des avis longs et détaillés, ceux qui pèsent le plus dans l'algorithme Google.</p>
+
+<h3>❌ Ce qu'il ne faut jamais faire</h3>
+<ul>
+<li><strong>Offrir une remise ou un soin</strong> en échange d'un avis : c'est une violation des règles Google, et vos avis peuvent être supprimés en masse (voire la fiche suspendue).</li>
+<li><strong>Filtrer les clientes</strong> (ne présenter la plaque qu'aux plus contentes) : Google le détecte via des schémas statistiques anormaux, et c'est contraire à ses conditions d'utilisation.</li>
+<li><strong>Insister</strong> après un premier refus : vous transformez une cliente neutre en cliente agacée.</li>
+<li><strong>Demander pendant le soin</strong> : la cliente est allongée, les yeux fermés, en train de se détendre. Ce n'est pas le moment. Attendez l'encaissement.</li>
+</ul>
+</section>
+
+<section id="cas-pratiques" class="scroll-mt-28 mb-16">
+<h2>3 études de cas d'instituts équipés</h2>
+
+<h3>💆 Institut de beauté / esthétique — Lyon (69)</h3>
+<p>Structure : 2 esthéticiennes, soins visage, épilation, maquillage. ~35 clientes/semaine. Situation de départ : 21 avis, 4,3 étoiles, 6<sup>e</sup> position dans le pack local sur « institut de beauté Lyon ».</p>
+<ul>
+<li>Équipement : 2 plaques (caisse + cabine), script systématique à l'encaissement</li>
+<li>Après 4 mois : <strong>118 avis, 4,8 étoiles</strong></li>
+<li>Position pack local : <strong>2<sup>e</sup></strong></li>
+<li>Nouvelles réservations via Google : de 14 à 41 par mois (+193 %)</li>
+</ul>
+
+<h3>💅 Bar à ongles / onglerie — Bordeaux (33)</h3>
+<p>Structure : 3 prothésistes ongulaires, forte rotation (pose gel, semi-permanent, nail art). ~70 clientes/semaine.</p>
+<ul>
+<li>Équipement : 3 plaques (2 tables de manucure + caisse)</li>
+<li>Avant : 6 avis/mois en moyenne. Après : <strong>38 avis/mois</strong></li>
+<li>Note passée de 4,1 à 4,7 en 6 mois (les nouveaux avis diluent les anciens négatifs)</li>
+<li>ROI de l'équipement (89,90 €) : atteint dès la <strong>première cliente supplémentaire</strong></li>
+</ul>
+
+<h3>🌸 Spa / institut premium — Nice (06)</h3>
+<p>Structure : spa avec 3 cabines, soins corps, massages, panier moyen élevé (90-180 €), volume modéré (~25 clientes/semaine).</p>
+<ul>
+<li>Équipement : 2 plaques (accueil + espace détente tisane)</li>
+<li>Après 5 mois : 27 → <strong>84 avis</strong>, note 4,9</li>
+<li>Effet inattendu : hausse nette des réservations de forfaits et cartes cadeaux, la fiche Google inspirant davantage confiance</li>
+</ul>
+<p>Le schéma est constant : <strong>volume d'avis × 4 à 6 en 4 à 6 mois</strong>, note en hausse de 0,4 à 0,6 point, et un gain de 1 à 3 positions dans le pack local. Le même mécanisme se retrouve dans notre guide <a href="/blog/plaque-nfc-salon-coiffure">plaque NFC salon de coiffure</a>, secteur voisin où le NFC atteint des records de conversion.</p>
+</section>
+
+<section id="roi-institut" class="scroll-mt-28 mb-16">
+<h2>Le ROI chiffré pour un institut de beauté</h2>
+<p>Faisons le calcul honnêtement, avec des hypothèses conservatrices.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">59,90 € (une fois, sans abonnement)</td></tr>
+<tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, pas de batterie)</td></tr>
+<tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+100 à +200</td></tr>
+<tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
+<tr><td class="border p-3">Nouvelles clientes / mois estimées</td><td class="border p-3">+8 à +20</td></tr>
+<tr><td class="border p-3">Valeur d'une cliente sur 1 an</td><td class="border p-3">~450 €</td></tr>
+<tr><td class="border p-3"><strong>CA additionnel annuel estimé</strong></td><td class="border p-3"><strong>+43 200 € à +108 000 €</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 59,90 € reste sans commune mesure avec n'importe quel autre canal d'acquisition. À titre de comparaison, une campagne Google Ads dans la beauté coûte 2 à 5 € le clic, soit 40 à 120 € par cliente acquise — <strong>chaque mois, à vie</strong>.</p>
+<p>Pour aller plus loin sur les fourchettes de prix du marché, lisez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>, et vérifiez qu'il n'y a <a href="/blog/plaque-avis-google-sans-abonnement">aucun abonnement caché</a>.</p>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Répondre aux avis : le réflexe que 70 % des instituts négligent</h2>
+<p>Collecter ne suffit pas. Google valorise les fiches <strong>actives</strong>, et les clientes lisent vos réponses autant que les avis eux-mêmes. Un institut qui répond à 100 % de ses avis gagne en crédibilité — surtout sur les avis négatifs.</p>
+<h3>Répondre à un avis positif (30 secondes)</h3>
+<p class="italic">« Merci Sophie pour votre retour ! Ravie que votre soin visage vous ait plu. À très bientôt à l'institut. — L'équipe de l'Institut X »</p>
+<p>Astuce SEO : glissez naturellement <strong>votre métier et votre ville</strong> dans une partie de vos réponses (« notre institut de beauté à Lyon »). Google lit ces réponses.</p>
+<h3>Répondre à un avis négatif (la règle des 3 P)</h3>
+<ul>
+<li><strong>Poli</strong> : jamais sur la défensive, jamais d'ironie. Votre réponse est lue par 100 futures clientes, pas seulement par l'autrice de l'avis.</li>
+<li><strong>Précis</strong> : rappelez factuellement ce qui a été fait, sans accuser.</li>
+<li><strong>Privé</strong> : proposez de basculer hors ligne (« appelez-nous au 0X, on en discute ensemble »).</li>
+</ul>
+<p>Un avis négatif bien géré convertit mieux qu'une fiche à 5,0 sans aucun avis négatif — qui, elle, paraît suspecte. Notre <a href="/blog/repondre-avis-negatifs-google">méthode complète pour répondre aux avis négatifs</a> détaille 6 modèles prêts à l'emploi.</p>
+</section>
+
+<section id="plan-90-jours" class="scroll-mt-28 mb-16">
+<h2>Le plan 90 jours pour un institut</h2>
+<h3>Semaines 1-2 : les fondations</h3>
+<ul>
+<li>Complétez votre fiche Google Business Profile à 100 % : horaires, prestations (soins visage, épilation, onglerie, massages, maquillage...), photos avant/après et de l'ambiance de l'institut</li>
+<li>Installez les 2 plaques (caisse + cabine ou table de manucure)</li>
+<li>Briefez l'équipe : une seule phrase, apprise par cœur, dite à chaque encaissement</li>
+</ul>
+<h3>Semaines 3-8 : le rythme</h3>
+<ul>
+<li>Objectif : 15 à 30 nouveaux avis par mois</li>
+<li>Répondez à 100 % des avis sous 48 h</li>
+<li>Publiez 1 post Google par semaine : nouveau soin, promo saisonnière, disponibilité de cartes cadeaux, etc.</li>
+</ul>
+<h3>Semaines 9-12 : la consolidation</h3>
+<ul>
+<li>Les effets sur le pack local deviennent visibles (4 à 8 semaines de décalage)</li>
+<li>Analysez les mots-clés qui reviennent dans vos avis : ce sont ceux sur lesquels Google vous positionne</li>
+<li>Complétez avec notre <a href="/blog/seo-local-recherches-google">guide SEO local</a> pour verrouiller le pack local</li>
+</ul>
+</section>
+
+<section id="faq-institut" class="scroll-mt-28 mb-16">
+<h2>FAQ — Plaque NFC pour institut de beauté</h2>
+
+<h3>Combien d'avis Google un institut peut-il collecter avec une plaque NFC ?</h3>
+<p>Un institut recevant 30 à 40 clientes par semaine passe généralement de 3-6 avis/mois à 15-30 avis/mois, soit une multiplication par 4 à 6. Les bars à ongles à forte rotation dépassent souvent 35 avis par mois.</p>
+
+<h3>Où placer la plaque NFC dans un institut de beauté ?</h3>
+<p>Le comptoir de caisse est le meilleur emplacement (35-45 % de conversion) : la cliente a déjà son téléphone en main pour régler et vient de vivre un moment agréable. La table de manucure (25-35 %) et la cabine près du miroir (20-30 %) sont d'excellents compléments.</p>
+
+<h3>La plaque résiste-t-elle aux crèmes, vernis et à l'humidité ?</h3>
+<p>Oui. L'acrylique premium 3 mm résiste à l'eau, aux UV, aux rayures et aux projections. Un simple coup de chiffon suffit à la nettoyer, contrairement à une affiche papier ou un flyer plastifié qui devient vite illisible.</p>
+
+<h3>Puis-je offrir une remise ou un soin en échange d'un avis ?</h3>
+<p>Non, c'est formellement interdit par les règles de Google. Vos avis pourraient être supprimés en masse et votre fiche suspendue. La plaque NFC fonctionne en supprimant la friction, pas en achetant l'avis.</p>
+
+<h3>Faut-il un abonnement pour la plaque NFC ?</h3>
+<p>Non. La plaque Swiipx est un paiement unique : elle fonctionne pendant des années sans frais récurrents. Voir notre comparatif des <a href="/blog/plaque-avis-google-sans-abonnement">plaques sans abonnement</a>.</p>
+
+<h3>Quel pack choisir pour un institut de beauté ?</h3>
+<p>Institut mono-poste : Pack Starter. Institut avec caisse + cabine ou table de manucure : Pack Business (2 plaques), la configuration la plus courante. Spa ou institut multi-cabines : Pack Pro (5 plaques).</p>
+
+<h3>Combien de temps avant de voir un effet sur Google ?</h3>
+<p>Les premiers avis arrivent dès la première semaine. L'effet sur le classement dans le pack local se manifeste en 4 à 8 semaines, avec un saut significatif entre 3 et 6 mois si le rythme est maintenu.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : votre plus belle vitrine est sur Google</h2>
+<p>Dans la beauté, aucune cliente ne pousse la porte d'un institut au hasard. Elle a déjà choisi <strong>avant d'appeler</strong>, sur la base de ce qu'elle a lu sur Google. Votre fiche est votre vraie vitrine — celle qui travaille 24 h/24, même quand l'institut est fermé.</p>
+<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>. Vos clientes sont contentes. Il suffit de leur donner 20 secondes et un objet à portée de main au bon moment.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-salon-coiffure">salon de coiffure</a>, <a href="/blog/plaque-nfc-restaurant">restaurant</a>, <a href="/blog/plaque-nfc-cabinet-medical">cabinet médical</a>, ou notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prête à transformer chaque soin en avis Google ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie 2 ans, <strong>sans abonnement</strong>. À partir de 39,90 €.</p>
+</div>
+</section>
+`,
+  },
   'comment-choisir-plaque-nfc-avis-google': {
     title: 'Comment choisir sa plaque NFC avis Google : le guide d\'achat 2026',
     category: 'Comparatif',
@@ -3823,6 +4054,7 @@ const articles: Record<string, {
    Related articles pour la sidebar
    ───────────────────────────────────────────── */
 const relatedArticles = [
+  { slug: 'plaque-nfc-institut-beaute', label: 'Plaque NFC institut de beauté : guide 2026' },
   { slug: 'comment-choisir-plaque-nfc-avis-google', label: 'Choisir sa plaque NFC : guide d\'achat 2026' },
   { slug: 'statistiques-avis-google-2026', label: 'Statistiques avis Google 2026 : 45 chiffres clés' },
   { slug: 'repondre-avis-negatifs-google', label: 'Répondre aux avis négatifs Google' },
