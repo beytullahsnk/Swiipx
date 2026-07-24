@@ -10,6 +10,22 @@ const seoData: Record<string, {
   category: string
   faq: { q: string; a: string }[]
 }> = {
+  'optimiser-fiche-google-business-profile': {
+    title: 'Optimiser sa fiche Google Business Profile (guide 2026)',
+    description: 'Le guide complet 2026 pour optimiser votre fiche Google Business Profile : catégories, photos, avis, Google Posts et pack local. Méthode et plan 30 jours.',
+    keywords: 'optimiser fiche google business profile, google business profile, fiche google my business, google business profile avis, pack local google, seo local fiche google, ameliorer fiche google',
+    date: '2026-07-24',
+    dateModified: '2026-07-24',
+    category: 'SEO Local',
+    faq: [
+      { q: 'La fiche Google Business Profile est-elle gratuite ?', a: 'Oui, totalement. Créer, revendiquer et gérer une fiche Google Business Profile ne coûte rien. Vous ne payez que si vous choisissez de faire de la publicité via Google Ads, ce qui reste facultatif. L\'optimisation décrite dans ce guide est 100 % gratuite.' },
+      { q: 'Comment apparaître dans le pack local (les 3 résultats de Google Maps) ?', a: 'Le pack local classe les fiches selon la pertinence (catégorie et services bien choisis), la distance (votre proximité avec l\'internaute) et la notoriété (volume, fraîcheur et note de vos avis). Optimisez votre catégorie principale et collectez des avis réguliers : ce sont les deux leviers sur lesquels vous avez le plus de marge.' },
+      { q: 'Combien de photos faut-il sur une fiche Google Business Profile ?', a: 'Visez au moins 15 à 25 photos de qualité (façade, intérieur, équipe, produits ou réalisations) et ajoutez-en de nouvelles chaque mois. Les fiches avec photos reçoivent environ 42 % de demandes d\'itinéraire en plus. Les photos publiées par vos clients pèsent encore plus dans la confiance.' },
+      { q: 'Les avis Google influencent-ils vraiment le classement de ma fiche ?', a: 'Oui, c\'est l\'un des trois piliers du classement local. Google regarde le nombre d\'avis, la note moyenne et la fraîcheur (avoir des avis récents). Une fiche qui collecte des avis chaque semaine surperforme une fiche figée, même mieux notée. C\'est le facteur sur lequel vous pouvez le plus agir.' },
+      { q: 'À quelle fréquence faut-il publier des Google Posts ?', a: 'Un post par semaine est un bon rythme. Les Google Posts (hors offres) expirent au bout de 7 jours, donc la régularité compte. Ils envoient un signal de fraîcheur à Google et poussent le prospect à l\'action directement depuis votre fiche.' },
+      { q: 'Combien de temps pour voir des résultats après avoir optimisé sa fiche ?', a: 'Les premiers effets (plus de vues, plus d\'appels) apparaissent souvent en 2 à 4 semaines. L\'amélioration du classement dans le pack local se manifeste en 4 à 8 semaines, avec un saut plus net entre 2 et 4 mois si vous maintenez la collecte d\'avis et la publication de contenu.' },
+    ],
+  },
   'plaque-nfc-institut-beaute': {
     title: 'Plaque NFC institut de beauté : x5 avis Google (guide 2026)',
     description: 'Instituts de beauté, esthétique, onglerie, spa : multipliez vos avis Google par 5 avec une plaque NFC. Guide 2026 : emplacements, scripts, 3 études de cas, ROI chiffré.',

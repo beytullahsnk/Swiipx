@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 19,
+    title: 'Optimiser sa fiche Google Business Profile : le guide 2026',
+    excerpt: 'Le guide complet 2026 pour optimiser votre fiche Google Business Profile : catégories, photos, avis, Google Posts, pack local, 7 erreurs à éviter et plan d\'action 30 jours.',
+    category: 'SEO Local',
+    date: '24 juillet 2026',
+    dateIso: '2026-07-24',
+    readTime: '11 min',
+    slug: 'optimiser-fiche-google-business-profile',
+  },
+  {
     id: 18,
     title: 'Plaque NFC institut de beauté : x5 avis Google après chaque soin',
     excerpt: 'Instituts de beauté, esthétique, onglerie, spa : multipliez vos avis Google par 5 avec une plaque NFC. Emplacements, scripts esthéticienne, 3 études de cas et ROI chiffré.',

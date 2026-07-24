@@ -19,6 +19,202 @@ const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'optimiser-fiche-google-business-profile': {
+    title: 'Optimiser sa fiche Google Business Profile : le guide complet 2026',
+    category: 'SEO Local',
+    date: '24 juillet 2026',
+    readTime: '11 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Le guide complet 2026 pour optimiser votre fiche Google Business Profile : catégories, photos, avis, Google Posts, pack local, 7 erreurs à éviter et plan d\'action 30 jours.',
+    tocSections: [
+      { id: 'pourquoi-fiche', label: 'Pourquoi votre fiche est décisive' },
+      { id: 'anatomie', label: 'Anatomie d\'une fiche qui convertit' },
+      { id: 'remplir-100', label: 'Remplir sa fiche à 100 %' },
+      { id: 'categories', label: 'Choisir la bonne catégorie' },
+      { id: 'photos-gbp', label: 'Les photos qui font cliquer' },
+      { id: 'avis-signal', label: 'Les avis : le carburant n°1' },
+      { id: 'google-posts', label: 'Google Posts et Q/R' },
+      { id: 'pack-local', label: 'Comprendre le pack local' },
+      { id: 'erreurs-gbp', label: '7 erreurs à éviter' },
+      { id: 'plan-30-jours', label: 'Le plan 30 jours' },
+      { id: 'faq-gbp', label: 'FAQ' },
+    ],
+    content: `
+<section id="pourquoi-fiche" class="scroll-mt-28 mb-16">
+<h2>Pourquoi votre fiche Google Business Profile est votre meilleur commercial</h2>
+<p>Quand un habitant de votre ville tape « coiffeur », « garage » ou « restaurant » suivi du nom de sa commune, Google ne lui montre pas d'abord votre site web. Il lui montre trois fiches sur une carte : le fameux <strong>pack local</strong>. Ces trois fiches captent à elles seules près de 44 % des clics de la page. Votre fiche Google Business Profile (l'ancien « Google My Business ») est donc, dans les faits, votre véritable page d'accueil.</p>
+<p>Les chiffres sont sans appel : <strong>76 % des personnes qui font une recherche locale sur leur smartphone visitent un commerce dans les 24 heures</strong>, et 28 % de ces recherches débouchent sur un achat. Une fiche bien optimisée reçoit en moyenne <strong>5 à 7 fois plus de vues</strong> qu'une fiche laissée à l'abandon.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une fiche complète et active a 2,7 fois plus de chances d'être jugée digne de confiance et génère 70 % de demandes d'itinéraire en plus. Passer de la 6e à la 2e place du pack local, c'est souvent <strong>+30 à +50 % d'appels et de visites</strong> — sans dépenser un euro de publicité.</p>
+</div>
+<p>La bonne nouvelle : la fiche est <strong>100 % gratuite</strong>, et l'immense majorité des commerces la sous-exploitent. Ce guide vous donne la méthode complète pour transformer la vôtre en machine à clients.</p>
+</section>
+
+<section id="anatomie" class="scroll-mt-28 mb-16">
+<h2>Anatomie d'une fiche qui convertit</h2>
+<p>Avant d'optimiser, il faut comprendre ce que voit un prospect. Une fiche Google Business Profile se compose d'une dizaine d'éléments, et chacun influence soit votre <strong>classement</strong> (votre position dans le pack local), soit votre <strong>taux de clic</strong> (le pourcentage de gens qui vous choisissent une fois affiché).</p>
+<ul>
+<li><strong>Le nom de l'établissement</strong> : votre nom commercial réel, sans mots-clés artificiels.</li>
+<li><strong>La catégorie principale et les catégories secondaires</strong> : le levier de classement le plus sous-estimé.</li>
+<li><strong>La note et le nombre d'avis</strong> : le premier critère de confiance, et un signal de classement majeur.</li>
+<li><strong>Les photos</strong> : elles déterminent une grande partie du taux de clic.</li>
+<li><strong>Les horaires, le téléphone et l'adresse (le NAP)</strong> : la cohérence de ces données pèse sur votre référencement.</li>
+<li><strong>La description, les services, les attributs, les Google Posts</strong> : le contenu qui enrichit la fiche.</li>
+</ul>
+<p>Retenez cette logique : <strong>la catégorie et les avis vous font monter, les photos et la note vous font choisir</strong>. On traite les deux dans ce guide.</p>
+</section>
+
+<section id="remplir-100" class="scroll-mt-28 mb-16">
+<h2>Étape 1 : remplir sa fiche à 100 %</h2>
+<p>Google favorise les fiches complètes, tout simplement parce qu'elles offrent une meilleure expérience à ses utilisateurs. Une fiche remplie à 100 % surperforme systématiquement une fiche à moitié vide. Voici la checklist.</p>
+<h3>Les informations non négociables (NAP)</h3>
+<p>NAP signifie Name, Address, Phone. Ces trois données doivent être <strong>strictement identiques partout</strong> : sur votre fiche, votre site, vos annuaires, vos réseaux. La moindre incohérence (« Rue » écrit « R. », un ancien numéro de téléphone) brouille Google et vous fait perdre des places.</p>
+<h3>Les horaires, y compris exceptionnels</h3>
+<p>Renseignez vos horaires précis et surtout les <strong>horaires exceptionnels</strong> (jours fériés, congés). Rien ne détruit plus la confiance qu'un client qui trouve porte close alors que la fiche affiche « Ouvert ». Google pénalise aussi les fiches jugées peu fiables.</p>
+<h3>La description et les services</h3>
+<p>Rédigez une description de 500 à 750 caractères qui décrit votre activité, vos spécialités et votre zone. Listez ensuite tous vos <strong>services</strong> un par un : chacun devient un mot-clé sur lequel Google peut vous positionner. Un garage qui liste « vidange », « climatisation », « pneus » et « distribution » apparaît sur chacune de ces requêtes.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Astuce :</strong> activez la messagerie et la fonction « Réservation » ou « Devis » si votre activité s'y prête. Chaque interaction supplémentaire (message, appel, itinéraire) est un signal d'engagement que Google interprète positivement.</p>
+</div>
+</section>
+
+<section id="categories" class="scroll-mt-28 mb-16">
+<h2>Étape 2 : choisir la bonne catégorie (le levier n°1 sous-estimé)</h2>
+<p>Si vous ne deviez optimiser qu'une seule chose, ce serait votre catégorie. La <strong>catégorie principale</strong> est le facteur de classement le plus puissant que vous contrôlez directement. Une erreur ici et vous êtes invisible, quelle que soit votre note.</p>
+<h3>La catégorie principale</h3>
+<p>Choisissez la catégorie la plus <strong>précise</strong> qui décrit votre cœur de métier. « Restaurant italien » bat « Restaurant » ; « Institut de beauté » bat « Salon de beauté » si c'est votre vraie activité. Une catégorie trop large vous met en concurrence avec trop de monde ; une catégorie inadaptée vous coupe des bonnes recherches.</p>
+<h3>Les catégories secondaires</h3>
+<p>Ajoutez jusqu'à 9 catégories secondaires pour couvrir vos autres activités, mais uniquement celles que vous exercez réellement. Un institut de beauté peut ajouter « Onglerie », « Spa » ou « Salon de bronzage ». N'ajoutez jamais une catégorie non pertinente : Google le détecte et cela dilue votre pertinence.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Méthode d'observation :</strong> les catégories de vos concurrents sont publiques. Un lecteur de catégories gratuit, ou une recherche dans le code source de leur fiche, révèle la catégorie principale des trois du pack local. Alignez-vous sur celle qui domine, puis différenciez-vous sur le volume d'avis.</p>
+</div>
+</section>
+
+<section id="photos-gbp" class="scroll-mt-28 mb-16">
+<h2>Étape 3 : les photos qui font cliquer</h2>
+<p>Les fiches avec photos reçoivent <strong>42 % de demandes d'itinéraire en plus</strong> et 35 % de clics vers le site en plus que les fiches sans. La photo est ce qui fait qu'un prospect vous choisit plutôt que le concurrent d'à côté, à note égale.</p>
+<h3>Les photos indispensables</h3>
+<ul>
+<li><strong>Le logo et la photo de couverture</strong> : votre identité visuelle.</li>
+<li><strong>La façade et l'entrée</strong> : elles aident le client à vous repérer dans la rue.</li>
+<li><strong>L'intérieur</strong> : ambiance, propreté, atmosphère — décisif dans la restauration et la beauté.</li>
+<li><strong>L'équipe au travail</strong> : humanise et rassure.</li>
+<li><strong>Les produits et réalisations</strong> : plats, coupes, réparations, avant/après.</li>
+</ul>
+<p>Ajoutez de nouvelles photos <strong>chaque mois</strong> : Google favorise les fiches qui montrent des signes de vie. Les photos ajoutées par les clients pèsent encore plus lourd — une raison de plus de collecter des avis, souvent accompagnés de photos.</p>
+</section>
+
+<section id="avis-signal" class="scroll-mt-28 mb-16">
+<h2>Étape 4 : les avis, le carburant n°1 du classement</h2>
+<p>On arrive au facteur décisif. Après la pertinence (catégorie) et la proximité, <strong>les avis sont le troisième pilier du classement local</strong> — et le seul sur lequel vous pouvez agir en volume. Google regarde trois choses : le <strong>nombre</strong> d'avis, la <strong>note</strong> moyenne et la <strong>fraîcheur</strong> (avez-vous des avis récents ?).</p>
+<p>Une fiche figée à 30 avis, même à 4,8, se fait dépasser par une fiche qui en collecte 10 nouveaux chaque mois. La régularité est un signal aussi fort que le volume. Pour tout comprendre, nos <a href="/blog/statistiques-avis-google-2026">45 statistiques sur les avis Google</a> détaillent l'impact chiffré de chaque facteur.</p>
+<h3>Le problème : la satisfaction ne se transforme pas en avis</h3>
+<p>Vos clients sont contents, mais ils oublient de le dire. Le client mécontent, lui, écrit dans l'heure. C'est l'asymétrie émotionnelle : <strong>la frustration écrit, la satisfaction se tait</strong>. Résultat, votre note ne reflète pas votre vrai niveau de service. La solution n'est pas de demander plus fort, mais de <strong>supprimer la friction</strong> au moment exact où le client est satisfait.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>🎯 Le levier concret :</strong> une <a href="/#product" class="font-semibold underline">plaque NFC Swiipx</a> posée au comptoir ouvre votre page d'avis Google en approchant un smartphone — sans application, sans saisie. Elle convertit <strong>35 à 45 % des clients sollicités</strong>, contre 8 à 12 % pour un QR code seul et 1 à 3 % pour une carte de visite. C'est le moyen le plus efficace d'alimenter en continu le facteur de classement n°1.</p>
+</div>
+<p>Comparez les méthodes dans notre guide <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC vs QR code</a>, et n'oubliez jamais de <a href="/blog/repondre-avis-negatifs-google">répondre à vos avis négatifs</a> : Google valorise les fiches actives et les lecteurs jugent autant votre réponse que l'avis lui-même.</p>
+</section>
+
+<section id="google-posts" class="scroll-mt-28 mb-16">
+<h2>Étape 5 : Google Posts, questions et produits</h2>
+<p>Le contenu que vous publiez sur votre fiche est un signal de fraîcheur puissant, et pourtant moins de 20 % des commerces l'utilisent. C'est une opportunité de vous démarquer à peu de frais.</p>
+<h3>Les Google Posts</h3>
+<p>Publiez un post par semaine : une promotion, une nouveauté, un événement, un rappel saisonnier. Les posts s'affichent directement sur votre fiche et poussent le prospect à l'action. Ils expirent au bout de 7 jours (sauf les offres), d'où l'intérêt d'un rythme régulier.</p>
+<h3>Les questions et réponses</h3>
+<p>La section Questions/Réponses de votre fiche est publique et <strong>n'importe qui peut répondre</strong>. Prenez les devants : posez vous-même les 5 à 8 questions les plus fréquentes (parking, accès PMR, moyens de paiement, sur rendez-vous ou non) et répondez-y. Vous contrôlez ainsi l'information et vous rassurez le prospect.</p>
+<h3>Les produits et services</h3>
+<p>Ajoutez vos produits phares avec photo, prix et description. Ils s'affichent dans un carrousel sur la fiche et enrichissent votre référencement avec des mots-clés supplémentaires.</p>
+</section>
+
+<section id="pack-local" class="scroll-mt-28 mb-16">
+<h2>Comprendre le pack local : les 3 facteurs de classement</h2>
+<p>Google classe les fiches locales selon trois critères officiels. Comprendre leur pondération vous évite de perdre du temps sur ce qui ne compte pas.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Facteur</th><th class="border p-3 text-left">Ce que Google regarde</th><th class="border p-3 text-left">Votre marge d'action</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Pertinence</strong></td><td class="border p-3">Catégorie, services, mots des avis, description</td><td class="border p-3">Élevée</td></tr>
+<tr><td class="border p-3"><strong>Distance</strong></td><td class="border p-3">Proximité entre l'internaute et votre adresse</td><td class="border p-3">Faible</td></tr>
+<tr><td class="border p-3"><strong>Notoriété</strong></td><td class="border p-3">Nombre et fraîcheur des avis, note, activité, mentions</td><td class="border p-3">Très élevée</td></tr>
+</tbody>
+</table>
+</div>
+<p>La distance, vous ne la contrôlez pas. Mais la <strong>pertinence</strong> (catégorie + services + mots-clés dans les avis) et la <strong>notoriété</strong> (volume et fraîcheur des avis) sont entre vos mains. C'est là que se joue près de 80 % du classement. Pour approfondir, lisez notre <a href="/blog/seo-local-recherches-google">guide du SEO local</a>.</p>
+</section>
+
+<section id="erreurs-gbp" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs qui plombent une fiche</h2>
+<ul>
+<li><strong>Bourrer le nom de mots-clés</strong> (« Garage Dupont Réparation Pas Cher Lyon ») : c'est contraire aux règles de Google, votre fiche peut être suspendue.</li>
+<li><strong>Une catégorie principale trop vague</strong> : le tueur silencieux du classement.</li>
+<li><strong>Des informations NAP incohérentes</strong> entre la fiche, le site et les annuaires.</li>
+<li><strong>Aucune photo récente</strong> : la fiche paraît morte et inspire la méfiance.</li>
+<li><strong>Ignorer les avis</strong>, surtout les négatifs : 88 % des internautes lisent les réponses du gérant.</li>
+<li><strong>Acheter des avis ou offrir une contrepartie</strong> : suppression en masse et suspension à la clé.</li>
+<li><strong>Créer des fiches en double</strong> : elles se cannibalisent et brouillent Google. Signalez et fusionnez les doublons.</li>
+</ul>
+<p>Sur ce dernier point comme sur la collecte, l'objectif est une fiche unique, propre, active et alimentée en avis frais. Découvrez aussi <a href="/blog/ou-placer-plaque-avis-google">où placer votre plaque</a> pour maximiser la collecte.</p>
+</section>
+
+<section id="plan-30-jours" class="scroll-mt-28 mb-16">
+<h2>Le plan d'action 30 jours</h2>
+<h3>Semaine 1 : les fondations</h3>
+<ul>
+<li>Revendiquez et vérifiez votre fiche si ce n'est pas déjà fait.</li>
+<li>Complétez-la à 100 % : NAP, horaires, description, services, attributs.</li>
+<li>Vérifiez et affinez votre catégorie principale et vos catégories secondaires.</li>
+</ul>
+<h3>Semaine 2 : le visuel et le contenu</h3>
+<ul>
+<li>Ajoutez 15 à 25 photos de qualité (façade, intérieur, équipe, réalisations).</li>
+<li>Rédigez et publiez vos 5 à 8 questions/réponses.</li>
+<li>Programmez votre premier Google Post.</li>
+</ul>
+<h3>Semaines 3-4 : le carburant</h3>
+<ul>
+<li>Installez votre dispositif de collecte d'avis et briefez l'équipe sur une phrase unique.</li>
+<li>Objectif : 10 à 25 nouveaux avis le premier mois, puis maintenez le rythme.</li>
+<li>Répondez à 100 % des avis sous 48 h. Pour accélérer, suivez notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>.</li>
+</ul>
+<p>Selon votre nombre de points de contact, équipez-vous du <a href="/product/starter">Pack Starter</a> (1 plaque), du <a href="/product/business">Pack Business</a> (2 plaques, la configuration la plus courante) ou du <a href="/product/pro">Pack Pro</a> (5 plaques).</p>
+</section>
+
+<section id="faq-gbp" class="scroll-mt-28 mb-16">
+<h2>FAQ — Optimiser sa fiche Google Business Profile</h2>
+
+<h3>La fiche Google Business Profile est-elle gratuite ?</h3>
+<p>Oui, totalement. Créer, revendiquer et gérer une fiche Google Business Profile ne coûte rien. Vous ne payez que si vous choisissez de faire de la publicité via Google Ads, ce qui reste facultatif. L'optimisation décrite dans ce guide est 100 % gratuite.</p>
+
+<h3>Comment apparaître dans le pack local (les 3 résultats de Google Maps) ?</h3>
+<p>Le pack local classe les fiches selon la pertinence (catégorie et services bien choisis), la distance (votre proximité avec l'internaute) et la notoriété (volume, fraîcheur et note de vos avis). Optimisez votre catégorie principale et collectez des avis réguliers : ce sont les deux leviers sur lesquels vous avez le plus de marge.</p>
+
+<h3>Combien de photos faut-il sur une fiche Google Business Profile ?</h3>
+<p>Visez au moins 15 à 25 photos de qualité (façade, intérieur, équipe, produits ou réalisations) et ajoutez-en de nouvelles chaque mois. Les fiches avec photos reçoivent environ 42 % de demandes d'itinéraire en plus. Les photos publiées par vos clients pèsent encore plus dans la confiance.</p>
+
+<h3>Les avis Google influencent-ils vraiment le classement de ma fiche ?</h3>
+<p>Oui, c'est l'un des trois piliers du classement local. Google regarde le nombre d'avis, la note moyenne et la fraîcheur (avoir des avis récents). Une fiche qui collecte des avis chaque semaine surperforme une fiche figée, même mieux notée. C'est le facteur sur lequel vous pouvez le plus agir.</p>
+
+<h3>À quelle fréquence faut-il publier des Google Posts ?</h3>
+<p>Un post par semaine est un bon rythme. Les Google Posts (hors offres) expirent au bout de 7 jours, donc la régularité compte. Ils envoient un signal de fraîcheur à Google et poussent le prospect à l'action directement depuis votre fiche.</p>
+
+<h3>Combien de temps pour voir des résultats après avoir optimisé sa fiche ?</h3>
+<p>Les premiers effets (plus de vues, plus d'appels) apparaissent souvent en 2 à 4 semaines. L'amélioration du classement dans le pack local se manifeste en 4 à 8 semaines, avec un saut plus net entre 2 et 4 mois si vous maintenez la collecte d'avis et la publication de contenu.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : une fiche optimisée travaille pour vous 24 h/24</h2>
+<p>Votre fiche Google Business Profile est le premier point de contact entre votre commerce et 76 % des habitants de votre zone. Bien remplie, bien catégorisée, illustrée et alimentée en avis frais, elle devient un commercial infatigable qui vend votre sérieux avant même que le client ne pousse la porte.</p>
+<p>Aucun de ces leviers ne coûte cher — sauf le temps. Et le plus rentable de tous, celui qui pèse le plus dans le classement, c'est le volume d'avis. C'est précisément là qu'un objet posé au bon endroit, au bon moment, change tout.</p>
+<p>Guides complémentaires : <a href="/blog/statistiques-avis-google-2026">45 statistiques avis Google</a>, <a href="/blog/seo-local-recherches-google">SEO local</a>, <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>, ou la <a href="/blog/plaque-nfc-garage-automobile">plaque NFC pour garage</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à alimenter votre fiche en avis Google ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie 2 ans, <strong>sans abonnement</strong>. À partir de 39,90 €.</p>
+</div>
+</section>
+`,
+  },
   'plaque-nfc-institut-beaute': {
     title: 'Plaque NFC institut de beauté : collecter des avis Google après chaque soin',
     category: 'Secteur',
@@ -4054,6 +4250,7 @@ const articles: Record<string, {
    Related articles pour la sidebar
    ───────────────────────────────────────────── */
 const relatedArticles = [
+  { slug: 'optimiser-fiche-google-business-profile', label: 'Optimiser sa fiche Google Business Profile' },
   { slug: 'plaque-nfc-institut-beaute', label: 'Plaque NFC institut de beauté : guide 2026' },
   { slug: 'comment-choisir-plaque-nfc-avis-google', label: 'Choisir sa plaque NFC : guide d\'achat 2026' },
   { slug: 'statistiques-avis-google-2026', label: 'Statistiques avis Google 2026 : 45 chiffres clés' },
