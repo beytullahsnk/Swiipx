@@ -74,7 +74,10 @@ async function createSendcloudParcel(
   customerPhone?: string,
   itemsJson?: string
 ) {
-  const publicKey = process.env.SENDCLOUD_PUBLIC_KEY
+  // Accepte les 2 noms possibles pour eviter une panne si la variable
+  // est configuree sous l'un ou l'autre nom sur l'hebergeur.
+  const publicKey =
+    process.env.SENDCLOUD_PUBLIC_KEY || process.env.NEXT_PUBLIC_SENDCLOUD_PUBLIC_KEY
   const secretKey = process.env.SENDCLOUD_SECRET_KEY
 
   if (!publicKey || !secretKey) {
@@ -133,7 +136,8 @@ async function createSendcloudParcel(
 
 // Sendcloud API helper — Point Relais (Mondial Relay)
 async function createSendcloudServicePointParcel(metadata: Record<string, string>, customerEmail: string, orderNumber: string) {
-  const publicKey = process.env.NEXT_PUBLIC_SENDCLOUD_PUBLIC_KEY || process.env.SENDCLOUD_PUBLIC_KEY
+  const publicKey =
+    process.env.SENDCLOUD_PUBLIC_KEY || process.env.NEXT_PUBLIC_SENDCLOUD_PUBLIC_KEY
   const secretKey = process.env.SENDCLOUD_SECRET_KEY
 
   if (!publicKey || !secretKey) {
