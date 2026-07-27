@@ -6,17 +6,47 @@ import { useCart } from '../store/cart'
 import { useShippingStore } from '../store/shipping'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { track, tagSession, toEuros } from '../../lib/analytics'
 
 function SuccessContent() {
   const { clearCart } = useCart()
   const { reset: resetShipping } = useShippingStore()
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
+
   useEffect(() => {
-    if (sessionId) {
-      clearCart()
-      resetShipping()
+    if (!sessionId) return
+
+    // L'événement `purchase` doit partir AVANT de vider le panier
+    // (on a besoin du contenu) et une seule fois par commande, même
+    // si le client recharge la page.
+    const guardKey = `swiipx-purchase-tracked-${sessionId}`
+    const alreadyTracked =
+      typeof window !== 'undefined' && sessionStorage.getItem(guardKey)
+
+    if (!alreadyTracked) {
+      const { items, totalCents } = useCart.getState()
+      const { method } = useShippingStore.getState()
+
+      track('purchase', {
+        transaction_id: sessionId,
+        value: toEuros(totalCents()),
+        currency: 'EUR',
+        shipping_method: method,
+        items_count: items.reduce((n, i) => n + i.qty, 0),
+        item_ids: items.map((i) => i.id).join(','),
+      })
+      tagSession('funnel_step', 'purchase')
+
+      try {
+        sessionStorage.setItem(guardKey, '1')
+      } catch {
+        /* mode privé : au pire l'événement repart une fois */
+      }
     }
+
+    clearCart()
+    resetShipping()
   }, [clearCart, resetShipping, sessionId])
 
   return (

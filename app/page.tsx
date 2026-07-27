@@ -85,50 +85,8 @@ export default function Home() {
         name: 'Swiipx',
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Marie Dubois' },
-        datePublished: '2026-01-15',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Depuis que j\'ai installé les plaques Swiipx, mes avis Google ont explosé ! +180% en 2 mois.',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Thomas Bernard' },
-        datePublished: '2026-01-22',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Un investissement qui s\'est payé en quelques semaines ! Mes clients adorent scanner la plaque.',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Sophie Martin' },
-        datePublished: '2026-02-03',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Simple, efficace et ultra rapide à mettre en place. Le retour sur investissement est impressionnant !',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Alexandre Petit' },
-        datePublished: '2026-02-10',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Ma note Google est passée de 4.2 à 4.8 en 3 mois. Enfin une solution qui fonctionne !',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Isabelle Rousseau' },
-        datePublished: '2026-02-18',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'Nos clients adorent la technologie NFC ! Un must-have pour tout commerce.',
-      },
-    ],
+    // aggregateRating + review retires : Google interdit les avis auto-generes.
+    // A reintroduire uniquement avec de vrais avis clients collectes et affiches.
   }
 
   const breadcrumbJsonLd = {
@@ -211,14 +169,6 @@ export default function Home() {
     },
   }
 
-  const packAggregateRating = {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  }
-
   const offerCatalogJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'OfferCatalog',
@@ -232,7 +182,6 @@ export default function Home() {
           name: 'Pack Starter — 1 plaque NFC avis Google',
           image: 'https://swiipx.fr/product-main.jpg',
           brand: { '@type': 'Brand', name: 'Swiipx' },
-          aggregateRating: packAggregateRating,
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/starter',
@@ -252,7 +201,6 @@ export default function Home() {
           name: 'Pack Business — 2 plaques NFC avis Google',
           image: 'https://swiipx.fr/product-main.jpg',
           brand: { '@type': 'Brand', name: 'Swiipx' },
-          aggregateRating: packAggregateRating,
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/business',
@@ -272,7 +220,6 @@ export default function Home() {
           name: 'Pack Pro — 5 plaques NFC avis Google',
           image: 'https://swiipx.fr/product-main.jpg',
           brand: { '@type': 'Brand', name: 'Swiipx' },
-          aggregateRating: packAggregateRating,
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/pro',

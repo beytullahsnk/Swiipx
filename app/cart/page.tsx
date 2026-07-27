@@ -5,16 +5,30 @@ import { ArrowLeft, Minus, Plus, Trash2, ShoppingBag } from 'lucide-react'
 import { useCart, formatPrice } from '../store/cart'
 import { useCompanyStore } from '../store/company'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import toast from 'react-hot-toast'
 import Image from 'next/image'
 import CompanySelectedCard from '../components/CompanySelectedCard'
+import { track, toEuros } from '../../lib/analytics'
 
 export default function CartPage() {
   const router = useRouter()
   const { items, setQty, removeItem, totalCents, clearCart, hasHydrated } = useCart()
   const { company } = useCompanyStore()
   const [isCheckingOut, setIsCheckingOut] = useState(false)
+
+  // view_cart : mesure combien de visiteurs atteignent le panier
+  useEffect(() => {
+    if (hasHydrated && items.length > 0) {
+      track('view_cart', {
+        value: toEuros(totalCents()),
+        currency: 'EUR',
+        items_count: items.reduce((n, i) => n + i.qty, 0),
+      })
+    }
+    // volontairement au montage uniquement
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hasHydrated])
 
   // Rediriger vers la page checkout custom (entreprise sera demandée au checkout si absente)
   const handleCheckout = () => {

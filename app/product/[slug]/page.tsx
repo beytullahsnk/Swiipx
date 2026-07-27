@@ -11,6 +11,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart, CartItem } from '../../store/cart'
+import { clients } from '../../data/clients'
 import {
   Accordion,
   AccordionItem,
@@ -349,14 +350,13 @@ export default function ProductDetailPage() {
               </p>
             </div>
 
-            {/* Rating */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-1" aria-hidden="true">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-accent fill-accent" />
-                ))}
-              </div>
-              <span className="text-gray-600 font-medium">{product.ratingValue}/5 ({product.reviewCount}+ avis)</span>
+            {/* Caractéristiques factuelles (note inventée retirée) */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-gray-600">
+              <span className="font-medium">Acrylique premium 120×120 mm</span>
+              <span className="text-gray-300" aria-hidden="true">·</span>
+              <span className="font-medium">NFC NTAG215</span>
+              <span className="text-gray-300" aria-hidden="true">·</span>
+              <span className="font-medium">Fabriqué en France</span>
             </div>
 
             {/* Price */}
@@ -439,12 +439,12 @@ export default function ProductDetailPage() {
             </button>
 
             {/* Social proof */}
-            <div className="flex items-center justify-center space-x-2 text-sm">
-              <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="font-medium text-gray-600">500+ entreprises nous font confiance</span>
-            </div>
+            <p className="text-center text-sm text-gray-500">
+              Ils utilisent Swiipx :{' '}
+              <span className="font-medium text-gray-700">
+                {clients.map((c) => c.name).join(' \u00b7 ')}
+              </span>
+            </p>
 
             {/* Included Features */}
             <div className="bg-gray-50 rounded-2xl p-6">

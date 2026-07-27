@@ -51,8 +51,9 @@ export default function Footer() {
               <span className="text-2xl font-bold text-white">Swiipx</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
-              La solution NFC la plus simple pour booster vos avis Google et votre visibilité locale.
-              Rejoignez plus de 500 entreprises satisfaites.
+              La solution NFC la plus simple pour collecter vos avis Google.
+              Chaque plaque est programmée avec le lien d&apos;avis de votre établissement,
+              prête à l&apos;emploi dès réception.
             </p>
           </div>
 

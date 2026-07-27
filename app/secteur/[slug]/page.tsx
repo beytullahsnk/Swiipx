@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Check, ChevronRight, Star } from 'lucide-react'
+import { ArrowRight, Check, ChevronRight } from 'lucide-react'
 
 interface SectorContent {
   eyebrow: string
@@ -31,7 +31,7 @@ const sectors: Record<string, SectorContent> = {
   restaurant: {
     eyebrow: 'Plaque NFC · Restaurants & cafés',
     h1: 'Plaque NFC pour restaurants : multipliez vos avis Google par 7',
-    intro: '500+ restaurants français utilisent la plaque NFC Swiipx pour collecter +30 avis Google par mois. Sans abonnement, livraison gratuite, garantie 2 ans.',
+    intro: 'La plaque NFC Swiipx est programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Sans abonnement, livraison gratuite, garantie 2 ans.',
     heroStat: { value: '+488 %', label: 'd\'avis Google en 4 mois (cas client)' },
     problemTitle: 'Le problème : 95 % de vos clients satisfaits ne laissent jamais d\'avis',
     problemPoints: [
@@ -222,12 +222,9 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
                   Lire le guide complet
                 </Link>
               </div>
-              <div className="mt-8 flex items-center gap-2 text-sm text-gray-500">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-accent fill-accent" aria-hidden="true" />
-                ))}
-                <span className="font-medium">4,9/5 · 500+ entreprises</span>
-              </div>
+              <p className="mt-8 text-sm text-gray-500">
+                Sans abonnement · Garantie 2 ans · Livraison gratuite en 2-5 jours
+              </p>
             </div>
 
             <div className="lg:col-span-5">

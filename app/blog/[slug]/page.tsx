@@ -4597,7 +4597,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             Boostez vos avis Google<br />avec Swiipx dès aujourd&apos;hui
           </p>
           <p className="text-gray-800 mb-6 max-w-xl mx-auto">
-            Commandez votre plaque avis Google NFC et commencez à collecter des avis en 10 secondes. Utilisé par 500+ entreprises.
+            Commandez votre plaque avis Google NFC et commencez à collecter des avis en 10 secondes. 
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

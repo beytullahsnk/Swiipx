@@ -8,6 +8,8 @@ import toast from 'react-hot-toast'
 import { useCart } from '../store/cart'
 import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
+import { clients } from '../data/clients'
+import { track } from '../../lib/analytics'
 
 // Product packs data (matching cart store IDs)
 const productPacks = [
@@ -100,6 +102,14 @@ export default function ProductShowcase() {
     const selectedProduct = productPacks.find(p => p.id === selectedPack)
     if (selectedProduct) {
       addItem(selectedProduct.id, business || undefined)
+      track('add_to_cart', {
+        item_id: selectedProduct.id,
+        item_name: selectedProduct.name,
+        value: selectedProduct.price,
+        currency: 'EUR',
+        // Permet de mesurer si l'entreprise est choisie avant ou après l'ajout
+        has_business: !!business?.place_id,
+      })
       toast.success(`${selectedProduct.name} ajouté au panier ! 🎉`)
       setTimeout(() => {
         openCart()
@@ -241,25 +251,18 @@ export default function ProductShowcase() {
                 Plaque Avis Google
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Démarrez votre collecte d&apos;avis dès aujourd&apos;hui avec notre méthode testée sur 500+ entreprises !
+                Programmée avec le lien d&apos;avis Google de votre établissement.
+                Vos clients approchent leur téléphone, l&apos;avis se rédige en 10 secondes.
               </p>
             </div>
 
-            {/* Reviews / Rating */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-5 h-5 text-yellow-400 fill-current"
-                    viewBox="0 0 20 20"
-                    aria-hidden="true"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <span className="text-gray-600 font-medium">4.9/5 (500+ avis)</span>
+            {/* Caractéristiques factuelles (remplace la note inventée) */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600">
+              <span className="font-medium">Acrylique premium 120×120 mm</span>
+              <span className="text-gray-300" aria-hidden="true">·</span>
+              <span className="font-medium">NFC NTAG215</span>
+              <span className="text-gray-300" aria-hidden="true">·</span>
+              <span className="font-medium">QR code de secours</span>
             </div>
 
             {/* Benefits List */}
@@ -283,7 +286,10 @@ export default function ProductShowcase() {
               {productPacks.map((pack) => (
                 <button
                   key={pack.id}
-                  onClick={() => setSelectedPack(pack.id)}
+                  onClick={() => {
+                    setSelectedPack(pack.id)
+                    track('select_pack', { item_id: pack.id, value: pack.price, currency: 'EUR' })
+                  }}
                   className={`relative w-full text-left p-4 rounded-xl border-2 transition-all duration-300 ${
                     selectedPack === pack.id
                       ? 'border-primary bg-blue-50 shadow-lg'
@@ -359,6 +365,9 @@ export default function ProductShowcase() {
               <BusinessAutocomplete
                 onSelect={(businessData) => {
                   setBusiness(businessData)
+                  if (businessData?.place_id) {
+                    track('business_selected', { source: 'homepage' })
+                  }
                 }}
                 placeholder="Tapez le nom de votre entreprise ici.."
               />
@@ -374,13 +383,13 @@ export default function ProductShowcase() {
                 Ajouter au panier
               </button>
 
-              {/* Social proof */}
-              <div className="flex items-center justify-center space-x-2 text-sm">
-                <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="font-medium text-gray-600">500+ entreprises nous font confiance</span>
-              </div>
+              {/* Preuve sociale : clients réels et nommés */}
+              <p className="text-center text-sm text-gray-500">
+                Ils utilisent Swiipx :{' '}
+                <span className="font-medium text-gray-700">
+                  {clients.map((c) => c.name).join(' · ')}
+                </span>
+              </p>
 
               {/* Garantie 14 jours */}
               <div className="flex items-start space-x-2.5 p-3 bg-green-50 border border-green-200 rounded-lg">

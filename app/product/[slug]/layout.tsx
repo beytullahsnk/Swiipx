@@ -83,21 +83,6 @@ const productSpecs: Record<string, Array<{ name: string; value: string }>> = {
   ],
 }
 
-const productReviews: Record<string, Array<{ author: string; rating: number; body: string; date: string }>> = {
-  starter: [
-    { author: 'Marie L.', rating: 5, body: 'Parfait pour mon salon de coiffure ! Les clients scannent et laissent un avis en quelques secondes. Très bonne qualité de plaque.', date: '2026-01-15' },
-    { author: 'Thomas R.', rating: 5, body: 'Facile à installer, mes avis Google ont doublé en un mois. Le QR code de secours est un vrai plus. Je recommande vivement.', date: '2026-01-28' },
-  ],
-  business: [
-    { author: 'Sophie M.', rating: 5, body: 'Nous avons placé les 2 plaques à l\'accueil et en salle d\'attente de notre cabinet dentaire. Résultat : +150% d\'avis en 2 mois.', date: '2026-02-02' },
-    { author: 'Jean-Pierre D.', rating: 5, body: 'Le pack Business est idéal pour couvrir plusieurs points de contact dans notre restaurant. Clients et équipe ravis.', date: '2026-01-20' },
-  ],
-  pro: [
-    { author: 'Claire B.', rating: 5, body: 'Nous avons équipé nos 5 agences immobilières. Le tableau de bord analytics est un vrai plus pour suivre les performances par emplacement.', date: '2026-02-10' },
-    { author: 'Marc A.', rating: 5, body: 'Solution professionnelle complète. Le support 24/7 est réactif et la qualité des plaques en acrylique est irréprochable. Investissement rentabilisé en 2 semaines.', date: '2026-01-30' },
-  ],
-}
-
 const productFAQs: Record<string, Array<{ question: string; answer: string }>> = {
   starter: [
     { question: 'Comment fonctionne la plaque NFC avis Google Swiipx ?', answer: 'Vos clients approchent simplement leur smartphone de la plaque NFC. Ils sont automatiquement redirigés vers votre page d\'avis Google pour laisser un avis en quelques secondes. Aucune application requise, compatible tous smartphones récents.' },
@@ -173,7 +158,6 @@ export default function ProductLayout({ params, children }: { params: { slug: st
   }
 
   const specs = productSpecs[slug] || []
-  const reviews = productReviews[slug] || []
   const faqs = productFAQs[slug] || []
 
   const productJsonLd = {
@@ -245,26 +229,8 @@ export default function ProductLayout({ params, children }: { params: { slug: st
         },
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: product.ratingValue,
-      reviewCount: product.reviewCount,
-      bestRating: '5',
-      worstRating: '1',
-    },
-    ...(reviews.length > 0 && {
-      review: reviews.map((r) => ({
-        '@type': 'Review',
-        author: { '@type': 'Person', name: r.author },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: r.rating.toString(),
-          bestRating: '5',
-        },
-        reviewBody: r.body,
-        datePublished: r.date,
-      })),
-    }),
+    // aggregateRating + review retires : les avis doivent etre reels, collectes
+    // aupres de vrais clients et affiches sur la page. A reintroduire ensuite.
   }
 
   const breadcrumbJsonLd = {

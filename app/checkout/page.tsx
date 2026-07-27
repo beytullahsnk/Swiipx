@@ -29,6 +29,7 @@ import type { ServicePointData } from '../store/shipping'
 import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
 import Image from 'next/image'
+import { track, tagSession, toEuros } from '../../lib/analytics'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
@@ -388,6 +389,7 @@ function CheckoutShippingPicker({ billingPostalCode, billingCity }: CheckoutShip
         ...(billingCity && { city: billingCity }),
       },
       (point: any) => {
+        track('service_point_selected', { carrier: point.carrier || 'mondial_relay' })
         setServicePoint({
           id: point.id.toString(),
           name: point.name,
@@ -411,7 +413,10 @@ function CheckoutShippingPicker({ billingPostalCode, billingCity }: CheckoutShip
       {/* Point Relais */}
       <button
         type="button"
-        onClick={() => setMethod('point_relais')}
+        onClick={() => {
+          setMethod('point_relais')
+          track('shipping_method_selected', { method: 'point_relais' })
+        }}
         className={`w-full flex items-center p-3.5 rounded-lg border transition-all duration-200 text-left ${
           method === 'point_relais' ? 'border-primary bg-blue-50/50' : 'border-gray-200 hover:border-gray-300'
         }`}
@@ -471,7 +476,10 @@ function CheckoutShippingPicker({ billingPostalCode, billingCity }: CheckoutShip
       {/* Domicile */}
       <button
         type="button"
-        onClick={() => setMethod('domicile')}
+        onClick={() => {
+          setMethod('domicile')
+          track('shipping_method_selected', { method: 'domicile' })
+        }}
         className={`w-full flex items-center p-3.5 rounded-lg border transition-all duration-200 text-left ${
           method === 'domicile' ? 'border-primary bg-blue-50/50' : 'border-gray-200 hover:border-gray-300'
         }`}
@@ -751,7 +759,9 @@ function CheckoutForm({
             </p>
             <BusinessAutocomplete
               onSelect={(businessData) => {
-                setBusinessSelected(!!businessData?.place_id)
+                const ok = !!businessData?.place_id
+                setBusinessSelected(ok)
+                if (ok) track('business_selected', { source: 'checkout' })
               }}
               placeholder="Tapez le nom de votre entreprise ici.."
             />
@@ -874,7 +884,10 @@ function CheckoutForm({
             </div>
 
             <PaymentElement
-              onChange={(e) => setPaymentReady(e.complete)}
+              onChange={(e) => {
+                setPaymentReady(e.complete)
+                if (e.complete) track('add_payment_info', { currency: 'EUR' })
+              }}
               options={{
                 layout: 'tabs',
                 // Wallets activés ici → Apple Pay / Google Pay apparaissent
@@ -943,6 +956,12 @@ export default function CheckoutPage() {
         if (!res.ok) throw new Error(data.error)
         setClientSecret(data.clientSecret)
         setPaymentIntentId(data.paymentIntentId)
+        track('begin_checkout', {
+          value: toEuros(data.amount ?? 0),
+          currency: 'EUR',
+          items_count: items.reduce((n, i) => n + i.qty, 0),
+        })
+        tagSession('funnel_step', 'checkout')
       } catch (err: any) {
         setError(err.message)
       }

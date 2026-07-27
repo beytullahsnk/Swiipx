@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import ClientLayout from './components/ClientLayout'
+import Analytics from './components/Analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -165,13 +166,9 @@ export default function RootLayout({
                   closes: '18:00',
                 },
               ],
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '4.9',
-                reviewCount: '500',
-                bestRating: '5',
-                worstRating: '1',
-              },
+              // Pas d'aggregateRating : Google interdit les notes auto-declarees
+              // sans avis reels verifiables. A reintroduire quand de vrais avis
+              // clients seront collectes et affiches sur le site.
               sameAs: [
                 'https://www.instagram.com/swiipx.fr',
                 'https://www.facebook.com/swiipx',
@@ -184,6 +181,7 @@ export default function RootLayout({
         <ClientLayout>
           {children}
         </ClientLayout>
+        <Analytics />
       </body>
     </html>
   )

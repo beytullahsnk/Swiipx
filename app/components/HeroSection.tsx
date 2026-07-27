@@ -1,24 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Star } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-
-// 4 vraies photos clients (à placer dans /public/customers/)
-// Pour l'instant fallback Unsplash en attendant la livraison des photos par l'utilisateur.
-const customerAvatars = [
-  '/customers/c1.jpg',
-  '/customers/c2.jpg',
-  '/customers/c3.jpg',
-  '/customers/c4.jpg',
-]
-// Fallback temporaire (sera retiré une fois les photos clients livrées)
-const fallbackAvatars = [
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop',
-  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop',
-  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop',
-]
+import { clients } from '../data/clients'
 
 export default function HeroSection() {
   return (
@@ -72,30 +57,17 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* Social proof unique : avatars + rating + trust line en 1 bloc compact */}
-            <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
-              <div className="flex -space-x-2">
-                {customerAvatars.map((src, i) => (
-                  <Image
-                    key={i}
-                    src={fallbackAvatars[i]}
-                    alt={`Client Swiipx satisfait ${i + 1}`}
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                    data-real-src={src}
-                  />
+            {/* Preuve sociale : clients réels, nommés. Pas de note ni de compteur inventé. */}
+            <div className="mt-10">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2.5">
+                Ils utilisent Swiipx
+              </p>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                {clients.map((client) => (
+                  <span key={client.name} className="text-sm font-semibold text-gray-700">
+                    {client.name}
+                  </span>
                 ))}
-              </div>
-              <div className="flex items-center gap-1.5 text-sm">
-                <div className="flex" aria-hidden="true">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-accent fill-accent" />
-                  ))}
-                </div>
-                <span className="font-semibold text-gray-900">4,9/5</span>
-                <span className="text-gray-400">·</span>
-                <span className="text-gray-600">500+ entreprises</span>
               </div>
             </div>
 

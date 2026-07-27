@@ -12,7 +12,7 @@ const sectorData: Record<string, {
     description: 'Restaurant : plaque NFC avis Google sans abonnement. 35-45 % de taux d\'avis collectés. Pack 2 plaques 59,90 €, livraison gratuite, garantie 2 ans.',
     keywords: 'plaque nfc restaurant, avis google restaurant, plaque restaurant nfc, plaque avis google bistrot, nfc restauration france, plaque avis brasserie',
     h1: 'Plaque NFC pour restaurants : multipliez vos avis Google par 7',
-    intro: 'La plaque NFC Swiipx aide 500+ restaurants en France à passer de 5-8 avis Google/mois à 30-60 avis/mois. Acrylique premium, sans abonnement, livraison gratuite.',
+    intro: 'Plaque NFC programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Acrylique premium, sans abonnement, livraison gratuite.',
   },
   'salon-coiffure': {
     title: 'Plaque NFC pour Salon de Coiffure — Avis Google | Swiipx',

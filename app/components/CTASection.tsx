@@ -1,18 +1,15 @@
 'use client'
 
-import { ArrowRight, Truck, Shield, RotateCcw, Star } from 'lucide-react'
+import { ArrowRight, Truck, Shield, RotateCcw } from 'lucide-react'
 
 export default function CTASection() {
   return (
     <section className="py-20 sm:py-32 bg-gradient-to-b from-primary to-blue-800 relative">
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Social proof stars */}
-        <div className="flex justify-center items-center gap-1 mb-4">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" aria-hidden="true" />
-          ))}
-          <span className="text-white/80 text-sm ml-2 font-medium">4,9/5 — 500+ clients satisfaits</span>
-        </div>
+        {/* Arguments factuels (les étoiles/notes inventées ont été retirées) */}
+        <p className="text-white/80 text-sm font-medium mb-4">
+          Sans abonnement · Garantie 2 ans · Satisfait ou remboursé 14 jours
+        </p>
 
         {/* Headline */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
