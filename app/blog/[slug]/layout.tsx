@@ -11,7 +11,7 @@ const seoData: Record<string, {
   faq: { q: string; a: string }[]
 }> = {
   'plaque-nfc-boulangerie': {
-    title: 'Plaque NFC boulangerie : x5 avis Google (guide 2026)',
+    title: 'Plaque NFC boulangerie : x5 avis Google',
     description: 'Boulangeries, pâtisseries, points chauds : multipliez vos avis Google par 5 avec une plaque NFC malgré le rush. Guide 2026 : emplacements, scripts, 3 études de cas, ROI.',
     keywords: 'plaque nfc boulangerie, avis google boulangerie, plaque nfc patisserie, avis google boulanger, plaque avis google boulangerie patisserie, seo local boulangerie, avis google point chaud',
     date: '2026-07-27',
@@ -27,7 +27,7 @@ const seoData: Record<string, {
     ],
   },
   'optimiser-fiche-google-business-profile': {
-    title: 'Optimiser sa fiche Google Business Profile (guide 2026)',
+    title: 'Optimiser sa fiche Google Business Profile',
     description: 'Le guide complet 2026 pour optimiser votre fiche Google Business Profile : catégories, photos, avis, Google Posts et pack local. Méthode et plan 30 jours.',
     keywords: 'optimiser fiche google business profile, google business profile, fiche google my business, google business profile avis, pack local google, seo local fiche google, ameliorer fiche google',
     date: '2026-07-24',
@@ -43,7 +43,7 @@ const seoData: Record<string, {
     ],
   },
   'plaque-nfc-institut-beaute': {
-    title: 'Plaque NFC institut de beauté : x5 avis Google (guide 2026)',
+    title: 'Plaque NFC institut de beauté : x5 avis',
     description: 'Instituts de beauté, esthétique, onglerie, spa : multipliez vos avis Google par 5 avec une plaque NFC. Guide 2026 : emplacements, scripts, 3 études de cas, ROI chiffré.',
     keywords: 'plaque nfc institut de beaute, avis google institut de beaute, plaque nfc esthetique, avis google estheticienne, plaque nfc onglerie, avis google spa, seo local institut beaute',
     date: '2026-07-22',
@@ -59,7 +59,7 @@ const seoData: Record<string, {
     ],
   },
   'comment-choisir-plaque-nfc-avis-google': {
-    title: 'Comment choisir sa plaque NFC avis Google (guide 2026)',
+    title: 'Choisir sa plaque NFC avis Google en 2026',
     description: 'Comment choisir sa plaque NFC avis Google : puce NTAG215, materiau, sans abonnement, nombre de plaques. 7 criteres, comparatif et pieges a eviter. Guide d\'achat 2026.',
     keywords: 'choisir plaque nfc, plaque nfc avis google, guide achat plaque nfc, puce ntag215, plaque nfc sans abonnement, meilleure plaque nfc avis google, comparatif plaque nfc',
     date: '2026-07-20',
@@ -107,7 +107,7 @@ const seoData: Record<string, {
     ],
   },
   'plaque-nfc-garage-automobile': {
-    title: 'Plaque NFC garage automobile : x4 avis Google (guide 2026)',
+    title: 'Plaque NFC garage auto : x4 avis Google',
     description: 'Garages, centres auto, carrosseries : multipliez vos avis Google par 4 avec une plaque NFC. Guide 2026 : emplacements, scripts garagiste, 3 études de cas, ROI chiffré.',
     keywords: 'plaque nfc garage, avis google garage, plaque nfc garage automobile, avis google garagiste, plaque avis google centre auto, avis google carrosserie, seo local garage',
     date: '2026-07-13',
@@ -123,7 +123,7 @@ const seoData: Record<string, {
     ],
   },
   'plaque-nfc-cabinet-medical': {
-    title: 'Plaque NFC cabinet médical : avis Google et déontologie (guide 2026)',
+    title: 'Plaque NFC cabinet médical : avis & règles',
     description: 'Médecins, dentistes, kinés, ostéopathes : collectez des avis Google avec une plaque NFC en respectant la déontologie. Guide 2026 : placements, scripts conformes, FAQ.',
     keywords: 'plaque nfc cabinet medical, avis google dentiste, avis google medecin, plaque nfc dentiste, avis google kinesitherapeute, plaque nfc osteopathe, deontologie avis google',
     date: '2026-06-08',
@@ -138,7 +138,7 @@ const seoData: Record<string, {
     ],
   },
   'plaque-nfc-restaurant': {
-    title: 'Plaque NFC restaurant : collecter +200 avis Google en 2026 (guide complet)',
+    title: 'Plaque NFC restaurant : +200 avis Google/an',
     description: 'Restaurant : comment collecter +200 avis Google par an avec une plaque NFC. Guide 2026 : placements, scripts serveur, ROI, 3 études de cas réelles.',
     keywords: 'plaque nfc restaurant, avis google restaurant, plaque avis google restaurant, plaque nfc bistrot, nfc restauration, avis restaurant google, collecte avis restaurant',
     date: '2026-05-11',
@@ -153,7 +153,7 @@ const seoData: Record<string, {
     ],
   },
   'plaque-avis-google-sans-abonnement': {
-    title: 'Plaque avis Google sans abonnement : comparatif 2026 (5 marques)',
+    title: 'Plaque avis Google sans abonnement : le top 5',
     description: 'Plaque avis Google sans abonnement : comparatif honnête de 5 marques en 2026. Prix, qualité, fonctionnalités. Économisez 500-1500 € sur 5 ans.',
     keywords: 'plaque avis google sans abonnement, plaque nfc sans abonnement, plaque google paiement unique, comparatif plaque nfc, plaque sans engagement, plaque avis sans abonnement',
     date: '2026-05-11',
@@ -183,7 +183,7 @@ const seoData: Record<string, {
     ],
   },
   'prix-plaque-nfc-avis-google': {
-    title: 'Prix plaque NFC avis Google 2026 : combien ça coûte vraiment ?',
+    title: 'Prix plaque NFC avis Google : le vrai budget',
     description: 'Prix d\'une plaque NFC avis Google en 2026 : fourchettes par qualité, packs multi-plaques, facteurs de prix. Le bon budget : 35-60 € par plaque.',
     keywords: 'prix plaque nfc avis google, combien coute plaque nfc, tarif plaque avis google, plaque nfc pas cher, prix plaque google, cout plaque nfc avis',
     date: '2026-05-12',
@@ -198,7 +198,7 @@ const seoData: Record<string, {
     ],
   },
   'ou-placer-plaque-avis-google': {
-    title: 'Où placer votre plaque avis Google ? 7 emplacements stratégiques 2026',
+    title: 'Où placer sa plaque avis Google ? 7 endroits',
     description: 'Le placement de votre plaque avis Google détermine 80 % du taux de conversion. Guide 2026 : 7 emplacements optimaux par secteur (restaurant, salon, retail).',
     keywords: 'où placer plaque avis google, emplacement plaque nfc, placement plaque avis google, position plaque nfc, optimiser plaque nfc, placer plaque nfc',
     date: '2026-05-12',
@@ -213,7 +213,7 @@ const seoData: Record<string, {
     ],
   },
   'plaque-nfc-vs-qr-code-avis-google': {
-    title: 'Plaque NFC vs QR Code pour les avis Google : comparatif 2026',
+    title: 'Plaque NFC ou QR code : lequel convertit ?',
     description: 'Plaque NFC ou QR code pour collecter des avis Google ? Comparatif 2026 : taux de conversion (35-45 % vs 8-12 %), prix, compatibilité, ROI.',
     keywords: 'plaque nfc vs qr code, qr code avis google, plaque nfc avis google, comparatif nfc qr, avis google nfc, taux conversion qr code, plaque nfc france, comparer nfc qr',
     date: '2026-05-10',
@@ -228,7 +228,7 @@ const seoData: Record<string, {
     ],
   },
   'obtenir-plus-avis-google': {
-    title: 'Comment obtenir plus d\'avis Google en 2026 : 10 méthodes testées',
+    title: 'Obtenir plus d\'avis Google : 10 méthodes',
     description: '10 méthodes testées pour obtenir plus d\'avis Google rapidement (+250 % en 3 mois). NFC, QR code, scripts email/SMS : guide pratique 2026.',
     keywords: 'obtenir avis google, plus avis google, augmenter avis google, collecte avis, méthodes avis google, NFC avis, QR code avis, script demande avis',
     date: '2026-01-15',
@@ -242,7 +242,7 @@ const seoData: Record<string, {
     ],
   },
   'avis-clients-influencent-business': {
-    title: 'Pourquoi les avis clients influencent votre business | Guide 2026',
+    title: 'L\'impact réel des avis clients sur votre CA',
     description: 'Impact des avis Google sur le chiffre d\'affaires, la conversion et le SEO local. Données 2026, stratégies par secteur et calcul du ROI.',
     keywords: 'avis clients business, impact avis google, avis et chiffre affaires, avis clients conversion, e-réputation, gestion avis négatifs, ROI avis google',
     date: '2026-01-20',
@@ -256,7 +256,7 @@ const seoData: Record<string, {
     ],
   },
   'booster-visibilite-locale': {
-    title: '5 astuces pour booster votre visibilité locale | Guide SEO 2026',
+    title: 'Booster sa visibilité locale : 5 astuces',
     description: 'Dominer le pack local Google : optimisation Google Business Profile, avis, citations NAP, pages locales, backlinks. Plan d\'action 30/60/90 jours.',
     keywords: 'visibilité locale, SEO local, pack local google, Google Business Profile, citations NAP, avis google local, référencement local, backlinks locaux',
     date: '2026-01-21',
@@ -270,7 +270,7 @@ const seoData: Record<string, {
     ],
   },
   'nfc-avis-clients': {
-    title: 'NFC : la nouvelle arme pour collecter des avis clients | Guide 2026',
+    title: 'NFC et avis clients : le guide complet 2026',
     description: 'Collecter plus d\'avis Google avec une plaque NFC : fonctionnement, taux de conversion (35-45 %), mise en place et ROI. Guide 2026.',
     keywords: 'NFC avis clients, plaque NFC avis google, collecte avis NFC, NFC vs QR code, plaque avis restaurant, NFC commerce, avis google automatique',
     date: '2026-01-22',
@@ -285,7 +285,7 @@ const seoData: Record<string, {
     ],
   },
   'seo-local-recherches-google': {
-    title: 'SEO Local : comment grimper en tête des recherches Google | Guide 2026',
+    title: 'SEO local : passer en tête de Google Maps',
     description: 'Méthode 2026 pour gagner le pack local Google Maps : Google Business Profile, avis, pages locales, citations NAP, backlinks. Plan d\'action 30 jours.',
     keywords: 'SEO local, référencement local, pack local google, google maps seo, Google Business Profile, schema LocalBusiness, citations NAP, backlinks locaux, visibilité locale',
     date: '2026-01-23',
@@ -299,7 +299,7 @@ const seoData: Record<string, {
     ],
   },
   'erreurs-demander-avis': {
-    title: 'Les erreurs fatales à éviter avec vos avis Google | Guide 2026',
+    title: 'Avis Google : les 7 erreurs qui font bannir',
     description: 'Acheter des faux avis, offrir des récompenses, harceler les clients : les erreurs qui font bannir votre fiche Google. Guide complet 2026.',
     keywords: 'erreurs avis google, faux avis google, acheter avis google, avis google interdits, règles avis google, sanctions google avis, bonnes pratiques avis',
     date: '2026-01-24',
