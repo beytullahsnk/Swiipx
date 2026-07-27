@@ -8,7 +8,7 @@ import toast from 'react-hot-toast'
 import { useCart } from '../store/cart'
 import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
-import { clients } from '../data/clients'
+import { clients, clientCount } from '../data/clients'
 import { track } from '../../lib/analytics'
 
 // Product packs data (matching cart store IDs)
@@ -385,10 +385,11 @@ export default function ProductShowcase() {
 
               {/* Preuve sociale : clients réels et nommés */}
               <p className="text-center text-sm text-gray-500">
-                Ils utilisent Swiipx :{' '}
+                Déjà {clientCount} commerces équipés :{' '}
                 <span className="font-medium text-gray-700">
-                  {clients.map((c) => c.name).join(' · ')}
+                  {clients.slice(0, 4).map((c) => c.name).join(' · ')}
                 </span>
+                …
               </p>
 
               {/* Garantie 14 jours */}

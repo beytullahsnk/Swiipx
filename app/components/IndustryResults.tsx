@@ -1,12 +1,20 @@
-import { Utensils, Scissors, Stethoscope, Hotel, Cookie, Car } from 'lucide-react'
+import { Utensils, Scissors, Stethoscope, Hotel, Cookie, Store } from 'lucide-react'
 
+/**
+ * Section « adapté à votre métier ».
+ *
+ * Volontairement SANS pourcentage de résultat : aucune moyenne de performance
+ * ne peut être affirmée tant qu'elle n'a pas été mesurée sur un échantillon réel.
+ * On répond à la vraie question du visiteur — « où je la mets, chez moi ? » —
+ * avec un conseil concret et vérifiable.
+ */
 const industries = [
-  { icon: Utensils, name: 'Restaurants', growth: '+180%' },
-  { icon: Scissors, name: 'Salons de coiffure', growth: '+220%' },
-  { icon: Stethoscope, name: 'Cabinets médicaux', growth: '+150%' },
-  { icon: Hotel, name: 'Hôtels & gîtes', growth: '+160%' },
-  { icon: Cookie, name: 'Boulangeries', growth: '+200%' },
-  { icon: Car, name: 'Auto-écoles', growth: '+140%' },
+  { icon: Utensils, name: 'Restaurants', placement: 'Sur le porte-addition' },
+  { icon: Cookie, name: 'Boulangeries', placement: 'À côté du terminal de paiement' },
+  { icon: Scissors, name: 'Salons de coiffure', placement: 'Sur le miroir du poste' },
+  { icon: Stethoscope, name: 'Cabinets médicaux', placement: "Au comptoir d'accueil" },
+  { icon: Store, name: 'Commerces & épiceries', placement: 'En caisse' },
+  { icon: Hotel, name: 'Hôtels & gîtes', placement: 'À la réception' },
 ]
 
 export default function IndustryResults() {
@@ -15,41 +23,44 @@ export default function IndustryResults() {
       <div className="max-w-6xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
-            Résultats par secteur
+            Adapté à votre métier
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-            Adapté à votre métier
+            Où placer votre plaque
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Augmentation moyenne d&apos;avis Google observée sur 3 mois après la mise en place.
+            L&apos;emplacement fait toute la différence : la plaque doit être visible
+            au moment où le client a déjà son téléphone en main.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto">
-          {industries.map(({ icon: Icon, name, growth }) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto">
+          {industries.map(({ icon: Icon, name, placement }) => (
             <div
               key={name}
-              className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:border-primary/40 transition-colors flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3"
+              className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 hover:border-primary/40 transition-colors"
             >
-              {/* Icône + nom — stack vertical sur mobile, horizontal sur desktop */}
-              <div className="flex items-center gap-3 min-w-0 w-full sm:w-auto">
+              <div className="flex items-center gap-3 mb-2">
                 <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
                   <Icon className="w-4 h-4 text-primary" aria-hidden="true" />
                 </div>
-                <span className="text-sm sm:text-base font-medium text-gray-900 leading-tight">
+                <span className="text-sm sm:text-base font-semibold text-gray-900">
                   {name}
                 </span>
               </div>
-              {/* % */}
-              <span className="text-xl sm:text-lg font-bold text-primary tabular-nums leading-none pl-12 sm:pl-0">
-                {growth}
-              </span>
+              <p className="text-sm text-gray-600 pl-12">{placement}</p>
             </div>
           ))}
         </div>
 
-        <p className="text-xs text-gray-500 text-center mt-6 max-w-xl mx-auto">
-          Moyennes constatées sur l&apos;ensemble de nos clients par secteur. Résultats variables selon l&apos;emplacement et la régularité d&apos;utilisation.
+        <p className="text-sm text-gray-500 text-center mt-8">
+          Un doute sur le meilleur emplacement chez vous ?{' '}
+          <a
+            href="/blog/ou-placer-plaque-avis-google"
+            className="text-primary hover:text-blue-700 font-medium underline underline-offset-2"
+          >
+            Voir le guide des 7 emplacements
+          </a>
         </p>
       </div>
     </section>

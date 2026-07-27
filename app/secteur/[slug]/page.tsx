@@ -12,7 +12,8 @@ interface SectorContent {
   problemPoints: string[]
   solutionTitle: string
   solutionSteps: { title: string; description: string }[]
-  caseStudy: {
+  /** Etude de cas : uniquement si REELLE et validee par le client. */
+  caseStudy?: {
     name: string
     location: string
     profile: string
@@ -20,6 +21,8 @@ interface SectorContent {
     action: string
     result: string
   }
+  /** Noms de clients reels de ce secteur (accord obtenu). */
+  sectorClients?: string[]
   bestPlacements: string[]
   recommendedPack: { slug: string; name: string; price: string; description: string }
   faq: { q: string; a: string }[]
@@ -32,7 +35,7 @@ const sectors: Record<string, SectorContent> = {
     eyebrow: 'Plaque NFC · Restaurants & cafés',
     h1: 'Plaque NFC pour restaurants : multipliez vos avis Google par 7',
     intro: 'La plaque NFC Swiipx est programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Sans abonnement, livraison gratuite, garantie 2 ans.',
-    heroStat: { value: '+488 %', label: 'd\'avis Google en 4 mois (cas client)' },
+    heroStat: { value: '9', label: 'restaurants et bars déjà équipés' },
     problemTitle: 'Le problème : 95 % de vos clients satisfaits ne laissent jamais d\'avis',
     problemPoints: [
       'Vos clients sont satisfaits après le repas, mais oublient de laisser un avis',
@@ -48,14 +51,6 @@ const sectors: Record<string, SectorContent> = {
       { title: 'Le client approche son smartphone', description: 'La page d\'avis Google s\'ouvre en 3 secondes. Le client note et commente en 30 secondes.' },
       { title: 'Vous récoltez 30-60 avis/mois', description: 'Soit 4-7× plus qu\'avant. Note moyenne en hausse, ranking pack local en hausse, CA en hausse.' },
     ],
-    caseStudy: {
-      name: 'Le Petit Bistrot',
-      location: 'Lyon 7e',
-      profile: '35 couverts, 2 services, ticket moyen 28 €',
-      before: '47 avis Google, 4,2/5, 8 avis/mois',
-      action: '2 plaques NFC déployées (porte-addition + caisse) + formation des serveurs',
-      result: '178 avis, 4,7/5, 33 avis/mois en moyenne. Position 1 pack local "bistrot Lyon 7", +28 % de couverts midi.',
-    },
     bestPlacements: [
       '🍽️ Sur la table (taux : 40-50 %)',
       '💳 À la caisse (taux : 25-35 %)',
@@ -74,14 +69,15 @@ const sectors: Record<string, SectorContent> = {
       { q: 'Faut-il former mes serveurs ?', a: 'Oui, c\'est crucial. Une plaque NFC sans communication verbale convertit 3-4 fois moins. Comptez 15-30 min de briefing pour expliquer le script aux serveurs.' },
       { q: 'Quel pack pour un restaurant de 80 couverts ?', a: 'Pack Pro (5 plaques) : 1 plaque par groupe de 15-20 couverts. C\'est le ratio optimal pour ne pas créer de "bouchon" sur une seule plaque.' },
     ],
+    sectorClients: ['Chicken City', "L'Ottoman", 'Burger Time', 'Royal Food', "Family's Pizza Cergy", "Broche d'Or", 'Le Phare', 'Le Flo', 'Le Longchamp'],
     relatedBlogSlug: 'plaque-nfc-restaurant',
     relatedBlogLabel: 'Guide complet : plaque NFC restaurant',
   },
   'salon-coiffure': {
     eyebrow: 'Plaque NFC · Salons de coiffure & instituts',
     h1: 'Plaque NFC pour salons de coiffure : 40-55 % de taux de conversion',
-    intro: 'Le secteur N°1 du NFC : vos clientes sont captives, satisfaites, leur téléphone à portée. Conditions parfaites pour collecter +150 avis par an.',
-    heroStat: { value: '+660 %', label: 'd\'avis Google en 4 mois (cas client salon)' },
+    intro: 'Vos clientes sont captives, satisfaites, leur téléphone à portée. Conditions parfaites pour collecter +150 avis par an.',
+    heroStat: { value: '10 s', label: 'pour qu\'une cliente laisse son avis' },
     problemTitle: 'Le problème : votre note Google bloque à 4,3/5',
     problemPoints: [
       'Vos clientes sont ravies en sortant... mais oublient de laisser un avis',
@@ -97,14 +93,6 @@ const sectors: Record<string, SectorContent> = {
       { title: 'La cliente laisse un avis en 30 secondes', description: 'Au pic émotionnel maximal, quand elle découvre sa transformation.' },
       { title: 'Vous passez de 5 à 35 avis/mois', description: 'Note moyenne en hausse, position pack local en hausse, nouvelles clientes en hausse.' },
     ],
-    caseStudy: {
-      name: 'Salon Élégance',
-      location: 'Bordeaux Centre',
-      profile: '3 fauteuils, 180 clientes/mois, ticket moyen 60 €',
-      before: '52 avis Google, 4,3/5, 4-5 avis/mois',
-      action: '2 plaques NFC (1 par poste principal + caisse) + formation script',
-      result: '191 avis, 4,8/5, 38 avis/mois. +28 nouvelles clientes/mois, position 2 pack local Bordeaux, CA +22 %.',
-    },
     bestPlacements: [
       '💇 Sur le miroir du poste de coiffage (taux record : 45-55 %)',
       '🪞 Près du miroir d\'accueil (30-40 %)',
@@ -130,7 +118,7 @@ const sectors: Record<string, SectorContent> = {
     eyebrow: 'Plaque NFC · Cabinets médicaux & professionnels libéraux',
     h1: 'Plaque NFC pour cabinets médicaux : discrète, déontologique, efficace',
     intro: 'Pour médecins, dentistes, kinés, ostéos, vétérinaires : une solution conforme aux règles déontologiques qui aide à collecter des avis Google de patients satisfaits.',
-    heroStat: { value: '+22 avis/mois', label: 'sur un cabinet dentaire (Toulouse)' },
+    heroStat: { value: '10 s', label: 'pour qu\'un patient laisse son avis' },
     problemTitle: 'Le problème : 1-2 avis Google par mois, c\'est insuffisant',
     problemPoints: [
       'Les patients satisfaits ne laissent quasi jamais d\'avis spontanément',
@@ -146,14 +134,6 @@ const sectors: Record<string, SectorContent> = {
       { title: 'Il approche son téléphone, laisse un avis en 30 secondes', description: 'En toute simplicité, sans incitation, sans cadeau.' },
       { title: 'Vous passez de 1-2 à 15-25 avis par mois', description: 'Tout en restant 100 % conforme à votre code de déontologie professionnelle.' },
     ],
-    caseStudy: {
-      name: 'Cabinet dentaire Sourire Plus',
-      location: 'Toulouse',
-      profile: '2 praticiens, 300 patients/mois',
-      before: 'Aucune solution de collecte. 1-2 avis spontanés par mois',
-      action: '2 plaques NFC discrètes (accueil + salle d\'attente) + QR de secours',
-      result: '22 avis/mois. Passage de la page 2 à position 1 du pack local pour "dentiste Toulouse centre" en 5 mois.',
-    },
     bestPlacements: [
       '🏥 À l\'accueil, à côté du paiement (taux : 25-35 %)',
       '🪑 Dans la salle d\'attente, sur la table basse (15-25 %)',
@@ -271,26 +251,50 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
           </ol>
         </section>
 
-        {/* Étude de cas */}
-        <section className="bg-gray-50 rounded-2xl p-8 sm:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">Étude de cas</p>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">{sector.caseStudy.name}</h2>
-          <p className="text-sm text-gray-500 mb-6">{sector.caseStudy.location} · {sector.caseStudy.profile}</p>
-          <dl className="space-y-4">
-            <div>
-              <dt className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Avant</dt>
-              <dd className="text-base text-gray-700">{sector.caseStudy.before}</dd>
+        {/* Étude de cas — affichée uniquement si réelle et validée par le client */}
+        {sector.caseStudy && (
+          <section className="bg-gray-50 rounded-2xl p-8 sm:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">Étude de cas</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">{sector.caseStudy.name}</h2>
+            <p className="text-sm text-gray-500 mb-6">{sector.caseStudy.location} · {sector.caseStudy.profile}</p>
+            <dl className="space-y-4">
+              <div>
+                <dt className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Avant</dt>
+                <dd className="text-base text-gray-700">{sector.caseStudy.before}</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Action</dt>
+                <dd className="text-base text-gray-700">{sector.caseStudy.action}</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-primary uppercase tracking-wider mb-1">Résultat</dt>
+                <dd className="text-base text-gray-900 font-medium">{sector.caseStudy.result}</dd>
+              </div>
+            </dl>
+          </section>
+        )}
+
+        {/* Clients réels de ce secteur */}
+        {sector.sectorClients && sector.sectorClients.length > 0 && (
+          <section className="bg-gray-50 rounded-2xl p-8 sm:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
+              Ils utilisent déjà Swiipx
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+              {sector.sectorClients.length} établissements de votre secteur
+            </h2>
+            <div className="flex flex-wrap gap-2.5">
+              {sector.sectorClients.map((name) => (
+                <span
+                  key={name}
+                  className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-semibold text-gray-800"
+                >
+                  {name}
+                </span>
+              ))}
             </div>
-            <div>
-              <dt className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Action</dt>
-              <dd className="text-base text-gray-700">{sector.caseStudy.action}</dd>
-            </div>
-            <div>
-              <dt className="text-sm font-semibold text-primary uppercase tracking-wider mb-1">Résultat</dt>
-              <dd className="text-base text-gray-900 font-medium">{sector.caseStudy.result}</dd>
-            </div>
-          </dl>
-        </section>
+          </section>
+        )}
 
         {/* Meilleurs emplacements */}
         <section>

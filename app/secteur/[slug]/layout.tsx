@@ -18,7 +18,7 @@ const sectorData: Record<string, {
     title: 'Plaque NFC pour Salon de Coiffure — Avis Google | Swiipx',
     description: 'Salon de coiffure : plaque NFC avis Google. 40-55 % de conversion (taux record). +150 avis/an. Pack adapté aux salons, garantie 2 ans, sans abonnement.',
     keywords: 'plaque nfc salon coiffure, plaque avis google coiffeur, nfc coiffure, plaque avis institut beauté, plaque nfc barbier, plaque coiffeur',
-    h1: 'Plaque NFC pour salons de coiffure : le secteur n°1 du NFC',
+    h1: 'Plaque NFC pour salons de coiffure : avis Google en 10 s',
     intro: 'Les salons de coiffure obtiennent le meilleur taux de conversion en NFC : 40-55 % des clientes laissent un avis. Découvrez pourquoi et comment.',
   },
   'cabinet-medical': {

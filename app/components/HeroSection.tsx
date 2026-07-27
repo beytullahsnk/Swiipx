@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import { clients } from '../data/clients'
+import { clients, clientCount } from '../data/clients'
 
 export default function HeroSection() {
   return (
@@ -36,7 +36,7 @@ export default function HeroSection() {
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
               Vos clients laissent un avis en{' '}
               <span className="font-semibold text-gray-900">10 secondes</span>
-              {' '}au lieu de 3-5 minutes. Ils approchent leur smartphone, c&apos;est tout. +200% d&apos;avis en moyenne sur 3 mois.
+              {' '}au lieu de 3-5 minutes. Ils approchent leur smartphone, c&apos;est tout. Aucune application à installer.
             </p>
 
             {/* CTA Buttons */}
@@ -57,17 +57,20 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* Preuve sociale : clients réels, nommés. Pas de note ni de compteur inventé. */}
+            {/* Preuve sociale : clients réels, nommés. Aucun chiffre inventé. */}
             <div className="mt-10">
               <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2.5">
-                Ils utilisent Swiipx
+                {clientCount} commerces équipés
               </p>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                {clients.map((client) => (
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                {clients.slice(0, 6).map((client) => (
                   <span key={client.name} className="text-sm font-semibold text-gray-700">
                     {client.name}
                   </span>
                 ))}
+                <span className="text-sm text-gray-400">
+                  et {clientCount - 6} autres
+                </span>
               </div>
             </div>
 
@@ -101,8 +104,8 @@ export default function HeroSection() {
 
               {/* Stat flottante 1 — en haut à GAUCHE (rupture de symétrie) */}
               <div className="absolute -top-4 -left-4 bg-white rounded-xl shadow-lg border border-gray-100 px-4 py-3">
-                <p className="text-2xl sm:text-3xl font-bold text-primary leading-none">+200%</p>
-                <p className="text-xs text-gray-500 mt-1">Avis en moyenne</p>
+                <p className="text-2xl sm:text-3xl font-bold text-primary leading-none">0 €</p>
+                <p className="text-xs text-gray-500 mt-1">D&apos;abonnement</p>
               </div>
 
               {/* Stat flottante 2 — en bas à DROITE */}

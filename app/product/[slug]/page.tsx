@@ -11,7 +11,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart, CartItem } from '../../store/cart'
-import { clients } from '../../data/clients'
+import { clients, clientCount } from '../../data/clients'
 import {
   Accordion,
   AccordionItem,
