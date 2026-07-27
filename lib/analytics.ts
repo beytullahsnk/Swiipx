@@ -42,9 +42,17 @@ export type AnalyticsEvent =
 declare global {
   interface Window {
     gtag?: (command: string, eventName: string, params?: Params) => void
+    dataLayer?: unknown[]
     clarity?: (command: string, ...args: unknown[]) => void
   }
 }
+
+/**
+ * Si GTM est configuré, c'est LUI qui envoie les événements à GA4.
+ * On coupe alors l'appel gtag() direct, sinon chaque événement serait
+ * compté deux fois dans GA4.
+ */
+const GTM_ENABLED = !!process.env.NEXT_PUBLIC_GTM_ID
 
 /**
  * Envoie un événement à tous les outils configurés.
@@ -59,10 +67,21 @@ export function track(event: AnalyticsEvent, params: Params = {}) {
     if (value !== undefined && value !== '') clean[key] = value
   }
 
+  // Format GTM : lisible par Google Tag Manager (et inerte sans lui)
   try {
-    window.gtag?.('event', event, clean)
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({ event, ...clean })
   } catch {
-    /* GA4 absent ou bloqué par un adblock — sans conséquence */
+    /* dataLayer indisponible — sans conséquence */
+  }
+
+  // gtag direct : uniquement si GTM n'est PAS branché (évite le double comptage)
+  if (!GTM_ENABLED) {
+    try {
+      window.gtag?.('event', event, clean)
+    } catch {
+      /* GA4 absent ou bloqué par un adblock — sans conséquence */
+    }
   }
 
   try {

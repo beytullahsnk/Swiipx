@@ -1,7 +1,7 @@
 import Script from 'next/script'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 /**
  * Ensemble des outils de mesure.
@@ -16,6 +16,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
  */
 export default function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_ID
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID
 
   return (
@@ -23,7 +24,9 @@ export default function Analytics() {
       <VercelAnalytics />
       <SpeedInsights />
 
-      {gaId && <GoogleAnalytics gaId={gaId} />}
+      {/* GTM et GA4 direct sont EXCLUSIFS : si GTM est configuré, c'est lui
+          qui envoie à GA4. Charger les deux doublerait chaque événement. */}
+      {gtmId ? <GoogleTagManager gtmId={gtmId} /> : gaId && <GoogleAnalytics gaId={gaId} />}
 
       {clarityId && (
         <Script id="clarity" strategy="afterInteractive">
