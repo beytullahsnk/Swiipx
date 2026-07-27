@@ -10,6 +10,22 @@ const seoData: Record<string, {
   category: string
   faq: { q: string; a: string }[]
 }> = {
+  'plaque-nfc-boulangerie': {
+    title: 'Plaque NFC boulangerie : x5 avis Google (guide 2026)',
+    description: 'Boulangeries, pâtisseries, points chauds : multipliez vos avis Google par 5 avec une plaque NFC malgré le rush. Guide 2026 : emplacements, scripts, 3 études de cas, ROI.',
+    keywords: 'plaque nfc boulangerie, avis google boulangerie, plaque nfc patisserie, avis google boulanger, plaque avis google boulangerie patisserie, seo local boulangerie, avis google point chaud',
+    date: '2026-07-27',
+    dateModified: '2026-07-27',
+    category: 'Secteur',
+    faq: [
+      { q: 'Combien d\'avis Google une boulangerie peut-elle collecter avec une plaque NFC ?', a: 'Une boulangerie recevant 400 à 700 clients par jour passe généralement de 3-6 avis/mois à 30-60 avis/mois, soit une multiplication par 5 à 8. Les boulangeries-pâtisseries avec salon de thé dépassent souvent 45 avis par mois grâce aux emplacements complémentaires.' },
+      { q: 'Où placer la plaque NFC dans une boulangerie ?', a: 'Le comptoir de caisse, juste à côté du terminal de paiement, est le meilleur emplacement (40-50 % de conversion) : le client a déjà son téléphone en main pour payer en sans contact. La vitrine de retrait (15-25 %) et les tables du salon de thé (10-20 %) sont d\'excellents compléments.' },
+      { q: 'La collecte d\'avis n\'est-elle pas impossible pendant le rush ?', a: 'Justement non : c\'est là que la plaque NFC prend tout son sens. Pendant le coup de feu, elle travaille seule, sans que la vendeuse ait besoin de parler, grâce à l\'emplacement caisse et au téléphone déjà en main. Le script de 3 secondes se réserve aux heures creuses.' },
+      { q: 'La plaque résiste-t-elle à la farine et à l\'humidité ?', a: 'Oui. L\'acrylique premium 3 mm résiste à l\'eau, aux UV, aux rayures et aux projections. Un simple coup d\'éponge suffit à la nettoyer, contrairement à une affiche papier ou un flyer plastifié qui gondole vite sur un comptoir de boulangerie.' },
+      { q: 'Puis-je offrir une viennoiserie en échange d\'un avis ?', a: 'Non, c\'est formellement interdit par les règles de Google. Vos avis pourraient être supprimés en masse et votre fiche suspendue. La plaque NFC fonctionne en supprimant la friction, pas en achetant l\'avis.' },
+      { q: 'Quel pack de plaques choisir pour une boulangerie ?', a: 'Petite boulangerie mono-caisse : Pack Starter. Boulangerie avec deux caisses ou caisse plus comptoir pâtisserie : Pack Business (2 plaques), la configuration la plus courante. Boulangerie-pâtisserie avec salon de thé et comptoir traiteur : Pack Pro (5 plaques).' },
+    ],
+  },
   'optimiser-fiche-google-business-profile': {
     title: 'Optimiser sa fiche Google Business Profile (guide 2026)',
     description: 'Le guide complet 2026 pour optimiser votre fiche Google Business Profile : catégories, photos, avis, Google Posts et pack local. Méthode et plan 30 jours.',

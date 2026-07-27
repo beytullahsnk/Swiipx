@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 20,
+    title: 'Plaque NFC boulangerie : x5 avis Google à chaque passage en caisse',
+    excerpt: 'Boulangeries, pâtisseries et points chauds : multipliez vos avis Google par 5 avec une plaque NFC malgré le rush. Emplacements, scripts vendeur, 3 études de cas et ROI chiffré.',
+    category: 'Secteur',
+    date: '27 juillet 2026',
+    dateIso: '2026-07-27',
+    readTime: '10 min',
+    slug: 'plaque-nfc-boulangerie',
+  },
+  {
     id: 19,
     title: 'Optimiser sa fiche Google Business Profile : le guide 2026',
     excerpt: 'Le guide complet 2026 pour optimiser votre fiche Google Business Profile : catégories, photos, avis, Google Posts, pack local, 7 erreurs à éviter et plan d\'action 30 jours.',

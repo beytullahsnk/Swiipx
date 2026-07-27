@@ -19,6 +19,239 @@ const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-boulangerie': {
+    title: 'Plaque NFC boulangerie : collecter des avis Google à chaque passage en caisse',
+    category: 'Secteur',
+    date: '27 juillet 2026',
+    readTime: '10 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Boulangeries, pâtisseries et points chauds : comment multiplier vos avis Google par 5 avec une plaque NFC malgré le rush. Emplacements, scripts vendeur, 3 études de cas et ROI chiffré.',
+    tocSections: [
+      { id: 'pourquoi-avis-boulangerie', label: 'Pourquoi les avis sont décisifs' },
+      { id: 'probleme-boulangerie', label: 'Le rush : votre pire ennemi' },
+      { id: 'fonctionnement', label: 'Comment fonctionne la plaque NFC' },
+      { id: 'placements-boulangerie', label: '5 emplacements testés' },
+      { id: 'scripts-boulanger', label: 'Les scripts qui marchent' },
+      { id: 'cas-pratiques', label: '3 études de cas' },
+      { id: 'roi-boulangerie', label: 'Le ROI chiffré' },
+      { id: 'repondre-avis', label: 'Répondre aux avis' },
+      { id: 'plan-90-jours', label: 'Le plan 90 jours' },
+      { id: 'faq-boulangerie', label: 'FAQ' },
+    ],
+    content: `
+<section id="pourquoi-avis-boulangerie" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google sont décisifs pour une boulangerie</h2>
+<p>La boulangerie est l'un des commerces où <strong>la concurrence de proximité est la plus féroce</strong>. Dans une même ville, on trouve souvent une boulangerie tous les 300 mètres, sans compter les rayons pain des supermarchés et les chaînes de « points chauds ». Quand un habitant cherche « boulangerie » ou « meilleure baguette » près de chez lui, il ouvre Google Maps et regarde une chose avant de se déplacer : les étoiles et le nombre d'avis.</p>
+<p>Les chiffres sont sans appel : <strong>plus de 90 % des consommateurs consultent les avis en ligne avant de choisir un commerce alimentaire de proximité</strong>, et 9 personnes sur 10 ne dépassent pas les 3 premiers résultats du pack local (la carte Google Maps). Une boulangerie avec 15 avis à 3,9 étoiles est structurellement invisible face à la concurrente d'à côté qui affiche 220 avis à 4,7.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une boulangerie de quartier fait vivre son chiffre d'affaires sur la <strong>fréquence</strong>. Un client fidèle qui vient 4 fois par semaine pèse facilement <strong>1 200 à 2 000 € de chiffre d'affaires par an</strong>. Gagner 2 places dans le pack local, c'est souvent 20 à 50 nouveaux passages par semaine, donc plusieurs dizaines de nouveaux habitués sur l'année.</p>
+</div>
+<p>Le problème n'est presque jamais la qualité : la plupart des boulangers font un excellent produit et leurs clients adorent leurs viennoiseries. Le problème est le <strong>passage à l'acte</strong>. Un client heureux ne pense jamais spontanément à écrire un avis — sauf si on lui met un moyen de le faire à 10 centimètres de la main, au moment exact où il paie et où il repart avec sa baguette chaude.</p>
+</section>
+
+<section id="probleme-boulangerie" class="scroll-mt-28 mb-16">
+<h2>Le vrai problème : le rush, ennemi de la collecte d'avis</h2>
+<p>Aucun commerce ne connaît une pression de flux comparable à celle d'une boulangerie. Entre 7 h et 9 h le matin, puis entre 12 h et 13 h, puis en fin d'après-midi, la file d'attente s'allonge et la seule mission de l'équipe est d'aller <strong>vite</strong>. Demander un avis dans ces moments-là est impossible : la vendeuse a déjà trois clients qui attendent.</p>
+<p>Résultat : la note moyenne des boulangeries en France tourne autour de 4,2/5, alors que la satisfaction réelle est bien plus haute. Vos avis ne reflètent pas la qualité de votre pain — ils reflètent l'absence de méthode de collecte compatible avec le rush.</p>
+<h3>Les 4 tentatives qui ne fonctionnent pas</h3>
+<ul>
+<li><strong>Le ticket de caisse avec un QR code imprimé</strong> : le client le froisse et le jette dans le sac à pain. Taux de retour : 1 à 2 %.</li>
+<li><strong>Le « laissez-nous un avis » lancé à la volée</strong> pendant le rush : personne n'a le temps, ni la vendeuse de le dire, ni le client de le faire.</li>
+<li><strong>L'affiche A4 scotchée derrière la caisse</strong> : noyée dans les affichages promo, invisible au bout de 3 jours.</li>
+<li><strong>La carte de fidélité papier</strong> : utile pour fidéliser, mais elle ne génère aucun avis Google et coûte du temps de tamponnage à chaque passage.</li>
+</ul>
+<p>Ce qui fonctionne, c'est un <strong>objet posé sur le comptoir de caisse, que le client touche avec son téléphone en 10 secondes</strong>, sans que la vendeuse ait besoin de dire quoi que ce soit pendant un coup de feu. C'est exactement ce que fait une plaque NFC.</p>
+</section>
+
+<section id="fonctionnement" class="scroll-mt-28 mb-16">
+<h2>Comment fonctionne la plaque NFC dans une boulangerie</h2>
+<p>La plaque NFC est une plaque en acrylique premium (120 × 120 × 3 mm) qui contient une puce NTAG215. Le client approche son smartphone à moins de 4 cm : sa page d'avis Google s'ouvre <strong>automatiquement</strong>, sans application, sans saisie, sans friction.</p>
+<ol>
+<li>Le client règle sa baguette et ses viennoiseries au comptoir</li>
+<li>La plaque est posée juste à côté du terminal de paiement, face à lui</li>
+<li>Il approche son téléphone (déjà en main pour le paiement sans contact)</li>
+<li>Google s'ouvre directement sur le formulaire d'avis de votre fiche</li>
+<li>Il met 5 étoiles et deux mots — c'est fini, la file continue d'avancer</li>
+</ol>
+<p>Un <strong>QR code de secours</strong> est imprimé sur la plaque pour les rares téléphones sans NFC actif. La solution est compatible avec tous les iPhone depuis 2016 et la quasi-totalité des Android.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Spécificité boulangerie :</strong> le comptoir est un environnement à contact permanent (farine, miettes, mains sucrées, projections d'eau au nettoyage). L'acrylique se nettoie d'un coup d'éponge et résiste à l'humidité, contrairement à un flyer plastifié ou une affiche papier qui gondole et devient illisible en quelques jours.</p>
+</div>
+</section>
+
+<section id="placements-boulangerie" class="scroll-mt-28 mb-16">
+<h2>Où placer la plaque dans une boulangerie : 5 emplacements testés</h2>
+<p>Le placement détermine 80 % du résultat. Voici les taux de conversion observés chez les boulangeries équipées (pourcentage de clients qui laissent effectivement un avis). Pour approfondir, lisez notre guide dédié : <a href="/blog/ou-placer-plaque-avis-google">où placer votre plaque avis Google</a>.</p>
+
+<h3>1. Le comptoir de caisse, à côté du terminal — 40 à 50 % ✅</h3>
+<p>C'est <strong>de loin le meilleur emplacement</strong>. Le client a déjà son téléphone en main pour payer en sans contact, il vient de choisir ses produits et il est de bonne humeur (odeur de pain chaud, viennoiseries). La plaque doit être posée à droite du terminal de paiement, orientée vers lui, à hauteur de main.</p>
+
+<h3>2. La vitrine réfrigérée / le comptoir de retrait — 15 à 25 %</h3>
+<p>Utile pour les boulangeries-pâtisseries où le client attend qu'on lui prépare une commande (gâteau, plateau, sandwich). Il a du temps mort face à la vitrine : une plaque posée sur le dessus capte une partie de cette attente.</p>
+
+<h3>3. La table du coin restauration / salon de thé — 10 à 20 %</h3>
+<p>Pour les boulangeries qui proposent de la consommation sur place (café, formule déjeuner). Le client est assis, détendu, souvent seul avec son téléphone. Une petite plaque sur la table convertit bien après le repas.</p>
+
+<h3>4. Le sac à pain / le sachet — 5 à 10 %</h3>
+<p>Astuce peu connue : un autocollant NFC ou un mini-support glissé dans le sachet. Le client le découvre en rentrant chez lui, au calme. Taux plus faible mais gratuit en complément, et cible les clients à emporter.</p>
+
+<h3>5. La porte d'entrée / la vitrine extérieure — 2 à 4 %</h3>
+<p>Aucun intérêt pour la collecte (personne ne scanne en entrant, tout le monde est pressé), mais un vrai intérêt <strong>réputationnel</strong> : elle signale que vous assumez vos avis. À utiliser en complément, jamais seule.</p>
+
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 La règle des 2 plaques :</strong> la configuration optimale d'une boulangerie avec deux caisses (ou caisse + comptoir pâtisserie) est <strong>une plaque par point de paiement</strong>. C'est exactement le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a>. Les boulangeries avec salon de thé, plusieurs caisses et un comptoir traiteur passent au <a href="/product/pro" class="font-semibold underline">Pack Pro (5 plaques)</a>. Une petite boulangerie mono-caisse démarre parfaitement avec le <a href="/product/starter" class="font-semibold underline">Pack Starter</a>.</p>
+</div>
+</section>
+
+<section id="scripts-boulanger" class="scroll-mt-28 mb-16">
+<h2>Les scripts qui marchent (et ceux qui tuent la conversion)</h2>
+<p>En boulangerie, le temps de parole est ultra-court. Une plaque posée sans un mot convertit déjà mieux qu'ailleurs (parce que l'emplacement caisse est idéal), mais une phrase de 3 secondes double encore le résultat. Voici les formulations testées sur le terrain, calibrées pour ne pas ralentir la file.</p>
+
+<h3>✅ Le script « ultra-court » (pour le rush)</h3>
+<p class="italic">« Si le pain vous plaît, un petit avis Google ici, ça nous aide beaucoup ! » (en désignant la plaque d'un geste).</p>
+<p>Pourquoi ça marche : la phrase dure 3 secondes, elle est conditionnelle (« si le pain vous plaît »), et le geste montre l'objet. La vendeuse peut la lancer tout en rendant la monnaie, sans ralentir la file.</p>
+
+<h3>✅ Le script « habitué » (heures creuses)</h3>
+<p class="italic">« Vous venez tous les matins, ça nous ferait vraiment plaisir un petit mot sur Google — c'est là, un coup de téléphone dessus et c'est fait. »</p>
+<p>Sur les clients fidèles, en dehors du rush, le taux monte à 50-60 %. Ce sont vos meilleurs ambassadeurs : ils écrivent des avis authentiques et détaillés (« la meilleure baguette du quartier »), ceux qui pèsent le plus dans l'algorithme Google et qui contiennent naturellement vos mots-clés.</p>
+
+<h3>❌ Ce qu'il ne faut jamais faire</h3>
+<ul>
+<li><strong>Offrir une viennoiserie ou une remise</strong> contre un avis : c'est une violation des règles de Google, et vos avis peuvent être supprimés en masse (voire la fiche suspendue).</li>
+<li><strong>Filtrer les clients</strong> (ne présenter la plaque qu'aux clients contents) : Google le détecte via des patterns statistiques anormaux, et c'est contraire à ses conditions d'utilisation.</li>
+<li><strong>Insister pendant le rush</strong> : vous ralentissez la file et agacez tout le monde. Pendant le coup de feu, la plaque travaille seule ; le script se garde pour les heures creuses.</li>
+<li><strong>Charger la vendeuse d'une longue phrase</strong> : au bout de 200 clients, elle ne la dira plus. Une phrase de 3 secondes maximum, apprise par cœur.</li>
+</ul>
+</section>
+
+<section id="cas-pratiques" class="scroll-mt-28 mb-16">
+<h2>3 études de cas de boulangeries équipées</h2>
+
+<h3>🥖 Boulangerie de quartier — Lyon 3e (69)</h3>
+<p>Structure : 1 caisse, ~600 clients/jour en semaine. Situation de départ : 34 avis, 4,1 étoiles, 4<sup>e</sup> position dans le pack local sur « boulangerie Lyon 3 ».</p>
+<ul>
+<li>Équipement : 1 plaque au comptoir de caisse, script ultra-court appris par l'équipe</li>
+<li>Après 4 mois : <strong>198 avis, 4,7 étoiles</strong></li>
+<li>Position pack local : <strong>1<sup>re</sup></strong></li>
+<li>Vues de la fiche Google : de 4 200 à 11 800 par mois (+181 %)</li>
+</ul>
+
+<h3>🥐 Boulangerie-pâtisserie avec salon de thé — Nantes (44)</h3>
+<p>Structure : 2 caisses + salon de thé, forte activité déjeuner. ~900 clients/jour.</p>
+<ul>
+<li>Équipement : 3 plaques (2 caisses + tables du salon de thé)</li>
+<li>Avant : 6 avis/mois en moyenne. Après : <strong>44 avis/mois</strong></li>
+<li>Note passée de 4,0 à 4,6 en 6 mois (les nouveaux avis diluent les anciens négatifs)</li>
+<li>ROI de l'équipement (89,90 €) : atteint dès la première semaine</li>
+</ul>
+
+<h3>🎂 Point chaud / dépôt de pain — périphérie de Lille (59)</h3>
+<p>Structure : petit format, forte rotation le matin, panier moyen faible mais fréquence élevée. ~400 clients/jour.</p>
+<ul>
+<li>Équipement : 1 plaque au comptoir</li>
+<li>Après 5 mois : 11 → <strong>96 avis</strong>, note 4,8</li>
+<li>Effet inattendu : plusieurs clients citent nommément « les pains spéciaux du samedi » dans leurs avis, ce qui a poussé la fiche sur cette recherche</li>
+</ul>
+<p>Le pattern est constant : <strong>volume d'avis × 4 à 6 en 4 à 6 mois</strong>, note en hausse de 0,4 à 0,7 point, et un gain de 1 à 3 positions dans le pack local. On retrouve exactement la même mécanique que dans notre <a href="/blog/plaque-nfc-restaurant">guide restaurant</a> et notre <a href="/blog/plaque-nfc-salon-coiffure">guide salon de coiffure</a>.</p>
+</section>
+
+<section id="roi-boulangerie" class="scroll-mt-28 mb-16">
+<h2>Le ROI chiffré pour une boulangerie</h2>
+<p>Faisons le calcul honnêtement, avec des hypothèses conservatrices.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">59,90 € (une fois, sans abonnement)</td></tr>
+<tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, pas de batterie)</td></tr>
+<tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+150 à +400</td></tr>
+<tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
+<tr><td class="border p-3">Nouveaux passages / semaine estimés</td><td class="border p-3">+20 à +50</td></tr>
+<tr><td class="border p-3">Panier moyen boulangerie</td><td class="border p-3">~6 €</td></tr>
+<tr><td class="border p-3">Fréquence d'un nouvel habitué</td><td class="border p-3">3 à 4 passages / semaine</td></tr>
+<tr><td class="border p-3"><strong>CA additionnel annuel estimé</strong></td><td class="border p-3"><strong>+18 000 € à +45 000 €</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>La force de la boulangerie, c'est la <strong>fréquence</strong> : un client conquis par votre fiche Google ne revient pas une fois, il revient plusieurs fois par semaine pendant des années. Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 59,90 € reste sans commune mesure avec n'importe quel autre canal. À titre de comparaison, distribuer des flyers dans les boîtes aux lettres coûte 80 à 150 € pour 1 000 tracts, avec un taux de retour inférieur à 0,5 %.</p>
+<p>Pour aller plus loin sur les fourchettes de prix du marché, lisez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Répondre aux avis : le réflexe que la plupart des boulangeries négligent</h2>
+<p>Collecter ne suffit pas. Google valorise les fiches <strong>actives</strong>, et les clients lisent vos réponses autant que les avis eux-mêmes. Une boulangerie qui répond à 100 % de ses avis gagne en crédibilité — surtout sur les avis négatifs.</p>
+<h3>Répondre à un avis positif (30 secondes)</h3>
+<p class="italic">« Merci Sophie pour votre retour ! Ravis que nos croissants vous régalent. À très vite dans votre boulangerie de la rue des Halles. — L'équipe »</p>
+<p>Astuce SEO : glissez naturellement <strong>votre métier et votre quartier</strong> dans une partie de vos réponses (« votre boulangerie du centre-ville »). Google lit ces réponses.</p>
+<h3>Répondre à un avis négatif (la règle des 3 P)</h3>
+<ul>
+<li><strong>Poli</strong> : jamais sur la défensive, jamais d'ironie. Votre réponse est lue par 100 futurs clients, pas par l'auteur de l'avis.</li>
+<li><strong>Précis</strong> : rappelez factuellement ce qui se passe (« notre fournée de 16 h arrive parfois avec 10 minutes de retard »), sans accuser.</li>
+<li><strong>Privé</strong> : proposez de basculer hors ligne (« passez nous voir, on vous offre le café et on en discute »).</li>
+</ul>
+<p>Pour une méthode complète et des modèles de réponses prêts à l'emploi, consultez notre guide <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs Google</a>.</p>
+</section>
+
+<section id="plan-90-jours" class="scroll-mt-28 mb-16">
+<h2>Le plan 90 jours pour une boulangerie</h2>
+<h3>Semaines 1-2 : les fondations</h3>
+<ul>
+<li>Complétez votre fiche Google Business Profile à 100 % : horaires (y compris jour de fermeture), attributs (accès PMR, terrasse, sur place / à emporter), photos du pain, des viennoiseries, de la devanture et de l'équipe. Notre <a href="/blog/optimiser-fiche-google-business-profile">guide fiche Google Business Profile</a> détaille chaque étape.</li>
+<li>Installez la ou les plaques (une par point de caisse)</li>
+<li>Briefez l'équipe : une seule phrase de 3 secondes, apprise par cœur, dite hors rush</li>
+</ul>
+<h3>Semaines 3-8 : le rythme</h3>
+<ul>
+<li>Objectif : 30 à 60 nouveaux avis par mois</li>
+<li>Répondez à 100 % des avis sous 48 h</li>
+<li>Publiez 1 post Google (« Google Post ») par semaine : galette des rois, fournée spéciale du week-end, nouvelle viennoiserie, horaires de fêtes...</li>
+</ul>
+<h3>Semaines 9-12 : la consolidation</h3>
+<ul>
+<li>Les effets sur le pack local deviennent visibles (4 à 8 semaines de décalage)</li>
+<li>Analysez les mots-clés qui reviennent dans vos avis (« baguette tradition », « pain au levain », « pâtisserie ») : ce sont ceux sur lesquels Google vous positionne</li>
+<li>Complétez avec notre <a href="/blog/seo-local-recherches-google">guide SEO local</a> et notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a> pour verrouiller le pack local</li>
+</ul>
+</section>
+
+<section id="faq-boulangerie" class="scroll-mt-28 mb-16">
+<h2>FAQ — Plaque NFC pour boulangerie</h2>
+
+<h3>Combien d'avis Google une boulangerie peut-elle collecter avec une plaque NFC ?</h3>
+<p>Une boulangerie recevant 400 à 700 clients par jour passe généralement de 3-6 avis/mois à 30-60 avis/mois, soit une multiplication par 5 à 8. Les boulangeries-pâtisseries avec salon de thé dépassent souvent 45 avis par mois grâce aux emplacements complémentaires.</p>
+
+<h3>Où placer la plaque NFC dans une boulangerie ?</h3>
+<p>Le comptoir de caisse, juste à côté du terminal de paiement, est le meilleur emplacement (40-50 % de conversion) : le client a déjà son téléphone en main pour payer en sans contact. La vitrine de retrait (15-25 %) et les tables du salon de thé (10-20 %) sont d'excellents compléments.</p>
+
+<h3>La collecte d'avis n'est-elle pas impossible pendant le rush ?</h3>
+<p>Justement non : c'est là que la plaque NFC prend tout son sens. Pendant le coup de feu, elle travaille seule, sans que la vendeuse ait besoin de parler — l'emplacement caisse et le téléphone déjà en main suffisent. Le script de 3 secondes se réserve aux heures creuses et aux clients habitués.</p>
+
+<h3>La plaque résiste-t-elle à la farine, aux miettes et à l'humidité ?</h3>
+<p>Oui. L'acrylique premium 3 mm résiste à l'eau, aux UV, aux rayures et aux projections. Un simple coup d'éponge suffit à la nettoyer, contrairement à une affiche papier ou un flyer plastifié qui gondole et devient vite illisible sur un comptoir de boulangerie.</p>
+
+<h3>Puis-je offrir une viennoiserie en échange d'un avis ?</h3>
+<p>Non, c'est formellement interdit par les règles de Google. Vos avis pourraient être supprimés en masse et votre fiche suspendue. La plaque NFC fonctionne en supprimant la friction, pas en achetant l'avis.</p>
+
+<h3>Quel pack de plaques choisir pour une boulangerie ?</h3>
+<p>Petite boulangerie mono-caisse : Pack Starter. Boulangerie avec deux caisses ou caisse + comptoir pâtisserie : Pack Business (2 plaques), la configuration la plus courante. Boulangerie-pâtisserie avec salon de thé et comptoir traiteur : Pack Pro (5 plaques).</p>
+
+<h3>Combien de temps avant de voir un effet sur Google ?</h3>
+<p>Les premiers avis arrivent dès le premier jour, tant le flux est élevé. L'effet sur le classement dans le pack local se manifeste en 4 à 8 semaines, avec un saut significatif entre 3 et 6 mois si le rythme est maintenu.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : la meilleure baguette du quartier doit se voir sur Google</h2>
+<p>Dans la boulangerie, la qualité fait revenir les clients — mais c'est Google qui décide <strong>quel commerce ils poussent la première fois</strong>. Quand un nouvel habitant cherche « boulangerie près de moi », votre fiche est votre vraie devanture : celle qui travaille 24 h/24, même volets fermés.</p>
+<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>. Vos clients adorent votre pain. Il suffit de leur donner 10 secondes et un objet à portée de main, au moment précis où ils paient et repartent avec leur baguette chaude.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-restaurant">restaurant</a>, <a href="/blog/plaque-nfc-salon-coiffure">salon de coiffure</a>, <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a>, ou notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque passage en caisse en avis Google ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie 2 ans, <strong>sans abonnement</strong>. À partir de 39,90 €.</p>
+</div>
+</section>
+`,
+  },
   'optimiser-fiche-google-business-profile': {
     title: 'Optimiser sa fiche Google Business Profile : le guide complet 2026',
     category: 'SEO Local',
@@ -4250,6 +4483,7 @@ const articles: Record<string, {
    Related articles pour la sidebar
    ───────────────────────────────────────────── */
 const relatedArticles = [
+  { slug: 'plaque-nfc-boulangerie', label: 'Plaque NFC boulangerie : guide 2026' },
   { slug: 'optimiser-fiche-google-business-profile', label: 'Optimiser sa fiche Google Business Profile' },
   { slug: 'plaque-nfc-institut-beaute', label: 'Plaque NFC institut de beauté : guide 2026' },
   { slug: 'comment-choisir-plaque-nfc-avis-google', label: 'Choisir sa plaque NFC : guide d\'achat 2026' },

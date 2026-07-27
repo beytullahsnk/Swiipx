@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://swiipx.fr'
 
   const blogArticles: { slug: string; date: string }[] = [
+    { slug: 'plaque-nfc-boulangerie', date: '2026-07-27' },
     { slug: 'optimiser-fiche-google-business-profile', date: '2026-07-24' },
     { slug: 'plaque-nfc-institut-beaute', date: '2026-07-22' },
     { slug: 'comment-choisir-plaque-nfc-avis-google', date: '2026-07-20' },
