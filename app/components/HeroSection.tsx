@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import { clients, clientCount } from '../data/clients'
+import { featuredClients } from '../data/clients'
 
 export default function HeroSection() {
   return (
@@ -57,20 +57,17 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* Preuve sociale : clients réels, nommés. Aucun chiffre inventé. */}
+            {/* Preuve sociale : clients réels, nommés. Aucun compteur affiché. */}
             <div className="mt-10">
               <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2.5">
-                {clientCount} commerces équipés
+                Ils utilisent Swiipx
               </p>
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
-                {clients.slice(0, 6).map((client) => (
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+                {featuredClients.map((client) => (
                   <span key={client.name} className="text-sm font-semibold text-gray-700">
                     {client.name}
                   </span>
                 ))}
-                <span className="text-sm text-gray-400">
-                  et {clientCount - 6} autres
-                </span>
               </div>
             </div>
 

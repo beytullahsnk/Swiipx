@@ -11,7 +11,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart, CartItem } from '../../store/cart'
-import { clients, clientCount } from '../../data/clients'
+import { featuredClients } from '../../data/clients'
 import {
   Accordion,
   AccordionItem,
@@ -442,7 +442,7 @@ export default function ProductDetailPage() {
             <p className="text-center text-sm text-gray-500">
               Ils utilisent Swiipx :{' '}
               <span className="font-medium text-gray-700">
-                {clients.map((c) => c.name).join(' \u00b7 ')}
+                {featuredClients.map((c) => c.name).join(' \u00b7 ')}
               </span>
             </p>
 

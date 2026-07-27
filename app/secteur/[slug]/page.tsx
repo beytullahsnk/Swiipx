@@ -35,7 +35,7 @@ const sectors: Record<string, SectorContent> = {
     eyebrow: 'Plaque NFC · Restaurants & cafés',
     h1: 'Plaque NFC pour restaurants : multipliez vos avis Google par 7',
     intro: 'La plaque NFC Swiipx est programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Sans abonnement, livraison gratuite, garantie 2 ans.',
-    heroStat: { value: '9', label: 'restaurants et bars déjà équipés' },
+    heroStat: { value: '10 s', label: 'pour qu\'un client laisse son avis' },
     problemTitle: 'Le problème : 95 % de vos clients satisfaits ne laissent jamais d\'avis',
     problemPoints: [
       'Vos clients sont satisfaits après le repas, mais oublient de laisser un avis',
@@ -69,7 +69,7 @@ const sectors: Record<string, SectorContent> = {
       { q: 'Faut-il former mes serveurs ?', a: 'Oui, c\'est crucial. Une plaque NFC sans communication verbale convertit 3-4 fois moins. Comptez 15-30 min de briefing pour expliquer le script aux serveurs.' },
       { q: 'Quel pack pour un restaurant de 80 couverts ?', a: 'Pack Pro (5 plaques) : 1 plaque par groupe de 15-20 couverts. C\'est le ratio optimal pour ne pas créer de "bouchon" sur une seule plaque.' },
     ],
-    sectorClients: ['Chicken City', "L'Ottoman", 'Burger Time', 'Royal Food', "Family's Pizza Cergy", "Broche d'Or", 'Le Phare', 'Le Flo', 'Le Longchamp'],
+    sectorClients: ['Chicken City', "L'Ottoman", 'Burger Time', 'Royal Food'],
     relatedBlogSlug: 'plaque-nfc-restaurant',
     relatedBlogLabel: 'Guide complet : plaque NFC restaurant',
   },
@@ -281,7 +281,7 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
               Ils utilisent déjà Swiipx
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-              {sector.sectorClients.length} établissements de votre secteur
+              Des établissements de votre secteur
             </h2>
             <div className="flex flex-wrap gap-2.5">
               {sector.sectorClients.map((name) => (

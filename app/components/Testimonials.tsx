@@ -1,5 +1,5 @@
 import { Quote, Zap, ShieldCheck, Truck, CreditCard } from 'lucide-react'
-import { clients, clientsWithQuote } from '../data/clients'
+import { featuredClients, clientsWithQuote } from '../data/clients'
 
 /**
  * Section preuve sociale.
@@ -39,18 +39,15 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Mur de clients réels */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-16">
-          {clients.map((client) => (
-            <div
+        {/* Clients réels — ligne discrète, sans compteur */}
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mb-16">
+          {featuredClients.map((client) => (
+            <span
               key={client.name}
-              className="bg-white rounded-xl border border-gray-200 px-4 py-5 text-center"
+              className="text-base sm:text-lg font-bold text-gray-400"
             >
-              <p className="font-bold text-gray-900 text-base sm:text-lg leading-tight">
-                {client.name}
-              </p>
-              <p className="text-xs text-gray-500 mt-1">{client.sector}</p>
-            </div>
+              {client.name}
+            </span>
           ))}
         </div>
 
