@@ -149,7 +149,7 @@ export default function Home() {
     '@type': 'Service',
     name: 'Plaque NFC avis Google Swiipx',
     serviceType: 'Plaque NFC avis Google',
-    description: 'Solution NFC clé en main pour collecter des avis Google sans abonnement. Livraison gratuite en France, garantie 2 ans.',
+    description: 'Solution NFC clé en main pour collecter des avis Google sans abonnement. Livraison gratuite en France, garantie à vie.',
     provider: {
       '@type': 'Organization',
       name: 'Swiipx',

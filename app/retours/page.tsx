@@ -31,7 +31,7 @@ export default function RetoursPage() {
             Retours & Échanges
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl">
-            14 jours pour changer d&apos;avis. Procédure simple, remboursement rapide.
+            90 jours pour changer d&apos;avis. Procédure simple, remboursement rapide.
           </p>
         </div>
       </div>
@@ -50,11 +50,11 @@ export default function RetoursPage() {
                 <div>
                   <dt className="font-semibold text-gray-900">Délai légal</dt>
                   <dd className="text-sm text-gray-600 mt-1">
-                    Vous disposez de 14 jours à compter de la réception pour exercer votre droit de rétractation, conformément au Code de la consommation.
+                    Le droit de rétractation légal est de 14 jours à compter de la réception. Swiipx l&apos;étend commercialement à <strong>90 jours</strong> : vous pouvez nous retourner une plaque non collée jusqu&apos;à 90 jours après réception.
                   </dd>
                 </div>
                 <span className="text-sm font-semibold text-primary bg-blue-50 px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0">
-                  14 jours
+                  90 jours
                 </span>
               </div>
               <div className="flex items-start justify-between gap-4 py-3">
@@ -91,7 +91,7 @@ export default function RetoursPage() {
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-primary font-bold mt-0.5">•</span>
-                <span>Demande effectuée dans les 14 jours suivant la réception</span>
+                <span>Demande effectuée dans les 90 jours suivant la réception</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-primary font-bold mt-0.5">•</span>

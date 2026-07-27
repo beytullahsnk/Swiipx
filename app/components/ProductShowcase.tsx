@@ -40,11 +40,13 @@ const productPacks = [
   },
 ]
 
+// Arguments propres a Swiipx : ce que les concurrents a application
+// ne peuvent PAS dire. Chaque ligne est verifiable.
 const productBenefits = [
-  { text: 'Entreprise française' },
-  { text: 'Collectez des avis en 3 secondes' },
-  { text: 'Paiement en une fois, sans abonnement' },
-  { text: 'Aide à grimper dans les recherches Google' },
+  { text: 'Arrive déjà programmée : collez-la, elle fonctionne' },
+  { text: 'Aucune application à installer, aucun code à activer' },
+  { text: 'Pointe directement vers votre fiche Google, sans intermédiaire' },
+  { text: 'Paiement unique, sans abonnement ni frais mensuels' },
 ]
 
 export default function ProductShowcase() {
@@ -139,7 +141,7 @@ export default function ProductShowcase() {
       id: 'guarantee',
       title: 'Garantie & Retours',
       icon: Shield,
-      content: 'Garantie produit 2 ans contre tout défaut de fabrication. Support client prioritaire inclus. Guide d\'utilisation et templates de scripts offerts.',
+      content: 'Garantie à vie contre tout défaut de fabrication. Support client prioritaire inclus. Guide d\'utilisation et templates de scripts offerts.',
     },
   ]
 
@@ -234,7 +236,7 @@ export default function ProductShowcase() {
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Shield className="w-5 h-5 text-green-600" />
-                <span className="font-medium">Garantie 2 ans</span>
+                <span className="font-medium">Garantie à vie</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Truck className="w-5 h-5 text-green-600" />
@@ -343,11 +345,24 @@ export default function ProductShowcase() {
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                 Pourquoi ce prix ?
               </p>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                Plaque NFC NTAG215 + acrylique premium 3 mm + configuration personnalisée
-                + livraison gratuite + garantie 2 ans. Rentabilisé en 2 semaines avec
-                3 nouveaux clients moyens.
-              </p>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li className="flex gap-2">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Programmation incluse</strong> — nous encodons votre lien d&apos;avis avant expédition. Rien à faire à réception.</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Aucune application</strong> — pas de compte à créer, pas de code à saisir, pas de service dont dépendre.</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Acrylique premium 3 mm, puce NTAG215</strong> — résiste à l&apos;eau, aux UV et aux rayures.</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-primary font-bold">•</span>
+                  <span><strong>Garantie à vie</strong> + 90 jours satisfait ou remboursé + livraison offerte dès la première plaque.</span>
+                </li>
+              </ul>
             </div>
 
             {/* Business Selection (optionnel) */}
@@ -397,7 +412,7 @@ export default function ProductShowcase() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 <div className="text-sm">
-                  <p className="font-semibold text-green-900">Satisfait ou remboursé sous 14 jours</p>
+                  <p className="font-semibold text-green-900">Satisfait ou remboursé sous 90 jours</p>
                   <p className="text-green-700 text-xs">Retour gratuit, plaque non collée — remboursement intégral.</p>
                 </div>
               </div>

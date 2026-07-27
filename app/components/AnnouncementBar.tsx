@@ -16,7 +16,7 @@ export default function AnnouncementBar() {
           Livraison gratuite en France
         </span>
         <span className="text-white/80 whitespace-nowrap">Expédié sous 24h</span>
-        <span className="text-white/80 whitespace-nowrap hidden sm:inline">Garantie 2 ans</span>
+        <span className="text-white/80 whitespace-nowrap hidden sm:inline">Garantie à vie</span>
       </div>
       <button
         onClick={() => setDismissed(true)}

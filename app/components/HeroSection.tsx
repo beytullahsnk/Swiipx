@@ -23,20 +23,21 @@ export default function HeroSection() {
           >
             {/* Eyebrow */}
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-5">
-              Plaque NFC · Avis Google · Sans abonnement
+              Plaque NFC · Avis Google · Sans application
             </p>
 
-            {/* Main Headline (sans emoji) */}
+            {/* Headline — positionnement : prête à l'emploi (vs concurrents à app) */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.05] tracking-tight">
-              La plaque avis Google qui{' '}
-              <span className="text-primary">double vos avis</span>
+              La plaque avis Google{' '}
+              <span className="text-primary">prête à l&apos;emploi</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-              Vos clients laissent un avis en{' '}
-              <span className="font-semibold text-gray-900">10 secondes</span>
-              {' '}au lieu de 3-5 minutes. Ils approchent leur smartphone, c&apos;est tout. Aucune application à installer.
+              Elle arrive <span className="font-semibold text-gray-900">déjà programmée</span> avec
+              le lien d&apos;avis de votre établissement. Aucune application à installer,
+              aucun code à activer : vous la collez, vos clients approchent leur téléphone,
+              l&apos;avis se rédige en 10 secondes.
             </p>
 
             {/* CTA Buttons */}
@@ -74,7 +75,7 @@ export default function HeroSection() {
             {/* Trust line discrète (pas de checkmarks répétés) */}
             <p className="mt-6 text-sm text-gray-500">
               Livraison 2-5 jours <span className="text-gray-300 mx-1.5">·</span>
-              Garantie 2 ans <span className="text-gray-300 mx-1.5">·</span>
+              Garantie à vie <span className="text-gray-300 mx-1.5">·</span>
               Paiement unique sans abonnement
             </p>
           </motion.div>

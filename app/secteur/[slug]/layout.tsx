@@ -9,14 +9,14 @@ const sectorData: Record<string, {
 }> = {
   restaurant: {
     title: 'Plaque NFC pour Restaurant — Collectez +200 avis Google | Swiipx',
-    description: 'Restaurant : plaque NFC avis Google sans abonnement. 35-45 % de taux d\'avis collectés. Pack 2 plaques 59,90 €, livraison gratuite, garantie 2 ans.',
+    description: 'Restaurant : plaque NFC avis Google sans abonnement. 35-45 % de taux d\'avis collectés. Pack 2 plaques 59,90 €, livraison gratuite, garantie à vie.',
     keywords: 'plaque nfc restaurant, avis google restaurant, plaque restaurant nfc, plaque avis google bistrot, nfc restauration france, plaque avis brasserie',
     h1: 'Plaque NFC pour restaurants : multipliez vos avis Google par 7',
     intro: 'Plaque NFC programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Acrylique premium, sans abonnement, livraison gratuite.',
   },
   'salon-coiffure': {
     title: 'Plaque NFC pour Salon de Coiffure — Avis Google | Swiipx',
-    description: 'Salon de coiffure : plaque NFC avis Google. 40-55 % de conversion (taux record). +150 avis/an. Pack adapté aux salons, garantie 2 ans, sans abonnement.',
+    description: 'Salon de coiffure : plaque NFC avis Google. 40-55 % de conversion (taux record). +150 avis/an. Pack adapté aux salons, garantie à vie, sans abonnement.',
     keywords: 'plaque nfc salon coiffure, plaque avis google coiffeur, nfc coiffure, plaque avis institut beauté, plaque nfc barbier, plaque coiffeur',
     h1: 'Plaque NFC pour salons de coiffure : avis Google en 10 s',
     intro: 'Les salons de coiffure obtiennent le meilleur taux de conversion en NFC : 40-55 % des clientes laissent un avis. Découvrez pourquoi et comment.',

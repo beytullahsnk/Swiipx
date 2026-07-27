@@ -15,7 +15,7 @@ const productsMeta: Record<string, {
 }> = {
   starter: {
     title: 'Pack Starter — 1 Plaque Avis Google NFC',
-    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Parfait pour débuter. Livraison gratuite, garantie 2 ans, sans abonnement. 39,90€.',
+    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Parfait pour débuter. Livraison gratuite, garantie à vie, sans abonnement. 39,90€.',
     price: '39.90',
     plaques: 1,
     keywords: 'plaque avis google, plaque avis google nfc, pack starter plaque avis google, collecter avis google',
@@ -27,7 +27,7 @@ const productsMeta: Record<string, {
   },
   business: {
     title: 'Pack Business — 2 Plaques Avis Google NFC',
-    description: '2 plaques avis Google NFC pour multiplier vos avis. Idéal pour les professionnels. Livraison offerte, garantie 2 ans, sans abonnement. 59,90€.',
+    description: '2 plaques avis Google NFC pour multiplier vos avis. Idéal pour les professionnels. Livraison offerte, garantie à vie, sans abonnement. 59,90€.',
     price: '59.90',
     originalPrice: '79.90',
     plaques: 2,
@@ -97,7 +97,7 @@ const productFAQs: Record<string, Array<{ question: string; answer: string }>> =
   pro: [
     { question: 'Que comprend le tableau de bord analytics du Pack Pro Swiipx ?', answer: 'Le tableau de bord vous permet de suivre le nombre de scans par plaque, les heures de pointe et les performances de chaque emplacement. Idéal pour optimiser votre stratégie de collecte d\'avis Google sur plusieurs sites.' },
     { question: 'Comment fonctionnent les liens personnalisables par plaque NFC ?', answer: 'Chaque plaque NFC du Pack Pro peut pointer vers une URL différente. Vous pouvez rediriger vers votre page Google Business, un formulaire de satisfaction client, ou tout autre lien. La configuration est incluse et notre support vous accompagne.' },
-    { question: 'La garantie 2 ans du Pack Pro couvre quoi exactement ?', answer: 'Le Pack Pro bénéficie d\'une garantie 2 ans contre tout défaut de fabrication des plaques NFC en acrylique. En cas de défaillance technique non imputable à une mauvaise utilisation, nous remplaçons la plaque gratuitement.' },
+    { question: 'La garantie à vie du Pack Pro couvre quoi exactement ?', answer: 'Le Pack Pro bénéficie d\'une garantie à vie contre tout défaut de fabrication des plaques NFC en acrylique. En cas de défaillance technique non imputable à une mauvaise utilisation, nous remplaçons la plaque gratuitement.' },
   ],
 }
 

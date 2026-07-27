@@ -160,7 +160,7 @@ export default function Footer() {
 
             {/* Garantie */}
             <div className="text-xs text-gray-400">
-              Garantie 2 ans
+              Garantie à vie
             </div>
           </div>
         </div>

@@ -34,7 +34,7 @@ const sectors: Record<string, SectorContent> = {
   restaurant: {
     eyebrow: 'Plaque NFC · Restaurants & cafés',
     h1: 'Plaque NFC pour restaurants : multipliez vos avis Google par 7',
-    intro: 'La plaque NFC Swiipx est programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Sans abonnement, livraison gratuite, garantie 2 ans.',
+    intro: 'La plaque NFC Swiipx est programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Sans abonnement, livraison gratuite, garantie à vie.',
     heroStat: { value: '10 s', label: 'pour qu\'un client laisse son avis' },
     problemTitle: 'Le problème : 95 % de vos clients satisfaits ne laissent jamais d\'avis',
     problemPoints: [
@@ -61,7 +61,7 @@ const sectors: Record<string, SectorContent> = {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
       price: '59,90 €',
-      description: 'Le pack idéal pour un restaurant moyen : 1 plaque sur le porte-addition + 1 plaque à la caisse. Configuration incluse, livraison gratuite, garantie 2 ans.',
+      description: 'Le pack idéal pour un restaurant moyen : 1 plaque sur le porte-addition + 1 plaque à la caisse. Configuration incluse, livraison gratuite, garantie à vie.',
     },
     faq: [
       { q: 'Combien d\'avis Google peut collecter mon restaurant ?', a: 'En moyenne, les restaurants utilisateurs passent de 5-8 avis/mois à 25-40 avis/mois, soit une multiplication par 4-7. Les meilleurs résultats observés : 60 avis/mois sur des brasseries 80+ couverts.' },
@@ -203,7 +203,7 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
                 </Link>
               </div>
               <p className="mt-8 text-sm text-gray-500">
-                Sans abonnement · Garantie 2 ans · Livraison gratuite en 2-5 jours
+                Sans abonnement · Garantie à vie · Livraison gratuite en 2-5 jours
               </p>
             </div>
 

@@ -8,7 +8,7 @@ export default function CTASection() {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Arguments factuels (les étoiles/notes inventées ont été retirées) */}
         <p className="text-white/80 text-sm font-medium mb-4">
-          Sans abonnement · Garantie 2 ans · Satisfait ou remboursé 14 jours
+          Sans abonnement · Garantie à vie · Satisfait ou remboursé 90 jours
         </p>
 
         {/* Headline */}
@@ -50,7 +50,7 @@ export default function CTASection() {
           </div>
           <div className="flex items-center space-x-2">
             <Shield className="w-4 h-4" aria-hidden="true" />
-            <span className="font-medium text-sm">Garantie 2 ans</span>
+            <span className="font-medium text-sm">Garantie à vie</span>
           </div>
           <div className="flex items-center space-x-2">
             <RotateCcw className="w-4 h-4" aria-hidden="true" />

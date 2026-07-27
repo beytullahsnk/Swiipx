@@ -141,7 +141,10 @@ export default function CGVPage() {
             </div>
             <div className="space-y-3 text-base text-gray-700 leading-relaxed">
               <p>
-                Conformément aux articles L221-18 du Code de la consommation, le client dispose de <strong>14 jours</strong> après réception pour exercer son droit de rétractation.
+                Conformément aux articles L221-18 du Code de la consommation, le client dispose de <strong>14 jours</strong> après réception pour exercer son droit de rétractation légal.
+              </p>
+              <p>
+                Swiipx accorde en outre une <strong>garantie commerciale « satisfait ou remboursé » de 90 jours</strong>, qui s&apos;ajoute au droit de rétractation légal sans s&apos;y substituer. Elle s&apos;applique aux produits non utilisés et non collés.
               </p>
               <p>
                 Les produits doivent être retournés dans leur emballage d&apos;origine, non utilisés et non collés. Les frais de retour sont à la charge du client, sauf produit défectueux.
@@ -164,7 +167,7 @@ export default function CGVPage() {
                 Nos produits bénéficient de la garantie légale de conformité (articles L217-4 à L217-14 du Code de la consommation) et de la garantie contre les vices cachés (articles 1641 à 1649 du Code civil).
               </p>
               <p>
-                Une <strong>garantie commerciale de 2 ans</strong> couvre tout défaut de fabrication. Remplacement gratuit en cas de défaillance technique non imputable à une mauvaise utilisation.
+                Swiipx accorde une <strong>garantie commerciale à vie</strong> sur la puce NFC : si votre plaque cesse de fonctionner sans mauvaise utilisation de votre part, nous la remplaçons gratuitement, sans limite de durée. Cette garantie commerciale s&apos;ajoute aux garanties légales ci-dessus sans les restreindre.
               </p>
             </div>
           </section>

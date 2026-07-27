@@ -184,7 +184,7 @@ function OrderSummarySidebar({ items, subtotalCents, shippingCents, grandTotal }
           </div>
           <div className="flex items-center space-x-2 text-xs text-gray-500">
             <CheckCircle className="w-3.5 h-3.5 text-gray-400" />
-            <span>Satisfait ou remboursé sous 14 jours</span>
+            <span>Satisfait ou remboursé sous 90 jours</span>
           </div>
         </div>
 
@@ -506,6 +506,32 @@ function CheckoutShippingPicker({ billingPostalCode, billingCity }: CheckoutShip
   )
 }
 
+
+/**
+ * Découpe une adresse formatée Google ("12 Rue de la Paix, 75002 Paris, France")
+ * en line1 / code postal / ville, pour pré-remplir la facturation.
+ * Retourne null si le format ne correspond pas — on ne devine jamais.
+ */
+function parseFrenchAddress(formatted?: string) {
+  if (!formatted) return null
+  const parts = formatted.split(',').map((p) => p.trim()).filter(Boolean)
+  if (parts.length < 2) return null
+
+  // Cherche le segment contenant un code postal francais a 5 chiffres
+  const cpIndex = parts.findIndex((p) => /\b\d{5}\b/.test(p))
+  if (cpIndex < 1) return null
+
+  const m = parts[cpIndex].match(/\b(\d{5})\b\s*(.*)$/)
+  if (!m) return null
+
+  const postalCode = m[1]
+  const city = (m[2] || '').trim()
+  const line1 = parts.slice(0, cpIndex).join(', ')
+  if (!line1 || !city) return null
+
+  return { line1, postalCode, city }
+}
+
 // ─── Formulaire de paiement par carte ───────────────────────────────────────
 
 function CheckoutForm({
@@ -761,7 +787,17 @@ function CheckoutForm({
               onSelect={(businessData) => {
                 const ok = !!businessData?.place_id
                 setBusinessSelected(ok)
-                if (ok) track('business_selected', { source: 'checkout' })
+                if (!ok) return
+                track('business_selected', { source: 'checkout' })
+
+                // Pré-remplit l'adresse de facturation depuis la fiche Google.
+                // Le client peut toujours corriger : on ne remplace que les champs vides.
+                const parsed = parseFrenchAddress(businessData?.address)
+                if (parsed) {
+                  setBillingLine1((v) => v || parsed.line1)
+                  setBillingPostalCode((v) => v || parsed.postalCode)
+                  setBillingCity((v) => v || parsed.city)
+                }
               }}
               placeholder="Tapez le nom de votre entreprise ici.."
             />
@@ -878,7 +914,7 @@ function CheckoutForm({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
               <div className="text-sm">
-                <p className="font-semibold text-green-900">Satisfait ou remboursé sous 14 jours</p>
+                <p className="font-semibold text-green-900">Satisfait ou remboursé sous 90 jours</p>
                 <p className="text-green-700 text-xs">Retour gratuit si la plaque n&apos;est pas encore collée — remboursement intégral.</p>
               </div>
             </div>
@@ -1111,7 +1147,7 @@ export default function CheckoutPage() {
                 <span>Livraison dès 0€</span>
               </div>
               <span>·</span>
-              <span>Garantie 2 ans</span>
+              <span>Garantie à vie</span>
             </div>
           </div>
 

@@ -9,18 +9,18 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://swiipx.fr'),
   title: {
-    default: 'Plaque NFC avis Google — sans abonnement | Swiipx',
+    default: 'Plaque NFC avis Google prête à l\'emploi — sans app | Swiipx',
     template: '%s | Swiipx',
   },
-  description: 'Plaque NFC pour collecter vos avis Google. Vos clients approchent leur téléphone, l\'avis se rédige en 10 secondes. Sans abonnement, livraison gratuite, garantie 2 ans.',
+  description: 'Plaque NFC livrée déjà programmée avec le lien d\'avis de votre établissement. Aucune application à installer. Sans abonnement, garantie à vie, 90 jours satisfait ou remboursé.',
   keywords: 'plaque avis google, plaque nfc avis google, plaque google avis, carte nfc avis google, collecteur avis google, qr code avis google, avis google nfc',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
     url: 'https://swiipx.fr',
     siteName: 'Swiipx',
-    title: 'Plaque NFC avis Google — sans abonnement | Swiipx',
-    description: 'Plaque NFC avis Google. Vos clients approchent leur téléphone, l\'avis se rédige en 10 secondes. Sans abonnement, livraison gratuite.',
+    title: 'Plaque NFC avis Google prête à l\'emploi — sans app | Swiipx',
+    description: 'Plaque NFC livrée déjà programmée. Aucune application à installer, aucun code à activer. Sans abonnement, garantie à vie.',
     images: [
       {
         url: '/product-main.jpg',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Plaque NFC avis Google — sans abonnement | Swiipx',
-    description: 'Plaque NFC avis Google. Vos clients approchent leur téléphone, l\'avis se rédige en 10 secondes. Dès 39,90€, sans abonnement.',
+    description: 'Plaque NFC livrée déjà programmée. Aucune app à installer. Dès 39,90€, sans abonnement, garantie à vie.',
     images: ['/product-main.jpg'],
   },
   robots: {
@@ -68,7 +68,7 @@ export default function RootLayout({
               legalName: 'SKYAKSA',
               url: 'https://swiipx.fr',
               logo: 'https://swiipx.fr/logo.png',
-              slogan: 'La plaque NFC qui booste vos avis Google, sans abonnement.',
+              slogan: 'La plaque NFC avis Google prête à l\'emploi, sans application.',
               description: 'Plaque NFC & QR Code pour collecter des avis Google automatiquement. Sans abonnement, fabriquée en France.',
               email: 'bonjour@swiipx.fr',
               foundingDate: '2026-02',

@@ -247,7 +247,7 @@ export default function CartPage() {
 
                 {/* Info — ligne discrète */}
                 <p className="text-xs text-gray-500 mb-6 leading-relaxed">
-                  Paiement 100% sécurisé · Garantie 2 ans · Satisfait ou remboursé sous 14 jours.
+                  Paiement 100% sécurisé · Garantie à vie · Satisfait ou remboursé sous 90 jours.
                 </p>
 
                 {/* Checkout Button */}

@@ -33,7 +33,7 @@ const products = {
     plaques: 1,
     price: 39.90,
     originalPrice: null as number | null,
-    description: 'La plaque avis Google NFC idéale pour débuter. Collez-la à l\'accueil ou au comptoir : vos clients scannent et laissent un avis Google en 10 secondes, sans application. Plaque en acrylique premium 120×120 mm, garantie 2 ans.',
+    description: 'La plaque avis Google NFC idéale pour débuter. Collez-la à l\'accueil ou au comptoir : vos clients scannent et laissent un avis Google en 10 secondes, sans application. Plaque en acrylique premium 120×120 mm, garantie à vie.',
     ratingValue: 4.8,
     reviewCount: 247,
     guaranteeYears: 2,
@@ -42,7 +42,7 @@ const products = {
       'QR code de secours intégré',
       'Livraison gratuite en France',
       'Support client dédié',
-      'Garantie 2 ans',
+      'Garantie à vie',
       'Configuration incluse',
       'Tableau de bord analytics',
     ],
@@ -69,7 +69,7 @@ const products = {
     price: 59.90,
     originalPrice: 79.90 as number | null,
     popular: true,
-    description: 'Le pack professionnel avec 2 plaques NFC avis Google pour couvrir deux emplacements stratégiques. Doublez vos points de contact et multipliez vos avis Google naturellement. Acrylique premium, NTAG215, garanti 2 ans.',
+    description: 'Le pack professionnel avec 2 plaques NFC avis Google pour couvrir deux emplacements stratégiques. Doublez vos points de contact et multipliez vos avis Google naturellement. Acrylique premium, NTAG215, garanti à vie.',
     ratingValue: 4.9,
     reviewCount: 389,
     guaranteeYears: 2,
@@ -78,7 +78,7 @@ const products = {
       'QR code de secours intégré',
       'Livraison gratuite en France',
       'Support client dédié',
-      'Garantie 2 ans',
+      'Garantie à vie',
       'Configuration incluse',
       'Tableau de bord analytics',
     ],
@@ -104,7 +104,7 @@ const products = {
     plaques: 5,
     price: 89.90,
     originalPrice: 149.90 as number | null,
-    description: 'La solution complète avec 5 plaques NFC avis Google pour équiper tous vos emplacements. Idéal pour les entreprises multi-sites : tableau de bord analytics, liens personnalisables, support 24/7. Acrylique premium, garanti 2 ans.',
+    description: 'La solution complète avec 5 plaques NFC avis Google pour équiper tous vos emplacements. Idéal pour les entreprises multi-sites : tableau de bord analytics, liens personnalisables, support 24/7. Acrylique premium, garanti à vie.',
     ratingValue: 5.0,
     reviewCount: 156,
     guaranteeYears: 3,
@@ -113,7 +113,7 @@ const products = {
       'QR code de secours intégré',
       'Livraison express gratuite',
       'Support client dédié',
-      'Garantie 2 ans',
+      'Garantie à vie',
       'Configuration incluse',
       'Tableau de bord analytics',
       'Liens personnalisables par plaque',
@@ -386,9 +386,9 @@ export default function ProductDetailPage() {
             {/* Benefits */}
             <div className="space-y-3 bg-blue-50 rounded-xl p-5">
               {[
-                { text: 'Entreprise française' },
-                { text: 'Collectez des avis en 3 secondes' },
-                { text: 'Paiement en une fois, sans abonnement' },
+                { text: 'Arrive déjà programmée : collez-la, elle fonctionne' },
+                { text: 'Aucune application à installer, aucun code à activer' },
+                { text: 'Paiement unique, sans abonnement ni frais mensuels' },
               ].map((benefit, index) => (
                 <div
                   key={index}
