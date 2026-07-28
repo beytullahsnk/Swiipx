@@ -153,7 +153,7 @@ export default function ProductShowcase() {
                   width={800}
                   height={800}
                   className="w-full h-full object-contain p-8"
-                  priority={selectedImage === 0}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
 

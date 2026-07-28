@@ -63,6 +63,9 @@ export default function Navbar() {
                     width={48}
                     height={48}
                     className="w-full h-full object-contain"
+                    // Au-dessus de la ligne de flottaison : sans ceci Next
+                    // applique loading="lazy" et le logo apparait en retard.
+                    priority
                     onError={() => setLogoError(true)}
                   />
                 ) : (
