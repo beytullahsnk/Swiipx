@@ -2,7 +2,8 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { articles, relatedArticles } from './articles'
+import { articles } from './articles'
+import { getRelatedArticles } from './related'
 import ArticleToc from './ArticleToc'
 import ArticleAds from './ArticleAds'
 
@@ -21,7 +22,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     notFound()
   }
 
-  const filteredRelated = relatedArticles.filter((a) => a.slug !== params.slug).slice(0, 4)
+  const filteredRelated = getRelatedArticles(params.slug)
 
   return (
     <div className="min-h-screen bg-white">
@@ -109,9 +110,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           {/* ── COLONNE GAUCHE : TOC sticky ── */}
           <aside className="hidden lg:block">
             <div className="sticky top-36">
-              <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4">
+              <p id="sommaire-titre" className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4">
                 SOMMAIRE
-              </h3>
+              </p>
 
               <ArticleToc sections={article.tocSections} />
 

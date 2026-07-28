@@ -47,7 +47,7 @@ export default function ArticleToc({ sections }: { sections: TocSection[] }) {
 
   return (
     <nav
-      aria-label="Table des matières"
+      aria-labelledby="sommaire-titre"
       className="space-y-0.5 max-h-[calc(100vh-340px)] overflow-y-auto pr-2 mb-8"
     >
       {sections.map((section, idx) => (

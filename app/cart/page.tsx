@@ -90,9 +90,11 @@ export default function CartPage() {
           /* Empty Cart — sobre */
           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center max-w-md mx-auto">
             <ShoppingBag className="w-14 h-14 text-gray-300 mx-auto mb-4" />
-            <h2 className="text-xl font-bold text-gray-900 mb-2">
+            {/* h1 et non h2 : c'est le seul titre de la page dans cet état,
+                un lecteur d'écran n'avait aucun titre de niveau 1 à annoncer. */}
+            <h1 className="text-xl font-bold text-gray-900 mb-2">
               Votre panier est vide
-            </h2>
+            </h1>
             <p className="text-gray-500 mb-6 text-sm">
               Reprenez où vous étiez ou découvrez nos packs.
             </p>

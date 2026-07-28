@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ArticleToc from '../[slug]/ArticleToc'
 import ArticleAds from '../[slug]/ArticleAds'
-import { relatedArticles } from '../[slug]/articles'
+import { getRelatedArticles } from '../[slug]/related'
 
 /* ─────────────────────────────────────────────
    Table of Contents - sections de l'article
@@ -114,9 +114,9 @@ export default function DoublerAvisGoogle30Jours() {
           {/* ── COLONNE GAUCHE : TOC sticky (style Shopify) ── */}
           <aside className="hidden lg:block">
             <div className="sticky top-36">
-              <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4">
+              <p id="sommaire-titre" className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4">
                 SOMMAIRE
-              </h3>
+              </p>
               <ArticleToc sections={tocSections} />
 
               {/* Bloc CTA Produit */}
@@ -694,7 +694,7 @@ export default function DoublerAvisGoogle30Jours() {
           {/* ── COLONNE DROITE : ADS carousel au scroll ── */}
           <aside className="hidden lg:block">
             <div className="sticky top-36">
-              <ArticleAds related={relatedArticles.filter((a) => a.slug !== SLUG).slice(0, 4)} />
+              <ArticleAds related={getRelatedArticles(SLUG)} />
             </div>
           </aside>
 

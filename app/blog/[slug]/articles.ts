@@ -4478,26 +4478,3 @@ export const articles: Record<string, {
   },
 }
 
-export const relatedArticles = [
-  { slug: 'plaque-nfc-boulangerie', label: 'Plaque NFC boulangerie : guide 2026' },
-  { slug: 'optimiser-fiche-google-business-profile', label: 'Optimiser sa fiche Google Business Profile' },
-  { slug: 'plaque-nfc-institut-beaute', label: 'Plaque NFC institut de beauté : guide 2026' },
-  { slug: 'comment-choisir-plaque-nfc-avis-google', label: 'Choisir sa plaque NFC : guide d\'achat 2026' },
-  { slug: 'statistiques-avis-google-2026', label: 'Statistiques avis Google 2026 : 45 chiffres clés' },
-  { slug: 'repondre-avis-negatifs-google', label: 'Répondre aux avis négatifs Google' },
-  { slug: 'plaque-nfc-garage-automobile', label: 'Plaque NFC garage automobile : guide 2026' },
-  { slug: 'plaque-nfc-cabinet-medical', label: 'Plaque NFC cabinet médical : guide déontologie' },
-  { slug: 'plaque-nfc-restaurant', label: 'Plaque NFC restaurant : guide complet' },
-  { slug: 'plaque-nfc-salon-coiffure', label: 'Plaque NFC salon de coiffure' },
-  { slug: 'plaque-avis-google-sans-abonnement', label: 'Plaques sans abonnement : comparatif' },
-  { slug: 'prix-plaque-nfc-avis-google', label: 'Prix plaque NFC : combien ça coûte ?' },
-  { slug: 'ou-placer-plaque-avis-google', label: 'Où placer votre plaque NFC' },
-  { slug: 'plaque-nfc-vs-qr-code-avis-google', label: 'Plaque NFC vs QR Code : comparatif 2026' },
-  { slug: 'doubler-avis-google-30-jours', label: 'Doubler vos avis Google en 30 jours' },
-  { slug: 'obtenir-plus-avis-google', label: '10 méthodes pour obtenir plus d\'avis Google' },
-  { slug: 'nfc-avis-clients', label: 'NFC : la nouvelle arme pour vos avis' },
-  { slug: 'seo-local-recherches-google', label: 'SEO Local : grimper en tête des recherches' },
-  { slug: 'avis-clients-influencent-business', label: 'Les avis influencent votre business' },
-  { slug: 'booster-visibilite-locale', label: '5 astuces visibilité locale' },
-  { slug: 'erreurs-demander-avis', label: 'Les erreurs à éviter' },
-]

@@ -55,7 +55,7 @@ export default function ArticleAds({ related }: { related: RelatedArticle[] }) {
           <div className="text-xs uppercase tracking-wider text-gray-400 mb-3 font-semibold">
             Sponsorisé
           </div>
-          <h4 className="font-bold text-lg mb-2">La plaque NFC pour chaque commerce.</h4>
+          <h3 className="font-bold text-lg mb-2">La plaque NFC pour chaque commerce.</h3>
           <p className="text-gray-300 text-sm mb-4 leading-relaxed">
             Livrée déjà programmée. Aucune application à installer.
           </p>
@@ -77,7 +77,7 @@ export default function ArticleAds({ related }: { related: RelatedArticle[] }) {
           <div className="w-full h-32 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl mb-4 flex items-center justify-center">
             <Target className="w-12 h-12 text-indigo-400" />
           </div>
-          <h4 className="font-bold text-gray-900 mb-2">Besoin d&apos;un site web pro&nbsp;?</h4>
+          <h3 className="font-bold text-gray-900 mb-2">Besoin d&apos;un site web pro&nbsp;?</h3>
           <p className="text-gray-600 text-sm mb-4 leading-relaxed">
             Nos partenaires créent votre site vitrine ou e-commerce optimisé SEO.
           </p>
@@ -95,7 +95,7 @@ export default function ArticleAds({ related }: { related: RelatedArticle[] }) {
       {/* Ad 2: Articles liés */}
       <div className={cardClass(2)}>
         <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
-          <h4 className="font-bold text-gray-900 mb-3">📚 Guides gratuits Swiipx</h4>
+          <h3 className="font-bold text-gray-900 mb-3">📚 Guides gratuits Swiipx</h3>
           <ul className="space-y-3">
             {related.map((relArticle) => (
               <li key={relArticle.slug}>
