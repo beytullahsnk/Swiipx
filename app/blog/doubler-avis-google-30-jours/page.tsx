@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import {
   Calendar, Clock, ArrowRight, CheckCircle2, TrendingUp, Users,
   Target, Zap, MessageSquare, BarChart3, AlertTriangle,
@@ -8,7 +5,9 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect, useRef } from 'react'
+import ArticleToc from '../[slug]/ArticleToc'
+import ArticleAds from '../[slug]/ArticleAds'
+import { relatedArticles } from '../[slug]/articles'
 
 /* ─────────────────────────────────────────────
    Table of Contents - sections de l'article
@@ -23,59 +22,11 @@ const tocSections = [
   { id: 'faq', label: 'FAQ' },
 ]
 
+const SLUG = 'doubler-avis-google-30-jours'
+
 export const dynamic = 'force-static'
 
 export default function DoublerAvisGoogle30Jours() {
-  const [activeSection, setActiveSection] = useState('probleme')
-  const articleRef = useRef<HTMLElement>(null)
-  const [currentAd, setCurrentAd] = useState(-1)
-
-  /* Observer pour highlight la section active dans le TOC */
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries.filter(entry => entry.isIntersecting)
-        if (visibleEntries.length > 0) {
-          const mostVisible = visibleEntries.reduce((prev, current) =>
-            current.intersectionRatio > prev.intersectionRatio ? current : prev
-          )
-          setActiveSection(mostVisible.target.id)
-        }
-      },
-      {
-        rootMargin: '-20% 0px -35% 0px',
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-      }
-    )
-
-    tocSections.forEach(({ id }) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
-  /* Scroll listener : une seule pub visible à la fois, les autres disparaissent */
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!articleRef.current) return
-      const rect = articleRef.current.getBoundingClientRect()
-      const articleHeight = rect.height
-      const scrolledInArticle = -rect.top + window.innerHeight * 0.3
-      const progress = Math.max(0, Math.min(1, scrolledInArticle / articleHeight))
-
-      if (progress < 0.08) setCurrentAd(-1)
-      else if (progress < 0.38) setCurrentAd(0)
-      else if (progress < 0.62) setCurrentAd(1)
-      else setCurrentAd(2)
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
     <div className="min-h-screen bg-white">
 
@@ -166,22 +117,7 @@ export default function DoublerAvisGoogle30Jours() {
               <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4">
                 SOMMAIRE
               </h3>
-              <nav aria-label="Table des matières" className="space-y-0.5 max-h-[calc(100vh-340px)] overflow-y-auto pr-2 mb-8">
-                {tocSections.map((section, idx) => (
-                  <a
-                    key={section.id}
-                    href={`#${section.id}`}
-                    className={`block py-2 px-0 text-sm transition-colors ${
-                      activeSection === section.id
-                        ? 'text-primary font-medium'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    <span className="mr-2 text-gray-400">{idx + 1}.</span>
-                    {section.label}
-                  </a>
-                ))}
-              </nav>
+              <ArticleToc sections={tocSections} />
 
               {/* Bloc CTA Produit */}
               <div className="border-t border-gray-200 pt-6">
@@ -221,7 +157,7 @@ export default function DoublerAvisGoogle30Jours() {
           </aside>
 
           {/* ── COLONNE CENTRE : CONTENU ── */}
-          <article ref={articleRef} className="max-w-none">
+          <article data-article className="max-w-none">
 
             {/* ────────────────────────────────────
                 Section 1 : Le problème
@@ -759,93 +695,7 @@ export default function DoublerAvisGoogle30Jours() {
           {/* ── COLONNE DROITE : ADS carousel au scroll ── */}
           <aside className="hidden lg:block">
             <div className="sticky top-36">
-              <div className="relative">
-
-                {/* Ad 0: Swiipx */}
-                <div className={`transition-all duration-500 ease-out ${
-                  currentAd === 0
-                    ? 'relative opacity-100 translate-y-0 scale-100'
-                    : 'absolute inset-x-0 top-0 opacity-0 pointer-events-none translate-y-4 scale-95'
-                }`}>
-                  <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 text-white">
-                    <div className="text-xs uppercase tracking-wider text-gray-400 mb-3 font-semibold">Sponsorisé</div>
-                    <h4 className="font-bold text-lg mb-2">
-                      La plaque NFC pour chaque commerce.
-                    </h4>
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                      +250&nbsp;% d&apos;avis en moyenne. Installation en 2 minutes.
-                    </p>
-                    <Link
-                      href="/#product"
-                      className="block w-full py-3 bg-accent text-gray-900 text-center font-bold rounded-lg hover:bg-yellow-300 transition-colors text-sm"
-                    >
-                      Commander maintenant
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Ad 1: Partenaire */}
-                <div className={`transition-all duration-500 ease-out ${
-                  currentAd === 1
-                    ? 'relative opacity-100 translate-y-0 scale-100'
-                    : 'absolute inset-x-0 top-0 opacity-0 pointer-events-none translate-y-4 scale-95'
-                }`}>
-                  <div className="bg-white rounded-2xl p-6 border-2 border-gray-200 shadow-sm">
-                    <div className="text-xs uppercase tracking-wider text-gray-400 mb-3 font-semibold">Partenaire</div>
-                    <div className="w-full h-32 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl mb-4 flex items-center justify-center">
-                      <Target className="w-12 h-12 text-indigo-400" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2">
-                      Besoin d&apos;un site web pro ?
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                      Nos partenaires créent votre site vitrine ou e-commerce optimisé SEO.
-                    </p>
-                    <a
-                      href="https://skyaksa.fr"
-                      target="_blank"
-                      rel="noopener noreferrer sponsored"
-                      className="block w-full py-3 bg-indigo-600 text-white text-center font-bold rounded-lg hover:bg-indigo-700 transition-colors text-sm"
-                    >
-                      Demander un devis gratuit
-                    </a>
-                  </div>
-                </div>
-
-                {/* Ad 2: Guides */}
-                <div className={`transition-all duration-500 ease-out ${
-                  currentAd === 2
-                    ? 'relative opacity-100 translate-y-0 scale-100'
-                    : 'absolute inset-x-0 top-0 opacity-0 pointer-events-none translate-y-4 scale-95'
-                }`}>
-                  <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
-                    <h4 className="font-bold text-gray-900 mb-3">
-                      📚 Guides gratuits Swiipx
-                    </h4>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link href="/blog/obtenir-plus-avis-google" className="flex items-start space-x-2 text-sm text-gray-700 hover:text-primary transition-colors group">
-                          <ChevronRight className="w-4 h-4 mt-0.5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-                          <span>10 méthodes pour obtenir plus d&apos;avis Google</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/blog/nfc-avis-clients" className="flex items-start space-x-2 text-sm text-gray-700 hover:text-primary transition-colors group">
-                          <ChevronRight className="w-4 h-4 mt-0.5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-                          <span>NFC : la nouvelle arme pour vos avis</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/blog/seo-local-recherches-google" className="flex items-start space-x-2 text-sm text-gray-700 hover:text-primary transition-colors group">
-                          <ChevronRight className="w-4 h-4 mt-0.5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-                          <span>SEO Local : grimper en tête des recherches</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
+              <ArticleAds related={relatedArticles.filter((a) => a.slug !== SLUG).slice(0, 4)} />
             </div>
           </aside>
 

@@ -146,6 +146,10 @@ export const useCart = create<CartStore>()(
       name: 'swiipx-cart', // localStorage key
       // v2 : passage à la grille 29,90 / 49,90 / 79,90.
       version: 2,
+      // Sans `migrate`, zustand JETTE le panier persisté dès que `version`
+      // change (et loggue une erreur). On le conserve tel quel : c'est
+      // onRehydrateStorage juste en dessous qui réaligne les prix.
+      migrate: (persisted) => persisted as CartStore,
       onRehydrateStorage: () => (state) => {
         if (!state) return
 
