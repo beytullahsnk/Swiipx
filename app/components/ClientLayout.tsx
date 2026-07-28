@@ -6,7 +6,6 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import PromoPopup from './PromoPopup'
 import WhatsAppButton from './WhatsAppButton'
-import GooglePlacesScript from './GooglePlacesScript'
 import SendcloudScript from './SendcloudScript'
 import GiftNotch from './GiftNotch'
 import AnnouncementBar from './AnnouncementBar'
@@ -67,7 +66,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       </a>
 
       {/* Google Places API Script */}
-      <GooglePlacesScript />
 
       {/* Sendcloud Service Point Picker Script */}
       <SendcloudScript />

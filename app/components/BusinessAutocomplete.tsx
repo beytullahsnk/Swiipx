@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { MapPin, Search } from 'lucide-react'
 import { useCompanyStore } from '../store/company'
 import CompanySelectedCard from './CompanySelectedCard'
+import GooglePlacesScript from './GooglePlacesScript'
 
 export interface BusinessInfo {
   name: string
@@ -153,6 +154,10 @@ export default function BusinessAutocomplete({
 
   return (
     <div className={`relative ${className}`}>
+      {/* L'API Places n'est chargée que sur les pages qui embarquent ce
+          composant (accueil + checkout), plus sur tout le site. */}
+      <GooglePlacesScript />
+
       {/* Input container with Google logo */}
       <div className="relative">
         {/* Search Icon */}

@@ -152,8 +152,11 @@ const sectors: Record<string, SectorContent> = {
       { q: 'Quel pack pour un cabinet pluridisciplinaire ?', a: 'Pack Pro (5 plaques) : 1 par cabine de consultation + accueil. Adapté aux cabinets avec 3+ praticiens.' },
       { q: 'Que faire d\'un avis négatif (RGPD, secret médical) ?', a: 'Répondez de manière générale ("Nous sommes désolés que votre expérience n\'ait pas été à la hauteur, contactez-nous à [email]") sans mentionner de détail médical. Si l\'avis viole le secret médical du patient, signalez-le à Google pour suppression.' },
     ],
-    relatedBlogSlug: 'avis-clients-influencent-business',
-    relatedBlogLabel: 'Pourquoi les avis influencent votre business',
+    // Renvoyait vers un article generaliste alors qu'un guide dedie a la
+    // deontologie medicale existe : c'est lui qui repond aux objections
+    // specifiques de cette audience.
+    relatedBlogSlug: 'plaque-nfc-cabinet-medical',
+    relatedBlogLabel: 'Plaque NFC cabinet médical : le guide déontologie',
   },
 }
 
