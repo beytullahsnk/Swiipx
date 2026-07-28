@@ -174,18 +174,28 @@ export default function ProductShowcase() {
               </button>
 
               {/* Image Counter Dots */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* Pastilles. Elles etaient en opacity-0 group-hover:opacity-100 :
+                  sans survol sur mobile, elles y restaient invisibles en
+                  permanence. Elles sont desormais toujours visibles sous lg.
+                  La cible tactile fait 44x44 (bouton transparent) alors que la
+                  pastille visible reste petite : au doigt, 8x8 etait inatteignable. */}
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 flex lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                 {productImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setSelectedImage(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      selectedImage === index 
-                        ? 'bg-primary w-4' 
-                        : 'bg-gray-400/50 hover:bg-gray-500'
-                    }`}
-                    aria-label={`Image ${index + 1}`}
-                  />
+                    className="w-11 h-11 flex items-center justify-center"
+                    aria-label={`Voir l'image ${index + 1} sur ${productImages.length}`}
+                    aria-current={selectedImage === index ? 'true' : undefined}
+                  >
+                    <span
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        selectedImage === index
+                          ? 'bg-primary w-4'
+                          : 'bg-gray-400/60 w-2'
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
 

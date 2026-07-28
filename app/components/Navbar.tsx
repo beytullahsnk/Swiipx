@@ -115,7 +115,8 @@ export default function Navbar() {
             <button
               onClick={openCart}
               aria-label="Ouvrir le panier"
-              className="relative p-2 text-gray-700 hover:text-primary transition-colors"
+              // p-2.5 : avec une icone de 24 px, la cible tactile atteint 44x44.
+              className="relative p-2.5 text-gray-700 hover:text-primary transition-colors"
             >
               <ShoppingCart className="w-6 h-6" />
               {hasHydrated && totalItems() > 0 && (
@@ -137,7 +138,9 @@ export default function Navbar() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-              className="md:hidden p-2 text-gray-700 hover:text-primary transition-colors"
+              // p-2.5 et non p-2 : avec une icone de 24 px, la cible tactile
+              // faisait 40x40, sous le minimum de 44 px recommande.
+              className="md:hidden p-2.5 text-gray-700 hover:text-primary transition-colors"
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />

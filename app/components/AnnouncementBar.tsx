@@ -20,8 +20,9 @@ export default function AnnouncementBar() {
       </div>
       <button
         onClick={() => setDismissed(true)}
-        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/80 transition-colors"
-        aria-label="Fermer"
+        /* Cible 44x44 : le bouton se limitait aux 14 px de l'icone. */
+        className="absolute right-1 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center text-white/40 hover:text-white/80 transition-colors"
+        aria-label="Fermer le bandeau"
       >
         <X className="w-3.5 h-3.5" />
       </button>
