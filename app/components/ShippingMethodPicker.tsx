@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Home, MapPin, Edit3, CheckCircle } from 'lucide-react'
 import { useShippingStore, SHIPPING_DOMICILE_CENTS } from '../store/shipping'
 import { formatPrice } from '../store/cart'
+import SendcloudScript from './SendcloudScript'
 
 declare global {
   interface Window {
@@ -83,6 +84,9 @@ export default function ShippingMethodPicker() {
 
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6">
+      {/* Charge le selecteur Sendcloud ici plutot que sur tout le site. */}
+      <SendcloudScript />
+
       <h3 className="text-lg font-bold text-gray-900 mb-4">Mode de livraison</h3>
 
       <div className="space-y-3">

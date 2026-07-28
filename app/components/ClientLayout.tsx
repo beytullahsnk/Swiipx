@@ -6,7 +6,6 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import PromoPopup from './PromoPopup'
 import WhatsAppButton from './WhatsAppButton'
-import SendcloudScript from './SendcloudScript'
 import GiftNotch from './GiftNotch'
 import AnnouncementBar from './AnnouncementBar'
 import { Toaster } from 'react-hot-toast'
@@ -68,7 +67,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       {/* Google Places API Script */}
 
       {/* Sendcloud Service Point Picker Script */}
-      <SendcloudScript />
       
       {/* Toast notifications */}
       <Toaster

@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 import { useCart, formatPrice } from '../store/cart'
 import { useCompanyStore } from '../store/company'
+import SendcloudScript from '../components/SendcloudScript'
 import BusinessAutocomplete, { BusinessInfo } from '../components/BusinessAutocomplete'
 import { useShippingStore, SHIPPING_DOMICILE_CENTS } from '../store/shipping'
 import type { ServicePointData } from '../store/shipping'
@@ -409,6 +410,11 @@ function CheckoutShippingPicker({ billingPostalCode, billingCity }: CheckoutShip
   }
 
   return (
+    <>
+      {/* Charge le selecteur Sendcloud ici plutot que sur tout le site :
+          il etait monte dans ClientLayout, donc precharge partout. */}
+      <SendcloudScript />
+
     <div className="space-y-3">
       {/* Point Relais */}
       <button
@@ -503,6 +509,7 @@ function CheckoutShippingPicker({ billingPostalCode, billingCity }: CheckoutShip
         </div>
       </button>
     </div>
+    </>
   )
 }
 

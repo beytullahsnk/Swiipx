@@ -5,6 +5,26 @@ import Script from 'next/script'
 const TAWK_PROPERTY_ID = '698f027e1f51081c3676f34d'
 const TAWK_WIDGET_ID = '1jhba3g6k'
 
+/**
+ * Chat Tawk.to — visible sur desktop uniquement.
+ *
+ * Le widget est masqué sous 1024 px : le menu mobile propose déjà la page
+ * contact, et un widget flottant y mange une part importante de l'écran.
+ *
+ * POURQUOI CE CODE A ÉTÉ RÉÉCRIT : la version précédente masquait le widget
+ * avec un `setInterval` toutes les 500 ms pendant 30 s (60 exécutions, chacune
+ * parcourant les iframes avec getComputedStyle, ce qui force un recalcul de
+ * style) DOUBLÉ d'un MutationObserver sur tout le <body> en
+ * `subtree: true, attributes: true` pendant 30 s. Sur un article de blog au DOM
+ * volumineux, cet observateur se déclenchait en continu et rappelait la même
+ * fonction. C'était du temps de thread principal pur, donc de l'INP dégradé —
+ * une Core Web Vital — sur chaque page, pour une simple règle d'affichage.
+ *
+ * Désormais : `Tawk_API.onLoad` (le rappel officiel, déclenché quand le widget
+ * est prêt), un observateur limité aux enfants directs du <body> — Tawk y
+ * injecte son conteneur — arrêté dès qu'il a fait son travail, et un écouteur
+ * de redimensionnement. Zéro sondage périodique.
+ */
 export default function WhatsAppButton() {
   return (
     <>
@@ -12,75 +32,80 @@ export default function WhatsAppButton() {
         src={`https://embed.tawk.to/${TAWK_PROPERTY_ID}/${TAWK_WIDGET_ID}`}
         strategy="lazyOnload"
       />
-      {/* Tawk : masqué sur mobile (le client a déjà la page contact dans le menu).
-          Sur desktop, le widget reste visible en bas à droite. */}
-      <Script id="tawk-mobile-hide" strategy="afterInteractive">
+
+      <Script id="tawk-mobile-hide" strategy="lazyOnload">
         {`
           (function() {
             var MOBILE_BREAKPOINT = 1024;
 
             function isTawkIframe(f) {
               if (!f || f.tagName !== 'IFRAME') return false;
-              var title = (f.title || '').toLowerCase();
-              var src = (f.src || '').toLowerCase();
-              var id = (f.id || '').toLowerCase();
-              var name = (f.name || '').toLowerCase();
-              return title.indexOf('chat') !== -1
-                  || title.indexOf('tawk') !== -1
-                  || src.indexOf('tawk.to') !== -1
-                  || src.indexOf('embed.tawk') !== -1
-                  || id.indexOf('tawk') !== -1
-                  || name.indexOf('tawk') !== -1;
+              var champs = ((f.title || '') + ' ' + (f.src || '') + ' ' + (f.id || '') + ' ' + (f.name || '')).toLowerCase();
+              return champs.indexOf('chat') !== -1 || champs.indexOf('tawk') !== -1;
             }
 
-            function findPositionedAncestor(el) {
-              var node = el;
-              while (node && node !== document.body) {
-                var pos = window.getComputedStyle(node).position;
-                if (pos === 'fixed' || pos === 'absolute') return node;
-                node = node.parentElement;
+            // Remonte jusqu'au conteneur positionne : Tawk enveloppe son iframe
+            // dans un div fixe, masquer la seule iframe laisserait une boite vide.
+            function conteneur(el) {
+              var n = el;
+              while (n && n !== document.body) {
+                var pos = window.getComputedStyle(n).position;
+                if (pos === 'fixed' || pos === 'absolute') return n;
+                n = n.parentElement;
               }
-              return null;
+              return el;
             }
 
-            function applyVisibility() {
-              var isMobile = window.innerWidth < MOBILE_BREAKPOINT;
-              // Tawk API officielle (si dispo)
+            function appliquer() {
+              var mobile = window.innerWidth < MOBILE_BREAKPOINT;
               try {
                 if (window.Tawk_API) {
-                  if (isMobile && typeof window.Tawk_API.hideWidget === 'function') {
-                    window.Tawk_API.hideWidget();
-                  } else if (!isMobile && typeof window.Tawk_API.showWidget === 'function') {
-                    window.Tawk_API.showWidget();
-                  }
+                  if (mobile && typeof window.Tawk_API.hideWidget === 'function') window.Tawk_API.hideWidget();
+                  else if (!mobile && typeof window.Tawk_API.showWidget === 'function') window.Tawk_API.showWidget();
                 }
               } catch (e) {}
 
-              // Fallback DOM : force display none/block sur l'iframe Tawk
+              var trouve = false;
               var iframes = document.getElementsByTagName('iframe');
               for (var i = 0; i < iframes.length; i++) {
                 if (!isTawkIframe(iframes[i])) continue;
-                var target = findPositionedAncestor(iframes[i]) || iframes[i];
-                target.style.setProperty('display', isMobile ? 'none' : '', 'important');
+                trouve = true;
+                conteneur(iframes[i]).style.setProperty('display', mobile ? 'none' : '', 'important');
               }
+              return trouve;
             }
 
-            // Polling pendant 30s pour attraper Tawk au montage
-            var attempts = 0;
-            var pollInterval = setInterval(function() {
-              applyVisibility();
-              attempts++;
-              if (attempts > 60) clearInterval(pollInterval);
-            }, 500);
+            // 1. Rappel officiel : se declenche quand le widget est pret.
+            window.Tawk_API = window.Tawk_API || {};
+            var onLoadPrecedent = window.Tawk_API.onLoad;
+            window.Tawk_API.onLoad = function() {
+              if (typeof onLoadPrecedent === 'function') { try { onLoadPrecedent(); } catch (e) {} }
+              appliquer();
+            };
 
-            // MutationObserver — Tawk peut ré-injecter
-            var observer = new MutationObserver(applyVisibility);
-            observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style'] });
-            setTimeout(function() { observer.disconnect() }, 30000);
+            // 2. Filet de securite si onLoad ne se declenche pas.
+            //    Quelques verifications differees plutot qu'un sondage : Tawk
+            //    insere d'abord son conteneur, PUIS l'iframe dedans, donc un
+            //    observateur limite aux enfants directs du <body> raterait
+            //    l'iframe, et l'etendre en subtree ramenerait le cout qu'on
+            //    vient justement de supprimer.
+            //    5 appels au total contre 60 auparavant, et on s'arrete des
+            //    que le widget est trouve.
+            var essais = [400, 1200, 3000, 6000, 12000];
+            essais.forEach(function(delai) {
+              setTimeout(function() {
+                if (!window.__tawkVisibiliteOk) {
+                  if (appliquer()) window.__tawkVisibiliteOk = true;
+                }
+              }, delai);
+            });
 
-            // Resize / orientation : re-apply (rotation mobile <-> desktop)
-            window.addEventListener('resize', applyVisibility);
-            window.addEventListener('load', applyVisibility);
+            // 3. Rotation ou redimensionnement de la fenetre.
+            var t;
+            window.addEventListener('resize', function() {
+              clearTimeout(t);
+              t = setTimeout(appliquer, 200);
+            });
           })();
         `}
       </Script>
