@@ -134,12 +134,12 @@ export default function DoublerAvisGoogle30Jours() {
                     Plaque NFC Swiipx
                   </p>
                   <p className="text-xs text-gray-600 mb-3 leading-relaxed">
-                    Doublez vos avis Google avec la plaque NFC n°1 en France. Installation en 30 secondes.
+                    Livrée déjà programmée avec le lien d&apos;avis de votre établissement. Installation en 30 secondes.
                   </p>
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-lg font-bold text-primary">29,90 €</span>
                     <span className="text-xs text-gray-400 line-through">39,90 €</span>
-                    <span className="text-xs font-semibold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">-33%</span>
+                    <span className="text-xs font-semibold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">-25%</span>
                   </div>
                   <Link
                     href="/#product"
@@ -147,10 +147,9 @@ export default function DoublerAvisGoogle30Jours() {
                   >
                     Voir la plaque avis Google →
                   </Link>
-                  <div className="flex items-center justify-center gap-1 mt-2">
-                    <span className="text-yellow-400 text-xs">★★★★★</span>
-                    <span className="text-xs text-gray-500">4.9/5 — 200+ avis</span>
-                  </div>
+                  <p className="text-center text-xs text-gray-500 mt-2">
+                    Livraison offerte · Garantie à vie
+                  </p>
                 </div>
               </div>
             </div>
