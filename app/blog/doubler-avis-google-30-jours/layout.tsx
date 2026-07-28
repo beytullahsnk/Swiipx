@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Comment doubler vos avis Google en 30 jours | Guide 2026',
   description:
-    'Méthode complète en 4 phases pour doubler vos avis Google en 30 jours. Optimisation Google Business Profile, plaque NFC, scripts de demande et templates de réponse. Cas pratique : +740 % d\'avis.',
+    'Méthode en 4 phases pour doubler vos avis Google en 30 jours : fiche Google Business, plaque NFC, scripts de demande et modèles de réponse.',
   keywords:
     'doubler avis google, obtenir plus avis google, augmenter avis google, plaque NFC avis, Google My Business, avis clients, e-réputation, visibilité locale, collecte avis google, avis google 30 jours',
   alternates: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Comment doubler vos avis Google en 30 jours | Guide 2026',
     description:
-      'Méthode complète en 4 phases + cas pratique (+740 % d\'avis). Scripts, templates et outils NFC.',
+      'Méthode en 4 phases : fiche Google Business, plaque NFC, scripts et modèles de réponse.',
     images: ['/product-main.jpg'],
   },
 }
@@ -44,7 +44,7 @@ const jsonLdArticle = {
   '@type': 'Article',
   headline: 'Comment doubler vos avis Google en 30 jours',
   description:
-    'Méthode complète en 4 phases pour doubler vos avis Google en 30 jours. Optimisation Google Business Profile, plaque NFC, scripts de demande et templates de réponse.',
+    'Méthode en 4 phases pour doubler vos avis Google en 30 jours : fiche Google Business, plaque NFC, scripts de demande et modèles de réponse.',
   datePublished: '2026-01-19',
   dateModified: '2026-07-28',
   author: {

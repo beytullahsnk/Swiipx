@@ -28,7 +28,7 @@ export type ArticleSeo = {
 export const seoData: Record<string, ArticleSeo> = {
   'plaque-nfc-boulangerie': {
     title: 'Plaque NFC boulangerie : x5 avis Google',
-    description: 'Boulangeries, pâtisseries, points chauds : multipliez vos avis Google par 5 avec une plaque NFC malgré le rush. Guide 2026 : emplacements, scripts, 3 études de cas, ROI.',
+    description: 'Boulangeries et pâtisseries : collectez des avis Google avec une plaque NFC malgré le rush. Guide 2026 : emplacements, scripts, études de cas.',
     keywords: 'plaque nfc boulangerie, avis google boulangerie, plaque nfc patisserie, avis google boulanger, plaque avis google boulangerie patisserie, seo local boulangerie, avis google point chaud',
     date: '2026-07-27',
     dateModified: '2026-07-28',
@@ -60,7 +60,7 @@ export const seoData: Record<string, ArticleSeo> = {
   },
   'plaque-nfc-institut-beaute': {
     title: 'Plaque NFC institut de beauté : x5 avis',
-    description: 'Instituts de beauté, esthétique, onglerie, spa : multipliez vos avis Google par 5 avec une plaque NFC. Guide 2026 : emplacements, scripts, 3 études de cas, ROI chiffré.',
+    description: 'Instituts de beauté, onglerie, spa : collectez des avis Google avec une plaque NFC. Guide 2026 : emplacements, scripts, études de cas et ROI.',
     keywords: 'plaque nfc institut de beaute, avis google institut de beaute, plaque nfc esthetique, avis google estheticienne, plaque nfc onglerie, avis google spa, seo local institut beaute',
     date: '2026-07-22',
     dateModified: '2026-07-28',
@@ -76,7 +76,7 @@ export const seoData: Record<string, ArticleSeo> = {
   },
   'comment-choisir-plaque-nfc-avis-google': {
     title: 'Choisir sa plaque NFC avis Google en 2026',
-    description: 'Comment choisir sa plaque NFC avis Google : puce NTAG215, materiau, sans abonnement, nombre de plaques. 7 criteres, comparatif et pieges a eviter. Guide d\'achat 2026.',
+    description: 'Choisir sa plaque NFC avis Google : puce NTAG215, matériau, nombre de plaques. 7 critères, comparatif et pièges à éviter. Guide d\'achat 2026.',
     keywords: 'choisir plaque nfc, plaque nfc avis google, guide achat plaque nfc, puce ntag215, plaque nfc sans abonnement, meilleure plaque nfc avis google, comparatif plaque nfc',
     date: '2026-07-20',
     dateModified: '2026-07-28',
@@ -92,7 +92,7 @@ export const seoData: Record<string, ArticleSeo> = {
   },
   'statistiques-avis-google-2026': {
     title: 'Statistiques avis Google 2026 : 45 chiffres clés',
-    description: '45 statistiques 2026 sur les avis Google : comportement des consommateurs, impact SEO local et pack local, conversion, effet de la note et réponses. Le ROI prouvé.',
+    description: '45 statistiques 2026 sur les avis Google : comportement des consommateurs, impact SEO local, conversion et effet de la note.',
     keywords: 'statistiques avis google, chiffres avis google 2026, avis google seo local, impact avis clients, statistiques avis clients, note google etoiles, taux conversion avis, pack local google',
     date: '2026-07-17',
     dateModified: '2026-07-28',
@@ -108,7 +108,7 @@ export const seoData: Record<string, ArticleSeo> = {
   },
   'repondre-avis-negatifs-google': {
     title: 'Répondre aux avis négatifs Google : méthode 2026',
-    description: 'Répondre aux avis négatifs Google : méthode en 5 étapes, 6 modèles de réponses prêts à l\'emploi, procédure de suppression et stratégie pour diluer le négatif. Guide 2026.',
+    description: 'Répondre aux avis négatifs Google : méthode en 5 étapes, 6 modèles prêts à l\'emploi et procédure de suppression. Guide 2026.',
     keywords: 'repondre avis negatif google, avis negatif google, supprimer avis google, reponse avis google, gerer avis negatifs, modele reponse avis negatif, e-reputation locale, google business profile avis',
     date: '2026-07-13',
     dateModified: '2026-07-28',
@@ -124,7 +124,7 @@ export const seoData: Record<string, ArticleSeo> = {
   },
   'plaque-nfc-garage-automobile': {
     title: 'Plaque NFC garage auto : x4 avis Google',
-    description: 'Garages, centres auto, carrosseries : multipliez vos avis Google par 4 avec une plaque NFC. Guide 2026 : emplacements, scripts garagiste, 3 études de cas, ROI chiffré.',
+    description: 'Garages, centres auto, carrosseries : collectez des avis Google avec une plaque NFC. Guide 2026 : emplacements, scripts garagiste, études de cas.',
     keywords: 'plaque nfc garage, avis google garage, plaque nfc garage automobile, avis google garagiste, plaque avis google centre auto, avis google carrosserie, seo local garage',
     date: '2026-07-13',
     dateModified: '2026-07-28',
@@ -140,7 +140,7 @@ export const seoData: Record<string, ArticleSeo> = {
   },
   'plaque-nfc-cabinet-medical': {
     title: 'Plaque NFC cabinet médical : avis & règles',
-    description: 'Médecins, dentistes, kinés, ostéopathes : collectez des avis Google avec une plaque NFC en respectant la déontologie. Guide 2026 : placements, scripts conformes, FAQ.',
+    description: 'Médecins, dentistes, kinés : collectez des avis Google avec une plaque NFC en respectant la déontologie. Guide 2026 : placements et scripts conformes.',
     keywords: 'plaque nfc cabinet medical, avis google dentiste, avis google medecin, plaque nfc dentiste, avis google kinesitherapeute, plaque nfc osteopathe, deontologie avis google',
     date: '2026-06-08',
     dateModified: '2026-07-28',

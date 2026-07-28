@@ -3,6 +3,12 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import ClientLayout from './components/ClientLayout'
 import Analytics from './components/Analytics'
+import { LOWEST_PRICE_CENTS, formatPriceWithSymbol } from '../lib/pricing'
+
+// Le prix apparait dans la description Google : c'est un levier de CTR fort sur
+// une requete commerciale. Injecte depuis lib/pricing.ts pour ne jamais afficher
+// un prix perime dans les resultats de recherche.
+const DES = formatPriceWithSymbol(LOWEST_PRICE_CENTS)
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,7 +18,7 @@ export const metadata: Metadata = {
     default: 'Plaque NFC avis Google prête à l\'emploi — sans app | Swiipx',
     template: '%s | Swiipx',
   },
-  description: 'Plaque NFC livrée déjà programmée avec le lien d\'avis de votre établissement. Aucune application à installer. Sans abonnement, garantie à vie, 90 jours satisfait ou remboursé.',
+  description: `Plaque NFC livrée déjà programmée avec le lien d'avis de votre établissement. Aucune app à installer, aucun abonnement. Dès ${DES}, garantie à vie.`,
   keywords: 'plaque avis google, plaque nfc avis google, plaque google avis, carte nfc avis google, collecteur avis google, qr code avis google, avis google nfc',
   openGraph: {
     type: 'website',
@@ -33,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Plaque NFC avis Google — sans abonnement | Swiipx',
-    description: 'Plaque NFC livrée déjà programmée. Aucune app à installer. Dès 29,90€, sans abonnement, garantie à vie.',
+    description: `Plaque NFC livrée déjà programmée. Aucune app à installer. Dès ${DES}, sans abonnement, garantie à vie.`,
     images: ['/product-main.jpg'],
   },
   robots: {

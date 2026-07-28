@@ -8,21 +8,21 @@ const sectorData: Record<string, {
   intro: string
 }> = {
   restaurant: {
-    title: 'Plaque NFC pour Restaurant — Collectez +200 avis Google | Swiipx',
+    title: 'Plaque avis Google pour restaurant — sans app',
     description: 'Restaurant : plaque NFC avis Google sans abonnement. 35-45 % de taux d\'avis collectés. Pack 2 plaques 49,90 €, livraison gratuite, garantie à vie.',
     keywords: 'plaque nfc restaurant, avis google restaurant, plaque restaurant nfc, plaque avis google bistrot, nfc restauration france, plaque avis brasserie',
     h1: 'Plaque NFC pour restaurants : multipliez vos avis Google par 7',
     intro: 'Plaque NFC programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Acrylique premium, sans abonnement, livraison gratuite.',
   },
   'salon-coiffure': {
-    title: 'Plaque NFC pour Salon de Coiffure — Avis Google | Swiipx',
+    title: 'Plaque avis Google pour salon de coiffure',
     description: 'Salon de coiffure : plaque NFC avis Google. 40-55 % de conversion (taux record). +150 avis/an. Pack adapté aux salons, garantie à vie, sans abonnement.',
     keywords: 'plaque nfc salon coiffure, plaque avis google coiffeur, nfc coiffure, plaque avis institut beauté, plaque nfc barbier, plaque coiffeur',
     h1: 'Plaque NFC pour salons de coiffure : avis Google en 10 s',
     intro: 'Les salons de coiffure obtiennent le meilleur taux de conversion en NFC : 40-55 % des clientes laissent un avis. Découvrez pourquoi et comment.',
   },
   'cabinet-medical': {
-    title: 'Plaque NFC pour Cabinet Médical — Avis Google Patients | Swiipx',
+    title: 'Plaque avis Google pour cabinet médical',
     description: 'Cabinet médical, dentiste, kiné, ostéo : plaque NFC avis Google discrète et déontologique. Collectez +50 avis/an facilement. Sans abonnement.',
     keywords: 'plaque nfc cabinet medical, plaque avis google dentiste, avis google medecin, plaque nfc osteopathe, avis google kinesitherapeute, plaque libéral',
     h1: 'Plaque NFC pour cabinets médicaux et professionnels libéraux',
