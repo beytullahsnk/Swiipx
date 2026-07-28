@@ -2,6 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { Resend } from 'resend'
 import { PACKS, type PackId } from '@/lib/pricing'
+import {
+  buildMerchantAlertHtml,
+  buildMerchantAlertSubject,
+  MERCHANT_EMAIL,
+  type MerchantAlertInput,
+} from '@/lib/merchant-alert'
 import { render } from '@react-email/render'
 import OrderConfirmation from '../../emails/OrderConfirmation'
 
@@ -202,6 +208,38 @@ async function createSendcloudServicePointParcel(metadata: Record<string, string
 export const runtime = 'nodejs'
 // Vercel : laisse le temps au webhook de faire Resend + Sendcloud (défaut = 10s)
 export const maxDuration = 30
+
+/**
+ * Previent le marchand d'une commande payee.
+ *
+ * Envoye SYSTEMATIQUEMENT, y compris (et surtout) quand une etape a echoue :
+ * sans cet email, un colis non cree ne se voyait que dans les logs Vercel, et
+ * le client — qui a pourtant recu sa confirmation — attendait une plaque
+ * jamais expediee.
+ *
+ * Ne leve jamais : une notification ratee ne doit pas faire echouer le webhook,
+ * sinon Stripe rejoue l'evenement et le colis serait cree deux fois.
+ */
+async function notifyMerchant(input: MerchantAlertInput) {
+  try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error('[Webhook] RESEND_API_KEY manquant — notification marchand impossible')
+      return
+    }
+    const { error } = await getResend().emails.send({
+      from: 'Swiipx <bonjour@swiipx.fr>',
+      to: MERCHANT_EMAIL,
+      replyTo: input.metadata.customer_email || undefined,
+      subject: buildMerchantAlertSubject(input),
+      html: buildMerchantAlertHtml(input),
+    })
+    if (error) console.error('[Webhook] Notification marchand en echec:', JSON.stringify(error))
+    else console.log('[Webhook] Notification marchand envoyee a', MERCHANT_EMAIL)
+  } catch (e: any) {
+    console.error('[Webhook] Notification marchand en echec:', e?.message || e)
+  }
+}
+
 // Toujours exécuté à la demande, jamais mis en cache
 export const dynamic = 'force-dynamic'
 
@@ -250,7 +288,18 @@ export async function POST(request: NextRequest) {
       console.log('[Webhook] customerEmail:', customerEmail ? `${customerEmail.slice(0, 3)}***` : 'MISSING', '| receipt_email:', paymentIntent.receipt_email ? 'present' : 'missing')
 
       if (!customerEmail) {
+        // Cas le plus grave : commande payee, aucun email, aucun colis. Avant,
+        // on sortait ici en silence et personne cote Swiipx ne l'apprenait.
         console.warn('[Webhook] No customer email — skipping email + sendcloud. PI metadata:', JSON.stringify(metadata))
+        await notifyMerchant({
+          orderNumber: `SW-${paymentIntent.id.slice(-8).toUpperCase()}`,
+          amountCents: paymentIntent.amount,
+          paymentIntentId: paymentIntent.id,
+          metadata,
+          items: [{ name: 'Commande sans email client', quantity: 1, amount: paymentIntent.amount }],
+          parcel: { ok: false, detail: "aucun email client dans les metadonnees Stripe" },
+          customerEmailSent: false,
+        })
         return NextResponse.json({ received: true })
       }
 
@@ -290,6 +339,7 @@ export async function POST(request: NextRequest) {
       }
 
       // 1. Email de confirmation (isolé : si Resend échoue, on continue avec Sendcloud)
+      let customerEmailSent = false
       console.log('[Webhook] Sending confirmation email via Resend...')
       try {
         if (!process.env.RESEND_API_KEY) {
@@ -312,6 +362,7 @@ export async function POST(request: NextRequest) {
           if (resendError) {
             console.error('[Webhook] Resend error:', JSON.stringify(resendError))
           } else {
+            customerEmailSent = true
             console.log('[Webhook] Resend OK — email ID:', resendData?.id)
           }
         }
@@ -321,10 +372,12 @@ export async function POST(request: NextRequest) {
 
       // 2. Créer le colis Sendcloud (isolé : indépendant de l'email)
       const orderNumber = `SW-${paymentIntent.id.slice(-8).toUpperCase()}`
+      let parcel: { ok: boolean; detail?: string } = { ok: false }
       console.log('[Webhook] Creating Sendcloud parcel | order:', orderNumber, '| method:', shippingMethod)
       try {
         if (shippingMethod === 'point_relais' && metadata.sp_id) {
           await createSendcloudServicePointParcel(metadata, customerEmail, orderNumber)
+          parcel = { ok: true }
         } else if (shippingMethod === 'domicile' && metadata.shipping_line1) {
           const shippingDetails = {
             name: metadata.shipping_name || customerName,
@@ -337,12 +390,27 @@ export async function POST(request: NextRequest) {
             },
           } as Stripe.Checkout.Session.ShippingDetails
           await createSendcloudParcel(shippingDetails, customerEmail, orderNumber, metadata.customer_phone, metadata.items)
+          parcel = { ok: true }
         } else {
           console.warn(`[Webhook] No shipping data for order ${orderNumber} (method=${shippingMethod})`)
+          parcel = { ok: false, detail: `aucune donnee de livraison (mode=${shippingMethod})` }
         }
       } catch (parcelErr: any) {
-        console.error('[Webhook] Sendcloud parcel creation failed:', parcelErr?.message || parcelErr)
+        const detail = parcelErr?.message || String(parcelErr)
+        console.error('[Webhook] Sendcloud parcel creation failed:', detail)
+        parcel = { ok: false, detail }
       }
+
+      // 3. Notification marchand — toujours, succes comme echec.
+      await notifyMerchant({
+        orderNumber,
+        amountCents: paymentIntent.amount,
+        paymentIntentId: paymentIntent.id,
+        metadata,
+        items,
+        parcel,
+        customerEmailSent,
+      })
 
     } catch (error: any) {
       console.error('[Webhook] Order processing error:', error?.message || error)
