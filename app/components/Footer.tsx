@@ -170,10 +170,10 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-400 text-xs">
               © {currentYear} Swiipx. Tous droits réservés.
             </p>
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-400 text-xs">
               Développé par <a href="https://skyaksa.fr" target="_blank" rel="noopener noreferrer" className="text-gray-400 font-medium hover:text-primary transition-colors">SKYAKSA</a>
             </p>
           </div>

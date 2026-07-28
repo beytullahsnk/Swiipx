@@ -200,7 +200,7 @@ export default function BusinessAutocomplete({
         />
 
         {/* Google logo badge */}
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center space-x-1 text-xs text-gray-400">
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center space-x-1 text-xs text-gray-500">
           <MapPin className="w-4 h-4" />
           <span className="font-medium">by Google</span>
         </div>
@@ -221,7 +221,7 @@ export default function BusinessAutocomplete({
 
       {/* Powered by Google (required by Google Places API) */}
       <div className="mt-2 flex justify-end">
-        <span className="text-xs text-gray-400">Powered by Google</span>
+        <span className="text-xs text-gray-500">Powered by Google</span>
       </div>
     </div>
   )

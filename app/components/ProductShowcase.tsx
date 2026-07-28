@@ -200,7 +200,7 @@ export default function ProductShowcase() {
               </div>
 
               {/* Badge */}
-              <div className="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg z-20">
+              <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg z-20">
                 LIVRAISON OFFERTE
               </div>
             </div>
@@ -317,7 +317,7 @@ export default function ProductShowcase() {
                       <div>
                         <p className="font-bold text-gray-900">{pack.name}</p>
                         {pack.badge && (
-                          <p className="text-sm text-green-600 font-medium">{pack.badge}</p>
+                          <p className="text-sm text-green-700 font-medium">{pack.badge}</p>
                         )}
                       </div>
                     </div>
@@ -326,12 +326,12 @@ export default function ProductShowcase() {
                     <div className="text-right">
                       <div className="flex items-baseline justify-end gap-2">
                         {pack.formerPriceHT && (
-                          <span className="text-sm text-gray-400 line-through">{pack.formerPriceHT}</span>
+                          <span className="text-sm text-gray-600 line-through">{pack.formerPriceHT}</span>
                         )}
                         <p className="text-2xl font-bold text-gray-900">{pack.priceHT}</p>
                       </div>
                       {pack.unitPriceHT && (
-                        <p className="text-xs text-gray-500 mt-0.5">soit {pack.unitPriceHT} la plaque</p>
+                        <p className="text-xs text-gray-600 mt-0.5">soit {pack.unitPriceHT} la plaque</p>
                       )}
                     </div>
                   </div>

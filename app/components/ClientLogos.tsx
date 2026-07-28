@@ -47,7 +47,7 @@ export default function ClientLogos({
     <div className={className}>
       {titre && (
         <p
-          className={`font-semibold uppercase tracking-wider text-gray-400 ${
+          className={`font-semibold uppercase tracking-wider text-gray-500 ${
             complet ? 'text-xs text-center mb-6' : 'text-xs mb-3'
           }`}
         >
@@ -89,7 +89,7 @@ export default function ClientLogos({
             complet ? 'text-sm text-center mt-6' : 'text-xs mt-3'
           }`}
         >
-          <span className="text-gray-400">Et aussi&nbsp;: </span>
+          <span className="text-gray-500">Et aussi&nbsp;: </span>
           {otherSectors.join(' · ')}
         </p>
       )}
