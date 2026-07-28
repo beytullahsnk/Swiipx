@@ -1,4 +1,3 @@
-import Script from 'next/script'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
@@ -28,17 +27,10 @@ export default function Analytics() {
           qui envoie à GA4. Charger les deux doublerait chaque événement. */}
       {gtmId ? <GoogleTagManager gtmId={gtmId} /> : gaId && <GoogleAnalytics gaId={gaId} />}
 
-      {clarityId && (
-        <Script id="clarity" strategy="afterInteractive">
-          {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "${clarityId}");
-          `}
-        </Script>
-      )}
+      {/* Clarity n'est PAS ici : Microsoft demande une pose dans le <head>, et
+          next/script place le script en fin de <body> quelle que soit la
+          stratégie (vérifié : 'afterInteractive' comme 'beforeInteractive').
+          Il est donc rendu directement dans le <head> de app/layout.tsx. */}
     </>
   )
 }

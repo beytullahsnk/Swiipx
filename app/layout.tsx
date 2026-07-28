@@ -62,6 +62,26 @@ export default function RootLayout({
   return (
     <html lang="fr" className="scroll-smooth">
       <head>
+        {/* Microsoft Clarity — extrait officiel, posé dans le <head> comme
+            Microsoft l'exige.
+
+            Il n'est volontairement PAS passé par next/script : quelle que soit
+            la stratégie ('afterInteractive' comme 'beforeInteractive'), Next 14
+            en App Router injecte le script en fin de <body>. Clarity ne
+            démarrait donc qu'après l'hydratation et ne voyait rien de ce que
+            faisait le visiteur avant — c'est-à-dire précisément les rebonds
+            rapides, qui sont ce qu'on cherche à comprendre.
+
+            Le coût de rendu est nul : cet extrait fait ~300 octets et c'est lui
+            qui charge ensuite la librairie en asynchrone (t.async=1). */}
+        {process.env.NEXT_PUBLIC_CLARITY_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_ID}");`,
+            }}
+          />
+        )}
+
         <link rel="manifest" href="/manifest.webmanifest" />
         <script
           type="application/ld+json"
