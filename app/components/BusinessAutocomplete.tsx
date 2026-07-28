@@ -34,16 +34,35 @@ export default function BusinessAutocomplete({
   const [resetTrigger, setResetTrigger] = useState(0) // Trigger pour forcer la réinitialisation
   const { setCompany, clearCompany } = useCompanyStore()
 
-  // Check if Google Maps API is loaded
+  // Attend que l'API Google Places soit disponible.
+  //
+  // Le sondage est BORNÉ (15 s) : sans limite, une clé invalide ou un Google
+  // injoignable faisait tourner ce timer 10 fois par seconde pendant toute la
+  // session, sans jamais aboutir.
   useEffect(() => {
-    const checkGoogleLoaded = setInterval(() => {
-      if ((window as any).google && (window as any).google.maps && (window as any).google.maps.places) {
+    const estPret = () => {
+      const g = (window as any).google
+      return !!(g && g.maps && g.maps.places)
+    }
+
+    if (estPret()) {
+      setIsLoaded(true)
+      return
+    }
+
+    let essais = 0
+    const MAX_ESSAIS = 150 // 150 × 100 ms = 15 s
+    const timer = setInterval(() => {
+      if (estPret()) {
         setIsLoaded(true)
-        clearInterval(checkGoogleLoaded)
+        clearInterval(timer)
+      } else if (++essais >= MAX_ESSAIS) {
+        clearInterval(timer)
+        console.error('[BusinessAutocomplete] API Google Places indisponible après 15 s')
       }
     }, 100)
 
-    return () => clearInterval(checkGoogleLoaded)
+    return () => clearInterval(timer)
   }, [])
 
   // Initialize/Reinitialize Google Places Autocomplete
@@ -169,6 +188,10 @@ export default function BusinessAutocomplete({
         <input
           ref={inputRef}
           type="text"
+          /* Le remplissage automatique du navigateur proposerait ici des noms
+             et adresses enregistres, et sa liste recouvrirait celle de Google
+             Places : l'utilisateur ne verrait plus les etablissements suggeres. */
+          autoComplete="off"
           value={inputValue}
           onChange={handleInputChange}
           placeholder={placeholder}

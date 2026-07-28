@@ -432,6 +432,7 @@ export default function BlogPage() {
               <form className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="email"
+                  autoComplete="email"
                   placeholder="votre@email.fr"
                   aria-label="Adresse email pour la newsletter"
                   className="flex-1 px-6 py-4 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none bg-white"

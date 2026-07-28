@@ -81,6 +81,7 @@ export default function PromoPopup({ isOpen, onClose }: PromoPopupProps) {
         <form onSubmit={handleSubmit} className="space-y-3 mt-4">
           <Input
             type="email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="votre@email.fr"

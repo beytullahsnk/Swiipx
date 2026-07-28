@@ -676,6 +676,7 @@ function CheckoutForm({
                 <label htmlFor="email" className="block text-sm text-gray-600 mb-1">Email *</label>
                 <input
                   id="email"
+                  autoComplete="email"
                   type="email"
                   required
                   value={email}
@@ -689,6 +690,7 @@ function CheckoutForm({
                   <label htmlFor="name" className="block text-sm text-gray-600 mb-1">Nom complet *</label>
                   <input
                     id="name"
+                    autoComplete="name"
                     type="text"
                     required
                     value={name}
@@ -701,6 +703,8 @@ function CheckoutForm({
                   <label htmlFor="phone" className="block text-sm text-gray-600 mb-1">Téléphone *</label>
                   <input
                     id="phone"
+                    autoComplete="tel"
+                    inputMode="tel"
                     type="tel"
                     required
                     value={phone}
@@ -721,6 +725,7 @@ function CheckoutForm({
                 <label htmlFor="billingLine1" className="block text-sm text-gray-600 mb-1">Adresse *</label>
                 <input
                   id="billingLine1"
+                  autoComplete="billing address-line1"
                   type="text"
                   required
                   value={billingLine1}
@@ -733,6 +738,7 @@ function CheckoutForm({
                 <label htmlFor="billingLine2" className="block text-sm text-gray-600 mb-1">Complément</label>
                 <input
                   id="billingLine2"
+                  autoComplete="billing address-line2"
                   type="text"
                   value={billingLine2}
                   onChange={(e) => setBillingLine2(e.target.value)}
@@ -745,6 +751,10 @@ function CheckoutForm({
                   <label htmlFor="billingPostalCode" className="block text-sm text-gray-600 mb-1">Code postal *</label>
                   <input
                     id="billingPostalCode"
+                    autoComplete="billing postal-code"
+                    inputMode="numeric"
+                    pattern="[0-9]{5}"
+                    maxLength={5}
                     type="text"
                     required
                     value={billingPostalCode}
@@ -757,6 +767,7 @@ function CheckoutForm({
                   <label htmlFor="billingCity" className="block text-sm text-gray-600 mb-1">Ville *</label>
                   <input
                     id="billingCity"
+                    autoComplete="billing address-level2"
                     type="text"
                     required
                     value={billingCity}
@@ -845,6 +856,7 @@ function CheckoutForm({
                       <label htmlFor="shippingLine1" className="block text-sm text-gray-600 mb-1">Adresse de livraison *</label>
                       <input
                         id="shippingLine1"
+                        autoComplete="shipping address-line1"
                         type="text"
                         required
                         value={shippingLine1}
@@ -857,6 +869,7 @@ function CheckoutForm({
                       <label htmlFor="shippingLine2" className="block text-sm text-gray-600 mb-1">Complément</label>
                       <input
                         id="shippingLine2"
+                        autoComplete="shipping address-line2"
                         type="text"
                         value={shippingLine2}
                         onChange={(e) => setShippingLine2(e.target.value)}
@@ -869,6 +882,10 @@ function CheckoutForm({
                         <label htmlFor="shippingPostalCode" className="block text-sm text-gray-600 mb-1">Code postal *</label>
                         <input
                           id="shippingPostalCode"
+                          autoComplete="shipping postal-code"
+                          inputMode="numeric"
+                          pattern="[0-9]{5}"
+                          maxLength={5}
                           type="text"
                           required
                           value={shippingPostalCode}
@@ -881,6 +898,7 @@ function CheckoutForm({
                         <label htmlFor="shippingCity" className="block text-sm text-gray-600 mb-1">Ville *</label>
                         <input
                           id="shippingCity"
+                          autoComplete="shipping address-level2"
                           type="text"
                           required
                           value={shippingCity}
