@@ -1,28 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
+import { PACKS } from '@/lib/pricing'
 
 // Initialize Stripe with secret key from environment
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2023-10-16',
 })
 
-// Product mapping with Stripe product IDs
+// Stripe product IDs. Les MONTANTS viennent de lib/pricing.ts (source unique) :
+// ne jamais réécrire un prix en dur ici.
 const PRODUCT_MAP = {
-  plaque1: {
-    productId: 'prod_TOht805NFJflwU', // prod_TOht805NFJflwU
-    name: 'Swiipx — 1 Plaque',
-    amountCents: 3990, // 39,90€ TTC
-  },
-  plaque2: {
-    productId: 'prod_TOhuRHDGoAwXmX', // prod_TOhuRHDGoAwXmX
-    name: 'Swiipx — 2 Plaques',
-    amountCents: 5990, // 59,90€ TTC
-  },
-  plaque5: {
-    productId: 'prod_TOhuUHZ3CPLbUw', // prod_TOhuUHZ3CPLbUw
-    name: 'Swiipx — 5 Plaques', // test prod_TOiZBuKlMrDfpR
-    amountCents: 8990, // 89,90€ TTC
-  },
+  plaque1: { productId: 'prod_TOht805NFJflwU', ...PACKS.plaque1 },
+  plaque2: { productId: 'prod_TOhuRHDGoAwXmX', ...PACKS.plaque2 },
+  plaque5: { productId: 'prod_TOhuUHZ3CPLbUw', ...PACKS.plaque5 },
 } as const
 
 type ProductId = keyof typeof PRODUCT_MAP
@@ -66,7 +56,7 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: 'eur',
             product: product.productId,
-            unit_amount: product.amountCents,
+            unit_amount: product.priceCents,
           },
           quantity: item.qty,
         }

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Plaque NFC avis Google — sans abonnement | Swiipx',
-    description: 'Plaque NFC livrée déjà programmée. Aucune app à installer. Dès 39,90€, sans abonnement, garantie à vie.',
+    description: 'Plaque NFC livrée déjà programmée. Aucune app à installer. Dès 29,90€, sans abonnement, garantie à vie.',
     images: ['/product-main.jpg'],
   },
   robots: {

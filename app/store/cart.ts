@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { PACKS, type PackId } from '@/lib/pricing'
 
 // Types
 export interface BusinessInfo {
@@ -12,7 +13,7 @@ export interface BusinessInfo {
 }
 
 export interface CartItem {
-  id: 'plaque1' | 'plaque2' | 'plaque5'
+  id: PackId
   name: string
   priceCents: number
   qty: number
@@ -40,24 +41,9 @@ interface CartStore {
   totalItems: () => number
 }
 
-// Product mapping (matches Stripe product IDs)
-const PRODUCT_DATA: Record<CartItem['id'], Omit<CartItem, 'id' | 'qty'>> = {
-  plaque1: {
-    name: 'Swiipx — 1 Plaque',
-    priceCents: 3990, // 39,90€
-    image: '/products/plaque1.jpg',
-  },
-  plaque2: {
-    name: 'Swiipx — 2 Plaques',
-    priceCents: 5990, // 59,90€
-    image: '/products/plaque2.jpg',
-  },
-  plaque5: {
-    name: 'Swiipx — 5 Plaques',
-    priceCents: 8990, // 89,90€
-    image: '/products/plaque5.jpg',
-  },
-}
+// Prix, noms et visuels : source unique dans lib/pricing.ts. Le serveur
+// recalcule de toute façon le montant depuis la même source avant de débiter.
+const PRODUCT_DATA: Record<CartItem['id'], Omit<CartItem, 'id' | 'qty'>> = PACKS
 
 // Create cart store with persistence
 export const useCart = create<CartStore>()(
@@ -158,9 +144,24 @@ export const useCart = create<CartStore>()(
     }),
     {
       name: 'swiipx-cart', // localStorage key
+      // v2 : passage à la grille 29,90 / 49,90 / 79,90.
+      version: 2,
       onRehydrateStorage: () => (state) => {
+        if (!state) return
+
+        // Un panier persisté peut dater d'avant un changement de prix : on
+        // réaligne systématiquement sur lib/pricing.ts. Sans ça, le client
+        // voit l'ancien prix alors que le serveur débite le nouveau.
+        // Les paniers contenant un produit supprimé sont purgés.
+        state.items = state.items.reduce<CartItem[]>((kept, item) => {
+          const pack = PACKS[item.id]
+          if (!pack) return kept
+          kept.push({ ...item, name: pack.name, priceCents: pack.priceCents, image: pack.image })
+          return kept
+        }, [])
+
         // Marquer comme hydraté une fois que les données sont chargées
-        state?.setHasHydrated(true)
+        state.setHasHydrated(true)
       },
     }
   )

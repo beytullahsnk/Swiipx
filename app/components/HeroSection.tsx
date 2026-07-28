@@ -46,7 +46,7 @@ export default function HeroSection() {
                 href="/#product"
                 className="group inline-flex items-center justify-center px-7 py-3.5 bg-primary text-white rounded-xl font-semibold text-base shadow-lg hover:bg-blue-700 transition-colors whitespace-nowrap"
               >
-                <span>Commander dès 39,90€</span>
+                <span>Commander dès 29,90€</span>
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
 

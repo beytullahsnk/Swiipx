@@ -10,35 +10,25 @@ import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
 import { featuredClients } from '../data/clients'
 import { track } from '../../lib/analytics'
+import { PACKS, formatPriceWithSymbol, unitPriceCents } from '../../lib/pricing'
 
-// Product packs data (matching cart store IDs)
+// Packs : prix issus de lib/pricing.ts (source unique). Le prix barre est le
+// prix REELLEMENT pratique avant la baisse — jamais un prix de reference gonfle.
 const productPacks = [
-  {
-    id: 'plaque1' as const,
-    quantity: 1,
-    name: '1 Plaque',
-    price: 39.90,
-    priceHT: '39,90€',
-    badge: null,
-  },
-  {
-    id: 'plaque2' as const,
-    quantity: 2,
-    name: '2 Plaques',
-    price: 59.90,
-    priceHT: '59,90€',
-    badge: '+ Guide Gratuit 🎁',
-    popular: true,
-  },
-  {
-    id: 'plaque5' as const,
-    quantity: 5,
-    name: '5 Plaques',
-    price: 89.90,
-    priceHT: '89,90€',
-    badge: '+ Guide & Cadeau Mystère 🎁',
-  },
-]
+  { pack: PACKS.plaque1, name: '1 Plaque', badge: null, popular: false },
+  { pack: PACKS.plaque2, name: '2 Plaques', badge: '+ Guide Gratuit 🎁', popular: true },
+  { pack: PACKS.plaque5, name: '5 Plaques', badge: '+ Guide & Cadeau Mystère 🎁', popular: false },
+].map(({ pack, name, badge, popular }) => ({
+  id: pack.id,
+  quantity: pack.plaques,
+  name,
+  badge,
+  popular,
+  price: pack.priceCents / 100,
+  priceHT: formatPriceWithSymbol(pack.priceCents),
+  formerPriceHT: pack.formerPriceCents ? formatPriceWithSymbol(pack.formerPriceCents) : null,
+  unitPriceHT: pack.plaques > 1 ? formatPriceWithSymbol(unitPriceCents(pack)) : null,
+}))
 
 // Arguments propres a Swiipx : ce que les concurrents a application
 // ne peuvent PAS dire. Chaque ligne est verifiable.
@@ -322,9 +312,17 @@ export default function ProductShowcase() {
                       </div>
                     </div>
 
-                    {/* Price */}
+                    {/* Prix : barre = ancien prix reellement pratique */}
                     <div className="text-right">
-                      <p className="text-2xl font-bold text-gray-900">{pack.priceHT}</p>
+                      <div className="flex items-baseline justify-end gap-2">
+                        {pack.formerPriceHT && (
+                          <span className="text-sm text-gray-400 line-through">{pack.formerPriceHT}</span>
+                        )}
+                        <p className="text-2xl font-bold text-gray-900">{pack.priceHT}</p>
+                      </div>
+                      {pack.unitPriceHT && (
+                        <p className="text-xs text-gray-500 mt-0.5">soit {pack.unitPriceHT} la plaque</p>
+                      )}
                     </div>
                   </div>
 

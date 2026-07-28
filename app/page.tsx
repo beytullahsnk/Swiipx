@@ -42,7 +42,7 @@ export default function Home() {
       {
         '@type': 'Question',
         name: 'Quelle est la garantie ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Nos plaques sont garanties 2 ans contre tout défaut de fabrication.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Nos plaques sont garanties à vie contre tout défaut de fabrication.' },
       },
       {
         '@type': 'Question',
@@ -74,8 +74,8 @@ export default function Home() {
     },
     offers: {
       '@type': 'AggregateOffer',
-      lowPrice: '39.90',
-      highPrice: '89.90',
+      lowPrice: '29.90',
+      highPrice: '79.90',
       priceCurrency: 'EUR',
       availability: 'https://schema.org/InStock',
       offerCount: 3,
@@ -112,7 +112,7 @@ export default function Home() {
     supply: [
       {
         '@type': 'HowToSupply',
-        name: 'Plaque NFC Swiipx (à partir de 39,90€)',
+        name: 'Plaque NFC Swiipx (à partir de 29,90€)',
       },
     ],
     tool: [
@@ -163,8 +163,8 @@ export default function Home() {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'EUR',
-      lowPrice: '39.90',
-      highPrice: '89.90',
+      lowPrice: '29.90',
+      highPrice: '79.90',
       offerCount: 3,
     },
   }
@@ -185,7 +185,7 @@ export default function Home() {
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/starter',
-            price: '39.90',
+            price: '29.90',
             priceCurrency: 'EUR',
             availability: 'https://schema.org/InStock',
             priceValidUntil: '2026-12-31',
@@ -204,7 +204,7 @@ export default function Home() {
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/business',
-            price: '59.90',
+            price: '49.90',
             priceCurrency: 'EUR',
             availability: 'https://schema.org/InStock',
             priceValidUntil: '2026-12-31',
@@ -223,7 +223,7 @@ export default function Home() {
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/pro',
-            price: '89.90',
+            price: '79.90',
             priceCurrency: 'EUR',
             availability: 'https://schema.org/InStock',
             priceValidUntil: '2026-12-31',

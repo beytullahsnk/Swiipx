@@ -201,8 +201,8 @@ export default function DoublerAvisGoogle30Jours() {
                     Doublez vos avis Google avec la plaque NFC n°1 en France. Installation en 30 secondes.
                   </p>
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-lg font-bold text-primary">39,90 €</span>
-                    <span className="text-xs text-gray-400 line-through">59,90 €</span>
+                    <span className="text-lg font-bold text-primary">29,90 €</span>
+                    <span className="text-xs text-gray-400 line-through">39,90 €</span>
                     <span className="text-xs font-semibold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">-33%</span>
                   </div>
                   <Link
@@ -378,7 +378,7 @@ export default function DoublerAvisGoogle30Jours() {
                       <td className="p-3 border border-gray-200 font-semibold text-green-800">Plaque NFC Swiipx</td>
                       <td className="p-3 border border-gray-200 font-semibold text-green-800">10 s</td>
                       <td className="p-3 border border-gray-200 font-semibold text-green-800">35-45&nbsp;%</td>
-                      <td className="p-3 border border-gray-200 font-semibold text-green-800">À partir de 39,90 €</td>
+                      <td className="p-3 border border-gray-200 font-semibold text-green-800">À partir de 29,90 €</td>
                     </tr>
                   </tbody>
                 </table>
@@ -417,7 +417,7 @@ export default function DoublerAvisGoogle30Jours() {
 
               <div className="bg-gray-900 rounded-2xl p-6 text-center my-8">
                 <p className="text-white font-bold text-lg mb-3">Prêt à passer au NFC ?</p>
-                <p className="text-gray-400 text-sm mb-4">Le pack 2 plaques est le plus populaire : 59,90&nbsp;€, aucun abonnement.</p>
+                <p className="text-gray-400 text-sm mb-4">Le pack 2 plaques est le plus populaire : 49,90&nbsp;€, aucun abonnement.</p>
                 <Link href="/#product" className="inline-block px-6 py-3 bg-accent text-gray-900 font-bold rounded-xl hover:bg-yellow-300 transition-colors">
                   Voir les packs Swiipx →
                 </Link>
@@ -695,7 +695,7 @@ export default function DoublerAvisGoogle30Jours() {
 
               <div className="bg-gray-900 rounded-xl p-5 text-center">
                 <p className="text-white font-bold text-lg">Impact financier : <span className="text-accent">+12 400&nbsp;€/mois</span></p>
-                <p className="text-gray-400 text-sm mt-1">pour un investissement de 59,90&nbsp;€ (pack 2 plaques NFC, aucun abonnement)</p>
+                <p className="text-gray-400 text-sm mt-1">pour un investissement de 49,90&nbsp;€ (pack 2 plaques NFC, aucun abonnement)</p>
               </div>
             </section>
 
@@ -734,7 +734,7 @@ export default function DoublerAvisGoogle30Jours() {
 
                 <div className="border-b border-gray-100 pb-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Combien coûte une plaque NFC Swiipx ?</h3>
-                  <p className="text-gray-700 leading-relaxed">À partir de 39,90&nbsp;€ pour une plaque. Le <Link href="/#product" className="text-primary font-medium hover:underline">pack 2 plaques</Link> (le plus populaire) est à 59,90&nbsp;€ et le pack 5 plaques à 89,90&nbsp;€. Aucun abonnement mensuel, aucun frais caché. La plaque fonctionne immédiatement et dure plusieurs années.</p>
+                  <p className="text-gray-700 leading-relaxed">À partir de 29,90&nbsp;€ pour une plaque. Le <Link href="/#product" className="text-primary font-medium hover:underline">pack 2 plaques</Link> (le plus populaire) est à 49,90&nbsp;€ et le pack 5 plaques à 79,90&nbsp;€. Aucun abonnement mensuel, aucun frais caché. La plaque fonctionne immédiatement et dure plusieurs années.</p>
                 </div>
 
                 <div className="border-b border-gray-100 pb-6">

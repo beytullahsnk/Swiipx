@@ -109,7 +109,7 @@ const jsonLdFaq = {
       name: 'Combien coûte une plaque NFC Swiipx ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'À partir de 39,90 € pour une plaque. Le pack 2 plaques (le plus populaire) est à 59,90 € et le pack 5 plaques à 89,90 €. Aucun abonnement mensuel.',
+        text: 'À partir de 29,90 € pour une plaque. Le pack 2 plaques (le plus populaire) est à 49,90 € et le pack 5 plaques à 79,90 €. Aucun abonnement mensuel.',
       },
     },
     {

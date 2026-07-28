@@ -60,7 +60,7 @@ const sectors: Record<string, SectorContent> = {
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
-      price: '59,90 €',
+      price: '49,90 €',
       description: 'Le pack idéal pour un restaurant moyen : 1 plaque sur le porte-addition + 1 plaque à la caisse. Configuration incluse, livraison gratuite, garantie à vie.',
     },
     faq: [
@@ -102,7 +102,7 @@ const sectors: Record<string, SectorContent> = {
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
-      price: '59,90 €',
+      price: '49,90 €',
       description: 'Le pack le plus populaire chez les salons : 1 plaque sur le poste principal + 1 plaque à la caisse. Logo et nom de salon inclus.',
     },
     faq: [
@@ -143,7 +143,7 @@ const sectors: Record<string, SectorContent> = {
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
-      price: '59,90 €',
+      price: '49,90 €',
       description: '2 plaques discrètes pour couvrir accueil + salle d\'attente. Design sobre, configuration personnalisée incluse.',
     },
     faq: [
@@ -192,7 +192,7 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
                   href={`/product/${sector.recommendedPack.slug}`}
                   className="inline-flex items-center justify-center px-7 py-3.5 bg-primary text-white rounded-xl font-semibold text-base shadow-lg hover:bg-blue-700 transition-colors whitespace-nowrap"
                 >
-                  Commander dès 39,90 €
+                  Commander dès 29,90 €
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link

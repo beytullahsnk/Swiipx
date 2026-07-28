@@ -1,15 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
+import { PACKS, type PackId } from '@/lib/pricing'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2023-10-16',
 })
 
-const PRODUCT_MAP: Record<string, { amountCents: number }> = {
-  plaque1: { amountCents: 3990 },
-  plaque2: { amountCents: 5990 },
-  plaque5: { amountCents: 8990 },
-}
+// Prix : source unique dans lib/pricing.ts. Ce recalcul serveur doit
+// impérativement utiliser les mêmes montants que create-payment-intent.
+const PRODUCT_MAP = PACKS
 
 const SHIPPING_DOMICILE_CENTS = 490
 
@@ -34,9 +33,9 @@ export async function POST(request: NextRequest) {
     // Recalculer le montant total
     let totalCents = 0
     for (const item of items || []) {
-      const product = PRODUCT_MAP[item.id]
+      const product = PRODUCT_MAP[item.id as PackId]
       if (product) {
-        totalCents += product.amountCents * (item.qty || 1)
+        totalCents += product.priceCents * (item.qty || 1)
       }
     }
     if (shippingMethod === 'domicile') {

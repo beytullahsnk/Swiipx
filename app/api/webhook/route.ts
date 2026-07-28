@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { Resend } from 'resend'
+import { PACKS, type PackId } from '@/lib/pricing'
 import { render } from '@react-email/render'
 import OrderConfirmation from '../../emails/OrderConfirmation'
 
@@ -257,22 +258,16 @@ export async function POST(request: NextRequest) {
       let items = [{ name: 'Plaque Swiipx', quantity: 1, amount: paymentIntent.amount }]
       try {
         const parsedItems = JSON.parse(metadata.items || '[]')
-        const PRODUCT_NAMES: Record<string, string> = {
-          plaque1: 'Swiipx — 1 Plaque',
-          plaque2: 'Swiipx — 2 Plaques',
-          plaque5: 'Swiipx — 5 Plaques',
-        }
-        const PRODUCT_PRICES: Record<string, number> = {
-          plaque1: 3990,
-          plaque2: 5990,
-          plaque5: 8990,
-        }
+        // Prix et libellés : source unique dans lib/pricing.ts.
         if (parsedItems.length > 0) {
-          items = parsedItems.map((i: any) => ({
-            name: PRODUCT_NAMES[i.id] || 'Plaque Swiipx',
-            quantity: i.qty || 1,
-            amount: (PRODUCT_PRICES[i.id] || 0) * (i.qty || 1),
-          }))
+          items = parsedItems.map((i: any) => {
+            const pack = PACKS[i.id as PackId]
+            return {
+              name: pack?.name || 'Plaque Swiipx',
+              quantity: i.qty || 1,
+              amount: (pack?.priceCents || 0) * (i.qty || 1),
+            }
+          })
         }
       } catch {}
 

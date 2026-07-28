@@ -15,8 +15,8 @@ const productsMeta: Record<string, {
 }> = {
   starter: {
     title: 'Pack Starter — 1 Plaque Avis Google NFC',
-    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Parfait pour débuter. Livraison gratuite, garantie à vie, sans abonnement. 39,90€.',
-    price: '39.90',
+    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Parfait pour débuter. Livraison gratuite, garantie à vie, sans abonnement. 29,90€.',
+    price: '29.90',
     plaques: 1,
     keywords: 'plaque avis google, plaque avis google nfc, pack starter plaque avis google, collecter avis google',
     sku: 'SWIIPX-STARTER',
@@ -27,8 +27,8 @@ const productsMeta: Record<string, {
   },
   business: {
     title: 'Pack Business — 2 Plaques Avis Google NFC',
-    description: '2 plaques avis Google NFC pour multiplier vos avis. Idéal pour les professionnels. Livraison offerte, garantie à vie, sans abonnement. 59,90€.',
-    price: '59.90',
+    description: '2 plaques avis Google NFC pour multiplier vos avis. Idéal pour les professionnels. Livraison offerte, garantie à vie, sans abonnement. 49,90€.',
+    price: '49.90',
     originalPrice: '79.90',
     plaques: 2,
     keywords: 'plaque avis google, pack business plaque avis google nfc, 2 plaques avis google',
@@ -40,8 +40,8 @@ const productsMeta: Record<string, {
   },
   pro: {
     title: 'Pack Pro — 5 Plaques Avis Google NFC',
-    description: '5 plaques avis Google NFC pour maximiser vos avis sur plusieurs emplacements. Solution complète avec support dédié et configuration incluse. 89,90€.',
-    price: '89.90',
+    description: '5 plaques avis Google NFC pour maximiser vos avis sur plusieurs emplacements. Solution complète avec support dédié et configuration incluse. 79,90€.',
+    price: '79.90',
     originalPrice: '149.90',
     plaques: 5,
     keywords: 'plaque avis google, pack pro plaque avis google nfc, 5 plaques avis google',
@@ -91,7 +91,7 @@ const productFAQs: Record<string, Array<{ question: string; answer: string }>> =
   ],
   business: [
     { question: 'Pourquoi choisir le pack Business avec 2 plaques avis Google NFC ?', answer: 'Le pack Business permet de couvrir 2 emplacements stratégiques (accueil, comptoir, vitrine, salle d\'attente). Multiplier les points de contact augmente significativement le nombre d\'avis Google collectés, en moyenne +150% en 2 mois.' },
-    { question: 'Les plaques NFC Swiipx sont-elles résistantes ?', answer: 'Oui, nos plaques en acrylique premium de 3 mm d\'épaisseur (120 x 120 mm) résistent à l\'eau, aux UV et aux rayures. Elles sont garanties 2 ans contre tout défaut de fabrication avec remplacement gratuit.' },
+    { question: 'Les plaques NFC Swiipx sont-elles résistantes ?', answer: 'Oui, nos plaques en acrylique premium de 3 mm d\'épaisseur (120 x 120 mm) résistent à l\'eau, aux UV et aux rayures. Elles sont garanties à vie contre tout défaut de fabrication avec remplacement gratuit.' },
     { question: 'Puis-je configurer chaque plaque avec un lien différent ?', answer: 'Oui, chaque plaque NFC du pack Business peut être configurée avec un lien différent. Vous pouvez rediriger vers votre fiche Google Business, un formulaire de satisfaction, ou tout autre lien de votre choix.' },
   ],
   pro: [

@@ -1,16 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
+import { PACKS, type PackId } from '@/lib/pricing'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2023-10-16',
 })
 
-// Product mapping
-const PRODUCT_MAP: Record<string, { name: string; amountCents: number }> = {
-  plaque1: { name: 'Swiipx — 1 Plaque', amountCents: 3990 },
-  plaque2: { name: 'Swiipx — 2 Plaques', amountCents: 5990 },
-  plaque5: { name: 'Swiipx — 5 Plaques', amountCents: 8990 },
-}
+// Prix : source unique dans lib/pricing.ts (jamais de montant en dur ici,
+// sinon le client peut être débité d'un montant différent de l'affiché).
+const PRODUCT_MAP = PACKS
 
 const SHIPPING_DOMICILE_CENTS = 490
 
@@ -28,11 +26,11 @@ export async function POST(request: NextRequest) {
     const itemDescriptions: string[] = []
 
     for (const item of items) {
-      const product = PRODUCT_MAP[item.id]
+      const product = PRODUCT_MAP[item.id as PackId]
       if (!product) {
         return NextResponse.json({ error: `Produit invalide: ${item.id}` }, { status: 400 })
       }
-      totalCents += product.amountCents * (item.qty || 1)
+      totalCents += product.priceCents * (item.qty || 1)
       itemDescriptions.push(`${product.name} x${item.qty || 1}`)
     }
 
