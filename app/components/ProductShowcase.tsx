@@ -8,7 +8,7 @@ import toast from 'react-hot-toast'
 import { useCart } from '../store/cart'
 import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
-import { featuredClients } from '../data/clients'
+import ClientLogos from './ClientLogos'
 import { track } from '../../lib/analytics'
 import { PACKS, formatPriceWithSymbol, unitPriceCents } from '../../lib/pricing'
 
@@ -396,13 +396,12 @@ export default function ProductShowcase() {
                 Ajouter au panier
               </button>
 
-              {/* Preuve sociale : clients réels et nommés */}
-              <p className="text-center text-sm text-gray-500">
-                Ils utilisent Swiipx :{' '}
-                <span className="font-medium text-gray-700">
-                  {featuredClients.map((c) => c.name).join(' · ')}
-                </span>
-              </p>
+              {/* Preuve sociale : logos clients, pas de noms en clair */}
+              <ClientLogos
+                variante="compact"
+                afficherSecteurs={false}
+                className="flex flex-col items-center [&>p]:text-center [&>ul]:justify-center"
+              />
 
               {/* Garantie 14 jours */}
               <div className="flex items-start space-x-2.5 p-3 bg-green-50 border border-green-200 rounded-lg">

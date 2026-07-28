@@ -11,7 +11,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart, CartItem } from '../../store/cart'
-import { featuredClients } from '../../data/clients'
+import ClientLogos from '../../components/ClientLogos'
 import {
   Accordion,
   AccordionItem,
@@ -438,13 +438,12 @@ export default function ProductDetailPage() {
               <span>Ajouter au panier — {(product.price * quantity).toFixed(2).replace('.', ',')}€</span>
             </button>
 
-            {/* Social proof */}
-            <p className="text-center text-sm text-gray-500">
-              Ils utilisent Swiipx :{' '}
-              <span className="font-medium text-gray-700">
-                {featuredClients.map((c) => c.name).join(' \u00b7 ')}
-              </span>
-            </p>
+            {/* Preuve sociale : logos clients, pas de noms en clair */}
+            <ClientLogos
+              variante="compact"
+              afficherSecteurs={false}
+              className="flex flex-col items-center [&>p]:text-center [&>ul]:justify-center"
+            />
 
             {/* Included Features */}
             <div className="bg-gray-50 rounded-2xl p-6">

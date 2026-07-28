@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import { featuredClients } from '../data/clients'
+import ClientLogos from './ClientLogos'
 
 export default function HeroSection() {
   return (
@@ -58,19 +58,9 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* Preuve sociale : clients réels, nommés. Aucun compteur affiché. */}
-            <div className="mt-10">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2.5">
-                Ils utilisent Swiipx
-              </p>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
-                {featuredClients.map((client) => (
-                  <span key={client.name} className="text-sm font-semibold text-gray-700">
-                    {client.name}
-                  </span>
-                ))}
-              </div>
-            </div>
+            {/* Preuve sociale : logos des clients qui nous les ont transmis,
+                secteurs pour les autres. Aucun nom en clair, aucun compteur. */}
+            <ClientLogos variante="compact" className="mt-10" />
 
             {/* Trust line discrète (pas de checkmarks répétés) */}
             <p className="mt-6 text-sm text-gray-500">

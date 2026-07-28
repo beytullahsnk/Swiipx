@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import ClientLogos from '../../components/ClientLogos'
 import Image from 'next/image'
 import { ArrowRight, Check, ChevronRight } from 'lucide-react'
 
@@ -21,8 +22,8 @@ interface SectorContent {
     action: string
     result: string
   }
-  /** Noms de clients reels de ce secteur (accord obtenu). */
-  sectorClients?: string[]
+  /** Affiche le bloc logos clients pour ce secteur. */
+  montrerClients?: boolean
   bestPlacements: string[]
   recommendedPack: { slug: string; name: string; price: string; description: string }
   faq: { q: string; a: string }[]
@@ -69,7 +70,7 @@ const sectors: Record<string, SectorContent> = {
       { q: 'Faut-il former mes serveurs ?', a: 'Oui, c\'est crucial. Une plaque NFC sans communication verbale convertit 3-4 fois moins. Comptez 15-30 min de briefing pour expliquer le script aux serveurs.' },
       { q: 'Quel pack pour un restaurant de 80 couverts ?', a: 'Pack Pro (5 plaques) : 1 plaque par groupe de 15-20 couverts. C\'est le ratio optimal pour ne pas créer de "bouchon" sur une seule plaque.' },
     ],
-    sectorClients: ['Chicken City', "L'Ottoman", 'Burger Time', 'Royal Food'],
+    montrerClients: true,
     relatedBlogSlug: 'plaque-nfc-restaurant',
     relatedBlogLabel: 'Guide complet : plaque NFC restaurant',
   },
@@ -278,7 +279,7 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
         )}
 
         {/* Clients réels de ce secteur */}
-        {sector.sectorClients && sector.sectorClients.length > 0 && (
+        {sector.montrerClients && (
           <section className="bg-gray-50 rounded-2xl p-8 sm:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
               Ils utilisent déjà Swiipx
@@ -286,16 +287,9 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Des établissements de votre secteur
             </h2>
-            <div className="flex flex-wrap gap-2.5">
-              {sector.sectorClients.map((name) => (
-                <span
-                  key={name}
-                  className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-semibold text-gray-800"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
+            {/* Logos plutot que noms en clair : seuls les clients nous ayant
+                transmis leur logo sont montres. */}
+            <ClientLogos titre={null} className="[&>ul]:justify-start" />
           </section>
         )}
 
