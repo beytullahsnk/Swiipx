@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     type: 'article',
     publishedTime: '2026-01-19',
-    modifiedTime: '2026-01-19',
+    modifiedTime: '2026-07-28',
     authors: ['Équipe Swiipx'],
     images: [
       {
@@ -46,7 +46,7 @@ const jsonLdArticle = {
   description:
     'Méthode complète en 4 phases pour doubler vos avis Google en 30 jours. Optimisation Google Business Profile, plaque NFC, scripts de demande et templates de réponse.',
   datePublished: '2026-01-19',
-  dateModified: '2026-01-19',
+  dateModified: '2026-07-28',
   author: {
     '@type': 'Organization',
     name: 'Swiipx',

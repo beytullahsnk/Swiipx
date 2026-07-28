@@ -1,77 +1,79 @@
 import { MetadataRoute } from 'next'
+import { seoData } from './blog/[slug]/seo-data'
 
+const BASE_URL = 'https://swiipx.fr'
+
+/**
+ * Articles ayant leur propre route au lieu de passer par /blog/[slug].
+ * Ils ne sont pas dans seoData, il faut donc les déclarer ici à la main.
+ */
+const ARTICLES_ROUTE_DEDIEE = [
+  { slug: 'doubler-avis-google-30-jours', date: '2026-01-19', dateModified: '2026-07-28' },
+]
+
+/**
+ * Le sitemap dérive de seo-data.ts (la même source que generateStaticParams).
+ * Ajouter un article là-bas suffit : il est construit ET déclaré à Google.
+ *
+ * Avant, les deux listes étaient tenues à la main séparément — un article
+ * oublié côté sitemap n'était jamais découvert par Google, donc jamais indexé,
+ * donc zéro trafic. Sur un site dont le SEO est l'unique canal, c'est le type
+ * d'oubli qui coûte le plus cher.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://swiipx.fr'
-
-  const blogArticles: { slug: string; date: string }[] = [
-    { slug: 'plaque-nfc-boulangerie', date: '2026-07-27' },
-    { slug: 'optimiser-fiche-google-business-profile', date: '2026-07-24' },
-    { slug: 'plaque-nfc-institut-beaute', date: '2026-07-22' },
-    { slug: 'comment-choisir-plaque-nfc-avis-google', date: '2026-07-20' },
-    { slug: 'statistiques-avis-google-2026', date: '2026-07-17' },
-    { slug: 'repondre-avis-negatifs-google', date: '2026-07-13' },
-    { slug: 'plaque-nfc-garage-automobile', date: '2026-07-13' },
-    { slug: 'plaque-nfc-cabinet-medical', date: '2026-06-08' },
-    { slug: 'plaque-nfc-restaurant', date: '2026-05-11' },
-    { slug: 'plaque-avis-google-sans-abonnement', date: '2026-05-11' },
-    { slug: 'plaque-nfc-salon-coiffure', date: '2026-05-11' },
-    { slug: 'prix-plaque-nfc-avis-google', date: '2026-05-12' },
-    { slug: 'ou-placer-plaque-avis-google', date: '2026-05-12' },
-    { slug: 'plaque-nfc-vs-qr-code-avis-google', date: '2026-05-10' },
-    { slug: 'doubler-avis-google-30-jours', date: '2026-01-19' },
-    { slug: 'obtenir-plus-avis-google', date: '2026-01-15' },
-    { slug: 'avis-clients-influencent-business', date: '2026-01-20' },
-    { slug: 'booster-visibilite-locale', date: '2026-01-21' },
-    { slug: 'nfc-avis-clients', date: '2026-01-22' },
-    { slug: 'seo-local-recherches-google', date: '2026-01-23' },
-    { slug: 'erreurs-demander-avis', date: '2026-01-24' },
+  const articles = [
+    ...Object.entries(seoData).map(([slug, seo]) => ({
+      slug,
+      date: seo.date,
+      dateModified: seo.dateModified,
+    })),
+    ...ARTICLES_ROUTE_DEDIEE,
   ]
 
   const productSlugs = ['starter', 'business', 'pro']
   const sectorSlugs = ['restaurant', 'salon-coiffure', 'cabinet-medical']
 
+  // Prix et garanties modifiés le 28/07/2026 sur l'ensemble du site.
+  const DERNIERE_MODIF_GLOBALE = '2026-07-28'
+
   const staticPages = [
-    { url: baseUrl, lastModified: '2026-02-24', changeFrequency: 'weekly' as const, priority: 1 },
-    { url: `${baseUrl}/blog`, lastModified: '2026-01-19', changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/contact`, lastModified: '2026-02-26', changeFrequency: 'monthly' as const, priority: 0.5 },
-    { url: `${baseUrl}/livraison`, lastModified: '2026-02-26', changeFrequency: 'monthly' as const, priority: 0.4 },
-    { url: `${baseUrl}/retours`, lastModified: '2026-02-26', changeFrequency: 'monthly' as const, priority: 0.4 },
-    { url: `${baseUrl}/cgv`, lastModified: '2026-02-26', changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/mentions-legales`, lastModified: '2026-02-26', changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: BASE_URL, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'weekly' as const, priority: 1 },
+    { url: `${BASE_URL}/blog`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${BASE_URL}/contact`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${BASE_URL}/livraison`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${BASE_URL}/retours`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${BASE_URL}/cgv`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${BASE_URL}/mentions-legales`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'yearly' as const, priority: 0.3 },
   ]
 
   const productPages = productSlugs.map((slug) => ({
-    url: `${baseUrl}/product/${slug}`,
-    lastModified: '2026-02-24',
+    url: `${BASE_URL}/product/${slug}`,
+    lastModified: DERNIERE_MODIF_GLOBALE,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }))
 
   const sectorPages = sectorSlugs.map((slug) => ({
-    url: `${baseUrl}/secteur/${slug}`,
-    lastModified: '2026-05-10',
+    url: `${BASE_URL}/secteur/${slug}`,
+    lastModified: DERNIERE_MODIF_GLOBALE,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }))
 
-  // Trouver l'article le plus récent (priorité dynamique = 0.9)
-  const sortedByDate = [...blogArticles].sort((a, b) =>
-    b.date.localeCompare(a.date)
-  )
-  const newestSlug = sortedByDate[0]?.slug
-  const secondNewestSlug = sortedByDate[1]?.slug
+  /* Les 2 articles les plus récents sont mis en avant. On classe sur la date de
+     PUBLICATION, pas sur dateModified : une modification globale (changement de
+     prix, par exemple) aligne toutes les dates de modification et rendrait le
+     classement arbitraire. */
+  const parPublication = [...articles].sort((a, b) => b.date.localeCompare(a.date))
+  const plusRecent = parPublication[0]?.slug
+  const secondPlusRecent = parPublication[1]?.slug
 
-  const blogPages = blogArticles.map(({ slug, date }) => {
-    let priority = 0.7
-    if (slug === newestSlug) priority = 0.9
-    else if (slug === secondNewestSlug) priority = 0.8
-    return {
-      url: `${baseUrl}/blog/${slug}`,
-      lastModified: date,
-      changeFrequency: 'monthly' as const,
-      priority,
-    }
-  })
+  const blogPages = articles.map(({ slug, dateModified }) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: dateModified,
+    changeFrequency: 'monthly' as const,
+    priority: slug === plusRecent ? 0.9 : slug === secondPlusRecent ? 0.8 : 0.7,
+  }))
 
   return [...staticPages, ...productPages, ...sectorPages, ...blogPages]
 }
