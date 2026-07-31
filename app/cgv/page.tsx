@@ -75,11 +75,15 @@ export default function CGVPage() {
                 <div>
                   <dt className="font-semibold text-gray-900">Prix</dt>
                   <dd className="text-sm text-gray-600 mt-1">
-                    Les prix incluent la TVA au taux en vigueur et sont ceux applicables au jour de la commande.
+                    Les prix sont affichés hors taxes (HT), notre clientèle étant
+                    majoritairement professionnelle. Le montant TTC, TVA de 20 % incluse,
+                    est indiqué à côté de chaque tarif et rappelé au récapitulatif de
+                    commande : <strong>c&apos;est ce montant TTC qui est débité</strong>.
+                    Les prix applicables sont ceux du jour de la commande.
                   </dd>
                 </div>
                 <span className="text-sm font-semibold text-primary bg-blue-50 px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0">
-                  TTC en €
+                  HT et TTC
                 </span>
               </div>
               <div className="flex items-start justify-between gap-4 py-3 border-b border-gray-100">

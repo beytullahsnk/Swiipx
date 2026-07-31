@@ -22,6 +22,7 @@ import {
   ChevronUp,
 } from 'lucide-react'
 import { useCart, formatPrice } from '../store/cart'
+import { TVA } from '@/lib/pricing'
 import { useCompanyStore } from '../store/company'
 import SendcloudScript from '../components/SendcloudScript'
 import BusinessAutocomplete, { BusinessInfo } from '../components/BusinessAutocomplete'
@@ -97,19 +98,25 @@ function OrderSummaryMobile({ items, subtotalCents, shippingCents, grandTotal }:
           </div>
           <div className="border-t border-gray-200 pt-3 space-y-2">
             <div className="flex justify-between text-sm text-gray-600">
-              <span>Sous-total</span>
-              <span>{formatPrice(subtotalCents)}</span>
+              <span>Sous-total HT</span>
+              <span>{formatPrice(Math.round(subtotalCents / (1 + TVA)))}</span>
             </div>
             <div className="flex justify-between text-sm text-gray-600">
-              <span>Livraison</span>
+              <span>Livraison HT</span>
               {shippingMethod === 'point_relais' ? (
                 <span className="text-green-600 font-medium">Gratuite</span>
               ) : (
-                <span>{formatPrice(shippingCents)}</span>
+                <span>{formatPrice(Math.round(grandTotal / (1 + TVA)) - Math.round(subtotalCents / (1 + TVA)))}</span>
               )}
             </div>
+            <div className="flex justify-between text-sm text-gray-600">
+              <span>TVA {Math.round(TVA * 100)} %</span>
+              <span>{formatPrice(grandTotal - Math.round(grandTotal / (1 + TVA)))}</span>
+            </div>
+            {/* Le montant debite est le TTC : on le met en avant et on
+                rappelle la TVA incluse juste en dessous. */}
             <div className="flex justify-between font-bold text-gray-900 pt-1">
-              <span>Total</span>
+              <span>Total TTC</span>
               <span>{formatPrice(grandTotal)}</span>
             </div>
           </div>
@@ -154,24 +161,33 @@ function OrderSummarySidebar({ items, subtotalCents, shippingCents, grandTotal }
 
         {/* Totaux */}
         <div className="border-t border-gray-100 pt-4 space-y-2.5">
+          {/* Format facture : chaque ligne est en HT, la TVA est isolee, et la
+              somme redonne exactement le total TTC. La livraison HT est deduite
+              par difference pour qu'aucun arrondi ne casse l'addition. */}
           <div className="flex justify-between text-sm text-gray-600">
-            <span>Sous-total</span>
-            <span className="font-medium">{formatPrice(subtotalCents)}</span>
+            <span>Sous-total HT</span>
+            <span className="font-medium">{formatPrice(Math.round(subtotalCents / (1 + TVA)))}</span>
           </div>
           <div className="flex justify-between text-sm text-gray-600">
             <span className="flex items-center space-x-1.5">
               <Truck className="w-3.5 h-3.5" />
-              <span>Livraison</span>
+              <span>Livraison HT</span>
             </span>
             {shippingMethod === 'point_relais' ? (
               <span className="font-medium text-green-600">Gratuite</span>
             ) : (
-              <span className="font-medium">{formatPrice(shippingCents)}</span>
+              <span className="font-medium">
+                {formatPrice(Math.round(grandTotal / (1 + TVA)) - Math.round(subtotalCents / (1 + TVA)))}
+              </span>
             )}
+          </div>
+          <div className="flex justify-between text-sm text-gray-600">
+            <span>TVA {Math.round(TVA * 100)} %</span>
+            <span className="font-medium">{formatPrice(grandTotal - Math.round(grandTotal / (1 + TVA)))}</span>
           </div>
           <div className="border-t border-gray-100 pt-3 mt-1">
             <div className="flex justify-between text-lg font-bold text-gray-900">
-              <span>Total</span>
+              <span>Total TTC</span>
               <span className="text-primary">{formatPrice(grandTotal)}</span>
             </div>
           </div>

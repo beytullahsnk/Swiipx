@@ -10,10 +10,13 @@ import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
 import ClientLogos from './ClientLogos'
 import { track } from '../../lib/analytics'
-import { PACKS, formatPriceWithSymbol, unitPriceCents } from '../../lib/pricing'
+import { PACKS, formatHt, formatTtc, unitPriceCents } from '../../lib/pricing'
 
-// Packs : prix issus de lib/pricing.ts (source unique). Le prix barre est le
-// prix REELLEMENT pratique avant la baisse — jamais un prix de reference gonfle.
+// Packs : prix issus de lib/pricing.ts (source unique).
+//
+// Le montant mis en avant est le HT — la clientele est professionnelle et
+// recupere la TVA. Le TTC reste affiche juste en dessous : c'est lui que
+// Stripe debite, et il ne doit surprendre personne au moment de payer.
 const productPacks = [
   { pack: PACKS.plaque1, name: '1 Plaque', badge: null, popular: false },
   { pack: PACKS.plaque2, name: '2 Plaques', badge: '+ Guide Gratuit 🎁', popular: true },
@@ -25,9 +28,10 @@ const productPacks = [
   badge,
   popular,
   price: pack.priceCents / 100,
-  priceHT: formatPriceWithSymbol(pack.priceCents),
-  formerPriceHT: pack.formerPriceCents ? formatPriceWithSymbol(pack.formerPriceCents) : null,
-  unitPriceHT: pack.plaques > 1 ? formatPriceWithSymbol(unitPriceCents(pack)) : null,
+  prixHt: formatHt(pack.priceCents),
+  prixTtc: formatTtc(pack.priceCents),
+  formerPriceHT: pack.formerPriceCents ? formatHt(pack.formerPriceCents) : null,
+  unitPriceHT: pack.plaques > 1 ? formatHt(unitPriceCents(pack)) : null,
 }))
 
 // Arguments propres a Swiipx : ce que les concurrents a application
@@ -328,8 +332,9 @@ export default function ProductShowcase() {
                         {pack.formerPriceHT && (
                           <span className="text-sm text-gray-600 line-through">{pack.formerPriceHT}</span>
                         )}
-                        <p className="text-2xl font-bold text-gray-900">{pack.priceHT}</p>
+                        <p className="text-2xl font-bold text-gray-900 whitespace-nowrap">{pack.prixHt}</p>
                       </div>
+                      <p className="text-xs text-gray-600 mt-0.5 whitespace-nowrap">{pack.prixTtc}</p>
                       {pack.unitPriceHT && (
                         <p className="text-xs text-gray-600 mt-0.5">soit {pack.unitPriceHT} la plaque</p>
                       )}
@@ -506,7 +511,7 @@ export default function ProductShowcase() {
           <div className="flex items-center justify-between max-w-lg mx-auto gap-3">
             <div className="flex-shrink-0">
               <p className="text-lg font-bold text-gray-900">
-                {productPacks.find(p => p.id === selectedPack)?.priceHT}
+                {productPacks.find(p => p.id === selectedPack)?.prixHt}
               </p>
             </div>
             <button

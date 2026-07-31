@@ -110,6 +110,32 @@ export function unitPriceCents(pack: Pack): number {
   return Math.round(pack.priceCents / pack.plaques)
 }
 
+/**
+ * Affichage tarifaire du site : le HT en principal, le TTC juste à côté.
+ *
+ * La clientèle est professionnelle (restaurants, bars, commerces) et récupère
+ * la TVA : elle raisonne donc en HT. Mais c'est bien le TTC que Stripe débite,
+ * et il doit rester visible pour trois raisons :
+ *   - ne pas créer de surprise au moment du paiement ;
+ *   - l'affichage TTC est obligatoire dès qu'un particulier peut commander
+ *     (art. L112-1 du Code de la consommation), et rien n'empêche un
+ *     particulier de passer commande ici ;
+ *   - Google exige que le prix des données structurées (TTC en France, pour
+ *     schema.org comme pour Merchant Center) soit visible sur la page.
+ */
+export function formatHt(cents: number): string {
+  return `${formatPrice(Math.round(cents / (1 + TVA)))} € HT`
+}
+
+export function formatTtc(cents: number): string {
+  return `${formatPrice(cents)} € TTC`
+}
+
+/** "29,90 € HT" + "35,88 € TTC" — les deux montants d'un même prix. */
+export function formatHtTtc(cents: number): { ht: string; ttc: string } {
+  return { ht: formatHt(cents), ttc: formatTtc(cents) }
+}
+
 /** Pourcentage de réduction affiché, ou null si aucun prix barré. */
 export function discountPercent(pack: Pack): number | null {
   if (!pack.formerPriceCents) return null

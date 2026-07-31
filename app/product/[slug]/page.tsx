@@ -12,6 +12,7 @@ import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart, CartItem } from '../../store/cart'
 import ClientLogos from '../../components/ClientLogos'
+import { TVA } from '@/lib/pricing'
 import {
   Accordion,
   AccordionItem,
@@ -361,9 +362,11 @@ export default function ProductDetailPage() {
 
             {/* Price */}
             <div>
+              {/* HT en principal (clientele professionnelle), TTC juste en
+                  dessous : c'est le montant reellement debite. */}
               <div className="flex items-baseline space-x-4">
                 <span className="text-4xl sm:text-5xl font-bold text-gray-900">
-                  {product.price.toFixed(2).replace('.', ',')}€
+                  {(product.price / (1 + TVA)).toFixed(2).replace('.', ',')}€ <span className="text-xl font-semibold text-gray-500">HT</span>
                 </span>
                 {product.originalPrice && (
                   <>
@@ -376,6 +379,9 @@ export default function ProductDetailPage() {
                   </>
                 )}
               </div>
+              <p className="text-base text-gray-600 mt-1">
+                soit {product.price.toFixed(2).replace('.', ',')}€ TTC
+              </p>
               {product.originalPrice && (
                 <p className="text-green-600 font-semibold mt-1">
                   Économisez {(product.originalPrice - product.price).toFixed(2).replace('.', ',')}€ !
@@ -613,15 +619,15 @@ function RelatedProducts({ currentSlug }: { currentSlug: string }) {
                 {p.plaques} plaque{p.plaques > 1 ? 's' : ''} NFC
               </p>
 
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-xl font-bold text-gray-900">
-                  {p.price.toFixed(2).replace('.', ',')}€
-                </span>
-                {p.originalPrice && (
-                  <span className="text-sm text-gray-400 line-through">
-                    {p.originalPrice.toFixed(2).replace('.', ',')}€
+              <div className="mb-4">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-xl font-bold text-gray-900">
+                    {(p.price / (1 + TVA)).toFixed(2).replace('.', ',')}€ <span className="text-sm font-semibold text-gray-500">HT</span>
                   </span>
-                )}
+                </div>
+                <p className="text-xs text-gray-600 mt-0.5">
+                  {p.price.toFixed(2).replace('.', ',')}€ TTC
+                </p>
               </div>
 
               <span className="mt-auto inline-flex items-center text-sm font-semibold text-primary group-hover:translate-x-1 transition-transform">

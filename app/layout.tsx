@@ -3,12 +3,12 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import ClientLayout from './components/ClientLayout'
 import Analytics from './components/Analytics'
-import { LOWEST_PRICE_CENTS, formatPriceWithSymbol } from '../lib/pricing'
+import { LOWEST_PRICE_CENTS, formatHt } from '../lib/pricing'
 
 // Le prix apparait dans la description Google : c'est un levier de CTR fort sur
 // une requete commerciale. Injecte depuis lib/pricing.ts pour ne jamais afficher
 // un prix perime dans les resultats de recherche.
-const DES = formatPriceWithSymbol(LOWEST_PRICE_CENTS)
+const DES = formatHt(LOWEST_PRICE_CENTS)
 
 const inter = Inter({ subsets: ['latin'] })
 

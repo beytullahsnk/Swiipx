@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowLeft, Minus, Plus, Trash2, ShoppingBag } from 'lucide-react'
 import { useCart, formatPrice } from '../store/cart'
+import { TVA } from '@/lib/pricing'
 import { useCompanyStore } from '../store/company'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
@@ -225,9 +226,9 @@ export default function CartPage() {
                 {/* Summary Lines */}
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between text-gray-700">
-                    <span>Sous-total</span>
+                    <span>Sous-total HT</span>
                     <span className="font-semibold">
-                      {formatPrice(totalCents())}
+                      {formatPrice(Math.round(totalCents() / (1 + TVA)))}
                     </span>
                   </div>
                   <div className="flex justify-between text-gray-700">
@@ -237,12 +238,19 @@ export default function CartPage() {
                       <span className="text-gray-500 font-normal">ou 4,90€ (domicile)</span>
                     </span>
                   </div>
+                  {/* Le site affiche les prix HT, mais c'est le TTC qui est
+                      debite : on met donc le total TTC en avant et on rappelle
+                      la TVA incluse juste en dessous. */}
                   <div className="border-t border-gray-200 pt-4">
                     <div className="flex justify-between text-xl font-bold text-gray-900">
-                      <span>Total</span>
+                      <span>Total TTC</span>
                       <span className="text-primary">
                         {formatPrice(totalCents())}
                       </span>
+                    </div>
+                    <div className="flex justify-between text-sm text-gray-600 mt-1">
+                      <span>dont TVA {Math.round(TVA * 100)} %</span>
+                      <span>{formatPrice(totalCents() - Math.round(totalCents() / (1 + TVA)))}</span>
                     </div>
                   </div>
                 </div>
