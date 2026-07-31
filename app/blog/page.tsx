@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 21,
+    title: 'Faux avis Google : comment les signaler et s\'en protéger',
+    excerpt: 'Faux avis Google : comment les repérer, les signaler à Google et s\'en protéger en 2026. Procédure pas à pas, délais de suppression, et la stratégie de dilution par le volume de vrais avis.',
+    category: 'SEO Local',
+    date: '31 juillet 2026',
+    dateIso: '2026-07-31',
+    readTime: '11 min',
+    slug: 'faux-avis-google-signaler',
+  },
+  {
     id: 20,
     title: 'Plaque NFC boulangerie : x5 avis Google à chaque passage en caisse',
     excerpt: 'Boulangeries, pâtisseries et points chauds : multipliez vos avis Google par 5 avec une plaque NFC malgré le rush. Emplacements, scripts vendeur, 3 études de cas et ROI chiffré.',

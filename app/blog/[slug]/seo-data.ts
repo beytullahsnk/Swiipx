@@ -26,6 +26,22 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'faux-avis-google-signaler': {
+    title: 'Faux avis Google : les signaler et s\'en protéger',
+    description: 'Faux avis Google : comment les repérer, les signaler à Google et s\'en protéger. Procédure, délais de suppression et dilution par le volume.',
+    keywords: 'faux avis google, signaler faux avis google, supprimer faux avis google, faux avis negatif concurrent, faux avis positifs, se proteger faux avis, faux avis google entreprise',
+    date: '2026-07-31',
+    dateModified: '2026-07-31',
+    category: 'SEO Local',
+    faq: [
+      { q: 'Google supprime-t-il vraiment les faux avis quand on les signale ?', a: 'Oui, mais pas systématiquement ni immédiatement. Les avis qui enfreignent objectivement les règles (insultes, hors sujet, conflit d\'intérêts démontrable) sont retirés dans 3 à 15 jours avec un bon taux de succès. Un avis négatif simplement désagréable mais crédible a en revanche peu de chances d\'être supprimé : d\'où l\'importance de la stratégie de dilution par le volume de vrais avis.' },
+      { q: 'Comment prouver qu\'un avis est faux ?', a: 'Rassemblez un faisceau d\'indices : absence du client dans vos registres, profil auteur sans historique ou créé récemment, contenu vague ou décrivant un service que vous ne proposez pas, avis identiques déposés chez vos concurrents. Une capture d\'écran horodatée de l\'avis et du profil renforce nettement votre dossier auprès du support Google.' },
+      { q: 'Que faire si un concurrent poste de faux avis négatifs ?', a: 'Signalez chaque avis pour conflit d\'intérêts, documentez le profil de l\'auteur (surtout s\'il note aussi d\'autres établissements de votre secteur), et escaladez au support avec vos preuves. En parallèle, accélérez la collecte de vrais avis pour rendre l\'attaque inoffensive. Pour les cas graves et répétés, une mise en demeure d\'avocat reste possible.' },
+      { q: 'Peut-on acheter des avis positifs pour compenser ?', a: 'Non, jamais. Les faux avis positifs violent les règles de Google et la loi française (pratique commerciale trompeuse, jusqu\'à 300 000 € d\'amende pour une entreprise). Google les détecte par lots et peut suspendre toute votre fiche. La seule voie durable est de collecter de vrais avis, ce qu\'une plaque NFC rend simple et rapide.' },
+      { q: 'Combien de temps un faux avis reste-t-il visible ?', a: 'S\'il est supprimé par Google, entre quelques jours et quelques semaines selon le motif. S\'il ne l\'est pas, il reste en ligne indéfiniment — mais une collecte active de vrais avis le repousse en bas de liste en quelques jours, où il devient invisible pour la plupart des visiteurs.' },
+      { q: 'Une plaque NFC aide-t-elle vraiment contre les faux avis ?', a: 'Indirectement mais efficacement. Elle ne supprime pas un faux avis, mais elle multiplie vos vrais avis récents par 5 à 10. Sur une fiche riche et fraîche, un faux avis pèse une fraction de pourcent et disparaît sous les avis plus récents. Le volume et la fraîcheur sont la protection la plus fiable qui existe, et la plaque NFC est le moyen le plus simple de les obtenir.' },
+    ],
+  },
   'plaque-nfc-boulangerie': {
     title: 'Plaque NFC boulangerie : x5 avis Google',
     description: 'Boulangeries et pâtisseries : collectez des avis Google avec une plaque NFC malgré le rush. Guide 2026 : emplacements, scripts, études de cas.',

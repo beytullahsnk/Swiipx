@@ -13,6 +13,7 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'faux-avis-google-signaler', label: 'Faux avis Google : les signaler et s\'en protéger' },
   { slug: 'plaque-nfc-boulangerie', label: 'Plaque NFC boulangerie : guide 2026' },
   { slug: 'optimiser-fiche-google-business-profile', label: 'Optimiser sa fiche Google Business Profile' },
   { slug: 'plaque-nfc-institut-beaute', label: 'Plaque NFC institut de beauté : guide 2026' },
