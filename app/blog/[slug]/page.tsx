@@ -133,11 +133,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                   <p className="text-xs text-gray-600 mb-3 leading-relaxed">
                     Livrée déjà programmée avec le lien d&apos;avis de votre établissement. Installation en 30 secondes.
                   </p>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-lg font-bold text-primary">29,90 €</span>
-                    <span className="text-xs text-gray-400 line-through">39,90 €</span>
-                    <span className="text-xs font-semibold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">-25%</span>
-                  </div>
+                  {/* Aucun prix barre : les tarifs ont augmente, afficher une
+                      reduction serait une reduction fictive. */}
+                  <p className="text-lg font-bold text-primary mb-3">35,88 €</p>
                   <Link
                     href="/#product"
                     className="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-blue-700 transition-colors text-sm shadow-md hover:shadow-lg"

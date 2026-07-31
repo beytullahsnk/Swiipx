@@ -144,7 +144,7 @@ export const useCart = create<CartStore>()(
     }),
     {
       name: 'swiipx-cart', // localStorage key
-      // v2 : passage à la grille 29,90 / 49,90 / 79,90.
+      // v2 : passage à la grille 35,88 / 65,88 / 107,88.
       version: 2,
       // Sans `migrate`, zustand JETTE le panier persisté dès que `version`
       // change (et loggue une erreur). On le conserve tel quel : c'est

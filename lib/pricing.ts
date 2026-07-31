@@ -20,30 +20,37 @@ export interface Pack {
   /**
    * Prix de référence barré, en centimes. `null` = aucun prix barré affiché.
    *
-   * ⚠️ CADRE LÉGAL (directive Omnibus, transposée en droit français depuis le
-   * 28/05/2022 — art. L112-1-1 du Code de la consommation) : le prix barré doit
-   * être le prix le plus bas RÉELLEMENT pratiqué au cours des 30 jours
-   * précédant l'annonce de la réduction. Il est interdit d'afficher un prix de
-   * référence gonflé qui n'a jamais été appliqué.
+   * ⚠️ CADRE LÉGAL (directive Omnibus, art. L112-1-1 du Code de la
+   * consommation) : le prix barré doit être le prix le plus bas RÉELLEMENT
+   * pratiqué au cours des 30 jours précédant l'annonce de la réduction.
    *
-   * Les valeurs ci-dessous sont les prix effectivement pratiqués par Swiipx
-   * jusqu'au 28/07/2026, elles sont donc licites.
+   * Tous à `null` depuis le passage à la grille HT : les prix ont AUGMENTÉ.
+   * Afficher un prix barré sur un tarif en hausse serait une réduction
+   * fictive — une pratique commerciale trompeuse (art. L121-2), et une
+   * violation des règles Google Merchant Center.
    *
-   * ⚠️ Une réduction ne peut pas être permanente : si ces prix deviennent les
-   * prix normaux, passer `formerPriceCents` à `null` (voir PROMO_ENDS_ON).
+   * Ne remettre une valeur ici que lors d'une vraie baisse, et uniquement le
+   * prix effectivement pratiqué avant celle-ci.
    */
   formerPriceCents: number | null
   image: string
 }
 
 /**
- * Date de fin de la promo de lancement. Passé cette date, soit on remonte les
- * prix, soit on met tous les `formerPriceCents` à `null` : un prix barré
- * affiché en permanence est une réduction fictive (pratique commerciale
- * trompeuse, art. L121-2 du Code de la consommation) et une violation des
- * règles Google Merchant Center.
+ * TAUX DE TVA appliqué pour passer des prix HT (base de la tarification
+ * commerciale) aux prix TTC affichés et débités.
+ *
+ * Les `priceCents` ci-dessous sont des montants TTC : c'est ce que le client
+ * paie et ce que Stripe encaisse. L'affichage TTC est une obligation légale
+ * vis-à-vis du consommateur (art. L112-1 du Code de la consommation), et les
+ * CGV l'annoncent explicitement.
  */
-export const PROMO_ENDS_ON = '2026-08-31'
+export const TVA = 0.20
+
+/** Prix hors taxes correspondant, en centimes (pour information / facturation). */
+export function priceHtCents(pack: Pack): number {
+  return Math.round(pack.priceCents / (1 + TVA))
+}
 
 export const PACKS: Record<PackId, Pack> = {
   plaque1: {
@@ -51,8 +58,8 @@ export const PACKS: Record<PackId, Pack> = {
     slug: 'starter',
     name: 'Swiipx — 1 Plaque',
     plaques: 1,
-    priceCents: 2990,
-    formerPriceCents: 3990,
+    priceCents: 3588,   // 29,90 € HT
+    formerPriceCents: null,
     image: '/products/plaque1.jpg',
   },
   plaque2: {
@@ -60,8 +67,8 @@ export const PACKS: Record<PackId, Pack> = {
     slug: 'business',
     name: 'Swiipx — 2 Plaques',
     plaques: 2,
-    priceCents: 4990,
-    formerPriceCents: 5990,
+    priceCents: 6588,   // 54,90 € HT
+    formerPriceCents: null,
     image: '/products/plaque2.jpg',
   },
   plaque5: {
@@ -69,8 +76,8 @@ export const PACKS: Record<PackId, Pack> = {
     slug: 'pro',
     name: 'Swiipx — 5 Plaques',
     plaques: 5,
-    priceCents: 7990,
-    formerPriceCents: 8990,
+    priceCents: 10788,  // 89,90 € HT
+    formerPriceCents: null,
     image: '/products/plaque5.jpg',
   },
 }

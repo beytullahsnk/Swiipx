@@ -30,7 +30,7 @@ export default function CTASection() {
             href="/#product"
             className="group px-10 py-5 bg-accent text-gray-900 rounded-xl font-bold text-lg shadow-2xl hover:bg-yellow-300 transition-colors flex items-center space-x-3 whitespace-nowrap"
           >
-            <span>Commander à 29,90 €</span>
+            <span>Commander à 35,88 €</span>
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </a>
 

@@ -178,7 +178,7 @@ export const articles: Record<string, {
 <p>C'est ce dernier levier qui fait la vraie différence. Une fiche qui reçoit un flux régulier d'avis authentiques est <strong>naturellement immunisée</strong> : elle absorbe les faux avis sans même vaciller, tout en grimpant dans le pack local. La suppression est un pansement ; le volume de vrais avis est le vaccin.</p>
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Rendez votre fiche à l'épreuve des faux avis</strong></p>
-<p class="text-sm text-blue-900">Transformez chaque client satisfait en avis Google avec les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. Le Pack <a href="/product/starter" class="font-semibold underline">Starter</a> à partir de 29,90 €, ou le Pack <a href="/product/pro" class="font-semibold underline">Pro (5 plaques)</a> pour couvrir tous vos points de contact.</p>
+<p class="text-sm text-blue-900">Transformez chaque client satisfait en avis Google avec les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. Le Pack <a href="/product/starter" class="font-semibold underline">Starter</a> à partir de 35,88 €, ou le Pack <a href="/product/pro" class="font-semibold underline">Pro (5 plaques)</a> pour couvrir tous vos points de contact.</p>
 </div>
 </section>
 `,
@@ -306,7 +306,7 @@ export const articles: Record<string, {
 <li>Équipement : 3 plaques (2 caisses + tables du salon de thé)</li>
 <li>Avant : 6 avis/mois en moyenne. Après : <strong>44 avis/mois</strong></li>
 <li>Note passée de 4,0 à 4,6 en 6 mois (les nouveaux avis diluent les anciens négatifs)</li>
-<li>ROI de l'équipement (79,90 €) : atteint dès la première semaine</li>
+<li>ROI de l'équipement (107,88 €) : atteint dès la première semaine</li>
 </ul>
 
 <h3>🎂 Point chaud / dépôt de pain — périphérie de Lille (59)</h3>
@@ -326,7 +326,7 @@ export const articles: Record<string, {
 <table class="w-full text-sm border-collapse">
 <thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">49,90 € (une fois, sans abonnement)</td></tr>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € (une fois, sans abonnement)</td></tr>
 <tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, pas de batterie)</td></tr>
 <tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+150 à +400</td></tr>
 <tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
@@ -337,7 +337,7 @@ export const articles: Record<string, {
 </tbody>
 </table>
 </div>
-<p>La force de la boulangerie, c'est la <strong>fréquence</strong> : un client conquis par votre fiche Google ne revient pas une fois, il revient plusieurs fois par semaine pendant des années. Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 49,90 € reste sans commune mesure avec n'importe quel autre canal. À titre de comparaison, distribuer des flyers dans les boîtes aux lettres coûte 80 à 150 € pour 1 000 tracts, avec un taux de retour inférieur à 0,5 %.</p>
+<p>La force de la boulangerie, c'est la <strong>fréquence</strong> : un client conquis par votre fiche Google ne revient pas une fois, il revient plusieurs fois par semaine pendant des années. Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 65,88 € reste sans commune mesure avec n'importe quel autre canal. À titre de comparaison, distribuer des flyers dans les boîtes aux lettres coûte 80 à 150 € pour 1 000 tracts, avec un taux de retour inférieur à 0,5 %.</p>
 <p>Pour aller plus loin sur les fourchettes de prix du marché, lisez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
 </section>
 
@@ -411,7 +411,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque passage en caisse en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €.</p>
 </div>
 </section>
 `,
@@ -607,7 +607,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à alimenter votre fiche en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €.</p>
 </div>
 </section>
 `,
@@ -734,7 +734,7 @@ export const articles: Record<string, {
 <li>Équipement : 3 plaques (2 tables de manucure + caisse)</li>
 <li>Avant : 6 avis/mois en moyenne. Après : <strong>38 avis/mois</strong></li>
 <li>Note passée de 4,1 à 4,7 en 6 mois (les nouveaux avis diluent les anciens négatifs)</li>
-<li>ROI de l'équipement (79,90 €) : atteint dès la <strong>première cliente supplémentaire</strong></li>
+<li>ROI de l'équipement (107,88 €) : atteint dès la <strong>première cliente supplémentaire</strong></li>
 </ul>
 
 <h3>🌸 Spa / institut premium — Nice (06)</h3>
@@ -754,7 +754,7 @@ export const articles: Record<string, {
 <table class="w-full text-sm border-collapse">
 <thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">49,90 € (une fois, sans abonnement)</td></tr>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € (une fois, sans abonnement)</td></tr>
 <tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, pas de batterie)</td></tr>
 <tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+100 à +200</td></tr>
 <tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
@@ -764,7 +764,7 @@ export const articles: Record<string, {
 </tbody>
 </table>
 </div>
-<p>Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 49,90 € reste sans commune mesure avec n'importe quel autre canal d'acquisition. À titre de comparaison, une campagne Google Ads dans la beauté coûte 2 à 5 € le clic, soit 40 à 120 € par cliente acquise — <strong>chaque mois, à vie</strong>.</p>
+<p>Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 65,88 € reste sans commune mesure avec n'importe quel autre canal d'acquisition. À titre de comparaison, une campagne Google Ads dans la beauté coûte 2 à 5 € le clic, soit 40 à 120 € par cliente acquise — <strong>chaque mois, à vie</strong>.</p>
 <p>Pour aller plus loin sur les fourchettes de prix du marché, lisez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>, et vérifiez qu'il n'y a <a href="/blog/plaque-avis-google-sans-abonnement">aucun abonnement caché</a>.</p>
 </section>
 
@@ -838,7 +838,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prête à transformer chaque soin en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €.</p>
 </div>
 </section>
 `,
@@ -1028,7 +1028,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>Prete a l'emploi, sans abonnement, garantie à vie</strong></p>
-<p class="text-sm text-blue-900">Decouvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215, adhesif 3M inclus, QR code de secours, redirection modifiable a vie, <strong>sans abonnement</strong>. A partir de 29,90 EUR.</p>
+<p class="text-sm text-blue-900">Decouvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215, adhesif 3M inclus, QR code de secours, redirection modifiable a vie, <strong>sans abonnement</strong>. A partir de 35,88 EUR.</p>
 </div>
 </section>
 `,
@@ -1240,7 +1240,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à faire passer ces statistiques de votre côté ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €.</p>
 </div>
 </section>
 `,
@@ -1473,7 +1473,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Arrêtez de subir vos avis, provoquez-les.</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. Du <a href="/product/starter">Pack Starter</a> (29,90 €) au <a href="/product/business">Pack Business</a> et au <a href="/product/pro">Pack Pro</a>.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. Du <a href="/product/starter">Pack Starter</a> (35,88 €) au <a href="/product/business">Pack Business</a> et au <a href="/product/pro">Pack Pro</a>.</p>
 </div>
 </section>
     `,
@@ -1600,7 +1600,7 @@ export const articles: Record<string, {
 <li>Équipement : 5 plaques (3 postes de caisse + salle d'attente + accueil)</li>
 <li>Avant : 8 avis/mois en moyenne. Après : <strong>41 avis/mois</strong></li>
 <li>Note passée de 4,0 à 4,6 en 6 mois (les nouveaux avis diluent les anciens négatifs)</li>
-<li>ROI de l'équipement (79,90 €) : atteint dès le <strong>premier client supplémentaire</strong></li>
+<li>ROI de l'équipement (107,88 €) : atteint dès le <strong>premier client supplémentaire</strong></li>
 </ul>
 
 <h3>🎨 Carrosserie — Marseille (13)</h3>
@@ -1620,7 +1620,7 @@ export const articles: Record<string, {
 <table class="w-full text-sm border-collapse">
 <thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">49,90 € (une fois, sans abonnement)</td></tr>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € (une fois, sans abonnement)</td></tr>
 <tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, pas de batterie)</td></tr>
 <tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+80 à +150</td></tr>
 <tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
@@ -1630,7 +1630,7 @@ export const articles: Record<string, {
 </tbody>
 </table>
 </div>
-<p>Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 49,90 € reste sans commune mesure avec n'importe quel autre canal d'acquisition. À titre de comparaison, une campagne Google Ads pour un garage coûte 3 à 8 € le clic, soit 60 à 150 € par client acquis — <strong>chaque mois, à vie</strong>.</p>
+<p>Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 65,88 € reste sans commune mesure avec n'importe quel autre canal d'acquisition. À titre de comparaison, une campagne Google Ads pour un garage coûte 3 à 8 € le clic, soit 60 à 150 € par client acquis — <strong>chaque mois, à vie</strong>.</p>
 <p>Pour aller plus loin sur les fourchettes de prix du marché, lisez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
 </section>
 
@@ -1704,7 +1704,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque réparation en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €.</p>
 </div>
 </section>
     `,
@@ -1842,7 +1842,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à booster vos avis Google en toute discrétion ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> avec adhésif 3M inclus, garantie à vie, sans abonnement. À partir de 29,90 € pour 1 plaque.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> avec adhésif 3M inclus, garantie à vie, sans abonnement. À partir de 35,88 € pour 1 plaque.</p>
 </div>
 </section>
     `,
@@ -2051,7 +2051,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à booster vos avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> avec adhésif 3M inclus, garantie à vie, sans abonnement. À partir de 29,90 € pour 1 plaque.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> avec adhésif 3M inclus, garantie à vie, sans abonnement. À partir de 35,88 € pour 1 plaque.</p>
 </div>
 </section>
     `,
@@ -2221,14 +2221,14 @@ export const articles: Record<string, {
 <h3>Pack 1 plaque (commerce solo, indépendant)</h3>
 <ul>
 <li><strong>Prix marché :</strong> 35-50 €</li>
-<li><strong>Exemple Swiipx :</strong> 29,90 € (<a href="/product/starter">Pack Starter</a>)</li>
+<li><strong>Exemple Swiipx :</strong> 35,88 € (<a href="/product/starter">Pack Starter</a>)</li>
 <li><strong>Pour qui :</strong> coiffeur indépendant, petit resto, cabinet libéral solo</li>
 </ul>
 
 <h3>Pack 2 plaques (PME moyenne)</h3>
 <ul>
 <li><strong>Prix marché :</strong> 55-90 €</li>
-<li><strong>Exemple Swiipx :</strong> 49,90 € (<a href="/product/business">Pack Business</a>)</li>
+<li><strong>Exemple Swiipx :</strong> 65,88 € (<a href="/product/business">Pack Business</a>)</li>
 <li><strong>Pour qui :</strong> restaurant 30-50 couverts, salon 3-4 fauteuils, boutique avec 2 caisses</li>
 <li><strong>Économie :</strong> ~20-25 % vs prix unitaire</li>
 </ul>
@@ -2236,7 +2236,7 @@ export const articles: Record<string, {
 <h3>Pack 5 plaques (grand commerce ou multi-sites)</h3>
 <ul>
 <li><strong>Prix marché :</strong> 85-150 €</li>
-<li><strong>Exemple Swiipx :</strong> 79,90 € (<a href="/product/pro">Pack Pro</a>)</li>
+<li><strong>Exemple Swiipx :</strong> 107,88 € (<a href="/product/pro">Pack Pro</a>)</li>
 <li><strong>Pour qui :</strong> grand resto, institut beauté, franchise multi-points, hôtel</li>
 <li><strong>Économie :</strong> ~55 % vs prix unitaire</li>
 </ul>
@@ -2304,7 +2304,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Voir nos plaques NFC Swiipx</strong></p>
-<p class="text-sm text-blue-900"><a href="/product/starter" class="font-semibold underline">Pack Starter 1 plaque (29,90 €)</a> · <a href="/product/business" class="font-semibold underline">Pack Business 2 plaques (49,90 €)</a> · <a href="/product/pro" class="font-semibold underline">Pack Pro 5 plaques (79,90 €)</a> — tous sans abonnement, garantie à vie, livraison gratuite.</p>
+<p class="text-sm text-blue-900"><a href="/product/starter" class="font-semibold underline">Pack Starter 1 plaque (35,88 €)</a> · <a href="/product/business" class="font-semibold underline">Pack Business 2 plaques (65,88 €)</a> · <a href="/product/pro" class="font-semibold underline">Pack Pro 5 plaques (107,88 €)</a> — tous sans abonnement, garantie à vie, livraison gratuite.</p>
 </div>
 </section>
     `,
@@ -2446,7 +2446,7 @@ export const articles: Record<string, {
 <h3>Hypothèses de calcul</h3>
 <ul>
 <li>Salon : 3 fauteuils, 180 clientes/mois, ticket moyen 60 €, CA mensuel 10 800 €</li>
-<li>Investissement plaque : Pack Business 2 plaques = 49,90 € TTC</li>
+<li>Investissement plaque : Pack Business 2 plaques = 65,88 € TTC</li>
 <li>Multiplication par 7 des avis (5/mois → 35/mois)</li>
 <li>Note Google : 4,3 → 4,7 en 4 mois</li>
 </ul>
@@ -2470,13 +2470,13 @@ export const articles: Record<string, {
 <h2>Quel pack Swiipx choisir pour votre salon ?</h2>
 
 <h3>💇 Petit salon (1-2 fauteuils, indépendant)</h3>
-<p><strong>Recommandation :</strong> <a href="/product/starter">Pack Starter — 1 plaque (29,90 €)</a> sur le poste principal.</p>
+<p><strong>Recommandation :</strong> <a href="/product/starter">Pack Starter — 1 plaque (35,88 €)</a> sur le poste principal.</p>
 
 <h3>💇‍♀️💇‍♂️ Salon moyen (3-4 fauteuils)</h3>
-<p><strong>Recommandation :</strong> <a href="/product/business">Pack Business — 2 plaques (49,90 €)</a> — la combinaison idéale poste + caisse.</p>
+<p><strong>Recommandation :</strong> <a href="/product/business">Pack Business — 2 plaques (65,88 €)</a> — la combinaison idéale poste + caisse.</p>
 
 <h3>💼 Institut / Grand salon (5+ postes)</h3>
-<p><strong>Recommandation :</strong> <a href="/product/pro">Pack Pro — 5 plaques (79,90 €)</a> — 1 par poste, maximisation du taux par fauteuil.</p>
+<p><strong>Recommandation :</strong> <a href="/product/pro">Pack Pro — 5 plaques (107,88 €)</a> — 1 par poste, maximisation du taux par fauteuil.</p>
 </section>
 
 <section id="faq-salon" class="scroll-mt-28 mb-16">
@@ -2512,7 +2512,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>💇 Prêt à booster les avis Google de votre salon ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> — sans abonnement, garantie à vie, livraison gratuite. 29,90 € à 79,90 € selon le pack.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> — sans abonnement, garantie à vie, livraison gratuite. 35,88 € à 107,88 € selon le pack.</p>
 </div>
 </section>
     `,
@@ -2574,7 +2574,7 @@ export const articles: Record<string, {
 
 <h3>1. Swiipx (sans abonnement, France)</h3>
 <ul>
-<li><strong>Prix :</strong> 29,90 € (1 plaque), 49,90 € (2 plaques), 79,90 € (5 plaques)</li>
+<li><strong>Prix :</strong> 35,88 € (1 plaque), 65,88 € (2 plaques), 107,88 € (5 plaques)</li>
 <li><strong>Matériau :</strong> Acrylique premium 3 mm (120 × 120 mm)</li>
 <li><strong>Puce :</strong> NTAG215</li>
 <li><strong>QR de secours :</strong> ✅ Intégré</li>
@@ -2675,7 +2675,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Comparer les packs Swiipx</strong></p>
-<p class="text-sm text-blue-900"><a href="/product/starter" class="font-semibold underline">Pack Starter (29,90 €)</a> · <a href="/product/business" class="font-semibold underline">Pack Business (49,90 €)</a> · <a href="/product/pro" class="font-semibold underline">Pack Pro (79,90 €)</a> — tous sans abonnement, garantie à vie, livraison gratuite.</p>
+<p class="text-sm text-blue-900"><a href="/product/starter" class="font-semibold underline">Pack Starter (35,88 €)</a> · <a href="/product/business" class="font-semibold underline">Pack Business (65,88 €)</a> · <a href="/product/pro" class="font-semibold underline">Pack Pro (107,88 €)</a> — tous sans abonnement, garantie à vie, livraison gratuite.</p>
 </div>
 </section>
 
@@ -2905,7 +2905,7 @@ export const articles: Record<string, {
 
 <h3>Investissement plaque NFC</h3>
 <ul>
-<li>Pack 2 plaques (recommandé pour ce volume) : <strong>49,90 € TTC, livraison gratuite, payée 1 fois</strong></li>
+<li>Pack 2 plaques (recommandé pour ce volume) : <strong>65,88 € TTC, livraison gratuite, payée 1 fois</strong></li>
 <li>Formation équipe : 30 minutes en briefing</li>
 <li>Coût total annuel : <strong>~6 € par mois</strong> (amorti sur durée de vie 10 ans)</li>
 </ul>
@@ -2919,7 +2919,7 @@ export const articles: Record<string, {
 </ul>
 
 <h3>Amortissement</h3>
-<p><strong>Le pack 2 plaques (49,90 €) est amorti en 4 jours</strong> avec ces hypothèses. Sur 12 mois, le ROI est de <strong>1 200 ×</strong>.</p>
+<p><strong>Le pack 2 plaques (65,88 €) est amorti en 4 jours</strong> avec ces hypothèses. Sur 12 mois, le ROI est de <strong>1 200 ×</strong>.</p>
 <p>Même avec des hypothèses ultra-conservatrices (+5 % de couverts au lieu de +15 %), l'amortissement se fait en 2 semaines max.</p>
 
 <div class="bg-green-50 rounded-xl p-4 border border-green-200 not-prose">
@@ -2932,15 +2932,15 @@ export const articles: Record<string, {
 <p>Selon la taille de votre restaurant :</p>
 
 <h3>🍴 Petit restaurant (15-30 couverts)</h3>
-<p><strong>Recommandation :</strong> <a href="/product/starter">Pack Starter — 1 plaque (29,90 €)</a></p>
+<p><strong>Recommandation :</strong> <a href="/product/starter">Pack Starter — 1 plaque (35,88 €)</a></p>
 <p>1 plaque sur le porte-addition suffit. Investissement minimal, résultats déjà visibles.</p>
 
 <h3>🍴🍴 Restaurant moyen (30-60 couverts)</h3>
-<p><strong>Recommandation :</strong> <a href="/product/business">Pack Business — 2 plaques (49,90 €)</a></p>
+<p><strong>Recommandation :</strong> <a href="/product/business">Pack Business — 2 plaques (65,88 €)</a></p>
 <p>1 plaque porte-addition + 1 plaque caisse. C'est le combo qui maximise le taux d'avis. Le plus populaire chez les restaurateurs.</p>
 
 <h3>🍴🍴🍴 Brasserie / Grand restaurant (60+ couverts)</h3>
-<p><strong>Recommandation :</strong> <a href="/product/pro">Pack Pro — 5 plaques (79,90 €)</a></p>
+<p><strong>Recommandation :</strong> <a href="/product/pro">Pack Pro — 5 plaques (107,88 €)</a></p>
 <p>Multiple emplacements (1 par tranche de 15-20 couverts) + plaques personnalisables. Idéal pour les chaînes ou restaurants multi-salles.</p>
 </section>
 

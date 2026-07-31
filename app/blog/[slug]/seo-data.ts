@@ -196,7 +196,7 @@ export const seoData: Record<string, ArticleSeo> = {
       { q: 'Combien économise-t-on en choisissant sans abonnement ?', a: 'En moyenne 500 à 1 500 € par plaque sur 5 ans. Pour un commerce avec 5 plaques, l\'économie peut atteindre 5 000 € sur 5 ans, soit l\'équivalent d\'un mois de loyer commercial.' },
       { q: 'Une plaque sans abonnement est-elle de moins bonne qualité ?', a: 'Non, c\'est un mythe. La qualité dépend du fabricant, pas du modèle économique. Les marques sans abonnement (Swiipx, Cogimix) utilisent les mêmes puces NTAG215 que les marques avec abonnement.' },
       { q: 'Si la marque "sans abonnement" disparaît dans 2 ans ?', a: 'Aucun impact. La plaque physique continue de fonctionner indépendamment de la marque. Elle redirige vers votre URL Google qui, elle, est permanente. Pas de cloud ou serveur à maintenir.' },
-      { q: 'Quelle est la meilleure marque sans abonnement en France ?', a: 'Selon notre comparatif 2026, Swiipx offre le meilleur rapport qualité-prix : acrylique 3 mm, NTAG215, QR de secours, garantie à vie, personnalisation incluse, à 29,90 €.' },
+      { q: 'Quelle est la meilleure marque sans abonnement en France ?', a: 'Selon notre comparatif 2026, Swiipx offre le meilleur rapport qualité-prix : acrylique 3 mm, NTAG215, QR de secours, garantie à vie, personnalisation incluse, à 35,88 €.' },
     ],
   },
   'plaque-nfc-salon-coiffure': {
@@ -225,7 +225,7 @@ export const seoData: Record<string, ArticleSeo> = {
       { q: 'Quel est le bon prix pour une plaque NFC professionnelle en 2026 ?', a: 'Entre 35 et 50 € pour une plaque pro de qualité : acrylique 3 mm, NTAG215, QR de secours, garantie à vie, personnalisation incluse. En dessous, qualité douteuse. Au-dessus, vous payez surtout l\'esthétique.' },
       { q: 'Pourquoi certaines plaques NFC coûtent moins de 20 € ?', a: 'Production de masse en Asie avec puces NTAG213 bas de gamme, PVC fin, pas de QR de secours, pas de SAV. Économie à court terme mais durée de vie réelle de 6-18 mois vs 10 ans pour une plaque pro.' },
       { q: 'Faut-il un abonnement mensuel ?', a: 'Non. Une plaque NFC fonctionne 10 ans sans maintenance. Les abonnements (9-29 €/mois) facturent un dashboard analytics inutile (Google Business Profile donne déjà ces stats gratuitement).' },
-      { q: 'Quelle économie sur un pack multi-plaques ?', a: 'Économie d\'échelle : 2 plaques = environ 17 % de moins que le prix unitaire ×2, 5 plaques = environ 47 % de moins. Ex. Swiipx : 1 plaque 29,90 €, 2 plaques 49,90 € (économie 9,80 €), 5 plaques 79,90 € (économie 69,60 €).' },
+      { q: 'Quelle économie sur un pack multi-plaques ?', a: 'Économie d\'échelle : 2 plaques = environ 17 % de moins que le prix unitaire ×2, 5 plaques = environ 47 % de moins. Ex. Swiipx : 1 plaque 35,88 €, 2 plaques 65,88 € (économie 9,80 €), 5 plaques 107,88 € (économie 69,60 €).' },
       { q: 'En combien de temps une plaque NFC est-elle amortie ?', a: 'Pour 99 % des commerces locaux, une plaque NFC à 40-60 € s\'amortit en moins de 7 jours grâce à 3-5 nouveaux clients/mois acquis via les nouveaux avis Google et la meilleure visibilité dans le pack local.' },
     ],
   },

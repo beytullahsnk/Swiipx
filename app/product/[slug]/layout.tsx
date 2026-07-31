@@ -4,7 +4,6 @@ const productsMeta: Record<string, {
   title: string
   description: string
   price: string
-  originalPrice?: string
   plaques: number
   keywords: string
   sku: string
@@ -15,8 +14,8 @@ const productsMeta: Record<string, {
 }> = {
   starter: {
     title: 'Pack Starter — 1 Plaque Avis Google NFC',
-    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Parfait pour débuter. Livraison gratuite, garantie à vie, sans abonnement. 29,90€.',
-    price: '29.90',
+    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Parfait pour débuter. Livraison gratuite, garantie à vie, sans abonnement. 35,88€.',
+    price: '35.88',
     plaques: 1,
     keywords: 'plaque avis google, plaque avis google nfc, pack starter plaque avis google, collecter avis google',
     sku: 'SWIIPX-STARTER',
@@ -27,9 +26,8 @@ const productsMeta: Record<string, {
   },
   business: {
     title: 'Pack Business — 2 Plaques Avis Google NFC',
-    description: '2 plaques avis Google NFC pour multiplier vos avis. Idéal pour les professionnels. Livraison offerte, garantie à vie, sans abonnement. 49,90€.',
-    price: '49.90',
-    originalPrice: '79.90',
+    description: '2 plaques avis Google NFC pour multiplier vos avis. Idéal pour les professionnels. Livraison offerte, garantie à vie, sans abonnement. 65,88€.',
+    price: '65.88',
     plaques: 2,
     keywords: 'plaque avis google, pack business plaque avis google nfc, 2 plaques avis google',
     sku: 'SWIIPX-BUSINESS',
@@ -40,9 +38,8 @@ const productsMeta: Record<string, {
   },
   pro: {
     title: 'Pack Pro — 5 Plaques Avis Google NFC',
-    description: '5 plaques avis Google NFC pour maximiser vos avis sur plusieurs emplacements. Solution complète avec support dédié et configuration incluse. 79,90€.',
-    price: '79.90',
-    originalPrice: '149.90',
+    description: '5 plaques avis Google NFC pour maximiser vos avis sur plusieurs emplacements. Solution complète avec support dédié et configuration incluse. 107,88€.',
+    price: '107.88',
     plaques: 5,
     keywords: 'plaque avis google, pack pro plaque avis google nfc, 5 plaques avis google',
     sku: 'SWIIPX-PRO',

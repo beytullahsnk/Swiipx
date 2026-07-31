@@ -74,8 +74,8 @@ export default function Home() {
     },
     offers: {
       '@type': 'AggregateOffer',
-      lowPrice: '29.90',
-      highPrice: '79.90',
+      lowPrice: '35.88',
+      highPrice: '107.88',
       priceCurrency: 'EUR',
       availability: 'https://schema.org/InStock',
       offerCount: 3,
@@ -112,7 +112,7 @@ export default function Home() {
     supply: [
       {
         '@type': 'HowToSupply',
-        name: 'Plaque NFC Swiipx (à partir de 29,90€)',
+        name: 'Plaque NFC Swiipx (à partir de 35,88€)',
       },
     ],
     tool: [
@@ -163,8 +163,8 @@ export default function Home() {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'EUR',
-      lowPrice: '29.90',
-      highPrice: '79.90',
+      lowPrice: '35.88',
+      highPrice: '107.88',
       offerCount: 3,
     },
   }
@@ -185,7 +185,7 @@ export default function Home() {
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/starter',
-            price: '29.90',
+            price: '35.88',
             priceCurrency: 'EUR',
             availability: 'https://schema.org/InStock',
             priceValidUntil: '2026-12-31',
@@ -204,7 +204,7 @@ export default function Home() {
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/business',
-            price: '49.90',
+            price: '65.88',
             priceCurrency: 'EUR',
             availability: 'https://schema.org/InStock',
             priceValidUntil: '2026-12-31',
@@ -223,7 +223,7 @@ export default function Home() {
           offers: {
             '@type': 'Offer',
             url: 'https://swiipx.fr/product/pro',
-            price: '79.90',
+            price: '107.88',
             priceCurrency: 'EUR',
             availability: 'https://schema.org/InStock',
             priceValidUntil: '2026-12-31',
