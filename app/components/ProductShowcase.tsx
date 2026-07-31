@@ -10,13 +10,18 @@ import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
 import ClientLogos from './ClientLogos'
 import { track } from '../../lib/analytics'
-import { PACKS, formatHt, formatTtc, unitPriceCents } from '../../lib/pricing'
+import { PACKS, formatHt, unitPriceCents } from '../../lib/pricing'
 
 // Packs : prix issus de lib/pricing.ts (source unique).
 //
-// Le montant mis en avant est le HT — la clientele est professionnelle et
-// recupere la TVA. Le TTC reste affiche juste en dessous : c'est lui que
-// Stripe debite, et il ne doit surprendre personne au moment de payer.
+// Les montants affiches ici sont HT : la clientele est professionnelle et
+// recupere la TVA. Le TTC n'est PAS repete sous chaque pack, mais une mention
+// "TVA 20 % en sus" figure sous le selecteur, et le montant TTC exact est
+// affiche au panier puis au checkout avant tout paiement.
+//
+// Les pages produit, elles, continuent d'afficher le TTC : ce sont les pages
+// d'atterrissage declarees dans le flux Merchant Center, et Google exige que
+// le prix declare (TTC en France) soit visible sur la page d'arrivee.
 const productPacks = [
   { pack: PACKS.plaque1, name: '1 Plaque', badge: null, popular: false },
   { pack: PACKS.plaque2, name: '2 Plaques', badge: '+ Guide Gratuit 🎁', popular: true },
@@ -29,7 +34,6 @@ const productPacks = [
   popular,
   price: pack.priceCents / 100,
   prixHt: formatHt(pack.priceCents),
-  prixTtc: formatTtc(pack.priceCents),
   formerPriceHT: pack.formerPriceCents ? formatHt(pack.formerPriceCents) : null,
   unitPriceHT: pack.plaques > 1 ? formatHt(unitPriceCents(pack)) : null,
 }))
@@ -334,7 +338,6 @@ export default function ProductShowcase() {
                         )}
                         <p className="text-2xl font-bold text-gray-900 whitespace-nowrap">{pack.prixHt}</p>
                       </div>
-                      <p className="text-xs text-gray-600 mt-0.5 whitespace-nowrap">{pack.prixTtc}</p>
                       {pack.unitPriceHT && (
                         <p className="text-xs text-gray-600 mt-0.5">soit {pack.unitPriceHT} la plaque</p>
                       )}
@@ -352,6 +355,12 @@ export default function ProductShowcase() {
                 </button>
               ))}
             </div>
+
+            {/* Mention de TVA — pas un prix, mais evite qu'un visiteur
+                decouvre le montant reel seulement au moment de payer. */}
+            <p className="text-xs text-gray-600">
+              Prix hors taxes. TVA 20 % ajoutée au paiement.
+            </p>
 
             {/* Price justification — pourquoi ce prix ? */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
