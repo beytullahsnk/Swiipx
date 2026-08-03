@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { ArrowLeft, Minus, Plus, Trash2, ShoppingBag } from 'lucide-react'
-import { useCart, formatPrice } from '../store/cart'
-import { TVA } from '@/lib/pricing'
+import { useCart } from '../store/cart'
+import { TVA, formatHt } from '@/lib/pricing'
 import { useCompanyStore } from '../store/company'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
@@ -140,7 +140,7 @@ export default function CartPage() {
                         {item.name}
                       </h3>
                       <p className="text-2xl font-bold text-primary mb-4">
-                        {formatPrice(item.priceCents)}
+                        {formatHt(item.priceCents)}
                       </p>
 
                       {/* Quantity Controls */}
@@ -179,7 +179,7 @@ export default function CartPage() {
                     {/* Line Total & Remove */}
                     <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-start space-y-4">
                       <p className="text-2xl font-bold text-gray-900">
-                        {formatPrice(item.priceCents * item.qty)}
+                        {formatHt(item.priceCents * item.qty)}
                       </p>
                       <button
                         onClick={() => {
@@ -225,33 +225,19 @@ export default function CartPage() {
 
                 {/* Summary Lines */}
                 <div className="space-y-4 mb-6">
-                  <div className="flex justify-between text-gray-700">
-                    <span>Sous-total HT</span>
-                    <span className="font-semibold">
-                      {formatPrice(Math.round(totalCents() / (1 + TVA)))}
-                    </span>
-                  </div>
-                  <div className="flex justify-between text-gray-700">
-                    <span>Livraison</span>
-                    <span className="font-semibold text-green-600 text-right text-sm">
-                      Gratuite (Point Relais)<br />
-                      <span className="text-gray-500 font-normal">ou 4,90€ (domicile)</span>
-                    </span>
-                  </div>
-                  {/* Le site affiche les prix HT, mais c'est le TTC qui est
-                      debite : on met donc le total TTC en avant et on rappelle
-                      la TVA incluse juste en dessous. */}
+                  {/* Panier entierement en HT. Livraison, TVA et total TTC
+                      sont presentes au checkout : le mode de livraison n'est
+                      pas encore choisi ici, son cout est donc inconnu. */}
                   <div className="border-t border-gray-200 pt-4">
                     <div className="flex justify-between text-xl font-bold text-gray-900">
-                      <span>Total TTC</span>
+                      <span>Total HT</span>
                       <span className="text-primary">
-                        {formatPrice(totalCents())}
+                        {formatHt(totalCents())}
                       </span>
                     </div>
-                    <div className="flex justify-between text-sm text-gray-600 mt-1">
-                      <span>dont TVA {Math.round(TVA * 100)} %</span>
-                      <span>{formatPrice(totalCents() - Math.round(totalCents() / (1 + TVA)))}</span>
-                    </div>
+                    <p className="text-sm text-gray-600 mt-2">
+                      Livraison et TVA {Math.round(TVA * 100)} % calculées à l&apos;étape suivante.
+                    </p>
                   </div>
                 </div>
 

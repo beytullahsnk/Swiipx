@@ -4,13 +4,23 @@
     {
       "name": "next-dev",
       "runtimeExecutable": "/Users/beytullahsonkaya/.nvm/versions/node/v22.17.0/bin/npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3000,
+      "autoPort": true
     },
     {
       "name": "maillot-dev",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["http-server", "/Users/beytullahsonkaya/Documents/maillot-de-foot/dist", "-p", "4321", "-c-1"],
+      "runtimeArgs": [
+        "http-server",
+        "/Users/beytullahsonkaya/Documents/maillot-de-foot/dist",
+        "-p",
+        "4321",
+        "-c-1"
+      ],
       "port": 4321
     }
   ]

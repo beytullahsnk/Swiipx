@@ -1,7 +1,8 @@
 'use client'
 
 import { Minus, Plus, Trash2, ShoppingBag } from 'lucide-react'
-import { useCart, formatPrice } from '../store/cart'
+import { useCart } from '../store/cart'
+import { formatHt } from '@/lib/pricing'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import {
@@ -75,7 +76,7 @@ export default function SideCart() {
                       {item.name}
                     </h3>
                     <p className="text-primary font-bold mb-2">
-                      {formatPrice(item.priceCents)}
+                      {formatHt(item.priceCents)}
                     </p>
 
                     {/* Quantity Controls */}
@@ -110,7 +111,7 @@ export default function SideCart() {
                   {/* Line Total */}
                   <div className="text-right">
                     <p className="font-bold text-gray-900">
-                      {formatPrice(item.priceCents * item.qty)}
+                      {formatHt(item.priceCents * item.qty)}
                     </p>
                   </div>
                 </div>
@@ -123,14 +124,14 @@ export default function SideCart() {
         {items.length > 0 && (
           <div className="border-t border-gray-200 p-6 space-y-4">
             <div className="flex items-center justify-between text-lg">
-              <span className="font-semibold text-gray-700">Sous-total</span>
+              <span className="font-semibold text-gray-700">Sous-total HT</span>
               <span className="font-bold text-2xl text-gray-900">
-                {formatPrice(totalCents())}
+                {formatHt(totalCents())}
               </span>
             </div>
 
             <p className="text-sm text-gray-500">
-              Livraison et taxes calculées au paiement
+              Livraison et TVA calculées au paiement
             </p>
 
             <div className="space-y-3">
