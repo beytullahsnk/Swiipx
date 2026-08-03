@@ -18,6 +18,269 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-salle-de-sport': {
+    title: 'Plaque NFC salle de sport : collecter des avis Google sans interrompre les adhérents',
+    category: 'Secteur',
+    date: '3 août 2026',
+    readTime: '11 min',
+    author: 'Équipe Swiipx',
+    excerpt: "Salles de sport, box de CrossFit, studios de pilates : multipliez vos avis Google par 5 avec une plaque NFC. Emplacements, moments clés, scripts coach, 3 études de cas et ROI chiffré.",
+    tocSections: [
+      { id: 'pourquoi-avis-salle-sport', label: 'Pourquoi les avis décident' },
+      { id: 'probleme-salle-sport', label: 'Satisfaction vs avis' },
+      { id: 'fonctionnement', label: 'Comment fonctionne la plaque' },
+      { id: 'placements-salle-sport', label: '6 emplacements testés' },
+      { id: 'moments-cles', label: 'Les 5 moments clés' },
+      { id: 'scripts-coach', label: 'Les scripts qui marchent' },
+      { id: 'cas-pratiques', label: '3 études de cas' },
+      { id: 'roi-salle-sport', label: 'Le ROI chiffré' },
+      { id: 'repondre-avis', label: 'Répondre aux avis' },
+      { id: 'plan-90-jours', label: 'Le plan 90 jours' },
+      { id: 'faq-salle-sport', label: 'FAQ' },
+    ],
+    content: `
+<section id="pourquoi-avis-salle-sport" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google décident du remplissage d'une salle de sport</h2>
+<p>Le fitness est l'un des rares secteurs où le client s'engage sur <strong>plusieurs mois avant même d'avoir testé</strong>. Un abonnement annuel représente 400 à 800 €&nbsp;: personne ne signe sans vérifier. Et la vérification passe par un seul endroit, Google Maps, où le prospect tape « salle de sport + sa ville » puis lit les avis avant de se déplacer.</p>
+<p>Les chiffres du secteur sont nets : <strong>91 % des prospects consultent les avis en ligne avant de franchir la porte d'une salle</strong>, et près de 8 sur 10 ne regardent que les trois premiers résultats du pack local. Une salle avec 34 avis à 4,1 étoiles est structurellement invisible face au concurrent situé à 600 mètres qui affiche 280 avis à 4,7.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Chiffre clé :</strong> dans le fitness, un adhérent acquis via Google vaut en moyenne <strong>450 à 750 € de chiffre d'affaires sur sa durée de vie</strong> (abonnement moyen 35-45 €/mois sur 12 à 18 mois, hors coaching et boutique). Gagner deux places dans le pack local représente souvent 8 à 20 inscriptions supplémentaires par mois.</p>
+</div>
+<p>Le pack local — ce bloc de trois établissements affiché sur la carte — concentre l'essentiel des clics. Google le construit sur trois piliers : la proximité, la pertinence et la <strong>notoriété</strong>. Le volume d'avis, la note moyenne et la fraîcheur des avis sont les signaux de notoriété les plus faciles à piloter. C'est le seul levier sur lequel une salle indépendante peut battre une franchise nationale.</p>
+</section>
+
+<section id="probleme-salle-sport" class="scroll-mt-28 mb-16">
+<h2>Le vrai problème : vos adhérents sont contents et ne le disent jamais</h2>
+<p>Une salle de sport a un avantage énorme sur un commerce classique : ses clients reviennent <strong>trois à cinq fois par semaine</strong>. Un restaurant voit un client deux fois par an, vous le voyez 200 fois. Et pourtant, la plupart des salles collectent moins de cinq avis par mois.</p>
+<p>La raison tient à une particularité du parcours : l'adhérent ne paie pas à chaque visite. Il badge, il s'entraîne, il repart. Il n'y a <strong>aucun moment de caisse</strong>, donc aucun moment naturel où l'on peut lui demander quelque chose. Le prélèvement mensuel est automatique et invisible. La relation est excellente mais elle ne produit jamais de point de contact commercial.</p>
+<p>S'ajoute le biais classique de l'asymétrie émotionnelle : <strong>la frustration écrit, la satisfaction se tait</strong>. L'adhérent qui résilie parce que les vestiaires étaient sales rédige un avis dans l'heure. Celui qui a perdu 8 kilos en six mois ne pense jamais à le raconter sur Google. Résultat : la note moyenne des salles de sport en France tourne autour de 4,2 alors que les enquêtes de satisfaction internes dépassent régulièrement 88 %.</p>
+<h3>Les quatre méthodes qui ne fonctionnent pas</h3>
+<ul>
+<li><strong>L'email de campagne à toute la base</strong> : taux d'ouverture 18 à 25 %, taux de clic 2 à 4 %, et il réveille les adhérents inactifs qui en profitent pour résilier. Rapport bénéfice/risque défavorable.</li>
+<li><strong>Le QR code sur l'affiche du hall</strong> : personne ne s'arrête pour photographier un mur. Taux de conversion mesuré : 1 à 3 %.</li>
+<li><strong>Le « pensez à nous laisser un avis » lancé par le coach</strong> : sans support physique à portée de main, moins de 5 % passent à l'acte, même avec la meilleure intention.</li>
+<li><strong>Le concours avec tirage au sort</strong> : interdit par les règles de Google. Toute contrepartie contre un avis expose à la suppression massive des avis et à la suspension de la fiche.</li>
+</ul>
+<p>Ce qui fonctionne, c'est un <strong>objet physique placé là où l'adhérent a déjà son téléphone en main</strong>, au moment précis où il vient de finir sa séance et où l'endorphine fait son travail. C'est exactement le rôle d'une plaque NFC.</p>
+</section>
+
+<section id="fonctionnement" class="scroll-mt-28 mb-16">
+<h2>Comment fonctionne la plaque NFC dans une salle de sport</h2>
+<p>La plaque NFC Swiipx est une plaque en acrylique premium de 120 × 120 × 3 mm qui intègre une puce NTAG215. L'adhérent approche son smartphone à moins de 4 cm : sa page d'avis Google s'ouvre <strong>automatiquement</strong>, sans application à installer, sans code à saisir, sans recherche.</p>
+<ol>
+<li>L'adhérent termine sa séance et passe devant l'accueil</li>
+<li>Il approche son téléphone de la plaque, déjà en main pour couper sa musique</li>
+<li>Google ouvre directement le formulaire d'avis de votre fiche</li>
+<li>Il met cinq étoiles et deux lignes : c'est terminé en moins de 20 secondes</li>
+</ol>
+<p>Un <strong>QR code de secours</strong> est imprimé sur la plaque pour les rares téléphones dont le NFC est désactivé. La solution est compatible avec tous les iPhone depuis 2016 et la quasi-totalité des Android en circulation, soit plus de 95 % du parc.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Spécificité salle de sport :</strong> l'environnement est humide, chaud, et les surfaces sont désinfectées plusieurs fois par jour. L'acrylique 3 mm supporte les produits d'entretien, la transpiration et l'humidité des vestiaires sans jaunir ni gondoler, contrairement à une affiche plastifiée qui devient illisible en trois semaines.</p>
+</div>
+<p>Point important pour les salles ouvertes 24 h/24 sans personnel permanent : la plaque <strong>travaille seule</strong>. C'est même le seul dispositif de collecte qui fonctionne à 3 h du matin, quand aucun coach n'est présent.</p>
+</section>
+
+<section id="placements-salle-sport" class="scroll-mt-28 mb-16">
+<h2>Où placer la plaque : 6 emplacements testés en salle</h2>
+<p>Le placement détermine environ 80 % du résultat. Voici les taux de conversion observés chez les salles équipées, exprimés en pourcentage d'adhérents sollicités qui déposent effectivement un avis.</p>
+
+<h3>1. Le bureau du coach / espace bilan — 40 à 55 % ✅</h3>
+<p>C'est <strong>le meilleur emplacement toutes catégories</strong>, et il est presque toujours négligé. Lors d'un bilan de suivi, l'adhérent est assis, en tête à tête, il vient de voir ses progrès chiffrés. La demande arrive au sommet exact de la courbe de satisfaction. Posez la plaque sur le bureau, orientée vers lui.</p>
+
+<h3>2. Le comptoir d'accueil / borne de badgeage — 30 à 40 %</h3>
+<p>L'emplacement de volume. L'adhérent passe devant deux à cinq fois par semaine et son téléphone est déjà sorti pour badger ou couper sa playlist. Placez la plaque à droite de la borne, à hauteur de main — pas derrière le comptoir, où seul le personnel la voit.</p>
+
+<h3>3. La salle de cours collectifs — 25 à 35 %</h3>
+<p>Fin de cours de RPM, body pump, yoga ou pilates : le groupe est euphorique, la cohésion est maximale, et une demande faite au micro par le coach déclenche un effet d'entraînement collectif. Une plaque posée sur le pupitre ou près de la sortie capte cette vague. C'est l'emplacement au meilleur ratio effort/résultat.</p>
+
+<h3>4. Le bar à protéines / distributeur — 20 à 30 %</h3>
+<p>Vrai moment de caisse, donc téléphone en main pour le paiement sans contact. L'adhérent est détendu, la séance est finie. Excellent complément si votre salle dispose d'un espace détente.</p>
+
+<h3>5. Le vestiaire (miroir ou banc central) — 10 à 18 %</h3>
+<p>Temps mort réel, téléphone souvent consulté. Rendement moyen mais volume important vu la fréquence de passage. À réserver aux salles qui ont déjà équipé les emplacements prioritaires.</p>
+
+<h3>6. Le coin étirements / zone tapis — 8 à 12 %</h3>
+<p>Faible rendement pris isolément, mais intéressant dans les salles 24 h/24 sans accueil : c'est parfois le seul point de contact possible. À combiner systématiquement avec la borne de badgeage.</p>
+
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 La règle des 2 plaques :</strong> la configuration minimale efficace d'une salle est <strong>accueil + salle de cours collectifs</strong>, soit le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a>. Les salles de plus de 800 m², les clubs multi-étages et les franchises 24 h/24 passent au <a href="/product/pro" class="font-semibold underline">Pack Pro (5 plaques)</a> pour couvrir accueil, deux salles de cours, bar et vestiaires. Pour approfondir, lisez notre guide des <a href="/blog/ou-placer-plaque-avis-google">7 emplacements stratégiques</a>.</p>
+</div>
+</section>
+
+<section id="moments-cles" class="scroll-mt-28 mb-16">
+<h2>Les 5 moments clés où l'adhérent dit oui</h2>
+<p>En salle de sport, le <strong>timing compte autant que l'emplacement</strong>. Contrairement à un commerce où le moment de la caisse s'impose, vous devez choisir votre fenêtre. Voici les cinq qui convertissent, classées par efficacité.</p>
+<ol>
+<li><strong>La fin de la séance d'essai gratuite</strong> — le prospect vient de découvrir la salle, il est dans une phase d'enthousiasme et n'a encore aucune raison d'être déçu. Taux observé : 45 à 60 %. C'est le moment le plus rentable, et le plus souvent oublié.</li>
+<li><strong>Le bilan de suivi avec le coach</strong> — l'adhérent voit ses progrès objectivés : poids, tour de taille, charges. La preuve précède la demande. Taux : 40 à 55 %.</li>
+<li><strong>La fin d'un cours collectif</strong> — effet de groupe, endorphines, relation forte avec le coach. Taux : 25 à 35 %, et l'effet est multiplié quand le coach le dit au micro.</li>
+<li><strong>L'atteinte d'un objectif</strong> — première traction, 10 kg perdus, premier semi-marathon. Le moment émotionnel le plus fort, mais il ne se planifie pas : il faut que l'équipe soit briefée pour le saisir.</li>
+<li><strong>Le renouvellement d'abonnement</strong> — un adhérent qui re-signe vient de voter avec son portefeuille. C'est une confirmation de satisfaction : exploitez-la immédiatement. Taux : 35 à 45 %.</li>
+</ol>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>⛔ Le moment à éviter absolument :</strong> l'arrivée en salle. L'adhérent est pressé, concentré sur sa séance, souvent en retard sur son cours. Une sollicitation à ce moment ne convertit pas et crée une friction inutile. La demande se fait toujours <strong>après</strong> l'effort, jamais avant.</p>
+</div>
+</section>
+
+<section id="scripts-coach" class="scroll-mt-28 mb-16">
+<h2>Les scripts qui marchent (et ceux qui tuent la conversion)</h2>
+<p>Une plaque posée sans un mot convertit <strong>trois à quatre fois moins</strong> qu'une plaque mentionnée oralement. La phrase compte autant que l'objet. Voici les formulations testées sur le terrain, avec la raison pour laquelle elles fonctionnent.</p>
+
+<h3>✅ Le script « fin de cours collectif » (le plus rentable)</h3>
+<p class="italic">« Bravo à tous, beau boulot aujourd'hui. Si le cours vous a plu, il y a une plaque à l'accueil : vous approchez votre téléphone, ça prend 20 secondes et ça nous aide énormément à faire connaître la salle. »</p>
+<p>Pourquoi ça marche : la demande suit immédiatement un compliment collectif, elle est conditionnelle (« si le cours vous a plu »), chiffrée dans le temps, et l'effet de groupe fait le reste. Trois à huit personnes s'arrêtent en sortant au lieu d'une seule.</p>
+
+<h3>✅ Le script « bilan de suivi »</h3>
+<p class="italic">« Vous avez perdu 6 kilos en quatre mois, c'est vraiment un beau résultat. Si vous avez deux minutes, ça me ferait très plaisir que vous le racontiez sur Google : c'est ce genre de retour qui donne envie aux gens de se lancer. »</p>
+<p>Sur les adhérents en progression mesurable, le taux monte à 50-60 %. Ce sont vos meilleurs ambassadeurs : ils rédigent des avis longs, détaillés et spécifiques — exactement ceux qui pèsent le plus dans l'algorithme et qui convainquent les prospects hésitants.</p>
+
+<h3>✅ Le script « séance d'essai »</h3>
+<p class="italic">« Alors, cette première séance ? Si vous avez apprécié l'accueil, un petit avis Google nous aide beaucoup, la plaque est juste là. »</p>
+<p>À utiliser même si le prospect ne s'inscrit pas ce jour-là : un avis positif d'un visiteur est parfaitement légitime et il alimente votre fiche.</p>
+
+<h3>❌ Ce qu'il ne faut jamais faire</h3>
+<ul>
+<li><strong>Offrir un mois gratuit, une séance de coaching ou une boisson</strong> contre un avis : violation directe des règles de Google. Les avis peuvent être supprimés en masse et la fiche suspendue.</li>
+<li><strong>Filtrer les adhérents</strong> en ne présentant la plaque qu'à ceux que vous jugez satisfaits : Google détecte ces schémas statistiques anormaux, et c'est contraire à ses conditions d'utilisation.</li>
+<li><strong>Demander pendant l'effort</strong> : un adhérent sous la barre de squat n'a ni le téléphone ni la disponibilité mentale.</li>
+<li><strong>Insister après un refus</strong> : vous transformez un adhérent neutre en adhérent agacé, et le risque de résiliation dépasse largement le gain d'un avis.</li>
+<li><strong>Solliciter un adhérent en cours de réclamation</strong> : réglez le problème d'abord, l'avis viendra ensuite — et il sera meilleur.</li>
+</ul>
+</section>
+
+<section id="cas-pratiques" class="scroll-mt-28 mb-16">
+<h2>3 études de cas de salles équipées</h2>
+
+<h3>🏋️ Salle de fitness indépendante — Nantes (44)</h3>
+<p>Structure : 650 m², environ 720 adhérents, 3 coachs, planning de cours collectifs chargé. Situation de départ : 41 avis, 4,2 étoiles, 4<sup>e</sup> position dans le pack local sur « salle de sport Nantes ».</p>
+<ul>
+<li>Équipement : 2 plaques (accueil + salle de cours collectifs), demande systématique en fin de cours</li>
+<li>Après 5 mois : <strong>187 avis, 4,7 étoiles</strong></li>
+<li>Position pack local : <strong>2<sup>e</sup></strong></li>
+<li>Demandes d'essai gratuit via Google : de 14 à 43 par mois (+207 %)</li>
+<li>Inscriptions attribuées à Google : +11 par mois en moyenne</li>
+</ul>
+
+<h3>🏢 Franchise low-cost 24 h/24 — Lille (59)</h3>
+<p>Structure : 1 100 m², environ 1 900 abonnés, accueil non permanent (personnel présent 6 h par jour seulement). Le défi : collecter sans personnel.</p>
+<ul>
+<li>Équipement : 5 plaques (borne de badgeage, deux zones cardio, bar, vestiaires)</li>
+<li>Avant : 6 avis/mois en moyenne. Après : <strong>38 avis/mois</strong></li>
+<li>Note passée de 3,9 à 4,5 en sept mois, les nouveaux avis diluant un historique dégradé</li>
+<li>Enseignement clé : <strong>plus de 60 % des avis ont été déposés en dehors des heures de présence du personnel</strong> — ce qu'aucune méthode humaine n'aurait permis</li>
+<li>ROI de l'équipement (107,88 €) : atteint dès le <strong>premier abonnement supplémentaire</strong></li>
+</ul>
+
+<h3>🤸 Box de CrossFit — Bordeaux (33)</h3>
+<p>Structure : 280 m², 210 membres, communauté très soudée, panier moyen élevé (85 €/mois).</p>
+<ul>
+<li>Équipement : 1 plaque au comptoir d'accueil, demande faite en fin de WOD par le coach</li>
+<li>Après 4 mois : 27 → <strong>96 avis</strong>, note 4,9</li>
+<li>Effet observé : la mention répétée des prénoms des coachs dans les avis a fait remonter la box sur les requêtes « coach CrossFit Bordeaux »</li>
+<li>Taux de conversion des séances d'essai passé de 31 % à 44 %, les prospects arrivant déjà convaincus par les avis lus</li>
+</ul>
+<p>Le schéma est constant sur les trois cas : <strong>volume d'avis multiplié par 3 à 5 en 4 à 7 mois</strong>, note en hausse de 0,5 à 0,6 point, et un gain de 1 à 3 positions dans le pack local.</p>
+</section>
+
+<section id="roi-salle-sport" class="scroll-mt-28 mb-16">
+<h2>Le ROI chiffré pour une salle de sport</h2>
+<p>Faisons le calcul avec des hypothèses volontairement prudentes, sur la base d'une salle indépendante équipée du Pack Business.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € (paiement unique, sans abonnement)</td></tr>
+<tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, aucune batterie)</td></tr>
+<tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+120 à +250</td></tr>
+<tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
+<tr><td class="border p-3">Nouvelles inscriptions / mois</td><td class="border p-3">+8 à +20</td></tr>
+<tr><td class="border p-3">Valeur vie moyenne d'un adhérent</td><td class="border p-3">~520 €</td></tr>
+<tr><td class="border p-3"><strong>CA additionnel annuel estimé</strong></td><td class="border p-3"><strong>+49 900 € à +124 800 €</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Même en divisant ces chiffres par quatre, le retour sur investissement d'une plaque à 65,88 € reste sans commune mesure avec tout autre canal d'acquisition du secteur. À titre de comparaison, une campagne Google Ads sur le mot-clé « salle de sport » coûte entre 2 et 6 € le clic dans une métropole française, soit un coût d'acquisition de 70 à 180 € par inscription — <strong>chaque mois, indéfiniment</strong>. La plaque, elle, est payée une fois.</p>
+<p>Il faut aussi compter l'effet indirect sur la rétention : une salle bien notée attire des prospects mieux qualifiés, qui restent plus longtemps. Pour les fourchettes de prix du marché et les critères de choix, consultez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Répondre aux avis : le réflexe que 70 % des salles négligent</h2>
+<p>Collecter ne suffit pas. Google valorise les fiches <strong>actives</strong>, et les prospects lisent vos réponses au moins autant que les avis eux-mêmes. Une salle qui répond à 100 % de ses avis gagne en crédibilité, surtout sur les avis négatifs — qui sont dans ce secteur très prévisibles : propreté des vestiaires, affluence aux heures de pointe, matériel en panne, difficultés de résiliation.</p>
+<h3>Répondre à un avis positif (30 secondes)</h3>
+<p class="italic">« Merci Sarah pour ce retour ! Ravi que les cours de body pump vous plaisent autant, on transmet à Julie. À très vite dans votre salle de sport à Nantes. »</p>
+<p>Astuce SEO : glissez naturellement <strong>votre activité et votre ville</strong> dans une partie de vos réponses. Google lit ces réponses et elles renforcent votre pertinence locale.</p>
+<h3>Répondre à un avis négatif : la règle des 3 P</h3>
+<ul>
+<li><strong>Poli</strong> : jamais sur la défensive, jamais d'ironie. Votre réponse est lue par 200 futurs prospects, pas par l'auteur de l'avis.</li>
+<li><strong>Précis</strong> : répondez factuellement. « Le tapis 4 a été réparé le 12 » vaut mille fois mieux qu'un « nous sommes désolés » générique.</li>
+<li><strong>Privé</strong> : proposez de basculer hors ligne (« passez voir Marc à l'accueil, on regarde ensemble votre dossier »).</li>
+</ul>
+<p>Une fiche à 4,7 avec quelques avis négatifs bien gérés convertit mieux qu'une fiche à 5,0 sans aucune critique, qui paraît artificielle. Notre <a href="/blog/repondre-avis-negatifs-google">méthode complète pour répondre aux avis négatifs</a> détaille six modèles prêts à l'emploi.</p>
+</section>
+
+<section id="plan-90-jours" class="scroll-mt-28 mb-16">
+<h2>Le plan 90 jours pour une salle de sport</h2>
+<h3>Semaines 1-2 : les fondations</h3>
+<ul>
+<li>Complétez votre fiche Google Business Profile à 100 % : horaires réels, catégorie principale précise (salle de sport, club de fitness, box de CrossFit...), attributs (parking, douches, accès PMR, ouvert 24 h/24), planning des cours en photo</li>
+<li>Ajoutez au moins 20 photos récentes : plateau musculation, cours collectifs, vestiaires propres, équipe. Les fiches riches en photos reçoivent nettement plus de demandes d'itinéraire</li>
+<li>Installez les 2 plaques : accueil et salle de cours collectifs</li>
+<li>Briefez l'équipe : une seule phrase, apprise par cœur, dite en fin de chaque cours</li>
+</ul>
+<h3>Semaines 3-8 : le rythme</h3>
+<ul>
+<li>Objectif : 20 à 40 nouveaux avis par mois</li>
+<li>Répondez à 100 % des avis sous 48 h, sans exception</li>
+<li>Publiez un Google Post par semaine : nouveau cours, défi du mois, arrivée d'un coach, offre de rentrée</li>
+<li>Systématisez la demande à la fin de chaque séance d'essai gratuite : c'est votre gisement le plus rentable</li>
+</ul>
+<h3>Semaines 9-12 : la consolidation</h3>
+<ul>
+<li>Les effets sur le pack local deviennent visibles, avec un décalage habituel de 4 à 8 semaines</li>
+<li>Analysez les mots qui reviennent dans vos avis (« cours collectifs », « ambiance », « propre », prénoms des coachs) : ce sont les requêtes sur lesquelles Google commence à vous positionner</li>
+<li>Ajoutez une troisième plaque sur l'emplacement qui a le mieux fonctionné</li>
+<li>Verrouillez le reste avec notre <a href="/blog/seo-local-recherches-google">guide SEO local</a> et la méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a></li>
+</ul>
+</section>
+
+<section id="faq-salle-sport" class="scroll-mt-28 mb-16">
+<h2>FAQ — Plaque NFC pour salle de sport</h2>
+
+<h3>Combien d'avis Google une salle de sport peut-elle collecter avec une plaque NFC ?</h3>
+<p>Une salle de 500 à 800 adhérents passe généralement de 4-8 avis/mois à 20-40 avis/mois, soit une multiplication par 4 à 6. Les clubs de plus de 1 500 abonnés équipés de plusieurs plaques dépassent régulièrement 40 avis mensuels. Le facteur déterminant n'est pas la taille de la salle mais le nombre d'emplacements équipés et la systématisation de la demande en fin de cours.</p>
+
+<h3>Où placer la plaque NFC dans une salle de sport ?</h3>
+<p>Le bureau du coach lors des bilans de suivi affiche le meilleur taux (40-55 %), mais c'est le comptoir d'accueil ou la borne de badgeage qui apporte le volume (30-40 %), car l'adhérent y passe plusieurs fois par semaine avec son téléphone déjà en main. La salle de cours collectifs (25-35 %) est le meilleur complément grâce à l'effet de groupe.</p>
+
+<h3>Comment collecter des avis dans une salle ouverte 24 h/24 sans personnel ?</h3>
+<p>C'est justement là que la plaque NFC est irremplaçable : elle fonctionne sans intervention humaine. Sur les salles 24 h/24 que nous suivons, plus de 60 % des avis sont déposés en dehors des heures de présence du personnel. Équipez en priorité la borne de badgeage et les zones de sortie, et compensez l'absence de script oral par une signalétique claire.</p>
+
+<h3>La plaque résiste-t-elle à l'humidité des vestiaires et aux produits désinfectants ?</h3>
+<p>Oui. L'acrylique premium 3 mm résiste à l'eau, aux UV, aux rayures et aux produits d'entretien courants. Un coup d'éponge suffit à la nettoyer, contrairement à une affiche papier ou à un flyer plastifié qui gondole en quelques semaines dans un environnement chaud et humide.</p>
+
+<h3>Puis-je offrir une séance ou un mois gratuit en échange d'un avis ?</h3>
+<p>Non, c'est formellement interdit par les règles de Google. Toute contrepartie expose à la suppression massive de vos avis — y compris les avis légitimes — et à la suspension de votre fiche. La plaque NFC fonctionne parce qu'elle supprime la friction, pas parce qu'elle achète l'avis.</p>
+
+<h3>Faut-il un abonnement pour utiliser la plaque NFC ?</h3>
+<p>Non. La plaque Swiipx est un paiement unique, sans frais mensuels ni renouvellement. Elle fonctionne plusieurs années grâce à une puce NFC passive qui n'a besoin d'aucune batterie. Voir notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a>.</p>
+
+<h3>Quel pack choisir pour une salle de sport ?</h3>
+<p>Studio de pilates, box de CrossFit ou petite salle mono-accueil : <a href="/product/starter">Pack Starter</a>. Salle classique avec accueil et cours collectifs : <a href="/product/business">Pack Business</a> (2 plaques), la configuration la plus fréquente. Club de plus de 800 m², salle 24 h/24 ou établissement multi-étages : <a href="/product/pro">Pack Pro</a> (5 plaques).</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : votre fiche Google est votre meilleur commercial</h2>
+<p>Dans le fitness, personne ne pousse la porte d'une salle au hasard. Le prospect a comparé trois établissements sur Google, lu une vingtaine d'avis et déjà fait son choix <strong>avant même d'appeler</strong>. Votre fiche est la vraie vitrine — celle qui travaille 24 heures sur 24, y compris quand la salle est fermée.</p>
+<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>. Vos adhérents progressent, ils apprécient vos coachs, ils reviennent quatre fois par semaine. Il suffit de leur donner 20 secondes et un objet à portée de main, au bon endroit et au bon moment.</p>
+<p>Guides complémentaires par métier : <a href="/blog/plaque-nfc-institut-beaute">institut de beauté</a>, <a href="/blog/plaque-nfc-restaurant">restaurant</a>, <a href="/blog/plaque-nfc-salon-coiffure">salon de coiffure</a>, ou notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat pour choisir sa plaque</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque séance en avis Google ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €, livraison offerte.</p>
+</div>
+</section>
+    `,
+  },
   'faux-avis-google-signaler': {
     title: 'Faux avis Google : comment les signaler et s\'en protéger',
     category: 'SEO Local',

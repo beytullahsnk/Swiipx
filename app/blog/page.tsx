@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 22,
+    title: 'Plaque NFC salle de sport : x5 avis Google en 2026',
+    excerpt: "Salles de sport, box de CrossFit, studios de pilates : multipliez vos avis Google par 5 avec une plaque NFC. Emplacements, moments clés, scripts coach, 3 études de cas et ROI chiffré.",
+    category: 'Secteur',
+    date: '3 août 2026',
+    dateIso: '2026-08-03',
+    readTime: '11 min',
+    slug: 'plaque-nfc-salle-de-sport',
+  },
+  {
     id: 21,
     title: 'Faux avis Google : comment les signaler et s\'en protéger',
     excerpt: 'Faux avis Google : comment les repérer, les signaler à Google et s\'en protéger en 2026. Procédure pas à pas, délais de suppression, et la stratégie de dilution par le volume de vrais avis.',

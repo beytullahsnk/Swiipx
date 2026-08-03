@@ -26,6 +26,22 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'plaque-nfc-salle-de-sport': {
+    title: 'Plaque NFC salle de sport : x5 avis Google',
+    description: "Salles de sport, box de CrossFit et studios : multipliez vos avis Google par 5 avec une plaque NFC. Emplacements, moments clés, scripts et ROI chiffré.",
+    keywords: 'plaque nfc salle de sport, avis google salle de sport, plaque nfc fitness, avis google club de fitness, plaque nfc crossfit, seo local salle de sport, avis google coach sportif',
+    date: '2026-08-03',
+    dateModified: '2026-08-03',
+    category: 'Secteur',
+    faq: [
+      { q: "Combien d'avis Google une salle de sport peut-elle collecter avec une plaque NFC ?", a: "Une salle de 500 à 800 adhérents passe généralement de 4-8 avis/mois à 20-40 avis/mois, soit une multiplication par 4 à 6. Les clubs de plus de 1 500 abonnés équipés de plusieurs plaques dépassent régulièrement 40 avis mensuels. Le facteur déterminant n'est pas la taille de la salle mais le nombre d'emplacements équipés et la systématisation de la demande en fin de cours." },
+      { q: 'Où placer la plaque NFC dans une salle de sport ?', a: "Le bureau du coach lors des bilans de suivi affiche le meilleur taux (40-55 %), mais c'est le comptoir d'accueil ou la borne de badgeage qui apporte le volume (30-40 %), car l'adhérent y passe plusieurs fois par semaine avec son téléphone déjà en main. La salle de cours collectifs (25-35 %) est le meilleur complément grâce à l'effet de groupe." },
+      { q: 'Comment collecter des avis dans une salle ouverte 24 h/24 sans personnel ?', a: "C'est justement là que la plaque NFC est irremplaçable : elle fonctionne sans intervention humaine. Sur les salles 24 h/24 que nous suivons, plus de 60 % des avis sont déposés en dehors des heures de présence du personnel. Équipez en priorité la borne de badgeage et les zones de sortie, et compensez l'absence de script oral par une signalétique claire." },
+      { q: "La plaque résiste-t-elle à l'humidité des vestiaires et aux produits désinfectants ?", a: "Oui. L'acrylique premium 3 mm résiste à l'eau, aux UV, aux rayures et aux produits d'entretien courants. Un coup d'éponge suffit à la nettoyer, contrairement à une affiche papier ou à un flyer plastifié qui gondole en quelques semaines dans un environnement chaud et humide." },
+      { q: "Puis-je offrir une séance ou un mois gratuit en échange d'un avis ?", a: "Non, c'est formellement interdit par les règles de Google. Toute contrepartie expose à la suppression massive de vos avis, y compris les avis légitimes, et à la suspension de votre fiche. La plaque NFC fonctionne parce qu'elle supprime la friction, pas parce qu'elle achète l'avis." },
+      { q: 'Quel pack de plaques choisir pour une salle de sport ?', a: "Studio de pilates, box de CrossFit ou petite salle mono-accueil : Pack Starter. Salle classique avec accueil et cours collectifs : Pack Business (2 plaques), la configuration la plus fréquente. Club de plus de 800 m², salle ouverte 24 h/24 ou établissement multi-étages : Pack Pro (5 plaques)." },
+    ],
+  },
   'faux-avis-google-signaler': {
     title: 'Faux avis Google : les signaler et s\'en protéger',
     description: 'Faux avis Google : comment les repérer, les signaler à Google et s\'en protéger. Procédure, délais de suppression et dilution par le volume.',
