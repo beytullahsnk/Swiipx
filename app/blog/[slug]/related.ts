@@ -106,3 +106,29 @@ export function getRelatedArticles(currentSlug: string, count = 4): RelatedArtic
 
   return choisis
 }
+
+
+/**
+ * Page secteur correspondant a un article, quand elle existe.
+ *
+ * POURQUOI : mesure sur le site construit, les pages /secteur ne recevaient
+ * QUE des liens de pied de page — 41 liens site-wide, zero depuis le contenu
+ * d'une page. Google devalue largement les liens de pied de page repetes
+ * partout : en pratique, les pages commerciales n'avaient aucun lien interne
+ * editorial, alors que ce sont elles qui doivent capter les requetes d'achat.
+ *
+ * Un lien contextuel depuis un article de fond, topiquement proche, vaut
+ * infiniment plus qu'une ligne de navigation.
+ */
+export const SECTEUR_PAR_ARTICLE: Record<string, { slug: string; label: string }> = {
+  'plaque-nfc-restaurant': { slug: 'restaurant', label: 'Plaque NFC pour restaurants' },
+  'plaque-nfc-salon-coiffure': { slug: 'salon-coiffure', label: 'Plaque NFC pour salons de coiffure' },
+  'plaque-nfc-cabinet-medical': { slug: 'cabinet-medical', label: 'Plaque NFC pour cabinets médicaux' },
+  'plaque-nfc-institut-beaute': { slug: 'salon-coiffure', label: 'Plaque NFC pour salons et instituts' },
+  'plaque-nfc-boulangerie': { slug: 'restaurant', label: 'Plaque NFC pour commerces de bouche' },
+  'plaque-nfc-garage-automobile': { slug: 'restaurant', label: 'Voir la plaque NFC en situation' },
+}
+
+export function secteurDeLArticle(slug: string) {
+  return SECTEUR_PAR_ARTICLE[slug] ?? null
+}

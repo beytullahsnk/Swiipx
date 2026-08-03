@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ClientLogos from '../../components/ClientLogos'
+import { faqSecteurs } from './faq'
 import Image from 'next/image'
 import { ArrowRight, Check, ChevronRight } from 'lucide-react'
 
@@ -25,6 +26,24 @@ interface SectorContent {
   /** Affiche le bloc logos clients pour ce secteur. */
   montrerClients?: boolean
   bestPlacements: string[]
+  /**
+   * Section « quel format ? ». Repond a une demande mesuree dans Search
+   * Console : « plaque nfc CARTE restaurant » (117 impressions/trimestre) et
+   * « MAGNET nfc restaurant » (33). Les gens cherchent le bon format avant de
+   * choisir. On repond honnetement — on ne vend que la plaque — plutot que de
+   * laisser la question sans reponse.
+   */
+  formats: {
+    intro: string
+    options: { nom: string; pour: string; limite: string }[]
+    conclusion: string
+  }
+  /**
+   * Section « fiche Google Business Profile ». Repond a
+   * « plaque nfc google my business » (34 impressions), et explique le
+   * mecanisme reel du produit — ce que la plupart des prospects ignorent.
+   */
+  googleBusiness: { paragraphes: string[] }
   recommendedPack: { slug: string; name: string; price: string; description: string }
   faq: { q: string; a: string }[]
   relatedBlogSlug: string
@@ -58,18 +77,30 @@ const sectors: Record<string, SectorContent> = {
       '📋 Sur le porte-addition (taux : 35-45 %)',
       '🚪 À la sortie (taux : 20-30 %)',
     ],
+    formats: {
+      intro: "Plaque, carte ou magnet : le support change tout, parce qu'il détermine si le client voit le message au bon moment. Voici ce que donne chacun en salle.",
+      options: [
+        { nom: 'La plaque', pour: "Reste posée sur une table, un comptoir ou un porte-addition. Le client la voit sans qu'un serveur ait à la lui tendre.", limite: "Il en faut une par emplacement à couvrir." },
+        { nom: 'La carte', pour: "Se glisse dans le porte-addition ou se remet en main propre.", limite: "Format souple : elle se plie, se tache avec le service, et finit par disparaître dans un tiroir." },
+        { nom: 'Le magnet', pour: "Se pose sur une surface métallique — frigo, hotte, meuble de caisse.", limite: "Suppose d'avoir du métal à hauteur de regard, ce qui est rare côté salle." },
+      ],
+      conclusion: "Swiipx ne fabrique que la plaque : acrylique 3 mm, adhésif 3M au dos, QR code de secours imprimé. C'est le format qui reste où on le pose et qui supporte le nettoyage quotidien d'une salle de restaurant.",
+    },
+    googleBusiness: {
+      paragraphes: [
+        "Une plaque NFC ne crée pas d'avis toute seule : elle ouvre le formulaire d'avis de votre fiche Google Business Profile. Sans fiche, il n'existe aucun lien vers lequel envoyer vos clients.",
+        "Chaque établissement référencé par Google possède un identifiant unique, le Place ID. C'est lui qui construit l'adresse du formulaire d'avis. Au moment de la commande, vous cherchez votre établissement dans le champ prévu : nous récupérons ce Place ID et programmons la puce avec le lien correspondant.",
+        "C'est pour cette raison que la plaque arrive prête à l'emploi. Aucune application à installer, aucun code à saisir : le lien est déjà dans la puce quand vous ouvrez le colis.",
+        "Deux conditions à vérifier avant de commander : votre fiche doit exister et être validée par Google. Si vous ne l'avez pas encore revendiquée, faites-le d'abord — c'est gratuit et cela prend quelques jours.",
+      ],
+    },
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
       price: '65,88 €',
       description: 'Le pack idéal pour un restaurant moyen : 1 plaque sur le porte-addition + 1 plaque à la caisse. Configuration incluse, livraison gratuite, garantie à vie.',
     },
-    faq: [
-      { q: 'Combien d\'avis Google peut collecter mon restaurant ?', a: 'En moyenne, les restaurants utilisateurs passent de 5-8 avis/mois à 25-40 avis/mois, soit une multiplication par 4-7. Les meilleurs résultats observés : 60 avis/mois sur des brasseries 80+ couverts.' },
-      { q: 'La plaque résiste-t-elle au nettoyage quotidien ?', a: 'Oui. L\'acrylique 3 mm résiste à l\'eau, aux désinfectants, aux UV et aux rayures. Vous pouvez la nettoyer comme une table normale.' },
-      { q: 'Faut-il former mes serveurs ?', a: 'Oui, c\'est crucial. Une plaque NFC sans communication verbale convertit 3-4 fois moins. Comptez 15-30 min de briefing pour expliquer le script aux serveurs.' },
-      { q: 'Quel pack pour un restaurant de 80 couverts ?', a: 'Pack Pro (5 plaques) : 1 plaque par groupe de 15-20 couverts. C\'est le ratio optimal pour ne pas créer de "bouchon" sur une seule plaque.' },
-    ],
+    faq: faqSecteurs['restaurant'],
     montrerClients: true,
     relatedBlogSlug: 'plaque-nfc-restaurant',
     relatedBlogLabel: 'Guide complet : plaque NFC restaurant',
@@ -100,18 +131,30 @@ const sectors: Record<string, SectorContent> = {
       '💳 À la caisse (25-35 %)',
       '🎁 Dans le sac de revente produit (15-25 %)',
     ],
+    formats: {
+      intro: "Plaque, carte ou magnet : dans un salon, le support doit tenir en place face au miroir et résister aux produits. Voici ce que vaut chacun.",
+      options: [
+        { nom: 'La plaque', pour: "Se fixe près du miroir, à hauteur de regard, et reste visible pendant toute la prestation.", limite: "Il en faut une par poste de coiffage à équiper." },
+        { nom: 'La carte', pour: "Se glisse dans le sac de revente ou se donne à l'encaissement.", limite: "La cliente la reçoit en partant, quand l'effet de la prestation est déjà retombé." },
+        { nom: 'Le magnet', pour: "Tient sur un bac à shampoing ou un meuble métallique.", limite: "Rarement placé dans le champ de vision de la cliente installée au fauteuil." },
+      ],
+      conclusion: "Swiipx ne fabrique que la plaque : acrylique 3 mm, adhésif 3M au dos, QR code de secours imprimé. Elle résiste aux laques, colorations et shampoings, et se nettoie au chiffon humide.",
+    },
+    googleBusiness: {
+      paragraphes: [
+        "Une plaque NFC ne crée pas d'avis toute seule : elle ouvre le formulaire d'avis de votre fiche Google Business Profile. Sans fiche, il n'existe aucun lien vers lequel envoyer vos clients.",
+        "Chaque établissement référencé par Google possède un identifiant unique, le Place ID. C'est lui qui construit l'adresse du formulaire d'avis. Au moment de la commande, vous cherchez votre établissement dans le champ prévu : nous récupérons ce Place ID et programmons la puce avec le lien correspondant.",
+        "C'est pour cette raison que la plaque arrive prête à l'emploi. Aucune application à installer, aucun code à saisir : le lien est déjà dans la puce quand vous ouvrez le colis.",
+        "Deux conditions à vérifier avant de commander : votre fiche doit exister et être validée par Google. Si vous ne l'avez pas encore revendiquée, faites-le d'abord — c'est gratuit et cela prend quelques jours.",
+      ],
+    },
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
       price: '65,88 €',
       description: 'Le pack le plus populaire chez les salons : 1 plaque sur le poste principal + 1 plaque à la caisse. Logo et nom de salon inclus.',
     },
-    faq: [
-      { q: 'Mes clientes seniors vont-elles savoir utiliser le NFC ?', a: 'Oui. Le NFC fonctionne avec tout smartphone récent. La cliente n\'a rien à comprendre : elle approche son téléphone, ça s\'ouvre automatiquement. Plus simple qu\'un QR code.' },
-      { q: 'La plaque résiste-t-elle aux produits capillaires ?', a: 'Oui. L\'acrylique 3 mm résiste à l\'eau, aux laques, colorations et shampoings. Nettoyage avec un chiffon humide ou un spray désinfectant.' },
-      { q: 'Quel pack pour un institut multi-cabines ?', a: 'Pack Pro (5 plaques) : 1 plaque par cabine + 1 à l\'accueil. Maximisation du taux d\'avis par tranche de clientèle.' },
-      { q: 'Combien d\'avis attendre par mois ?', a: 'En moyenne, multiplication par 5-10. Pour un salon avec 5 avis/mois actuellement, comptez 25-50 avis/mois avec une plaque NFC bien placée + script.' },
-    ],
+    faq: faqSecteurs['salon-coiffure'],
     relatedBlogSlug: 'plaque-nfc-salon-coiffure',
     relatedBlogLabel: 'Guide complet : plaque NFC salon de coiffure',
   },
@@ -141,18 +184,30 @@ const sectors: Record<string, SectorContent> = {
       '📋 Sur le bureau, en fin de consultation (20-30 %)',
       '🚪 À la sortie, sur le mur ou présentoir discret (15-25 %)',
     ],
+    formats: {
+      intro: "Plaque, carte ou magnet : en cabinet, le support doit rester discret et ne jamais donner l'impression de solliciter le patient. Voici ce que vaut chacun.",
+      options: [
+        { nom: 'La plaque', pour: "Se pose au comptoir d'accueil ou en salle d'attente. Le patient la remarque de lui-même, sans qu'on lui demande quoi que ce soit.", limite: "Il en faut une par point d'accueil." },
+        { nom: 'La carte', pour: "Se remet en main propre avec l'ordonnance ou la carte de rendez-vous.", limite: "Le geste de remise s'apparente à une sollicitation directe, ce que la déontologie déconseille." },
+        { nom: 'Le magnet', pour: "Tient sur un meuble métallique ou un tableau.", limite: "Peu de cabinets disposent d'une surface métallique bien placée." },
+      ],
+      conclusion: "Swiipx ne fabrique que la plaque : acrylique 3 mm, adhésif 3M au dos, QR code de secours imprimé. Format sobre, sans message commercial, qui laisse le patient libre de l'utiliser ou non.",
+    },
+    googleBusiness: {
+      paragraphes: [
+        "Une plaque NFC ne crée pas d'avis toute seule : elle ouvre le formulaire d'avis de votre fiche Google Business Profile. Sans fiche, il n'existe aucun lien vers lequel envoyer vos clients.",
+        "Chaque établissement référencé par Google possède un identifiant unique, le Place ID. C'est lui qui construit l'adresse du formulaire d'avis. Au moment de la commande, vous cherchez votre établissement dans le champ prévu : nous récupérons ce Place ID et programmons la puce avec le lien correspondant.",
+        "C'est pour cette raison que la plaque arrive prête à l'emploi. Aucune application à installer, aucun code à saisir : le lien est déjà dans la puce quand vous ouvrez le colis.",
+        "Deux conditions à vérifier avant de commander : votre fiche doit exister et être validée par Google. Si vous ne l'avez pas encore revendiquée, faites-le d'abord — c'est gratuit et cela prend quelques jours.",
+      ],
+    },
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
       price: '65,88 €',
       description: '2 plaques discrètes pour couvrir accueil + salle d\'attente. Design sobre, configuration personnalisée incluse.',
     },
-    faq: [
-      { q: 'Est-ce conforme à mon code de déontologie ?', a: 'Oui. La plaque est discrète, sans message commercial agressif, et le patient choisit librement de l\'utiliser. C\'est l\'équivalent d\'un panneau "votre avis nous intéresse" classique. Aucune contrepartie offerte, aucune incitation = conforme.' },
-      { q: 'Puis-je demander verbalement à mes patients ?', a: 'Évitez la sollicitation directe ("laissez-nous un avis"). Préférez une mention factuelle : "Nous avons mis une plaque à l\'accueil si vous souhaitez laisser un retour." Le patient décide.' },
-      { q: 'Quel pack pour un cabinet pluridisciplinaire ?', a: 'Pack Pro (5 plaques) : 1 par cabine de consultation + accueil. Adapté aux cabinets avec 3+ praticiens.' },
-      { q: 'Que faire d\'un avis négatif (RGPD, secret médical) ?', a: 'Répondez de manière générale ("Nous sommes désolés que votre expérience n\'ait pas été à la hauteur, contactez-nous à [email]") sans mentionner de détail médical. Si l\'avis viole le secret médical du patient, signalez-le à Google pour suppression.' },
-    ],
+    faq: faqSecteurs['cabinet-medical'],
     // Renvoyait vers un article generaliste alors qu'un guide dedie a la
     // deontologie medicale existe : c'est lui qui repond aux objections
     // specifiques de cette audience.
@@ -303,6 +358,47 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* Quel format ? — repond a « plaque nfc CARTE restaurant » (117
+            impressions/trimestre) et « MAGNET nfc restaurant » (33). Ces
+            requetes n'avaient aucune reponse sur le site. */}
+        <section>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Plaque, carte ou magnet&nbsp;: quel format choisir&nbsp;?
+          </h2>
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed">{sector.formats.intro}</p>
+          <div className="grid sm:grid-cols-3 gap-4 mb-6">
+            {sector.formats.options.map((o) => (
+              <div key={o.nom} className="bg-white border border-gray-200 rounded-xl p-5">
+                <h3 className="font-bold text-gray-900 mb-2">{o.nom}</h3>
+                <p className="text-sm text-gray-700 leading-relaxed mb-3">{o.pour}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  <span className="font-semibold text-gray-600">Limite&nbsp;: </span>
+                  {o.limite}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="text-base text-gray-700 leading-relaxed bg-blue-50 border border-blue-100 rounded-xl p-5">
+            {sector.formats.conclusion}
+          </p>
+        </section>
+
+        {/* Fiche Google Business Profile — repond a « plaque nfc google my
+            business » (34 impressions) et explique le mecanisme reel du
+            produit, que la plupart des prospects ignorent. */}
+        <section>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Le lien avec votre fiche Google Business Profile
+          </h2>
+          <div className="space-y-4">
+            {sector.googleBusiness.paragraphes.map((para, i) => (
+              <p key={i} className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                {para}
+              </p>
+            ))}
+          </div>
         </section>
 
         {/* Pack recommandé */}

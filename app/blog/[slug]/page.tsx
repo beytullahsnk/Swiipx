@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { articles } from './articles'
-import { getRelatedArticles } from './related'
+import { getRelatedArticles, secteurDeLArticle } from './related'
 import ArticleToc from './ArticleToc'
 import ArticleAds from './ArticleAds'
 
@@ -23,6 +23,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   }
 
   const filteredRelated = getRelatedArticles(params.slug)
+  const secteur = secteurDeLArticle(params.slug)
 
   return (
     <div className="min-h-screen bg-white">
@@ -171,6 +172,30 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 prose-img:rounded-2xl prose-img:shadow-lg"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
+
+            {/* Lien contextuel vers la page secteur.
+                Ces pages commerciales ne recevaient que des liens de pied de
+                page, que Google devalue. Un lien depuis le corps d'un article
+                de fond, sur le meme sujet, porte un signal bien plus fort. */}
+            {secteur && (
+              <div className="mt-12 rounded-2xl border border-blue-200 bg-blue-50 p-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
+                  Aller plus loin
+                </p>
+                <p className="text-gray-800 leading-relaxed mb-4">
+                  Cet article détaille la méthode. Pour voir le produit appliqué à votre
+                  activité — formats, emplacements, pack recommandé et lien avec votre fiche
+                  Google Business Profile —&nbsp;:
+                </p>
+                <Link
+                  href={`/secteur/${secteur.slug}`}
+                  className="inline-flex items-center gap-2 font-semibold text-primary hover:underline"
+                >
+                  {secteur.label}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            )}
 
             {/* Section Articles Connexes (visible sur tous les écrans) */}
             <div className="mt-16 pt-10 border-t-2 border-gray-100">
