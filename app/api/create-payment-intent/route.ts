@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { PACKS, type PackId } from '@/lib/pricing'
+import { PACKS, type PackId, OPTION_REMPLACEMENT } from '@/lib/pricing'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2023-10-16',
@@ -15,7 +15,7 @@ const SHIPPING_DOMICILE_CENTS = 490
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { items, shippingMethod } = body
+    const { items, shippingMethod, optionRemplacement } = body
 
     if (!items || !Array.isArray(items) || items.length === 0) {
       return NextResponse.json({ error: 'Panier vide ou invalide' }, { status: 400 })
@@ -37,6 +37,12 @@ export async function POST(request: NextRequest) {
     // Ajouter les frais de livraison à domicile
     if (shippingMethod === 'domicile') {
       totalCents += SHIPPING_DOMICILE_CENTS
+    }
+
+    // Option de remplacement (casse, perte, vol)
+    if (optionRemplacement) {
+      totalCents += OPTION_REMPLACEMENT.priceCents
+      itemDescriptions.push(OPTION_REMPLACEMENT.titre)
     }
 
     // Créer le PaymentIntent

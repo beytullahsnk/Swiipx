@@ -142,6 +142,29 @@ export function discountPercent(pack: Pack): number | null {
   return Math.round((1 - pack.priceCents / pack.formerPriceCents) * 100)
 }
 
+/**
+ * Option payante proposée au checkout.
+ *
+ * ⚠️ ELLE NE COUVRE PAS LA PUCE NFC. La garantie à vie sur la puce est déjà
+ * incluse gratuitement, annoncée sur tout le site et engagée dans les CGV
+ * (art. 6). L'inclure ici reviendrait à refacturer ce qui est offert — une
+ * contradiction visible par tout client qui lit les CGV.
+ *
+ * Ce que l'option apporte réellement, et que la garantie gratuite exclut :
+ * la casse, la perte et le vol, c'est-à-dire tout ce qui ne relève pas d'un
+ * défaut de fabrication.
+ *
+ * Montant en TTC (c'est ce que Stripe débite), soit 3,90 € HT.
+ */
+export const OPTION_REMPLACEMENT = {
+  id: 'remplacement' as const,
+  priceCents: 468, // 3,90 € HT
+  titre: 'Remplacement en cas de casse, perte ou vol',
+  detail:
+    "Plaque cassée, perdue ou volée ? On vous la remplace, déjà programmée avec le même lien d'avis.",
+  precision: 'La garantie à vie sur la puce NFC reste incluse gratuitement.',
+}
+
 /** Le prix le plus bas de la gamme, en centimes (2990). */
 export const LOWEST_PRICE_CENTS = Math.min(...PACK_LIST.map((p) => p.priceCents))
 

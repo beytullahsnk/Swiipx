@@ -124,7 +124,14 @@ export function buildMerchantAlertHtml(input: MerchantAlertInput): string {
     <h2 style="margin:0 0 8px;font-size:15px;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;display:inline-block">
       Articles
     </h2>
-    <ul style="margin:8px 0 20px;padding-left:18px;color:#374151;font-size:14px">${lignesArticles}</ul>
+    <ul style="margin:8px 0 12px;padding-left:18px;color:#374151;font-size:14px">${lignesArticles}</ul>
+
+    ${m.option_remplacement === 'oui'
+      ? `<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;margin:0 0 20px;color:#1e40af;font-size:14px">
+           <strong>Option souscrite&nbsp;:</strong> remplacement en cas de casse, perte ou vol.
+           A honorer si le client le demande.
+         </div>`
+      : ''}
 
     <p style="margin:0;padding-top:14px;border-top:1px solid #e5e7eb;color:#9ca3af;font-size:12px">
       Paiement Stripe&nbsp;: <a href="https://dashboard.stripe.com/payments/${echappe(paymentIntentId)}" style="color:#6b7280">${echappe(paymentIntentId)}</a>

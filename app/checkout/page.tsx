@@ -22,11 +22,12 @@ import {
   ChevronUp,
 } from 'lucide-react'
 import { useCart, formatPrice } from '../store/cart'
-import { TVA } from '@/lib/pricing'
+import { TVA, OPTION_REMPLACEMENT } from '@/lib/pricing'
 import { useCompanyStore } from '../store/company'
 import SendcloudScript from '../components/SendcloudScript'
 import BusinessAutocomplete, { BusinessInfo } from '../components/BusinessAutocomplete'
 import { useShippingStore, SHIPPING_DOMICILE_CENTS } from '../store/shipping'
+import { useOptionsStore } from '../store/options'
 import type { ServicePointData } from '../store/shipping'
 import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
@@ -41,12 +42,34 @@ interface OrderSummaryProps {
   items: { id: string; name: string; image?: string; priceCents: number; qty: number }[]
   subtotalCents: number
   shippingCents: number
+  /** Option de remplacement, 0 si non cochee. */
+  optionCents: number
   grandTotal: number
+}
+
+/**
+ * Ventile un total TTC en lignes HT qui s'additionnent EXACTEMENT.
+ *
+ * La livraison HT est deduite par difference plutot que calculee : sans cela,
+ * trois arrondis independants peuvent faire tomber la somme a un centime du
+ * total affiche, et un client qui verifie son recapitulatif ne comprend plus.
+ */
+function ventiler(subtotalCents: number, optionCents: number, grandTotal: number) {
+  const totalHt = Math.round(grandTotal / (1 + TVA))
+  const sousTotalHt = Math.round(subtotalCents / (1 + TVA))
+  const optionHt = Math.round(optionCents / (1 + TVA))
+  return {
+    sousTotalHt,
+    optionHt,
+    livraisonHt: totalHt - sousTotalHt - optionHt,
+    tva: grandTotal - totalHt,
+  }
 }
 
 // ─── Récapitulatif compact (mobile only — collapsible) ──────────────────────
 
-function OrderSummaryMobile({ items, subtotalCents, shippingCents, grandTotal }: OrderSummaryProps) {
+function OrderSummaryMobile({ items, subtotalCents, shippingCents, optionCents, grandTotal }: OrderSummaryProps) {
+  const v = ventiler(subtotalCents, optionCents, grandTotal)
   const [isOpen, setIsOpen] = useState(false)
   const { method: shippingMethod } = useShippingStore()
   const itemCount = items.reduce((sum, i) => sum + i.qty, 0)
@@ -99,19 +122,25 @@ function OrderSummaryMobile({ items, subtotalCents, shippingCents, grandTotal }:
           <div className="border-t border-gray-200 pt-3 space-y-2">
             <div className="flex justify-between text-sm text-gray-600">
               <span>Sous-total HT</span>
-              <span>{formatPrice(Math.round(subtotalCents / (1 + TVA)))}</span>
+              <span>{formatPrice(v.sousTotalHt)}</span>
             </div>
+            {optionCents > 0 && (
+              <div className="flex justify-between text-sm text-gray-600">
+                <span>Remplacement HT</span>
+                <span>{formatPrice(v.optionHt)}</span>
+              </div>
+            )}
             <div className="flex justify-between text-sm text-gray-600">
               <span>Livraison HT</span>
               {shippingMethod === 'point_relais' ? (
                 <span className="text-green-600 font-medium">Gratuite</span>
               ) : (
-                <span>{formatPrice(Math.round(grandTotal / (1 + TVA)) - Math.round(subtotalCents / (1 + TVA)))}</span>
+                <span>{formatPrice(v.livraisonHt)}</span>
               )}
             </div>
             <div className="flex justify-between text-sm text-gray-600">
               <span>TVA {Math.round(TVA * 100)} %</span>
-              <span>{formatPrice(grandTotal - Math.round(grandTotal / (1 + TVA)))}</span>
+              <span>{formatPrice(v.tva)}</span>
             </div>
             {/* Le montant debite est le TTC : on le met en avant et on
                 rappelle la TVA incluse juste en dessous. */}
@@ -128,7 +157,8 @@ function OrderSummaryMobile({ items, subtotalCents, shippingCents, grandTotal }:
 
 // ─── Récapitulatif sidebar (desktop only — sticky) ──────────────────────────
 
-function OrderSummarySidebar({ items, subtotalCents, shippingCents, grandTotal }: OrderSummaryProps) {
+function OrderSummarySidebar({ items, subtotalCents, shippingCents, optionCents, grandTotal }: OrderSummaryProps) {
+  const v = ventiler(subtotalCents, optionCents, grandTotal)
   const { method: shippingMethod } = useShippingStore()
   const { company } = useCompanyStore()
 
@@ -166,8 +196,14 @@ function OrderSummarySidebar({ items, subtotalCents, shippingCents, grandTotal }
               par difference pour qu'aucun arrondi ne casse l'addition. */}
           <div className="flex justify-between text-sm text-gray-600">
             <span>Sous-total HT</span>
-            <span className="font-medium">{formatPrice(Math.round(subtotalCents / (1 + TVA)))}</span>
+            <span className="font-medium">{formatPrice(v.sousTotalHt)}</span>
           </div>
+          {optionCents > 0 && (
+            <div className="flex justify-between text-sm text-gray-600">
+              <span>Remplacement HT</span>
+              <span className="font-medium">{formatPrice(v.optionHt)}</span>
+            </div>
+          )}
           <div className="flex justify-between text-sm text-gray-600">
             <span className="flex items-center space-x-1.5">
               <Truck className="w-3.5 h-3.5" />
@@ -176,14 +212,12 @@ function OrderSummarySidebar({ items, subtotalCents, shippingCents, grandTotal }
             {shippingMethod === 'point_relais' ? (
               <span className="font-medium text-green-600">Gratuite</span>
             ) : (
-              <span className="font-medium">
-                {formatPrice(Math.round(grandTotal / (1 + TVA)) - Math.round(subtotalCents / (1 + TVA)))}
-              </span>
+              <span className="font-medium">{formatPrice(v.livraisonHt)}</span>
             )}
           </div>
           <div className="flex justify-between text-sm text-gray-600">
             <span>TVA {Math.round(TVA * 100)} %</span>
-            <span className="font-medium">{formatPrice(grandTotal - Math.round(grandTotal / (1 + TVA)))}</span>
+            <span className="font-medium">{formatPrice(v.tva)}</span>
           </div>
           <div className="border-t border-gray-100 pt-3 mt-1">
             <div className="flex justify-between text-lg font-bold text-gray-900">
@@ -236,6 +270,9 @@ function ExpressCheckoutSection({
   const { items } = useCart()
   const { company } = useCompanyStore()
   const { method: shippingMethod, servicePoint } = useShippingStore()
+  // Apple Pay / Google Pay doivent debiter le meme montant que le formulaire
+  // carte : l'option cochee doit donc etre transmise ici aussi.
+  const { remplacement: optionRemplacement } = useOptionsStore()
   const [isAvailable, setIsAvailable] = useState(true)
 
   const hasBusinessSelected = !!(company && company.placeId)
@@ -271,6 +308,7 @@ function ExpressCheckoutSection({
           paymentIntentId,
           items: items.map((i) => ({ id: i.id, qty: i.qty })),
           shippingMethod,
+          optionRemplacement,
           servicePoint,
           business: company
             ? {
@@ -566,6 +604,7 @@ function CheckoutForm({
   totalCents: number
   expressAvailable: boolean
 }) {
+  const { remplacement: optionRemplacement, setRemplacement: setOptionRemplacement } = useOptionsStore()
   const stripe = useStripe()
   const elements = useElements()
   const router = useRouter()
@@ -631,6 +670,7 @@ function CheckoutForm({
           paymentIntentId,
           items: items.map((i) => ({ id: i.id, qty: i.qty })),
           shippingMethod,
+          optionRemplacement,
           servicePoint,
           customer: { email, name, phone },
           billingAddress: { name, line1: billingLine1, line2: billingLine2, city: billingCity, postalCode: billingPostalCode, country: billingCountry },
@@ -945,6 +985,38 @@ function CheckoutForm({
             )}
           </div>
 
+          {/* Option payante — placee juste avant le paiement, une fois la
+              livraison choisie : le client connait alors son total. */}
+          <div className="p-5 sm:p-6">
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <input
+                type="checkbox"
+                checked={optionRemplacement}
+                onChange={(e) => setOptionRemplacement(e.target.checked)}
+                className="mt-0.5 w-5 h-5 rounded border-gray-300 text-primary focus:ring-2 focus:ring-primary/30 focus:ring-offset-0 focus:outline-none flex-shrink-0"
+              />
+              <span className="min-w-0">
+                <span className="flex flex-wrap items-baseline gap-x-2">
+                  <span className="text-sm font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                    {OPTION_REMPLACEMENT.titre}
+                  </span>
+                  <span className="text-sm font-bold text-primary whitespace-nowrap">
+                    + {formatPrice(Math.round(OPTION_REMPLACEMENT.priceCents / (1 + TVA)))} HT
+                  </span>
+                </span>
+                <span className="block text-sm text-gray-600 mt-1 leading-relaxed">
+                  {OPTION_REMPLACEMENT.detail}
+                </span>
+                {/* Precision indispensable : la garantie sur la puce est deja
+                    incluse gratuitement et engagee dans les CGV. Sans cette
+                    ligne, l'option donnerait l'impression de la refacturer. */}
+                <span className="block text-xs text-gray-500 mt-1">
+                  {OPTION_REMPLACEMENT.precision}
+                </span>
+              </span>
+            </label>
+          </div>
+
           {/* Paiement — section finale, accent visuel */}
           <div className="p-5 sm:p-6 border-l-4 border-l-primary bg-gradient-to-b from-blue-50/30 to-transparent">
             <h2 className="text-base font-semibold text-gray-900 mb-3">Paiement</h2>
@@ -1006,6 +1078,7 @@ export default function CheckoutPage() {
   const { items, totalCents, hasHydrated } = useCart()
   const { company } = useCompanyStore()
   const { method: shippingMethod } = useShippingStore()
+  const { remplacement: optionRemplacement } = useOptionsStore()
 
   const [clientSecret, setClientSecret] = useState<string | null>(null)
   const [paymentIntentId, setPaymentIntentId] = useState<string | null>(null)
@@ -1013,7 +1086,8 @@ export default function CheckoutPage() {
   const [expressAvailable, setExpressAvailable] = useState(false)
 
   const shippingCents = shippingMethod === 'domicile' ? SHIPPING_DOMICILE_CENTS : 0
-  const grandTotal = totalCents() + shippingCents
+  const optionCents = optionRemplacement ? OPTION_REMPLACEMENT.priceCents : 0
+  const grandTotal = totalCents() + shippingCents + optionCents
 
   // Créer le PaymentIntent au chargement
   useEffect(() => {
@@ -1027,6 +1101,7 @@ export default function CheckoutPage() {
           body: JSON.stringify({
             items: items.map((i) => ({ id: i.id, qty: i.qty })),
             shippingMethod,
+            optionRemplacement,
           }),
         })
         const data = await res.json()
@@ -1095,6 +1170,7 @@ export default function CheckoutPage() {
   const summaryProps: OrderSummaryProps = {
     items,
     subtotalCents: totalCents(),
+    optionCents,
     shippingCents,
     grandTotal,
   }

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { PACKS, type PackId } from '@/lib/pricing'
+import { PACKS, type PackId, OPTION_REMPLACEMENT } from '@/lib/pricing'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2023-10-16',
@@ -24,6 +24,7 @@ export async function POST(request: NextRequest) {
       billingAddress,
       shippingAddress,
       business,
+      optionRemplacement,
     } = body
 
     if (!paymentIntentId) {
@@ -41,11 +42,17 @@ export async function POST(request: NextRequest) {
     if (shippingMethod === 'domicile') {
       totalCents += SHIPPING_DOMICILE_CENTS
     }
+    if (optionRemplacement) {
+      totalCents += OPTION_REMPLACEMENT.priceCents
+    }
 
     // Construire les metadata
     const metadata: Record<string, string> = {
       shipping_method: shippingMethod || 'point_relais',
       items: JSON.stringify((items || []).map((i: any) => ({ id: i.id, qty: i.qty }))),
+      // Le marchand doit savoir si l'option a ete souscrite pour honorer le
+      // remplacement en cas de casse, perte ou vol.
+      option_remplacement: optionRemplacement ? 'oui' : 'non',
     }
 
     // Customer info
