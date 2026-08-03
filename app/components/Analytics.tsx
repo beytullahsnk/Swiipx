@@ -12,8 +12,19 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
  *
  * GA4 et Clarity ne se chargent QUE si leur identifiant est présent en variable
  * d'environnement — le site fonctionne normalement sans eux.
+ *
+ * RIEN N'EST CHARGÉ EN DÉVELOPPEMENT. Les identifiants figurent dans
+ * .env.local, donc chaque session sur localhost partait dans les statistiques
+ * de production. Constaté : sur 68 sessions Clarity relevées, 35 provenaient du
+ * navigateur de développement, et les erreurs JavaScript remontées étaient
+ * celles rencontrées en local avant correction — jamais vues par un visiteur.
+ * Sur un site à faible trafic, ce bruit rend les chiffres inexploitables.
  */
 export default function Analytics() {
+  // En dev, on ne mesure rien : les sessions de travail fausseraient les
+  // statistiques de production.
+  if (process.env.NODE_ENV !== 'production') return null
+
   const gaId = process.env.NEXT_PUBLIC_GA_ID
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID
