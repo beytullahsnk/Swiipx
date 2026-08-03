@@ -13,10 +13,24 @@ interface Video {
 }
 
 /**
- * Les fichiers sources sont carrés (720x720), avec le sujet cadré au centre.
- * Le conteneur est donc `aspect-square` : dans un cadre 9/16, `object-cover`
- * rognait 43,8 % de la largeur et coupait la plaque en deux — on perdait le
- * message « LAISSEZ-NOUS VOTRE AVIS », la moitié du QR code et le filigrane.
+ * CADRAGE : 9/16, le format mobile natif des sources.
+ *
+ * ATTENTION AU PIÈGE : ces MP4 ont une trame CODÉE de 720x720 mais des pixels
+ * non carrés. Leur dimension d'AFFICHAGE réelle est 720x1280, soit du 9/16 —
+ * c'est ce que rapporte `video.videoWidth/videoHeight` dans le navigateur, et
+ * c'est ce qui fait foi.
+ *
+ * Les outils qui lisent la trame codée sans tenir compte du rapport de pixels
+ * (OpenCV, entre autres) annoncent 720x720 et donnent une image écrasée
+ * verticalement. Se fier à eux conduit à choisir un cadrage carré, et donc à
+ * déformer la vidéo à l'écran.
+ *
+ * Le conteneur étant en 9/16 comme la source, `object-cover` ne rogne
+ * strictement rien : l'image s'inscrit exactement.
+ *
+ * Les vignettes de `public/*-poster.jpg` sont générées en 720x1280 pour la
+ * même raison — extraites en 720x720, elles apparaissaient écrasées avant que
+ * la vidéo ne se charge.
  */
 const videos: Video[] = [
   {
@@ -97,7 +111,7 @@ export default function VideoShowcase() {
               {videos.map((video) => (
                 <div
                   key={video.src}
-                  className="relative shrink-0 w-[calc(50%-0.375rem)] aspect-square bg-gray-100 rounded-2xl overflow-hidden shadow-lg snap-start"
+                  className="relative shrink-0 w-[calc(50%-0.375rem)] aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden shadow-lg snap-start"
                 >
                   <video
                     src={video.src}
@@ -119,7 +133,7 @@ export default function VideoShowcase() {
             {videos.map((video) => (
               <div
                 key={video.src}
-                className="relative aspect-square bg-gray-100 rounded-2xl overflow-hidden shadow-lg"
+                className="relative aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden shadow-lg"
               >
                 <video
                   src={video.src}
