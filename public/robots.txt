@@ -34,4 +34,27 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+# OAI-SearchBot : le crawler de ChatGPT Search, DISTINCT de GPTBot.
+# GPTBot sert a l'entrainement des modeles ; OAI-SearchBot est celui qui
+# decide si le site peut etre cite dans une reponse ChatGPT. Sans cette
+# ligne, on depend de la regle generique et rien ne garantit l'inclusion.
+User-agent: OAI-SearchBot
+Allow: /
+
+# Copilot / Bing Chat.
+User-agent: Bingbot
+Allow: /
+
+# Assistant Meta (WhatsApp, Instagram).
+User-agent: meta-externalagent
+Allow: /
+
+# Assistant Amazon.
+User-agent: Amazonbot
+Allow: /
+
+# Moteur de recherche IA de Mistral.
+User-agent: MistralAI-User
+Allow: /
+
 Sitemap: https://swiipx.fr/sitemap.xml
