@@ -28,28 +28,31 @@ interface Video {
  * Le conteneur étant en 9/16 comme la source, `object-cover` ne rogne
  * strictement rien : l'image s'inscrit exactement.
  *
- * Les vignettes de `public/*-poster.jpg` sont générées en 720x1280 pour la
+ * Les vignettes de `public/*-poster-v2.jpg` sont générées en 720x1280 pour la
  * même raison — extraites en 720x720, elles apparaissaient écrasées avant que
  * la vidéo ne se charge.
  */
 const videos: Video[] = [
   {
     src: '/ugc1swiipx.mp4',
-    poster: '/ugc1swiipx-poster.jpg',
+    // Suffixe -v2 : l'ancienne URL est figee dans les navigateurs par un
+    // en-tete `immutable` d'un an. Changer le nom est le seul moyen de leur
+    // faire recharger la vignette corrigee.
+    poster: '/ugc1swiipx-poster-v2.jpg',
     name: 'La plaque NFC Swiipx présentée en situation',
     description:
       "Présentation de la plaque avis Google Swiipx : le client approche son téléphone de la plaque et accède directement au formulaire d'avis Google.",
   },
   {
     src: '/ugc2swiipx.mp4',
-    poster: '/ugc2swiipx-poster.jpg',
+    poster: '/ugc2swiipx-poster-v2.jpg',
     name: 'Comment fonctionne la plaque avis Google NFC',
     description:
       "Démonstration du fonctionnement de la plaque NFC Swiipx : aucune application à installer, la redirection vers la fiche Google est immédiate.",
   },
   {
     src: '/ugc3swiipx.mp4',
-    poster: '/ugc3swiipx-poster.jpg',
+    poster: '/ugc3swiipx-poster-v2.jpg',
     name: 'Collecter des avis Google en 10 secondes',
     description:
       "La plaque NFC Swiipx en usage courant dans un commerce : le parcours complet, de l'approche du téléphone à la rédaction de l'avis.",
