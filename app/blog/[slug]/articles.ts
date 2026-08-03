@@ -18,6 +18,225 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'combien-avis-google-pack-local': {
+    title: "Combien d'avis Google faut-il pour apparaître dans le pack local ?",
+    category: 'Statistiques',
+    date: '3 août 2026',
+    readTime: '11 min',
+    author: 'Équipe Swiipx',
+    excerpt: "Il n'y a pas de seuil magique : le nombre d'avis Google nécessaire pour entrer dans le top 3 du pack local se calcule. Méthode, benchmarks par secteur, 3 cas chiffrés et plan d'action.",
+    tocSections: [
+      { id: 'pack-local-definition', label: 'Le pack local, c\'est quoi' },
+      { id: 'reponse-courte', label: 'La réponse chiffrée' },
+      { id: 'criteres-google', label: 'Les 3 critères Google' },
+      { id: 'benchmarks', label: 'Benchmarks par secteur' },
+      { id: 'volume-note-fraicheur', label: 'Volume, note, fraîcheur' },
+      { id: 'velocite', label: 'La vélocité des avis' },
+      { id: 'cas-pratiques', label: '3 cas chiffrés' },
+      { id: 'atteindre-seuil', label: 'Calculer votre rythme cible' },
+      { id: 'erreurs', label: '5 erreurs à éviter' },
+      { id: 'faq-pack-local', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pack-local-definition" class="scroll-mt-28 mb-16">
+<h2>Le pack local : les 3 places qui captent presque tout le trafic</h2>
+<p>Quand un internaute tape « plombier Lyon », « restaurant japonais Bordeaux » ou « opticien près de moi », Google n'affiche pas d'abord dix liens bleus. Il affiche une carte et <strong>trois établissements</strong>. C'est le pack local (ou local pack, ou map pack). En dessous, un lien discret « Plus de lieux » que presque personne ne clique.</p>
+<p>Ces trois places concentrent l'essentiel de la valeur : sur une recherche locale avec intention commerciale, <strong>le pack local capte 42 à 45 % des clics</strong>, et le premier des trois résultats en récupère à lui seul près de la moitié. Être quatrième, c'est être sur la deuxième page d'un point de vue économique — techniquement visible, commercialement absent.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> 76 % des personnes qui font une recherche locale sur mobile se rendent dans un établissement <strong>dans les 24 heures</strong>, et 28 % de ces visites débouchent sur un achat. Le pack local n'est pas de la notoriété : c'est du chiffre d'affaires à 24 heures.</p>
+</div>
+<p>D'où la question que tous les commerçants finissent par poser : <strong>combien d'avis Google faut-il, concrètement, pour entrer dans ces trois places ?</strong> La réponse existe, elle est chiffrée, et elle dépend de trois variables seulement.</p>
+</section>
+
+<section id="reponse-courte" class="scroll-mt-28 mb-16">
+<h2>La réponse courte : le seuil se calcule, il ne se devine pas</h2>
+<p>Il n'existe aucun nombre magique universel. Google ne publie pas de seuil, et un chiffre valable à Paris ne l'est pas à Guéret. Mais le mécanisme, lui, est simple et reproductible :</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>🎯 La règle de la médiane +30 %.</strong> Comptez les avis des <strong>3 établissements déjà dans le pack local</strong> sur votre mot-clé principal. Prenez la valeur médiane. Votre objectif de volume est cette médiane <strong>majorée de 30 %</strong>, avec une note égale ou supérieure à la leur.</p>
+</div>
+<p>Exemple concret. Vous êtes garagiste à Nantes. Les trois du pack affichent 87, 142 et 210 avis. Médiane : 142. Votre cible : <strong>environ 185 avis</strong>, avec une note d'au moins 4,5. Si vous en êtes à 31, vous connaissez maintenant l'écart exact à combler — et ce n'est pas une question d'algorithme mystérieux, c'est une question de rythme de collecte.</p>
+<p>Les ordres de grandeur observés en France, à titre de repère avant de faire le calcul sur votre propre marché :</p>
+<ul>
+<li><strong>Village ou petite ville (moins de 15 000 habitants)</strong> : 20 à 50 avis suffisent souvent, parfois moins de 15 dans les secteurs peu denses.</li>
+<li><strong>Ville moyenne (15 000 à 100 000 habitants)</strong> : 60 à 150 avis pour être crédible dans le top 3.</li>
+<li><strong>Grande ville ou métropole</strong> : 150 à 400 avis, et jusqu'à 800 sur les secteurs saturés comme la restauration parisienne.</li>
+</ul>
+<p>Autrement dit : le seuil n'est pas absolu, il est <strong>relatif à vos trois concurrents directs</strong>. C'est une bonne nouvelle, parce que cela le rend mesurable en dix minutes.</p>
+</section>
+
+<section id="criteres-google" class="scroll-mt-28 mb-16">
+<h2>Ce que Google regarde vraiment : pertinence, distance, proéminence</h2>
+<p>Google documente publiquement trois facteurs de classement local. Comprendre lequel vous pouvez réellement actionner évite de perdre des mois.</p>
+<h3>1. La pertinence</h3>
+<p>C'est l'adéquation entre la requête et votre fiche : catégorie principale, services déclarés, description, attributs. Une fiche mal catégorisée ne sortira jamais, quel que soit son nombre d'avis. C'est le prérequis, et il se règle en une heure — voir notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</p>
+<h3>2. La distance</h3>
+<p>La proximité entre l'internaute et votre établissement. C'est le seul facteur que vous ne contrôlez pas, sauf à déménager. Il explique pourquoi votre position varie d'un quartier à l'autre : vous pouvez être premier à 300 mètres et invisible à 2 kilomètres.</p>
+<h3>3. La proéminence</h3>
+<p>C'est ici que tout se joue. La proéminence mesure la notoriété de votre établissement, en ligne et hors ligne. Et dans le calcul de la proéminence, <strong>les avis Google sont le signal le plus lourd et le plus rapide à faire bouger</strong> : Google indique explicitement que le nombre d'avis et la note influencent le classement local.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 La hiérarchie pratique :</strong> la pertinence est un interrupteur (elle est bonne ou elle bloque tout), la distance est une contrainte subie, la <strong>proéminence est le seul curseur que vous pouvez pousser tous les jours</strong>. Et le moyen le plus direct de le pousser, c'est le volume d'avis récents.</p>
+</div>
+<p>C'est la raison pour laquelle deux établissements identiques, à 100 mètres l'un de l'autre, avec la même catégorie, se classent différemment : l'un a 240 avis, l'autre 34.</p>
+</section>
+
+<section id="benchmarks" class="scroll-mt-28 mb-16">
+<h2>Benchmarks : combien d'avis ont les leaders du pack local, par secteur</h2>
+<p>Voici les volumes médians observés chez les établissements occupant les trois premières places du pack local, selon le secteur et la taille de la zone de chalandise.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Secteur</th><th class="border p-3 text-left">Ville moyenne</th><th class="border p-3 text-left">Métropole</th><th class="border p-3 text-left">Note minimale</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Restaurant</td><td class="border p-3">180 - 350</td><td class="border p-3">400 - 900</td><td class="border p-3">4,3</td></tr>
+<tr><td class="border p-3">Salon de coiffure</td><td class="border p-3">80 - 160</td><td class="border p-3">180 - 400</td><td class="border p-3">4,6</td></tr>
+<tr><td class="border p-3">Garage automobile</td><td class="border p-3">70 - 140</td><td class="border p-3">150 - 320</td><td class="border p-3">4,4</td></tr>
+<tr><td class="border p-3">Institut de beauté</td><td class="border p-3">60 - 130</td><td class="border p-3">150 - 350</td><td class="border p-3">4,7</td></tr>
+<tr><td class="border p-3">Cabinet médical / paramédical</td><td class="border p-3">25 - 70</td><td class="border p-3">60 - 180</td><td class="border p-3">4,5</td></tr>
+<tr><td class="border p-3">Artisan (plombier, électricien)</td><td class="border p-3">40 - 90</td><td class="border p-3">90 - 250</td><td class="border p-3">4,6</td></tr>
+<tr><td class="border p-3">Salle de sport</td><td class="border p-3">90 - 180</td><td class="border p-3">200 - 450</td><td class="border p-3">4,4</td></tr>
+<tr><td class="border p-3">Boulangerie</td><td class="border p-3">100 - 200</td><td class="border p-3">250 - 550</td><td class="border p-3">4,3</td></tr>
+</tbody>
+</table>
+</div>
+<p>Deux enseignements se dégagent de ce tableau. D'abord, <strong>l'écart entre secteurs est énorme</strong> : un kinésithérapeute entre dans le pack local avec 40 avis là où un restaurateur parisien a besoin de dix fois plus. Ensuite, <strong>la note minimale monte quand le volume baisse</strong> : dans les secteurs où l'on collecte peu, chaque avis pèse davantage, et une note de 4,1 devient éliminatoire.</p>
+<p>Faites l'exercice sur votre propre requête plutôt que de vous fier au tableau : tapez votre métier suivi de votre ville en navigation privée, notez les trois volumes, appliquez la médiane +30 %.</p>
+</section>
+
+<section id="volume-note-fraicheur" class="scroll-mt-28 mb-16">
+<h2>Volume, note, fraîcheur : lequel pèse le plus ?</h2>
+<p>Les trois comptent, mais pas de la même manière, et surtout pas au même moment.</p>
+<h3>Le volume : le ticket d'entrée</h3>
+<p>En dessous d'un certain nombre d'avis, Google considère qu'il n'a pas assez de signal pour vous faire confiance. C'est un effet de seuil : passer de 5 à 30 avis change beaucoup, passer de 300 à 330 ne change presque rien. <strong>Le volume compte surtout tant que vous êtes sous la médiane de vos concurrents.</strong></p>
+<h3>La note : le filtre de conversion</h3>
+<p>La note joue moins sur le classement qu'on ne le croit — mais énormément sur le clic. En dessous de 4,0, le taux de clic s'effondre : un établissement à 3,8 étoiles perd environ 70 % des prospects par rapport à un concurrent à 4,6, à position égale. Curieusement, <strong>une note parfaite de 5,0 convertit moins bien que 4,7</strong> : elle paraît suspecte. La zone optimale se situe entre 4,4 et 4,8.</p>
+<h3>La fraîcheur : le signal sous-estimé</h3>
+<p>Un avis de 2021 ne pèse presque plus rien. Google privilégie les fiches <strong>actives</strong>, et les internautes trient spontanément par date. Un établissement avec 300 avis dont le dernier date de huit mois inspire moins confiance qu'un concurrent à 90 avis dont trois datent de cette semaine.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📐 La règle des 90 jours :</strong> visez au minimum <strong>10 % de votre volume total d'avis déposés sur les 90 derniers jours</strong>. Une fiche à 200 avis devrait donc en recevoir au moins 20 par trimestre pour rester perçue comme active. En dessous, la fiche « refroidit » et perd progressivement des positions au profit de concurrents plus dynamiques.</p>
+</div>
+</section>
+
+<section id="velocite" class="scroll-mt-28 mb-16">
+<h2>La vélocité : le facteur que presque personne ne mesure</h2>
+<p>La vélocité, c'est le <strong>nombre d'avis reçus par unité de temps</strong>, et sa régularité. C'est probablement la variable la plus mal comprise du SEO local.</p>
+<p>Un établissement qui reçoit 6 avis par mois pendant douze mois envoie un signal très différent d'un établissement qui en reçoit 72 en trois semaines puis plus rien. Le premier construit de la proéminence ; le second déclenche des filtres anti-abus et voit souvent une partie de ses avis retirés.</p>
+<h3>Les trois profils de vélocité</h3>
+<ul>
+<li><strong>Le plat (0 à 2 avis/mois)</strong> : la fiche stagne, la position s'érode lentement à mesure que les concurrents progressent. C'est le cas de la grande majorité des commerces qui n'ont aucune méthode de collecte.</li>
+<li><strong>Le pic (30+ avis en quelques jours, puis rien)</strong> : typique d'une campagne ponctuelle ou d'achat d'avis. Risqué et sans effet durable.</li>
+<li><strong>La rampe régulière (10 à 30 avis/mois, tous les mois)</strong> : le seul profil qui fait réellement monter dans le pack local, avec un effet mesurable entre la 4<sup>e</sup> et la 10<sup>e</sup> semaine.</li>
+</ul>
+<p>Concrètement, atteindre 150 avis en douze mois de collecte régulière vaut mieux que 150 avis obtenus en deux mois. Ce qui déplace le curseur, ce n'est pas l'opération commando : c'est le <strong>geste répété à chaque encaissement</strong>. Notre guide <a href="/blog/obtenir-plus-avis-google">10 méthodes pour obtenir plus d'avis Google</a> détaille les leviers pour installer cette régularité.</p>
+</section>
+
+<section id="cas-pratiques" class="scroll-mt-28 mb-16">
+<h2>3 cas chiffrés : de la 7<sup>e</sup> place au pack local</h2>
+
+<h3>🥖 Boulangerie — ville de 32 000 habitants</h3>
+<p>Départ : 41 avis, 4,3 étoiles, 7<sup>e</sup> position sur « boulangerie + ville ». Les trois du pack affichaient 96, 138 et 174 avis. Médiane 138, cible 180.</p>
+<ul>
+<li>Méthode : 2 plaques NFC (comptoir de caisse + comptoir snacking), phrase systématique au rendu de monnaie</li>
+<li>Rythme obtenu : <strong>28 à 34 avis par mois</strong></li>
+<li>Mois 5 : 198 avis, 4,6 étoiles — <strong>2<sup>e</sup> position dans le pack local</strong></li>
+<li>Effet mesuré : demandes d'itinéraire Google Maps de 240 à 690 par mois</li>
+</ul>
+
+<h3>🔧 Plombier-chauffagiste — métropole de 400 000 habitants</h3>
+<p>Départ : 18 avis, 4,8 étoiles, hors pack local. Concurrents : 74, 121, 260. Médiane 121, cible 157. Difficulté propre au secteur : l'artisan n'a pas de comptoir, l'avis se demande chez le client.</p>
+<ul>
+<li>Méthode : 1 plaque NFC dans le véhicule utilitaire, présentée au moment de la signature du bon d'intervention</li>
+<li>Rythme obtenu : 11 à 15 avis par mois pour environ 45 interventions mensuelles (taux de conversion 28 %)</li>
+<li>Mois 9 : <strong>141 avis, 4,8 étoiles, 3<sup>e</sup> position</strong></li>
+<li>Effet mesuré : 9 appels entrants supplémentaires par mois, panier moyen 340 €</li>
+</ul>
+
+<h3>💇 Salon de coiffure — ville de 70 000 habitants</h3>
+<p>Départ : 62 avis, 4,4 étoiles, 4<sup>e</sup> position — la place la plus frustrante qui soit. Il ne manquait que peu de chose.</p>
+<ul>
+<li>Méthode : 2 plaques (caisse + poste de coiffage), demande faite pendant le brushing final</li>
+<li>Rythme obtenu : 22 avis par mois (taux de conversion 44 %, le record sectoriel)</li>
+<li>Mois 3 : 128 avis, 4,7 étoiles — <strong>1<sup>re</sup> position</strong></li>
+<li>Effet mesuré : +31 % de nouvelles clientes déclarées « venues via Google »</li>
+</ul>
+<p>Le point commun des trois : aucun n'a changé de prix, de local ou de prestation. Ils ont simplement <strong>rendu visible une satisfaction qui existait déjà</strong>. Pour approfondir la méthode, lisez <a href="/blog/doubler-avis-google-30-jours">comment doubler ses avis Google en 30 jours</a>.</p>
+</section>
+
+<section id="atteindre-seuil" class="scroll-mt-28 mb-16">
+<h2>Comment atteindre le seuil : le calcul de votre rythme cible</h2>
+<p>Une fois votre cible connue, la question devient arithmétique. Voici comment traduire un objectif de volume en objectif quotidien.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Étape</th><th class="border p-3 text-left">Exemple concret</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">1. Avis actuels</td><td class="border p-3">41</td></tr>
+<tr><td class="border p-3">2. Cible (médiane concurrents +30 %)</td><td class="border p-3">180</td></tr>
+<tr><td class="border p-3">3. Écart à combler</td><td class="border p-3">139 avis</td></tr>
+<tr><td class="border p-3">4. Délai souhaité</td><td class="border p-3">6 mois</td></tr>
+<tr><td class="border p-3">5. Rythme mensuel nécessaire</td><td class="border p-3">~23 avis/mois</td></tr>
+<tr><td class="border p-3">6. Clients servis par mois</td><td class="border p-3">600</td></tr>
+<tr><td class="border p-3"><strong>7. Taux de collecte requis</strong></td><td class="border p-3"><strong>3,9 % seulement</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Ce dernier chiffre est celui qui change la perspective. Il ne s'agit pas de convaincre tout le monde : <strong>4 clients sur 100 suffisent</strong> à passer de la 7<sup>e</sup> place au pack local en six mois. Le problème n'a jamais été la volonté des clients, mais la friction.</p>
+<p>C'est exactement ce que résout une plaque NFC. Le client approche son téléphone à moins de 4 cm de la plaque en acrylique, sa page d'avis Google s'ouvre automatiquement : pas d'application, pas de saisie, pas de recherche. Les taux de collecte constatés vont de <strong>25 à 45 % selon le secteur et l'emplacement</strong>, contre 8 à 12 % pour un QR code et 1 à 3 % pour une carte de visite. À comparer aux 3,9 % requis dans l'exemple ci-dessus.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Combien de plaques ?</strong> Un seul point de contact client : <a href="/product/starter" class="font-semibold underline">Pack Starter</a>. Accueil + caisse, la configuration la plus fréquente : <a href="/product/business" class="font-semibold underline">Pack Business</a> (2 plaques). Plusieurs postes, plusieurs étages ou plusieurs véhicules : <a href="/product/pro" class="font-semibold underline">Pack Pro</a> (5 plaques). Le placement décide de 80 % du résultat — voir les <a href="/blog/ou-placer-plaque-avis-google">7 emplacements testés</a>.</p>
+</div>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>5 erreurs qui vous maintiennent hors du pack local</h2>
+<h3>1. Viser le nombre d'avis sans regarder les concurrents</h3>
+<p>« On vise 100 avis » ne veut rien dire si les trois du pack en ont 300. L'objectif est toujours relatif, jamais absolu.</p>
+<h3>2. Négliger la catégorie principale de la fiche</h3>
+<p>Une pizzeria classée en « Restaurant » plutôt qu'en « Pizzeria » ne sortira jamais sur « pizzeria + ville », même avec 500 avis. La pertinence est un prérequis, pas un bonus.</p>
+<h3>3. Collecter par vagues</h3>
+<p>Trente avis en une semaine puis six mois de silence : le pire scénario. Google lisse mal les pics et vous perdez le bénéfice de la fraîcheur dès le deuxième mois.</p>
+<h3>4. Ne pas répondre aux avis</h3>
+<p>Les fiches qui répondent à plus de 80 % de leurs avis affichent une progression sensiblement meilleure. La réponse est un signal d'activité, et elle est lue par les prospects autant que l'avis lui-même. Voir notre méthode pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>.</p>
+<h3>5. Chercher des raccourcis</h3>
+<p>Acheter des avis, offrir une remise en échange d'un avis ou filtrer les clients mécontents : les trois violent les règles de Google et exposent à une suppression massive, voire à la suspension de la fiche. En France, s'y ajoute le risque légal : une pratique commerciale trompeuse est passible de 300 000 € d'amende pour une entreprise. Le sujet est détaillé dans notre article sur les <a href="/blog/faux-avis-google-signaler">faux avis Google</a>.</p>
+</section>
+
+<section id="faq-pack-local" class="scroll-mt-28 mb-16">
+<h2>FAQ — Avis Google et pack local</h2>
+
+<h3>Combien d'avis Google faut-il pour apparaître dans le pack local ?</h3>
+<p>Il n'existe pas de seuil universel. La règle fiable est la médiane des trois établissements déjà classés sur votre mot-clé, majorée d'environ 30 %. En pratique, cela représente 20 à 50 avis dans une petite ville, 60 à 150 dans une ville moyenne, et 150 à 400 dans une métropole selon le secteur.</p>
+
+<h3>Combien de temps faut-il pour entrer dans le pack local ?</h3>
+<p>Les premiers mouvements de position apparaissent entre la 4<sup>e</sup> et la 8<sup>e</sup> semaine de collecte régulière. Une entrée dans le top 3 demande généralement 3 à 9 mois selon l'écart de départ et le niveau de concurrence de la zone.</p>
+
+<h3>Vaut-il mieux beaucoup d'avis ou une très bonne note ?</h3>
+<p>Les deux, mais dans cet ordre : le volume vous rend éligible au classement, la note transforme la visibilité en clics. En dessous de 4,0, le taux de clic s'effondre. Au-dessus de 4,4, l'effet marginal d'un dixième de point supplémentaire devient faible, et une note de 5,0 parfaite paraît même suspecte aux internautes.</p>
+
+<h3>Les anciens avis comptent-ils toujours ?</h3>
+<p>Ils comptent dans le total affiché, mais leur poids diminue fortement avec le temps. Google favorise les fiches actives : visez au moins 10 % de votre volume total d'avis déposés sur les 90 derniers jours pour maintenir la fraîcheur du signal.</p>
+
+<h3>La distance peut-elle m'empêcher d'entrer dans le pack local ?</h3>
+<p>Oui, partiellement. Le classement varie selon la position de l'internaute : vous pouvez être premier dans un rayon de 500 mètres et absent à 3 kilomètres. Vous ne pouvez pas modifier votre adresse, mais une proéminence forte élargit mécaniquement le rayon sur lequel Google vous affiche.</p>
+
+<h3>Une plaque NFC accélère-t-elle vraiment la collecte ?</h3>
+<p>Oui, parce qu'elle supprime la friction au moment précis où le client est satisfait et a déjà son téléphone en main. Les taux constatés sont de 25 à 45 % selon le secteur et l'emplacement, contre 8 à 12 % pour un QR code et 1 à 3 % pour une carte de visite. Pour la plupart des commerces, atteindre le seuil du pack local ne demande qu'un taux de collecte inférieur à 5 %.</p>
+
+<h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
+<p>Non. Les plaques Swiipx sont un paiement unique, expédiées déjà programmées avec votre lien d'avis, sans application ni frais mensuels. Notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a> détaille l'économie réalisée sur cinq ans.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : un écart mesurable, pas un mystère</h2>
+<p>« Combien d'avis pour être dans le pack local ? » n'est pas une question d'algorithme, c'est une question de comptage. Dix minutes suffisent : ouvrez Google, relevez les volumes des trois premiers, calculez la médiane, ajoutez 30 %. Vous connaissez alors votre cible exacte, et le rythme mensuel nécessaire pour l'atteindre dans le délai que vous choisissez.</p>
+<p>Le reste est une affaire de méthode. Les commerces qui montent ne sont pas ceux dont les clients sont les plus satisfaits — ce sont ceux qui ont installé <strong>un geste simple, répété à chaque encaissement</strong>, au lieu d'espérer que la satisfaction se transforme spontanément en avis. Elle ne le fait jamais.</p>
+<p>Pour aller plus loin : notre <a href="/blog/seo-local-recherches-google">guide du SEO local</a>, les <a href="/blog/statistiques-avis-google-2026">45 statistiques avis Google 2026</a>, et le <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat des plaques NFC</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à combler l'écart avec le pack local ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €, livraison offerte.</p>
+</div>
+</section>
+`,
+  },
   'plaque-nfc-salle-de-sport': {
     title: 'Plaque NFC salle de sport : collecter des avis Google sans interrompre les adhérents',
     category: 'Secteur',

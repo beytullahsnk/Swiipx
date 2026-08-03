@@ -26,6 +26,22 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'combien-avis-google-pack-local': {
+    title: "Combien d'avis Google pour être dans le pack local ?",
+    description: "Combien d'avis Google faut-il pour entrer dans le top 3 du pack local ? La méthode de calcul, les benchmarks par secteur et le plan pour atteindre le seuil.",
+    keywords: 'combien avis google pack local, nombre avis google referencement local, pack local google, top 3 google maps, avis google classement local, seuil avis google, google business profile classement',
+    date: '2026-08-03',
+    dateModified: '2026-08-03',
+    category: 'Statistiques',
+    faq: [
+      { q: 'Combien d\'avis Google faut-il pour apparaître dans le pack local ?', a: 'Il n\'existe pas de seuil universel. La règle fiable est la médiane des trois établissements déjà classés sur votre mot-clé, majorée d\'environ 30 %. En pratique, cela représente 20 à 50 avis dans une petite ville, 60 à 150 dans une ville moyenne, et 150 à 400 dans une métropole selon le secteur.' },
+      { q: 'Combien de temps faut-il pour entrer dans le pack local ?', a: 'Les premiers mouvements de position apparaissent entre la 4e et la 8e semaine de collecte régulière. Une entrée dans le top 3 demande généralement 3 à 9 mois selon l\'écart de départ et le niveau de concurrence de la zone.' },
+      { q: 'Vaut-il mieux beaucoup d\'avis ou une très bonne note ?', a: 'Les deux, mais dans cet ordre : le volume vous rend éligible au classement, la note transforme la visibilité en clics. En dessous de 4,0, le taux de clic s\'effondre. Au-dessus de 4,4, l\'effet marginal d\'un dixième de point supplémentaire devient faible, et une note de 5,0 parfaite paraît même suspecte aux internautes.' },
+      { q: 'Les anciens avis comptent-ils toujours ?', a: 'Ils comptent dans le total affiché, mais leur poids diminue fortement avec le temps. Google favorise les fiches actives : visez au moins 10 % de votre volume total d\'avis déposés sur les 90 derniers jours pour maintenir la fraîcheur du signal.' },
+      { q: 'La distance peut-elle m\'empêcher d\'entrer dans le pack local ?', a: 'Oui, partiellement. Le classement varie selon la position de l\'internaute : vous pouvez être premier dans un rayon de 500 mètres et absent à 3 kilomètres. Vous ne pouvez pas modifier votre adresse, mais une proéminence forte élargit mécaniquement le rayon sur lequel Google vous affiche.' },
+      { q: 'Une plaque NFC accélère-t-elle vraiment la collecte d\'avis ?', a: 'Oui, parce qu\'elle supprime la friction au moment précis où le client est satisfait et a déjà son téléphone en main. Les taux constatés sont de 25 à 45 % selon le secteur et l\'emplacement, contre 8 à 12 % pour un QR code et 1 à 3 % pour une carte de visite. Pour la plupart des commerces, atteindre le seuil du pack local ne demande qu\'un taux de collecte inférieur à 5 %.' },
+    ],
+  },
   'plaque-nfc-salle-de-sport': {
     title: 'Plaque NFC salle de sport : x5 avis Google',
     description: "Salles de sport, box de CrossFit et studios : multipliez vos avis Google par 5 avec une plaque NFC. Emplacements, moments clés, scripts et ROI chiffré.",

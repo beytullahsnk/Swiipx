@@ -13,6 +13,7 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'combien-avis-google-pack-local', label: "Combien d'avis Google pour le pack local ?" },
   { slug: 'plaque-nfc-salle-de-sport', label: 'Plaque NFC salle de sport : guide 2026' },
   { slug: 'faux-avis-google-signaler', label: 'Faux avis Google : les signaler et s\'en protéger' },
   { slug: 'plaque-nfc-boulangerie', label: 'Plaque NFC boulangerie : guide 2026' },

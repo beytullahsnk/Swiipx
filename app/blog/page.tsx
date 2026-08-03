@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 23,
+    title: "Combien d'avis Google faut-il pour apparaître dans le pack local ?",
+    excerpt: "Pas de seuil magique : le nombre d'avis Google nécessaire pour entrer dans le top 3 se calcule. Méthode de la médiane +30 %, benchmarks par secteur, 3 cas chiffrés et plan d'action.",
+    category: 'Statistiques',
+    date: '3 août 2026',
+    dateIso: '2026-08-03',
+    readTime: '11 min',
+    slug: 'combien-avis-google-pack-local',
+  },
+  {
     id: 22,
     title: 'Plaque NFC salle de sport : x5 avis Google en 2026',
     excerpt: "Salles de sport, box de CrossFit, studios de pilates : multipliez vos avis Google par 5 avec une plaque NFC. Emplacements, moments clés, scripts coach, 3 études de cas et ROI chiffré.",
