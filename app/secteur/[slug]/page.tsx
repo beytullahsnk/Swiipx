@@ -289,7 +289,7 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
             </h2>
             {/* Logos plutot que noms en clair : seuls les clients nous ayant
                 transmis leur logo sont montres. */}
-            <ClientLogos titre={null} className="[&>ul]:justify-start" />
+            <ClientLogos titre={null} />
           </section>
         )}
 

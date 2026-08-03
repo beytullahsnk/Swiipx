@@ -448,7 +448,7 @@ export default function ProductDetailPage() {
             <ClientLogos
               variante="compact"
               afficherSecteurs={false}
-              className="flex flex-col items-center [&>p]:text-center [&>ul]:justify-center"
+              className="flex justify-center"
             />
 
             {/* Included Features */}

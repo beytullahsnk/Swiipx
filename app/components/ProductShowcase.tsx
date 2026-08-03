@@ -424,7 +424,7 @@ export default function ProductShowcase() {
               <ClientLogos
                 variante="compact"
                 afficherSecteurs={false}
-                className="flex flex-col items-center [&>p]:text-center [&>ul]:justify-center"
+                className="flex justify-center"
               />
 
               {/* Garantie 14 jours */}
