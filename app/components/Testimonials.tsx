@@ -45,7 +45,9 @@ export default function Testimonials() {
         </div>
 
         {/* Clients réels — logos, sans compteur ni nom en clair */}
-        <ClientLogos className="mb-16" />
+        {/* Sans intitulé : le chapeau de section dit déjà « Ils utilisent
+            Swiipx », le répéter deux lignes plus bas faisait doublon. */}
+        <ClientLogos titre={null} className="mb-16" />
 
         {/* Citations réelles — affichées uniquement si collectées */}
         {clientsWithQuote.length > 0 && (

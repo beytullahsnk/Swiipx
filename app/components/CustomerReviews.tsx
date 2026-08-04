@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react'
+import { Quote, Star } from 'lucide-react'
 import { noteMoyenne, parDateDecroissante, type Review } from '../data/reviews'
 
 /**
@@ -62,8 +62,12 @@ export default function CustomerReviews({
   titre = 'Ce que disent les commerces équipés',
   className = '',
 }: Props) {
+  if (avis.length === 0) return null
+
+  // La moyenne ne s'affiche que si au moins un client a donne une note. Tant
+  // qu'ils ont valide un texte sans etoiles, on montre les temoignages seuls
+  // plutot qu'une note deduite de leur ton.
   const note = noteMoyenne(avis)
-  if (!note) return null
 
   return (
     <section className={className} aria-labelledby="avis-clients">
@@ -71,17 +75,20 @@ export default function CustomerReviews({
         <h2 id="avis-clients" className="text-2xl font-bold text-gray-900">
           {titre}
         </h2>
-        <p className="flex items-center gap-2 text-sm text-gray-600">
-          <Etoiles note={note.ratingValue} />
-          <span>
-            <span className="font-semibold text-gray-900">
-              {note.ratingValue.toString().replace('.', ',')}
+        {note && (
+          <p className="flex items-center gap-2 text-sm text-gray-600">
+            <Etoiles note={note.ratingValue} />
+            <span>
+              {/* Une decimale, comme Google : « 5,0 / 5 » plutot que « 5 / 5 ». */}
+              <span className="font-semibold text-gray-900">
+                {note.ratingValue.toFixed(1).replace('.', ',')}
+              </span>
+              <span className="text-gray-400"> / 5</span>
+              <span className="text-gray-400 mx-1.5">·</span>
+              {note.reviewCount} avis
             </span>
-            <span className="text-gray-400"> / 5</span>
-            <span className="text-gray-400 mx-1.5">·</span>
-            {note.reviewCount} avis
-          </span>
-        </p>
+          </p>
+        )}
       </div>
 
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -91,7 +98,11 @@ export default function CustomerReviews({
             className="bg-white rounded-2xl border border-gray-200 p-5"
           >
             <div className="flex items-center justify-between gap-3 mb-3">
-              <Etoiles note={r.rating} />
+              {r.rating ? (
+                <Etoiles note={r.rating} />
+              ) : (
+                <Quote className="w-5 h-5 text-primary/30" aria-hidden="true" />
+              )}
               <span className="text-xs text-gray-400">{moisAnnee(r.date)}</span>
             </div>
             <blockquote className="text-gray-700 leading-relaxed mb-3">

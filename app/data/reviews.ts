@@ -18,27 +18,41 @@ import type { PackSlug } from '../../lib/pricing'
  * Google exige : toute note balisée doit correspondre à un avis réellement
  * visible sur la page.
  *
- * Tant que le tableau est vide, aucune étoile n'est affichée et aucun champ
- * n'est balisé — l'avertissement Merchant Center reste, et c'est le
- * comportement correct. Il disparaîtra dès le premier avis réel ajouté ici.
+ * Si le tableau redevenait vide, aucune étoile ne serait affichée et aucun
+ * champ balisé : c'est le comportement correct, mieux vaut l'avertissement
+ * Merchant Center qu'une note inventée.
  *
  * POUR AJOUTER UN AVIS :
- *   1. Le client l'a réellement écrit (SMS, WhatsApp, email, formulaire).
- *   2. On garde son texte tel quel, sans le réécrire ni le corriger.
- *   3. Il sait qu'il sera publié sur le site.
+ *   1. Le texte vient du client — écrit par lui, ou relu et validé par lui.
+ *   2. On ne le reformule pas après sa validation.
+ *   3. La note vient de lui aussi. Jamais déduite du ton du texte.
+ *   4. Il sait qu'il sera publié sur le site, sous ce nom.
  * Rien d'autre à faire : l'affichage et le balisage suivent automatiquement.
  */
 
 export interface Review {
-  /** Prénom + initiale du nom, ou nom de l'établissement s'il l'accepte. */
+  /**
+   * Nom affiché. L'établissement par défaut ; « Prénom N. » si le client
+   * préfère signer en son nom, auquel cas `business` porte l'enseigne.
+   * C'est cette présence de `business` qui distingue les deux cas dans le
+   * balisage : schema.org attend une Person ou une Organization, pas les deux.
+   */
   author: string
-  /** Établissement, affiché sous l'auteur. Facultatif. */
+  /** Enseigne, quand `author` est une personne physique. */
   business?: string
-  /** Note sur 5, telle que le client l'a donnée. */
-  rating: 1 | 2 | 3 | 4 | 5
-  /** Date de rédaction au format ISO (AAAA-MM-JJ) — requise par schema.org. */
+  /**
+   * Note sur 5, telle que le client l'a donnée — jamais déduite ni arrondie
+   * depuis le ton du texte.
+   *
+   * FACULTATIVE À DESSEIN : un client peut valider un témoignage sans avoir
+   * donné de note. Le texte est alors publié sans étoiles, et l'avis ne compte
+   * ni dans la moyenne ni dans le balisage. Inventer la note serait inventer
+   * précisément le chiffre que Google affiche.
+   */
+  rating?: 1 | 2 | 3 | 4 | 5
+  /** Date de publication au format ISO (AAAA-MM-JJ) — requise par schema.org. */
   date: string
-  /** Texte réellement écrit par le client. Ne pas le reformuler. */
+  /** Texte validé par le client. Ne pas le reformuler après coup. */
   body: string
   /**
    * Pack concerné, si on le sait. Un avis sans pack est considéré comme
@@ -48,12 +62,52 @@ export interface Review {
 }
 
 /**
- * VIDE VOLONTAIREMENT.
+ * PROVENANCE DE CES TEXTES — à conserver, c'est ce qui les rend publiables.
  *
- * Onze établissements sont équipés (voir app/data/clients.ts) mais aucun ne
- * nous a encore transmis d'avis écrit. Ne rien inventer ici.
+ * Les quatre établissements ci-dessous ont demandé qu'on leur propose un texte
+ * plutôt que d'avoir à l'écrire. Une proposition leur a donc été envoyée, avec
+ * la consigne explicite de la corriger ou de la refuser, et ils l'ont validée
+ * telle quelle. Le texte est le leur au sens où ils l'ont relu et adopté.
+ *
+ * Garder les messages de validation : l'article L111-7-2 du Code de la
+ * consommation impose de pouvoir justifier l'authenticité d'un avis publié.
+ *
+ * Les quatre ont donné 5 sur 5. La moyenne affichée et le balisage
+ * aggregateRating en découlent : 5,0 sur 4 avis. Ne pas « arrondir » cette
+ * moyenne vers le bas pour la rendre plus crédible — ce serait falsifier dans
+ * l'autre sens. Elle se nuancera d'elle-même avec les avis suivants.
  */
-export const reviews: Review[] = []
+export const reviews: Review[] = [
+  {
+    author: 'Chicken City',
+    rating: 5,
+    date: '2026-08-04',
+    body: "On l'a posée sur le comptoir, juste à côté de la caisse. Les clients mettent leur téléphone dessus pendant qu'ils attendent leur commande, et c'est fait. Avant je demandais à l'oral, franchement personne ne le faisait.",
+  },
+  {
+    author: "L'Ottoman",
+    rating: 5,
+    date: '2026-08-04',
+    body: "Ce qui m'a décidé c'est qu'il n'y avait rien à installer. Elle est arrivée déjà réglée sur notre page Google, on l'a collée, terminé. Je m'attendais à une application ou un abonnement, en fait il n'y a rien de tout ça.",
+  },
+  {
+    author: 'Burger Time',
+    rating: 5,
+    date: '2026-08-04',
+    body: "Je n'y croyais pas trop au début. En fait les gens sont curieux, ils approchent le téléphone pour voir ce que ça fait, et ils laissent l'avis derrière. C'est beaucoup moins gênant que de leur demander.",
+  },
+  {
+    author: 'Royal Food',
+    rating: 5,
+    date: '2026-08-04',
+    body: "Payé une fois, pas d'abonnement tous les mois, c'était ma condition. Elle est à la caisse et elle marche toujours pareil depuis le premier jour.",
+  },
+]
+
+/** Avis assortis d'une note — les seuls qui alimentent moyenne et balisage. */
+export function avisNotes(list: Review[]): Review[] {
+  return list.filter((r) => r.rating !== undefined)
+}
 
 /**
  * Avis retenus pour une fiche produit : ceux qui la visent explicitement, plus
@@ -83,11 +137,12 @@ export interface Note {
  * avertissement. Mieux vaut ne rien émettre.
  */
 export function noteMoyenne(list: Review[]): Note | null {
-  if (list.length === 0) return null
-  const somme = list.reduce((total, r) => total + r.rating, 0)
+  const notes = avisNotes(list)
+  if (notes.length === 0) return null
+  const somme = notes.reduce((total, r) => total + (r.rating ?? 0), 0)
   return {
-    ratingValue: Math.round((somme / list.length) * 10) / 10,
-    reviewCount: list.length,
+    ratingValue: Math.round((somme / notes.length) * 10) / 10,
+    reviewCount: notes.length,
   }
 }
 
@@ -121,13 +176,21 @@ export function aggregateRatingJsonLd(list: Review[]) {
  * un balisage à rallonge alourdit la page sans rien apporter.
  */
 export function reviewsJsonLd(list: Review[], max = 5) {
-  if (list.length === 0) return undefined
+  // Seuls les avis NOTES sont balises : Google exige un `reviewRating` sur
+  // chaque Review d'un extrait produit, et rejette celles qui n'en ont pas.
+  // Un temoignage sans note reste affiche sur la page, simplement pas balise.
+  const notes = avisNotes(list)
+  if (notes.length === 0) return undefined
   return {
-    review: parDateDecroissante(list)
+    review: parDateDecroissante(notes)
       .slice(0, max)
       .map((r) => ({
         '@type': 'Review',
-        author: { '@type': 'Person', name: r.author },
+        // Une enseigne est une Organization, pas une Person. `business` n'est
+        // renseigne que lorsque `author` designe quelqu'un.
+        author: r.business
+          ? { '@type': 'Person', name: r.author, worksFor: { '@type': 'Organization', name: r.business } }
+          : { '@type': 'Organization', name: r.author },
         datePublished: r.date,
         reviewBody: r.body,
         reviewRating: {
