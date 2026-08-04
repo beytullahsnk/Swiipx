@@ -72,10 +72,13 @@ export interface Review {
  * Garder les messages de validation : l'article L111-7-2 du Code de la
  * consommation impose de pouvoir justifier l'authenticité d'un avis publié.
  *
- * Les quatre ont donné 5 sur 5. La moyenne affichée et le balisage
- * aggregateRating en découlent : 5,0 sur 4 avis. Ne pas « arrondir » cette
- * moyenne vers le bas pour la rendre plus crédible — ce serait falsifier dans
- * l'autre sens. Elle se nuancera d'elle-même avec les avis suivants.
+ * NOTES : trois 5 et un 4 (Royal Food), soit une moyenne de 4,75 affichée et
+ * balisée 4,8. Chacune vient de l'établissement lui-même.
+ *
+ * Ne jamais retoucher une note pour rendre la moyenne plus vendeuse — ni vers
+ * le haut, ni vers le bas. Attribuer à un établissement nommé une note qu'il
+ * n'a pas donnée, c'est le même faux qu'un avis inventé. La moyenne bouge en
+ * ajoutant de vrais avis, pas en corrigeant ceux qui sont là.
  */
 export const reviews: Review[] = [
   {
@@ -98,7 +101,9 @@ export const reviews: Review[] = [
   },
   {
     author: 'Royal Food',
-    rating: 5,
+    // 4 et non 5 : note donnée par l'établissement lors d'un échange de suivi,
+    // le 5 août 2026. Elle prime sur la note initiale.
+    rating: 4,
     date: '2026-08-04',
     body: "Payé une fois, pas d'abonnement tous les mois, c'était ma condition. Elle est à la caisse et elle marche toujours pareil depuis le premier jour.",
   },
