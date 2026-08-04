@@ -137,14 +137,18 @@ export default function RootLayout({
               name: 'Swiipx',
               inLanguage: 'fr-FR',
               publisher: { '@id': 'https://swiipx.fr/#organization' },
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: {
-                  '@type': 'EntryPoint',
-                  urlTemplate: 'https://swiipx.fr/blog?q={search_term_string}',
-                },
-                'query-input': 'required name=search_term_string',
-              },
+              // Pas de SearchAction : il declarait une recherche a
+              // /blog?q={search_term_string} qui n'existe pas — verifie, la page
+              // renvoie exactement le meme contenu avec ou sans le parametre.
+              //
+              // Google explorait le gabarit tel quel et le remontait dans
+              // Search Console comme page canonicalisee vers /blog. Et le
+              // resultat enrichi que ce balisage alimentait, la barre de
+              // recherche dans les liens de site, a ete retire de Google : il
+              // ne sert donc plus a rien, meme sur un site qui a une recherche.
+              //
+              // A remettre uniquement si /blog gagne un jour une vraie
+              // recherche, et alors pour de bon.
             }),
           }}
         />
