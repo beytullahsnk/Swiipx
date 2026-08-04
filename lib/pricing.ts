@@ -47,6 +47,21 @@ export interface Pack {
  */
 export const TVA = 0.20
 
+/**
+ * FRAIS DE LIVRAISON, en centimes TTC.
+ *
+ * Ici et nulle part ailleurs. Le montant etait redefini dans
+ * app/store/shipping.ts ET dans app/api/create-payment-intent/route.ts : deux
+ * constantes distinctes pour un meme prix, dont l'une sert a afficher et
+ * l'autre a debiter. Une modification d'un seul cote passait inapercue et
+ * faisait payer au client autre chose que ce qu'il avait vu.
+ *
+ * Ce sont aussi ces montants qui alimentent le balisage `shippingDetails` et
+ * le feed Merchant Center : Google recoupe le prix annonce avec le prix debite.
+ */
+export const SHIPPING_DOMICILE_CENTS = 490
+export const SHIPPING_POINT_RELAIS_CENTS = 0
+
 /** Prix hors taxes correspondant, en centimes (pour information / facturation). */
 export function priceHtCents(pack: Pack): number {
   return Math.round(pack.priceCents / (1 + TVA))

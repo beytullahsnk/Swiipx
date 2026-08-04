@@ -7,7 +7,8 @@ import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
 import ProductShowcase from './components/ProductShowcase'
 import { aggregateRatingJsonLd, reviews, reviewsJsonLd } from './data/reviews'
-import { HIGHEST_PRICE_CENTS, LOWEST_PRICE_CENTS, formatPriceSchema } from '../lib/pricing'
+import { PACK_LIST } from '../lib/pricing'
+import { NOM_PACK, offreGammeJsonLd, produitPackJsonLd } from '../lib/product-schema'
 
 export const dynamic = 'force-static'
 
@@ -74,22 +75,7 @@ export default function Home() {
       '@type': 'Brand',
       name: 'Swiipx',
     },
-    offers: {
-      '@type': 'AggregateOffer',
-      // Derives de lib/pricing.ts : un prix code en dur ici resterait perime
-      // apres un changement de tarif, et Merchant Center suspend un compte dont
-      // le prix balise ne correspond plus a celui de la page.
-      lowPrice: formatPriceSchema(LOWEST_PRICE_CENTS),
-      highPrice: formatPriceSchema(HIGHEST_PRICE_CENTS),
-      priceCurrency: 'EUR',
-      availability: 'https://schema.org/InStock',
-      offerCount: 3,
-      priceValidUntil: '2026-12-31',
-      seller: {
-        '@type': 'Organization',
-        name: 'Swiipx',
-      },
-    },
+    offers: offreGammeJsonLd(),
     // Note moyenne et avis : emis UNIQUEMENT si de vrais avis existent dans
     // app/data/reviews.ts. La page d'accueil couvre toute la gamme, on prend
     // donc l'ensemble des avis. Les memes sont affiches par <Testimonials />.
@@ -168,78 +154,22 @@ export default function Home() {
       '@type': 'BusinessAudience',
       audienceType: 'Restaurants, salons de coiffure, cabinets médicaux, commerces de proximité',
     },
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'EUR',
-      lowPrice: '35.88',
-      highPrice: '107.88',
-      offerCount: 3,
-    },
+    offers: offreGammeJsonLd(),
   }
 
+  // Les trois Product etaient ecrits a la main ici, sans description ni
+  // politique de retour ni frais de port — c'est ce que Search Console
+  // signalait. Engendres depuis PACK_LIST, ils heritent des memes champs que
+  // les fiches produit et des memes prix.
   const offerCatalogJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'OfferCatalog',
     name: 'Packs Plaques NFC Swiipx',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Pack Starter — 1 plaque',
-        itemOffered: {
-          '@type': 'Product',
-          name: 'Pack Starter — 1 plaque NFC avis Google',
-          image: 'https://swiipx.fr/product-main.jpg',
-          brand: { '@type': 'Brand', name: 'Swiipx' },
-          offers: {
-            '@type': 'Offer',
-            url: 'https://swiipx.fr/product/starter',
-            price: '35.88',
-            priceCurrency: 'EUR',
-            availability: 'https://schema.org/InStock',
-            priceValidUntil: '2026-12-31',
-            seller: { '@type': 'Organization', name: 'Swiipx' },
-          },
-        },
-      },
-      {
-        '@type': 'Offer',
-        name: 'Pack Business — 2 plaques',
-        itemOffered: {
-          '@type': 'Product',
-          name: 'Pack Business — 2 plaques NFC avis Google',
-          image: 'https://swiipx.fr/product-main.jpg',
-          brand: { '@type': 'Brand', name: 'Swiipx' },
-          offers: {
-            '@type': 'Offer',
-            url: 'https://swiipx.fr/product/business',
-            price: '65.88',
-            priceCurrency: 'EUR',
-            availability: 'https://schema.org/InStock',
-            priceValidUntil: '2026-12-31',
-            seller: { '@type': 'Organization', name: 'Swiipx' },
-          },
-        },
-      },
-      {
-        '@type': 'Offer',
-        name: 'Pack Pro — 5 plaques',
-        itemOffered: {
-          '@type': 'Product',
-          name: 'Pack Pro — 5 plaques NFC avis Google',
-          image: 'https://swiipx.fr/product-main.jpg',
-          brand: { '@type': 'Brand', name: 'Swiipx' },
-          offers: {
-            '@type': 'Offer',
-            url: 'https://swiipx.fr/product/pro',
-            price: '107.88',
-            priceCurrency: 'EUR',
-            availability: 'https://schema.org/InStock',
-            priceValidUntil: '2026-12-31',
-            seller: { '@type': 'Organization', name: 'Swiipx' },
-          },
-        },
-      },
-    ],
+    itemListElement: PACK_LIST.map((pack) => ({
+      '@type': 'Offer',
+      name: `${NOM_PACK[pack.slug]} — ${pack.plaques} plaque${pack.plaques > 1 ? 's' : ''}`,
+      itemOffered: produitPackJsonLd(pack),
+    })),
   }
 
   return (

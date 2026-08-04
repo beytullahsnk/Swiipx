@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
-import type { PackSlug } from '../../../lib/pricing'
+import { PACK_BY_SLUG, type PackSlug } from '../../../lib/pricing'
+import { offreJsonLd } from '../../../lib/product-schema'
 import { aggregateRatingJsonLd, reviewsJsonLd, reviewsPourPack } from '../../data/reviews'
 
 const productsMeta: Record<string, {
@@ -88,13 +89,6 @@ const productFAQs: Record<string, Array<{ question: string; answer: string }>> =
   ],
 }
 
-/** Expedition sous 24 h ouvrees, puis 2 a 3 jours de transport. */
-const DELAI_LIVRAISON = {
-  '@type': 'ShippingDeliveryTime',
-  handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 1, unitCode: 'DAY' },
-  transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 3, unitCode: 'DAY' },
-}
-
 export function generateStaticParams() {
   return Object.keys(productsMeta).map((slug) => ({ slug }))
 }
@@ -177,46 +171,7 @@ export default function ProductLayout({ params, children }: { params: { slug: st
         value: spec.value,
       })),
     }),
-    offers: {
-      '@type': 'Offer',
-      url: `https://swiipx.fr/product/${slug}`,
-      priceCurrency: 'EUR',
-      price: product.price,
-      priceValidUntil: '2026-12-31',
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'Swiipx',
-      },
-      hasMerchantReturnPolicy: {
-        '@type': 'MerchantReturnPolicy',
-        applicableCountry: 'FR',
-        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-        merchantReturnDays: 14,
-        returnMethod: 'https://schema.org/ReturnByMail',
-        returnFees: 'https://schema.org/FreeReturn',
-      },
-      // DEUX modes, deux tarifs. Le balisage annoncait une livraison a 0 EUR
-      // alors que le domicile est facture 4,90 EUR au panier
-      // (SHIPPING_DOMICILE_CENTS). Google recoupe le prix balise avec celui
-      // reellement debite : un ecart a la hausse fait desapprouver la fiche.
-      shippingDetails: [
-        {
-          '@type': 'OfferShippingDetails',
-          name: 'Point relais',
-          shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'EUR' },
-          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'FR' },
-          deliveryTime: DELAI_LIVRAISON,
-        },
-        {
-          '@type': 'OfferShippingDetails',
-          name: 'Domicile',
-          shippingRate: { '@type': 'MonetaryAmount', value: '4.90', currency: 'EUR' },
-          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'FR' },
-          deliveryTime: DELAI_LIVRAISON,
-        },
-      ],
-    },
+    offers: offreJsonLd(PACK_BY_SLUG[slug as PackSlug]),
     // Note moyenne et avis : emis UNIQUEMENT si de vrais avis existent dans
     // app/data/reviews.ts. Merchant Center signale ces deux champs comme
     // manquants (avertissement non bloquant) ; les remplir avec des notes

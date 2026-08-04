@@ -29,8 +29,9 @@ interface ShippingStore {
   setHasHydrated: (state: boolean) => void
 }
 
-// Frais de livraison à domicile en centimes
-export const SHIPPING_DOMICILE_CENTS = 490 // 4,90€
+// Reexport depuis lib/pricing.ts, source unique du tarif. Les composants qui
+// l'importaient d'ici continuent de fonctionner sans changement.
+export { SHIPPING_DOMICILE_CENTS } from '@/lib/pricing'
 
 export const useShippingStore = create<ShippingStore>()(
   persist(

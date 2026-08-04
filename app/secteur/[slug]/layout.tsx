@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { faqSecteurs } from './faq'
+import { offreGammeJsonLd } from '../../../lib/product-schema'
 
 const sectorData: Record<string, {
   title: string
@@ -84,13 +85,7 @@ function buildJsonLd(slug: string) {
     ],
     serviceType: 'Plaque NFC avis Google',
     audience: { '@type': 'Audience', audienceType: slug },
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'EUR',
-      lowPrice: '35.88',
-      highPrice: '107.88',
-      offerCount: 3,
-    },
+    offers: offreGammeJsonLd(),
   }
 
   const breadcrumb = {
