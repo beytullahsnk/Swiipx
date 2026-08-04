@@ -46,7 +46,7 @@ export default function CTASection() {
         <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-blue-100">
           <div className="flex items-center space-x-2">
             <Truck className="w-4 h-4" aria-hidden="true" />
-            <span className="font-medium text-sm">Livraison offerte</span>
+            <span className="font-medium text-sm">Livraison offerte en point relais</span>
           </div>
           <div className="flex items-center space-x-2">
             <Shield className="w-4 h-4" aria-hidden="true" />

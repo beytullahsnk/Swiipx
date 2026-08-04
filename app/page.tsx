@@ -134,7 +134,7 @@ export default function Home() {
         '@type': 'HowToStep',
         position: 1,
         name: 'Commandez votre plaque NFC avis Google',
-        text: 'Choisissez votre pack Swiipx (Starter, Business ou Pro) et passez commande sur swiipx.fr. Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés.',
+        text: 'Choisissez votre pack Swiipx (Starter, Business ou Pro) et passez commande sur swiipx.fr. Livraison en point relais offerte, 4,90 € à domicile. France métropolitaine sous 2-5 jours ouvrés.',
         url: 'https://swiipx.fr/#product',
       },
       {
@@ -157,7 +157,7 @@ export default function Home() {
     '@type': 'Service',
     name: 'Plaque NFC avis Google Swiipx',
     serviceType: 'Plaque NFC avis Google',
-    description: 'Solution NFC clé en main pour collecter des avis Google sans abonnement. Livraison gratuite en France, garantie à vie.',
+    description: 'Solution NFC clé en main pour collecter des avis Google sans abonnement. Livraison offerte en point relais, garantie à vie.',
     provider: {
       '@type': 'Organization',
       name: 'Swiipx',

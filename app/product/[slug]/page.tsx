@@ -40,7 +40,7 @@ const products = {
     features: [
       '1 plaque NFC premium',
       'QR code de secours intégré',
-      'Livraison gratuite en France',
+      'Livraison offerte en point relais',
       'Support client dédié',
       'Garantie à vie',
       'Configuration incluse',
@@ -73,7 +73,7 @@ const products = {
     features: [
       '2 plaques NFC premium',
       'QR code de secours intégré',
-      'Livraison gratuite en France',
+      'Livraison offerte en point relais',
       'Support client dédié',
       'Garantie à vie',
       'Configuration incluse',
@@ -105,7 +105,7 @@ const products = {
     features: [
       '5 plaques NFC premium',
       'QR code de secours intégré',
-      'Livraison express gratuite',
+      'Livraison offerte en point relais',
       'Support client dédié',
       'Garantie à vie',
       'Configuration incluse',
@@ -142,8 +142,8 @@ function getInfoSections(slug: string) {
       title: 'Livraison & Expédition',
       icon: Truck,
       content: slug === 'pro'
-        ? 'Livraison express gratuite en France métropolitaine sous 2-5 jours ouvrés. Expédition sous 24h après commande. Numéro de suivi envoyé par email. Livraison en Corse et DOM-TOM sous 5-7 jours ouvrés.'
-        : 'Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés. Expédition sous 24h après commande. Numéro de suivi envoyé par email dès l\'expédition. Livraison en Corse et DOM-TOM disponible.',
+        ? 'Livraison en point relais offerte, 4,90 € à domicile. France métropolitaine sous 2-5 jours ouvrés. Expédition sous 24h après commande. Numéro de suivi envoyé par email. Livraison en Corse et DOM-TOM sous 5-7 jours ouvrés.'
+        : 'Livraison en point relais offerte, 4,90 € à domicile. France métropolitaine sous 2-5 jours ouvrés. Expédition sous 24h après commande. Numéro de suivi envoyé par email dès l\'expédition. Livraison en Corse et DOM-TOM disponible.',
     },
     {
       id: 'guarantee',
@@ -275,7 +275,7 @@ export default function ProductDetailPage() {
 
               {/* Badges */}
               <div className="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg z-20">
-                LIVRAISON OFFERTE
+                POINT RELAIS OFFERT
               </div>
               {'popular' in product && product.popular && (
                 <div className="absolute top-4 left-4 bg-accent text-gray-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg z-20">
@@ -324,7 +324,7 @@ export default function ProductDetailPage() {
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Truck className="w-5 h-5 text-green-600" />
-                <span className="font-medium">Livraison gratuite</span>
+                <span className="font-medium">Livraison offerte en point relais</span>
               </div>
             </div>
           </div>
@@ -501,7 +501,7 @@ export default function ProductDetailPage() {
             <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 space-y-3">
               <p className="font-bold text-gray-900 flex items-center space-x-2">
                 <Gift className="w-5 h-5 text-primary" />
-                <span>Offre spéciale livraison offerte</span>
+                <span>Offre spéciale livraison offerte en point relais</span>
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start space-x-2">

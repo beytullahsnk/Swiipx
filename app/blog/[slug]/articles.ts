@@ -232,7 +232,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à combler l'écart avec le pack local ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €, livraison offerte.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €, livraison offerte en point relais.</p>
 </div>
 </section>
 `,
@@ -495,7 +495,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque séance en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €, livraison offerte.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 €, livraison offerte en point relais.</p>
 </div>
 </section>
     `,
@@ -2786,7 +2786,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Voir nos plaques NFC Swiipx</strong></p>
-<p class="text-sm text-blue-900"><a href="/product/starter" class="font-semibold underline">Pack Starter 1 plaque (35,88 €)</a> · <a href="/product/business" class="font-semibold underline">Pack Business 2 plaques (65,88 €)</a> · <a href="/product/pro" class="font-semibold underline">Pack Pro 5 plaques (107,88 €)</a> — tous sans abonnement, garantie à vie, livraison gratuite.</p>
+<p class="text-sm text-blue-900"><a href="/product/starter" class="font-semibold underline">Pack Starter 1 plaque (35,88 €)</a> · <a href="/product/business" class="font-semibold underline">Pack Business 2 plaques (65,88 €)</a> · <a href="/product/pro" class="font-semibold underline">Pack Pro 5 plaques (107,88 €)</a> — tous sans abonnement, garantie à vie, livraison offerte en point relais.</p>
 </div>
 </section>
     `,
@@ -2994,7 +2994,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>💇 Prêt à booster les avis Google de votre salon ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> — sans abonnement, garantie à vie, livraison gratuite. 35,88 € à 107,88 € selon le pack.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> — sans abonnement, garantie à vie, livraison offerte en point relais. 35,88 € à 107,88 € selon le pack.</p>
 </div>
 </section>
     `,
@@ -3157,7 +3157,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Comparer les packs Swiipx</strong></p>
-<p class="text-sm text-blue-900"><a href="/product/starter" class="font-semibold underline">Pack Starter (35,88 €)</a> · <a href="/product/business" class="font-semibold underline">Pack Business (65,88 €)</a> · <a href="/product/pro" class="font-semibold underline">Pack Pro (107,88 €)</a> — tous sans abonnement, garantie à vie, livraison gratuite.</p>
+<p class="text-sm text-blue-900"><a href="/product/starter" class="font-semibold underline">Pack Starter (35,88 €)</a> · <a href="/product/business" class="font-semibold underline">Pack Business (65,88 €)</a> · <a href="/product/pro" class="font-semibold underline">Pack Pro (107,88 €)</a> — tous sans abonnement, garantie à vie, livraison offerte en point relais.</p>
 </div>
 </section>
 
@@ -3387,7 +3387,7 @@ export const articles: Record<string, {
 
 <h3>Investissement plaque NFC</h3>
 <ul>
-<li>Pack 2 plaques (recommandé pour ce volume) : <strong>65,88 € TTC, livraison gratuite, payée 1 fois</strong></li>
+<li>Pack 2 plaques (recommandé pour ce volume) : <strong>65,88 € TTC, livraison offerte en point relais, payée 1 fois</strong></li>
 <li>Formation équipe : 30 minutes en briefing</li>
 <li>Coût total annuel : <strong>~6 € par mois</strong> (amorti sur durée de vie 10 ans)</li>
 </ul>
@@ -3462,7 +3462,7 @@ export const articles: Record<string, {
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à booster les avis Google de votre restaurant ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> conçues pour la restauration : acrylique premium, garantie à vie, livraison gratuite, configuration incluse. Pack 1, 2 ou 5 plaques selon la taille de votre établissement.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> conçues pour la restauration : acrylique premium, garantie à vie, livraison offerte en point relais, configuration incluse. Pack 1, 2 ou 5 plaques selon la taille de votre établissement.</p>
 </div>
 <p>Pour aller plus loin, lisez aussi notre <a href="/blog/doubler-avis-google-30-jours">guide pour doubler vos avis en 30 jours</a> et notre <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif Plaque NFC vs QR code 2026</a>.</p>
 </section>
@@ -3777,7 +3777,7 @@ export const articles: Record<string, {
 <p>En 2026, le NFC n'est plus une option futuriste : c'est <strong>le standard pour la collecte d'avis Google</strong> en commerce physique. Le QR code reste utile en complément digital, mais ne suffit plus en point de vente.</p>
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à booster vos avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les plaques NFC Swiipx — acrylique premium 3 mm, NTAG215, QR code de secours intégré, garantie à vie, livraison gratuite. <a href="/#product" class="font-semibold underline">Voir les packs disponibles</a>.</p>
+<p class="text-sm text-blue-900">Découvrez les plaques NFC Swiipx — acrylique premium 3 mm, NTAG215, QR code de secours intégré, garantie à vie, livraison offerte en point relais. <a href="/#product" class="font-semibold underline">Voir les packs disponibles</a>.</p>
 </div>
 </section>
     `,

@@ -10,10 +10,10 @@ const sectorData: Record<string, {
 }> = {
   restaurant: {
     title: 'Plaque avis Google pour restaurant — sans app',
-    description: 'Restaurant : plaque NFC avis Google sans abonnement. 35-45 % de taux d\'avis collectés. Pack 2 plaques 65,88 €, livraison gratuite, garantie à vie.',
+    description: 'Restaurant : plaque NFC avis Google sans abonnement. 35-45 % de taux d\'avis collectés. Pack 2 plaques 65,88 €, livraison offerte en point relais, garantie à vie.',
     keywords: 'plaque nfc restaurant, avis google restaurant, plaque restaurant nfc, plaque avis google bistrot, nfc restauration france, plaque avis brasserie',
     h1: 'Plaque NFC pour restaurants : multipliez vos avis Google par 7',
-    intro: 'Plaque NFC programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Acrylique premium, sans abonnement, livraison gratuite.',
+    intro: 'Plaque NFC programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Acrylique premium, sans abonnement, livraison offerte en point relais.',
   },
   'salon-coiffure': {
     title: 'Plaque avis Google pour salon de coiffure',

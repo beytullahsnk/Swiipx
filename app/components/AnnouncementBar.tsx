@@ -13,7 +13,7 @@ export default function AnnouncementBar() {
       <div className="flex items-center justify-center gap-x-3 gap-y-0 flex-wrap">
         <span className="inline-flex items-center font-medium whitespace-nowrap">
           <Truck className="w-3.5 h-3.5 mr-1.5 flex-shrink-0" aria-hidden="true" />
-          Livraison gratuite en France
+          Livraison offerte en point relais
         </span>
         <span className="text-white/80 whitespace-nowrap">Expédié sous 24h</span>
         <span className="text-white/80 whitespace-nowrap hidden sm:inline">Garantie à vie</span>

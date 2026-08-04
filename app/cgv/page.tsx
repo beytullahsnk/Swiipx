@@ -90,11 +90,11 @@ export default function CGVPage() {
                 <div>
                   <dt className="font-semibold text-gray-900">Livraison</dt>
                   <dd className="text-sm text-gray-600 mt-1">
-                    Sur toutes les commandes, sans minimum d&apos;achat.
+                    Point relais offert, sans minimum d&apos;achat. À domicile&nbsp;: 4,90&nbsp;€.
                   </dd>
                 </div>
                 <span className="text-sm font-semibold text-green-700 bg-green-50 px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0">
-                  Gratuite
+                  Dès 0 €
                 </span>
               </div>
               <div className="py-3">
@@ -119,6 +119,15 @@ export default function CGVPage() {
             <div className="space-y-3 text-base text-gray-700 leading-relaxed">
               <p>
                 Nous livrons en France métropolitaine, Corse, DOM-TOM et Monaco. Expédition sous 24h ouvrées après validation du paiement.
+              </p>
+              {/* Les frais doivent figurer aux CGV : l'article L221-5 du Code de
+                  la consommation impose de communiquer le prix des frais de
+                  livraison avant que le consommateur ne soit lie. */}
+              <p>
+                <strong>Frais de livraison&nbsp;:</strong> la livraison en point relais est
+                offerte, sans minimum d&apos;achat. La livraison à domicile est facturée
+                4,90&nbsp;€. Le mode de livraison se choisit à l&apos;étape du paiement, et
+                le montant correspondant est affiché avant la validation de la commande.
               </p>
               <dl className="space-y-2 pt-2">
                 <div className="flex items-center justify-between py-2 border-b border-gray-100">

@@ -97,7 +97,7 @@ function SuccessContent() {
             <span className="text-sm font-semibold text-gray-400 mt-0.5">03</span>
             <div>
               <p className="font-semibold text-gray-900 text-sm">Livraison en 2-5 jours ouvrés</p>
-              <p className="text-gray-500 text-sm mt-0.5">Livraison gratuite partout en France.</p>
+              <p className="text-gray-500 text-sm mt-0.5">Livraison offerte en point relais, 4,90 € à domicile.</p>
             </div>
           </div>
         </div>

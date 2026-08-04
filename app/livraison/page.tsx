@@ -23,7 +23,7 @@ export default function LivraisonPage() {
             Expédition & Livraison
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl">
-            Livraison gratuite, expédition sous 24h. Tout ce que vous devez savoir.
+            Livraison offerte en point relais, expédition sous 24h. Tout ce que vous devez savoir.
           </p>
         </div>
       </div>
@@ -70,12 +70,31 @@ export default function LivraisonPage() {
               <Package className="w-5 h-5 text-primary" aria-hidden="true" />
               <h2 className="text-2xl font-bold text-gray-900">Frais de livraison</h2>
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-              <p className="font-bold text-green-900 text-lg mb-1">Livraison gratuite</p>
-              <p className="text-sm text-green-800">
-                Sur toutes les commandes, sans minimum d&apos;achat. Les frais de port sont entièrement pris en charge par Swiipx.
-              </p>
-            </div>
+            {/* Les deux modes et leur tarif, cote a cote. La page annoncait
+                auparavant des frais de port « entierement pris en charge par
+                Swiipx » alors que le domicile est facture 4,90 EUR au panier. */}
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-green-50 border border-green-200 rounded-xl p-5">
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <dt className="font-bold text-green-900 text-lg">Point relais</dt>
+                  <span className="font-bold text-green-900 whitespace-nowrap">Offert</span>
+                </div>
+                <dd className="text-sm text-green-800">
+                  Sans minimum d&apos;achat. Vous choisissez votre point relais à l&apos;étape
+                  du paiement, puis vous récupérez le colis aux horaires du commerçant.
+                </dd>
+              </div>
+              <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <dt className="font-bold text-gray-900 text-lg">À domicile</dt>
+                  <span className="font-bold text-gray-900 whitespace-nowrap">4,90 €</span>
+                </div>
+                <dd className="text-sm text-gray-600">
+                  Remise à l&apos;adresse de votre choix. Le montant s&apos;ajoute au total
+                  affiché à l&apos;étape du paiement.
+                </dd>
+              </div>
+            </dl>
           </section>
 
           {/* Suivi */}

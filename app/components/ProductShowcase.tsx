@@ -133,7 +133,7 @@ export default function ProductShowcase() {
       id: 'delivery',
       title: 'Livraison',
       icon: Truck,
-      content: 'Livraison gratuite en France métropolitaine sous 2-5 jours ouvrés. Vous recevrez un numéro de suivi par email dès l\'expédition de votre commande.',
+      content: 'Livraison en point relais offerte, 4,90 € à domicile. France métropolitaine sous 2-5 jours ouvrés. Vous recevrez un numéro de suivi par email dès l\'expédition de votre commande.',
     },
     {
       id: 'guarantee',
@@ -209,7 +209,7 @@ export default function ProductShowcase() {
 
               {/* Badge */}
               <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg z-20">
-                LIVRAISON OFFERTE
+                POINT RELAIS OFFERT
               </div>
             </div>
 
@@ -248,7 +248,7 @@ export default function ProductShowcase() {
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Truck className="w-5 h-5 text-green-600" />
-                <span className="font-medium">Livraison gratuite</span>
+                <span className="font-medium">Livraison offerte en point relais</span>
               </div>
             </div>
           </div>
@@ -382,7 +382,7 @@ export default function ProductShowcase() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary font-bold">•</span>
-                  <span><strong>Garantie à vie</strong> + 90 jours satisfait ou remboursé + livraison offerte dès la première plaque.</span>
+                  <span><strong>Garantie à vie</strong> + 90 jours satisfait ou remboursé + livraison offerte en point relais dès la première plaque.</span>
                 </li>
               </ul>
             </div>
@@ -493,7 +493,7 @@ export default function ProductShowcase() {
             <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 space-y-3">
               <p className="font-bold text-gray-900 flex items-center space-x-2">
                 <Gift className="w-5 h-5 text-primary" />
-                <span>Offre spéciale livraison offerte</span>
+                <span>Offre spéciale livraison offerte en point relais</span>
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start space-x-2">

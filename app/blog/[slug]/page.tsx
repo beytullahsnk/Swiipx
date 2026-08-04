@@ -144,7 +144,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                     Voir la plaque avis Google →
                   </Link>
                   <p className="text-center text-xs text-gray-500 mt-2">
-                    Livraison offerte · Garantie à vie
+                    Livraison offerte en point relais · Garantie à vie
                   </p>
                 </div>
               </div>

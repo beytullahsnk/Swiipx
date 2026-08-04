@@ -22,7 +22,7 @@ export default function ProductSection() {
       features: [
         '1 plaque NFC premium',
         'QR code inclus',
-        'Livraison gratuite',
+        'Livraison offerte en point relais',
         'Support par email',
         'Garantie à vie',
       ],
@@ -37,7 +37,7 @@ export default function ProductSection() {
       features: [
         '2 plaques NFC premium',
         'QR code inclus',
-        'Livraison gratuite',
+        'Livraison offerte en point relais',
         'Support prioritaire',
         'Garantie à vie',
       ],
@@ -52,7 +52,7 @@ export default function ProductSection() {
       features: [
         '5 plaques NFC premium',
         'QR code inclus',
-        'Livraison express gratuite',
+        'Livraison offerte en point relais',
         'Support prioritaire 24/7',
         'Garantie à vie',
         'Tableaux de bord analytics',
