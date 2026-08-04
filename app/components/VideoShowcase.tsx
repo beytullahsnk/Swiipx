@@ -60,7 +60,19 @@ const videos: Video[] = [
 ]
 
 const DUREE_ISO = 'PT8S' // 8 s — mesuré sur les fichiers sources
-const DATE_PUBLICATION = '2026-05-09'
+
+/**
+ * Mise en ligne des vidéos, au format ISO 8601 COMPLET.
+ *
+ * Search Console refusait « 2026-05-09 » : contrairement à `datePublished`,
+ * `uploadDate` exige l'heure ET le décalage horaire, une date seule est rejetée.
+ *
+ * Le décalage suit l'heure légale française à cette date : +02:00 de fin mars
+ * à fin octobre, +01:00 le reste de l'année. Pour une nouvelle vidéo, prendre
+ * celui de la saison — un +01:00 en juillet resterait accepté par Google, mais
+ * daterait la vidéo d'une heure trop tôt.
+ */
+const DATE_PUBLICATION = '2026-05-09T10:00:00+02:00'
 
 export default function VideoShowcase() {
   /* VideoObject : sans ce balisage, Google n'a aucun moyen de savoir que la page
