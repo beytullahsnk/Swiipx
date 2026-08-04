@@ -6,6 +6,8 @@ import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
 import ProductShowcase from './components/ProductShowcase'
+import { aggregateRatingJsonLd, reviews, reviewsJsonLd } from './data/reviews'
+import { HIGHEST_PRICE_CENTS, LOWEST_PRICE_CENTS, formatPriceSchema } from '../lib/pricing'
 
 export const dynamic = 'force-static'
 
@@ -74,8 +76,11 @@ export default function Home() {
     },
     offers: {
       '@type': 'AggregateOffer',
-      lowPrice: '35.88',
-      highPrice: '107.88',
+      // Derives de lib/pricing.ts : un prix code en dur ici resterait perime
+      // apres un changement de tarif, et Merchant Center suspend un compte dont
+      // le prix balise ne correspond plus a celui de la page.
+      lowPrice: formatPriceSchema(LOWEST_PRICE_CENTS),
+      highPrice: formatPriceSchema(HIGHEST_PRICE_CENTS),
       priceCurrency: 'EUR',
       availability: 'https://schema.org/InStock',
       offerCount: 3,
@@ -85,8 +90,11 @@ export default function Home() {
         name: 'Swiipx',
       },
     },
-    // aggregateRating + review retires : Google interdit les avis auto-generes.
-    // A reintroduire uniquement avec de vrais avis clients collectes et affiches.
+    // Note moyenne et avis : emis UNIQUEMENT si de vrais avis existent dans
+    // app/data/reviews.ts. La page d'accueil couvre toute la gamme, on prend
+    // donc l'ensemble des avis. Les memes sont affiches par <Testimonials />.
+    ...(aggregateRatingJsonLd(reviews) ?? {}),
+    ...(reviewsJsonLd(reviews) ?? {}),
   }
 
   const breadcrumbJsonLd = {

@@ -12,7 +12,9 @@ import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart, CartItem } from '../../store/cart'
 import ClientLogos from '../../components/ClientLogos'
-import { TVA } from '@/lib/pricing'
+import CustomerReviews from '../../components/CustomerReviews'
+import { reviewsPourPack } from '../../data/reviews'
+import { TVA, type PackSlug } from '@/lib/pricing'
 import {
   Accordion,
   AccordionItem,
@@ -35,9 +37,6 @@ const products = {
     price: 35.88,
     originalPrice: null as number | null,
     description: 'La plaque avis Google NFC idéale pour débuter. Collez-la à l\'accueil ou au comptoir : vos clients scannent et laissent un avis Google en 10 secondes, sans application. Plaque en acrylique premium 120×120 mm, garantie à vie.',
-    ratingValue: 4.8,
-    reviewCount: 247,
-    guaranteeYears: 2,
     features: [
       '1 plaque NFC premium',
       'QR code de secours intégré',
@@ -71,9 +70,6 @@ const products = {
     originalPrice: null as number | null,
     popular: true,
     description: 'Le pack professionnel avec 2 plaques NFC avis Google pour couvrir deux emplacements stratégiques. Doublez vos points de contact et multipliez vos avis Google naturellement. Acrylique premium, NTAG215, garanti à vie.',
-    ratingValue: 4.9,
-    reviewCount: 389,
-    guaranteeYears: 2,
     features: [
       '2 plaques NFC premium',
       'QR code de secours intégré',
@@ -106,9 +102,6 @@ const products = {
     price: 107.88,
     originalPrice: null as number | null,
     description: 'La solution complète avec 5 plaques NFC avis Google pour équiper tous vos emplacements. Idéal pour les entreprises multi-sites : tableau de bord analytics, liens personnalisables, support 24/7. Acrylique premium, garanti à vie.',
-    ratingValue: 5.0,
-    reviewCount: 156,
-    guaranteeYears: 3,
     features: [
       '5 plaques NFC premium',
       'QR code de secours intégré',
@@ -137,7 +130,6 @@ const products = {
 }
 
 function getInfoSections(slug: string) {
-  const guaranteeYears = slug === 'pro' ? 3 : 2
   return [
     {
       id: 'how-it-works',
@@ -157,7 +149,7 @@ function getInfoSections(slug: string) {
       id: 'guarantee',
       title: 'Garantie & Retours',
       icon: Shield,
-      content: `Garantie fabricant ${guaranteeYears} ans contre tout défaut de fabrication. Remplacement gratuit en cas de défaillance technique. Droit de rétractation de 14 jours (produit non utilisé, non collé, emballage intact). Support client réactif par email.`,
+      content: `Garantie à vie contre tout défaut de fabrication. Remplacement gratuit en cas de défaillance technique. Droit de rétractation de 14 jours (produit non utilisé, non collé, emballage intact). Support client réactif par email.`,
     },
   ]
 }
@@ -328,7 +320,7 @@ export default function ProductDetailPage() {
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Shield className="w-5 h-5 text-green-600" />
-                <span className="font-medium">Garantie {product.guaranteeYears} ans</span>
+                <span className="font-medium">Garantie à vie</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Truck className="w-5 h-5 text-green-600" />
@@ -538,6 +530,11 @@ export default function ProductDetailPage() {
             </div>
           </div>
         </div>
+
+        {/* Avis clients réels. Ne rend rien tant qu'aucun avis n'a été
+            collecté — c'est la même source que le balisage aggregateRating du
+            layout, pour que note affichée et note balisée ne divergent pas. */}
+        <CustomerReviews avis={reviewsPourPack(slug as PackSlug)} className="mt-20" />
 
         {/* Section "Comparer les autres packs" — internal linking SEO + cross-sell */}
         <RelatedProducts currentSlug={slug} />

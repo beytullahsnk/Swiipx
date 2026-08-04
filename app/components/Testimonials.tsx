@@ -1,6 +1,8 @@
 import { Quote, Zap, ShieldCheck, Truck, CreditCard } from 'lucide-react'
 import { clientsWithQuote } from '../data/clients'
+import { reviews } from '../data/reviews'
 import ClientLogos from './ClientLogos'
+import CustomerReviews from './CustomerReviews'
 
 /**
  * Section preuve sociale.
@@ -18,7 +20,9 @@ import ClientLogos from './ClientLogos'
 const productFacts = [
   { icon: Zap, value: '10 s', label: 'Pour laisser un avis' },
   { icon: CreditCard, value: '0 €', label: "D'abonnement" },
-  { icon: ShieldCheck, value: '2 ans', label: 'De garantie' },
+  // « À vie », et pas « 2 ans » : c'est l'engagement pris partout ailleurs
+  // (métadonnées, fiches produit, FAQ, CGV). Les deux chiffres coexistaient.
+  { icon: ShieldCheck, value: 'À vie', label: 'De garantie' },
   { icon: Truck, value: '2-5 j', label: 'De livraison' },
 ]
 
@@ -64,6 +68,10 @@ export default function Testimonials() {
             ))}
           </div>
         )}
+
+        {/* Avis notés — même source que le balisage aggregateRating de la page
+            d'accueil, pour que la note affichée soit toujours celle balisée. */}
+        <CustomerReviews avis={reviews} titre="Les avis de nos clients" className="mb-16" />
 
         {/* Caractéristiques produit — toutes vérifiables */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-gray-200">

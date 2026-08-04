@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import type { PackSlug } from '../../../lib/pricing'
+import { aggregateRatingJsonLd, reviewsJsonLd, reviewsPourPack } from '../../data/reviews'
 
 const productsMeta: Record<string, {
   title: string
@@ -8,9 +10,6 @@ const productsMeta: Record<string, {
   keywords: string
   sku: string
   image: string
-  ratingValue: string
-  reviewCount: string
-  guaranteeYears: number
 }> = {
   starter: {
     title: 'Pack Starter — 1 Plaque Avis Google NFC',
@@ -20,9 +19,6 @@ const productsMeta: Record<string, {
     keywords: 'plaque avis google, plaque avis google nfc, pack starter plaque avis google, collecter avis google',
     sku: 'SWIIPX-STARTER',
     image: '/products/plaque1.jpg',
-    ratingValue: '4.8',
-    reviewCount: '247',
-    guaranteeYears: 2,
   },
   business: {
     title: 'Pack Business — 2 Plaques Avis Google NFC',
@@ -32,9 +28,6 @@ const productsMeta: Record<string, {
     keywords: 'plaque avis google, pack business plaque avis google nfc, 2 plaques avis google',
     sku: 'SWIIPX-BUSINESS',
     image: '/products/plaque2.jpg',
-    ratingValue: '4.9',
-    reviewCount: '389',
-    guaranteeYears: 2,
   },
   pro: {
     title: 'Pack Pro — 5 Plaques Avis Google NFC',
@@ -44,9 +37,6 @@ const productsMeta: Record<string, {
     keywords: 'plaque avis google, pack pro plaque avis google nfc, 5 plaques avis google',
     sku: 'SWIIPX-PRO',
     image: '/products/plaque5.jpg',
-    ratingValue: '5.0',
-    reviewCount: '156',
-    guaranteeYears: 3,
   },
 }
 
@@ -58,7 +48,7 @@ const productSpecs: Record<string, Array<{ name: string; value: string }>> = {
     { name: 'Compatibilité', value: 'Tous smartphones récents (iPhone & Android)' },
     { name: 'Résistance', value: 'Eau, UV, rayures' },
     { name: 'Nombre de plaques', value: '1' },
-    { name: 'Garantie', value: '2 ans' },
+    { name: 'Garantie', value: 'À vie (défaut de fabrication)' },
   ],
   business: [
     { name: 'Dimensions', value: '120 x 120 x 3 mm' },
@@ -67,7 +57,7 @@ const productSpecs: Record<string, Array<{ name: string; value: string }>> = {
     { name: 'Compatibilité', value: 'Tous smartphones récents (iPhone & Android)' },
     { name: 'Résistance', value: 'Eau, UV, rayures' },
     { name: 'Nombre de plaques', value: '2' },
-    { name: 'Garantie', value: '2 ans' },
+    { name: 'Garantie', value: 'À vie (défaut de fabrication)' },
   ],
   pro: [
     { name: 'Dimensions', value: '120 x 120 x 3 mm' },
@@ -76,7 +66,7 @@ const productSpecs: Record<string, Array<{ name: string; value: string }>> = {
     { name: 'Compatibilité', value: 'Tous smartphones récents (iPhone & Android)' },
     { name: 'Résistance', value: 'Eau, UV, rayures' },
     { name: 'Nombre de plaques', value: '5' },
-    { name: 'Garantie', value: '2 ans' },
+    { name: 'Garantie', value: 'À vie (défaut de fabrication)' },
   ],
 }
 
@@ -96,6 +86,13 @@ const productFAQs: Record<string, Array<{ question: string; answer: string }>> =
     { question: 'Comment fonctionnent les liens personnalisables par plaque NFC ?', answer: 'Chaque plaque NFC du Pack Pro peut pointer vers une URL différente. Vous pouvez rediriger vers votre page Google Business, un formulaire de satisfaction client, ou tout autre lien. La configuration est incluse et notre support vous accompagne.' },
     { question: 'La garantie à vie du Pack Pro couvre quoi exactement ?', answer: 'Le Pack Pro bénéficie d\'une garantie à vie contre tout défaut de fabrication des plaques NFC en acrylique. En cas de défaillance technique non imputable à une mauvaise utilisation, nous remplaçons la plaque gratuitement.' },
   ],
+}
+
+/** Expedition sous 24 h ouvrees, puis 2 a 3 jours de transport. */
+const DELAI_LIVRAISON = {
+  '@type': 'ShippingDeliveryTime',
+  handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 1, unitCode: 'DAY' },
+  transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 3, unitCode: 'DAY' },
 }
 
 export function generateStaticParams() {
@@ -156,6 +153,7 @@ export default function ProductLayout({ params, children }: { params: { slug: st
 
   const specs = productSpecs[slug] || []
   const faqs = productFAQs[slug] || []
+  const avis = reviewsPourPack(slug as PackSlug)
 
   const productJsonLd = {
     '@context': 'https://schema.org',
@@ -198,36 +196,35 @@ export default function ProductLayout({ params, children }: { params: { slug: st
         returnMethod: 'https://schema.org/ReturnByMail',
         returnFees: 'https://schema.org/FreeReturn',
       },
-      shippingDetails: {
-        '@type': 'OfferShippingDetails',
-        shippingRate: {
-          '@type': 'MonetaryAmount',
-          value: '0',
-          currency: 'EUR',
+      // DEUX modes, deux tarifs. Le balisage annoncait une livraison a 0 EUR
+      // alors que le domicile est facture 4,90 EUR au panier
+      // (SHIPPING_DOMICILE_CENTS). Google recoupe le prix balise avec celui
+      // reellement debite : un ecart a la hausse fait desapprouver la fiche.
+      shippingDetails: [
+        {
+          '@type': 'OfferShippingDetails',
+          name: 'Point relais',
+          shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'EUR' },
+          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'FR' },
+          deliveryTime: DELAI_LIVRAISON,
         },
-        shippingDestination: {
-          '@type': 'DefinedRegion',
-          addressCountry: 'FR',
+        {
+          '@type': 'OfferShippingDetails',
+          name: 'Domicile',
+          shippingRate: { '@type': 'MonetaryAmount', value: '4.90', currency: 'EUR' },
+          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'FR' },
+          deliveryTime: DELAI_LIVRAISON,
         },
-        deliveryTime: {
-          '@type': 'ShippingDeliveryTime',
-          handlingTime: {
-            '@type': 'QuantitativeValue',
-            minValue: 1,
-            maxValue: 1,
-            unitCode: 'DAY',
-          },
-          transitTime: {
-            '@type': 'QuantitativeValue',
-            minValue: 2,
-            maxValue: 3,
-            unitCode: 'DAY',
-          },
-        },
-      },
+      ],
     },
-    // aggregateRating + review retires : les avis doivent etre reels, collectes
-    // aupres de vrais clients et affiches sur la page. A reintroduire ensuite.
+    // Note moyenne et avis : emis UNIQUEMENT si de vrais avis existent dans
+    // app/data/reviews.ts. Merchant Center signale ces deux champs comme
+    // manquants (avertissement non bloquant) ; les remplir avec des notes
+    // inventees serait une infraction aux regles sur les donnees structurees.
+    // Les memes avis sont affiches sur la page par <CustomerReviews />, comme
+    // Google l'exige.
+    ...(aggregateRatingJsonLd(avis) ?? {}),
+    ...(reviewsJsonLd(avis) ?? {}),
   }
 
   const breadcrumbJsonLd = {
