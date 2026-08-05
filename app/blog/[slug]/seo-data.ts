@@ -26,6 +26,22 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'cout-avis-google-comparatif': {
+    title: "Combien coûte un avis Google ? Le vrai coût par avis",
+    description: "Combien coûte réellement un avis Google ? Comparatif du coût par avis de 6 méthodes de collecte, coût caché du temps salarié et calcul détaillé sur 36 mois.",
+    keywords: 'cout avis google, prix avis google, combien coute un avis google, cout par avis, acheter avis google, plateforme avis google prix, collecte avis google tarif, roi avis google',
+    date: '2026-08-05',
+    dateModified: '2026-08-05',
+    category: 'Comparatif',
+    faq: [
+      { q: 'Combien coûte un avis Google en moyenne ?', a: "Entre 0,03 € et 1,50 € selon la méthode de collecte, temps de personnel inclus, sur une période de 36 mois. Les supports physiques sans abonnement se situent en bas de fourchette (0,03 à 0,15 €), les plateformes SMS ou e-mail en haut (0,44 à 1,50 €). Un avis ne s'achète pas : ces montants sont des coûts de collecte, pas un prix d'achat, qui serait interdit par Google et sanctionné en droit français." },
+      { q: "Quel est le coût par avis d'une plaque NFC ?", a: "Environ 0,06 € par avis sur 36 mois pour le matériel seul, et 0,12 € en incluant les 4 à 6 secondes de temps salarié par client. Le calcul repose sur un achat unique de 35,88 € à 107,88 € selon le pack, sans aucun frais récurrent, et sur un taux de collecte de 25 à 45 % selon le secteur et l'emplacement." },
+      { q: "Les plateformes d'avis par SMS valent-elles leur abonnement ?", a: "Elles se justifient dans deux cas : un modèle sans contact physique en fin de prestation, comme la vente à distance, ou un besoin de reporting multi-établissements. Pour un commerce de proximité avec un passage en caisse, elles coûtent 10 à 25 fois plus cher par avis, produisent 40 % de volume en moins à cause du délai de relance, et exposent au risque de réveiller un client mécontent." },
+      { q: 'Peut-on acheter des avis Google ?', a: "Non. C'est interdit par les règles de Google, qui procède à des suppressions massives incluant les avis légitimes et peut suspendre la fiche. En France, s'y ajoute la qualification de pratique commerciale trompeuse, passible de 300 000 € d'amende pour une personne morale. Le rapport coût / risque est sans commune mesure avec celui d'une collecte régulière et légitime." },
+      { q: 'Faut-il vraiment compter le temps du personnel dans le coût ?', a: "Oui, c'est souvent le premier poste. Une minute de temps salarié chargé revient à environ 0,35 € en 2026. Une méthode demandant 30 secondes par client dans un commerce à 800 clients mensuels coûte 1 680 € par an en temps seul, soit davantage que la plupart des abonnements du marché." },
+      { q: 'Combien rapporte un avis Google ?', a: "Entre 4 et 120 € de chiffre d'affaires additionnel selon le secteur et le panier moyen : environ 4 à 9 € en restauration, 7 à 15 € en coiffure, 25 à 60 € en garage automobile et 40 à 120 € chez un artisan du bâtiment. Rapportée à un coût de collecte inférieur à 0,15 €, la rentabilité est d'un ordre de grandeur sans équivalent parmi les leviers marketing d'un commerce local." },
+    ],
+  },
   'combien-avis-google-pack-local': {
     title: "Combien d'avis Google pour être dans le pack local ?",
     description: "Combien d'avis Google faut-il pour entrer dans le top 3 du pack local ? La méthode de calcul, les benchmarks par secteur et le plan pour atteindre le seuil.",

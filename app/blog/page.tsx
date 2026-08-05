@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 24,
+    title: "Combien coûte un avis Google ? Le comparatif du coût réel",
+    excerpt: "Un avis Google coûte entre 0,03 et 1,50 € selon la méthode. Comparatif chiffré de 6 méthodes de collecte, coût caché du temps salarié, calcul sur 36 mois et valeur d'un avis par secteur.",
+    category: 'Comparatif',
+    date: '5 août 2026',
+    dateIso: '2026-08-05',
+    readTime: '12 min',
+    slug: 'cout-avis-google-comparatif',
+  },
+  {
     id: 23,
     title: "Combien d'avis Google faut-il pour apparaître dans le pack local ?",
     excerpt: "Pas de seuil magique : le nombre d'avis Google nécessaire pour entrer dans le top 3 se calcule. Méthode de la médiane +30 %, benchmarks par secteur, 3 cas chiffrés et plan d'action.",

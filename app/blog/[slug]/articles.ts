@@ -18,6 +18,204 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'cout-avis-google-comparatif': {
+    title: "Combien coûte un avis Google ? Le comparatif du coût réel par avis",
+    category: 'Comparatif',
+    date: '5 août 2026',
+    readTime: '12 min',
+    author: 'Équipe Swiipx',
+    excerpt: "Un avis Google coûte entre 0,03 et 1,50 € selon la méthode de collecte. Comparatif chiffré de 6 méthodes, coût caché du temps salarié, calcul sur 36 mois et valeur d'un avis par secteur.",
+    tocSections: [
+      { id: 'cout-par-avis', label: 'Pourquoi raisonner par avis' },
+      { id: 'formule', label: 'La formule de calcul' },
+      { id: 'comparatif', label: 'Comparatif des 6 méthodes' },
+      { id: 'detail-methodes', label: 'Le détail méthode par méthode' },
+      { id: 'cout-cache', label: 'Le coût caché du temps' },
+      { id: 'calcul-nfc', label: 'Le calcul NFC sur 3 ans' },
+      { id: 'valeur-avis', label: 'Combien rapporte un avis' },
+      { id: 'erreurs-budget', label: '5 erreurs de budget' },
+      { id: 'faq-cout-avis', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="cout-par-avis" class="scroll-mt-28 mb-16">
+<h2>Le coût par avis : la seule métrique qui permette de comparer</h2>
+<p>« Combien coûte un avis Google ? » est une question mal posée tant qu'on n'a pas fixé l'unité. Un avis ne s'achète pas — c'est d'ailleurs interdit — mais il se <strong>collecte</strong>, et toute méthode de collecte a un coût : un abonnement, un objet, du temps de personnel, ou les trois.</p>
+<p>La bonne unité de comparaison est donc le <strong>coût complet par avis obtenu</strong>, sur une durée donnée. Sans cette unité, un commerçant compare une plaque à 35,88 € avec une plateforme à 49 €/mois et conclut que la plaque est « moins chère », ce qui ne veut rien dire : l'une est un achat unique, l'autre une charge récurrente, et elles ne produisent pas le même nombre d'avis.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> sur 36 mois, une solution à 49 € par mois coûte <strong>1 764 €</strong>. Si elle génère 15 avis par mois, l'avis revient à 3,27 €. Si elle en génère 4, il revient à 12,25 €. Le prix affiché ne dit rien tant qu'on ne connaît pas le dénominateur.</p>
+</div>
+<p>Cet article calcule ce coût pour les six méthodes réellement utilisées par les commerces français, temps de personnel inclus, et le met en regard de la valeur produite par un avis. Les fourchettes proviennent des tarifs publics du marché et des taux de conversion observés chez les commerces équipés.</p>
+</section>
+
+<section id="formule" class="scroll-mt-28 mb-16">
+<h2>La formule, en trois lignes</h2>
+<p>Le calcul tient en une division, à condition de n'oublier aucun des trois termes du numérateur :</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>🎯 Coût par avis = (coût matériel + abonnements sur la période + temps salarié valorisé) ÷ nombre d'avis réellement publiés sur la période.</strong></p>
+</div>
+<p>Trois précisions déterminent la fiabilité du résultat.</p>
+<h3>1. Compter les avis publiés, pas les sollicitations</h3>
+<p>Un e-mail envoyé n'est pas un avis. Une page d'avis ouverte non plus : entre l'ouverture du formulaire et la publication, la déperdition est de 20 à 35 %. Le seul chiffre utilisable est celui affiché sur votre fiche Google Business Profile au début et à la fin de la période.</p>
+<h3>2. Valoriser le temps de personnel</h3>
+<p>C'est la ligne que tout le monde oublie, et c'est souvent la plus lourde. Une minute de temps salarié coûte environ <strong>0,35 € chargé</strong> pour un poste au SMIC en 2026. Une méthode qui demande 3 minutes par avis obtenu porte donc un coût caché supérieur à 1 € l'unité, indépendamment de tout abonnement.</p>
+<h3>3. Choisir une période d'au moins 36 mois</h3>
+<p>Sur 3 mois, tout achat unique paraît cher et tout abonnement paraît bon marché. Sur 36 mois, le rapport s'inverse. Trois ans est la durée d'amortissement raisonnable d'un support physique, et l'horizon sur lequel un commerçant construit sa réputation locale.</p>
+</section>
+
+<section id="comparatif" class="scroll-mt-28 mb-16">
+<h2>Le comparatif : coût par avis des 6 méthodes de collecte</h2>
+<p>Hypothèse commune à toutes les lignes : un commerce recevant <strong>800 clients par mois</strong>, sur une période de 36 mois. Le coût inclut le matériel, les abonnements et le temps de personnel valorisé à 0,35 €/minute.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Méthode</th><th class="border p-3 text-left">Coût sur 36 mois</th><th class="border p-3 text-left">Taux de conversion</th><th class="border p-3 text-left">Avis / 36 mois</th><th class="border p-3 text-left">Coût par avis</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Demande orale seule</td><td class="border p-3">302 € (temps)</td><td class="border p-3">3 - 5 %</td><td class="border p-3">~1 150</td><td class="border p-3">0,26 €</td></tr>
+<tr><td class="border p-3">Carte de visite avec QR</td><td class="border p-3">220 €</td><td class="border p-3">1 - 3 %</td><td class="border p-3">~575</td><td class="border p-3">0,38 €</td></tr>
+<tr><td class="border p-3"><strong>Plaque NFC (achat unique)</strong></td><td class="border p-3"><strong>66 € + temps</strong></td><td class="border p-3"><strong>25 - 45 %</strong></td><td class="border p-3"><strong>~7 000</strong></td><td class="border p-3"><strong>0,06 €</strong></td></tr>
+<tr><td class="border p-3">Affiche / chevalet QR code</td><td class="border p-3">90 €</td><td class="border p-3">8 - 12 %</td><td class="border p-3">~2 880</td><td class="border p-3">0,03 € *</td></tr>
+<tr><td class="border p-3">Plateforme SMS / e-mail</td><td class="border p-3">1 060 - 3 500 €</td><td class="border p-3">5 - 12 %</td><td class="border p-3">~2 400</td><td class="border p-3">0,44 - 1,46 €</td></tr>
+<tr><td class="border p-3">Plaque NFC avec abonnement</td><td class="border p-3">750 - 1 100 €</td><td class="border p-3">25 - 45 %</td><td class="border p-3">~7 000</td><td class="border p-3">0,11 - 0,16 €</td></tr>
+</tbody>
+</table>
+</div>
+<p class="text-sm text-gray-500">* Le coût unitaire du chevalet QR paraît bas parce qu'il ne consomme aucun temps de personnel, mais son volume absolu reste trois fois inférieur à celui d'une plaque NFC. Un coût par avis faible sur un volume insuffisant ne fait pas entrer dans le pack local.</p>
+<p>Deux lectures s'imposent. D'abord, <strong>les écarts de coût unitaire sont d'un facteur 20 entre les extrêmes</strong>, ce qui est considérable pour un poste de dépense que la plupart des commerçants ne budgètent même pas. Ensuite, et c'est plus important, <strong>le coût par avis ne suffit pas à décider</strong> : ce qui compte est le couple coût / volume. La colonne à regarder en priorité est celle des avis produits, car un classement local se gagne en volume relatif, comme le détaille notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>.</p>
+</section>
+
+<section id="detail-methodes" class="scroll-mt-28 mb-16">
+<h2>Méthode par méthode : ce que révèle le détail</h2>
+
+<h3>La demande orale seule — 0,26 € l'avis, mais un plafond bas</h3>
+<p>Demander un avis de vive voix ne coûte rien d'autre que du temps, et c'est la méthode la moins chère à l'unité. Son problème est structurel : sans support physique, moins de 5 % des clients passent à l'acte, parce qu'il faut ouvrir Google, taper le nom de l'établissement, le retrouver parmi les résultats, faire défiler jusqu'aux avis. Chacune de ces étapes perd du monde. La demande orale est un excellent <strong>multiplicateur</strong>, un mauvais support principal.</p>
+
+<h3>La carte de visite avec QR code — 0,38 € l'avis</h3>
+<p>Économique à produire, mais le taux de retour est le plus faible du comparatif : 1 à 3 %. La carte quitte le point de vente, atterrit dans une poche ou une boîte à gants, et la fenêtre de satisfaction se referme. Un avis se collecte au moment précis où le client est content, jamais deux jours plus tard.</p>
+
+<h3>L'affiche ou le chevalet QR — 0,03 € l'avis, mais un volume limité</h3>
+<p>Le QR code convertit 8 à 12 % lorsqu'il est bien placé, et son coût de production est dérisoire. Ses limites sont pratiques : il faut ouvrir l'appareil photo, viser, attendre la détection, valider la notification. Quatre gestes contre un seul pour le NFC. Nous avons détaillé les écarts mesurés dans notre <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif plaque NFC vs QR code</a>.</p>
+
+<h3>Les plateformes SMS / e-mail — 0,44 à 1,46 € l'avis</h3>
+<p>Comptez 29 à 99 € par mois selon le nombre de contacts, plus le coût unitaire des SMS. Le modèle a deux mérites : il fonctionne à distance, et il produit un reporting. Il a trois défauts sérieux. Le premier est le coût récurrent, qui ne s'arrête jamais. Le deuxième est le délai : un SMS envoyé le lendemain arrive après la fenêtre de satisfaction, et le taux de clic plafonne à 5-8 %. Le troisième est le risque : relancer un client mécontent qui n'y pensait plus produit un avis négatif que personne n'avait demandé.</p>
+
+<h3>La plaque NFC sans abonnement — 0,06 € l'avis</h3>
+<p>Un achat unique, aucun frais récurrent, et le meilleur taux de conversion du comparatif parce que le geste est réduit à son minimum : approcher le téléphone, la page d'avis s'ouvre. C'est la combinaison coût faible / volume élevé, et c'est la seule ligne du tableau où les deux se cumulent.</p>
+
+<h3>La plaque NFC avec abonnement — 0,11 à 0,16 € l'avis</h3>
+<p>Même support physique, même taux de conversion, mais un abonnement de 19 à 29 € par mois pour un « tableau de bord » et un lien reprogrammable. Le coût par avis double, voire triple, pour un service dont la valeur réelle est faible : le lien d'avis Google d'un établissement ne change pratiquement jamais. Notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a> chiffre l'écart sur cinq ans.</p>
+</section>
+
+<section id="cout-cache" class="scroll-mt-28 mb-16">
+<h2>Le coût caché que personne ne budgète : le temps</h2>
+<p>Sur les six méthodes, quatre consomment du temps de personnel. Ce temps ne figure sur aucune facture, ce qui explique qu'il soit systématiquement absent des comparatifs commerciaux — y compris ceux publiés par les vendeurs de solutions.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Méthode</th><th class="border p-3 text-left">Temps par client</th><th class="border p-3 text-left">Coût temps / mois (800 clients)</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Demande orale détaillée</td><td class="border p-3">25 - 40 s</td><td class="border p-3">116 - 187 €</td></tr>
+<tr><td class="border p-3">Saisie manuelle des contacts</td><td class="border p-3">30 s</td><td class="border p-3">140 €</td></tr>
+<tr><td class="border p-3">Plaque NFC + phrase courte</td><td class="border p-3">4 - 6 s</td><td class="border p-3">19 - 28 €</td></tr>
+<tr><td class="border p-3">QR code sans mention orale</td><td class="border p-3">0 s</td><td class="border p-3">0 €</td></tr>
+</tbody>
+</table>
+</div>
+<p>La ligne intéressante est la deuxième. Les plateformes qui exigent la saisie d'un numéro de téléphone ou d'une adresse e-mail à l'encaissement coûtent, en temps seul, <strong>environ 1 680 € par an</strong> dans un commerce à 800 clients mensuels — soit davantage que l'abonnement lui-même. C'est aussi la source de friction qui fait abandonner ces dispositifs au bout de quelques semaines : en période de rush, l'équipe cesse de demander, et le flux d'avis s'arrête.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Le test des 5 secondes.</strong> Une méthode de collecte n'est durable que si elle tient en moins de 5 secondes au moment de l'encaissement. Au-delà, elle sera abandonnée dès le premier coup de feu du service — et une méthode abandonnée a un coût par avis infini.</p>
+</div>
+</section>
+
+<section id="calcul-nfc" class="scroll-mt-28 mb-16">
+<h2>Le calcul détaillé d'une plaque NFC, sur 3 ans</h2>
+<p>Prenons un cas concret plutôt qu'une moyenne : un salon de coiffure, deux postes d'encaissement, 420 clients par mois.</p>
+<ul>
+<li><strong>Investissement :</strong> <a href="/product/business">Pack Business</a>, 2 plaques, 65,88 € livraison comprise. Aucun abonnement.</li>
+<li><strong>Taux de collecte observé :</strong> 38 % (le salon de coiffure est le secteur le plus performant, la plaque étant posée sur le poste de coiffage et à la caisse).</li>
+<li><strong>Avis mensuels :</strong> 420 × 0,38 ≈ 160 avis sollicités, dont environ <strong>115 réellement publiés</strong> après déperdition.</li>
+<li><strong>Temps salarié :</strong> 5 secondes × 420 clients = 35 minutes par mois, soit 12,25 €.</li>
+<li><strong>Coût total sur 36 mois :</strong> 65,88 € + (12,25 € × 36) = <strong>506,88 €</strong> pour environ 4 140 avis.</li>
+</ul>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>🎯 Coût complet : 0,12 € par avis publié</strong>, temps de personnel inclus. Sans le temps salarié, le matériel seul revient à 0,016 € par avis. À titre de comparaison, une plateforme d'avis par SMS au même volume coûterait entre 1 060 € et 3 500 € sur la même période, pour un volume inférieur de 40 %.</p>
+</div>
+<p>Le déclencheur du calcul n'est pas le prix de la plaque — 66 € est une somme négligeable pour un commerce — mais le fait que le coût soit <strong>fixe et non récurrent</strong>. Chaque avis supplémentaire collecté fait baisser le coût unitaire, alors qu'un abonnement le maintient constant, quel que soit le volume produit. Nos fourchettes de prix par qualité de plaque sont détaillées dans l'article <a href="/blog/prix-plaque-nfc-avis-google">prix d'une plaque NFC</a>.</p>
+</section>
+
+<section id="valeur-avis" class="scroll-mt-28 mb-16">
+<h2>De l'autre côté du calcul : combien rapporte un avis Google ?</h2>
+<p>Un coût par avis n'a de sens que rapporté à une valeur. Celle-ci se calcule à partir de trois effets cumulatifs.</p>
+<h3>L'effet direct sur la conversion</h3>
+<p>À position égale dans le pack local, une fiche notée 4,6 avec 200 avis capte 2 à 3 fois plus de clics qu'une fiche notée 4,1 avec 25 avis. Sur une recherche locale, 76 % des internautes se rendent dans un établissement dans les 24 heures.</p>
+<h3>L'effet sur le classement</h3>
+<p>Le volume et la fraîcheur des avis alimentent la proéminence, l'un des trois critères de classement local. Gagner deux places dans le pack local représente, selon le secteur, 5 à 15 nouveaux clients par mois.</p>
+<h3>La valeur unitaire estimée</h3>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Secteur</th><th class="border p-3 text-left">Panier moyen</th><th class="border p-3 text-left">Valeur estimée d'un avis</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Restaurant</td><td class="border p-3">28 €</td><td class="border p-3">4 - 9 €</td></tr>
+<tr><td class="border p-3">Salon de coiffure</td><td class="border p-3">42 €</td><td class="border p-3">7 - 15 €</td></tr>
+<tr><td class="border p-3">Garage automobile</td><td class="border p-3">310 €</td><td class="border p-3">25 - 60 €</td></tr>
+<tr><td class="border p-3">Institut de beauté</td><td class="border p-3">65 €</td><td class="border p-3">10 - 22 €</td></tr>
+<tr><td class="border p-3">Artisan du bâtiment</td><td class="border p-3">950 €</td><td class="border p-3">40 - 120 €</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ces valeurs sont des ordres de grandeur, obtenus en rapportant le chiffre d'affaires additionnel issu de Google au nombre d'avis collectés sur la même période. Elles suffisent pour la seule conclusion qui compte : <strong>l'écart entre le coût d'un avis (0,03 à 1,50 €) et sa valeur (4 à 120 €) est d'un facteur 10 à 1 000</strong>. Aucun autre poste de dépense marketing d'un commerce local n'affiche un rapport comparable. La question du budget n'est donc pas « est-ce rentable » mais « pourquoi si peu de commerces le font ».</p>
+</section>
+
+<section id="erreurs-budget" class="scroll-mt-28 mb-16">
+<h2>5 erreurs de raisonnement budgétaire</h2>
+<h3>1. Comparer un prix d'achat à un prix mensuel</h3>
+<p>35,88 € contre 29 €/mois n'est pas une comparaison. Ramenez toujours les deux à la même période : sur 36 mois, l'écart est de 35,88 € contre 1 044 €.</p>
+<h3>2. Ignorer le temps de personnel</h3>
+<p>C'est le premier poste de coût réel des méthodes manuelles, et il n'apparaît sur aucun devis. Une méthode gratuite qui consomme 30 secondes par client est plus chère qu'une plaque à 66 €.</p>
+<h3>3. Raisonner en coût unitaire sans regarder le volume</h3>
+<p>Un support à 0,03 € l'avis qui produit 30 avis par an ne vous fera jamais entrer dans le pack local. Le volume est le facteur limitant, pas le prix.</p>
+<h3>4. Envisager l'achat d'avis</h3>
+<p>Outre l'interdiction par Google et la suppression massive qui s'ensuit — y compris des avis légitimes —, une pratique commerciale trompeuse expose en France à 300 000 € d'amende pour une entreprise. Le sujet est traité dans notre article sur les <a href="/blog/faux-avis-google-signaler">faux avis Google</a>. Le coût par avis d'une fiche suspendue est, littéralement, celui de tout le chiffre d'affaires issu de Google.</p>
+<h3>5. Négliger l'emplacement du support</h3>
+<p>À matériel identique, un mauvais emplacement divise la conversion par trois, et donc multiplie le coût par avis par trois. C'est la variable la plus rentable à optimiser, et elle est gratuite : voir nos <a href="/blog/ou-placer-plaque-avis-google">7 emplacements testés</a>.</p>
+</section>
+
+<section id="faq-cout-avis" class="scroll-mt-28 mb-16">
+<h2>FAQ — Le coût d'un avis Google</h2>
+
+<h3>Combien coûte un avis Google en moyenne ?</h3>
+<p>Entre 0,03 € et 1,50 € selon la méthode de collecte, temps de personnel inclus, sur une période de 36 mois. Les supports physiques sans abonnement se situent en bas de fourchette (0,03 à 0,15 €), les plateformes SMS ou e-mail en haut (0,44 à 1,50 €). Un avis ne s'achète pas : ces montants sont des coûts de collecte, pas un prix d'achat, qui serait interdit par Google et sanctionné en droit français.</p>
+
+<h3>Quel est le coût par avis d'une plaque NFC ?</h3>
+<p>Environ 0,06 € par avis sur 36 mois pour le matériel seul, et 0,12 € en incluant les 4 à 6 secondes de temps salarié par client. Le calcul repose sur un achat unique de 35,88 € à 107,88 € selon le pack, sans aucun frais récurrent, et sur un taux de collecte de 25 à 45 % selon le secteur et l'emplacement.</p>
+
+<h3>Les plateformes d'avis par SMS valent-elles leur abonnement ?</h3>
+<p>Elles se justifient dans deux cas : un modèle sans contact physique en fin de prestation, comme la vente à distance, ou un besoin de reporting multi-établissements. Pour un commerce de proximité avec un passage en caisse, elles coûtent 10 à 25 fois plus cher par avis, produisent 40 % de volume en moins à cause du délai de relance, et exposent au risque de réveiller un client mécontent.</p>
+
+<h3>Peut-on acheter des avis Google ?</h3>
+<p>Non. C'est interdit par les règles de Google, qui procède à des suppressions massives incluant les avis légitimes et peut suspendre la fiche. En France, s'y ajoute la qualification de pratique commerciale trompeuse, passible de 300 000 € d'amende pour une personne morale. Le rapport coût / risque est sans commune mesure avec celui d'une collecte régulière et légitime.</p>
+
+<h3>Faut-il vraiment compter le temps du personnel dans le coût ?</h3>
+<p>Oui, c'est souvent le premier poste. Une minute de temps salarié chargé revient à environ 0,35 € en 2026. Une méthode demandant 30 secondes par client dans un commerce à 800 clients mensuels coûte 1 680 € par an en temps seul, soit davantage que la plupart des abonnements du marché.</p>
+
+<h3>Combien rapporte un avis Google ?</h3>
+<p>Entre 4 et 120 € de chiffre d'affaires additionnel selon le secteur et le panier moyen : environ 4 à 9 € en restauration, 7 à 15 € en coiffure, 25 à 60 € en garage automobile et 40 à 120 € chez un artisan du bâtiment. Rapportée à un coût de collecte inférieur à 0,15 €, la rentabilité est d'un ordre de grandeur sans équivalent parmi les leviers marketing d'un commerce local.</p>
+
+<h3>Quel pack choisir pour minimiser le coût par avis ?</h3>
+<p>Le coût unitaire du matériel baisse avec le nombre de plaques : 35,88 € pour une plaque en <a href="/product/starter">Pack Starter</a>, 32,94 € l'unité en <a href="/product/business">Pack Business</a>, et 21,58 € l'unité en <a href="/product/pro">Pack Pro</a>. Mais le vrai levier n'est pas le prix unitaire : c'est le nombre de points de contact équipés, qui détermine le volume. Notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat</a> propose une grille de décision par profil.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : un poste de dépense minuscule, un impact disproportionné</h2>
+<p>Ramené à l'unité, un avis Google coûte moins cher qu'un sachet de sucre servi avec un café. C'est le chiffre le plus contre-intuitif de ce comparatif : les commerces qui plafonnent à 20 avis ne sont pas ceux qui ont refusé d'investir, ce sont ceux qui n'ont jamais posé la question en ces termes.</p>
+<p>Trois décisions suffisent à optimiser ce poste. Choisir un support à coût fixe plutôt qu'un abonnement, parce que le coût unitaire baisse alors avec le volume au lieu de rester constant. Réduire à moins de cinq secondes le geste demandé au personnel, sans quoi la méthode sera abandonnée au premier rush. Et vérifier chaque trimestre le seul chiffre qui compte : le nombre d'avis effectivement publiés sur votre fiche.</p>
+<p>Pour aller plus loin : le <a href="/blog/prix-plaque-nfc-avis-google">prix détaillé des plaques NFC</a>, le <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif NFC contre QR code</a>, et les <a href="/blog/statistiques-avis-google-2026">45 statistiques avis Google 2026</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Le coût par avis le plus bas du marché, sans abonnement</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>paiement unique sans frais récurrents</strong>. À partir de 35,88 €, livraison offerte.</p>
+</div>
+</section>
+`,
+  },
   'combien-avis-google-pack-local': {
     title: "Combien d'avis Google faut-il pour apparaître dans le pack local ?",
     category: 'Statistiques',
