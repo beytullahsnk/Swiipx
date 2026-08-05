@@ -6,7 +6,7 @@ import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
 import ProductShowcase from './components/ProductShowcase'
-import { aggregateRatingJsonLd, reviews, reviewsJsonLd } from './data/reviews'
+import { notationJsonLd, reviews, reviewsPourPack } from './data/reviews'
 import { PACK_LIST } from '../lib/pricing'
 import { NOM_PACK, offreGammeJsonLd, produitPackJsonLd } from '../lib/product-schema'
 
@@ -79,8 +79,7 @@ export default function Home() {
     // Note moyenne et avis : emis UNIQUEMENT si de vrais avis existent dans
     // app/data/reviews.ts. La page d'accueil couvre toute la gamme, on prend
     // donc l'ensemble des avis. Les memes sont affiches par <Testimonials />.
-    ...(aggregateRatingJsonLd(reviews) ?? {}),
-    ...(reviewsJsonLd(reviews) ?? {}),
+    ...notationJsonLd(reviews),
   }
 
   const breadcrumbJsonLd = {
@@ -168,7 +167,15 @@ export default function Home() {
     itemListElement: PACK_LIST.map((pack) => ({
       '@type': 'Offer',
       name: `${NOM_PACK[pack.slug]} — ${pack.plaques} plaque${pack.plaques > 1 ? 's' : ''}`,
-      itemOffered: produitPackJsonLd(pack),
+      itemOffered: {
+        ...produitPackJsonLd(pack),
+        // Les avis AUSSI ici : Search Console compte chaque Product de la page,
+        // y compris ceux imbriques dans un OfferCatalog. Les trois avaient bien
+        // leur offre complete mais aucune note, ce qui a fait echouer la
+        // validation de « aggregateRating » et « review ». Les avis sont ceux
+        // de la plaque, et ils sont visibles sur cette meme page.
+        ...notationJsonLd(reviewsPourPack(pack.slug)),
+      },
     })),
   }
 

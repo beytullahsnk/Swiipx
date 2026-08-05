@@ -152,6 +152,27 @@ export function noteMoyenne(list: Review[]): Note | null {
 }
 
 /**
+ * Note moyenne ET avis, prêts à être étalés dans un JSON-LD Product.
+ *
+ * À PRÉFÉRER aux deux fonctions ci-dessous, qu'il faut penser à appeler
+ * ensemble. Ne poser que `aggregateRating` sans `review` est précisément ce que
+ * Search Console signale, et c'est l'oubli qui a fait échouer une première
+ * validation : trois Product imbriqués dans l'OfferCatalog de l'accueil avaient
+ * été engendrés sans note du tout.
+ *
+ *   { ...produit, ...notationJsonLd(reviewsPourPack('starter')) }
+ *
+ * Renvoie un objet vide s'il n'y a aucun avis noté : aucune clé n'est alors
+ * ajoutée au produit.
+ */
+export function notationJsonLd(list: Review[]) {
+  return {
+    ...(aggregateRatingJsonLd(list) ?? {}),
+    ...(reviewsJsonLd(list) ?? {}),
+  }
+}
+
+/**
  * Bloc `aggregateRating` prêt à être étalé dans un JSON-LD Product,
  * ou `undefined` s'il n'y a aucun avis.
  *

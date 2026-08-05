@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { PACK_BY_SLUG, type PackSlug } from '../../../lib/pricing'
 import { offreJsonLd } from '../../../lib/product-schema'
-import { aggregateRatingJsonLd, reviewsJsonLd, reviewsPourPack } from '../../data/reviews'
+import { notationJsonLd, reviewsPourPack } from '../../data/reviews'
 
 const productsMeta: Record<string, {
   title: string
@@ -178,8 +178,7 @@ export default function ProductLayout({ params, children }: { params: { slug: st
     // inventees serait une infraction aux regles sur les donnees structurees.
     // Les memes avis sont affiches sur la page par <CustomerReviews />, comme
     // Google l'exige.
-    ...(aggregateRatingJsonLd(avis) ?? {}),
-    ...(reviewsJsonLd(avis) ?? {}),
+    ...notationJsonLd(avis),
   }
 
   const breadcrumbJsonLd = {
