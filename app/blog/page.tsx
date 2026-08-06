@@ -144,7 +144,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 14,
     title: 'Plaque NFC garage automobile : placement et script atelier',
-    excerpt: 'Garages, centres auto, carrosseries : multipliez vos avis Google par 4 avec une plaque NFC. Emplacements, scripts garagiste, 3 exemples de calcul et ROI chiffré.',
+    excerpt: 'Garages, centres auto, carrosseries : collectez des avis Google avec une plaque NFC. Emplacements, scripts garagiste, 3 exemples de calcul et ROI chiffré.',
     category: 'Secteur',
     date: '13 juillet 2026',
     dateIso: '2026-07-13',
@@ -162,7 +162,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 12,
     title: 'Où placer votre plaque avis Google ? 7 emplacements stratégiques',
-    excerpt: 'Le placement de votre plaque avis Google détermine 80 % du taux de conversion. Guide 2026 : 7 emplacements optimaux par secteur.',
+    excerpt: 'Où poser votre plaque avis Google : le bon emplacement se déduit du parcours client. Guide 2026 : 7 emplacements par secteur.',
     category: 'Conseils',
     date: '12 mai 2026',
     dateIso: '2026-05-12',
@@ -198,7 +198,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 8,
     title: 'Plaque NFC restaurant : placement en salle et scripts de service',
-    excerpt: 'Restaurant : où poser la plaque en salle et quoi dire au moment de l\'addition. Placements, scripts serveur, ROI, 3 exemples de calcul.',
+    excerpt: 'Restaurant : où poser la plaque en salle et quoi dire au moment de l\'addition. Emplacements, scripts serveur, exemple de calcul.',
     category: 'Secteur',
     date: '11 mai 2026',
     dateIso: '2026-05-11',
@@ -207,7 +207,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 7,
     title: 'Plaque NFC vs QR Code pour les avis Google : comparatif 2026',
-    excerpt: 'Plaque NFC ou QR code pour vos avis Google ? Comparatif détaillé 2026 sur 8 critères : taux de conversion (35-45 % vs 8-12 %), prix, ROI et études de cas.',
+    excerpt: 'Plaque NFC ou QR code pour vos avis Google ? Comparatif détaillé 2026 sur 8 critères : geste demandé au client, compatibilité, résistance du support et prix.',
     category: 'Comparatif',
     date: '10 mai 2026',
     dateIso: '2026-05-10',

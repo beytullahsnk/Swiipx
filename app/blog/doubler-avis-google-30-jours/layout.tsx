@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Comment doubler vos avis Google en 30 jours | Guide 2026',
     description:
-      'La méthode en 4 phases pour passer de 10 à 100+ avis Google. Cas pratique, scripts prêts à copier et outils NFC indispensables.',
+      'La méthode en 4 phases : optimiser la fiche Google Business, supprimer la friction avec une plaque NFC, demander l\'avis au bon moment et répondre à chacun.',
     url: 'https://swiipx.fr/blog/doubler-avis-google-30-jours',
     siteName: 'Swiipx',
     locale: 'fr_FR',
@@ -77,7 +77,7 @@ const jsonLdFaq = {
       name: 'Est-ce que ça marche pour tous les secteurs ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Oui. Restaurants, salons de coiffure, cabinets médicaux, boutiques, garages… la méthode fonctionne pour tout commerce ayant des clients physiques. Le NFC convertit en moyenne à 35-45 % dans tous les secteurs.',
+        text: 'Oui. Restaurants, salons de coiffure, cabinets médicaux, boutiques, garages… la méthode fonctionne pour tout commerce qui reçoit ses clients sur place. Le seul prérequis est d\'avoir un moment où le client est satisfait, disponible, et son téléphone à portée de main : c\'est là que la plaque doit se trouver. Le nombre d\'avis obtenu, lui, dépend de votre fréquentation et de la régularité avec laquelle votre équipe pense à mentionner la plaque.',
       },
     },
     {
@@ -93,7 +93,7 @@ const jsonLdFaq = {
       name: 'Que faire si je reçois un avis négatif ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Un avis négatif bien géré devient une opportunité : répondez sous 24 h de façon professionnelle et empathique. 89 % des prospects lisent vos réponses aux avis négatifs avant de prendre leur décision.',
+        text: 'Répondez sous 24 à 48 h, de façon factuelle et sans polémique. Votre réponse est publique et permanente : elle est lue par les prospects qui hésitent, et elle leur montre comment vous traitez un problème, ce qu\'aucun avis positif ne démontre. Dans l\'enquête BrightLocal Local Consumer Review Survey 2026, menée auprès de 1 002 consommateurs américains, 89 % des répondants déclarent attendre qu\'une entreprise réponde à ses avis.',
       },
     },
     {
@@ -101,7 +101,7 @@ const jsonLdFaq = {
       name: 'Ça marche sans plaque NFC ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Oui, mais avec un taux de conversion 4 à 5 fois inférieur. Le QR code convertit à environ 10 %, l\'email à 3-5 %, tandis que le NFC atteint 35-45 %.',
+        text: 'Oui, mais chaque étape ajoutée entre l\'envie et l\'avis publié fait perdre des clients. Le QR code oblige à sortir le téléphone, ouvrir l\'appareil photo, viser, puis confirmer l\'ouverture d\'un lien. L\'e-mail de relance, lui, arrive des heures plus tard, quand le client n\'est plus dans le contexte. Le NFC agit sur place, en un geste, pendant que la satisfaction est encore fraîche. Nous ne publions pas de taux de conversion comparés : nous ne les mesurons pas.',
       },
     },
     {
@@ -117,7 +117,7 @@ const jsonLdFaq = {
       name: 'Combien de temps pour voir les premiers résultats ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Les premiers avis supplémentaires arrivent dès la première semaine. En moyenne, nos clients constatent un doublement de leurs avis en 3 à 4 semaines avec la méthode complète.',
+        text: 'La plaque fonctionne dès sa réception : elle arrive déjà programmée avec le lien de votre fiche, il n\'y a rien à installer. Le rythme, lui, dépend entièrement de votre fréquentation et de la régularité de la demande. Faites le calcul avec vos propres chiffres : un commerce qui sert 300 clients par semaine et en convainc un sur vingt ajoute une quinzaine d\'avis par semaine ; un cabinet qui reçoit 20 personnes par jour n\'aura pas le même volume. Nous ne publions pas de moyenne, parce que nous ne mesurons pas la vôtre.',
       },
     },
     {
@@ -133,7 +133,7 @@ const jsonLdFaq = {
       name: 'Est-ce que le NFC fonctionne avec tous les smartphones ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Oui. Tous les iPhone depuis le modèle 7 (2016) et la quasi-totalité des smartphones Android supportent le NFC nativement. Cela représente plus de 95 % des appareils en circulation en France.',
+        text: 'Oui. Tous les iPhone depuis le modèle 7 (2016) lisent les puces NFC sans réglage ni application, et la quasi-totalité des smartphones Android vendus depuis le milieu des années 2010 également. Pour les rares téléphones qui ne le font pas, un QR code est imprimé au dos de chaque plaque Swiipx.',
       },
     },
   ],

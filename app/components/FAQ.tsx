@@ -33,7 +33,7 @@ export default function FAQ() {
     },
     {
       question: 'Puis-je modifier le lien de redirection plus tard ?',
-      answer: "Oui ! Vous pouvez modifier le lien de redirection à tout moment depuis votre espace client. C'est très pratique si vous changez de page Google ou si vous voulez rediriger vers une autre plateforme d'avis.",
+      answer: "Oui. Écrivez-nous à bonjour@swiipx.fr en indiquant le nouveau lien : nous reprogrammons la plaque avec vous. Il n'y a pas d'espace client à gérer, et c'est gratuit.",
     },
     {
       question: 'Quelle est la garantie ?',

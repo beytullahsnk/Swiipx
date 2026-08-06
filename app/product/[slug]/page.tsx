@@ -44,7 +44,6 @@ const products = {
       'Support client dédié',
       'Garantie à vie',
       'Configuration incluse',
-      'Tableau de bord analytics',
     ],
     technicalSpecs: [
       { label: 'Dimensions', value: '120 x 120 x 3 mm' },
@@ -69,7 +68,7 @@ const products = {
     price: 65.88,
     originalPrice: null as number | null,
     popular: true,
-    description: 'Le pack professionnel avec 2 plaques NFC avis Google pour couvrir deux emplacements stratégiques. Doublez vos points de contact et multipliez vos avis Google naturellement. Acrylique premium, NTAG215, garanti à vie.',
+    description: 'Le pack professionnel avec 2 plaques NFC avis Google pour couvrir deux emplacements stratégiques. Deux points de contact plutôt qu\'un, sans rien demander de plus au client. Acrylique premium, NTAG215, garanti à vie.',
     features: [
       '2 plaques NFC premium',
       'QR code de secours intégré',
@@ -77,7 +76,6 @@ const products = {
       'Support client dédié',
       'Garantie à vie',
       'Configuration incluse',
-      'Tableau de bord analytics',
     ],
     technicalSpecs: [
       { label: 'Dimensions', value: '120 x 120 x 3 mm' },
@@ -101,7 +99,7 @@ const products = {
     plaques: 5,
     price: 107.88,
     originalPrice: null as number | null,
-    description: 'La solution complète avec 5 plaques NFC avis Google pour équiper tous vos emplacements. Idéal pour les entreprises multi-sites : tableau de bord analytics, liens personnalisables, support 24/7. Acrylique premium, garanti à vie.',
+    description: 'La solution complète avec 5 plaques NFC avis Google pour équiper tous vos emplacements. Idéal pour les entreprises multi-sites : chaque plaque peut pointer vers un lien différent. Acrylique premium, garanti à vie.',
     features: [
       '5 plaques NFC premium',
       'QR code de secours intégré',
@@ -109,7 +107,6 @@ const products = {
       'Support client dédié',
       'Garantie à vie',
       'Configuration incluse',
-      'Tableau de bord analytics',
       'Liens personnalisables par plaque',
     ],
     technicalSpecs: [

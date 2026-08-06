@@ -222,15 +222,15 @@ export const articles: Record<string, {
     date: '3 août 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: "Il n'y a pas de seuil magique : le nombre d'avis Google nécessaire pour entrer dans le top 3 du pack local se calcule. Méthode, benchmarks par secteur, 3 cas chiffrés et plan d'action.",
+    excerpt: "Il n'y a pas de seuil magique : le nombre d'avis Google nécessaire pour entrer dans le top 3 du pack local se déduit de vos trois concurrents directs. Méthode de relevé, exemples de calcul et plan d'action.",
     tocSections: [
       { id: 'pack-local-definition', label: 'Le pack local, c\'est quoi' },
       { id: 'reponse-courte', label: 'La réponse chiffrée' },
       { id: 'criteres-google', label: 'Les 3 critères Google' },
-      { id: 'benchmarks', label: 'Benchmarks par secteur' },
+      { id: 'benchmarks', label: 'Relever vos concurrents' },
       { id: 'volume-note-fraicheur', label: 'Volume, note, fraîcheur' },
       { id: 'velocite', label: 'La vélocité des avis' },
-      { id: 'cas-pratiques', label: '3 cas chiffrés' },
+      { id: 'cas-pratiques', label: '3 exemples de calcul' },
       { id: 'atteindre-seuil', label: 'Calculer votre rythme cible' },
       { id: 'erreurs', label: '5 erreurs à éviter' },
       { id: 'faq-pack-local', label: 'FAQ' },
@@ -240,9 +240,9 @@ export const articles: Record<string, {
 <section id="pack-local-definition" class="scroll-mt-28 mb-16">
 <h2>Le pack local : les 3 places qui captent presque tout le trafic</h2>
 <p>Quand un internaute tape « plombier Lyon », « restaurant japonais Bordeaux » ou « opticien près de moi », Google n'affiche pas d'abord dix liens bleus. Il affiche une carte et <strong>trois établissements</strong>. C'est le pack local (ou local pack, ou map pack). En dessous, un lien discret « Plus de lieux » que presque personne ne clique.</p>
-<p>Ces trois places concentrent l'essentiel de la valeur : sur une recherche locale avec intention commerciale, <strong>le pack local capte 42 à 45 % des clics</strong>, et le premier des trois résultats en récupère à lui seul près de la moitié. Être quatrième, c'est être sur la deuxième page d'un point de vue économique — techniquement visible, commercialement absent.</p>
+<p>Ces trois places concentrent l'essentiel de la valeur, pour une raison de mise en page autant que d'algorithme : elles occupent le premier écran, accompagnées d'une carte, d'une note en étoiles, d'un horaire d'ouverture et d'un bouton d'itinéraire. Le quatrième, lui, est derrière un lien « Plus de lieux » qu'il faut décider de cliquer. Être quatrième, c'est être sur la deuxième page d'un point de vue économique — techniquement visible, commercialement absent.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> 76 % des personnes qui font une recherche locale sur mobile se rendent dans un établissement <strong>dans les 24 heures</strong>, et 28 % de ces visites débouchent sur un achat. Le pack local n'est pas de la notoriété : c'est du chiffre d'affaires à 24 heures.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une recherche locale n'est presque jamais de la curiosité. Quelqu'un qui tape « serrurier ouvert maintenant » ou « restaurant japonais » à midi cherche à agir dans l'heure, pas à se documenter pour plus tard. C'est ce qui distingue le pack local du référencement classique : l'intention d'achat est déjà là quand la page s'affiche, et les trois fiches se partagent une décision déjà prise.</p>
 </div>
 <p>D'où la question que tous les commerçants finissent par poser : <strong>combien d'avis Google faut-il, concrètement, pour entrer dans ces trois places ?</strong> La réponse existe, elle est chiffrée, et elle dépend de trois variables seulement.</p>
 </section>
@@ -254,11 +254,11 @@ export const articles: Record<string, {
 <p class="text-sm text-emerald-900"><strong>🎯 La règle de la médiane +30 %.</strong> Comptez les avis des <strong>3 établissements déjà dans le pack local</strong> sur votre mot-clé principal. Prenez la valeur médiane. Votre objectif de volume est cette médiane <strong>majorée de 30 %</strong>, avec une note égale ou supérieure à la leur.</p>
 </div>
 <p>Exemple concret. Vous êtes garagiste à Nantes. Les trois du pack affichent 87, 142 et 210 avis. Médiane : 142. Votre cible : <strong>environ 185 avis</strong>, avec une note d'au moins 4,5. Si vous en êtes à 31, vous connaissez maintenant l'écart exact à combler — et ce n'est pas une question d'algorithme mystérieux, c'est une question de rythme de collecte.</p>
-<p>Les ordres de grandeur observés en France, à titre de repère avant de faire le calcul sur votre propre marché :</p>
+<p>Nous ne publions pas de fourchette « par taille de ville » : nous n'avons pas relevé les volumes du marché français, et un chiffre inventé vous ferait viser à côté dans un sens ou dans l'autre. Ce qui décide, ce sont les trois fiches affichées sur <em>votre</em> requête, dans <em>votre</em> quartier. Trois choses valent la peine d'être notées pendant ce relevé :</p>
 <ul>
-<li><strong>Village ou petite ville (moins de 15 000 habitants)</strong> : 20 à 50 avis suffisent souvent, parfois moins de 15 dans les secteurs peu denses.</li>
-<li><strong>Ville moyenne (15 000 à 100 000 habitants)</strong> : 60 à 150 avis pour être crédible dans le top 3.</li>
-<li><strong>Grande ville ou métropole</strong> : 150 à 400 avis, et jusqu'à 800 sur les secteurs saturés comme la restauration parisienne.</li>
+<li><strong>Le nombre d'avis de chacun des trois</strong>, écrit noir sur blanc à côté de leur note. C'est la donnée principale, et elle est publique.</li>
+<li><strong>Leur note</strong>, parce qu'un concurrent à 120 avis et 4,1 n'est pas la même cible qu'un concurrent à 120 avis et 4,8 : dans le premier cas, vous pouvez le dépasser sur la qualité perçue avant de l'avoir dépassé sur le volume.</li>
+<li><strong>La date du dernier avis reçu</strong>, visible en ouvrant la fiche. Un concurrent dont le dernier avis remonte à six mois est une cible immobile ; un concurrent qui en reçoit trois par semaine s'éloigne pendant que vous avancez, et il faut en tenir compte dans le calcul.</li>
 </ul>
 <p>Autrement dit : le seuil n'est pas absolu, il est <strong>relatif à vos trois concurrents directs</strong>. C'est une bonne nouvelle, parce que cela le rend mesurable en dix minutes.</p>
 </section>
@@ -279,25 +279,23 @@ export const articles: Record<string, {
 </section>
 
 <section id="benchmarks" class="scroll-mt-28 mb-16">
-<h2>Benchmarks : combien d'avis ont les leaders du pack local, par secteur</h2>
-<p>Voici les volumes médians observés chez les établissements occupant les trois premières places du pack local, selon le secteur et la taille de la zone de chalandise.</p>
+<h2>Relever vos trois concurrents : le tableau à remplir en dix minutes</h2>
+<p>Aucun tableau de « moyennes sectorielles » ne remplacera ce relevé, et nous n'en publierons pas : les moyennes qui circulent sur ce sujet ne reposent sur aucune mesure vérifiable, et surtout elles ne décrivent pas votre rue. Le relevé, lui, est gratuit, prend dix minutes et donne une cible exacte. Voici le tableau à remplir.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Secteur</th><th class="border p-3 text-left">Ville moyenne</th><th class="border p-3 text-left">Métropole</th><th class="border p-3 text-left">Note minimale</th></tr></thead>
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">À relever</th><th class="border p-3 text-left">Où le trouver</th><th class="border p-3 text-left">À quoi ça sert</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Restaurant</td><td class="border p-3">180 - 350</td><td class="border p-3">400 - 900</td><td class="border p-3">4,3</td></tr>
-<tr><td class="border p-3">Salon de coiffure</td><td class="border p-3">80 - 160</td><td class="border p-3">180 - 400</td><td class="border p-3">4,6</td></tr>
-<tr><td class="border p-3">Garage automobile</td><td class="border p-3">70 - 140</td><td class="border p-3">150 - 320</td><td class="border p-3">4,4</td></tr>
-<tr><td class="border p-3">Institut de beauté</td><td class="border p-3">60 - 130</td><td class="border p-3">150 - 350</td><td class="border p-3">4,7</td></tr>
-<tr><td class="border p-3">Cabinet médical / paramédical</td><td class="border p-3">25 - 70</td><td class="border p-3">60 - 180</td><td class="border p-3">4,5</td></tr>
-<tr><td class="border p-3">Artisan (plombier, électricien)</td><td class="border p-3">40 - 90</td><td class="border p-3">90 - 250</td><td class="border p-3">4,6</td></tr>
-<tr><td class="border p-3">Salle de sport</td><td class="border p-3">90 - 180</td><td class="border p-3">200 - 450</td><td class="border p-3">4,4</td></tr>
-<tr><td class="border p-3">Boulangerie</td><td class="border p-3">100 - 200</td><td class="border p-3">250 - 550</td><td class="border p-3">4,3</td></tr>
+<tr><td class="border p-3">Votre requête exacte</td><td class="border p-3">Métier + ville, tapé en navigation privée pour éviter votre historique</td><td class="border p-3">C'est la requête sur laquelle vous voulez sortir, pas celle que vous imaginez</td></tr>
+<tr><td class="border p-3">Nom des 3 fiches du pack</td><td class="border p-3">Les trois établissements affichés sur la carte</td><td class="border p-3">Vos vrais concurrents, souvent différents de ceux que vous citez de tête</td></tr>
+<tr><td class="border p-3">Nombre d'avis de chacun</td><td class="border p-3">Entre parenthèses à côté de la note</td><td class="border p-3">La médiane des trois donne votre cible de volume</td></tr>
+<tr><td class="border p-3">Note de chacun</td><td class="border p-3">Affichée en étoiles sur la carte</td><td class="border p-3">Fixe la note en dessous de laquelle vous n'êtes pas crédible</td></tr>
+<tr><td class="border p-3">Date du dernier avis</td><td class="border p-3">En ouvrant la fiche, onglet Avis, tri par date</td><td class="border p-3">Indique si la cible est immobile ou si elle avance</td></tr>
+<tr><td class="border p-3">Votre propre ligne</td><td class="border p-3">Votre fiche, mêmes colonnes</td><td class="border p-3">L'écart exact à combler, en nombre d'avis</td></tr>
 </tbody>
 </table>
 </div>
-<p>Deux enseignements se dégagent de ce tableau. D'abord, <strong>l'écart entre secteurs est énorme</strong> : un kinésithérapeute entre dans le pack local avec 40 avis là où un restaurateur parisien a besoin de dix fois plus. Ensuite, <strong>la note minimale monte quand le volume baisse</strong> : dans les secteurs où l'on collecte peu, chaque avis pèse davantage, et une note de 4,1 devient éliminatoire.</p>
-<p>Faites l'exercice sur votre propre requête plutôt que de vous fier au tableau : tapez votre métier suivi de votre ville en navigation privée, notez les trois volumes, appliquez la médiane +30 %.</p>
+<p>Refaites ce relevé depuis deux endroits différents de votre zone de chalandise : le pack local n'affiche pas les mêmes fiches à 300 mètres et à 3 kilomètres, et vous découvrirez souvent que vous êtes déjà bien placé dans un rayon proche et absent un peu plus loin. C'est une information utile, parce qu'elle vous dit si votre problème est un problème de volume d'avis ou un problème de zone.</p>
+<p>Une fois le tableau rempli, la cible se déduit sans effort : médiane des trois volumes, majorée d'environ 30 %, avec une note au moins égale à la leur. Notez la date du jour à côté — vous referez exactement le même relevé dans trois mois, et la comparaison des deux vaudra tous les benchmarks du monde.</p>
 </section>
 
 <section id="volume-note-fraicheur" class="scroll-mt-28 mb-16">
@@ -306,11 +304,11 @@ export const articles: Record<string, {
 <h3>Le volume : le ticket d'entrée</h3>
 <p>En dessous d'un certain nombre d'avis, Google considère qu'il n'a pas assez de signal pour vous faire confiance. C'est un effet de seuil : passer de 5 à 30 avis change beaucoup, passer de 300 à 330 ne change presque rien. <strong>Le volume compte surtout tant que vous êtes sous la médiane de vos concurrents.</strong></p>
 <h3>La note : le filtre de conversion</h3>
-<p>La note joue moins sur le classement qu'on ne le croit — mais énormément sur le clic. En dessous de 4,0, le taux de clic s'effondre : un établissement à 3,8 étoiles perd environ 70 % des prospects par rapport à un concurrent à 4,6, à position égale. Curieusement, <strong>une note parfaite de 5,0 convertit moins bien que 4,7</strong> : elle paraît suspecte. La zone optimale se situe entre 4,4 et 4,8.</p>
+<p>La note joue moins sur le classement qu'on ne le croit — mais beaucoup sur le clic, parce qu'elle sert de filtre avant même l'ouverture de la fiche. L'enquête <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="nofollow noopener">BrightLocal « Local Consumer Review Survey » 2026</a>, menée auprès de 1 002 consommateurs américains, donne le seul repère chiffré que nous puissions citer faute d'équivalent français : <strong>68 % des répondants déclarent ne retenir que les commerces affichant au moins 4 étoiles</strong>, et 31 % seulement ceux à 4,5 ou plus. Autrement dit, la barre des 4 étoiles n'est pas un objectif de confort, c'est un seuil d'existence — et le premier travail, avant même de collecter du volume, est de la franchir.</p>
 <h3>La fraîcheur : le signal sous-estimé</h3>
-<p>Un avis de 2021 ne pèse presque plus rien. Google privilégie les fiches <strong>actives</strong>, et les internautes trient spontanément par date. Un établissement avec 300 avis dont le dernier date de huit mois inspire moins confiance qu'un concurrent à 90 avis dont trois datent de cette semaine.</p>
+<p>Personne hors de Google ne connaît le poids exact de la fraîcheur dans le classement, et nous n'allons pas l'inventer. Ce qui est en revanche directement observable, c'est le comportement du lecteur : la fiche met en avant les avis les plus récents, ce sont donc eux qui sont lus. Un établissement avec 300 avis dont le dernier date de huit mois donne à lire un témoignage périmé ; un concurrent à 90 avis dont trois datent de cette semaine donne à lire quelque chose d'actuel. À ce niveau-là, la fraîcheur n'est pas une question d'algorithme, c'est une question de vitrine.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📐 La règle des 90 jours :</strong> visez au minimum <strong>10 % de votre volume total d'avis déposés sur les 90 derniers jours</strong>. Une fiche à 200 avis devrait donc en recevoir au moins 20 par trimestre pour rester perçue comme active. En dessous, la fiche « refroidit » et perd progressivement des positions au profit de concurrents plus dynamiques.</p>
+<p class="text-sm text-blue-900"><strong>📐 Le réflexe des 90 jours :</strong> plutôt qu'un seuil que personne ne peut vérifier, posez-vous chaque trimestre une question dont les deux réponses sont publiques : <strong>combien d'avis ma fiche a-t-elle reçus ces 90 derniers jours, et combien en ont reçu les trois du pack local ?</strong> Les deux se relèvent en dix minutes, en triant les avis par date. Si vos concurrents en reçoivent trois fois plus que vous, votre total d'aujourd'hui ne dit rien de votre situation dans un an : c'est l'écart de rythme qu'il faut corriger, avant l'écart de total.</p>
 </div>
 </section>
 
@@ -322,41 +320,42 @@ export const articles: Record<string, {
 <ul>
 <li><strong>Le plat (0 à 2 avis/mois)</strong> : la fiche stagne, la position s'érode lentement à mesure que les concurrents progressent. C'est le cas de la grande majorité des commerces qui n'ont aucune méthode de collecte.</li>
 <li><strong>Le pic (30+ avis en quelques jours, puis rien)</strong> : typique d'une campagne ponctuelle ou d'achat d'avis. Risqué et sans effet durable.</li>
-<li><strong>La rampe régulière (10 à 30 avis/mois, tous les mois)</strong> : le seul profil qui fait réellement monter dans le pack local, avec un effet mesurable entre la 4<sup>e</sup> et la 10<sup>e</sup> semaine.</li>
+<li><strong>La rampe régulière (10 à 30 avis/mois, tous les mois)</strong> : le seul profil qui construise quelque chose. Chaque mois ajoute au total affiché et renouvelle les avis que le visiteur lit en premier. En revanche, nous ne pouvons pas vous dire au bout de combien de semaines la position bouge : cela dépend de l'écart avec vos concurrents, que vous êtes seul à pouvoir relever.</li>
 </ul>
 <p>Concrètement, atteindre 150 avis en douze mois de collecte régulière vaut mieux que 150 avis obtenus en deux mois. Ce qui déplace le curseur, ce n'est pas l'opération commando : c'est le <strong>geste répété à chaque encaissement</strong>. Notre guide <a href="/blog/obtenir-plus-avis-google">10 méthodes pour obtenir plus d'avis Google</a> détaille les leviers pour installer cette régularité.</p>
 </section>
 
 <section id="cas-pratiques" class="scroll-mt-28 mb-16">
-<h2>3 cas chiffrés : de la 7<sup>e</sup> place au pack local</h2>
+<h2>3 exemples de calcul : traduire un écart en rythme mensuel</h2>
+<p>Ce qui suit n'est pas une liste de clients. Ce sont trois <strong>exemples de calcul</strong>, construits sur des hypothèses posées ouvertement : un point de départ, un relevé de concurrents, une fréquentation, et une proportion de clients qui acceptent de laisser un avis. Aucun de ces nombres n'est un relevé de terrain — nous ne mesurons pas les fiches des commerces que nous équipons, la plaque ne contient aucun traqueur et nous n'avons pas accès à leurs statistiques Google. L'intérêt est dans la méthode : elle se refait en cinq minutes avec vos chiffres à vous, et c'est le seul résultat qui vous concerne.</p>
 
 <h3>🥖 Boulangerie — ville de 32 000 habitants</h3>
-<p>Départ : 41 avis, 4,3 étoiles, 7<sup>e</sup> position sur « boulangerie + ville ». Les trois du pack affichaient 96, 138 et 174 avis. Médiane 138, cible 180.</p>
+<p>Hypothèses : 41 avis au départ, et trois concurrents relevés dans le pack local à 96, 138 et 174 avis. Médiane 138, donc cible 180 en appliquant la médiane +30 %. Écart à combler : 139 avis.</p>
 <ul>
-<li>Méthode : 2 plaques NFC (comptoir de caisse + comptoir snacking), phrase systématique au rendu de monnaie</li>
-<li>Rythme obtenu : <strong>28 à 34 avis par mois</strong></li>
-<li>Mois 5 : 198 avis, 4,6 étoiles — <strong>2<sup>e</sup> position dans le pack local</strong></li>
-<li>Effet mesuré : demandes d'itinéraire Google Maps de 240 à 690 par mois</li>
+<li>Méthode : 2 plaques NFC (comptoir de caisse et comptoir snacking), phrase systématique au rendu de monnaie</li>
+<li>Hypothèse de fréquentation : 700 clients par mois, soit une vingtaine par jour d'ouverture</li>
+<li>Hypothèse de collecte : 1 client sur 25 accepte, soit 28 avis par mois</li>
+<li>Conséquence arithmétique : la cible de 180 avis serait atteinte vers le 5<sup>e</sup> mois. Si ce taux vous paraît optimiste, prenez 1 sur 50 : le délai passe à 10 mois, et la conclusion ne change pas</li>
 </ul>
 
 <h3>🔧 Plombier-chauffagiste — métropole de 400 000 habitants</h3>
-<p>Départ : 18 avis, 4,8 étoiles, hors pack local. Concurrents : 74, 121, 260. Médiane 121, cible 157. Difficulté propre au secteur : l'artisan n'a pas de comptoir, l'avis se demande chez le client.</p>
+<p>Hypothèses : 18 avis au départ, concurrents relevés à 74, 121 et 260. Médiane 121, cible 157. Difficulté propre au secteur : l'artisan n'a pas de comptoir, l'avis se demande chez le client.</p>
 <ul>
 <li>Méthode : 1 plaque NFC dans le véhicule utilitaire, présentée au moment de la signature du bon d'intervention</li>
-<li>Rythme obtenu : 11 à 15 avis par mois pour environ 45 interventions mensuelles (taux de conversion 28 %)</li>
-<li>Mois 9 : <strong>141 avis, 4,8 étoiles, 3<sup>e</sup> position</strong></li>
-<li>Effet mesuré : 9 appels entrants supplémentaires par mois, panier moyen 340 €</li>
+<li>Hypothèse de volume : environ 45 interventions par mois</li>
+<li>Hypothèse de collecte : 1 intervention sur 4, soit 11 avis par mois — hypothèse volontairement haute, parce que l'artisan est en tête-à-tête avec son client, ce qui n'est pas le cas derrière un comptoir</li>
+<li>Conséquence arithmétique : environ 13 mois pour combler les 139 avis d'écart. C'est long, et c'est justement l'information utile : dans un métier à faible volume, le levier n'est pas le taux de collecte, c'est la régularité sur la durée</li>
 </ul>
 
 <h3>💇 Salon de coiffure — ville de 70 000 habitants</h3>
-<p>Départ : 62 avis, 4,4 étoiles, 4<sup>e</sup> position — la place la plus frustrante qui soit. Il ne manquait que peu de chose.</p>
+<p>Hypothèses : 62 avis au départ, concurrents relevés à 88, 99 et 112. Médiane 99, cible 129. Écart : 67 avis — la configuration la plus frustrante, celle où il ne manque pas grand-chose.</p>
 <ul>
-<li>Méthode : 2 plaques (caisse + poste de coiffage), demande faite pendant le brushing final</li>
-<li>Rythme obtenu : 22 avis par mois (taux de conversion 44 %, le record sectoriel)</li>
-<li>Mois 3 : 128 avis, 4,7 étoiles — <strong>1<sup>re</sup> position</strong></li>
-<li>Effet mesuré : +31 % de nouvelles clientes déclarées « venues via Google »</li>
+<li>Méthode : 2 plaques (caisse et poste de coiffage), demande faite pendant le brushing final</li>
+<li>Hypothèse de fréquentation : 220 clientes par mois</li>
+<li>Hypothèse de collecte : 1 sur 10, soit 22 avis par mois</li>
+<li>Conséquence arithmétique : la cible serait franchie au cours du 4<sup>e</sup> mois. C'est le cas le plus favorable des trois, parce que l'écart de départ est faible et le moment de la demande évident</li>
 </ul>
-<p>Le point commun des trois : aucun n'a changé de prix, de local ou de prestation. Ils ont simplement <strong>rendu visible une satisfaction qui existait déjà</strong>. Pour approfondir la méthode, lisez <a href="/blog/doubler-avis-google-30-jours">comment doubler ses avis Google en 30 jours</a>.</p>
+<p>Le point commun des trois exemples : dans aucun il n'est question de changer de prix, de local ou de prestation. Toute la différence tient à <strong>rendre visible une satisfaction qui existe déjà</strong>, et le calcul ne fait que dire à quelle vitesse. Refaites-le avec vos deux nombres — clients par mois, proportion que vous jugez crédible — puis corrigez-le au bout d'un mois avec ce que vous observez réellement sur votre fiche. Pour la méthode de collecte elle-même, lisez <a href="/blog/doubler-avis-google-30-jours">comment doubler ses avis Google en 30 jours</a>.</p>
 </section>
 
 <section id="atteindre-seuil" class="scroll-mt-28 mb-16">
@@ -377,9 +376,9 @@ export const articles: Record<string, {
 </table>
 </div>
 <p>Ce dernier chiffre est celui qui change la perspective. Il ne s'agit pas de convaincre tout le monde : <strong>4 clients sur 100 suffisent</strong> à passer de la 7<sup>e</sup> place au pack local en six mois. Le problème n'a jamais été la volonté des clients, mais la friction.</p>
-<p>C'est exactement ce que résout une plaque NFC. Le client approche son téléphone à moins de 4 cm de la plaque en acrylique, sa page d'avis Google s'ouvre automatiquement : pas d'application, pas de saisie, pas de recherche. Les taux de collecte constatés vont de <strong>25 à 45 % selon le secteur et l'emplacement</strong>, contre 8 à 12 % pour un QR code et 1 à 3 % pour une carte de visite. À comparer aux 3,9 % requis dans l'exemple ci-dessus.</p>
+<p>C'est exactement ce que résout une plaque NFC. Le client approche son téléphone à moins de 4 cm de la plaque en acrylique, sa page d'avis Google s'ouvre : pas d'application à installer, pas de saisie, pas de recherche, pas de QR code à viser. Nous ne publions pas de taux de collecte comparés, parce que nous ne les mesurons pas : la plaque ne contient aucun traqueur et nous n'avons pas accès à votre fiche. Ce que dit le tableau ci-dessus, en revanche, tient debout tout seul : l'objectif n'est pas de convaincre tout le monde, mais <strong>4 clients sur 100</strong>, au moment précis où ils sont contents et où leur téléphone est déjà dans leur main.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 Combien de plaques ?</strong> Un seul point de contact client : <a href="/product/starter" class="font-semibold underline">Pack Starter</a>. Accueil + caisse, la configuration la plus fréquente : <a href="/product/business" class="font-semibold underline">Pack Business</a> (2 plaques). Plusieurs postes, plusieurs étages ou plusieurs véhicules : <a href="/product/pro" class="font-semibold underline">Pack Pro</a> (5 plaques). Le placement décide de 80 % du résultat — voir les <a href="/blog/ou-placer-plaque-avis-google">7 emplacements testés</a>.</p>
+<p class="text-sm text-amber-900"><strong>💡 Combien de plaques ?</strong> Un seul point de contact client : <a href="/product/starter" class="font-semibold underline">Pack Starter</a>. Accueil + caisse, la configuration la plus fréquente : <a href="/product/business" class="font-semibold underline">Pack Business</a> (2 plaques). Plusieurs postes, plusieurs étages ou plusieurs véhicules : <a href="/product/pro" class="font-semibold underline">Pack Pro</a> (5 plaques). Le placement compte autant que la plaque : une plaque que le client ne voit pas au bon moment ne sert à rien — voir les <a href="/blog/ou-placer-plaque-avis-google">emplacements possibles selon votre métier</a>.</p>
 </div>
 </section>
 
@@ -392,7 +391,7 @@ export const articles: Record<string, {
 <h3>3. Collecter par vagues</h3>
 <p>Trente avis en une semaine puis six mois de silence : le pire scénario. Google lisse mal les pics et vous perdez le bénéfice de la fraîcheur dès le deuxième mois.</p>
 <h3>4. Ne pas répondre aux avis</h3>
-<p>Les fiches qui répondent à plus de 80 % de leurs avis affichent une progression sensiblement meilleure. La réponse est un signal d'activité, et elle est lue par les prospects autant que l'avis lui-même. Voir notre méthode pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>.</p>
+<p>Répondre est le seul endroit de votre fiche où vous écrivez, vous. C'est un texte public, permanent et indexable, lu par les prospects autant que l'avis lui-même — et c'est le seul moyen de montrer comment vous traitez une réclamation. Dans l'enquête <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="nofollow noopener">BrightLocal 2026</a> (1 002 consommateurs américains), 89 % des répondants déclarent attendre qu'une entreprise réponde à ses avis. Voir notre méthode pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>.</p>
 <h3>5. Chercher des raccourcis</h3>
 <p>Acheter des avis, offrir une remise en échange d'un avis ou filtrer les clients mécontents : les trois violent les règles de Google et exposent à une suppression massive, voire à la suspension de la fiche. En France, s'y ajoute le risque légal : une pratique commerciale trompeuse est passible de 300 000 € d'amende pour une entreprise. Le sujet est détaillé dans notre article sur les <a href="/blog/faux-avis-google-signaler">faux avis Google</a>.</p>
 </section>
@@ -401,13 +400,13 @@ export const articles: Record<string, {
 <h2>FAQ — Avis Google et pack local</h2>
 
 <h3>Combien d'avis Google faut-il pour apparaître dans le pack local ?</h3>
-<p>Il n'existe pas de seuil universel. La règle fiable est la médiane des trois établissements déjà classés sur votre mot-clé, majorée d'environ 30 %. En pratique, cela représente 20 à 50 avis dans une petite ville, 60 à 150 dans une ville moyenne, et 150 à 400 dans une métropole selon le secteur.</p>
+<p>Il n'existe pas de seuil universel, et aucune moyenne sectorielle ne vous donnera le vôtre. La règle fiable est la médiane des trois établissements déjà classés sur votre mot-clé, majorée d'environ 30 %, avec une note au moins égale à la leur. Ces trois nombres sont affichés publiquement à côté de chaque fiche : le relevé prend dix minutes et donne une cible exacte, valable pour votre rue et pour aucune autre.</p>
 
 <h3>Combien de temps faut-il pour entrer dans le pack local ?</h3>
-<p>Les premiers mouvements de position apparaissent entre la 4<sup>e</sup> et la 8<sup>e</sup> semaine de collecte régulière. Une entrée dans le top 3 demande généralement 3 à 9 mois selon l'écart de départ et le niveau de concurrence de la zone.</p>
+<p>Cela dépend de deux choses que vous seul pouvez mesurer : l'écart de volume avec les trois du pack local, et le nombre d'avis que vous arrivez à collecter chaque mois. Divisez le premier par le second, vous obtenez un délai en mois. Nous ne donnons pas de fourchette générale, parce qu'un écart de 20 avis et un écart de 200 n'ont rien à voir — et parce que vos concurrents continuent d'en recevoir pendant que vous avancez, ce qu'il faut intégrer au calcul.</p>
 
 <h3>Vaut-il mieux beaucoup d'avis ou une très bonne note ?</h3>
-<p>Les deux, mais dans cet ordre : le volume vous rend éligible au classement, la note transforme la visibilité en clics. En dessous de 4,0, le taux de clic s'effondre. Au-dessus de 4,4, l'effet marginal d'un dixième de point supplémentaire devient faible, et une note de 5,0 parfaite paraît même suspecte aux internautes.</p>
+<p>Les deux, mais dans cet ordre : le volume vous rend éligible au classement, la note transforme la visibilité en clics. Pour situer la barre, l'enquête BrightLocal 2026 (1 002 consommateurs américains) indique que 68 % des répondants ne retiennent que les commerces affichant au moins 4 étoiles, et 31 % seulement ceux à 4,5 ou plus. En dessous de 4, ce n'est donc pas d'abord une question de classement : une partie des gens qui voient votre fiche l'écartent avant même de l'ouvrir.</p>
 
 <h3>Les anciens avis comptent-ils toujours ?</h3>
 <p>Ils comptent dans le total affiché, mais leur poids diminue fortement avec le temps. Google favorise les fiches actives : visez au moins 10 % de votre volume total d'avis déposés sur les 90 derniers jours pour maintenir la fraîcheur du signal.</p>
@@ -416,7 +415,7 @@ export const articles: Record<string, {
 <p>Oui, partiellement. Le classement varie selon la position de l'internaute : vous pouvez être premier dans un rayon de 500 mètres et absent à 3 kilomètres. Vous ne pouvez pas modifier votre adresse, mais une proéminence forte élargit mécaniquement le rayon sur lequel Google vous affiche.</p>
 
 <h3>Une plaque NFC accélère-t-elle vraiment la collecte ?</h3>
-<p>Oui, parce qu'elle supprime la friction au moment précis où le client est satisfait et a déjà son téléphone en main. Les taux constatés sont de 25 à 45 % selon le secteur et l'emplacement, contre 8 à 12 % pour un QR code et 1 à 3 % pour une carte de visite. Pour la plupart des commerces, atteindre le seuil du pack local ne demande qu'un taux de collecte inférieur à 5 %.</p>
+<p>Elle supprime la friction au moment précis où le client est satisfait et a déjà son téléphone en main : pas d'appareil photo à ouvrir, pas de QR code à viser, pas de recherche Google, pas d'application. Nous ne publions pas de taux de collecte, faute de les mesurer. Mais rapportez ce geste au calcul plus haut : pour la plupart des commerces, atteindre le seuil du pack local demande un taux de collecte inférieur à 5 %, soit moins d'un client sur vingt.</p>
 
 <h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
 <p>Non. Les plaques Swiipx sont un paiement unique, expédiées déjà programmées avec votre lien d'avis, sans application ni frais mensuels. Notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a> détaille l'économie réalisée sur cinq ans.</p>
@@ -441,16 +440,16 @@ export const articles: Record<string, {
     date: '3 août 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: "Salles de sport, box de CrossFit, studios de pilates : multipliez vos avis Google par 5 avec une plaque NFC. Emplacements, moments clés, scripts coach, 3 études de cas et ROI chiffré.",
+    excerpt: "Salles de sport, box de CrossFit, studios de pilates : collectez des avis Google avec une plaque NFC. Emplacements, moments clés, scripts coach et exemples de calcul.",
     tocSections: [
       { id: 'pourquoi-avis-salle-sport', label: 'Pourquoi les avis décident' },
       { id: 'probleme-salle-sport', label: 'Satisfaction vs avis' },
       { id: 'fonctionnement', label: 'Comment fonctionne la plaque' },
-      { id: 'placements-salle-sport', label: '6 emplacements testés' },
+      { id: 'placements-salle-sport', label: '6 emplacements possibles' },
       { id: 'moments-cles', label: 'Les 5 moments clés' },
       { id: 'scripts-coach', label: 'Les scripts qui marchent' },
-      { id: 'cas-pratiques', label: '3 études de cas' },
-      { id: 'roi-salle-sport', label: 'Le ROI chiffré' },
+      { id: 'cas-pratiques', label: '3 exemples de calcul' },
+      { id: 'roi-salle-sport', label: 'Le calcul du retour' },
       { id: 'repondre-avis', label: 'Répondre aux avis' },
       { id: 'plan-90-jours', label: 'Le plan 90 jours' },
       { id: 'faq-salle-sport', label: 'FAQ' },
@@ -459,23 +458,23 @@ export const articles: Record<string, {
 <section id="pourquoi-avis-salle-sport" class="scroll-mt-28 mb-16">
 <h2>Pourquoi les avis Google décident du remplissage d'une salle de sport</h2>
 <p>Le fitness est l'un des rares secteurs où le client s'engage sur <strong>plusieurs mois avant même d'avoir testé</strong>. Un abonnement annuel représente 400 à 800 €&nbsp;: personne ne signe sans vérifier. Et la vérification passe par un seul endroit, Google Maps, où le prospect tape « salle de sport + sa ville » puis lit les avis avant de se déplacer.</p>
-<p>Les chiffres du secteur sont nets : <strong>91 % des prospects consultent les avis en ligne avant de franchir la porte d'une salle</strong>, et près de 8 sur 10 ne regardent que les trois premiers résultats du pack local. Une salle avec 34 avis à 4,1 étoiles est structurellement invisible face au concurrent situé à 600 mètres qui affiche 280 avis à 4,7.</p>
+<p>Le comportement est toujours le même : on tape « salle de sport » sur son téléphone, on regarde les trois établissements que Google affiche sur la carte, on lit quelques avis, on choisit. Les résultats suivants ne sont presque jamais ouverts. Une salle qui afficherait 34 avis à 4,1 étoiles part donc perdante face au concurrent situé à 600 mètres qui en affiche 280 à 4,7 : le prospect n'ira pas comparer les équipements ni les horaires, il aura tranché avant.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 Chiffre clé :</strong> dans le fitness, un adhérent acquis via Google vaut en moyenne <strong>450 à 750 € de chiffre d'affaires sur sa durée de vie</strong> (abonnement moyen 35-45 €/mois sur 12 à 18 mois, hors coaching et boutique). Gagner deux places dans le pack local représente souvent 8 à 20 inscriptions supplémentaires par mois.</p>
+<p class="text-sm text-blue-900"><strong>📊 L'ordre de grandeur à garder en tête :</strong> avec un abonnement à 35-45 € par mois tenu 12 à 18 mois, un adhérent représente <strong>entre 420 et 810 € de chiffre d'affaires</strong>, avant même de compter le coaching et la boutique. Refaites le calcul avec vos propres tarifs et votre durée moyenne d'abonnement : c'est ce montant-là qu'il faut mettre en face des dix secondes que coûte une demande d'avis.</p>
 </div>
 <p>Le pack local — ce bloc de trois établissements affiché sur la carte — concentre l'essentiel des clics. Google le construit sur trois piliers : la proximité, la pertinence et la <strong>notoriété</strong>. Le volume d'avis, la note moyenne et la fraîcheur des avis sont les signaux de notoriété les plus faciles à piloter. C'est le seul levier sur lequel une salle indépendante peut battre une franchise nationale.</p>
 </section>
 
 <section id="probleme-salle-sport" class="scroll-mt-28 mb-16">
 <h2>Le vrai problème : vos adhérents sont contents et ne le disent jamais</h2>
-<p>Une salle de sport a un avantage énorme sur un commerce classique : ses clients reviennent <strong>trois à cinq fois par semaine</strong>. Un restaurant voit un client deux fois par an, vous le voyez 200 fois. Et pourtant, la plupart des salles collectent moins de cinq avis par mois.</p>
+<p>Une salle de sport a un avantage énorme sur un commerce classique : ses clients reviennent <strong>trois à cinq fois par semaine</strong>. Un restaurant voit un client deux fois par an, vous le voyez 200 fois. Et pourtant, le nombre d'avis affiché par une salle de sport est presque toujours sans rapport avec cette fréquence de passage. C'est le paradoxe du secteur : le commerce qui voit le plus souvent ses clients est celui qui leur demande le moins souvent leur avis.</p>
 <p>La raison tient à une particularité du parcours : l'adhérent ne paie pas à chaque visite. Il badge, il s'entraîne, il repart. Il n'y a <strong>aucun moment de caisse</strong>, donc aucun moment naturel où l'on peut lui demander quelque chose. Le prélèvement mensuel est automatique et invisible. La relation est excellente mais elle ne produit jamais de point de contact commercial.</p>
-<p>S'ajoute le biais classique de l'asymétrie émotionnelle : <strong>la frustration écrit, la satisfaction se tait</strong>. L'adhérent qui résilie parce que les vestiaires étaient sales rédige un avis dans l'heure. Celui qui a perdu 8 kilos en six mois ne pense jamais à le raconter sur Google. Résultat : la note moyenne des salles de sport en France tourne autour de 4,2 alors que les enquêtes de satisfaction internes dépassent régulièrement 88 %.</p>
+<p>S'ajoute le biais classique de l'asymétrie émotionnelle : <strong>la frustration écrit, la satisfaction se tait</strong>. L'adhérent qui résilie parce que les vestiaires étaient sales rédige un avis dans l'heure. Celui qui a perdu 8 kilos en six mois ne pense jamais à le raconter sur Google : pour lui, le mérite lui revient, pas à la salle. Votre fiche finit donc par refléter vos mécontents beaucoup plus fidèlement que vos habitués, alors que ces derniers sont sans commune mesure plus nombreux. Ce n'est pas un problème de satisfaction, c'est un problème d'expression.</p>
 <h3>Les quatre méthodes qui ne fonctionnent pas</h3>
 <ul>
-<li><strong>L'email de campagne à toute la base</strong> : taux d'ouverture 18 à 25 %, taux de clic 2 à 4 %, et il réveille les adhérents inactifs qui en profitent pour résilier. Rapport bénéfice/risque défavorable.</li>
-<li><strong>Le QR code sur l'affiche du hall</strong> : personne ne s'arrête pour photographier un mur. Taux de conversion mesuré : 1 à 3 %.</li>
-<li><strong>Le « pensez à nous laisser un avis » lancé par le coach</strong> : sans support physique à portée de main, moins de 5 % passent à l'acte, même avec la meilleure intention.</li>
+<li><strong>L'email de campagne à toute la base</strong> : la plupart des messages ne sont jamais ouverts, et ceux qui le sont arrivent à un moment où l'adhérent n'est pas dans sa salle et n'a rien de frais à raconter. Pire, l'envoi réveille les inactifs, qui en profitent pour résilier. Le rapport bénéfice/risque est défavorable.</li>
+<li><strong>Le QR code sur l'affiche du hall</strong> : personne ne s'arrête au milieu d'un hall pour ouvrir son appareil photo, cadrer un mur, attendre la reconnaissance puis valider l'ouverture du lien. Le geste est trop long et trop visible pour quelqu'un qui traverse le hall en sortant de la douche.</li>
+<li><strong>Le « pensez à nous laisser un avis » lancé par le coach</strong> : la bonne intention dure le temps que la phrase soit prononcée, puis elle disparaît dans le vestiaire. Sans support à portée de main dans l'instant qui suit, il ne se passe rien.</li>
 <li><strong>Le concours avec tirage au sort</strong> : interdit par les règles de Google. Toute contrepartie contre un avis expose à la suppression massive des avis et à la suspension de la fiche.</li>
 </ul>
 <p>Ce qui fonctionne, c'est un <strong>objet physique placé là où l'adhérent a déjà son téléphone en main</strong>, au moment précis où il vient de finir sa séance et où l'endorphine fait son travail. C'est exactement le rôle d'une plaque NFC.</p>
@@ -498,25 +497,25 @@ export const articles: Record<string, {
 </section>
 
 <section id="placements-salle-sport" class="scroll-mt-28 mb-16">
-<h2>Où placer la plaque : 6 emplacements testés en salle</h2>
-<p>Le placement détermine environ 80 % du résultat. Voici les taux de conversion observés chez les salles équipées, exprimés en pourcentage d'adhérents sollicités qui déposent effectivement un avis.</p>
+<h2>Où placer la plaque : 6 emplacements possibles en salle</h2>
+<p>L'emplacement pèse plus lourd que tout le reste. Les six positions ci-dessous sont classées de la plus favorable à la moins favorable, selon un seul critère : à quel point l'adhérent est disponible, content, et téléphone déjà en main quand il passe à cet endroit précis.</p>
 
-<h3>1. Le bureau du coach / espace bilan — 40 à 55 % ✅</h3>
+<h3>1. Le bureau du coach / espace bilan ✅</h3>
 <p>C'est <strong>le meilleur emplacement toutes catégories</strong>, et il est presque toujours négligé. Lors d'un bilan de suivi, l'adhérent est assis, en tête à tête, il vient de voir ses progrès chiffrés. La demande arrive au sommet exact de la courbe de satisfaction. Posez la plaque sur le bureau, orientée vers lui.</p>
 
-<h3>2. Le comptoir d'accueil / borne de badgeage — 30 à 40 %</h3>
+<h3>2. Le comptoir d'accueil / borne de badgeage</h3>
 <p>L'emplacement de volume. L'adhérent passe devant deux à cinq fois par semaine et son téléphone est déjà sorti pour badger ou couper sa playlist. Placez la plaque à droite de la borne, à hauteur de main — pas derrière le comptoir, où seul le personnel la voit.</p>
 
-<h3>3. La salle de cours collectifs — 25 à 35 %</h3>
+<h3>3. La salle de cours collectifs</h3>
 <p>Fin de cours de RPM, body pump, yoga ou pilates : le groupe est euphorique, la cohésion est maximale, et une demande faite au micro par le coach déclenche un effet d'entraînement collectif. Une plaque posée sur le pupitre ou près de la sortie capte cette vague. C'est l'emplacement au meilleur ratio effort/résultat.</p>
 
-<h3>4. Le bar à protéines / distributeur — 20 à 30 %</h3>
+<h3>4. Le bar à protéines / distributeur</h3>
 <p>Vrai moment de caisse, donc téléphone en main pour le paiement sans contact. L'adhérent est détendu, la séance est finie. Excellent complément si votre salle dispose d'un espace détente.</p>
 
-<h3>5. Le vestiaire (miroir ou banc central) — 10 à 18 %</h3>
+<h3>5. Le vestiaire (miroir ou banc central)</h3>
 <p>Temps mort réel, téléphone souvent consulté. Rendement moyen mais volume important vu la fréquence de passage. À réserver aux salles qui ont déjà équipé les emplacements prioritaires.</p>
 
-<h3>6. Le coin étirements / zone tapis — 8 à 12 %</h3>
+<h3>6. Le coin étirements / zone tapis</h3>
 <p>Faible rendement pris isolément, mais intéressant dans les salles 24 h/24 sans accueil : c'est parfois le seul point de contact possible. À combiner systématiquement avec la borne de badgeage.</p>
 
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
@@ -528,11 +527,11 @@ export const articles: Record<string, {
 <h2>Les 5 moments clés où l'adhérent dit oui</h2>
 <p>En salle de sport, le <strong>timing compte autant que l'emplacement</strong>. Contrairement à un commerce où le moment de la caisse s'impose, vous devez choisir votre fenêtre. Voici les cinq qui convertissent, classées par efficacité.</p>
 <ol>
-<li><strong>La fin de la séance d'essai gratuite</strong> — le prospect vient de découvrir la salle, il est dans une phase d'enthousiasme et n'a encore aucune raison d'être déçu. Taux observé : 45 à 60 %. C'est le moment le plus rentable, et le plus souvent oublié.</li>
-<li><strong>Le bilan de suivi avec le coach</strong> — l'adhérent voit ses progrès objectivés : poids, tour de taille, charges. La preuve précède la demande. Taux : 40 à 55 %.</li>
-<li><strong>La fin d'un cours collectif</strong> — effet de groupe, endorphines, relation forte avec le coach. Taux : 25 à 35 %, et l'effet est multiplié quand le coach le dit au micro.</li>
+<li><strong>La fin de la séance d'essai gratuite</strong> — le prospect vient de découvrir la salle, il est dans une phase d'enthousiasme et n'a encore aucune raison d'être déçu. C'est le moment le plus favorable de tous, et le plus souvent oublié, parce qu'on se dit qu'un simple visiteur n'a pas la légitimité de donner son avis. Il l'a parfaitement.</li>
+<li><strong>Le bilan de suivi avec le coach</strong> — l'adhérent voit ses progrès objectivés : poids, tour de taille, charges soulevées. La preuve précède la demande, et il n'a même pas à chercher quoi écrire : les chiffres viennent de lui être annoncés.</li>
+<li><strong>La fin d'un cours collectif</strong> — effet de groupe, endorphines, relation forte avec le coach. Quand la demande passe par le micro, elle s'adresse à trente personnes en une phrase, et celui qui s'arrête devant la plaque en sortant entraîne les suivants derrière lui.</li>
 <li><strong>L'atteinte d'un objectif</strong> — première traction, 10 kg perdus, premier semi-marathon. Le moment émotionnel le plus fort, mais il ne se planifie pas : il faut que l'équipe soit briefée pour le saisir.</li>
-<li><strong>Le renouvellement d'abonnement</strong> — un adhérent qui re-signe vient de voter avec son portefeuille. C'est une confirmation de satisfaction : exploitez-la immédiatement. Taux : 35 à 45 %.</li>
+<li><strong>Le renouvellement d'abonnement</strong> — un adhérent qui re-signe vient de voter avec son portefeuille. C'est une confirmation de satisfaction, et l'un des rares instants où il est assis en face de vous sans être pressé de commencer sa séance.</li>
 </ol>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900"><strong>⛔ Le moment à éviter absolument :</strong> l'arrivée en salle. L'adhérent est pressé, concentré sur sa séance, souvent en retard sur son cours. Une sollicitation à ce moment ne convertit pas et crée une friction inutile. La demande se fait toujours <strong>après</strong> l'effort, jamais avant.</p>
@@ -541,15 +540,15 @@ export const articles: Record<string, {
 
 <section id="scripts-coach" class="scroll-mt-28 mb-16">
 <h2>Les scripts qui marchent (et ceux qui tuent la conversion)</h2>
-<p>Une plaque posée sans un mot convertit <strong>trois à quatre fois moins</strong> qu'une plaque mentionnée oralement. La phrase compte autant que l'objet. Voici les formulations testées sur le terrain, avec la raison pour laquelle elles fonctionnent.</p>
+<p>Une plaque posée sans un mot reste un objet que personne n'identifie. La phrase compte autant que l'objet : c'est elle qui dit à l'adhérent ce qu'on attend de lui, et surtout combien de temps ça va lui prendre. Voici des formulations à donner à l'équipe, avec la raison pour laquelle elles fonctionnent.</p>
 
 <h3>✅ Le script « fin de cours collectif » (le plus rentable)</h3>
 <p class="italic">« Bravo à tous, beau boulot aujourd'hui. Si le cours vous a plu, il y a une plaque à l'accueil : vous approchez votre téléphone, ça prend 20 secondes et ça nous aide énormément à faire connaître la salle. »</p>
-<p>Pourquoi ça marche : la demande suit immédiatement un compliment collectif, elle est conditionnelle (« si le cours vous a plu »), chiffrée dans le temps, et l'effet de groupe fait le reste. Trois à huit personnes s'arrêtent en sortant au lieu d'une seule.</p>
+<p>Pourquoi ça marche : la demande suit immédiatement un compliment collectif, elle est conditionnelle (« si le cours vous a plu »), elle annonce la durée du geste et elle indique où se trouve la plaque. L'adhérent n'a plus une seule question à se poser en sortant, et il voit les autres s'arrêter avant lui.</p>
 
 <h3>✅ Le script « bilan de suivi »</h3>
 <p class="italic">« Vous avez perdu 6 kilos en quatre mois, c'est vraiment un beau résultat. Si vous avez deux minutes, ça me ferait très plaisir que vous le racontiez sur Google : c'est ce genre de retour qui donne envie aux gens de se lancer. »</p>
-<p>Sur les adhérents en progression mesurable, le taux monte à 50-60 %. Ce sont vos meilleurs ambassadeurs : ils rédigent des avis longs, détaillés et spécifiques — exactement ceux qui pèsent le plus dans l'algorithme et qui convainquent les prospects hésitants.</p>
+<p>Les adhérents en progression mesurable sont vos meilleurs ambassadeurs : ils rédigent des avis longs, détaillés et spécifiques, parce qu'ils ont une histoire à raconter et des chiffres pour l'appuyer. Ce sont exactement les avis que les prospects hésitants lisent en entier, autrement plus convaincants qu'une ligne « super salle, je recommande ».</p>
 
 <h3>✅ Le script « séance d'essai »</h3>
 <p class="italic">« Alors, cette première séance ? Si vous avez apprécié l'accueil, un petit avis Google nous aide beaucoup, la plaque est juste là. »</p>
@@ -566,69 +565,69 @@ export const articles: Record<string, {
 </section>
 
 <section id="cas-pratiques" class="scroll-mt-28 mb-16">
-<h2>3 études de cas de salles équipées</h2>
+<h2>3 exemples de calcul selon le profil de salle</h2>
+<p>Les trois scénarios qui suivent ne sont pas des résultats clients relevés : ce sont des projections, construites à partir d'hypothèses indiquées à chaque fois. Remplacez-les par vos propres chiffres, ce sont les seuls qui vous concernent. Une règle traverse les trois : <strong>un adhérent ne dépose qu'un seul avis</strong>. Le plafond n'est donc pas votre nombre de passages, mais votre nombre d'adhérents distincts.</p>
 
-<h3>🏋️ Salle de fitness indépendante — Nantes (44)</h3>
-<p>Structure : 650 m², environ 720 adhérents, 3 coachs, planning de cours collectifs chargé. Situation de départ : 41 avis, 4,2 étoiles, 4<sup>e</sup> position dans le pack local sur « salle de sport Nantes ».</p>
+<h3>🏋️ Salle de fitness indépendante</h3>
+<p>Hypothèses : 650 m², environ 720 adhérents, 3 coachs, planning de cours collectifs chargé. Deux plaques installées, à l'accueil et dans la salle de cours collectifs, avec une demande faite en fin de chaque cours. La fiche part de 41 avis.</p>
 <ul>
-<li>Équipement : 2 plaques (accueil + salle de cours collectifs), demande systématique en fin de cours</li>
-<li>Après 5 mois : <strong>187 avis, 4,7 étoiles</strong></li>
-<li>Position pack local : <strong>2<sup>e</sup></strong></li>
-<li>Demandes d'essai gratuit via Google : de 14 à 43 par mois (+207 %)</li>
-<li>Inscriptions attribuées à Google : +11 par mois en moyenne</li>
+<li>Si un adhérent sur dix dépose un avis au cours des quatre premiers mois, cela ferait environ 70 avis, et la fiche dépasserait les 110</li>
+<li>Si seulement un adhérent sur vingt le fait, cela ferait 36 avis : le total de la fiche aurait tout de même presque doublé</li>
+<li>Ce qui décide entre ces deux hypothèses n'est pas la plaque, mais le nombre de fins de cours où la phrase est réellement prononcée</li>
+<li>Une fois les 720 adhérents passés, le rythme retombe de lui-même : la collecte suit ensuite les nouvelles inscriptions</li>
 </ul>
 
-<h3>🏢 Franchise low-cost 24 h/24 — Lille (59)</h3>
-<p>Structure : 1 100 m², environ 1 900 abonnés, accueil non permanent (personnel présent 6 h par jour seulement). Le défi : collecter sans personnel.</p>
+<h3>🏢 Franchise low-cost ouverte 24 h/24</h3>
+<p>Hypothèses : 1 100 m², environ 1 900 abonnés, personnel présent 6 h par jour seulement. Cinq plaques réparties sur la borne de badgeage, deux zones cardio, le bar et les vestiaires. La difficulté est de collecter quand il n'y a personne pour demander.</p>
 <ul>
-<li>Équipement : 5 plaques (borne de badgeage, deux zones cardio, bar, vestiaires)</li>
-<li>Avant : 6 avis/mois en moyenne. Après : <strong>38 avis/mois</strong></li>
-<li>Note passée de 3,9 à 4,5 en sept mois, les nouveaux avis diluant un historique dégradé</li>
-<li>Enseignement clé : <strong>plus de 60 % des avis ont été déposés en dehors des heures de présence du personnel</strong> — ce qu'aucune méthode humaine n'aurait permis</li>
-<li>ROI de l'équipement (107,88 €) : atteint dès le <strong>premier abonnement supplémentaire</strong></li>
+<li>Aucun script oral n'est possible en dehors des heures de présence : tout repose sur l'emplacement et sur une signalétique qui dit en une ligne quoi faire</li>
+<li>Avec un abonné sur vingt qui dépose un avis sur six mois, on arriverait à 95 avis ; avec un sur cinquante, à 38</li>
+<li>La part de vos passages qui a lieu hors présence du personnel, vous la connaissez déjà par vos badgeages : c'est exactement la part de collecte qu'aucune méthode humaine ne peut atteindre</li>
+<li>Le Pack Pro à 107,88 € représente moins de trois mois d'abonnement d'un seul adhérent</li>
 </ul>
 
-<h3>🤸 Box de CrossFit — Bordeaux (33)</h3>
-<p>Structure : 280 m², 210 membres, communauté très soudée, panier moyen élevé (85 €/mois).</p>
+<h3>🤸 Box de CrossFit</h3>
+<p>Hypothèses : 280 m², 210 membres, communauté soudée, panier moyen de 85 € par mois. Une plaque au comptoir d'accueil, demande faite en fin de WOD par le coach. La fiche part de 27 avis.</p>
 <ul>
-<li>Équipement : 1 plaque au comptoir d'accueil, demande faite en fin de WOD par le coach</li>
-<li>Après 4 mois : 27 → <strong>96 avis</strong>, note 4,9</li>
-<li>Effet observé : la mention répétée des prénoms des coachs dans les avis a fait remonter la box sur les requêtes « coach CrossFit Bordeaux »</li>
-<li>Taux de conversion des séances d'essai passé de 31 % à 44 %, les prospects arrivant déjà convaincus par les avis lus</li>
+<li>Les membres passent devant le comptoir trois à cinq fois par semaine, mais le plafond reste 210 avis : ici, la répétition sert seulement à ne rater personne</li>
+<li>Si un membre sur quatre dépose un avis en quatre mois, cela ferait une cinquantaine d'avis, soit un triplement du total affiché par la fiche</li>
+<li>Effet secondaire attendu dans ce type de structure : les membres citent spontanément le prénom de leur coach, ce qui donne à la fiche un contenu que les salles impersonnelles n'auront jamais</li>
+<li>À 85 € par mois, un seul membre gagné couvre largement le prix de la plaque</li>
 </ul>
-<p>Le schéma est constant sur les trois cas : <strong>volume d'avis multiplié par 3 à 5 en 4 à 7 mois</strong>, note en hausse de 0,5 à 0,6 point, et un gain de 1 à 3 positions dans le pack local.</p>
+<p>Le point commun aux trois scénarios n'est pas un chiffre, c'est une mécanique : le nombre d'avis dépend du nombre d'adhérents distincts qui passent devant une plaque, satisfaits et téléphone en main, et à qui quelqu'un a dit une phrase. Tout le reste en découle.</p>
 </section>
 
 <section id="roi-salle-sport" class="scroll-mt-28 mb-16">
-<h2>Le ROI chiffré pour une salle de sport</h2>
-<p>Faisons le calcul avec des hypothèses volontairement prudentes, sur la base d'une salle indépendante équipée du Pack Business.</p>
+<h2>Le calcul du retour, hypothèses posées</h2>
+<p>Le tableau ci-dessous n'est pas un relevé de résultats : c'est une projection. Chaque ligne est une hypothèse que vous pouvez remplacer par vos propres chiffres, et contester si elle vous paraît optimiste. Elle porte sur une salle indépendante d'environ 700 adhérents, équipée du Pack Business.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
 <thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
 <tbody>
 <tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € (paiement unique, sans abonnement)</td></tr>
-<tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, aucune batterie)</td></tr>
-<tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+120 à +250</td></tr>
-<tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
-<tr><td class="border p-3">Nouvelles inscriptions / mois</td><td class="border p-3">+8 à +20</td></tr>
-<tr><td class="border p-3">Valeur vie moyenne d'un adhérent</td><td class="border p-3">~520 €</td></tr>
-<tr><td class="border p-3"><strong>CA additionnel annuel estimé</strong></td><td class="border p-3"><strong>+49 900 € à +124 800 €</strong></td></tr>
+<tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">Puce NFC passive, sans batterie — garantie à vie</td></tr>
+<tr><td class="border p-3">Hypothèse de collecte retenue</td><td class="border p-3">1 adhérent sur 10 dépose un avis en 4 mois</td></tr>
+<tr><td class="border p-3">Avis obtenus sur cette hypothèse</td><td class="border p-3">Environ 70 pour 700 adhérents</td></tr>
+<tr><td class="border p-3">Abonnement mensuel retenu</td><td class="border p-3">35 à 45 €</td></tr>
+<tr><td class="border p-3">Durée d'abonnement retenue</td><td class="border p-3">12 à 18 mois</td></tr>
+<tr><td class="border p-3">Valeur d'un adhérent sur cette base</td><td class="border p-3">420 à 810 €</td></tr>
+<tr><td class="border p-3"><strong>Seuil de rentabilité sur ces hypothèses</strong></td><td class="border p-3"><strong>1 inscription supplémentaire sur toute la durée de vie des plaques</strong></td></tr>
 </tbody>
 </table>
 </div>
-<p>Même en divisant ces chiffres par quatre, le retour sur investissement d'une plaque à 65,88 € reste sans commune mesure avec tout autre canal d'acquisition du secteur. À titre de comparaison, une campagne Google Ads sur le mot-clé « salle de sport » coûte entre 2 et 6 € le clic dans une métropole française, soit un coût d'acquisition de 70 à 180 € par inscription — <strong>chaque mois, indéfiniment</strong>. La plaque, elle, est payée une fois.</p>
+<p>La seule ligne qui compte vraiment est la dernière : l'équipement coûte 65,88 €, un adhérent en vaut plusieurs centaines. Il n'est donc pas nécessaire de croire aux hypothèses hautes pour que l'opération tienne debout : il suffit qu'une seule inscription soit venue de votre fiche Google sur toute la durée de vie des plaques. La comparaison avec la publicité est instructive : un clic sur le mot-clé « salle de sport » se paie quelques euros dans une métropole française, et si un visiteur sur trente s'inscrit, l'inscription revient à plusieurs dizaines d'euros — <strong>puis il faut recommencer le mois suivant</strong>. La plaque, elle, est payée une fois.</p>
 <p>Il faut aussi compter l'effet indirect sur la rétention : une salle bien notée attire des prospects mieux qualifiés, qui restent plus longtemps. Pour les fourchettes de prix du marché et les critères de choix, consultez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
 </section>
 
 <section id="repondre-avis" class="scroll-mt-28 mb-16">
-<h2>Répondre aux avis : le réflexe que 70 % des salles négligent</h2>
+<h2>Répondre aux avis : le réflexe le plus souvent oublié</h2>
 <p>Collecter ne suffit pas. Google valorise les fiches <strong>actives</strong>, et les prospects lisent vos réponses au moins autant que les avis eux-mêmes. Une salle qui répond à 100 % de ses avis gagne en crédibilité, surtout sur les avis négatifs — qui sont dans ce secteur très prévisibles : propreté des vestiaires, affluence aux heures de pointe, matériel en panne, difficultés de résiliation.</p>
 <h3>Répondre à un avis positif (30 secondes)</h3>
 <p class="italic">« Merci Sarah pour ce retour ! Ravi que les cours de body pump vous plaisent autant, on transmet à Julie. À très vite dans votre salle de sport à Nantes. »</p>
 <p>Astuce SEO : glissez naturellement <strong>votre activité et votre ville</strong> dans une partie de vos réponses. Google lit ces réponses et elles renforcent votre pertinence locale.</p>
 <h3>Répondre à un avis négatif : la règle des 3 P</h3>
 <ul>
-<li><strong>Poli</strong> : jamais sur la défensive, jamais d'ironie. Votre réponse est lue par 200 futurs prospects, pas par l'auteur de l'avis.</li>
+<li><strong>Poli</strong> : jamais sur la défensive, jamais d'ironie. Votre réponse est lue par tous les prospects qui passeront ensuite sur votre fiche, pas seulement par l'auteur de l'avis.</li>
 <li><strong>Précis</strong> : répondez factuellement. « Le tapis 4 a été réparé le 12 » vaut mille fois mieux qu'un « nous sommes désolés » générique.</li>
 <li><strong>Privé</strong> : proposez de basculer hors ligne (« passez voir Marc à l'accueil, on regarde ensemble votre dossier »).</li>
 </ul>
@@ -640,20 +639,20 @@ export const articles: Record<string, {
 <h3>Semaines 1-2 : les fondations</h3>
 <ul>
 <li>Complétez votre fiche Google Business Profile à 100 % : horaires réels, catégorie principale précise (salle de sport, club de fitness, box de CrossFit...), attributs (parking, douches, accès PMR, ouvert 24 h/24), planning des cours en photo</li>
-<li>Ajoutez au moins 20 photos récentes : plateau musculation, cours collectifs, vestiaires propres, équipe. Les fiches riches en photos reçoivent nettement plus de demandes d'itinéraire</li>
+<li>Ajoutez au moins 20 photos récentes : plateau musculation, cours collectifs, vestiaires propres, équipe. Un prospect qui hésite entre deux salles regarde d'abord les photos, et une fiche sans image lui laisse l'impression d'un établissement à l'abandon</li>
 <li>Installez les 2 plaques : accueil et salle de cours collectifs</li>
 <li>Briefez l'équipe : une seule phrase, apprise par cœur, dite en fin de chaque cours</li>
 </ul>
 <h3>Semaines 3-8 : le rythme</h3>
 <ul>
-<li>Objectif : 20 à 40 nouveaux avis par mois</li>
+<li>Fixez-vous un objectif calculé sur votre propre fréquentation : le nombre d'adhérents distincts sollicités chaque semaine, multiplié par la part d'entre eux qui accepte réellement. C'est le seul chiffre qui ait un sens pour votre salle</li>
 <li>Répondez à 100 % des avis sous 48 h, sans exception</li>
 <li>Publiez un Google Post par semaine : nouveau cours, défi du mois, arrivée d'un coach, offre de rentrée</li>
 <li>Systématisez la demande à la fin de chaque séance d'essai gratuite : c'est votre gisement le plus rentable</li>
 </ul>
 <h3>Semaines 9-12 : la consolidation</h3>
 <ul>
-<li>Les effets sur le pack local deviennent visibles, avec un décalage habituel de 4 à 8 semaines</li>
+<li>Ne jugez pas trop tôt : Google met plusieurs semaines à répercuter une fiche qui s'anime, et il ne se passe rien de visible pendant les tout premiers avis</li>
 <li>Analysez les mots qui reviennent dans vos avis (« cours collectifs », « ambiance », « propre », prénoms des coachs) : ce sont les requêtes sur lesquelles Google commence à vous positionner</li>
 <li>Ajoutez une troisième plaque sur l'emplacement qui a le mieux fonctionné</li>
 <li>Verrouillez le reste avec notre <a href="/blog/seo-local-recherches-google">guide SEO local</a> et la méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a></li>
@@ -664,13 +663,13 @@ export const articles: Record<string, {
 <h2>FAQ — Plaque NFC pour salle de sport</h2>
 
 <h3>Combien d'avis Google une salle de sport peut-elle collecter avec une plaque NFC ?</h3>
-<p>Une salle de 500 à 800 adhérents passe généralement de 4-8 avis/mois à 20-40 avis/mois, soit une multiplication par 4 à 6. Les clubs de plus de 1 500 abonnés équipés de plusieurs plaques dépassent régulièrement 40 avis mensuels. Le facteur déterminant n'est pas la taille de la salle mais le nombre d'emplacements équipés et la systématisation de la demande en fin de cours.</p>
+<p>Cela dépend de votre fréquentation et de la régularité de la demande, pas de la plaque. Le calcul se fait à partir de vos chiffres : un adhérent ne dépose qu'un seul avis, donc le plafond est votre nombre d'adhérents, et le rythme dépend de la part d'entre eux qui accepte. Sur une salle de 700 adhérents, si un sur dix dépose un avis en quatre mois, cela ferait environ 70 avis. Le facteur déterminant n'est pas la taille de la salle mais le nombre d'emplacements équipés et la systématisation de la demande en fin de cours.</p>
 
 <h3>Où placer la plaque NFC dans une salle de sport ?</h3>
-<p>Le bureau du coach lors des bilans de suivi affiche le meilleur taux (40-55 %), mais c'est le comptoir d'accueil ou la borne de badgeage qui apporte le volume (30-40 %), car l'adhérent y passe plusieurs fois par semaine avec son téléphone déjà en main. La salle de cours collectifs (25-35 %) est le meilleur complément grâce à l'effet de groupe.</p>
+<p>Le bureau du coach, pendant un bilan de suivi, est l'endroit le plus favorable : l'adhérent est assis, en tête à tête, et il vient de voir ses progrès chiffrés. Mais c'est le comptoir d'accueil ou la borne de badgeage qui apporte le volume, parce que l'adhérent y passe plusieurs fois par semaine avec son téléphone déjà en main. La salle de cours collectifs est le meilleur complément, grâce à l'effet d'entraînement d'une demande faite au groupe entier.</p>
 
 <h3>Comment collecter des avis dans une salle ouverte 24 h/24 sans personnel ?</h3>
-<p>C'est justement là que la plaque NFC est irremplaçable : elle fonctionne sans intervention humaine. Sur les salles 24 h/24 que nous suivons, plus de 60 % des avis sont déposés en dehors des heures de présence du personnel. Équipez en priorité la borne de badgeage et les zones de sortie, et compensez l'absence de script oral par une signalétique claire.</p>
+<p>C'est justement là que la plaque NFC est irremplaçable : elle fonctionne sans intervention humaine, à 6 h du matin comme à 23 h, quand aucune méthode reposant sur un salarié ne peut jouer. Équipez en priorité la borne de badgeage et les zones de sortie, et compensez l'absence de script oral par une signalétique claire, qui dit en une ligne quoi faire et combien de temps ça prend.</p>
 
 <h3>La plaque résiste-t-elle à l'humidité des vestiaires et aux produits désinfectants ?</h3>
 <p>Oui. L'acrylique premium 3 mm résiste à l'eau, aux UV, aux rayures et aux produits d'entretien courants. Un coup d'éponge suffit à la nettoyer, contrairement à une affiche papier ou à un flyer plastifié qui gondole en quelques semaines dans un environnement chaud et humide.</p>
@@ -869,15 +868,15 @@ export const articles: Record<string, {
     date: '27 juillet 2026',
     readTime: '10 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Boulangeries, pâtisseries et points chauds : comment multiplier vos avis Google par 5 avec une plaque NFC malgré le rush. Emplacements, scripts vendeur, 3 études de cas et ROI chiffré.',
+    excerpt: 'Boulangeries, pâtisseries et points chauds : collecter des avis Google avec une plaque NFC malgré le rush. Emplacements, scripts vendeur, exemples de calcul et plan 90 jours.',
     tocSections: [
       { id: 'pourquoi-avis-boulangerie', label: 'Pourquoi les avis sont décisifs' },
       { id: 'probleme-boulangerie', label: 'Le rush : votre pire ennemi' },
       { id: 'fonctionnement', label: 'Comment fonctionne la plaque NFC' },
-      { id: 'placements-boulangerie', label: '5 emplacements testés' },
+      { id: 'placements-boulangerie', label: '5 emplacements possibles' },
       { id: 'scripts-boulanger', label: 'Les scripts qui marchent' },
-      { id: 'cas-pratiques', label: '3 études de cas' },
-      { id: 'roi-boulangerie', label: 'Le ROI chiffré' },
+      { id: 'cas-pratiques', label: '3 exemples de calcul' },
+      { id: 'roi-boulangerie', label: 'Faire le calcul' },
       { id: 'repondre-avis', label: 'Répondre aux avis' },
       { id: 'plan-90-jours', label: 'Le plan 90 jours' },
       { id: 'faq-boulangerie', label: 'FAQ' },
@@ -888,7 +887,7 @@ export const articles: Record<string, {
 <p>La boulangerie est l'un des commerces où <strong>la concurrence de proximité est la plus féroce</strong>. Dans une même ville, on trouve souvent une boulangerie tous les 300 mètres, sans compter les rayons pain des supermarchés et les chaînes de « points chauds ». Quand un habitant cherche « boulangerie » ou « meilleure baguette » près de chez lui, il ouvre Google Maps et regarde une chose avant de se déplacer : les étoiles et le nombre d'avis.</p>
 <p>Les chiffres sont sans appel : <strong>plus de 90 % des consommateurs consultent les avis en ligne avant de choisir un commerce alimentaire de proximité</strong>, et 9 personnes sur 10 ne dépassent pas les 3 premiers résultats du pack local (la carte Google Maps). Une boulangerie avec 15 avis à 3,9 étoiles est structurellement invisible face à la concurrente d'à côté qui affiche 220 avis à 4,7.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une boulangerie de quartier fait vivre son chiffre d'affaires sur la <strong>fréquence</strong>. Un client fidèle qui vient 4 fois par semaine pèse facilement <strong>1 200 à 2 000 € de chiffre d'affaires par an</strong>. Gagner 2 places dans le pack local, c'est souvent 20 à 50 nouveaux passages par semaine, donc plusieurs dizaines de nouveaux habitués sur l'année.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une boulangerie de quartier fait vivre son chiffre d'affaires sur la <strong>fréquence</strong>. Un client fidèle qui vient 4 fois par semaine pèse facilement <strong>1 200 à 2 000 € de chiffre d'affaires par an</strong>. Un client gagné n'est donc jamais une vente isolée : c'est une habitude qui s'installe, et qui se compte en centaines de passages sur plusieurs années. C'est ce qui rend la position dans le pack local plus déterminante en boulangerie que dans un commerce où l'on passe une fois par an.</p>
 </div>
 <p>Le problème n'est presque jamais la qualité : la plupart des boulangers font un excellent produit et leurs clients adorent leurs viennoiseries. Le problème est le <strong>passage à l'acte</strong>. Un client heureux ne pense jamais spontanément à écrire un avis — sauf si on lui met un moyen de le faire à 10 centimètres de la main, au moment exact où il paie et où il repart avec sa baguette chaude.</p>
 </section>
@@ -924,22 +923,22 @@ export const articles: Record<string, {
 </section>
 
 <section id="placements-boulangerie" class="scroll-mt-28 mb-16">
-<h2>Où placer la plaque dans une boulangerie : 5 emplacements testés</h2>
-<p>Le placement détermine 80 % du résultat. Voici les taux de conversion observés chez les boulangeries équipées (pourcentage de clients qui laissent effectivement un avis). Pour approfondir, lisez notre guide dédié : <a href="/blog/ou-placer-plaque-avis-google">où placer votre plaque avis Google</a>.</p>
+<h2>Où placer la plaque dans une boulangerie : 5 emplacements possibles</h2>
+<p>Le placement fait la plus grosse partie du travail. Le même objet, posé à deux endroits différents, ne donne pas du tout le même résultat : tout dépend du moment où le client le voit et de ce qu'il a dans les mains à cet instant. Voici les cinq emplacements possibles en boulangerie, classés du plus au moins pertinent, avec la raison qui les classe. Pour approfondir, lisez notre guide dédié : <a href="/blog/ou-placer-plaque-avis-google">où placer votre plaque avis Google</a>.</p>
 
-<h3>1. Le comptoir de caisse, à côté du terminal — 40 à 50 % ✅</h3>
+<h3>1. Le comptoir de caisse, à côté du terminal ✅</h3>
 <p>C'est <strong>de loin le meilleur emplacement</strong>. Le client a déjà son téléphone en main pour payer en sans contact, il vient de choisir ses produits et il est de bonne humeur (odeur de pain chaud, viennoiseries). La plaque doit être posée à droite du terminal de paiement, orientée vers lui, à hauteur de main.</p>
 
-<h3>2. La vitrine réfrigérée / le comptoir de retrait — 15 à 25 %</h3>
+<h3>2. La vitrine réfrigérée / le comptoir de retrait</h3>
 <p>Utile pour les boulangeries-pâtisseries où le client attend qu'on lui prépare une commande (gâteau, plateau, sandwich). Il a du temps mort face à la vitrine : une plaque posée sur le dessus capte une partie de cette attente.</p>
 
-<h3>3. La table du coin restauration / salon de thé — 10 à 20 %</h3>
+<h3>3. La table du coin restauration / salon de thé</h3>
 <p>Pour les boulangeries qui proposent de la consommation sur place (café, formule déjeuner). Le client est assis, détendu, souvent seul avec son téléphone. Une petite plaque sur la table convertit bien après le repas.</p>
 
-<h3>4. Le sac à pain / le sachet — 5 à 10 %</h3>
-<p>Astuce peu connue : un autocollant NFC ou un mini-support glissé dans le sachet. Le client le découvre en rentrant chez lui, au calme. Taux plus faible mais gratuit en complément, et cible les clients à emporter.</p>
+<h3>4. Le sac à pain / le sachet</h3>
+<p>Astuce peu connue : un autocollant NFC ou un mini-support glissé dans le sachet. Le client le découvre en rentrant chez lui, au calme. Beaucoup moins efficace que la caisse — le sachet finit souvent à la poubelle avant d'être remarqué — mais c'est un complément qui ne coûte presque rien et qui touche les clients à emporter.</p>
 
-<h3>5. La porte d'entrée / la vitrine extérieure — 2 à 4 %</h3>
+<h3>5. La porte d'entrée / la vitrine extérieure</h3>
 <p>Aucun intérêt pour la collecte (personne ne scanne en entrant, tout le monde est pressé), mais un vrai intérêt <strong>réputationnel</strong> : elle signale que vous assumez vos avis. À utiliser en complément, jamais seule.</p>
 
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
@@ -949,7 +948,7 @@ export const articles: Record<string, {
 
 <section id="scripts-boulanger" class="scroll-mt-28 mb-16">
 <h2>Les scripts qui marchent (et ceux qui tuent la conversion)</h2>
-<p>En boulangerie, le temps de parole est ultra-court. Une plaque posée sans un mot convertit déjà mieux qu'ailleurs (parce que l'emplacement caisse est idéal), mais une phrase de 3 secondes double encore le résultat. Voici les formulations testées sur le terrain, calibrées pour ne pas ralentir la file.</p>
+<p>En boulangerie, le temps de parole est ultra-court. Une plaque posée sans un mot travaille déjà, parce que l'emplacement caisse est idéal, mais une phrase de trois secondes change la nature de la demande : le client comprend d'un coup ce qu'on lui demande, combien ça lui coûte, et que ce n'est pas une obligation. Voici des formulations calibrées pour ne pas ralentir la file.</p>
 
 <h3>✅ Le script « ultra-court » (pour le rush)</h3>
 <p class="italic">« Si le pain vous plaît, un petit avis Google ici, ça nous aide beaucoup ! » (en désignant la plaque d'un geste).</p>
@@ -957,7 +956,7 @@ export const articles: Record<string, {
 
 <h3>✅ Le script « habitué » (heures creuses)</h3>
 <p class="italic">« Vous venez tous les matins, ça nous ferait vraiment plaisir un petit mot sur Google — c'est là, un coup de téléphone dessus et c'est fait. »</p>
-<p>Sur les clients fidèles, en dehors du rush, le taux monte à 50-60 %. Ce sont vos meilleurs ambassadeurs : ils écrivent des avis authentiques et détaillés (« la meilleure baguette du quartier »), ceux qui pèsent le plus dans l'algorithme Google et qui contiennent naturellement vos mots-clés.</p>
+<p>Les habitués sont ceux qui acceptent le plus volontiers : la relation existe déjà, la demande ne les surprend pas, et ils ont le temps hors des heures de pointe. Ce sont aussi vos meilleurs ambassadeurs, parce qu'ils écrivent des avis détaillés et personnels (« la meilleure baguette du quartier ») — ceux qui pèsent le plus et qui contiennent naturellement vos mots-clés.</p>
 
 <h3>❌ Ce qu'il ne faut jamais faire</h3>
 <ul>
@@ -969,55 +968,55 @@ export const articles: Record<string, {
 </section>
 
 <section id="cas-pratiques" class="scroll-mt-28 mb-16">
-<h2>3 études de cas de boulangeries équipées</h2>
+<h2>3 exemples de calcul pour une boulangerie</h2>
+<p><strong>Ce qui suit n'est pas un relevé de résultats clients : ce sont des projections.</strong> On pose un flux de passages, on pose une proportion de clients qui iraient jusqu'à publier un avis, et on déroule le calcul. Les hypothèses sont écrites en toutes lettres pour que vous puissiez les remplacer par les vôtres — et les contester si elles vous paraissent optimistes.</p>
 
-<h3>🥖 Boulangerie de quartier — Lyon 3e (69)</h3>
-<p>Structure : 1 caisse, ~600 clients/jour en semaine. Situation de départ : 34 avis, 4,1 étoiles, 4<sup>e</sup> position dans le pack local sur « boulangerie Lyon 3 ».</p>
+<h3>🥖 Boulangerie de quartier, une seule caisse</h3>
+<p>Hypothèses : environ 600 clients par jour, six jours sur sept, soit à peu près 15 000 passages par mois. Une plaque au comptoir de caisse. On suppose qu'un passage sur quatre cents se termine par un avis publié — la vendeuse ne dit rien pendant le rush, la plaque travaille seule.</p>
 <ul>
-<li>Équipement : 1 plaque au comptoir de caisse, script ultra-court appris par l'équipe</li>
-<li>Après 4 mois : <strong>198 avis, 4,7 étoiles</strong></li>
-<li>Position pack local : <strong>1<sup>re</sup></strong></li>
-<li>Vues de la fiche Google : de 4 200 à 11 800 par mois (+181 %)</li>
+<li>15 000 ÷ 400, cela ferait <strong>une quarantaine d'avis par mois</strong></li>
+<li>En partant d'une fiche à 34 avis, on serait <strong>autour de 190 avis au bout de quatre mois</strong></li>
+<li>Si un passage sur huit cents seulement va jusqu'au bout, le même calcul tombe à une vingtaine d'avis par mois, soit environ 110 en quatre mois</li>
+</ul>
+<p>Ce qui produit le volume ici, ce n'est pas l'objet, c'est le flux : une boulangerie voit passer en une semaine ce qu'un garage voit en un an. Même avec une proportion très basse, le cumul monte vite. C'est le seul secteur où vous pouvez vous permettre une hypothèse aussi prudente et obtenir quand même un résultat.</p>
+
+<h3>🥐 Boulangerie-pâtisserie avec salon de thé</h3>
+<p>Hypothèses : deux caisses et un salon de thé, environ 900 clients par jour, soit près de 23 000 passages par mois. Trois plaques, une par caisse et une sur les tables du salon. On retient ici une proportion un peu plus haute, un passage sur cinq cents, parce que le client attablé a du temps devant lui.</p>
+<ul>
+<li>23 000 ÷ 500, cela ferait <strong>environ 45 avis par mois</strong> dans cette hypothèse</li>
+<li>Le salon de thé pèse dans le calcul pour une raison simple : le client assis n'a pas trois personnes derrière lui, contrairement à celui qui paie sa baguette</li>
+<li>Côté dépense, l'équipement est un achat unique (107,88 € TTC le Pack Pro, cinq plaques) : il ne se compare pas à un budget mensuel mais à ce que vaut un client récupéré</li>
 </ul>
 
-<h3>🥐 Boulangerie-pâtisserie avec salon de thé — Nantes (44)</h3>
-<p>Structure : 2 caisses + salon de thé, forte activité déjeuner. ~900 clients/jour.</p>
+<h3>🎂 Point chaud / dépôt de pain</h3>
+<p>Hypothèses : petit format, forte rotation le matin, panier moyen faible mais fréquence élevée. Environ 400 clients par jour, soit 10 000 passages par mois, une plaque au comptoir. On prend ici la proportion la plus basse des trois — un passage sur six cents — parce que le client d'un point chaud est pressé et repart en quelques secondes.</p>
 <ul>
-<li>Équipement : 3 plaques (2 caisses + tables du salon de thé)</li>
-<li>Avant : 6 avis/mois en moyenne. Après : <strong>44 avis/mois</strong></li>
-<li>Note passée de 4,0 à 4,6 en 6 mois (les nouveaux avis diluent les anciens négatifs)</li>
-<li>ROI de l'équipement (107,88 €) : atteint dès la première semaine</li>
+<li>10 000 ÷ 600, cela ferait <strong>environ 17 avis par mois</strong> dans cette hypothèse</li>
+<li>Soit environ 85 avis supplémentaires sur cinq mois, ce qui porterait à près de 100 une fiche qui en compte 11 aujourd'hui</li>
+<li>Un effet secondaire à ne pas négliger : les clients citent spontanément un produit précis dans leur avis (« les pains spéciaux du samedi »), et ce vocabulaire correspond à des recherches réelles sur Google</li>
 </ul>
-
-<h3>🎂 Point chaud / dépôt de pain — périphérie de Lille (59)</h3>
-<p>Structure : petit format, forte rotation le matin, panier moyen faible mais fréquence élevée. ~400 clients/jour.</p>
-<ul>
-<li>Équipement : 1 plaque au comptoir</li>
-<li>Après 5 mois : 11 → <strong>96 avis</strong>, note 4,8</li>
-<li>Effet inattendu : plusieurs clients citent nommément « les pains spéciaux du samedi » dans leurs avis, ce qui a poussé la fiche sur cette recherche</li>
-</ul>
-<p>Le pattern est constant : <strong>volume d'avis × 4 à 6 en 4 à 6 mois</strong>, note en hausse de 0,4 à 0,7 point, et un gain de 1 à 3 positions dans le pack local. On retrouve exactement la même mécanique que dans notre <a href="/blog/plaque-nfc-restaurant">guide restaurant</a> et notre <a href="/blog/plaque-nfc-salon-coiffure">guide salon de coiffure</a>.</p>
+<p>Ces trois calculs ne démontrent rien : ils montrent seulement quel ordre de grandeur découle de quelle hypothèse. Refaites-les avec vos chiffres — votre nombre de passages, votre estimation de la proportion de clients prêts à sortir leur téléphone. La même mécanique est détaillée dans notre <a href="/blog/plaque-nfc-restaurant">guide restaurant</a> et notre <a href="/blog/plaque-nfc-salon-coiffure">guide salon de coiffure</a>.</p>
 </section>
 
 <section id="roi-boulangerie" class="scroll-mt-28 mb-16">
-<h2>Le ROI chiffré pour une boulangerie</h2>
-<p>Faisons le calcul honnêtement, avec des hypothèses conservatrices.</p>
+<h2>Faire le calcul pour une boulangerie</h2>
+<p>Reprenons le raisonnement poste par poste. Le tableau sépare volontairement ce qui est une donnée vérifiable (le prix, la nature de la puce) de ce qui n'est qu'une hypothèse de votre part. Aucune ligne ci-dessous n'est un résultat constaté chez un client.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Donnée ou hypothèse</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € (une fois, sans abonnement)</td></tr>
-<tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, pas de batterie)</td></tr>
-<tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+150 à +400</td></tr>
-<tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
-<tr><td class="border p-3">Nouveaux passages / semaine estimés</td><td class="border p-3">+20 à +50</td></tr>
-<tr><td class="border p-3">Panier moyen boulangerie</td><td class="border p-3">~6 €</td></tr>
-<tr><td class="border p-3">Fréquence d'un nouvel habitué</td><td class="border p-3">3 à 4 passages / semaine</td></tr>
-<tr><td class="border p-3"><strong>CA additionnel annuel estimé</strong></td><td class="border p-3"><strong>+18 000 € à +45 000 €</strong></td></tr>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € TTC, une seule fois, sans abonnement — <em>donnée</em></td></tr>
+<tr><td class="border p-3">Usure de la plaque</td><td class="border p-3">Puce passive, pas de batterie, garantie à vie — <em>donnée</em></td></tr>
+<tr><td class="border p-3">Passages par mois</td><td class="border p-3">15 000 (600 clients/jour, 6 jours) — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3">Proportion qui publie un avis</td><td class="border p-3">1 passage sur 400 — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3">Avis publiés par mois</td><td class="border p-3">≈ 40, soit ≈ 480 sur l'année si le rythme tient</td></tr>
+<tr><td class="border p-3">Panier moyen boulangerie</td><td class="border p-3">≈ 6 € — <em>hypothèse, à caler sur votre ticket</em></td></tr>
+<tr><td class="border p-3">Fréquence d'un habitué</td><td class="border p-3">3 à 4 passages / semaine — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3"><strong>Valeur d'un seul nouvel habitué sur un an</strong></td><td class="border p-3"><strong>6 € × 3,5 passages × 52 semaines ≈ 1 100 €</strong></td></tr>
 </tbody>
 </table>
 </div>
-<p>La force de la boulangerie, c'est la <strong>fréquence</strong> : un client conquis par votre fiche Google ne revient pas une fois, il revient plusieurs fois par semaine pendant des années. Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 65,88 € reste sans commune mesure avec n'importe quel autre canal. À titre de comparaison, distribuer des flyers dans les boîtes aux lettres coûte 80 à 150 € pour 1 000 tracts, avec un taux de retour inférieur à 0,5 %.</p>
+<p>Le chiffre que personne ne peut vous promettre, c'est le nombre de nouveaux clients : il dépend de votre concurrence, de votre position de départ dans le pack local, de la qualité de votre fiche et de votre pain. Ce que le calcul montre en revanche, c'est la structure du problème. En boulangerie, un client ne vaut pas une vente mais une habitude : <strong>un seul habitué gagné dans l'année couvre plus de quinze fois le prix des deux plaques</strong>. Tout ce qui vient après est du surplus, et tout ce qui n'arrive pas ne vous coûte rien de plus. À titre de comparaison, distribuer des flyers dans les boîtes aux lettres coûte 80 à 150 € pour 1 000 tracts, à recommencer à chaque campagne.</p>
 <p>Pour aller plus loin sur les fourchettes de prix du marché, lisez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
 </section>
 
@@ -1062,10 +1061,10 @@ export const articles: Record<string, {
 <h2>FAQ — Plaque NFC pour boulangerie</h2>
 
 <h3>Combien d'avis Google une boulangerie peut-elle collecter avec une plaque NFC ?</h3>
-<p>Une boulangerie recevant 400 à 700 clients par jour passe généralement de 3-6 avis/mois à 30-60 avis/mois, soit une multiplication par 5 à 8. Les boulangeries-pâtisseries avec salon de thé dépassent souvent 45 avis par mois grâce aux emplacements complémentaires.</p>
+<p>Personne ne peut vous le garantir : cela dépend du flux réel de votre boutique et de la proportion de clients qui acceptent de sortir leur téléphone. Le calcul, lui, se fait en trente secondes. Avec 600 clients par jour six jours sur sept, soit environ 15 000 passages par mois, et un passage sur quatre cents qui se conclut par un avis, on obtient une quarantaine d'avis mensuels. Divisez cette proportion par deux et vous en obtenez une vingtaine. Prenez l'hypothèse que vous jugez réaliste pour votre commerce : c'est elle qui décide du résultat, pas la plaque.</p>
 
 <h3>Où placer la plaque NFC dans une boulangerie ?</h3>
-<p>Le comptoir de caisse, juste à côté du terminal de paiement, est le meilleur emplacement (40-50 % de conversion) : le client a déjà son téléphone en main pour payer en sans contact. La vitrine de retrait (15-25 %) et les tables du salon de thé (10-20 %) sont d'excellents compléments.</p>
+<p>Le comptoir de caisse, juste à côté du terminal de paiement. C'est le seul endroit où le client a déjà son téléphone en main, pour payer en sans contact : le geste qu'on lui demande est celui qu'il vient de faire. La vitrine de retrait et les tables du salon de thé sont de bons compléments, parce que le client y a du temps mort. La porte d'entrée, elle, ne collecte rien.</p>
 
 <h3>La collecte d'avis n'est-elle pas impossible pendant le rush ?</h3>
 <p>Justement non : c'est là que la plaque NFC prend tout son sens. Pendant le coup de feu, elle travaille seule, sans que la vendeuse ait besoin de parler — l'emplacement caisse et le téléphone déjà en main suffisent. Le script de 3 secondes se réserve aux heures creuses et aux clients habitués.</p>
@@ -1298,15 +1297,15 @@ export const articles: Record<string, {
     date: '22 juillet 2026',
     readTime: '10 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Instituts de beauté, esthétique, onglerie, spa : comment multiplier vos avis Google par 5 avec une plaque NFC. Placements, scripts, 3 études de cas et ROI chiffré.',
+    excerpt: 'Instituts de beauté, esthétique, onglerie, spa : collecter des avis Google avec une plaque NFC. Placements, scripts, exemples de calcul et plan 90 jours.',
     tocSections: [
       { id: 'pourquoi-avis-institut', label: 'Pourquoi les avis sont décisifs' },
       { id: 'probleme-institut', label: 'Satisfaction vs avis' },
       { id: 'fonctionnement', label: 'Comment fonctionne la plaque NFC' },
-      { id: 'placements-institut', label: '5 emplacements testés' },
+      { id: 'placements-institut', label: '5 emplacements possibles' },
       { id: 'scripts-estheticienne', label: 'Les scripts qui marchent' },
-      { id: 'cas-pratiques', label: '3 études de cas' },
-      { id: 'roi-institut', label: 'Le ROI chiffré' },
+      { id: 'cas-pratiques', label: '3 exemples de calcul' },
+      { id: 'roi-institut', label: 'Faire le calcul' },
       { id: 'repondre-avis', label: 'Répondre aux avis' },
       { id: 'plan-90-jours', label: 'Le plan 90 jours' },
       { id: 'faq-institut', label: 'FAQ' },
@@ -1317,7 +1316,7 @@ export const articles: Record<string, {
 <p>Choisir un institut de beauté, c'est confier son visage, sa peau ou son corps à quelqu'un qu'on ne connaît pas encore. Avant de réserver un soin visage, une épilation ou une pose d'ongles, la cliente fait un geste devenu automatique : elle tape « institut de beauté + sa ville » sur Google et elle lit les avis. La note et le nombre d'avis décident, en quelques secondes, si elle réserve chez vous ou passe à l'institut d'à côté.</p>
 <p>Les chiffres du secteur beauté sont sans appel : <strong>plus de 80 % des clientes consultent les avis en ligne avant de réserver un institut</strong>, et 9 sur 10 ne regardent jamais au-delà des trois premiers résultats du pack local (la carte Google Maps). Un institut avec 15 avis à 4,0 étoiles est structurellement invisible face à celui qui affiche 160 avis à 4,8.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> dans la beauté, une nouvelle cliente vaut bien plus qu'un soin isolé. Avec un panier moyen de 45 à 80 € et une fréquence de 4 à 10 visites par an, la valeur d'une cliente fidèle dépasse souvent <strong>400 à 900 € sur un an</strong>. Gagner 2 places dans le pack local, c'est fréquemment 8 à 20 nouvelles clientes par mois.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> dans la beauté, une nouvelle cliente vaut bien plus qu'un soin isolé. Avec un panier moyen de 45 à 80 € et une fréquence de 4 à 10 visites par an, la valeur d'une cliente fidèle dépasse souvent <strong>400 à 900 € sur un an</strong>. C'est ce qui change la portée d'une place gagnée dans le pack local : une cliente conquise n'est pas un soin vendu, c'est une année de rendez-vous.</p>
 </div>
 <p>Le problème n'est presque jamais la satisfaction : les clientes ressortent détendues, bichonnées, contentes du résultat. Le problème est le <strong>passage à l'acte</strong>. Une cliente satisfaite ne pense pas spontanément à écrire un avis — sauf si on lui met un moyen de le faire à 10 centimètres de la main, au moment exact où elle règle et où elle se sent bien.</p>
 </section>
@@ -1325,7 +1324,7 @@ export const articles: Record<string, {
 <section id="probleme-institut" class="scroll-mt-28 mb-16">
 <h2>Le vrai problème : le décalage entre satisfaction et avis</h2>
 <p>Dans un institut, la cliente heureuse repart le teint frais et l'esprit ailleurs... et oublie. La cliente déçue, elle, rentre chez elle et écrit un avis dans l'heure. C'est le biais classique de l'asymétrie émotionnelle : <strong>la frustration écrit, la satisfaction se tait</strong>.</p>
-<p>Résultat : la note moyenne des instituts de beauté en France tourne autour de 4,2/5, alors que le taux de satisfaction réel mesuré en interne dépasse largement 90 %. Vos avis ne reflètent pas votre travail — ils reflètent votre absence de méthode de collecte.</p>
+<p>Résultat : vos avis ne reflètent pas votre travail, ils reflètent l'absence de méthode de collecte. La plupart de vos clientes repartent contentes et n'en diront rien nulle part ; celle qui a mal vécu son épilation, elle, aura écrit avant d'être rentrée chez elle. Tant que rien ne compense ce déséquilibre, votre fiche raconte une histoire plus dure que la réalité de votre institut.</p>
 <h3>Les 4 tentatives qui ne fonctionnent pas</h3>
 <ul>
 <li><strong>La carte de fidélité avec un QR code au dos</strong> : la cliente la range dans son sac et l'oublie. Taux de retour : 1 à 3 %.</li>
@@ -1352,22 +1351,22 @@ export const articles: Record<string, {
 </section>
 
 <section id="placements-institut" class="scroll-mt-28 mb-16">
-<h2>Où placer la plaque dans un institut : 5 emplacements testés</h2>
-<p>Le placement détermine 80 % du résultat. Voici les taux de conversion observés chez les instituts équipés (pourcentage de clientes qui laissent effectivement un avis). Pour approfondir, consultez notre guide <a href="/blog/ou-placer-plaque-avis-google">où placer votre plaque avis Google</a>.</p>
+<h2>Où placer la plaque dans un institut : 5 emplacements possibles</h2>
+<p>Le placement fait la plus grosse partie du travail. Ce qui compte, ce n'est pas la visibilité de l'objet mais le moment où la cliente le croise : a-t-elle son téléphone en main, vient-elle de voir le résultat, est-elle pressée de repartir ? Voici les cinq emplacements possibles dans un institut, classés du plus au moins pertinent, avec la raison qui les classe. Pour approfondir, consultez notre guide <a href="/blog/ou-placer-plaque-avis-google">où placer votre plaque avis Google</a>.</p>
 
-<h3>1. Le comptoir de caisse / accueil — 35 à 45 % ✅</h3>
+<h3>1. Le comptoir de caisse / accueil ✅</h3>
 <p>C'est <strong>de loin le meilleur emplacement</strong>. La cliente est debout, son téléphone est déjà en main (paiement sans contact), elle vient de vivre un moment agréable et se sent détendue. Posez la plaque à droite du terminal de paiement, orientée vers elle.</p>
 
-<h3>2. La table de manucure / onglerie — 25 à 35 %</h3>
+<h3>2. La table de manucure / onglerie</h3>
 <p>Excellent pour les bars à ongles et les prestations manucure/pédicure : la cliente admire ses ongles fraîchement posés, c'est le pic de satisfaction. Une petite plaque sur la table, évoquée en fin de pose, convertit très bien.</p>
 
-<h3>3. La coiffeuse / miroir de cabine — 20 à 30 %</h3>
+<h3>3. La coiffeuse / miroir de cabine</h3>
 <p>Après un soin visage ou un maquillage, la cliente découvre le résultat dans le miroir. Une plaque posée près du miroir capte cet instant précis où elle est la plus enthousiaste.</p>
 
-<h3>4. L'espace détente / tisane après soin — 10 à 15 %</h3>
+<h3>4. L'espace détente / tisane après soin</h3>
 <p>Beaucoup d'instituts et de spas offrent une tisane après le soin. Ce temps calme, téléphone en main, est un bon complément — jamais l'emplacement principal, mais un point de collecte supplémentaire.</p>
 
-<h3>5. La vitrine / porte d'entrée — 3 à 5 %</h3>
+<h3>5. La vitrine / porte d'entrée</h3>
 <p>Aucun intérêt pour la collecte (on ne scanne pas en entrant), mais un vrai intérêt <strong>réputationnel</strong> : elle signale que vous assumez vos avis. À utiliser en complément, jamais seule.</p>
 
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
@@ -1377,7 +1376,7 @@ export const articles: Record<string, {
 
 <section id="scripts-estheticienne" class="scroll-mt-28 mb-16">
 <h2>Les scripts qui marchent (et ceux qui tuent la conversion)</h2>
-<p>Une plaque posée sans un mot convertit <strong>3 à 4 fois moins</strong> qu'une plaque mentionnée à voix haute. La phrase compte autant que l'objet. Voici les formulations testées sur le terrain.</p>
+<p>Une plaque posée sans un mot ne fait pas le travail toute seule dans un institut : contrairement à une caisse de boulangerie, la cliente ne regarde pas le comptoir, elle vous regarde vous. La phrase compte donc autant que l'objet — elle transforme une décoration en proposition. Voici des formulations qui tiennent en une respiration.</p>
 
 <h3>✅ Le script « caisse » (le plus efficace)</h3>
 <p class="italic">« Voilà, c'est parfait. Si vous êtes contente de votre soin, un petit avis Google nous aide énormément — vous approchez juste votre téléphone ici, ça prend 20 secondes. »</p>
@@ -1385,7 +1384,7 @@ export const articles: Record<string, {
 
 <h3>✅ Le script « cliente fidèle »</h3>
 <p class="italic">« Ça fait un moment que vous me faites confiance, ça me ferait vraiment plaisir si vous laissiez un mot sur Google. C'est là, un coup de téléphone dessus. »</p>
-<p>Sur les clientes régulières, le taux monte à 50-60 %. Ce sont vos meilleures ambassadrices : elles écrivent des avis longs et détaillés, ceux qui pèsent le plus dans l'algorithme Google.</p>
+<p>Les clientes régulières sont celles qui acceptent le plus facilement : la relation est déjà là, la demande ne les met pas mal à l'aise. Ce sont aussi vos meilleures ambassadrices, parce qu'elles écrivent des avis longs et détaillés — ceux qui pèsent le plus dans l'algorithme Google.</p>
 
 <h3>❌ Ce qu'il ne faut jamais faire</h3>
 <ul>
@@ -1397,59 +1396,60 @@ export const articles: Record<string, {
 </section>
 
 <section id="cas-pratiques" class="scroll-mt-28 mb-16">
-<h2>3 études de cas d'instituts équipés</h2>
+<h2>3 exemples de calcul pour un institut</h2>
+<p><strong>Ce qui suit n'est pas un relevé de résultats clients : ce sont des projections.</strong> On pose un nombre de clientes, on pose une proportion de clientes qui iraient jusqu'à publier un avis, et on déroule le calcul. Les hypothèses sont écrites noir sur blanc pour que vous puissiez les remplacer par les vôtres — et les rejeter si elles vous paraissent trop belles.</p>
 
-<h3>💆 Institut de beauté / esthétique — Lyon (69)</h3>
-<p>Structure : 2 esthéticiennes, soins visage, épilation, maquillage. ~35 clientes/semaine. Situation de départ : 21 avis, 4,3 étoiles, 6<sup>e</sup> position dans le pack local sur « institut de beauté Lyon ».</p>
+<h3>💆 Institut d'esthétique, deux esthéticiennes</h3>
+<p>Hypothèses : soins visage, épilation, maquillage, environ 35 clientes par semaine, soit à peu près 150 clientes par mois. Deux plaques, une à la caisse et une en cabine, et la phrase dite systématiquement à l'encaissement. On suppose qu'une cliente sur six accepte et va jusqu'à publier.</p>
 <ul>
-<li>Équipement : 2 plaques (caisse + cabine), script systématique à l'encaissement</li>
-<li>Après 4 mois : <strong>118 avis, 4,8 étoiles</strong></li>
-<li>Position pack local : <strong>2<sup>e</sup></strong></li>
-<li>Nouvelles réservations via Google : de 14 à 41 par mois (+193 %)</li>
+<li>150 ÷ 6, cela ferait <strong>environ 25 avis par mois</strong></li>
+<li>En partant d'une fiche à 21 avis, on serait <strong>autour de 120 avis au bout de quatre mois</strong></li>
+<li>Si seule une cliente sur douze passe à l'acte, le même calcul donne une douzaine d'avis par mois, soit une cinquantaine d'avis supplémentaires en quatre mois</li>
+</ul>
+<p>Une cliente sur six, c'est une hypothèse haute, et elle ne tient que si la phrase est dite à chaque encaissement. Sans elle, retenez plutôt la version divisée par deux : c'est le prix de l'objet posé en silence.</p>
+
+<h3>💅 Bar à ongles, trois prothésistes</h3>
+<p>Hypothèses : forte rotation (pose gel, semi-permanent, nail art), environ 70 clientes par semaine, soit près de 300 par mois. Trois plaques, deux sur les tables de manucure et une à la caisse. On retient une cliente sur huit, la table de manucure jouant en votre faveur : la cliente vient de découvrir ses ongles et attend que ça sèche.</p>
+<ul>
+<li>300 ÷ 8, cela ferait <strong>une quarantaine d'avis par mois</strong> dans cette hypothèse</li>
+<li>Le temps de séchage est le seul moment du parcours où la cliente est disponible, immobile et ravie : c'est lui qui porte le calcul, pas le nombre de plaques</li>
+<li>Côté dépense, l'équipement est un achat unique (107,88 € TTC le Pack Pro, cinq plaques) : il se compare à ce que vaut une cliente, pas à un budget mensuel</li>
 </ul>
 
-<h3>💅 Bar à ongles / onglerie — Bordeaux (33)</h3>
-<p>Structure : 3 prothésistes ongulaires, forte rotation (pose gel, semi-permanent, nail art). ~70 clientes/semaine.</p>
+<h3>🌸 Spa / institut premium</h3>
+<p>Hypothèses : trois cabines, soins corps et massages, panier moyen élevé (90 à 180 €), volume modéré — environ 25 clientes par semaine, soit une centaine par mois. Deux plaques, à l'accueil et dans l'espace détente. On prend ici la proportion la plus basse, une cliente sur dix, parce qu'un soin long se termine dans un état où l'on n'a pas envie de toucher son téléphone.</p>
 <ul>
-<li>Équipement : 3 plaques (2 tables de manucure + caisse)</li>
-<li>Avant : 6 avis/mois en moyenne. Après : <strong>38 avis/mois</strong></li>
-<li>Note passée de 4,1 à 4,7 en 6 mois (les nouveaux avis diluent les anciens négatifs)</li>
-<li>ROI de l'équipement (107,88 €) : atteint dès la <strong>première cliente supplémentaire</strong></li>
+<li>100 ÷ 10, cela ferait <strong>une dizaine d'avis par mois</strong> dans cette hypothèse</li>
+<li>Soit une cinquantaine d'avis supplémentaires sur cinq mois, ce qui porterait à près de 80 une fiche qui en compte 27 aujourd'hui</li>
+<li>Sur ce type d'établissement, le volume compte moins que le contenu : quelques avis longs et précis sur un soin haut de gamme pèsent plus, auprès d'une prospect, que trente avis d'une ligne</li>
 </ul>
-
-<h3>🌸 Spa / institut premium — Nice (06)</h3>
-<p>Structure : spa avec 3 cabines, soins corps, massages, panier moyen élevé (90-180 €), volume modéré (~25 clientes/semaine).</p>
-<ul>
-<li>Équipement : 2 plaques (accueil + espace détente tisane)</li>
-<li>Après 5 mois : 27 → <strong>84 avis</strong>, note 4,9</li>
-<li>Effet inattendu : hausse nette des réservations de forfaits et cartes cadeaux, la fiche Google inspirant davantage confiance</li>
-</ul>
-<p>Le schéma est constant : <strong>volume d'avis × 4 à 6 en 4 à 6 mois</strong>, note en hausse de 0,4 à 0,6 point, et un gain de 1 à 3 positions dans le pack local. Le même mécanisme se retrouve dans notre guide <a href="/blog/plaque-nfc-salon-coiffure">plaque NFC salon de coiffure</a>, secteur voisin où le NFC atteint des records de conversion.</p>
+<p>Ces trois calculs ne prouvent rien : ils montrent quel ordre de grandeur découle de quelle hypothèse. Refaites-les avec vos chiffres — votre nombre de clientes, votre estimation de celles qui accepteraient. La même mécanique est détaillée dans notre guide <a href="/blog/plaque-nfc-salon-coiffure">plaque NFC salon de coiffure</a>, secteur voisin où le geste se place au même moment.</p>
 </section>
 
 <section id="roi-institut" class="scroll-mt-28 mb-16">
-<h2>Le ROI chiffré pour un institut de beauté</h2>
-<p>Faisons le calcul honnêtement, avec des hypothèses conservatrices.</p>
+<h2>Faire le calcul pour un institut de beauté</h2>
+<p>Reprenons poste par poste. Le tableau sépare volontairement ce qui est une donnée vérifiable (le prix, la nature de la puce) de ce qui n'est qu'une hypothèse de votre part. Aucune ligne ci-dessous n'est un résultat constaté chez un client.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Donnée ou hypothèse</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € (une fois, sans abonnement)</td></tr>
-<tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, pas de batterie)</td></tr>
-<tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+100 à +200</td></tr>
-<tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
-<tr><td class="border p-3">Nouvelles clientes / mois estimées</td><td class="border p-3">+8 à +20</td></tr>
-<tr><td class="border p-3">Valeur d'une cliente sur 1 an</td><td class="border p-3">~450 €</td></tr>
-<tr><td class="border p-3"><strong>CA additionnel annuel estimé</strong></td><td class="border p-3"><strong>+43 200 € à +108 000 €</strong></td></tr>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € TTC, une seule fois, sans abonnement — <em>donnée</em></td></tr>
+<tr><td class="border p-3">Usure de la plaque</td><td class="border p-3">Puce passive, pas de batterie, garantie à vie — <em>donnée</em></td></tr>
+<tr><td class="border p-3">Clientes par mois</td><td class="border p-3">150 (35 par semaine) — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3">Proportion qui publie un avis</td><td class="border p-3">1 cliente sur 6, script dit à chaque encaissement — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3">Avis publiés par mois</td><td class="border p-3">≈ 25 si l'hypothèse tient, ≈ 12 si vous la divisez par deux</td></tr>
+<tr><td class="border p-3">Panier moyen</td><td class="border p-3">45 à 80 € selon les prestations — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3">Fréquence d'une cliente fidèle</td><td class="border p-3">4 à 10 visites par an — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3"><strong>Valeur d'une seule nouvelle cliente sur un an</strong></td><td class="border p-3"><strong>60 € × 7 visites ≈ 420 €</strong></td></tr>
 </tbody>
 </table>
 </div>
-<p>Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 65,88 € reste sans commune mesure avec n'importe quel autre canal d'acquisition. À titre de comparaison, une campagne Google Ads dans la beauté coûte 2 à 5 € le clic, soit 40 à 120 € par cliente acquise — <strong>chaque mois, à vie</strong>.</p>
+<p>Le chiffre que personne ne peut vous promettre, c'est le nombre de nouvelles clientes : il dépend de votre concurrence, de votre position de départ, de vos photos et de vos prestations. Ce que le calcul montre, c'est le rapport de grandeur : <strong>une seule cliente supplémentaire dans l'année couvre plus de six fois le prix des deux plaques</strong>, et l'équipement ne se rachète pas le mois suivant. À titre de comparaison, une campagne Google Ads dans la beauté coûte 2 à 5 € le clic, et il faut la repayer chaque mois pour que le robinet reste ouvert.</p>
 <p>Pour aller plus loin sur les fourchettes de prix du marché, lisez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>, et vérifiez qu'il n'y a <a href="/blog/plaque-avis-google-sans-abonnement">aucun abonnement caché</a>.</p>
 </section>
 
 <section id="repondre-avis" class="scroll-mt-28 mb-16">
-<h2>Répondre aux avis : le réflexe que 70 % des instituts négligent</h2>
+<h2>Répondre aux avis : le réflexe le plus souvent oublié</h2>
 <p>Collecter ne suffit pas. Google valorise les fiches <strong>actives</strong>, et les clientes lisent vos réponses autant que les avis eux-mêmes. Un institut qui répond à 100 % de ses avis gagne en crédibilité — surtout sur les avis négatifs.</p>
 <h3>Répondre à un avis positif (30 secondes)</h3>
 <p class="italic">« Merci Sophie pour votre retour ! Ravie que votre soin visage vous ait plu. À très bientôt à l'institut. — L'équipe de l'Institut X »</p>
@@ -1489,10 +1489,10 @@ export const articles: Record<string, {
 <h2>FAQ — Plaque NFC pour institut de beauté</h2>
 
 <h3>Combien d'avis Google un institut peut-il collecter avec une plaque NFC ?</h3>
-<p>Un institut recevant 30 à 40 clientes par semaine passe généralement de 3-6 avis/mois à 15-30 avis/mois, soit une multiplication par 4 à 6. Les bars à ongles à forte rotation dépassent souvent 35 avis par mois.</p>
+<p>Personne ne peut vous le garantir : tout dépend de votre flux et de la proportion de clientes qui acceptent. Le calcul, lui, se pose facilement. Avec 35 clientes par semaine, soit environ 150 par mois, et une cliente sur six qui publie un avis, on obtient environ 25 avis mensuels. Si vous ne dites rien à l'encaissement, retenez plutôt une sur douze : une douzaine d'avis par mois. C'est l'hypothèse que vous choisissez qui décide du résultat.</p>
 
 <h3>Où placer la plaque NFC dans un institut de beauté ?</h3>
-<p>Le comptoir de caisse est le meilleur emplacement (35-45 % de conversion) : la cliente a déjà son téléphone en main pour régler et vient de vivre un moment agréable. La table de manucure (25-35 %) et la cabine près du miroir (20-30 %) sont d'excellents compléments.</p>
+<p>Le comptoir de caisse : la cliente a déjà son téléphone en main pour régler et elle vient de vivre un moment agréable, les deux conditions sont réunies au même instant. La table de manucure est le meilleur complément — la cliente attend que ses ongles sèchent, elle est immobile et contente. La cabine près du miroir fonctionne juste après la découverte du résultat. La vitrine, elle, ne collecte rien.</p>
 
 <h3>La plaque résiste-t-elle aux crèmes, vernis et à l'humidité ?</h3>
 <p>Oui. L'acrylique premium 3 mm résiste à l'eau, aux UV, aux rayures et aux projections. Un simple coup de chiffon suffit à la nettoyer, contrairement à une affiche papier ou un flyer plastifié qui devient vite illisible.</p>
@@ -2164,15 +2164,15 @@ export const articles: Record<string, {
     date: '13 juillet 2026',
     readTime: '10 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Garages, centres auto, carrosseries : comment multiplier vos avis Google par 4 avec une plaque NFC. Placements, scripts, 3 études de cas et ROI chiffré.',
+    excerpt: 'Garages, centres auto, carrosseries : collecter des avis Google avec une plaque NFC. Placements, scripts garagiste, exemples de calcul et plan 90 jours.',
     tocSections: [
       { id: 'pourquoi-avis-garage', label: 'Pourquoi les avis sont vitaux' },
       { id: 'probleme-garage', label: 'Satisfaction vs avis : le décalage' },
       { id: 'fonctionnement', label: 'Comment fonctionne la plaque NFC' },
-      { id: 'placements-garage', label: '5 emplacements testés' },
+      { id: 'placements-garage', label: '5 emplacements possibles' },
       { id: 'scripts-garagiste', label: 'Les scripts qui marchent' },
-      { id: 'cas-pratiques', label: '3 études de cas' },
-      { id: 'roi-garage', label: 'Le ROI chiffré' },
+      { id: 'cas-pratiques', label: '3 exemples de calcul' },
+      { id: 'roi-garage', label: 'Faire le calcul' },
       { id: 'repondre-avis', label: 'Répondre aux avis' },
       { id: 'plan-90-jours', label: 'Le plan 90 jours' },
       { id: 'faq-garage', label: 'FAQ' },
@@ -2183,7 +2183,7 @@ export const articles: Record<string, {
 <p>Le garage est probablement le commerce local où <strong>la confiance pèse le plus lourd</strong>. Un client qui laisse sa voiture pour une révision, un embrayage ou une carrosserie confie un bien à 10 000 € et un devis qu'il ne sait pas juger. Avant d'appeler, il fait une chose : il tape « garage + sa ville » sur Google et il lit les avis.</p>
 <p>Les chiffres du secteur automobile sont sans appel : <strong>87 % des automobilistes consultent les avis en ligne avant de choisir un garage</strong>, et 9 sur 10 ne dépassent pas les 3 premiers résultats du pack local (la carte Google Maps). Un garage avec 12 avis à 3,9 étoiles est structurellement invisible face au concurrent d'à côté qui affiche 140 avis à 4,7.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> pour un garage, un client acquis via Google vaut en moyenne <strong>350 à 600 € de chiffre d'affaires la première année</strong> (entretien + pièces), et bien plus s'il devient un client récurrent. Gagner 2 places dans le pack local, c'est souvent 5 à 15 nouveaux clients par mois.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> un client qui vous confie l'entretien de sa voiture ne laisse pas une facture, il en laisse une par an pendant des années, plus les imprévus. Prenez votre tarif de révision moyen, multipliez-le par le nombre d'années où vous gardez un client, et vous verrez que la valeur d'un client acquis n'a rien à voir avec celle d'une intervention isolée. C'est ce qui rend une place gagnée dans le pack local aussi rentable dans ce métier.</p>
 </div>
 <p>Le problème n'est pas la satisfaction : la plupart des garagistes font du bon travail et leurs clients sont contents. Le problème est le <strong>passage à l'acte</strong>. Un client satisfait ne pense jamais spontanément à écrire un avis — sauf si on lui met un moyen de le faire à 10 centimètres de la main, au moment exact où il paie et où il est content.</p>
 </section>
@@ -2191,7 +2191,7 @@ export const articles: Record<string, {
 <section id="probleme-garage" class="scroll-mt-28 mb-16">
 <h2>Le vrai problème : le décalage entre satisfaction et avis</h2>
 <p>Dans un garage, le client heureux repart avec sa voiture qui roule bien... et l'oublie. Le client mécontent, lui, rentre chez lui et écrit un avis dans l'heure. C'est le biais classique de l'asymétrie émotionnelle : <strong>la frustration écrit, la satisfaction se tait</strong>.</p>
-<p>Résultat : la note moyenne des garages en France tourne autour de 4,1/5, alors que le taux de satisfaction réel mesuré en interne dépasse souvent 90 %. Vos avis ne reflètent pas votre travail — ils reflètent votre absence de méthode de collecte.</p>
+<p>Résultat : vos avis ne reflètent pas votre travail, ils reflètent l'absence de méthode de collecte. La majorité de vos clients repartent satisfaits et n'en diront rien à personne ; celui dont le devis a glissé de 200 €, lui, écrira le soir même. Tant que rien ne compense ce déséquilibre, votre fiche raconte une histoire plus dure que ce qui se passe réellement dans votre atelier.</p>
 <h3>Les 4 tentatives qui ne fonctionnent pas</h3>
 <ul>
 <li><strong>La carte de visite avec un QR code au dos</strong> : le client la met dans la boîte à gants. Taux de retour : 1 à 3 %.</li>
@@ -2218,22 +2218,22 @@ export const articles: Record<string, {
 </section>
 
 <section id="placements-garage" class="scroll-mt-28 mb-16">
-<h2>Où placer la plaque dans un garage : 5 emplacements testés</h2>
-<p>Le placement détermine 80 % du résultat. Voici les taux de conversion observés chez les garages équipés (pourcentage de clients qui laissent effectivement un avis).</p>
+<h2>Où placer la plaque dans un garage : 5 emplacements possibles</h2>
+<p>Le placement fait la plus grosse partie du travail. Ce qui compte, ce n'est pas que l'objet se voie, c'est le moment où le client le croise : a-t-il son téléphone en main, vient-il de récupérer ses clés, ou est-il en train de découvrir le montant ? Voici les cinq emplacements possibles dans un garage, classés du plus au moins pertinent, avec la raison qui les classe.</p>
 
-<h3>1. Le comptoir de facturation — 35 à 45 % ✅</h3>
+<h3>1. Le comptoir de facturation ✅</h3>
 <p>C'est <strong>de loin le meilleur emplacement</strong>. Le client est debout, son téléphone est déjà en main (paiement sans contact), il vient de récupérer sa voiture réparée et il est soulagé. La plaque doit être posée à droite du terminal de paiement, orientée vers lui.</p>
 
-<h3>2. Le comptoir d'accueil / réception — 20 à 30 %</h3>
+<h3>2. Le comptoir d'accueil / réception</h3>
 <p>Bon pour les garages où la restitution du véhicule se fait à l'accueil sans passage en caisse. Placez la plaque à côté du porte-clés ou du carnet d'entretien qu'on lui rend.</p>
 
-<h3>3. La salle d'attente — 10 à 15 %</h3>
+<h3>3. La salle d'attente</h3>
 <p>Utile en complément si vous avez une vraie salle d'attente (attente vidange, contrôle, pneus). Le client s'ennuie, il est sur son téléphone : une plaque sur la table basse capte une partie de ce temps mort. Ne comptez pas dessus comme emplacement principal.</p>
 
-<h3>4. Dans le véhicule rendu (support tableau de bord) — 8 à 12 %</h3>
+<h3>4. Dans le véhicule rendu (support tableau de bord)</h3>
 <p>Astuce peu connue : une petite plaque posée sur le siège passager avec le carnet d'entretien. Le client la découvre en s'installant. Fonctionne bien mais dépend du fait qu'il ait son téléphone en main.</p>
 
-<h3>5. La vitrine / porte d'entrée — 3 à 5 %</h3>
+<h3>5. La vitrine / porte d'entrée</h3>
 <p>Aucun intérêt pour la collecte (les gens ne scannent pas en entrant), mais un vrai intérêt <strong>réputationnel</strong> : elle signale que vous assumez vos avis. À utiliser en complément, jamais seul.</p>
 
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
@@ -2243,7 +2243,7 @@ export const articles: Record<string, {
 
 <section id="scripts-garagiste" class="scroll-mt-28 mb-16">
 <h2>Les scripts qui marchent (et ceux qui tuent la conversion)</h2>
-<p>Une plaque posée sans un mot convertit <strong>3 à 4 fois moins</strong> qu'une plaque mentionnée oralement. La phrase compte autant que l'objet. Voici les formulations testées sur le terrain.</p>
+<p>Dans un garage, le client ne regarde pas le comptoir : il vous regarde vous, et il attend de savoir combien il va payer. Une plaque posée sans un mot passe donc largement inaperçue — c'est la phrase qui la transforme en proposition. Voici des formulations qui tiennent en une phrase et qui ne mettent personne mal à l'aise.</p>
 
 <h3>✅ Le script « facture » (le plus efficace)</h3>
 <p class="italic">« Voilà, votre voiture est prête. Si vous êtes content du travail, un avis Google nous aide énormément — vous approchez juste votre téléphone ici, ça prend 20 secondes. »</p>
@@ -2251,7 +2251,7 @@ export const articles: Record<string, {
 
 <h3>✅ Le script « client fidèle »</h3>
 <p class="italic">« Ça fait 4 ans que vous venez chez nous, ça me ferait vraiment plaisir si vous laissiez un mot sur Google. C'est là, un coup de téléphone dessus. »</p>
-<p>Sur les clients récurrents, le taux monte à 50-60 %. Ce sont vos meilleurs ambassadeurs : ils écrivent des avis longs et détaillés, ceux qui pèsent le plus dans l'algorithme Google.</p>
+<p>Les clients de longue date sont ceux qui acceptent le plus facilement : la confiance est déjà là et la demande ne les surprend pas. Ce sont aussi vos meilleurs ambassadeurs, parce qu'ils écrivent des avis longs et détaillés — ceux qui pèsent le plus dans l'algorithme Google.</p>
 
 <h3>❌ Ce qu'il ne faut jamais faire</h3>
 <ul>
@@ -2263,59 +2263,59 @@ export const articles: Record<string, {
 </section>
 
 <section id="cas-pratiques" class="scroll-mt-28 mb-16">
-<h2>3 études de cas de garages équipés</h2>
+<h2>3 exemples de calcul pour un garage</h2>
+<p><strong>Ce qui suit n'est pas un relevé de résultats clients : ce sont des projections.</strong> On pose un nombre de véhicules, on pose une proportion de clients qui iraient jusqu'à publier un avis, et on déroule le calcul. Les hypothèses sont écrites en toutes lettres pour que vous puissiez les remplacer par les vôtres — et les refuser si elles vous semblent trop favorables.</p>
 
-<h3>🔧 Garage mécanique indépendant — Villeurbanne (69)</h3>
-<p>Structure : 2 mécaniciens, ~18 véhicules/semaine. Situation de départ : 23 avis, 4,2 étoiles, 5<sup>e</sup> position dans le pack local sur « garage Villeurbanne ».</p>
+<h3>🔧 Garage mécanique indépendant, deux mécaniciens</h3>
+<p>Hypothèses : environ 18 véhicules par semaine, soit à peu près 78 restitutions par mois. Deux plaques, une à la caisse et une à l'accueil, et la phrase dite à chaque facture. On suppose qu'un client sur quatre accepte et publie — proportion élevée, mais le garage est l'un des rares métiers où l'on parle vraiment au client au moment de payer.</p>
 <ul>
-<li>Équipement : 2 plaques (caisse + accueil), script systématique à la facture</li>
-<li>Après 4 mois : <strong>112 avis, 4,7 étoiles</strong></li>
-<li>Position pack local : <strong>2<sup>e</sup></strong></li>
-<li>Appels entrants via Google : de 11 à 34 par mois (+209 %)</li>
+<li>78 ÷ 4, cela ferait <strong>une vingtaine d'avis par mois</strong></li>
+<li>En partant d'une fiche à 23 avis, on serait <strong>autour de 100 avis au bout de quatre mois</strong></li>
+<li>Si la phrase n'est pas dite systématiquement et qu'un client sur huit seulement passe à l'acte, on tombe à une dizaine d'avis par mois, soit une quarantaine d'avis supplémentaires en quatre mois</li>
+</ul>
+<p>Un client sur quatre suppose que quelqu'un le demande à chaque fois. C'est le vrai paramètre du calcul : dans un garage, la plaque seule ne compense pas le silence, parce que le client ne regarde pas le comptoir.</p>
+
+<h3>🚗 Centre auto / pneus, cinq baies</h3>
+<p>Hypothèses : forte rotation (pneus, vidange, climatisation), environ 60 clients par semaine, soit près de 260 par mois. Cinq plaques réparties entre les postes de caisse, l'accueil et la salle d'attente. On retient ici une proportion plus basse, un client sur six, parce que le passage est rapide et impersonnel.</p>
+<ul>
+<li>260 ÷ 6, cela ferait <strong>une quarantaine d'avis par mois</strong> dans cette hypothèse</li>
+<li>La salle d'attente compte davantage ici qu'ailleurs : le client patiente pendant l'intervention, téléphone en main, sans rien d'autre à faire</li>
+<li>Côté dépense, l'équipement est un achat unique (107,88 € TTC le Pack Pro, cinq plaques) : il se compare à la valeur d'un client, pas à un budget mensuel</li>
 </ul>
 
-<h3>🚗 Centre auto / pneus — Toulouse (31)</h3>
-<p>Structure : 5 baies, forte rotation (pneus, vidange, climatisation). ~60 clients/semaine.</p>
+<h3>🎨 Carrosserie</h3>
+<p>Hypothèses : carrosserie et peinture, panier moyen élevé (800 à 2 500 €), volume faible — environ 8 véhicules par semaine, soit 35 restitutions par mois. Une plaque au comptoir de restitution. On garde un client sur quatre, parce que la restitution d'un véhicule réparé après un sinistre est un moment de soulagement, propice à la demande.</p>
 <ul>
-<li>Équipement : 5 plaques (3 postes de caisse + salle d'attente + accueil)</li>
-<li>Avant : 8 avis/mois en moyenne. Après : <strong>41 avis/mois</strong></li>
-<li>Note passée de 4,0 à 4,6 en 6 mois (les nouveaux avis diluent les anciens négatifs)</li>
-<li>ROI de l'équipement (107,88 €) : atteint dès le <strong>premier client supplémentaire</strong></li>
+<li>35 ÷ 4, cela ferait <strong>environ 9 avis par mois</strong> dans cette hypothèse</li>
+<li>Soit environ 45 avis supplémentaires sur cinq mois, ce qui porterait à une soixantaine une fiche qui en compte 19 aujourd'hui</li>
+<li>Sur ce métier, le volume compte moins que le contenu : un avis qui décrit précisément une réparation lourde rassure davantage un prospect — ou un assureur — que dix avis d'une ligne</li>
 </ul>
-
-<h3>🎨 Carrosserie — Marseille (13)</h3>
-<p>Structure : carrosserie / peinture, panier moyen élevé (800-2 500 €), volume faible (~8 véhicules/semaine).</p>
-<ul>
-<li>Équipement : 1 plaque au comptoir de restitution</li>
-<li>Après 5 mois : 19 → <strong>58 avis</strong>, note 4,8</li>
-<li>Effet inattendu : 3 dossiers d'assurance obtenus grâce à la crédibilité de la fiche Google</li>
-</ul>
-<p>Le pattern est constant : <strong>volume d'avis × 3 à 5 en 4 à 6 mois</strong>, note en hausse de 0,4 à 0,6 point, et un gain de 1 à 3 positions dans le pack local.</p>
+<p>Ces trois calculs ne prouvent rien : ils montrent quel ordre de grandeur découle de quelle hypothèse. Refaites-les avec vos chiffres — votre nombre de restitutions par semaine, et votre estimation honnête de la part de clients à qui la phrase sera réellement dite.</p>
 </section>
 
 <section id="roi-garage" class="scroll-mt-28 mb-16">
-<h2>Le ROI chiffré pour un garage</h2>
-<p>Faisons le calcul honnêtement, avec des hypothèses conservatrices.</p>
+<h2>Faire le calcul pour un garage</h2>
+<p>Reprenons poste par poste. Le tableau sépare volontairement ce qui est une donnée vérifiable (le prix, la nature de la puce) de ce qui n'est qu'une hypothèse de votre part. Aucune ligne ci-dessous n'est un résultat constaté chez un client.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Valeur</th></tr></thead>
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Donnée ou hypothèse</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € (une fois, sans abonnement)</td></tr>
-<tr><td class="border p-3">Durée de vie de la plaque</td><td class="border p-3">10 ans (puce NFC passive, pas de batterie)</td></tr>
-<tr><td class="border p-3">Nouveaux avis générés / an</td><td class="border p-3">+80 à +150</td></tr>
-<tr><td class="border p-3">Gain de position pack local</td><td class="border p-3">+1 à +3 places</td></tr>
-<tr><td class="border p-3">Nouveaux clients / mois estimés</td><td class="border p-3">+5 à +15</td></tr>
-<tr><td class="border p-3">Panier moyen garage (entretien)</td><td class="border p-3">~280 €</td></tr>
-<tr><td class="border p-3"><strong>CA additionnel annuel estimé</strong></td><td class="border p-3"><strong>+16 800 € à +50 400 €</strong></td></tr>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">65,88 € TTC, une seule fois, sans abonnement — <em>donnée</em></td></tr>
+<tr><td class="border p-3">Usure de la plaque</td><td class="border p-3">Puce passive, pas de batterie, garantie à vie — <em>donnée</em></td></tr>
+<tr><td class="border p-3">Restitutions par mois</td><td class="border p-3">78 (18 véhicules par semaine) — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3">Proportion qui publie un avis</td><td class="border p-3">1 client sur 4, phrase dite à chaque facture — <em>hypothèse</em></td></tr>
+<tr><td class="border p-3">Avis publiés par mois</td><td class="border p-3">≈ 20 si l'hypothèse tient, ≈ 10 si la phrase n'est pas dite</td></tr>
+<tr><td class="border p-3">Panier moyen garage (entretien)</td><td class="border p-3">≈ 280 € — <em>hypothèse, à caler sur vos tarifs</em></td></tr>
+<tr><td class="border p-3"><strong>Ce que couvre un seul client supplémentaire</strong></td><td class="border p-3"><strong>≈ 280 €, soit plus de quatre fois le prix des deux plaques</strong></td></tr>
 </tbody>
 </table>
 </div>
-<p>Même en divisant ces chiffres par trois, le retour sur investissement d'une plaque à 65,88 € reste sans commune mesure avec n'importe quel autre canal d'acquisition. À titre de comparaison, une campagne Google Ads pour un garage coûte 3 à 8 € le clic, soit 60 à 150 € par client acquis — <strong>chaque mois, à vie</strong>.</p>
+<p>Le chiffre que personne ne peut vous promettre, c'est le nombre de nouveaux clients : il dépend de votre concurrence locale, de votre position de départ dans le pack local et de ce que vos avis racontent. Ce que le calcul montre, c'est le rapport de grandeur : <strong>une seule révision supplémentaire dans l'année rembourse l'équipement plus de quatre fois</strong>, et il n'y a rien à repayer ensuite. À titre de comparaison, une campagne Google Ads pour un garage coûte 3 à 8 € le clic, et il faut la financer tous les mois pour que le flux continue.</p>
 <p>Pour aller plus loin sur les fourchettes de prix du marché, lisez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
 </section>
 
 <section id="repondre-avis" class="scroll-mt-28 mb-16">
-<h2>Répondre aux avis : le réflexe que 70 % des garages négligent</h2>
+<h2>Répondre aux avis : le réflexe le plus souvent oublié</h2>
 <p>Collecter ne suffit pas. Google valorise les fiches <strong>actives</strong>, et les clients lisent vos réponses autant que les avis eux-mêmes. Un garage qui répond à 100 % de ses avis gagne en crédibilité — surtout sur les avis négatifs.</p>
 <h3>Répondre à un avis positif (30 secondes)</h3>
 <p class="italic">« Merci Julien pour votre retour ! Ravi que la révision se soit bien passée. À bientôt à l'atelier. — L'équipe du Garage X »</p>
@@ -2355,10 +2355,10 @@ export const articles: Record<string, {
 <h2>FAQ — Plaque NFC pour garage automobile</h2>
 
 <h3>Combien d'avis Google un garage peut-il collecter avec une plaque NFC ?</h3>
-<p>Un garage traitant 15 à 20 véhicules par semaine passe généralement de 2-4 avis/mois à 12-25 avis/mois, soit une multiplication par 4 à 6. Les centres auto à fort volume dépassent souvent 40 avis/mois.</p>
+<p>Personne ne peut vous le garantir : tout dépend de votre volume et de la proportion de clients à qui la demande sera réellement faite. Le calcul, lui, se pose en une minute. Avec 18 véhicules par semaine, soit environ 78 restitutions par mois, et un client sur quatre qui publie un avis, on obtient une vingtaine d'avis mensuels. Si la phrase n'est dite qu'une fois sur deux, comptez plutôt une dizaine. C'est l'hypothèse retenue qui décide du résultat.</p>
 
 <h3>Où placer la plaque NFC dans un garage ?</h3>
-<p>Le comptoir de facturation est le meilleur emplacement (35-45 % de conversion) : le client a déjà son téléphone en main pour payer et vient de récupérer son véhicule. L'accueil arrive en second (20-30 %).</p>
+<p>Le comptoir de facturation : le client a déjà son téléphone en main pour payer et il vient de récupérer son véhicule, les deux conditions sont réunies au même moment. L'accueil arrive en second, pour les garages où la restitution se fait sans passage en caisse. La salle d'attente est un complément utile quand le client patiente pendant l'intervention. La vitrine, elle, ne collecte rien.</p>
 
 <h3>La plaque résiste-t-elle à l'environnement d'un atelier (huile, poussière) ?</h3>
 <p>Oui. L'acrylique premium 3 mm résiste à l'eau, aux UV, aux rayures et aux projections. Un simple coup de chiffon suffit à la nettoyer, contrairement à une affiche papier ou un flyer plastifié.</p>
@@ -2450,10 +2450,10 @@ export const articles: Record<string, {
 <section id="placement-cabinet" class="scroll-mt-28 mb-16">
 <h2>Où placer la plaque NFC dans un cabinet médical</h2>
 
-<h3>1. Sur le bureau, en fin de consultation (conversion 25-35 %)</h3>
+<h3>1. Sur le bureau, en fin de consultation</h3>
 <p>L'emplacement le plus efficace et le plus déontologique : la plaque est posée discrètement sur votre bureau. À la fin de la consultation, si le patient est satisfait, il la remarque naturellement. Vous pouvez l'évoquer une seule fois, sans insister.</p>
 
-<h3>2. À l'accueil / secrétariat (conversion 15-25 %)</h3>
+<h3>2. À l'accueil / secrétariat</h3>
 <p>Au moment de reprendre rendez-vous ou de régler, la plaque est visible sur le comptoir. La secrétaire peut l'évoquer une fois, de manière neutre.</p>
 
 <h3>3. En salle d'attente (conversion 10-15 %)</h3>
@@ -2533,7 +2533,7 @@ export const articles: Record<string, {
     date: '12 mai 2026',
     readTime: '8 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Le placement de votre plaque avis Google détermine 80% du taux de conversion. Guide 2026 : 7 emplacements stratégiques par secteur (restaurant, salon, retail).',
+    excerpt: 'Où poser votre plaque avis Google : le bon emplacement se déduit du parcours client. Guide 2026 : 7 emplacements par secteur (restaurant, salon, retail) et les erreurs à éviter.',
     tocSections: [
       { id: 'importance-placement', label: 'Pourquoi le placement est crucial' },
       { id: 'principes-placement', label: 'Les 4 principes du bon placement' },
@@ -2545,17 +2545,17 @@ export const articles: Record<string, {
     ],
     content: `
 <section id="importance-placement" class="scroll-mt-28 mb-16">
-<h2>Pourquoi l'emplacement détermine 80 % du taux de conversion</h2>
-<p>Vous pouvez avoir la plus belle plaque NFC du marché : si elle est mal placée, elle convertira 5 % au lieu de 40 %. C'est la <strong>variable la plus importante</strong>, devant la qualité du produit, le script verbal, ou le design.</p>
-<p>Pourquoi ? Parce que le placement détermine 3 choses :</p>
+<h2>Pourquoi l'emplacement compte plus que la plaque elle-même</h2>
+<p>Vous pouvez avoir la plus belle plaque NFC du marché : si le client ne la voit pas, ou s'il la voit au mauvais moment, elle ne sert à rien. Le matériau, la finition et le design ne changent presque rien à l'affaire. Ce qui change tout, c'est de savoir où votre client se trouve à chaque instant de sa visite, ce qu'il fait de ses mains, et dans quel état d'esprit il est quand il passe devant la plaque.</p>
+<p>Trois conditions doivent être réunies en même temps :</p>
 <ol>
 <li><strong>La visibilité :</strong> la plaque doit être vue par le client</li>
 <li><strong>Le timing :</strong> elle doit être vue au moment de satisfaction maximale</li>
 <li><strong>L'accessibilité :</strong> le client doit pouvoir approcher son téléphone facilement</li>
 </ol>
-<p>Une plaque oubliée sur le côté d'un comptoir = 5 % de conversion. La même plaque sur la table avec un porte-addition au moment du paiement = 45 % de conversion. <strong>9× plus</strong>, pour le même produit.</p>
+<p>Une plaque posée sur le côté d'un comptoir, derrière la machine à café, échoue sur les trois points : elle sort du champ de vision, elle n'est associée à aucun moment particulier du parcours, et il faut se pencher par-dessus la caisse pour l'atteindre. La même plaque glissée dans le porte-addition les réunit toutes les trois : le client la découvre au moment exact où il sort son téléphone pour payer, juste après avoir fini son repas, et il n'a qu'à baisser la main de dix centimètres. C'est le même objet, la même puce, la même salle. Seule la position a changé, et avec elle tout ce qui compte.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 Étude maison Swiipx 2025 :</strong> Sur 500 commerces étudiés, le placement de la plaque explique <strong>80 % de la variance du taux de conversion</strong>. Le matériau, la marque ou même le script ne représentent que 20 % combinés.</p>
+<p class="text-sm text-blue-900"><strong>📊 Le test à faire chez vous :</strong> pendant deux semaines, notez simplement le nombre de clients servis et le nombre d'avis reçus. Déplacez ensuite la plaque et recommencez sur la même durée, dans les mêmes conditions. Vous saurez en un mois ce qu'aucune moyenne de secteur ne pourra jamais vous dire : quel emplacement fonctionne dans votre commerce, avec votre clientèle et votre organisation.</p>
 </div>
 </section>
 
@@ -2571,7 +2571,7 @@ export const articles: Record<string, {
 <p>Règle d'or : <strong>plus le moment est proche du "wow"</strong> (la transformation, le plaisir, la satisfaction), plus le taux de conversion grimpe.</p>
 
 <h3>Principe 3 : Accessibilité physique</h3>
-<p>Le client doit pouvoir approcher son téléphone <strong>à 4 cm de la plaque</strong> sans contorsion. Plaque trop haute (au-dessus du comptoir), trop basse (sous le terminal de paiement), trop loin (au fond du présentoir) = friction physique = conversion divisée par 2.</p>
+<p>Le client doit pouvoir approcher son téléphone <strong>à 4 cm de la plaque</strong> sans contorsion. Plaque trop haute (au-dessus du comptoir), trop basse (sous le terminal de paiement), trop loin (au fond du présentoir) : chaque geste supplémentaire est une occasion d'abandonner. Un client qui doit tendre le bras par-dessus une caisse ou contourner un présentoir renonce, tout simplement.</p>
 <p>Hauteur idéale : entre 80 cm et 1,30 m du sol (à hauteur de main qui tient un smartphone).</p>
 
 <h3>Principe 4 : Cohérence avec la décoration</h3>
@@ -2580,32 +2580,33 @@ export const articles: Record<string, {
 
 <section id="top-7-emplacements" class="scroll-mt-28 mb-16">
 <h2>Top 7 des emplacements universels (tous secteurs)</h2>
+<p>Ils sont classés selon un critère simple : la distance qui sépare la plaque du moment où le client est content et a déjà son téléphone en main. Plus cette distance est courte, plus la plaque sert. Le premier de la liste réunit les trois conditions vues plus haut ; le dernier n'en réunit qu'une.</p>
 
-<h3>1. 🍽️ Sur la table / poste de travail individuel (conversion 40-55 %)</h3>
-<p>Le meilleur emplacement absolu. La plaque est juste devant le client tout au long du service. Quand vient le moment de payer ou de partir, elle est déjà familière. Conversion record.</p>
+<h3>1. 🍽️ Sur la table / poste de travail individuel</h3>
+<p>Le meilleur emplacement, et de loin. La plaque reste dans le champ de vision du client pendant tout le service : il l'a vue dix fois sans y prêter attention, elle lui est devenue familière. Quand vient le moment de payer ou de partir, il n'a rien à chercher, et personne n'a besoin de lui expliquer ce que c'est.</p>
 <p><strong>Adapté à :</strong> restaurants, cafés, salons de coiffure (poste de coiffage), cabines de massage, cabinets de soins.</p>
 
-<h3>2. 💳 À côté du terminal de paiement (conversion 30-40 %)</h3>
+<h3>2. 💳 À côté du terminal de paiement</h3>
 <p>Pendant que le client paie, son attention est captive et son téléphone à portée (pour Apple Pay/sans contact). C'est le 2e meilleur emplacement.</p>
 <p><strong>Adapté à :</strong> retail, restauration rapide, supermarchés, boulangeries, salons de coiffure (caisse), cabinets médicaux.</p>
 
-<h3>3. 📋 Sur le porte-addition (conversion 35-45 %)</h3>
+<h3>3. 📋 Sur le porte-addition</h3>
 <p>Spécifique restauration. Le porte-addition contient la plaque ET l'addition. Au moment de payer, le client voit la plaque. Le serveur peut mentionner naturellement.</p>
 <p><strong>Adapté à :</strong> restaurants gastronomiques, bistrots, brasseries.</p>
 
-<h3>4. 🪞 Près du miroir de sortie / d'accueil (conversion 25-35 %)</h3>
+<h3>4. 🪞 Près du miroir de sortie / d'accueil</h3>
 <p>Spécifique salons. Au moment où la cliente se regarde une dernière fois avant de partir = pic de satisfaction. Plaque juste à côté du miroir.</p>
 <p><strong>Adapté à :</strong> coiffeurs, instituts de beauté, opticiens, dressing/cabines retail mode.</p>
 
-<h3>5. 🛍️ Sur le comptoir d'accueil (conversion 20-30 %)</h3>
+<h3>5. 🛍️ Sur le comptoir d'accueil</h3>
 <p>Plus polyvalent mais moins ciblé. La plaque attire l'attention quand le client arrive ou part. Bien comme complément des emplacements premium.</p>
 <p><strong>Adapté à :</strong> hôtels, cabinets professionnels, retail haut de gamme.</p>
 
-<h3>6. 🚪 À côté de la porte de sortie (conversion 15-25 %)</h3>
+<h3>6. 🚪 À côté de la porte de sortie</h3>
 <p>Le client la voit en partant. Un petit panneau "Vous avez aimé ? Avis Google → approchez votre téléphone" + plaque NFC. Capture les clients qui partent satisfaits sans avoir été sollicités.</p>
 <p><strong>Adapté à :</strong> commerce avec flux rapide (boulangerie, café, retail).</p>
 
-<h3>7. 📦 Dans le packaging produit (conversion 15-25 %)</h3>
+<h3>7. 📦 Dans le packaging produit</h3>
 <p>Pour les ventes à emporter ou e-commerce, glissez une petite carte NFC dans le packaging. Le client la trouve à la maison en déballant, dans un moment de satisfaction post-achat.</p>
 <p><strong>Adapté à :</strong> e-commerce (envoi d'une carte NFC avec la commande), ventes à emporter (boulangerie, traiteur).</p>
 </section>
@@ -2663,7 +2664,7 @@ export const articles: Record<string, {
 <p>Une plaque dans un couloir, au fond de la salle, ou cachée derrière un meuble = invisible. Le client ne fait jamais le détour pour aller la chercher. Placez-la SUR le parcours naturel (table, caisse, sortie).</p>
 
 <h3>2. Ne pas mentionner verbalement la plaque</h3>
-<p>Une plaque silencieuse = conversion divisée par 4. Vos équipes DOIVENT mentionner la plaque au bon moment. Sans communication verbale, 80 % des clients ne remarquent même pas qu'elle existe.</p>
+<p>Une plaque que personne ne mentionne reste un objet décoratif : le client la voit sans comprendre ce qu'elle attend de lui, et il ne va pas poser la question. Vos équipes doivent la nommer au bon moment, en une phrase courte. « Si vous avez passé un bon moment, approchez votre téléphone de la plaque, ça prend dix secondes. » C'est toute la différence entre un support posé là et un support qui sert.</p>
 
 <h3>3. Mettre la plaque trop tôt dans le parcours</h3>
 <p>Plaque visible AVANT le service (sur la porte d'entrée, dans la salle d'attente vide) = inutile. Le client n'a pas encore vécu l'expérience, il n'a rien à dire. Placez la plaque APRÈS le pic de satisfaction.</p>
@@ -2725,8 +2726,8 @@ export const articles: Record<string, {
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : le placement fait tout</h2>
-<p>Une plaque NFC à 40 € bien placée convertit 8 fois mieux qu'une plaque à 100 € mal placée. <strong>Investissez votre énergie dans le placement, pas dans la sur-qualification du produit.</strong></p>
-<p>Suivez les 4 principes (visibilité, timing, accessibilité, cohérence) et placez vos plaques aux emplacements top 7 selon votre secteur. Mentionnez verbalement la plaque au bon moment. Le taux de conversion grimpera mécaniquement.</p>
+<p>Une plaque bien placée fait le travail qu'un support beaucoup plus cher, posé au mauvais endroit, ne fera jamais. Le prix du support ne rattrape pas une erreur de parcours client. <strong>Investissez votre énergie dans le placement, pas dans la sur-qualification du produit.</strong></p>
+<p>Suivez les 4 principes (visibilité, timing, accessibilité, cohérence) et placez vos plaques aux emplacements top 7 selon votre secteur. Mentionnez verbalement la plaque au bon moment. Le reste est une affaire de constance : le même geste, répété à chaque client, tous les jours.</p>
 <p>Pour aller plus loin, consultez nos guides sectoriels : <a href="/blog/plaque-nfc-restaurant">restaurant</a>, <a href="/blog/plaque-nfc-salon-coiffure">salon de coiffure</a>, ou notre <a href="/blog/doubler-avis-google-30-jours">méthode complète pour doubler vos avis en 30 jours</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
@@ -2990,52 +2991,50 @@ export const articles: Record<string, {
     `,
   },
   'plaque-nfc-salon-coiffure': {
-    title: 'Plaque NFC avis Google pour salon de coiffure : guide complet ROI 2026',
+    title: 'Plaque NFC avis Google pour salon de coiffure : le guide complet 2026',
     category: 'Secteur',
     date: '11 mai 2026',
     readTime: '9 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Salon de coiffure : comment collecter +150 avis Google par an avec une plaque NFC. Guide complet 2026 : placement, script, ROI réel, études de cas.',
+    excerpt: 'Salon de coiffure : où poser la plaque NFC, quoi dire au moment du brushing final, et comment estimer le nombre d\'avis Google que vous pouvez viser.',
     tocSections: [
-      { id: 'pourquoi-salon', label: 'Pourquoi les salons sont parfaits pour le NFC' },
-      { id: 'impact-salon', label: 'Impact des avis sur un salon en 2026' },
-      { id: 'placement-salon', label: '5 emplacements optimaux en salon' },
-      { id: 'script-coiffeur', label: 'Le script qui convertit à 55 %' },
-      { id: 'cas-salon', label: '3 études de cas réelles' },
-      { id: 'roi-salon', label: 'ROI et amortissement' },
+      { id: 'pourquoi-salon', label: 'Pourquoi le salon se prête bien au NFC' },
+      { id: 'impact-salon', label: 'Ce que les avis changent pour un salon' },
+      { id: 'placement-salon', label: '5 emplacements à envisager en salon' },
+      { id: 'script-coiffeur', label: 'Le script à dire au brushing final' },
+      { id: 'cas-salon', label: '3 exemples de calcul' },
+      { id: 'roi-salon', label: 'Estimer ce que la plaque peut rapporter' },
       { id: 'pack-salon', label: 'Quel pack choisir' },
       { id: 'faq-salon', label: 'FAQ' },
     ],
     content: `
 <section id="pourquoi-salon" class="scroll-mt-28 mb-16">
-<h2>Pourquoi les salons de coiffure sont le secteur idéal pour la plaque NFC</h2>
-<p>Si vous gérez un salon de coiffure ou un institut de beauté, vous êtes assis sur une <strong>mine d'or d'avis Google non collectés</strong>. Pourquoi ? Parce que vos clientes (et clients) :</p>
+<h2>Pourquoi le salon de coiffure se prête particulièrement bien à la plaque NFC</h2>
+<p>Si vous gérez un salon de coiffure ou un institut de beauté, vous avez sous la main un contexte que peu de commerces réunissent. Pourquoi ? Parce que vos clientes (et clients) :</p>
 <ul>
 <li>Sont <strong>captives 60-90 minutes</strong> dans votre fauteuil</li>
 <li>Sont <strong>visiblement satisfaites</strong> à la fin (transformation, soin)</li>
 <li>Ont leur <strong>téléphone à portée de main</strong> pendant tout le service</li>
 <li>Discutent et créent une <strong>relation émotionnelle</strong> avec leur coiffeur·se</li>
 </ul>
-<p>C'est le contexte <strong>parfait</strong> pour la plaque NFC. Les salons qui en utilisent atteignent des taux de conversion records : <strong>40 à 55 %</strong> de clientes laissent un avis (vs 8-12 % avec un QR code, ou moins de 5 % avec une demande verbale seule).</p>
+<p>C'est un contexte favorable pour la plaque NFC. Là où un QR code demande de déverrouiller le téléphone, d'ouvrir l'appareil photo, de viser puis de valider une redirection, la plaque se contente d'un téléphone approché : le formulaire d'avis s'ouvre seul, en une dizaine de secondes. Dans un salon, ce geste tombe exactement au moment où la cliente est déjà face au miroir, son téléphone à côté d'elle, et où le/la coiffeur·se peut en parler sans que cela paraisse forcé.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 Réalité du marché :</strong> Sur 200 salons français étudiés en 2025-2026, ceux équipés de plaques NFC affichent <strong>3,2× plus d'avis Google</strong> que la moyenne du secteur — et une note moyenne de 4,8/5 vs 4,3/5.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> nous ne publions pas de « taux de conversion moyen du secteur ». Personne ne mesure ce chiffre de façon fiable, et il dépend surtout de deux choses : l'endroit où la plaque est posée, et le fait qu'on en parle ou non à la cliente. Ce sont aussi les deux seuls leviers sur lesquels vous agissez réellement.</p>
 </div>
 </section>
 
 <section id="impact-salon" class="scroll-mt-28 mb-16">
-<h2>L'impact mesuré des avis Google sur un salon en 2026</h2>
-<p>Les chiffres du secteur :</p>
+<h2>Ce que les avis Google changent concrètement pour un salon</h2>
+<p>Une cliente qui cherche « coiffeur » suivi du nom de sa ville ne voit pas votre vitrine : elle voit trois fiches Google alignées au-dessus de la carte, avec un nom, une note et un nombre d'avis. Le choix se fait là, en quelques secondes, avant même qu'elle sache à quoi ressemble votre salon.</p>
 <ul>
-<li><strong>82 %</strong> des nouvelles clientes consultent Google avant de prendre un RDV (Statista 2025)</li>
-<li><strong>71 %</strong> ne réservent jamais dans un salon noté en dessous de 4,3 étoiles</li>
-<li><strong>Une étoile de plus</strong> sur Google = <strong>+11 % de nouveaux clients</strong> (Berkeley Haas)</li>
-<li><strong>100+ avis récents</strong> = présence dans le pack local Google de votre quartier garantie</li>
-<li><strong>+25 % de CA potentiel</strong> en passant de 4,2 à 4,7 étoiles (Harvard Business School)</li>
+<li><strong>Le nombre d'avis s'affiche à côté de la note</strong> : une fiche à 4,9/5 qui repose sur sept avis annonce en même temps que sept personnes seulement se sont exprimées. Les deux chiffres se lisent ensemble.</li>
+<li><strong>La fraîcheur se voit</strong> : Google affiche la date de chaque avis. Une cliente repère immédiatement si le dernier retour date de trois semaines ou de deux ans.</li>
+<li><strong>La comparaison est locale</strong> : le pack local se joue entre salons du même quartier. Le seul point de repère utile, ce sont les trois fiches qui sortent devant la vôtre.</li>
+<li><strong>Les avis se lisent, ils ne se comptent pas seulement</strong> : un retour qui cite le prénom d'une coiffeuse ou une prestation précise donne à la lectrice une information qu'elle peut utiliser, ce que ne fait pas un « super salon » isolé.</li>
 </ul>
 
-<h3>Le calcul pour un salon moyen</h3>
-<p>Salon : 4 fauteuils, 200 clientes/mois, ticket moyen 65 € (coupe + couleur) = 13 000 €/mois de CA.</p>
-<p>Avec un boost de note (4,2 → 4,7) et 200 avis récents, vous gagnez +15 % de nouvelles clientes = <strong>+30 clientes/mois</strong> = +1 950 € de CA mensuel. <strong>Sur 12 mois : 23 400 € de gain</strong> pour 40 € de plaque NFC. ROI : ×585.</p>
+<h3>Poser le problème dans le bon sens</h3>
+<p>La question n'est pas « combien d'avis vais-je gagner » : personne ne peut vous le promettre honnêtement. Elle est plutôt : combien de clientes passent chez vous chaque mois, et combien d'entre elles laissent un avis aujourd'hui ? Un salon de quatre fauteuils qui reçoit 200 clientes par mois et récolte quatre avis convertit une cliente sur cinquante. C'est ce rapport-là qu'une plaque bien placée cherche à faire bouger, et c'est aussi le seul chiffre que vous puissiez réellement mesurer — sur votre propre fiche, avant la pose puis chaque mois.</p>
 </section>
 
 <section id="placement-salon" class="scroll-mt-28 mb-16">
@@ -3043,16 +3042,16 @@ export const articles: Record<string, {
 
 <h3>1. 💇 Sur le poste de coiffage (le meilleur)</h3>
 <p>Plaque collée ou posée sur le miroir du poste, juste sous le miroir. La cliente la voit pendant toute la durée de la prestation, et son coiffeur·se la mentionne au moment du brushing final.</p>
-<p><strong>Taux de conversion : 45-55 %</strong> — le plus haut de tous les secteurs.</p>
+<p><strong>Si vous ne posez qu'une seule plaque, c'est ici.</strong> Elle reste dans le champ de vision pendant toute la prestation, et la demande arrive au moment précis où la cliente découvre le résultat.</p>
 <p><strong>Pourquoi ça marche :</strong> moment de satisfaction maximale (la cliente vient de découvrir sa nouvelle coupe), téléphone à portée, durée d'attente nulle.</p>
 
 <h3>2. 🪞 À côté du miroir d'accueil</h3>
 <p>Pour les salons sans poste individuel ou avec rotation. Plaque sur le comptoir d'accueil, à côté du miroir où la cliente se voit avant de partir.</p>
-<p><strong>Taux : 30-40 %</strong>.</p>
+<p><strong>Le bon compromis quand les postes tournent.</strong> La cliente s'y regarde une dernière fois avant de partir : c'est le seul instant de la visite où elle est de nouveau face à son reflet sans être installée au fauteuil.</p>
 
 <h3>3. 💳 À la caisse</h3>
 <p>Plaque sur le comptoir caisse, pendant que la cliente règle. La coiffeuse mentionne : <em>"Si vous avez aimé, on a une plaque pour les avis Google ici."</em></p>
-<p><strong>Taux : 25-35 %</strong>. Bon mais moins efficace que la plaque au poste car le moment "wow" est passé.</p>
+<p><strong>Le téléphone est déjà en main pour régler</strong> — c'est l'avantage de cet emplacement. Le point faible tient au moment : la cliente est en train de partir, l'effet de la découverte est retombé, et quelqu'un attend parfois derrière elle.</p>
 
 <h3>4. 🛋️ Dans la zone d'attente / shampoing</h3>
 <p>Si vous avez une zone shampoing avec attente (avant ou pendant le temps de pose), placez une plaque visible. Elle accroche l'œil. La cliente y pense pendant le service.</p>
@@ -3062,15 +3061,15 @@ export const articles: Record<string, {
 <p>Si vous vendez des produits capillaires, glissez une carte NFC dans le sac. <em>"Si nos produits vous plaisent, un avis Google ?"</em>. Touche les clientes plusieurs jours après leur visite (effet de rappel positif).</p>
 
 <div class="bg-green-50 rounded-xl p-4 border border-green-200 not-prose">
-<p class="text-sm text-green-900"><strong>🎯 Recommandation :</strong> Pour un salon de 2-4 fauteuils, commencez avec <strong>2 plaques</strong> : une sur le poste principal + une à la caisse. C'est le combo le plus rentable.</p>
+<p class="text-sm text-green-900"><strong>🎯 Recommandation :</strong> Pour un salon de 2-4 fauteuils, commencez avec <strong>2 plaques</strong> : une sur le poste principal + une à la caisse. C'est la combinaison qui couvre les deux moments où la cliente a son téléphone en main.</p>
 </div>
 </section>
 
 <section id="script-coiffeur" class="scroll-mt-28 mb-16">
-<h2>Le script coiffeur·se qui convertit à 55 %</h2>
+<h2>Le script à dire au moment du brushing final</h2>
 <p>Le moment-clé : <strong>juste après le brushing final</strong>, quand la cliente découvre sa nouvelle coupe et s'admire dans le miroir. C'est le pic émotionnel maximal — il faut frapper là.</p>
 
-<h3>Le script à 55 % (testé sur 80+ salons)</h3>
+<h3>Le script, mot pour mot</h3>
 <blockquote><p>"Vous êtes magnifique ! Si ça vous plaît, j'ai une petite faveur à demander : un avis Google nous aide vraiment à faire connaître le salon. Vous pouvez juste approcher votre téléphone ici [pointer la plaque], ça prend 30 secondes !"</p></blockquote>
 
 <h3>Pourquoi ce script fonctionne</h3>
@@ -3088,61 +3087,58 @@ export const articles: Record<string, {
 <p><strong>Cliente pressée :</strong> <em>"Je sais que vous êtes pressée, mais en 10 secondes : approchez juste votre téléphone là."</em></p>
 
 <h3>Le bonus : impliquez toute l'équipe</h3>
-<p>Lancez un défi mensuel : "Le/la coiffeur·se qui collecte le plus d'avis ce mois gagne 100 € de bonus." L'équipe entière se met en mode "demande d'avis". Effet boule de neige garanti.</p>
+<p>Lancez un défi mensuel : "Le/la coiffeur·se qui collecte le plus d'avis ce mois gagne 100 € de bonus." L'intérêt n'est pas la compétition en elle-même : c'est qu'une équipe qui y pense en parle, et qu'une plaque dont personne ne parle ne sert à rien.</p>
 </section>
 
 <section id="cas-salon" class="scroll-mt-28 mb-16">
-<h2>3 études de cas réelles de salons français</h2>
+<h2>3 exemples de calcul</h2>
+<p>Les trois situations ci-dessous sont des <strong>projections</strong>, pas des résultats relevés chez des clients. Nous posons à chaque fois deux hypothèses — le nombre de passages par mois, et la proportion de clientes qui laissent effectivement un avis — puis nous déroulons le calcul. Ces hypothèses sont discutables : remplacez-les par vos propres chiffres, que vous connaissez mieux que nous.</p>
 
-<h3>Cas n°1 — Salon "Élégance" (Bordeaux Centre)</h3>
-<p><strong>Profil :</strong> 3 fauteuils, 180 clientes/mois, ticket moyen 60 €.</p>
-<p><strong>Avant la plaque :</strong> 52 avis Google, 4,3/5, 4-5 avis/mois.</p>
-<p><strong>Action :</strong> 2 plaques NFC posées (1 par poste principal + caisse). Formation de l'équipe au script.</p>
-<p><strong>Après 4 mois :</strong> 191 avis, 4,8/5, <strong>38 nouveaux avis/mois</strong> en moyenne.</p>
-<p><strong>Impact :</strong> +28 nouvelles clientes/mois en moyenne sur les 4 derniers mois, salon désormais en position 2 du pack local Bordeaux pour "coiffeur Bordeaux centre". CA +22 %.</p>
+<h3>Exemple 1 — Salon de quartier, 3 fauteuils</h3>
+<p><strong>Point de départ :</strong> 180 clientes par mois, 52 avis Google déjà en ligne, 4 à 5 nouveaux avis par mois — soit à peu près une cliente sur quarante qui laisse un avis aujourd'hui.</p>
+<p><strong>Hypothèse :</strong> deux plaques posées (poste principal + caisse), l'équipe en parle systématiquement au brushing, et une cliente sur dix finit par laisser un avis.</p>
+<p><strong>Ce que donnerait le calcul :</strong> 18 avis par mois, soit environ 70 avis supplémentaires en quatre mois. Si la proportion tombait plutôt à une cliente sur vingt, on descendrait à 9 par mois et 36 sur la même période. L'écart entre ces deux scénarios ne tient qu'à la régularité avec laquelle on en parle.</p>
 
-<h3>Cas n°2 — Institut "Bel'Atelier" (Nantes)</h3>
-<p><strong>Profil :</strong> Institut beauté + coiffure, 5 cabines, 250 clients/mois, ticket moyen 75 €.</p>
-<p><strong>Avant :</strong> 67 avis, 4,4/5, 6 avis/mois.</p>
-<p><strong>Action :</strong> 5 plaques NFC (1 par cabine) + défi équipe "celle/celui qui rapporte le plus d'avis du mois reçoit 150 €".</p>
-<p><strong>Après 6 mois :</strong> 412 avis, 4,9/5, <strong>57 nouveaux avis/mois</strong>.</p>
-<p><strong>Impact :</strong> Position 1 du pack local pour "institut beauté Nantes", booking en ligne saturé 2 semaines à l'avance, +35 % de CA.</p>
+<h3>Exemple 2 — Institut de 5 cabines</h3>
+<p><strong>Point de départ :</strong> 250 clients par mois, 67 avis en ligne, 6 nouveaux avis par mois.</p>
+<p><strong>Hypothèse :</strong> une plaque par cabine, et une cliente sur douze qui laisse un avis. Nous prenons ici une proportion plus prudente : en cabine, la praticienne n'est pas toujours présente au moment où la cliente se rhabille et repart, et la demande passe donc moins souvent.</p>
+<p><strong>Ce que donnerait le calcul :</strong> une vingtaine d'avis par mois, soit de l'ordre de 125 sur six mois. Reste à vérifier si cette proportion tient chez vous : c'est mesurable en un mois, simplement en comptant les avis publiés sur votre fiche.</p>
 
-<h3>Cas n°3 — Barber Shop (Lille)</h3>
-<p><strong>Profil :</strong> Barbier moderne, 2 fauteuils, 150 clients/mois, ticket moyen 35 €.</p>
-<p><strong>Avant :</strong> 23 avis, 4,5/5, 2 avis/mois.</p>
-<p><strong>Action :</strong> 1 plaque NFC posée sur le miroir principal + carte NFC dans le sac de revente.</p>
-<p><strong>Après 3 mois :</strong> 89 avis, 4,8/5, <strong>22 avis/mois</strong>.</p>
-<p><strong>Insight :</strong> dans les barbershops, le public masculin laisse moins d'avis spontanément. La plaque + un script direct (<em>"Frérot, un avis Google ?"</em>) ont fonctionné mieux que l'approche classique.</p>
+<h3>Exemple 3 — Barbier, 2 fauteuils</h3>
+<p><strong>Point de départ :</strong> 150 clients par mois, 23 avis en ligne, 2 nouveaux avis par mois.</p>
+<p><strong>Hypothèse :</strong> une plaque sur le miroir principal, et un client sur vingt qui laisse un avis. Nous retenons une proportion plus basse que dans l'exemple 1, parce que la clientèle des barbershops passe souvent vite, parfois sans rendez-vous, et que l'échange en fin de coupe est plus court.</p>
+<p><strong>Ce que donnerait le calcul :</strong> 7 à 8 avis par mois, soit une vingtaine en trois mois. Ce n'est pas spectaculaire en valeur absolue, mais rapporté aux 23 avis déjà en ligne, c'est le rythme de publication qui change, pas seulement le total.</p>
 
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📌 Constante :</strong> Tous les salons étudiés affichent une multiplication par 5-10 du nombre d'avis dans les 4 premiers mois. C'est le secteur où la plaque NFC convertit le mieux, devant la restauration et le retail.</p>
+<p class="text-sm text-blue-900"><strong>📌 Ce qu'il faut retenir de ces trois calculs :</strong> la seule variable qui compte vraiment, c'est la proportion de clientes qui passent à l'acte. Elle dépend de l'emplacement de la plaque et du fait qu'on en parle ou non. Nous ne pouvons pas vous la garantir ; vous, vous pouvez la mesurer sur votre propre fiche, mois après mois.</p>
 </div>
 </section>
 
 <section id="roi-salon" class="scroll-mt-28 mb-16">
-<h2>ROI réel pour un salon moyen</h2>
+<h2>Estimer ce que la plaque peut rapporter</h2>
 
-<h3>Hypothèses de calcul</h3>
+<h3>Les hypothèses de départ</h3>
+<p>Rien de ce qui suit n'est un résultat client mesuré : c'est une projection, construite sur des hypothèses que vous devez pouvoir contester.</p>
 <ul>
 <li>Salon : 3 fauteuils, 180 clientes/mois, ticket moyen 60 €, CA mensuel 10 800 €</li>
-<li>Investissement plaque : Pack Business 2 plaques = 65,88 € TTC</li>
-<li>Multiplication par 7 des avis (5/mois → 35/mois)</li>
-<li>Note Google : 4,3 → 4,7 en 4 mois</li>
+<li>Investissement plaque : Pack Business 2 plaques = 65,88 € TTC, une seule fois</li>
+<li>Hypothèse de collecte : une cliente sur dix laisse un avis, soit 18 avis par mois au lieu de 5</li>
+<li>Hypothèse de visibilité : ce volume d'avis récents vous fait gagner des places dans le pack local de votre quartier</li>
 </ul>
 
-<h3>Gain projeté</h3>
+<h3>Ce que donnerait le calcul</h3>
 <ul>
-<li>+15 % de nouvelles clientes via le pack local Google = +27 clientes/mois</li>
-<li>27 × 60 € = <strong>+1 620 € de CA mensuel</strong> en moyenne</li>
-<li>Sur 12 mois : <strong>+19 440 € de CA</strong> additionnel</li>
+<li>Si cette visibilité vous amenait 5 nouvelles clientes de plus par mois : +300 € de CA mensuel</li>
+<li>Si elle vous en amenait 15 : +900 € par mois</li>
+<li>Sur douze mois, la fourchette irait donc de 3 600 € à 10 800 € de CA additionnel</li>
 </ul>
+<p>Nous donnons volontairement une fourchette large. Le nombre de clientes gagnées dépend de la densité de salons dans votre rue, de vos photos, de vos horaires, de vos prix et de dix autres facteurs sur lesquels une plaque n'a aucune prise. Un chiffre unique annoncé à l'euro près ne serait pas honnête.</p>
 
 <h3>Amortissement</h3>
-<p>Le pack 2 plaques (60 €) est amorti en <strong>moins de 3 jours</strong> avec ces hypothèses. Ratio coût/bénéfice annuel : <strong>1 ⇒ 324</strong>.</p>
+<p>Ce qui est certain, en revanche, c'est le coût : 65,88 € une fois, sans abonnement, garantie à vie. Dans le scénario le plus prudent ci-dessus, il faudrait environ une semaine de CA additionnel pour le couvrir. Et même si la plaque ne vous amenait qu'une seule cliente supplémentaire dans l'année, à 60 € le ticket moyen, l'opération serait déjà à l'équilibre.</p>
 
 <div class="bg-green-50 rounded-xl p-4 border border-green-200 not-prose">
-<p class="text-sm text-green-900"><strong>💰 Verdict :</strong> Pour un salon de coiffure, ne pas avoir de plaque NFC en 2026 = laisser 1 000 à 3 000 €/mois de CA sur la table. L'investissement de 40-90 € est dérisoire face au gain.</p>
+<p class="text-sm text-green-900"><strong>💰 En clair :</strong> nous ne savons pas combien la plaque vous rapportera, et nous nous méfions de ceux qui l'annoncent. Ce que nous savons, c'est ce qu'elle coûte : 65,88 € pour deux plaques, une seule fois, sans abonnement. La dépense, elle, est plafonnée d'avance.</p>
 </div>
 </section>
 
@@ -3156,7 +3152,7 @@ export const articles: Record<string, {
 <p><strong>Recommandation :</strong> <a href="/product/business">Pack Business — 2 plaques (65,88 €)</a> — la combinaison idéale poste + caisse.</p>
 
 <h3>💼 Institut / Grand salon (5+ postes)</h3>
-<p><strong>Recommandation :</strong> <a href="/product/pro">Pack Pro — 5 plaques (107,88 €)</a> — 1 par poste, maximisation du taux par fauteuil.</p>
+<p><strong>Recommandation :</strong> <a href="/product/pro">Pack Pro — 5 plaques (107,88 €)</a> — une par poste, pour qu'aucune cliente n'ait à se lever pour aller chercher la plaque du fauteuil voisin.</p>
 </section>
 
 <section id="faq-salon" class="scroll-mt-28 mb-16">
@@ -3166,28 +3162,28 @@ export const articles: Record<string, {
 <p>Oui. Le NFC fonctionne avec tout smartphone récent (iPhone 7+ ou Android post-2018). La cliente n'a rien à comprendre : elle approche son téléphone, ça s'ouvre tout seul. Plus simple qu'un QR code (où il faut ouvrir l'appareil photo, viser...). Et le QR de secours intégré couvre les très rares cas non-NFC.</p>
 
 <h3>Combien de temps avant de voir l'impact dans Google Maps ?</h3>
-<p>Les nouveaux avis remontent dans Google instantanément. L'impact sur le ranking pack local apparaît en 4-8 semaines (Google met du temps à recalculer les scores). À 3-6 mois, vous devriez voir un saut significatif sur les requêtes locales ("coiffeur + votre ville").</p>
+<p>Les nouveaux avis apparaissent sur votre fiche immédiatement. En revanche, personne ne peut vous dire au bout de combien de temps votre position dans le pack local bougera : Google ne publie pas ses délais de recalcul, et le classement dépend aussi de ce que font les salons voisins pendant ce temps-là. Le seul suivi fiable est le vôtre : notez votre nombre d'avis et votre note le jour où vous posez la plaque, puis relevez-les chaque mois. Et tapez de temps en temps "coiffeur + votre ville" en navigation privée, pour voir où vous sortez.</p>
 
 <h3>La plaque résiste au shampoing / projection d'eau ?</h3>
 <p>Oui. L'acrylique 3 mm résiste à l'eau, aux produits chimiques (laque, colorations, shampoing), aux désinfectants. Vous pouvez l'essuyer comme un miroir.</p>
 
 <h3>Que faire si une cliente laisse un avis négatif ?</h3>
-<p>Répondez TOUJOURS, sous 48h, professionnellement. Reconnaissez le problème, proposez de la recontacter pour rectifier (offre d'un soin gratuit la prochaine fois, par exemple). 89 % des prospects lisent les réponses aux avis négatifs : une réponse pro peut transformer un avis négatif en démonstration de votre sérieux.</p>
+<p>Répondez toujours, sous 48 h, et sur un ton professionnel. Reconnaissez le problème, proposez de recontacter la cliente pour rectifier (un soin offert à la prochaine visite, par exemple). Un avis négatif n'est pas seulement lu par celle qui l'a écrit : il reste affiché sur votre fiche, avec votre réponse juste en dessous. Une réponse posée, qui ne conteste pas et qui propose une suite, en dit plus long sur votre salon que dix avis cinq étoiles sans commentaire.</p>
 
 <h3>Peut-on personnaliser la plaque avec le logo du salon ?</h3>
 <p>Sur les packs Business et Pro Swiipx, le logo + nom du salon sont inclus. La plaque devient un objet de marque, pas un gadget générique.</p>
 
 <h3>Combien d'avis Google faut-il pour dominer mon quartier ?</h3>
-<p>Comparez avec vos concurrents directs. En règle générale, dépasser de 20-30 % le concurrent le mieux noté de votre quartier vous donne un avantage significatif dans le pack local. Pour un salon dans une ville moyenne, viser 100-200 avis est réaliste en 6-12 mois avec une plaque NFC.</p>
+<p>Il n'existe pas de seuil universel : le nombre qui compte est celui de vos concurrents directs, pas une moyenne nationale. Ouvrez Google Maps, tapez "coiffeur" suivi du nom de votre quartier, et notez le nombre d'avis et la note des trois salons qui sortent au-dessus de la carte. Vous saurez alors exactement ce que vous avez à rattraper. Faites ensuite le calcul dans l'autre sens : combien de clientes passent chez vous par mois, et quelle proportion d'entre elles devrait laisser un avis pour combler cet écart dans le délai qui vous convient.</p>
 
 <h3>Si je déménage le salon, la plaque suit ?</h3>
 <p>Oui. La plaque pointe vers votre fiche Google Business Profile. Tant que la fiche reste la vôtre (même si vous changez d'adresse dans Google), la plaque continue de fonctionner. Reprogrammation pas nécessaire.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
-<h2>Conclusion : votre salon mérite ses 200 avis Google</h2>
-<p>Le secteur de la coiffure et de la beauté est celui où la plaque NFC convertit le mieux en 2026. Vos clientes sont captives, satisfaites, leur téléphone à portée. Toutes les conditions sont réunies.</p>
-<p>L'investissement (40-90 €, sans abonnement, garantie à vie) est ridicule face au gain (+15 à 35 % de nouvelles clientes via Google). En 6 mois, vous pouvez devenir <strong>le salon n°1 de votre quartier sur Google</strong>.</p>
+<h2>Conclusion : posez la plaque là où la cliente se regarde</h2>
+<p>Le salon de coiffure réunit des conditions que peu de commerces ont : une cliente installée pendant une heure, un moment de satisfaction identifiable en fin de prestation, un téléphone posé juste à côté d'elle, et quelqu'un qui peut lui en parler sans que cela paraisse forcé. Le reste n'est plus qu'une question d'emplacement et de régularité.</p>
+<p>Ce que la plaque garantit, ce n'est pas un nombre d'avis : c'est la suppression de toutes les étapes entre l'envie de laisser un avis et le formulaire Google. Pas d'application à installer, pas de QR code à viser, pas de recherche du salon dans Maps. Elle arrive déjà programmée sur votre fiche, coûte entre 35,88 € et 107,88 € une seule fois, sans abonnement, et elle est garantie à vie. Ce qu'elle donnera ensuite dépend de vous et de votre équipe.</p>
 <p>Pour aller plus loin, consultez aussi notre <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif Plaque NFC vs QR Code 2026</a> et notre <a href="/blog/doubler-avis-google-30-jours">méthode pour doubler ses avis en 30 jours</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
@@ -3390,21 +3386,21 @@ export const articles: Record<string, {
     `,
   },
   'plaque-nfc-restaurant': {
-    title: 'Plaque NFC pour restaurant : guide complet pour collecter +200 avis Google en 2026',
+    title: 'Plaque NFC pour restaurant : placement en salle et scripts de service',
     category: 'Secteur',
     date: '11 mai 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Restaurant : comment installer une plaque NFC pour collecter +200 avis Google par an. Guide complet 2026 : placement optimal, scripts serveur, ROI, études de cas.',
+    excerpt: 'Restaurant : où poser une plaque NFC en salle et quoi dire au moment de l\'addition. Guide 2026 : emplacements, scripts serveur, exemple de calcul.',
     tocSections: [
       { id: 'pourquoi-restaurant', label: 'Pourquoi les restaurants ont besoin du NFC' },
       { id: 'avis-impact-resto', label: 'Impact réel des avis sur un restaurant' },
       { id: 'comment-fonctionne', label: 'Comment fonctionne la plaque NFC' },
       { id: 'placement-resto', label: '5 emplacements optimaux en restaurant' },
-      { id: 'script-serveur', label: 'Le script verbal qui convertit à 50%' },
-      { id: 'cas-pratique-resto', label: '3 cas réels (bistrot, gastro, brasserie)' },
+      { id: 'script-serveur', label: 'Le script verbal au moment de l\'addition' },
+      { id: 'mesurer-resultats', label: 'Mesurer vos propres résultats' },
       { id: 'erreurs-restaurant', label: '7 erreurs à éviter' },
-      { id: 'roi-restaurant', label: 'ROI et amortissement' },
+      { id: 'roi-restaurant', label: 'Exemple de calcul et amortissement' },
       { id: 'choisir-pack', label: 'Quel pack choisir' },
       { id: 'faq-restaurant', label: 'FAQ' },
     ],
@@ -3412,29 +3408,30 @@ export const articles: Record<string, {
 <section id="pourquoi-restaurant" class="scroll-mt-28 mb-16">
 <h2>Pourquoi les restaurants ont absolument besoin d'une plaque NFC en 2026</h2>
 <p>Si vous gérez un restaurant en France, vous savez que <strong>la concurrence se joue sur Google</strong>. Avant de choisir où dîner, <strong>93 % des consommateurs lisent les avis Google</strong> (BrightLocal 2025). Un restaurant avec 4,2 étoiles et 30 avis perd face à un concurrent à 4,7 étoiles et 200 avis. C'est mécanique.</p>
-<p>Le problème ? <strong>95 % de vos clients satisfaits ne laissent jamais d'avis</strong>. Pas par mauvaise volonté — par friction. Ouvrir Google, chercher votre restaurant parmi 50 résultats similaires, cliquer sur "écrire un avis"... ça prend 3 à 5 minutes. À table, après le dessert, personne n'a envie.</p>
-<p>La <strong>plaque NFC</strong> change la donne. Le client approche son téléphone, et la page d'avis Google s'ouvre <strong>en 3 secondes</strong>. Plus de friction, plus d'excuse. Résultat : les restaurants qui en utilisent passent de 5-10 avis/mois à <strong>30-60 avis/mois</strong> en moyenne.</p>
+<p>Le problème ? <strong>la grande majorité de vos clients satisfaits ne laisse jamais d'avis</strong>. Pas par mauvaise volonté — par friction. Ouvrir Google, chercher votre restaurant parmi 50 résultats similaires, cliquer sur "écrire un avis"... ça prend 3 à 5 minutes. À table, après le dessert, personne n'a envie.</p>
+<p>La <strong>plaque NFC</strong> supprime cette friction. Le client approche son téléphone, et la page d'avis Google s'ouvre directement : pas de recherche, pas d'application à installer, pas de QR code à cadrer dans une salle mal éclairée. Le geste tient en une dizaine de secondes, à un moment où le client est encore à table et où son téléphone est déjà devant lui. Ce que la plaque enlève, ce n'est pas l'envie de laisser un avis : c'est le trajet entre cette envie et le formulaire.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 Chiffre clé :</strong> Un restaurant qui passe de 4,2 à 4,7 étoiles génère <strong>+25 % de chiffre d'affaires</strong> en moyenne (Harvard Business School Study). Pour un restaurant à 30 000 €/mois de CA, c'est +7 500 €/mois de gain direct.</p>
+<p class="text-sm text-blue-900"><strong>📊 À savoir :</strong> les travaux de Michael Luca (Harvard Business School) sur les restaurants indépendants ont mesuré qu'une étoile gagnée s'accompagnait d'une hausse de chiffre d'affaires de <strong>5 à 9 %</strong>. L'étude porte sur un marché et une période donnés : elle donne un ordre de grandeur, elle ne prédit pas ce que votre établissement obtiendra.</p>
 </div>
 </section>
 
 <section id="avis-impact-resto" class="scroll-mt-28 mb-16">
 <h2>L'impact réel des avis Google sur un restaurant en 2026</h2>
-<p>Les chiffres parlent d'eux-mêmes :</p>
+<p>Ce qui est établi, et ce qui ne l'est pas :</p>
 <ul>
 <li><strong>76 %</strong> des Français consultent Google avant de choisir un restaurant (Médiamétrie 2025)</li>
-<li><strong>87 %</strong> ne vont jamais dans un restaurant noté en dessous de 4 étoiles</li>
-<li><strong>+50 avis récents</strong> = présence garantie dans le pack local Google de votre ville</li>
-<li><strong>Une étoile en plus</strong> sur Google = +5 à 9 % de revenus (Berkeley Haas Study)</li>
-<li><strong>200+ avis</strong> = vous dépassez 90 % de vos concurrents en visibilité</li>
+<li><strong>Une étoile en plus</strong> sur Google : +5 à 9 % de revenus pour un restaurant indépendant (travaux de Michael Luca, Harvard Business School)</li>
+<li>Sous <strong>4 étoiles</strong>, une fiche se fait souvent écarter d'emblée : le client ouvre deux ou trois adresses côte à côte et garde la mieux notée</li>
+<li>Le <strong>volume et la fraîcheur</strong> des avis comptent dans le classement local : à note égale, la fiche qui en a le plus et les plus récents part avec un avantage</li>
+<li>En revanche, <strong>personne ne peut vous promettre un nombre d'avis</strong> : cela dépend de votre fréquentation, de votre emplacement et de ce que dit votre équipe en salle</li>
 </ul>
 
-<h3>Le calcul froid</h3>
-<p>Imaginons votre restaurant : 50 couverts/jour, 1500/mois, ticket moyen 25 €. Sans avis Google massifs, vous êtes invisible. Avec 200 avis et 4,7★, vous apparaissez en pack local pour "restaurant + votre ville" → <strong>+15 % de couverts</strong> sur de nouveaux clients qui ne vous connaissaient pas.</p>
-<p>15 % de 1500 couverts = 225 couverts supplémentaires/mois × 25 € = <strong>5 625 € de CA additionnel mensuel</strong>. Sur 12 mois : 67 500 €. <strong>Pour 60 € de plaque NFC</strong>.</p>
+<h3>Exemple de calcul</h3>
+<p>Ce qui suit est une projection construite sur des hypothèses, pas un résultat client mesuré. Prenez chaque hypothèse et remplacez-la par vos propres chiffres : le résultat changera, et c'est normal.</p>
+<p>Hypothèses : 50 couverts par jour, soit environ 1 500 par mois, ticket moyen 25 €. Supposons qu'une meilleure position dans le pack local vous amène 5 % de couverts en plus, uniquement des gens qui ne vous connaissaient pas. Cela ferait 75 couverts par mois, soit environ <strong>1 875 € de chiffre d'affaires supplémentaire</strong>.</p>
+<p>Rien ne garantit ces 5 %. Ils dépendent de votre ville, du nombre de restaurants qui se disputent la même requête, de votre carte et de votre emplacement. L'exercice sert surtout à situer l'ordre de grandeur en face du prix d'une plaque payée une seule fois.</p>
 
-<blockquote><p>💡 <strong>Citation client :</strong> "On était à 4,2 étoiles avec 47 avis. En 4 mois avec la plaque NFC sur les tables, on est passé à 4,7 étoiles avec 178 avis. Notre Yelp et TripAdvisor ont suivi. Le service du soir affiche complet 6 jours sur 7." — Marc D., gérant Le Petit Bistrot, Lyon 7e.</p></blockquote>
+<p>Un point à garder en tête : la note et le nombre d'avis ne travaillent pas de la même façon. La note rassure le client qui hésite entre deux adresses ; le nombre d'avis, lui, pèse sur la position dans le pack local et sur la crédibilité de la note elle-même. Une note de 4,9 sur douze avis convainc moins qu'une note de 4,6 sur deux cents.</p>
 </section>
 
 <section id="comment-fonctionne" class="scroll-mt-28 mb-16">
@@ -3446,7 +3443,7 @@ export const articles: Record<string, {
 <li>Le client a fini de manger, il est <strong>satisfait</strong>, son téléphone est sur la table</li>
 <li>Le serveur lui dit : <em>"Si vous avez 30 secondes, un avis nous aiderait énormément. Approchez juste votre téléphone ici"</em></li>
 <li>Le client approche son smartphone à 4 cm de la plaque</li>
-<li>Une notification apparaît automatiquement : <em>"Ouvrir Le Petit Bistrot dans Safari ?"</em></li>
+<li>Une notification apparaît automatiquement : <em>"Ouvrir « Votre Restaurant » dans Safari ?"</em></li>
 <li>Il tape → atterrit directement sur votre page d'avis Google → laisse un avis en 30 secondes</li>
 </ol>
 
@@ -3461,39 +3458,39 @@ export const articles: Record<string, {
 
 <section id="placement-resto" class="scroll-mt-28 mb-16">
 <h2>Les 5 emplacements optimaux pour votre plaque NFC en restaurant</h2>
-<p>Le placement détermine 80 % de votre taux de conversion. Voici nos recommandations basées sur les données de 200+ restaurants français.</p>
+<p>L'emplacement fait une grande partie du résultat. Une plaque que personne ne voit, ou qui arrive au mauvais moment du repas, ne sert à rien. Voici les cinq emplacements possibles en salle, et ce que chacun implique concrètement.</p>
 
 <h3>1. 🍽️ Sur la table — l'emplacement #1</h3>
-<p>Une plaque par table, posée à côté du sel ou en évidence sur le coin. Le serveur la mentionne au moment de l'addition. Taux de conversion observé : <strong>40-50 %</strong>.</p>
+<p>Une plaque par table, posée à côté du sel ou en évidence sur le coin. Le serveur la mentionne au moment de l'addition, quand le repas est fini et que le client n'a plus rien à faire en attendant le terminal de paiement.</p>
 <p><strong>Pourquoi ça marche :</strong> le client est captif, satisfait (il vient de finir de manger), son téléphone est à portée. Aucune friction.</p>
 <p><strong>Astuce :</strong> intégrez la plaque dans un petit présentoir avec le QR code visible et un message court : <em>"Votre avis compte pour nous → approchez votre téléphone"</em>.</p>
 
 <h3>2. 💳 À la caisse / borne de paiement</h3>
-<p>Pendant que le client paie, le ticket sort, puis la phrase : <em>"Pour finir, un petit avis ?"</em>. Plaque visible à côté du terminal de paiement. Taux : <strong>25-35 %</strong>.</p>
+<p>Pendant que le client paie, le ticket sort, puis la phrase : <em>"Pour finir, un petit avis ?"</em>. Plaque visible à côté du terminal de paiement. Le client est immobilisé quelques secondes, mais le contexte est plus transactionnel : il pense à son moyen de paiement, pas à son repas.</p>
 <p><strong>Pourquoi ça marche :</strong> moment captif (le client attend son ticket), action rapide. Mais moins efficace que table car contexte plus "transactionnel".</p>
 
 <h3>3. 🍴 Sur le porte-addition</h3>
 <p>Avec l'addition, vous présentez un petit porte-addition qui contient une plaque NFC. <em>"Voici votre addition. Si vous avez aimé, un avis Google nous fait toujours plaisir, il suffit d'approcher votre téléphone ici."</em></p>
-<p><strong>Combo gagnant :</strong> ce moment précis où le client paie est psychologiquement le meilleur pour demander un retour. Taux : <strong>35-45 %</strong>.</p>
+<p><strong>L'intérêt :</strong> le porte-addition arrive forcément entre les mains du client, sans que personne ait à détourner son attention. La plaque est là au moment où il repense au repas qu'il vient de finir, et le geste ne coupe pas le service.</p>
 
 <h3>4. 🚪 À la sortie du restaurant</h3>
-<p>Plaque sur le comptoir d'accueil, à côté du chef ou du gérant qui salue les clients. <em>"Merci pour votre visite ! Si vous avez aimé, un avis Google ?"</em>. Taux : <strong>20-30 %</strong>.</p>
-<p>Moins efficace que les options précédentes (le client est déjà mentalement parti) mais utile en complément.</p>
+<p>Plaque sur le comptoir d'accueil, à côté du chef ou du gérant qui salue les clients. <em>"Merci pour votre visite ! Si vous avez aimé, un avis Google ?"</em></p>
+<p>Moins bon que les options précédentes : le client a remis son manteau, il est déjà mentalement dehors, et il n'a plus de raison de ressortir son téléphone. Utile en complément, rarement suffisant seul.</p>
 
 <h3>5. 📋 Sur le menu / la carte</h3>
-<p>Carte plastifiée avec une zone NFC discrète au verso. <em>"Avis Google → approchez votre téléphone ici"</em>. Taux : <strong>15-25 %</strong>.</p>
-<p>Bon en complément, mais moins efficace seul car le client doit faire l'effort d'aller chercher la carte.</p>
+<p>Carte plastifiée avec une zone NFC discrète au verso. <em>"Avis Google → approchez votre téléphone ici"</em></p>
+<p>Bon en complément, faible tout seul : au moment où le client pourrait penser à laisser un avis, la carte est déjà repartie avec le serveur. Et pendant le repas, il la consulte pour choisir un plat, pas pour parler d'un service qu'il n'a pas encore eu.</p>
 
 <div class="bg-green-50 rounded-xl p-4 border border-green-200 not-prose">
-<p class="text-sm text-green-900"><strong>🎯 Recommandation :</strong> Pour un restaurant moyen (30-50 couverts), commencez avec <strong>2 plaques</strong> : une sur le porte-addition + une à la caisse. C'est le combo qui maximise le taux d'avis avec un investissement minimal.</p>
+<p class="text-sm text-green-900"><strong>🎯 Recommandation :</strong> Pour un restaurant moyen (30-50 couverts), commencez avec <strong>2 plaques</strong> : une sur le porte-addition + une à la caisse. Vous couvrez ainsi les deux moments où le client est disponible, sans immobiliser une plaque par table.</p>
 </div>
 </section>
 
 <section id="script-serveur" class="scroll-mt-28 mb-16">
-<h2>Le script serveur qui convertit à 50 %</h2>
-<p>Une plaque NFC sans communication = taux divisé par 3. Vos serveurs doivent <strong>mentionner la plaque</strong> au bon moment, avec les bons mots.</p>
+<h2>Le script serveur au moment de l'addition</h2>
+<p>Une plaque que personne ne mentionne reste un objet décoratif : le client ne sait pas ce que c'est ni ce qu'il est censé en faire. Vos serveurs doivent <strong>la mentionner</strong> au bon moment, avec les bons mots.</p>
 
-<h3>Le script à 50 % (testé sur 100+ restos)</h3>
+<h3>Le script, mot pour mot</h3>
 <blockquote><p>"Tout s'est bien passé ? [écoute la réponse] Ravi que ça vous ait plu ! Si vous avez 30 secondes, un avis Google nous aiderait beaucoup. Vous pouvez juste approcher votre téléphone ici, c'est instantané !"</p></blockquote>
 
 <h3>Pourquoi ça marche (psychologie)</h3>
@@ -3512,48 +3509,38 @@ export const articles: Record<string, {
 
 <h3>Les phrases à BANNIR</h3>
 <ul>
-<li>❌ "Pouvez-vous nous laisser un avis ?" — trop générique, taux 5-10 %</li>
+<li>❌ "Pouvez-vous nous laisser un avis ?" — trop vague : le client ne sait ni où, ni comment, ni combien de temps ça prend</li>
 <li>❌ "Si ça ne vous dérange pas..." — fait sentir que ça dérange</li>
 <li>❌ "On serait ravi d'avoir un avis 5 étoiles" — pression sur la note = avis supprimé par Google</li>
 <li>❌ "On vous offrira un café la prochaine fois si vous laissez un avis" — interdit (incentive)</li>
 </ul>
 </section>
 
-<section id="cas-pratique-resto" class="scroll-mt-28 mb-16">
-<h2>3 cas réels de restaurants français (2025-2026)</h2>
+<section id="mesurer-resultats" class="scroll-mt-28 mb-16">
+<h2>Comment savoir si ça marche chez vous</h2>
+<p>Personne ne peut vous dire à l'avance combien d'avis la plaque vous rapportera : cela dépend de votre fréquentation, de votre emplacement et de la constance de votre équipe. En revanche, vous pouvez le mesurer vous-même — et c'est le seul chiffre qui vous concerne vraiment.</p>
 
-<h3>Cas n°1 — Bistrot Le Petit Marché (Lyon, 7e)</h3>
-<p><strong>Profil :</strong> 35 couverts, 1 service midi + soir, ticket moyen 28 €.</p>
-<p><strong>Avant la plaque :</strong> 47 avis Google, note 4,2/5, 8 nouveaux avis/mois.</p>
-<p><strong>Action :</strong> 2 plaques NFC déployées (porte-addition + caisse) en novembre 2025. Formation des serveurs au script.</p>
-<p><strong>Après 4 mois :</strong> 178 avis Google, note 4,7/5, <strong>33 nouveaux avis/mois</strong> en moyenne.</p>
-<p><strong>Impact business :</strong> position 1 du pack local pour "bistrot Lyon 7", +28 % de couverts midi sur de nouveaux clients, complet 6/7 soirs.</p>
+<h3>Notez votre point de départ avant d'installer la plaque</h3>
+<p>Avant de poser quoi que ce soit, relevez trois choses sur votre fiche Google Business Profile : le nombre total d'avis, la note moyenne, et la date du dernier avis reçu. Faites une capture d'écran. Sans ce point de départ, vous n'aurez aucun moyen de dire si quelque chose a changé, et la mémoire est mauvaise juge en la matière.</p>
 
-<h3>Cas n°2 — Restaurant Gastronomique (Paris 3e)</h3>
-<p><strong>Profil :</strong> 25 couverts, 1 service soir, ticket moyen 95 €.</p>
-<p><strong>Avant :</strong> 89 avis, 4,5/5, 4-6 avis/mois.</p>
-<p><strong>Action :</strong> 1 plaque NFC discrète intégrée dans le porte-addition élégant en cuir.</p>
-<p><strong>Après 3 mois :</strong> 167 avis, 4,8/5, <strong>26 nouveaux avis/mois</strong>.</p>
-<p><strong>Impact :</strong> bonds dans le ranking gastro Paris, deux mentions par des bloggeurs gastronomiques (effet boule de neige), +15 % de couverts.</p>
-<p><strong>Insight :</strong> dans le gastronomique, l'esthétique de la plaque compte. Privilégier les modèles premium (acrylique noir mat ou blanc nacré) plutôt que les plaques standard.</p>
+<h3>Comptez par mois, pas par jour</h3>
+<p>Les avis n'arrivent pas de façon régulière : un service chargé peut en amener quatre le même soir, puis plus rien pendant une semaine. Regarder le compteur tous les matins ne vous apprendra rien et vous découragera. Notez le total une fois par mois, à date fixe, et comparez les mois entre eux.</p>
 
-<h3>Cas n°3 — Brasserie Familiale (Toulouse Centre)</h3>
-<p><strong>Profil :</strong> 80 couverts, 2 services, ticket moyen 18 €, équipe 4 serveurs.</p>
-<p><strong>Avant :</strong> 124 avis, 4,1/5, 5 avis/mois (volume élevé mais conversion ridicule).</p>
-<p><strong>Action :</strong> 5 plaques NFC (1 par 16 couverts), formation script serveur, défi équipe ("celui qui décroche le plus d'avis du mois gagne 100 €").</p>
-<p><strong>Après 6 mois :</strong> 487 avis, 4,6/5, <strong>60 nouveaux avis/mois</strong>.</p>
-<p><strong>Impact :</strong> 1ère position pack local "brasserie Toulouse centre", +35 % de nouveaux clients, équipe motivée par la dynamique d'avis positifs.</p>
+<h3>Surveillez la fraîcheur, pas seulement le total</h3>
+<p>Une fiche avec deux cents avis dont le plus récent date d'un an inspire moins confiance qu'une fiche avec quatre-vingts avis dont le dernier date de la semaine passée. Le client qui hésite regarde les dates. C'est pour cette raison que la plaque a plus d'intérêt sur la durée que sur un coup d'accélérateur d'un mois.</p>
 
-<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📌 Constante :</strong> Dans les 3 cas, le passage à 4,7+/5 a fait basculer le restaurant en pack local Google sur les requêtes principales de leur quartier — déclencheur de croissance massive.</p>
-</div>
+<h3>Testez un emplacement à la fois</h3>
+<p>Si vous posez cinq plaques le même jour à cinq endroits différents, vous ne saurez jamais lequel fonctionne. Commencez par le porte-addition pendant un mois, puis ajoutez la caisse le mois suivant. Vos serveurs vous diront très vite lequel des deux moments passe le mieux auprès des clients : c'est souvent l'information la plus utile, et elle ne coûte rien.</p>
+
+<h3>Regardez les statistiques de votre fiche</h3>
+<p>Google Business Profile affiche le nombre de fois où votre fiche a été vue, ainsi que les appels et les demandes d'itinéraire qu'elle a générés. Ces chiffres bougent lentement et dépendent de bien d'autres facteurs que vos avis, mais sur six mois ils donnent une tendance plus honnête que votre impression du samedi soir.</p>
 </section>
 
 <section id="erreurs-restaurant" class="scroll-mt-28 mb-16">
 <h2>Les 7 erreurs à éviter avec votre plaque NFC en restaurant</h2>
 
 <h3>1. Mettre la plaque mais ne rien dire</h3>
-<p>Une plaque NFC posée sans que les serveurs en parlent = taux de conversion divisé par 4. Vos clients ne savent pas ce que c'est. <strong>Toujours coupler avec une mention verbale.</strong></p>
+<p>Une plaque posée sans que personne en parle, c'est un objet que vos clients ne savent pas identifier : ils la prennent pour un support de menu ou un numéro de table. <strong>Toujours coupler avec une mention verbale.</strong></p>
 
 <h3>2. Demander à des clients non-satisfaits</h3>
 <p>Si le service a été problématique, ne demandez pas d'avis : vous risquez un avis négatif qui ruine votre note. Filtrez avec "Tout s'est bien passé ?" et si la réponse est mitigée, gérez le problème puis reprochez plus tard si c'est résolu.</p>
@@ -3571,12 +3558,12 @@ export const articles: Record<string, {
 <p>Avec un grand restaurant, 1 plaque = bouchon. Idéal : 1 plaque pour 16-20 couverts, ou 1 plaque par serveur en complément du porte-addition.</p>
 
 <h3>7. Oublier de programmer la plaque correctement</h3>
-<p>Vérifiez que le lien dans la plaque pointe bien vers <strong>votre page d'avis directe</strong> (du type <code>https://g.page/r/...</code>) et pas vers votre fiche complète. Ça économise 1 clic au client = +20 % de conversion.</p>
+<p>Vérifiez que le lien dans la plaque pointe bien vers <strong>votre page d'avis directe</strong> (du type <code>https://g.page/r/...</code>) et pas vers votre fiche complète. Ça économise un clic au client, et surtout ça lui évite d'atterrir sur la fiche puis de devoir chercher le bouton « Rédiger un avis ». Sur les plaques Swiipx, ce lien direct est programmé avant l'envoi.</p>
 </section>
 
 <section id="roi-restaurant" class="scroll-mt-28 mb-16">
-<h2>ROI et amortissement pour un restaurant moyen</h2>
-<p>Faisons les calculs froids. Imaginons votre restaurant :</p>
+<h2>Exemple de calcul : ce que coûte la plaque, et quand elle est remboursée</h2>
+<p>Ce qui suit est une projection à partir d'hypothèses, pas un résultat client mesuré. Prenons un restaurant fictif :</p>
 <ul>
 <li>40 couverts, 2 services/jour, 6 jours/semaine = 1920 couverts/mois</li>
 <li>Ticket moyen : 25 €</li>
@@ -3587,23 +3574,24 @@ export const articles: Record<string, {
 <ul>
 <li>Pack 2 plaques (recommandé pour ce volume) : <strong>65,88 € TTC, livraison offerte en point relais, payée 1 fois</strong></li>
 <li>Formation équipe : 30 minutes en briefing</li>
-<li>Coût total annuel : <strong>~6 € par mois</strong> (amorti sur durée de vie 10 ans)</li>
+<li>Coût sur la première année : <strong>environ 5,50 € par mois</strong>, puis plus rien — il n'y a pas d'abonnement</li>
 </ul>
 
-<h3>Gain estimé (basé sur les cas réels)</h3>
+<h3>Gain hypothétique</h3>
+<p>Ce qui suit n'est pas un relevé : ce sont des hypothèses, à ajuster à votre établissement.</p>
 <ul>
-<li>Avis multipliés par 5 → meilleure note → meilleur ranking pack local</li>
-<li>+15 % de nouveaux clients sur 3-6 mois (conservatif)</li>
-<li>+15 % de 1920 couverts = 288 couverts supplémentaires/mois</li>
-<li>288 × 25 € = <strong>+7 200 € de CA mensuel</strong></li>
+<li>Hypothèse : la plaque vous amène quelques avis de plus chaque semaine, ce qui fait monter le volume et la fraîcheur de votre fiche</li>
+<li>Hypothèse : cette progression vous fait gagner des positions sur les requêtes de votre quartier, et 3 % de couverts en plus</li>
+<li>3 % de 1 920 couverts = environ 58 couverts supplémentaires par mois</li>
+<li>58 × 25 € = environ <strong>1 450 € de chiffre d'affaires supplémentaire par mois</strong>, si les deux hypothèses se vérifient</li>
 </ul>
 
-<h3>Amortissement</h3>
-<p><strong>Le pack 2 plaques (65,88 €) est amorti en 4 jours</strong> avec ces hypothèses. Sur 12 mois, le ROI est de <strong>1 200 ×</strong>.</p>
-<p>Même avec des hypothèses ultra-conservatrices (+5 % de couverts au lieu de +15 %), l'amortissement se fait en 2 semaines max.</p>
+<h3>Le seuil de rentabilité</h3>
+<p>Le vrai intérêt de ce calcul n'est pas son résultat, c'est son seuil. Le pack 2 plaques coûte 65,88 € TTC, payés une seule fois, sans abonnement. Avec un ticket moyen à 25 €, il est remboursé dès que la plaque vous a amené trois couverts que vous n'auriez pas eus autrement.</p>
+<p>Trois couverts, sur toute la durée de vie de la plaque. C'est la seule chose que ce calcul démontre réellement — et elle suffit à répondre à la question de départ.</p>
 
 <div class="bg-green-50 rounded-xl p-4 border border-green-200 not-prose">
-<p class="text-sm text-green-900"><strong>💰 Verdict :</strong> Le ROI d'une plaque NFC en restaurant est probablement le meilleur investissement marketing à 60 € que vous puissiez faire en 2026.</p>
+<p class="text-sm text-green-900"><strong>💰 À retenir :</strong> la plaque est un achat unique, sans abonnement et garanti à vie. Le risque financier se limite au prix du pack ; ce qu'elle rapporte, lui, dépend de votre salle, de votre équipe et de votre marché.</p>
 </div>
 </section>
 
@@ -3628,16 +3616,16 @@ export const articles: Record<string, {
 <h2>Questions fréquentes — Plaque NFC restaurant</h2>
 
 <h3>Combien d'avis Google peut-on collecter par mois avec une plaque NFC en restaurant ?</h3>
-<p>En moyenne, un restaurant qui passe à la plaque NFC multiplie son nombre d'avis mensuel par 4 à 7. Sur la base de 200+ restaurants utilisateurs : un restaurant à 30 couverts/jour passe de 5-8 avis/mois à 25-40 avis/mois.</p>
+<p>Nous n'avons pas de chiffre à vous donner, et personne ne devrait vous en promettre un : cela dépend de votre fréquentation et de ce que dit votre équipe. Le calcul, en revanche, vous appartient. Prenez votre nombre de couverts par semaine et l'idée que vous vous faites de la part de clients qui accepteraient de laisser un avis quand on le leur propose simplement. Avec 300 couverts par semaine et un client sur vingt qui joue le jeu, cela ferait une quinzaine d'avis par semaine. Divisez par deux si la plaque n'est mentionnée qu'une fois sur deux.</p>
 
 <h3>Mes serveurs doivent-ils tous mentionner la plaque ?</h3>
-<p>Oui, c'est crucial. Une plaque NFC sans communication verbale convertit 3 à 4 fois moins. Briefez votre équipe, donnez-leur le script, et challengez positivement (ex: prime symbolique au serveur qui décroche le plus d'avis).</p>
+<p>Oui, c'est le point décisif. Sans un mot du serveur, la plaque reste un objet non identifié posé sur la table : le client ne sait ni ce que c'est, ni qu'il peut l'utiliser. Briefez votre équipe, donnez-leur une phrase courte, et faites-en un réflexe au moment de l'addition.</p>
 
 <h3>Que faire si un client laisse un avis négatif ?</h3>
-<p>Répondez TOUJOURS, sous 48h, professionnellement et empathiquement. Reconnaissez le problème, expliquez ce que vous faites pour le corriger, proposez de revenir. 89 % des prospects lisent les réponses aux avis négatifs : une réponse pro peut transformer un avis négatif en démonstration de qualité.</p>
+<p>Répondez toujours, rapidement, sans vous justifier à outrance. Reconnaissez le problème, dites ce que vous changez, proposez de revenir. Les futurs clients lisent les avis négatifs, et surtout vos réponses : c'est souvent là qu'ils se font une idée de la maison. Un avis négatif bien traité rassure davantage qu'une page d'avis parfaits.</p>
 
 <h3>Combien de temps avant de voir des résultats sur Google ?</h3>
-<p>Vous verrez de nouveaux avis dès la première semaine. L'impact sur le ranking pack local apparaît généralement en 4-8 semaines (Google met du temps à recalculer les scores). À 3-6 mois, vous devriez voir un saut significatif si vous maintenez le rythme.</p>
+<p>Les premiers avis arrivent dès que l'équipe commence à en parler : la plaque est fonctionnelle au déballage, il n'y a rien à configurer. L'effet sur le classement local, lui, est beaucoup plus lent — Google recalcule ses scores sur plusieurs semaines et tient compte de la régularité, pas d'un pic ponctuel. Raisonnez en mois, et surtout en constance.</p>
 
 <h3>La plaque résiste-t-elle aux nettoyages quotidiens ?</h3>
 <p>Oui. Les plaques en acrylique 3 mm résistent à l'eau, aux désinfectants, aux UV et aux rayures. Vous pouvez les nettoyer avec un chiffon humide ou un spray désinfectant comme n'importe quelle table.</p>
@@ -3649,14 +3637,14 @@ export const articles: Record<string, {
 <p>Pas besoin de panneau spécifique. Le serveur la mentionne au bon moment. Si vous voulez signaler l'option, un petit sticker discret au mur ("Avis Google → approchez votre téléphone sur la plaque") suffit.</p>
 
 <h3>Est-ce que ça fonctionne aussi pour les commandes à emporter ?</h3>
-<p>Oui. Mettez une plaque à côté de la caisse / zone de retrait. Quand le client récupère sa commande : "Si vous avez aimé, un avis Google ?" Taux observé : 15-25 % (moins qu'en salle, mais cumulé sur volume = très rentable).</p>
+<p>Oui. Mettez une plaque à côté de la caisse ou de la zone de retrait. Quand le client récupère sa commande : "Si vous avez aimé, un avis Google ?" Le moment est moins favorable qu'en salle — le client est pressé et n'a pas encore mangé — mais le volume de passage est souvent plus élevé, ce qui compense en partie.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
-<h2>Conclusion : votre restaurant mérite ses 200 avis Google</h2>
-<p>En 2026, un restaurant sans stratégie d'avis Google est un restaurant qui laisse 30 % de son CA potentiel sur la table. La plaque NFC est <strong>l'outil le plus simple et le plus rentable</strong> pour fixer ce problème.</p>
-<p>500+ restaurants français ont déjà fait le passage. Tous racontent la même chose : multiplication par 4-7 des avis, position 1 du pack local, croissance double-digit du CA.</p>
-<p>Le seul vrai risque, c'est de ne <strong>pas</strong> le faire — pendant que votre concurrent à 200 mètres l'installe.</p>
+<h2>Conclusion</h2>
+<p>Un restaurant qui ne demande jamais d'avis n'en reçoit presque pas : ses clients satisfaits repartent contents et silencieux, et sa fiche Google reste figée sur les quelques avis laissés spontanément — souvent les plus anciens, et pas toujours les plus tendres.</p>
+<p>La plaque NFC ne fait qu'une chose, mais elle la fait bien : elle supprime le trajet entre l'envie de laisser un avis et le formulaire. Le client approche son téléphone, la page s'ouvre, il écrit deux lignes. Pas d'application à installer, pas d'abonnement, pas de QR code à cadrer sous une lumière tamisée.</p>
+<p>Le reste dépend de vous : où vous la posez, et si votre équipe en dit un mot au bon moment. C'est ce que ce guide a essayé de détailler, parce que c'est là que se joue la différence entre une plaque utile et un objet décoratif.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à booster les avis Google de votre restaurant ?</strong></p>
@@ -3672,16 +3660,15 @@ export const articles: Record<string, {
     date: '10 mai 2026',
     readTime: '9 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Plaque NFC ou QR code pour collecter des avis Google en 2026 ? Comparatif détaillé : taux de conversion, prix, compatibilité, ROI. Le guide pour bien choisir.',
+    excerpt: 'Plaque NFC ou QR code pour collecter des avis Google en 2026 ? Comparatif détaillé : geste demandé au client, prix, compatibilité, durabilité. Le guide pour bien choisir.',
     tocSections: [
       { id: 'introduction', label: 'Pourquoi cette comparaison compte' },
       { id: 'plaque-nfc-fonctionnement', label: 'Comment fonctionne la plaque NFC' },
       { id: 'qr-code-fonctionnement', label: 'Comment fonctionne le QR code' },
       { id: 'comparatif-detaille', label: 'Comparatif détaillé (8 critères)' },
-      { id: 'taux-conversion', label: 'Taux de conversion réels' },
+      { id: 'taux-conversion', label: 'Pourquoi le geste compte' },
       { id: 'compatibilite', label: 'Compatibilité smartphones' },
       { id: 'cas-usage-secteur', label: 'Quel choix par secteur' },
-      { id: 'etudes-cas', label: '3 études de cas réelles' },
       { id: 'verdict-2026', label: 'Le verdict 2026' },
       { id: 'mise-en-place', label: 'Comment se lancer' },
       { id: 'faq-comparatif', label: 'Questions fréquentes' },
@@ -3689,12 +3676,12 @@ export const articles: Record<string, {
     content: `
 <section id="introduction" class="scroll-mt-28 mb-16">
 <h2>Plaque NFC ou QR code : pourquoi cette question est cruciale en 2026</h2>
-<p>En 2026, plus de <strong>87 % des Français consultent les avis Google</strong> avant d'acheter ou de visiter un commerce. Pour les commerces locaux, les avis Google ne sont plus une option : ils sont le <strong>premier levier de croissance</strong>.</p>
+<p>Avant de pousser la porte d'un commerce qu'ils ne connaissent pas, beaucoup de clients ouvrent Google et regardent la fiche : la note, le nombre d'avis, les photos, les dernières remarques laissées. Pour un commerce local, cette fiche est souvent le <strong>premier contact</strong> avec un futur client.</p>
 <p>Mais comment collecter ces avis efficacement ? Deux technologies dominent le marché : la <strong>plaque NFC</strong> (Near Field Communication) et le <strong>QR code</strong>. Toutes deux promettent la même chose — rediriger vos clients vers votre page d'avis Google en quelques secondes — mais leurs performances réelles sont très différentes.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>💡 À retenir :</strong> Le bon choix peut multiplier par 3 ou 4 votre nombre d'avis Google mensuel. Le mauvais choix vous fait perdre des centaines de clients potentiels chaque année.</p>
+<p class="text-sm text-blue-900"><strong>💡 À retenir :</strong> Les deux supports mènent à la même page Google. Ce qui les sépare, c'est le nombre de gestes demandés au client, au moment où il est encore devant vous.</p>
 </div>
-<p>Dans ce guide, nous comparons en détail les deux technologies sur <strong>8 critères clés</strong> : taux de conversion, prix, compatibilité, durabilité, expérience client, etc. À la fin, vous saurez exactement quoi choisir pour votre commerce.</p>
+<p>Dans ce guide, nous comparons en détail les deux technologies sur <strong>8 critères clés</strong> : geste demandé au client, prix, compatibilité, durabilité, expérience client, etc. À la fin, vous saurez exactement quoi choisir pour votre commerce.</p>
 </section>
 
 <section id="plaque-nfc-fonctionnement" class="scroll-mt-28 mb-16">
@@ -3748,20 +3735,20 @@ export const articles: Record<string, {
 <li><strong>Friction psychologique</strong> : le client doit consciemment décider de "scanner" — beaucoup hésitent</li>
 </ul>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>⚠️ À savoir :</strong> Les études montrent que <strong>40 % des clients qui voient un QR code n'essaient même pas de le scanner</strong>, soit par méconnaissance, soit par flemme.</p>
+<p class="text-sm text-amber-900"><strong>⚠️ À savoir :</strong> Un QR code ne se lit pas tout seul : le client doit décider de sortir son téléphone, d'ouvrir l'appareil photo et de viser. Chacune de ces étapes est une occasion de remettre l'avis à plus tard.</p>
 </div>
 </section>
 
 <section id="comparatif-detaille" class="scroll-mt-28 mb-16">
 <h2>Comparatif détaillé : NFC vs QR Code sur 8 critères</h2>
-<p>Voici la comparaison point par point des deux technologies, basée sur les données de plus de 500 commerces utilisateurs en 2025-2026.</p>
+<p>Voici la comparaison point par point des deux technologies, sur ce qui est vérifiable : le geste demandé au client, la compatibilité des téléphones, la résistance du support et le prix.</p>
 
-<h3>1. Taux de conversion (clients → avis publiés)</h3>
+<h3>1. Le geste demandé au client</h3>
 <ul>
-<li><strong>Plaque NFC : 35 à 45 %</strong> (parfois jusqu'à 55 % avec un bon emplacement)</li>
-<li><strong>QR Code : 8 à 12 %</strong> en moyenne</li>
+<li><strong>Plaque NFC : deux gestes</strong> — approcher le téléphone de la plaque, puis toucher la notification qui s'affiche</li>
+<li><strong>QR Code : cinq gestes</strong> — sortir le téléphone, ouvrir l'appareil photo, cadrer, attendre la détection, puis toucher la notification</li>
 </ul>
-<p>👉 <strong>La plaque NFC convertit 4 fois mieux</strong> que le QR code.</p>
+<p>👉 <strong>Deux gestes d'un côté, cinq de l'autre.</strong> Personne ne peut vous promettre combien de clients iront au bout, mais le nombre d'étapes que vous leur demandez, lui, se compte.</p>
 
 <h3>2. Temps pour laisser un avis</h3>
 <ul>
@@ -3808,16 +3795,16 @@ export const articles: Record<string, {
 </ul>
 
 <div class="bg-green-50 rounded-xl p-4 border border-green-200 not-prose">
-<p class="text-sm text-green-900"><strong>📊 Résultat global :</strong> La plaque NFC gagne sur 7 critères sur 8. Le seul avantage marginal du QR code est sa compatibilité universelle, mais les plaques NFC modernes intègrent un QR code de secours qui élimine ce point.</p>
+<p class="text-sm text-green-900"><strong>📊 Résultat global :</strong> Les deux supports coûtent à peu près la même chose à l'année. La plaque NFC prend l'avantage sur le geste, la résistance et la durée de vie ; le QR code garde celui de la compatibilité universelle, mais les plaques NFC intègrent un QR de secours qui répond à ce point.</p>
 </div>
 </section>
 
 <section id="taux-conversion" class="scroll-mt-28 mb-16">
-<h2>Pourquoi le NFC convertit 4 fois mieux : la science derrière</h2>
-<p>Le différentiel de taux de conversion entre NFC (35-45 %) et QR (8-12 %) s'explique par <strong>trois facteurs psychologiques</strong> précis.</p>
+<h2>Pourquoi le nombre d'étapes fait la différence</h2>
+<p>Qu'un client aille au bout ou non ne se joue pas sur la technologie, mais sur ce qu'on lui demande de faire. Trois mécanismes l'expliquent.</p>
 
 <h3>1. Le principe de friction (Daniel Kahneman)</h3>
-<p>Chaque étape supplémentaire dans un processus réduit le taux de complétion de 20 à 30 %. Un QR code demande 5 étapes au client, le NFC seulement 2. Mathématiquement, le NFC devrait convertir 3 à 4 fois mieux — ce que les données confirment.</p>
+<p>À chaque étape supplémentaire d'un parcours, une partie des gens s'arrêtent : c'est vrai d'un formulaire, d'un tunnel de commande, et d'une demande d'avis. Un QR code demande 5 étapes au client, le NFC seulement 2. Vous ne supprimez pas les hésitations, mais vous supprimez les occasions d'abandonner en route.</p>
 
 <h3>2. L'effet "magie" du sans contact</h3>
 <p>Quand un client approche son téléphone et qu'une notification apparaît instantanément, il ressent un effet "wow" qui crée une <strong>émotion positive</strong>. Cette émotion se transfère sur le commerce et augmente la propension à laisser un avis positif.</p>
@@ -3825,7 +3812,7 @@ export const articles: Record<string, {
 <h3>3. L'absence de décision consciente</h3>
 <p>Scanner un QR code est une <strong>action volontaire</strong> que le client peut éviter ("flemme", "je le ferai plus tard"). Approcher son téléphone d'une plaque NFC est <strong>quasi-automatique</strong> quand on est curieux — il n'y a pas le frein psychologique du "j'ouvre l'appareil photo, je cadre, je clique...".</p>
 
-<blockquote><p>💡 <strong>Citation d'utilisateur :</strong> "Quand on avait un QR code, on demandait à 100 clients par semaine, 8 laissaient un avis. Avec la plaque NFC, sur 100 clients, 38 laissent un avis. C'est le jour et la nuit." — Sophie M., gérante d'un salon de coiffure à Lyon.</p></blockquote>
+<p>Ces trois mécanismes n'ont rien de magique et ne garantissent aucun résultat : ils expliquent seulement pourquoi, à satisfaction client égale, un support qui demande deux gestes ramène plus de retours qu'un support qui en demande cinq. Le reste dépend de votre flux de clients, de votre emplacement et de la façon dont votre équipe en parle.</p>
 </section>
 
 <section id="compatibilite" class="scroll-mt-28 mb-16">
@@ -3850,59 +3837,36 @@ export const articles: Record<string, {
 
 <h3>🍽️ Restauration</h3>
 <p><strong>Recommandation : NFC fortement conseillé.</strong></p>
-<p>En restauration, le client est <strong>à table</strong>, son téléphone à portée de main. La plaque NFC posée sur la table ou présentée avec l'addition donne d'excellents résultats. Taux de conversion observé : <strong>30 à 50 %</strong>.</p>
-<p>Le QR code sur l'addition fonctionne aussi mais convertit 3 à 4 fois moins.</p>
+<p>En restauration, le client est <strong>à table</strong>, son téléphone déjà posé à côté de l'assiette. La plaque présentée avec l'addition arrive au moment où il vient de finir son repas et où il attend le rendu de monnaie : c'est du temps mort, et il n'a rien d'autre à faire.</p>
+<p>Le QR code sur l'addition fonctionne aussi, mais il tombe souvent au moment où le client se lève déjà.</p>
 
 <h3>💇 Salons de coiffure et instituts de beauté</h3>
 <p><strong>Recommandation : NFC indispensable.</strong></p>
-<p>Le client en salon est <strong>captif</strong> (60+ minutes), satisfait après le service, son téléphone à proximité. C'est le contexte idéal pour le NFC. Beaucoup de salons atteignent <strong>40-55 %</strong> de taux de conversion.</p>
+<p>Le client en salon reste <strong>assis longtemps</strong> (souvent plus d'une heure) et voit le résultat dans le miroir avant de passer en caisse. La satisfaction est visible, elle est immédiate, et le téléphone est déjà en main pendant l'attente : c'est un contexte favorable pour poser la plaque devant lui.</p>
 
 <h3>🩺 Cabinets médicaux et professionnels libéraux</h3>
 <p><strong>Recommandation : NFC en sortie de consultation.</strong></p>
-<p>Placée à l'accueil ou dans la salle d'attente, la plaque NFC permet aux patients satisfaits de laisser un avis sans encombre. Particulièrement efficace en kinésithérapie, ostéopathie, dentaire (taux : 25-35 %).</p>
+<p>Placée à l'accueil ou dans la salle d'attente, la plaque NFC permet aux patients satisfaits de laisser un avis sans encombre. En kinésithérapie et en ostéopathie, le patient revient souvent plusieurs fois : il voit la plaque à chaque passage, ce qui rattrape le fait qu'il n'y pense pas dès la première séance.</p>
 
 <h3>🏨 Hôtels et hébergements touristiques</h3>
 <p><strong>Recommandation : NFC à l'accueil + QR sur les supports digitaux.</strong></p>
-<p>Une plaque NFC à la réception lors du check-out. En complément, un QR sur les emails post-séjour. Cette stratégie hybride génère <strong>60 % d'avis en plus</strong> qu'une seule méthode.</p>
+<p>Une plaque NFC à la réception lors du check-out. En complément, un QR sur les emails post-séjour : le client qui part à 6 h du matin sans repasser par la réception reste joignable par ce canal. Les deux supports ne touchent pas les mêmes clients, c'est pour cela qu'on les combine.</p>
 
 <h3>🛍️ Boutiques de retail</h3>
 <p><strong>Recommandation : NFC en caisse.</strong></p>
-<p>Au moment du passage en caisse, l'attention du client est captive. Une plaque NFC à côté du terminal de paiement convertit à <strong>20-30 %</strong>.</p>
+<p>Au moment du passage en caisse, le client a déjà son téléphone à la main s'il paie sans contact. Une plaque posée à côté du terminal de paiement se trouve exactement dans son champ de vision, à l'instant où le geste « approcher le téléphone » vient d'être fait pour payer.</p>
 
 <h3>🚗 Auto-écoles, garages, lavages auto</h3>
 <p><strong>Recommandation : NFC + relance email/SMS.</strong></p>
 <p>Le client paie après le service rendu — c'est le moment optimal. NFC en réception, suivi d'un SMS automatique 24h après pour maximiser le taux global.</p>
 </section>
 
-<section id="etudes-cas" class="scroll-mt-28 mb-16">
-<h2>3 études de cas réelles (2025-2026)</h2>
-
-<h3>Cas n°1 : Restaurant "La Petite Table" (Lyon, 7e)</h3>
-<p><strong>Avant :</strong> QR code sur l'addition → 8 avis Google par mois (avec 2 500 couverts/mois).</p>
-<p><strong>Après :</strong> Plaque NFC posée sur chaque table → 47 avis Google par mois.</p>
-<p><strong>Résultat :</strong> +<strong>488 % d'avis</strong>, note moyenne passée de 4,2 à 4,7. CA mensuel : <strong>+18 %</strong> en 4 mois (estimation Google Business Profile Insights).</p>
-
-<h3>Cas n°2 : Salon de coiffure "Élégance" (Bordeaux)</h3>
-<p><strong>Avant :</strong> Demande verbale + carte de visite avec QR → 5 avis par mois (sur 200 clientes).</p>
-<p><strong>Après :</strong> Plaque NFC à côté du miroir + script verbal court → 38 avis par mois.</p>
-<p><strong>Résultat :</strong> +<strong>660 % d'avis</strong>. Nouvelles clientes recrutées : +28 par mois en moyenne. Note : 4,9/5.</p>
-
-<h3>Cas n°3 : Cabinet dentaire "Sourire Plus" (Toulouse)</h3>
-<p><strong>Avant :</strong> Aucune solution de collecte d'avis → 1 à 2 avis par mois (spontanés).</p>
-<p><strong>Après :</strong> 2 plaques NFC (accueil + salle d'attente) + 1 QR de secours.</p>
-<p><strong>Résultat :</strong> 22 avis par mois. Le cabinet est passé de la <strong>page 2 à la position 1</strong> du pack local Google pour la requête "dentiste Toulouse centre" en 5 mois.</p>
-
-<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📌 Constante observée :</strong> Dans tous les cas, le passage du QR code au NFC multiplie par 4 à 7 le nombre d'avis collectés, sans modification du flux client ni demande supplémentaire.</p>
-</div>
-</section>
-
 <section id="verdict-2026" class="scroll-mt-28 mb-16">
 <h2>Le verdict 2026 : NFC, QR ou les deux ?</h2>
-<p>Sur la base des données 2025-2026 issues de centaines de commerces français, voici notre verdict.</p>
+<p>Aucun chiffre de performance ici : ni nous ni personne ne mesure ce que donne votre commerce en particulier. Voici simplement ce que chaque support fait bien, et dans quel contexte.</p>
 
-<h3>✅ Le NFC est supérieur dans 95 % des cas</h3>
-<p>Pour <strong>tout commerce physique</strong> avec un flux client régulier et un point de contact identifié (caisse, table, comptoir), la plaque NFC est <strong>la solution la plus performante</strong>. Elle convertit 4 fois mieux, dure 10 fois plus longtemps, et donne une image plus professionnelle.</p>
+<h3>✅ Le NFC est le bon choix en point de vente physique</h3>
+<p>Pour <strong>tout commerce physique</strong> avec un flux client régulier et un point de contact identifié (caisse, table, comptoir), la plaque NFC demande le geste le plus court. Elle tient des années sans se dégrader, elle ne se décolle pas comme un autocollant, et elle a l'allure d'un objet installé plutôt que d'un bout de papier scotché.</p>
 
 <h3>📱 Le QR code reste utile en complément</h3>
 <p>Sur les <strong>supports digitaux</strong> (emails, factures PDF, sites web), le QR code reste pertinent car il n'y a pas d'alternative NFC dans ces contextes. <strong>Mais pas en remplacement du NFC en point de vente.</strong></p>
@@ -3910,7 +3874,7 @@ export const articles: Record<string, {
 <h3>🎯 La stratégie gagnante : "NFC d'abord, QR de secours"</h3>
 <p>La meilleure approche en 2026 est une <strong>plaque NFC avec QR de secours intégré</strong>. Vous bénéficiez :</p>
 <ul>
-<li>Du taux de conversion premium du NFC (35-45 %) pour 95 % des clients</li>
+<li>Du parcours le plus court pour les 95 % de clients dont le téléphone lit le NFC</li>
 <li>Du filet de sécurité du QR pour les 5 % restants</li>
 <li>D'un seul support physique à acheter et à déployer</li>
 <li>D'une image moderne et premium</li>
@@ -3938,16 +3902,16 @@ export const articles: Record<string, {
 </ul>
 
 <h3>Étape 4 : Formez votre équipe et communiquez</h3>
-<p>Une plaque NFC sans communication = <strong>taux de conversion divisé par 3</strong>. Formez votre équipe à mentionner la plaque ("Si vous avez 30 secondes, un avis nous aiderait — il suffit d'approcher votre téléphone ici") et placez un petit panneau visuel à côté ("Laissez votre avis en 10 secondes 👉").</p>
+<p>Une plaque posée sans un mot reste un objet décoratif : la plupart des clients ne devinent pas à quoi elle sert. Formez votre équipe à la mentionner ("Si vous avez 30 secondes, un avis nous aiderait — il suffit d'approcher votre téléphone ici") et placez un petit panneau visuel à côté ("Laissez votre avis en 10 secondes 👉").</p>
 
-<p>Avec ces 4 étapes, vous devriez voir vos avis Google se multiplier en <strong>2 à 4 semaines</strong>. Si vous voulez aller plus loin, consultez notre <a href="/blog/doubler-avis-google-30-jours">guide complet pour doubler vos avis Google en 30 jours</a> ou découvrez notre <a href="/blog/nfc-avis-clients">guide technique dédié au NFC</a>.</p>
+<p>Ces 4 étapes sont la part que vous maîtrisez ; le reste dépend de votre nombre de clients et de leur satisfaction. Si vous voulez aller plus loin, consultez notre <a href="/blog/doubler-avis-google-30-jours">guide complet pour doubler vos avis Google en 30 jours</a> ou découvrez notre <a href="/blog/nfc-avis-clients">guide technique dédié au NFC</a>.</p>
 </section>
 
 <section id="faq-comparatif" class="scroll-mt-28 mb-16">
 <h2>Questions fréquentes</h2>
 
 <h3>Peut-on utiliser une plaque NFC et un QR code en parallèle ?</h3>
-<p>Oui, c'est même recommandé. La plupart des plaques NFC professionnelles intègrent un QR code de secours qui couvre les 5 % de smartphones non-NFC. Cette double approche garantit 100 % de compatibilité tout en bénéficiant du taux de conversion supérieur du NFC.</p>
+<p>Oui, c'est même recommandé. La plupart des plaques NFC professionnelles intègrent un QR code de secours qui couvre les 5 % de smartphones non-NFC. Cette double approche garantit 100 % de compatibilité, sans renoncer au parcours en deux gestes du NFC pour tous les autres clients.</p>
 
 <h3>Le NFC consomme-t-il la batterie du client ?</h3>
 <p>Non. Les puces NFC sont <strong>passives</strong> : elles tirent leur énergie du champ magnétique du smartphone pendant la lecture (qui dure 0,3 seconde). L'impact sur la batterie est totalement négligeable.</p>
@@ -3959,10 +3923,10 @@ export const articles: Record<string, {
 <p>Oui, dans 95 % des cas. Seuls les étuis avec une coque métallique épaisse peuvent bloquer le signal. Les étuis classiques en silicone, cuir ou plastique ne posent aucun problème.</p>
 
 <h3>Combien d'avis Google peut-on collecter avec une plaque NFC en 1 an ?</h3>
-<p>Tout dépend de votre flux client et de la communication autour de la plaque. En moyenne, nos utilisateurs constatent une multiplication par 4 à 7 du nombre d'avis annuels. Un commerce avec 500 clients/mois et un bon placement peut atteindre <strong>120 à 180 avis Google par an</strong>.</p>
+<p>Personne ne peut vous le dire à l'avance : cela dépend de votre flux client, de votre emplacement et de la façon dont votre équipe en parle. Le seul calcul qui vaut est le vôtre. Posez une hypothèse et faites la multiplication : avec 500 clients par mois et un client sur cinquante qui laisse un avis, vous êtes à une dizaine d'avis par mois, soit <strong>environ 120 sur l'année</strong>. Si c'est un client sur cent, vous tombez à 60. À vous de juger quelle hypothèse ressemble le plus à votre commerce.</p>
 
 <h3>Combien de temps faut-il pour qu'une plaque NFC s'amortisse ?</h3>
-<p>Avec un prix moyen de 40 € et l'apport de 3 à 5 nouveaux clients par mois grâce aux nouveaux avis, la plaque NFC s'amortit en <strong>2 à 4 semaines</strong> pour un commerce moyen.</p>
+<p>Faites le calcul avec vos propres chiffres, c'est le seul honnête. La plaque est un achat unique de quelques dizaines d'euros, sans abonnement ni renouvellement : divisez ce prix par votre panier moyen et vous obtenez le nombre de clients supplémentaires qu'elle doit vous apporter, une seule fois, pour être remboursée. Pour une plaque à une quarantaine d'euros et un panier moyen de 30 €, cela fait deux clients — deux en tout, pas deux par mois.</p>
 
 <h3>Le QR code va-t-il disparaître à cause du NFC ?</h3>
 <p>Non. Le QR code reste utile dans les contextes digitaux (emails, sites web, supports imprimés non-physiques). Mais en point de vente physique, le NFC s'impose progressivement comme le standard depuis 2024.</p>
@@ -3970,8 +3934,8 @@ export const articles: Record<string, {
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : passez au NFC pour booster vos avis Google en 2026</h2>
-<p>Si vous gérez un commerce physique, le choix entre plaque NFC et QR code est désormais clair : <strong>la plaque NFC convertit 4 fois mieux</strong>, dure 10 fois plus longtemps, et vous coûte au final moins cher au mois.</p>
-<p>Les <strong>500+ commerces français</strong> qui ont fait le switch en 2025 ne reviennent pas en arrière : avis multipliés par 4 à 7, position dans le pack local Google améliorée, chiffre d'affaires en hausse de 15 à 25 %.</p>
+<p>Si vous gérez un commerce physique, le choix entre plaque NFC et QR code se joue sur peu de choses : <strong>la plaque NFC demande deux gestes au lieu de cinq</strong>, elle ne se décolore pas et ne se déchire pas, et elle s'achète une fois pour toutes.</p>
+<p>Ce que la plaque ne fait pas mérite d'être dit aussi : elle ne rend pas satisfait un client qui ne l'était pas, elle ne remplace pas la demande orale de votre équipe, et elle ne collecte rien si personne ne la voit. C'est un support, pas une stratégie.</p>
 <p>En 2026, le NFC n'est plus une option futuriste : c'est <strong>le standard pour la collecte d'avis Google</strong> en commerce physique. Le QR code reste utile en complément digital, mais ne suffit plus en point de vente.</p>
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à booster vos avis Google ?</strong></p>
@@ -3986,7 +3950,7 @@ export const articles: Record<string, {
     date: '15 janvier 2026',
     readTime: '7 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Découvrez 10 méthodes testées pour obtenir plus d\'avis Google rapidement. Guide pratique avec scripts, exemples et résultats concrets.',
+    excerpt: 'Dix méthodes concrètes pour collecter plus d\'avis Google : NFC, timing, scripts, relances. Guide pratique avec formulations prêtes à l\'emploi.',
     tocSections: [
       { id: 'pourquoi-avis', label: 'Pourquoi les avis comptent' },
       { id: 'methode-nfc', label: 'Méthode 1 : Le NFC' },
@@ -4000,7 +3964,6 @@ export const articles: Record<string, {
       { id: 'methode-routine', label: 'Méthode 9 : Routine' },
       { id: 'methode-sms', label: 'Méthode 10 : SMS' },
       { id: 'erreurs', label: 'Les 7 erreurs à éviter' },
-      { id: 'cas-pratique', label: 'Cas pratique' },
       { id: 'faq-avis', label: 'FAQ' },
     ],
     content: `
@@ -4029,7 +3992,7 @@ export const articles: Record<string, {
 <li>Il note et commente en 30 secondes</li>
 </ol>
 <div class="bg-green-50 rounded-xl p-4 border border-green-200 not-prose">
-<p class="text-sm text-green-900"><strong>📊 Résultat :</strong> Nos utilisateurs passent de 2-3 avis/mois à <strong>15-25 avis/mois</strong>.</p>
+<p class="text-sm text-green-900"><strong>📊 Ce que ça change concrètement :</strong> le client n'a rien à chercher, rien à taper, rien à installer. Il ne quitte pas le comptoir, il ne cherche pas votre nom dans Google Maps, il ne se trompe pas d'établissement. Le seul frein qui reste, c'est son envie de le faire — et aucun objet ne remplace ça.</p>
 </div>
 <blockquote><p>💡 <strong>Astuce pro :</strong> Placez la plaque là où le client est le plus satisfait (après le dessert, en sortant du salon, à la remise du produit).</p></blockquote>
 </section>
@@ -4054,7 +4017,7 @@ export const articles: Record<string, {
 <section id="methode-script" class="scroll-mt-28 mb-16">
 <h2>Méthode 3 : Utilisez le script parfait</h2>
 <p>Ne dites JAMAIS "Pouvez-vous nous laisser un avis ?". Trop générique.</p>
-<h3>Script qui convertit à 40% :</h3>
+<h3>Un script qui donne au client une raison de dire oui :</h3>
 <blockquote><p>"Je suis ravi que votre [plat/coupe/achat] vous ait plu ! Si vous avez 30 secondes, un petit avis Google nous aiderait énormément. Vous pouvez simplement approcher votre téléphone ici, c'est instantané !"</p></blockquote>
 <p><strong>Pourquoi ça marche :</strong></p>
 <ul>
@@ -4157,30 +4120,6 @@ export const articles: Record<string, {
 <li><strong>❌ Répondre agressivement</strong> — Restez professionnel, les prospects vous jugent.</li>
 <li><strong>❌ Utiliser de faux profils</strong> — Google croise les données.</li>
 </ol>
-</section>
-
-<section id="cas-pratique" class="scroll-mt-28 mb-16">
-<h2>Cas pratique : De 12 à 89 avis en 3 mois</h2>
-<div class="bg-green-50 rounded-2xl p-6 border border-green-200 not-prose">
-<h3 class="font-bold text-gray-900 mb-3">📍 Restaurant "La Table Française" — Lyon</h3>
-<div class="grid sm:grid-cols-2 gap-4 mb-4">
-<div>
-<p class="text-sm text-gray-600 mb-1">Situation initiale :</p>
-<ul class="text-sm text-gray-700 space-y-1">
-<li>• 12 avis, note 4,1 ⭐</li>
-<li>• Position pack local : 8ème</li>
-</ul>
-</div>
-<div>
-<p class="text-sm text-gray-600 mb-1">Après 3 mois :</p>
-<ul class="text-sm text-gray-700 space-y-1">
-<li>• <strong class="text-green-700">89 avis (+640%)</strong>, note 4,7 ⭐</li>
-<li>• Position pack local : <strong class="text-green-700">2ème</strong></li>
-<li>• <strong class="text-green-700">+45% de réservations</strong></li>
-</ul>
-</div>
-</div>
-</div>
 </section>
 
 <section id="faq-avis" class="scroll-mt-28 mb-16">
@@ -4716,7 +4655,7 @@ export const articles: Record<string, {
       { id: 'scripts', label: 'Scripts & process équipe' },
       { id: 'suivi', label: 'Suivi, UTM & KPI' },
       { id: 'erreurs', label: 'Erreurs à éviter (règles Google)' },
-      { id: 'cas-usage', label: 'Cas pratique & ROI' },
+      { id: 'cas-usage', label: 'Exemple de calcul' },
       { id: 'faq', label: 'FAQ' },
     ],
     content: `
@@ -4903,12 +4842,13 @@ export const articles: Record<string, {
 </section>
 
 <section id="cas-usage" class="scroll-mt-28 mb-16">
-<h2>Cas pratique & ROI : à quoi s’attendre</h2>
-<h3>Cas #1 : salon de coiffure</h3>
-<p>Avant : 3–4 avis/mois. Après mise en place du NFC + script : <strong>25–30 avis/mois</strong>. Effet : hausse de visibilité locale + augmentation des prises de rendez-vous.</p>
-<h3>Cas #2 : restaurant</h3>
-<p>Avant : note 4,2 (18 avis). Après : <strong>4,7 (89 avis)</strong>. Effet : plus de réservations, surtout sur les requêtes “près de moi”.</p>
-<h3>Calcul ROI simple</h3>
+<h2>Exemple de calcul : ce qu’un flux client donne sur le papier</h2>
+<p>Les deux exemples qui suivent sont des <strong>projections, pas des résultats clients mesurés</strong>. Ce sont des hypothèses posées à voix haute : remplacez-les par vos propres chiffres, le calcul ne change pas.</p>
+<h3>Exemple #1 : salon de coiffure</h3>
+<p>Prenons un salon qui reçoit 60 clientes par semaine. Si une cliente sur vingt acceptait de laisser un avis quand on le lui propose, cela ferait 3 avis par semaine, soit une douzaine par mois. Si c’était une sur dix, on monterait à 6 par semaine. Ces deux hypothèses sont discutables, et c’est justement l’intérêt : vous connaissez votre clientèle mieux que nous.</p>
+<h3>Exemple #2 : restaurant</h3>
+<p>Un restaurant à 4,2 de moyenne sur 18 avis. Supposons 40 avis supplémentaires sur six mois, avec une moyenne de 4,8 sur ces nouveaux avis : la note globale remonterait autour de 4,6. C’est de l’arithmétique, pas une promesse — le calcul suppose que les nouveaux avis ressemblent aux clients qui repartent contents, ce qui reste à vérifier chez vous.</p>
+<h3>Ce que le volume d’avis change</h3>
 <ul>
 <li>1 nouvel avis peut convaincre plusieurs prospects hésitants</li>
 <li>Plus d’avis = plus de confiance = plus de conversions</li>
@@ -5228,7 +5168,7 @@ export const articles: Record<string, {
     date: '25 octobre 2025',
     readTime: '5 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Acheter des faux avis, harceler vos clients, ignorer les avis négatifs... Ces erreurs critiques peuvent vous faire bannir de Google et détruire votre e-réputation. Guide complet avec exemples réels.',
+    excerpt: 'Acheter des faux avis, harceler vos clients, ignorer les avis négatifs... Ces erreurs critiques peuvent vous faire bannir de Google et détruire votre e-réputation. Guide complet 2026.',
     tocSections: [
       { id: 'intro-impact', label: 'Pourquoi c\'est critique' },
       { id: 'faux-avis', label: 'Acheter de faux avis' },
@@ -5242,7 +5182,7 @@ export const articles: Record<string, {
     content: `
 <section id="intro-impact" class="scroll-mt-28 mb-16">
 <h2>Pourquoi ces erreurs sont critiques</h2>
-<p>La gestion des avis Google peut sembler simple, mais une seule erreur peut ruiner des mois d'efforts. Voici les conséquences réelles que j'ai observées :</p>
+<p>La gestion des avis Google peut sembler simple, mais une seule erreur peut ruiner des mois d'efforts. Les sanctions ne préviennent pas : elles tombent d'un coup, et il n'existe aucun recours rapide pour revenir en arrière. Voici ce que vous risquez concrètement :</p>
 <p>Suspension de votre fiche Google My Business (perte totale de visibilité), suppression de tous vos avis même les vrais, avis négatifs de frustration par des clients harcelés, perte de confiance massive des prospects.</p>
 <p>Les études BrightLocal 2025 montrent qu'une mauvaise gestion des avis fait perdre jusqu'à 40% de clients potentiels. Ce guide vous révèle les 10 erreurs les plus courantes et comment les éviter.</p>
 </section>
@@ -5250,10 +5190,10 @@ export const articles: Record<string, {
 <section id="faux-avis" class="scroll-mt-28 mb-16">
 <h2>Acheter de faux avis</h2>
 <p>C'est la pire erreur possible. L'algorithme de Google en 2026 détecte les faux avis via l'analyse des adresses IP, les patterns de rédaction grâce à l'IA, les profils Google récents sans historique, le timing suspect et la géolocalisation incohérente.</p>
-<p>Exemple concret d'un restaurant parisien qui a acheté 25 faux avis pour 80€ : Google les a supprimés en 3 jours, puis a supprimé TOUS les avis y compris les 12 vrais, et a suspendu la fiche pendant 30 jours. Impact final : -67% de réservations pendant 2 mois.</p>
+<p>Le scénario est toujours le même, et c'est ce qui le rend redoutable : les faux avis sautent d'abord, puis le nettoyage s'élargit aux avis légitimes collectés dans la même période, parce que Google ne sait plus les distinguer des autres. Vous perdez donc les avis achetés <em>et</em> ceux que vos vrais clients avaient pris le temps d'écrire. Si la fiche est suspendue, elle disparaît de Google Maps le temps de la sanction — et pendant ce temps, ce sont vos concurrents qui occupent la place que vous aviez mis des années à prendre.</p>
 <h3>Les conséquences légales</h3>
 <p>Acheter des faux avis est illégal en France depuis 2023. Les sanctions peuvent aller jusqu'à 300 000€ d'amende pour l'entreprise et 2 ans de prison pour le dirigeant. L'obligation de publier le jugement détruit ensuite complètement votre réputation.</p>
-<p><strong>Alternative :</strong> Facilitez simplement le processus avec une plaque NFC qui permet aux clients de laisser un avis authentique en 10 secondes. Le taux de conversion passe de 2% à 35-45%.</p>
+<p><strong>Alternative :</strong> facilitez le processus au lieu de le contourner. Une plaque NFC posée au comptoir permet au client de laisser un avis authentique en une dizaine de secondes, sans chercher votre fiche ni scanner quoi que ce soit. Un avis vrai, obtenu sans contrepartie, ne vous expose à rien : ni à la suppression par Google, ni à la DGCCRF. C'est la seule voie qui tienne dans la durée.</p>
 </section>
 
 <section id="harceler" class="scroll-mt-28 mb-16">
@@ -5274,7 +5214,7 @@ export const articles: Record<string, {
 
 <section id="pas-repondre" class="scroll-mt-28 mb-16">
 <h2>Ne pas répondre aux avis</h2>
-<p>88% des consommateurs lisent vos réponses avant de choisir votre entreprise selon BrightLocal 2025. Ne pas répondre fait baisser votre taux de conversion de 35%, diminue votre note perçue de 22%, et multiplie par 3 le risque de recevoir d'autres avis négatifs.</p>
+<p>88% des consommateurs lisent vos réponses avant de choisir votre entreprise selon BrightLocal 2025. Une fiche où aucun avis n'a jamais reçu de réponse envoie un message très simple au prospect : personne ne regarde. C'est aussi ce que comprend le client mécontent — s'il voit que les critiques restent sans réponse, il n'a aucune raison de vous appeler avant d'écrire la sienne.</p>
 <p>Les délais recommandés : moins de 2 heures pour un avis négatif (c'est urgent), moins de 12 heures pour un avis moyen, et moins de 24 heures pour un avis positif. Configurez les alertes Google My Business sur votre téléphone pour être notifié immédiatement.</p>
 <h3>Comment répondre</h3>
 <p>Pour un avis positif : remerciez sincèrement en citant un élément spécifique mentionné par le client. Pour un avis moyen : remerciez pour le retour constructif et expliquez comment vous allez améliorer le point soulevé. Pour un avis négatif : excusez-vous sincèrement et proposez de discuter en privé pour trouver une solution.</p>
@@ -5294,7 +5234,7 @@ export const articles: Record<string, {
 
 <section id="bonne-pratique" class="scroll-mt-28 mb-16">
 <h2>Comment bien demander un avis</h2>
-<p>Le script qui fonctionne (testé avec 40%+ de conversion) : "[Prénom], je suis vraiment content que votre [plat/coupe/séance] vous ait plu ! Si vous avez 30 secondes, un petit avis Google nous aiderait énormément à faire découvrir [nom entreprise] à d'autres personnes comme vous. Vous pouvez simplement approcher votre téléphone ici, c'est instantané !"</p>
+<p>Un script qui tient la route : "[Prénom], je suis vraiment content que votre [plat/coupe/séance] vous ait plu ! Si vous avez 30 secondes, un petit avis Google nous aiderait énormément à faire découvrir [nom entreprise] à d'autres personnes comme vous. Vous pouvez simplement approcher votre téléphone ici, c'est instantané !"</p>
 <h3>Pourquoi ça marche</h3>
 <p>Personnalisation en utilisant le prénom et en citant ce qu'il a aimé, raison altruiste d'aider les autres à découvrir, minimisation de l'effort avec "30 secondes" et "instantané", gratitude sincère, action claire et outil visible.</p>
 <h3>Sur place vs email</h3>

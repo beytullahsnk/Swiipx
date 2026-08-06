@@ -40,7 +40,7 @@ export default function Home() {
       {
         '@type': 'Question',
         name: 'Puis-je modifier le lien de redirection plus tard ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Oui, vous pouvez modifier le lien de redirection à tout moment depuis votre espace client.' },
+        acceptedAnswer: { '@type': 'Answer', text: 'Oui. Écrivez-nous à bonjour@swiipx.fr en indiquant le nouveau lien, nous reprogrammons la plaque avec vous. Il n\'y a pas d\'espace client à gérer.' },
       },
       {
         '@type': 'Question',

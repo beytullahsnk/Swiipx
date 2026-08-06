@@ -84,8 +84,8 @@ const productFAQs: Record<string, Array<{ question: string; answer: string }>> =
     { question: 'Puis-je configurer chaque plaque avec un lien différent ?', answer: 'Oui, chaque plaque NFC du pack Business peut être configurée avec un lien différent. Vous pouvez rediriger vers votre fiche Google Business, un formulaire de satisfaction, ou tout autre lien de votre choix.' },
   ],
   pro: [
-    { question: 'Que comprend le tableau de bord analytics du Pack Pro Swiipx ?', answer: 'Le tableau de bord vous permet de suivre le nombre de scans par plaque, les heures de pointe et les performances de chaque emplacement. Idéal pour optimiser votre stratégie de collecte d\'avis Google sur plusieurs sites.' },
-    { question: 'Comment fonctionnent les liens personnalisables par plaque NFC ?', answer: 'Chaque plaque NFC du Pack Pro peut pointer vers une URL différente. Vous pouvez rediriger vers votre page Google Business, un formulaire de satisfaction client, ou tout autre lien. La configuration est incluse et notre support vous accompagne.' },
+    { question: 'Peut-on donner un lien différent à chaque plaque du Pack Pro ?', answer: 'Oui. Chaque plaque est programmée individuellement avant expédition : vous pouvez faire pointer chacune vers un établissement différent, ou vers la même fiche si vous équipez plusieurs emplacements du même commerce. Indiquez-nous simplement la répartition souhaitée à la commande.' },
+        { question: 'Comment fonctionnent les liens personnalisables par plaque NFC ?', answer: 'Chaque plaque NFC du Pack Pro peut pointer vers une URL différente. Vous pouvez rediriger vers votre page Google Business, un formulaire de satisfaction client, ou tout autre lien. La configuration est incluse et notre support vous accompagne.' },
     { question: 'La garantie à vie du Pack Pro couvre quoi exactement ?', answer: 'Le Pack Pro bénéficie d\'une garantie à vie contre tout défaut de fabrication des plaques NFC en acrylique. En cas de défaillance technique non imputable à une mauvaise utilisation, nous remplaçons la plaque gratuitement.' },
   ],
 }

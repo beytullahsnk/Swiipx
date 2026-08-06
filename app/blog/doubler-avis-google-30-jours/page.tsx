@@ -18,7 +18,7 @@ const tocSections = [
   { id: 'phase-2', label: 'Phase 2 : Outil NFC' },
   { id: 'phase-3', label: 'Phase 3 : Scripts' },
   { id: 'phase-4', label: 'Phase 4 : Répondre' },
-  { id: 'cas-pratique', label: 'Cas pratique' },
+  { id: 'cas-pratique', label: 'Exemple de calcul' },
   { id: 'faq', label: 'FAQ' },
 ]
 
@@ -86,7 +86,7 @@ export default function DoublerAvisGoogle30Jours() {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
-            Méthode complète en 4 phases pour passer de 10 à 100+ avis Google. Cas pratique (+740&nbsp;%), scripts prêts à copier, templates de réponses et outils NFC indispensables.
+            Méthode complète en 4 phases : optimiser votre fiche Google Business, supprimer la friction avec une plaque NFC, demander l&apos;avis au bon moment et répondre à chacun. Avec un exemple de calcul à refaire avec vos propres chiffres.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
@@ -165,7 +165,7 @@ export default function DoublerAvisGoogle30Jours() {
               </h2>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Les <strong>avis Google</strong> sont devenus le premier critère de choix des consommateurs. Selon BrightLocal 2025, <strong>87&nbsp;% des Français consultent les avis en ligne</strong> avant de visiter un commerce local. Pourtant, la grande majorité des entreprises ne récoltent qu&apos;une poignée d&apos;avis chaque mois. Ce décalage entre l&apos;importance des avis et le nombre réellement collecté est le problème numéro 1 des commerces de proximité en France.
+                Les <strong>avis Google</strong> sont devenus un critère de choix majeur. L&apos;enquête <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer nofollow" className="text-primary font-medium hover:underline">BrightLocal « Local Consumer Review Survey » 2026</a>, menée auprès de 1 002 consommateurs américains, indique que <strong>97&nbsp;% d&apos;entre eux lisent des avis avant de choisir un commerce local</strong>. Il n&apos;existe pas d&apos;enquête française équivalente aussi largement citée : nous préférons donner la source réelle plutôt qu&apos;un chiffre « français » invérifiable. Pourtant, la plupart des commerces ne récoltent qu&apos;une poignée d&apos;avis chaque mois, et c&apos;est ce décalage qui est le vrai problème.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -174,7 +174,7 @@ export default function DoublerAvisGoogle30Jours() {
 
               <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-3">Pourquoi si peu d&apos;avis spontanés ?</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                La raison est simple : la <strong>friction</strong>. Pour laisser un avis Google, un client satisfait doit ouvrir son navigateur, chercher votre établissement, trouver votre fiche Google, cliquer sur &ldquo;Donner un avis&rdquo;, se connecter à son compte Google, rédiger un texte et enfin publier. Ce parcours prend en moyenne <strong>5 à 7 minutes</strong>. Résultat : seulement 2&nbsp;% de vos clients satisfaits franchissent toutes ces étapes.
+                La raison est simple : la <strong>friction</strong>. Pour laisser un avis Google de sa propre initiative, un client satisfait doit sortir son téléphone, ouvrir son navigateur, chercher votre établissement, distinguer votre fiche de celle d&apos;un homonyme, cliquer sur &ldquo;Donner un avis&rdquo;, vérifier qu&apos;il est connecté au bon compte Google, choisir une note, rédiger un texte et publier. <strong>Neuf étapes dont aucune n&apos;est difficile</strong> — mais neuf occasions d&apos;abandonner, dans un moment où le client a déjà autre chose en tête.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -193,18 +193,18 @@ export default function DoublerAvisGoogle30Jours() {
                 </li>
                 <li className="flex items-start space-x-2 text-gray-700">
                   <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <span><strong>Perte de clients</strong> : 70&nbsp;% des consommateurs choisissent le commerce le mieux noté ET le plus commenté dans les résultats de recherche.</span>
+                  <span><strong>Perte de clients</strong> : à quelques rues de distance et à prestation comparable, le prospect qui hésite tranche sur ce qu&apos;il voit à l&apos;écran. Une fiche à 8 avis et une fiche à 120 n&apos;offrent pas la même matière pour se décider.</span>
                 </li>
               </ul>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Concrètement, si vous servez 100 clients satisfaits par mois et que vous ne récoltez que 2-3 avis, votre concurrent qui en obtient 25 capte la majorité de vos futurs prospects. Pour comprendre en profondeur ce mécanisme, consultez notre guide complet sur <Link href="/blog/avis-clients-influencent-business" className="text-primary font-medium hover:underline">pourquoi les avis clients influencent votre business</Link>.
+                Concrètement, si vous servez 100 clients satisfaits par mois et que vous n&apos;en récoltez que deux ou trois, l&apos;écart avec un concurrent qui en obtient 25 se creuse de plus de 250 avis en un an. Ce n&apos;est pas un écart de qualité de service, c&apos;est un écart de méthode — et il finit par se voir sur la fiche. Pour comprendre en profondeur ce mécanisme, consultez notre guide complet sur <Link href="/blog/avis-clients-influencent-business" className="text-primary font-medium hover:underline">pourquoi les avis clients influencent votre business</Link>.
               </p>
 
               <div className="bg-blue-50 border-l-4 border-primary p-4 my-6 rounded-r-xl">
                 <p className="text-sm text-gray-700">
                   <strong className="text-primary">La bonne nouvelle</strong><br/>
-                  Avec la bonne stratégie et les bons outils, vous pouvez <strong>doubler vos avis Google en 30 jours</strong>. C&apos;est exactement ce que nous allons détailler dans les 4 phases suivantes.
+                  Cette friction se supprime, et elle se supprime vite. Les 4 phases qui suivent tiennent en 30 jours de mise en place : optimiser la fiche, poser la plaque, roder la demande orale, installer la routine de réponse. <strong>Le nombre d&apos;avis obtenu au bout dépend ensuite de votre fréquentation et de la constance de votre équipe</strong> : personne, nous compris, ne peut vous le garantir à l&apos;avance.
                 </p>
               </div>
             </section>
@@ -219,7 +219,7 @@ export default function DoublerAvisGoogle30Jours() {
               <p className="text-sm text-gray-500 mb-6 font-medium">Jour 1 à 3 — Fondation indispensable</p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Avant de collecter plus d&apos;avis, il faut s&apos;assurer que votre <strong>fiche Google Business Profile</strong> (anciennement Google My Business) est optimisée à 100&nbsp;%. Une fiche incomplète fait fuir les clients et réduit votre visibilité dans les recherches locales. Selon Moz Local 2025, les fiches entièrement complétées reçoivent <strong>2,7x plus d&apos;avis</strong> que les fiches partielles.
+                Avant de collecter plus d&apos;avis, il faut s&apos;assurer que votre <strong>fiche Google Business Profile</strong> (anciennement Google My Business) est complète. Une fiche à moitié remplie coûte deux fois : elle donne moins d&apos;éléments à Google pour comprendre ce que vous faites, et moins de raisons au prospect de vous choisir. Horaires absents, catégorie approximative, aucune photo de la façade : chacun de ces manques est une porte de sortie offerte au visiteur, et aucun ne demande plus de dix minutes à combler.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -238,7 +238,7 @@ export default function DoublerAvisGoogle30Jours() {
                 </li>
                 <li className="flex items-start space-x-2 text-gray-700">
                   <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span><strong>15+ photos professionnelles</strong> : façade, intérieur, produits/services, équipe. Les fiches avec photos obtiennent 42&nbsp;% de demandes d&apos;itinéraire en plus.</span>
+                  <span><strong>15+ photos réelles</strong> : façade, intérieur, produits ou prestations, équipe. La photo de façade est la plus utile des quinze : c&apos;est elle qui évite au client arrivé sur place de passer devant sans vous reconnaître.</span>
                 </li>
                 <li className="flex items-start space-x-2 text-gray-700">
                   <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -272,7 +272,7 @@ export default function DoublerAvisGoogle30Jours() {
               <p className="text-sm text-gray-500 mb-6 font-medium">Jour 4 à 5 — Le levier le plus puissant</p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Le secret des commerces qui explosent leurs avis Google : <strong>rendre le processus instantané</strong>. Quand un client doit chercher votre fiche et naviguer dans Google, vous perdez 95&nbsp;% du potentiel. Avec une <strong>plaque NFC</strong>, le client approche simplement son smartphone et arrive directement sur votre page d&apos;avis Google. Le parcours passe de 7 étapes à 1 seul geste.
+                Tout se joue sur un point : <strong>rendre le geste instantané</strong>. Tant que le client doit chercher votre fiche lui-même, l&apos;écart entre son intention et son action reste entier. Avec une <strong>plaque NFC</strong>, il approche son smartphone et arrive directement sur votre page d&apos;avis Google. Le parcours passe des neuf étapes décrites plus haut à une seule, et il se déroule devant vous, pas plus tard chez lui.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -283,41 +283,44 @@ export default function DoublerAvisGoogle30Jours() {
                 C&apos;est la raison pour laquelle la technologie NFC (Near Field Communication) a changé la donne pour les commerces de proximité. Utilisée depuis des années dans le paiement sans contact, elle permet une communication instantanée entre deux appareils à courte portée. Appliquée à la collecte d&apos;avis, elle transforme un processus de 7 minutes en un geste de 10 secondes.
               </p>
 
-              <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-4">Comparatif des méthodes de collecte d&apos;avis</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-4">Ce que chaque méthode demande au client</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Nous ne publions pas de taux de conversion comparés : nous ne les mesurons pas. Ce qui est en revanche vérifiable, et qui explique l&apos;essentiel de l&apos;écart, c&apos;est le nombre de gestes demandés au client et le moment où on les lui demande.
+              </p>
               <div className="overflow-x-auto mb-6">
                 <table className="w-full border-collapse text-sm">
                   <thead>
                     <tr className="bg-gray-100">
                       <th className="p-3 text-left font-semibold text-gray-900 border border-gray-200">Méthode</th>
-                      <th className="p-3 text-left font-semibold text-gray-900 border border-gray-200">Temps client</th>
-                      <th className="p-3 text-left font-semibold text-gray-900 border border-gray-200">Taux de conversion</th>
+                      <th className="p-3 text-left font-semibold text-gray-900 border border-gray-200">Ce que le client doit faire</th>
+                      <th className="p-3 text-left font-semibold text-gray-900 border border-gray-200">Quand</th>
                       <th className="p-3 text-left font-semibold text-gray-900 border border-gray-200">Coût</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td className="p-3 border border-gray-200 text-gray-700">Email de relance</td>
-                      <td className="p-3 border border-gray-200 text-gray-700">5-7 min</td>
-                      <td className="p-3 border border-gray-200 text-gray-700">3-5&nbsp;%</td>
+                      <td className="p-3 border border-gray-200 text-gray-700">Ouvrir sa boîte mail, retrouver le message, cliquer, se connecter</td>
+                      <td className="p-3 border border-gray-200 text-gray-700">Plusieurs heures ou jours après</td>
                       <td className="p-3 border border-gray-200 text-gray-700">Gratuit (mais chronophage)</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="p-3 border border-gray-200 text-gray-700">QR code imprimé</td>
-                      <td className="p-3 border border-gray-200 text-gray-700">30-60 s</td>
-                      <td className="p-3 border border-gray-200 text-gray-700">8-12&nbsp;%</td>
+                      <td className="p-3 border border-gray-200 text-gray-700">Déverrouiller, ouvrir l&apos;appareil photo, viser, confirmer le lien</td>
+                      <td className="p-3 border border-gray-200 text-gray-700">Sur place, s&apos;il pense à le faire</td>
                       <td className="p-3 border border-gray-200 text-gray-700">~5 €</td>
                     </tr>
                     <tr className="bg-green-50">
                       <td className="p-3 border border-gray-200 font-semibold text-green-800">Plaque NFC Swiipx</td>
-                      <td className="p-3 border border-gray-200 font-semibold text-green-800">10 s</td>
-                      <td className="p-3 border border-gray-200 font-semibold text-green-800">35-45&nbsp;%</td>
+                      <td className="p-3 border border-gray-200 font-semibold text-green-800">Approcher le téléphone de la plaque</td>
+                      <td className="p-3 border border-gray-200 font-semibold text-green-800">Sur place, au moment où vous la lui montrez</td>
                       <td className="p-3 border border-gray-200 font-semibold text-green-800">À partir de 35,88 €</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-3">Pourquoi le NFC convertit 4x mieux que le QR code</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-3">Ce que le NFC supprime, concrètement, par rapport au QR code</h3>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start space-x-2 text-gray-700">
                   <Zap className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -329,16 +332,16 @@ export default function DoublerAvisGoogle30Jours() {
                 </li>
                 <li className="flex items-start space-x-2 text-gray-700">
                   <Zap className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Compatibilité universelle</strong> : tous les iPhone depuis le 7 (2016) et 95&nbsp;% des Android supportent le NFC nativement.</span>
+                  <span><strong>Compatibilité</strong> : tous les iPhone depuis le 7 (2016) et la quasi-totalité des Android récents lisent le NFC sans réglage ni application à installer. Un QR code imprimé au dos couvre les rares exceptions.</span>
                 </li>
               </ul>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                En résumé, le NFC supprime l&apos;obstacle principal qui empêche vos clients de laisser un avis : l&apos;effort. Pas d&apos;application à télécharger, pas de QR code à scanner avec l&apos;appareil photo, pas de recherche Google à effectuer. Le client pose son téléphone sur la plaque, la page d&apos;avis s&apos;ouvre automatiquement, et il n&apos;a plus qu&apos;à écrire et publier. Le taux de conversion moyen de 35 à 45&nbsp;% parle de lui-même : c&apos;est 4 à 5 fois plus que n&apos;importe quelle autre méthode.
+                En résumé, le NFC supprime l&apos;obstacle principal qui empêche vos clients de laisser un avis : l&apos;effort. Pas d&apos;application à télécharger, pas de QR code à scanner avec l&apos;appareil photo, pas de recherche Google à effectuer. Le client pose son téléphone sur la plaque, la page d&apos;avis s&apos;ouvre, et il n&apos;a plus qu&apos;à écrire et publier. Le geste dure une dizaine de secondes et se fait pendant qu&apos;il est encore chez vous, au moment où il est content : c&apos;est là toute la différence.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Pour tout savoir sur le fonctionnement technique, les placements optimaux par métier et les retours d&apos;expérience de nos clients, consultez notre article dédié : <Link href="/blog/nfc-avis-clients" className="text-primary font-medium hover:underline">NFC : la nouvelle arme pour vos avis clients</Link>.
+                Pour tout savoir sur le fonctionnement technique de la puce et les placements adaptés à chaque métier, consultez notre article dédié : <Link href="/blog/nfc-avis-clients" className="text-primary font-medium hover:underline">NFC : la nouvelle arme pour vos avis clients</Link>.
               </p>
 
               <div className="bg-green-50 border-l-4 border-green-600 p-4 my-6 rounded-r-xl">
@@ -367,7 +370,7 @@ export default function DoublerAvisGoogle30Jours() {
               <p className="text-sm text-gray-500 mb-6 font-medium">Jour 6 à 10 — Formez votre équipe</p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Même avec la meilleure plaque NFC du marché, si personne dans votre équipe ne demande d&apos;avis, vous perdez 80&nbsp;% du potentiel. La <strong>demande orale</strong> est le déclencheur : la plaque NFC n&apos;est que le facilitateur. Voici 4 scripts testés sur le terrain avec leurs taux de conversion mesurés.
+                Même avec la meilleure plaque du marché, une plaque que personne ne mentionne reste un objet décoratif. La <strong>demande orale</strong> est le déclencheur ; la plaque n&apos;est que le facilitateur. Voici 4 formulations, à choisir selon le moment et selon la personne qui parle.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -375,11 +378,11 @@ export default function DoublerAvisGoogle30Jours() {
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                L&apos;objectif n&apos;est pas de forcer la main, mais de rendre la démarche naturelle. Votre client vient de vous complimenter sur votre travail ? C&apos;est le signal. Il suffit alors de transformer ce compliment en action concrète. Les scripts ci-dessous ont été testés dans plus de 200 commerces en France et affinés pour maximiser le taux de conversion sans jamais mettre le client mal à l&apos;aise.
+                L&apos;objectif n&apos;est pas de forcer la main, mais de rendre la démarche naturelle. Votre client vient de vous complimenter sur votre travail ? C&apos;est le signal. Il suffit alors de transformer ce compliment en action concrète. Les quatre formulations ci-dessous reposent toutes sur le même principe : nommer le bénéfice pour vous, annoncer d&apos;emblée que cela prend dix secondes, et montrer la plaque du doigt plutôt que de laisser le client la chercher.
               </p>
 
               <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-2">
-                Script #1 : Le Classique — 40&nbsp;% de conversion
+                Script #1 : Le Classique — juste après un compliment
               </h3>
               <blockquote className="border-l-4 border-primary bg-gray-50 rounded-r-xl pl-4 pr-4 py-3 mb-2 text-gray-700 italic">
                 &ldquo;Je suis ravi que votre [service/plat] vous ait plu ! Si vous avez 30 secondes, un petit avis Google nous aiderait énormément. Vous pouvez simplement approcher votre téléphone ici, c&apos;est instantané !&rdquo;
@@ -387,7 +390,7 @@ export default function DoublerAvisGoogle30Jours() {
               <p className="text-sm text-gray-600 mb-6">Idéal juste après une expérience positive confirmée par le client.</p>
 
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Script #2 : L&apos;Altruiste — 45&nbsp;% de conversion
+                Script #2 : L&apos;Altruiste — quand on mise sur l&apos;entraide
               </h3>
               <blockquote className="border-l-4 border-primary bg-gray-50 rounded-r-xl pl-4 pr-4 py-3 mb-2 text-gray-700 italic">
                 &ldquo;Merci pour votre visite ! Votre retour aide d&apos;autres clients à nous découvrir ET nous aide à nous améliorer. Un petit tap ici suffit !&rdquo;
@@ -395,7 +398,7 @@ export default function DoublerAvisGoogle30Jours() {
               <p className="text-sm text-gray-600 mb-6">Fait appel à l&apos;entraide. Très efficace avec les clients réguliers et fidèles.</p>
 
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Script #3 : Le Challenger — 38&nbsp;% de conversion
+                Script #3 : Le Challenger — quand l&apos;équipe est nombreuse
               </h3>
               <blockquote className="border-l-4 border-primary bg-gray-50 rounded-r-xl pl-4 pr-4 py-3 mb-2 text-gray-700 italic">
                 &ldquo;On a un petit challenge en équipe ce mois-ci : atteindre 50 avis Google. Vous nous aidez ? Ça prend 10 secondes avec votre téléphone ici !&rdquo;
@@ -403,12 +406,12 @@ export default function DoublerAvisGoogle30Jours() {
               <p className="text-sm text-gray-600 mb-6">Crée de l&apos;engagement et de la complicité. Fonctionne très bien en restauration.</p>
 
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Script #4 : Le Personnalisé — 50&nbsp;% de conversion
+                Script #4 : Le Personnalisé — quand vous connaissez le client
               </h3>
               <blockquote className="border-l-4 border-primary bg-gray-50 rounded-r-xl pl-4 pr-4 py-3 mb-2 text-gray-700 italic">
                 &ldquo;[Prénom], ça me fait plaisir que vous ayez aimé [détail spécifique]. Si vous pouviez le mentionner dans un petit avis Google, ça nous aiderait beaucoup. Tenez, un petit tap ici et c&apos;est fait !&rdquo;
               </blockquote>
-              <p className="text-sm text-gray-600 mb-6">Le plus performant : la personnalisation crée un lien émotionnel. Le client se sent valorisé et rédige un avis plus détaillé.</p>
+              <p className="text-sm text-gray-600 mb-6">Le plus exigeant, parce qu&apos;il demande de se souvenir d&apos;un détail. En contrepartie, le client reprend souvent ce détail dans son avis, ce qui donne un texte plus riche qu&apos;un « très bien, merci ».</p>
 
               <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-3">Comment former votre équipe en 30 minutes</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -461,7 +464,7 @@ export default function DoublerAvisGoogle30Jours() {
               <p className="text-sm text-gray-500 mb-6 font-medium">Jour 11 à 30 — La routine qui transforme tout</p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Collecter des avis ne suffit pas : <strong>répondre à chaque avis</strong> est tout aussi important. Google confirme que les entreprises qui répondent à leurs avis sont perçues comme 1,7x plus fiables. De plus, les réponses contenant des mots-clés locaux améliorent votre <strong>SEO local</strong> et votre positionnement dans le pack local.
+                Collecter des avis ne suffit pas : <strong>répondre à chaque avis</strong> compte tout autant. Dans l&apos;enquête <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer nofollow" className="text-primary font-medium hover:underline">BrightLocal 2026</a> déjà citée, <strong>89&nbsp;% des répondants attendent qu&apos;une entreprise réponde à ses avis</strong> et 80&nbsp;% se disent enclins à choisir une entreprise qui répond à tous les siens. Vos réponses sont par ailleurs du texte public et indexable, dans lequel vous pouvez nommer naturellement votre ville et votre prestation.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -541,24 +544,24 @@ export default function DoublerAvisGoogle30Jours() {
                 ──────────────────────────────────── */}
             <section id="cas-pratique" className="mb-16 scroll-mt-28">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                6. Cas pratique : de 8 à 67 avis Google en 30 jours
+                6. Exemple de calcul : ce que donnerait un salon de 200 clients par mois
               </h2>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                La théorie, c&apos;est bien. Mais rien ne vaut un exemple concret pour comprendre comment la méthode fonctionne dans la réalité. Voici l&apos;histoire d&apos;un salon de coiffure bordelais qui a appliqué les 4 phases à la lettre, et les résultats obtenus semaine après semaine.
+                Ce qui suit n&apos;est pas un cas client. C&apos;est un <strong>exemple de calcul</strong>, construit sur des hypothèses que nous posons ouvertement et que vous pouvez contester ligne par ligne. Aucun de ces chiffres n&apos;est un relevé : ce sont des projections. L&apos;intérêt est ailleurs — la méthode de calcul, elle, est refaisable avec vos propres chiffres en cinq minutes, et c&apos;est le seul résultat qui vous concerne.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Ce salon était dans une situation classique : un service de qualité reconnu par ses clients fidèles, mais une quasi-invisibilité sur Google. Avec seulement 8 avis, il n&apos;apparaissait jamais dans le pack local lorsque les prospects cherchaient &ldquo;coiffeur Bordeaux&rdquo; ou &ldquo;salon de coiffure Bordeaux centre&rdquo;. Les nouveaux clients venaient exclusivement par le bouche-à-oreille physique, ce qui limitait fortement la croissance.
+                Prenons un salon de coiffure fictif, dans une situation courante : un travail apprécié de ses habitués, mais une fiche Google presque vide. Avec 8 avis, il n&apos;a aucune chance d&apos;apparaître dans le pack local face à des concurrents qui en affichent une centaine, et les nouveaux clients arrivent uniquement par le bouche-à-oreille physique. Poser les hypothèses de départ, c&apos;est déjà voir où se trouve le levier — et à quelle vitesse il peut jouer.
               </p>
 
               <div className="bg-gray-50 rounded-2xl p-6 mb-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Le contexte</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Les hypothèses de départ</h3>
                 <ul className="space-y-1 text-gray-700">
-                  <li><strong>Commerce</strong> : Salon de coiffure à Bordeaux</li>
-                  <li><strong>Équipe</strong> : 3 coiffeurs + 1 réceptionniste</li>
-                  <li><strong>Fréquentation</strong> : ~200 clients/mois</li>
-                  <li><strong>Situation initiale</strong> : 8 avis Google, note 4.2/5</li>
+                  <li><strong>Type de commerce</strong> : salon de coiffure, 3 coiffeurs et une personne à l&apos;accueil</li>
+                  <li><strong>Fréquentation supposée</strong> : 200 clients par mois, soit environ 50 par semaine</li>
+                  <li><strong>Point de départ supposé</strong> : 8 avis Google</li>
+                  <li><strong>Hypothèse de collecte</strong> : 1 client sur 10 accepte de laisser un avis quand on le lui demande et qu&apos;il n&apos;a qu&apos;un geste à faire — soit 5 avis par semaine. Si vous trouvez ce taux optimiste, divisez-le par deux et refaites la suite</li>
                 </ul>
               </div>
 
@@ -578,7 +581,7 @@ export default function DoublerAvisGoogle30Jours() {
                     <span className="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full">S2</span>
                   </div>
                   <div>
-                    <p className="text-gray-700"><strong>Semaine 2</strong> : Réception et installation des plaques NFC (miroir + comptoir). Formation de l&apos;équipe aux scripts. <strong>Résultat</strong> : +12 avis en 7 jours.</p>
+                    <p className="text-gray-700"><strong>Semaine 2</strong> : réception et installation des plaques (miroir de coiffage + comptoir), puis 30 minutes avec l&apos;équipe pour caler la formulation. La plaque n&apos;est opérationnelle qu&apos;en milieu de semaine. <strong>Projection</strong> : environ 4 avis.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -586,7 +589,7 @@ export default function DoublerAvisGoogle30Jours() {
                     <span className="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full">S3</span>
                   </div>
                   <div>
-                    <p className="text-gray-700"><strong>Semaine 3</strong> : L&apos;équipe est rodée, les scripts deviennent naturels. Réponse systématique à chaque avis. <strong>Résultat</strong> : +19 avis en 7 jours.</p>
+                    <p className="text-gray-700"><strong>Semaine 3</strong> : la phrase devient un réflexe de fin de prestation et la réponse aux avis passe dans la routine du matin. <strong>Projection</strong> : environ 5 avis, soit 1 client sur 10 sur les 50 de la semaine.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -594,41 +597,41 @@ export default function DoublerAvisGoogle30Jours() {
                     <span className="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full">S4</span>
                   </div>
                   <div>
-                    <p className="text-gray-700"><strong>Semaine 4</strong> : Le bouche-à-oreille digital s&apos;enclenche. Le salon apparaît dans le top 3 du pack local. <strong>Résultat</strong> : +28 avis en 7 jours.</p>
+                    <p className="text-gray-700"><strong>Semaine 4</strong> : rythme de croisière, même hypothèse. <strong>Projection</strong> : environ 5 avis. En revanche, rien ne permet de projeter une place dans le pack local au bout de 30 jours : cela dépend du nombre d&apos;avis des trois concurrents déjà classés, qu&apos;il faut aller relever soi-même.</p>
                   </div>
                 </div>
               </div>
 
               <p className="text-gray-700 leading-relaxed mt-6 mb-4">
-                L&apos;accélération entre la semaine 2 et la semaine 4 est typique. Les premières semaines servent à mettre en place le système et à roder l&apos;équipe. Ensuite, un cercle vertueux s&apos;enclenche : plus vous avez d&apos;avis, plus Google vous met en avant, plus de nouveaux clients vous trouvent, et plus vous pouvez collecter d&apos;avis. C&apos;est l&apos;effet boule de neige du <strong>SEO local</strong>.
+                Refaites ce calcul avec vos chiffres, c&apos;est le seul qui vous concerne. Remplacez les 50 clients par semaine par votre fréquentation réelle, et le « 1 sur 10 » par le taux qui vous paraît crédible pour votre clientèle. Vous obtenez un rythme mensuel, donc une date approximative à laquelle vous atteindrez le nombre d&apos;avis de vos concurrents. C&apos;est une projection, pas une promesse — mais elle vous appartient, et vous pourrez la corriger chaque mois avec le nombre réellement observé sur votre fiche.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Ce qui a surpris la gérante, c&apos;est la qualité des avis obtenus. Grâce au script personnalisé (script #4), les clients ne se contentaient pas de mettre 5 étoiles : ils rédigeaient des avis détaillés mentionnant le nom du coiffeur, le type de prestation et leur satisfaction. Ces avis riches en mots-clés ont considérablement amélioré le référencement du salon sur des requêtes comme &ldquo;balayage Bordeaux&rdquo; ou &ldquo;coupe homme Bordeaux centre&rdquo;.
+                Un point mérite attention au passage, même s&apos;il ne se chiffre pas : la formulation de la demande influence ce qui est écrit. Quand on cite un détail précis de la prestation, le client le reprend souvent dans son avis. Un avis qui mentionne « balayage » ou « coupe homme » et le prénom du coiffeur donne à Google du texte exploitable sur votre fiche, là où un « Très bien, merci » n&apos;en donne aucun. Cela ne se pilote pas, mais cela s&apos;encourage — et c&apos;est gratuit.
               </p>
 
-              <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-3">Résultats après 30 jours</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mt-8 mb-3">Ce que donne la projection au bout de 30 jours</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                <div className="bg-green-50 rounded-xl p-4 text-center border border-green-200">
-                  <TrendingUp className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                  <p className="text-2xl font-black text-gray-900">8 → 67</p>
-                  <p className="text-sm text-gray-600">avis Google (+740&nbsp;%)</p>
+                <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+                  <Award className="w-8 h-8 text-gray-500 mx-auto mb-2" />
+                  <p className="text-2xl font-black text-gray-900">50 / sem.</p>
+                  <p className="text-sm text-gray-600">clients — hypothèse de fréquentation</p>
                 </div>
-                <div className="bg-blue-50 rounded-xl p-4 text-center border border-blue-200">
-                  <Award className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="text-2xl font-black text-gray-900">4.2 → 4.8</p>
-                  <p className="text-sm text-gray-600">note moyenne</p>
+                <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+                  <Rocket className="w-8 h-8 text-gray-500 mx-auto mb-2" />
+                  <p className="text-2xl font-black text-gray-900">1 sur 10</p>
+                  <p className="text-sm text-gray-600">hypothèse de collecte</p>
                 </div>
-                <div className="bg-amber-50 rounded-xl p-4 text-center border border-amber-200">
-                  <Rocket className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                  <p className="text-2xl font-black text-gray-900">+58&nbsp;%</p>
-                  <p className="text-sm text-gray-600">réservations/mois</p>
+                <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+                  <TrendingUp className="w-8 h-8 text-gray-500 mx-auto mb-2" />
+                  <p className="text-2xl font-black text-gray-900">8 → ~22</p>
+                  <p className="text-sm text-gray-600">avis projetés (3 semaines de collecte)</p>
                 </div>
               </div>
 
-              <div className="bg-gray-900 rounded-xl p-5 text-center">
-                <p className="text-white font-bold text-lg">Impact financier : <span className="text-accent">+12 400&nbsp;€/mois</span></p>
-                <p className="text-gray-400 text-sm mt-1">pour un investissement de 65,88&nbsp;€ (pack 2 plaques NFC, aucun abonnement)</p>
+              <div className="bg-gray-100 rounded-xl p-5 border border-gray-200">
+                <p className="text-gray-900 font-semibold">Ces trois chiffres sont des hypothèses et leur conséquence arithmétique, pas un résultat client.</p>
+                <p className="text-gray-600 text-sm mt-2">Nous ne mesurons pas le nombre d&apos;avis collectés par les commerces que nous équipons : la plaque ne contient aucun traqueur et nous n&apos;avons pas accès à leur fiche Google. Le seul chiffre certain de cet exemple est le coût : 65,88&nbsp;€ pour le pack 2 plaques, une fois, sans abonnement.</p>
               </div>
             </section>
 
@@ -647,7 +650,7 @@ export default function DoublerAvisGoogle30Jours() {
               <div className="space-y-6">
                 <div className="border-b border-gray-100 pb-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Est-ce que cette méthode fonctionne pour tous les secteurs ?</h3>
-                  <p className="text-gray-700 leading-relaxed">Oui. Restaurants, salons de coiffure, cabinets médicaux, boutiques, garages, hôtels, instituts de beauté… La méthode fonctionne pour tout commerce ayant des clients physiques. Le NFC convertit en moyenne à 35-45&nbsp;% quel que soit le secteur, car le mécanisme psychologique est le même : réduire la friction au maximum.</p>
+                  <p className="text-gray-700 leading-relaxed">Oui. Restaurants, salons de coiffure, cabinets médicaux, boutiques, garages, hôtels, instituts de beauté… La méthode fonctionne pour tout commerce qui reçoit ses clients sur place, parce que le mécanisme est le même partout : réduire la friction au moment où le client est satisfait. Le seul prérequis est qu&apos;il existe un instant identifiable — l&apos;encaissement, la remise des clés, la prise du prochain rendez-vous — où l&apos;on peut montrer la plaque sans interrompre le service.</p>
                 </div>
 
                 <div className="border-b border-gray-100 pb-6">
@@ -657,12 +660,12 @@ export default function DoublerAvisGoogle30Jours() {
 
                 <div className="border-b border-gray-100 pb-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Que faire si je reçois un avis négatif ?</h3>
-                  <p className="text-gray-700 leading-relaxed">Un avis négatif bien géré devient une opportunité de montrer votre professionnalisme. Répondez sous 24 heures de façon empathique et constructive. 89&nbsp;% des prospects lisent vos réponses aux avis négatifs avant de faire leur choix. Une réponse soignée rassure davantage qu&apos;une fiche avec uniquement des 5 étoiles.</p>
+                  <p className="text-gray-700 leading-relaxed">Répondez sous 24 à 48 heures, de façon factuelle et sans polémique. Votre réponse est publique et permanente : c&apos;est le seul endroit de votre fiche où vous pouvez montrer comment vous traitez un problème, ce qu&apos;aucun avis positif ne démontre. Dans l&apos;enquête BrightLocal 2026 (1 002 consommateurs américains), 89&nbsp;% des répondants déclarent attendre qu&apos;une entreprise réponde à ses avis.</p>
                 </div>
 
                 <div className="border-b border-gray-100 pb-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Ça marche sans plaque NFC ?</h3>
-                  <p className="text-gray-700 leading-relaxed">Oui, mais avec un taux de conversion 4 à 5 fois inférieur. Le QR code convertit à environ 10&nbsp;%, l&apos;email à 3-5&nbsp;%. La plaque NFC atteint 35-45&nbsp;% car elle supprime toute friction. Si votre budget est limité, commencez par le QR code et passez au NFC dès que possible.</p>
+                  <p className="text-gray-700 leading-relaxed">Oui, mais chaque étape ajoutée entre l&apos;envie et l&apos;avis publié fait perdre des clients. Le QR code demande de déverrouiller le téléphone, d&apos;ouvrir l&apos;appareil photo, de viser puis de confirmer l&apos;ouverture d&apos;un lien ; l&apos;e-mail de relance arrive quand le client est déjà passé à autre chose. Si votre budget est limité, commencez par un QR code imprimé : c&apos;est mieux que rien, et vous verrez par vous-même où ça bloque.</p>
                 </div>
 
                 <div className="border-b border-gray-100 pb-6">
@@ -672,7 +675,7 @@ export default function DoublerAvisGoogle30Jours() {
 
                 <div className="border-b border-gray-100 pb-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Combien de temps pour voir les premiers résultats ?</h3>
-                  <p className="text-gray-700 leading-relaxed">Les premiers avis supplémentaires arrivent dès la première semaine d&apos;utilisation. En moyenne, nos clients constatent un doublement de leurs avis en 3 à 4 semaines en appliquant la méthode complète (fiche optimisée + NFC + scripts + réponses).</p>
+                  <p className="text-gray-700 leading-relaxed">La plaque fonctionne dès sa réception, puisqu&apos;elle arrive déjà programmée avec le lien de votre fiche. Le rythme, en revanche, dépend de votre fréquentation et de la régularité de la demande, et nous ne le mesurons pas : faites le calcul de la section précédente avec vos deux chiffres à vous (clients par semaine, proportion que vous jugez crédible). Vous obtiendrez une projection honnête, que la réalité corrigera dans un sens ou dans l&apos;autre au bout d&apos;un mois.</p>
                 </div>
 
                 <div className="border-b border-gray-100 pb-6">
@@ -682,7 +685,7 @@ export default function DoublerAvisGoogle30Jours() {
 
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Est-ce que le NFC fonctionne avec tous les smartphones ?</h3>
-                  <p className="text-gray-700 leading-relaxed">Oui. Tous les iPhone depuis le modèle 7 (2016) et la quasi-totalité des smartphones Android supportent le NFC nativement. Cela couvre plus de 95&nbsp;% des appareils en circulation en France. Pour les rares téléphones sans NFC, un QR code de secours est imprimé au dos de chaque plaque Swiipx.</p>
+                  <p className="text-gray-700 leading-relaxed">Oui. Tous les iPhone depuis le modèle 7 (2016) lisent les puces NFC sans réglage ni application, et la quasi-totalité des smartphones Android vendus depuis le milieu des années 2010 également. Pour les rares téléphones qui ne le font pas, un QR code de secours est imprimé au dos de chaque plaque Swiipx.</p>
                 </div>
               </div>
             </section>
