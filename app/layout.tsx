@@ -113,10 +113,12 @@ export default function RootLayout({
                 'Technologie NFC NTAG215',
                 'QR Code avis clients',
               ],
-              sameAs: [
-                'https://www.instagram.com/swiipx.fr',
-                'https://www.facebook.com/swiipx',
-              ],
+              // Pas de sameAs : les deux profils declares n'existaient pas.
+              // instagram.com/swiipx.fr renvoie la meme page generique qu'un
+              // pseudo inexistant (verifie avec un temoin negatif). sameAs sert
+              // a rattacher l'entite a des sources tierces verifiables ; pointer
+              // vers du vide ne consolide rien. A remettre le jour ou les
+              // comptes existent vraiment.
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '9 Rue Marcel Sembat',
@@ -201,10 +203,12 @@ export default function RootLayout({
               // Pas d'aggregateRating : Google interdit les notes auto-declarees
               // sans avis reels verifiables. A reintroduire quand de vrais avis
               // clients seront collectes et affiches sur le site.
-              sameAs: [
-                'https://www.instagram.com/swiipx.fr',
-                'https://www.facebook.com/swiipx',
-              ],
+              // Pas de sameAs : les deux profils declares n'existaient pas.
+              // instagram.com/swiipx.fr renvoie la meme page generique qu'un
+              // pseudo inexistant (verifie avec un temoin negatif). sameAs sert
+              // a rattacher l'entite a des sources tierces verifiables ; pointer
+              // vers du vide ne consolide rien. A remettre le jour ou les
+              // comptes existent vraiment.
             }),
           }}
         />

@@ -53,7 +53,7 @@ export default function Navbar() {
                 {!logoError ? (
                   <Image
                     src="/logo.png"
-                    alt="Swiipx Logo"
+                    alt="Swiipx"
                     width={48}
                     height={48}
                     className="w-full h-full object-contain"

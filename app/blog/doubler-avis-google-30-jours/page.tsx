@@ -36,12 +36,12 @@ export default function DoublerAvisGoogle30Jours() {
       <section className="bg-accent pt-32 pb-10 relative overflow-hidden">
         <div className="absolute left-6 top-32 hidden lg:block">
           <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-            <Image src="/product-thumb-2.jpg" alt="Plaque NFC Swiipx pour collecter des avis Google" width={192} height={192} className="w-full h-full object-cover" />
+            <Image src="/product-thumb-2.jpg" alt="Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours" width={192} height={192} className="w-full h-full object-cover" />
           </div>
         </div>
         <div className="absolute right-6 top-32 hidden lg:block">
           <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-            <Image src="/product-thumb-1.jpg" alt="Plaque NFC Swiipx vue de face" width={192} height={192} className="w-full h-full object-cover" />
+            <Image src="/product-thumb-1.jpg" alt="Un client approche son iPhone de la plaque Swiipx posée sur le comptoir, à côté du terminal de paiement : la notification NFC s'affiche à l'écran" width={192} height={192} className="w-full h-full object-cover" />
           </div>
         </div>
 
@@ -125,7 +125,7 @@ export default function DoublerAvisGoogle30Jours() {
                   <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-4">
                     <Image
                       src="/product-main.jpg"
-                      alt="Plaque NFC Swiipx pour avis Google"
+                      alt="Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours"
                       fill
                       className="object-cover"
                     />

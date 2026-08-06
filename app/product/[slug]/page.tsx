@@ -54,11 +54,11 @@ const products = {
       { label: 'Résistance', value: 'Eau, UV, rayures' },
     ],
     images: [
-      { src: '/products/plaque1.jpg', alt: 'Pack Starter — 1 Plaque NFC Swiipx' },
+      { src: '/products/plaque1.jpg', alt: 'Pack Starter : une plaque NFC Swiipx' },
       { src: '/product-main.jpg', alt: 'Plaque avis Google NFC Swiipx' },
-      { src: '/product-thumb-1.jpg', alt: 'Plaque NFC — vue principale' },
-      { src: '/product-thumb-2.jpg', alt: 'Plaque NFC — vue de côté' },
-      { src: '/product-thumb-3.jpg', alt: 'Plaque NFC — en utilisation' },
+      { src: '/product-thumb-1.jpg', alt: 'Un client approche son iPhone de la plaque Swiipx posée sur le comptoir, à côté du terminal de paiement : la notification NFC s\'affiche à l\'écran' },
+      { src: '/product-thumb-2.jpg', alt: 'Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours' },
+      { src: '/product-thumb-3.jpg', alt: 'Contenu du colis Swiipx : la plaque sur son socle en bois, le rouleau d\'adhésif 3M et le guide QR + NFC' },
     ],
   },
   'business': {
@@ -86,11 +86,11 @@ const products = {
       { label: 'Résistance', value: 'Eau, UV, rayures' },
     ],
     images: [
-      { src: '/products/plaque2.jpg', alt: 'Pack Business — 2 Plaques NFC Swiipx' },
+      { src: '/products/plaque2.jpg', alt: 'Pack Business : deux plaques NFC Swiipx' },
       { src: '/product-main.jpg', alt: 'Plaque avis Google NFC Swiipx' },
-      { src: '/product-thumb-1.jpg', alt: 'Plaque NFC — vue principale' },
-      { src: '/product-thumb-2.jpg', alt: 'Plaque NFC — vue de côté' },
-      { src: '/product-thumb-4.jpg', alt: 'Pack complet plaques avis Google Swiipx' },
+      { src: '/product-thumb-1.jpg', alt: 'Un client approche son iPhone de la plaque Swiipx posée sur le comptoir, à côté du terminal de paiement : la notification NFC s\'affiche à l\'écran' },
+      { src: '/product-thumb-2.jpg', alt: 'Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours' },
+      { src: '/product-thumb-4.jpg', alt: 'Plaque Swiipx et téléphone affichant le formulaire d\'avis Google, avec les trois arguments du produit' },
     ],
   },
   'pro': {
@@ -118,11 +118,80 @@ const products = {
       { label: 'Résistance', value: 'Eau, UV, rayures' },
     ],
     images: [
-      { src: '/products/plaque5.jpg', alt: 'Pack Pro — 5 Plaques NFC Swiipx' },
+      { src: '/products/plaque5.jpg', alt: 'Pack Pro : cinq plaques NFC Swiipx' },
       { src: '/product-main.jpg', alt: 'Plaque avis Google NFC Swiipx' },
-      { src: '/product-thumb-1.jpg', alt: 'Plaque NFC — vue principale' },
-      { src: '/product-thumb-3.jpg', alt: 'Plaque NFC — en utilisation' },
-      { src: '/product-thumb-4.jpg', alt: 'Pack complet plaques avis Google Swiipx' },
+      { src: '/product-thumb-1.jpg', alt: 'Un client approche son iPhone de la plaque Swiipx posée sur le comptoir, à côté du terminal de paiement : la notification NFC s\'affiche à l\'écran' },
+      { src: '/product-thumb-3.jpg', alt: 'Contenu du colis Swiipx : la plaque sur son socle en bois, le rouleau d\'adhésif 3M et le guide QR + NFC' },
+      { src: '/product-thumb-4.jpg', alt: 'Plaque Swiipx et téléphone affichant le formulaire d\'avis Google, avec les trois arguments du produit' },
+    ],
+  },
+}
+
+/**
+ * Contenu propre a chaque pack.
+ *
+ * POURQUOI : mesure sur les pages construites, les trois fiches produit etaient
+ * identiques a 99 % pour 537 mots chacune. Google en retient alors une et ignore
+ * les autres, ou les traite comme du contenu mince duplique. Or ce sont les
+ * pages qui doivent capter les requetes d'achat.
+ *
+ * Ce qui differe reellement entre les packs, c'est l'usage : ou poser une seule
+ * plaque, comment repartir deux emplacements, comment gerer cinq points de
+ * contact ou cinq etablissements. Ce texte-la ne peut pas etre le meme.
+ */
+const guidePack: Record<string, { titre: string; intro: string; blocs: { titre: string; texte: string }[] }> = {
+  starter: {
+    titre: 'Une seule plaque : ou la poser',
+    intro: "Avec une seule plaque, l'emplacement fait tout. Le bon endroit est celui ou le client est a la fois satisfait, immobile et deja son telephone en main.",
+    blocs: [
+      {
+        titre: 'Le comptoir, a cote du terminal de paiement',
+        texte: "C'est le moment ou le client a deja sorti son telephone pour payer, ou il attend quelques secondes, et ou il vient de recevoir ce pour quoi il est venu. Les trois conditions sont reunies en meme temps, ce qui n'arrive nulle part ailleurs dans un commerce.",
+      },
+      {
+        titre: 'Ce qui marche moins bien',
+        texte: "La vitrine : le passant n'est pas client. L'entree : il arrive, il n'a rien a evaluer. Une table isolee dans une grande salle : personne ne la remarque. Si vous hesitez entre deux endroits, prenez celui ou quelqu'un de votre equipe passe souvent — c'est la qu'on pensera a l'evoquer.",
+      },
+      {
+        titre: 'Une phrase suffit',
+        texte: "La plaque seule fonctionne, mais une mention orale change tout : « Si vous avez deux secondes, posez votre telephone dessus. » Dite une fois, sans insister, au moment de rendre la monnaie ou le terminal.",
+      },
+    ],
+  },
+  business: {
+    titre: 'Deux plaques : la logique des deux emplacements',
+    intro: "L'erreur classique est de poser les deux plaques cote a cote. Deux plaques ne servent a quelque chose que si elles couvrent deux moments differents du parcours client.",
+    blocs: [
+      {
+        titre: 'Un point de passage obligé, un point d\'attente',
+        texte: "La premiere va la ou tout le monde passe : la caisse, le comptoir, le poste d'encaissement. La seconde va la ou l'on attend : la salle d'attente, le porte-addition, le bac a shampoing, le coin ou l'on patiente pendant qu'on prepare la commande. Le client qui n'a pas vu la premiere voit la seconde.",
+      },
+      {
+        titre: 'Deux etablissements plutot qu\'un',
+        texte: "Si vous avez deux points de vente, chaque plaque peut pointer vers une fiche Google differente. Indiquez-le a la commande : elles arrivent programmees chacune avec son lien. Vous n'avez rien a configurer, rien a distinguer a la reception — chaque plaque porte un numero de serie imprime.",
+      },
+      {
+        titre: 'Le cas des horaires decales',
+        texte: "Dans un commerce avec deux services ou deux equipes, la seconde plaque permet aussi de couvrir un espace ouvert sans personnel : une salle en libre-service, une terrasse, un rayon eloigne de la caisse. Le client n'a besoin de personne pour laisser son avis.",
+      },
+    ],
+  },
+  pro: {
+    titre: 'Cinq plaques : repartir sans disperser',
+    intro: "Cinq plaques couvrent soit plusieurs points de contact dans un meme etablissement, soit plusieurs etablissements. Les deux logiques ne se pilotent pas de la meme facon.",
+    blocs: [
+      {
+        titre: 'Plusieurs etablissements',
+        texte: "Chaque plaque peut pointer vers une fiche Google differente. Vous nous indiquez la repartition a la commande, elles arrivent programmees et numerotees. C'est le cas le plus frequent pour une petite chaine, un reseau de franchises ou un artisan qui tient deux ou trois points de vente.",
+      },
+      {
+        titre: 'Un seul etablissement, plusieurs points de contact',
+        texte: "Dans un grand espace, la caisse ne suffit pas : une plaque au comptoir, une en salle, une a l'accueil, une pres des sanitaires ou de la sortie, une en reserve pour remplacer. Chacune capte un moment different, et aucune n'a besoin d'etre presentee par quelqu'un.",
+      },
+      {
+        titre: 'Gardez-en une de cote',
+        texte: "Sur cinq plaques, en garder une non posee est souvent le meilleur choix : elle remplace celle qui sera abimee, decollee lors d'un nettoyage, ou emportee par erreur. Vous n'attendez pas une reexpedition pour retrouver un emplacement actif.",
+      },
     ],
   },
 }
@@ -544,6 +613,23 @@ export default function ProductDetailPage() {
             </div>
           </div>
         </div>
+
+        {/* Guide d'usage propre au pack : c'est ce qui distingue reellement les
+            trois fiches, identiques a 99 % avant cet ajout. */}
+        {guidePack[slug] && (
+          <section className="mt-20 max-w-3xl">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">{guidePack[slug].titre}</h2>
+            <p className="text-gray-600 leading-relaxed mb-8">{guidePack[slug].intro}</p>
+            <div className="space-y-6">
+              {guidePack[slug].blocs.map((bloc) => (
+                <div key={bloc.titre} className="border-l-2 border-primary/30 pl-5">
+                  <h3 className="font-semibold text-gray-900 mb-1.5">{bloc.titre}</h3>
+                  <p className="text-gray-600 leading-relaxed">{bloc.texte}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Avis clients réels. Ne rend rien tant qu'aucun avis n'a été
             collecté — c'est la même source que le balisage aggregateRating du

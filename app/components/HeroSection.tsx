@@ -78,7 +78,7 @@ export default function HeroSection() {
               <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 sm:p-10 aspect-square overflow-hidden">
                 <Image
                   src="/hero-product.jpg"
-                  alt="Plaque avis Google NFC Swiipx"
+                  alt="Plaque Swiipx et téléphone affichant le formulaire d'avis Google, prêt à être publié"
                   width={800}
                   height={800}
                   /* Sans sizes, Next sert la variante la plus large du srcset :

@@ -34,12 +34,12 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <section className="bg-accent pt-32 pb-10 relative overflow-hidden">
         <div className="absolute left-6 top-32 hidden xl:block">
           <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-            <Image src="/product-thumb-2.jpg" alt="Plaque NFC Swiipx" width={192} height={192} className="w-full h-full object-cover" />
+            <Image src="/product-thumb-2.jpg" alt="Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours" width={192} height={192} className="w-full h-full object-cover" />
           </div>
         </div>
         <div className="absolute right-6 top-32 hidden xl:block">
           <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-            <Image src="/product-thumb-1.jpg" alt="Plaque NFC Swiipx vue" width={192} height={192} className="w-full h-full object-cover" />
+            <Image src="/product-thumb-1.jpg" alt="Un client approche son iPhone de la plaque Swiipx posée sur le comptoir, à côté du terminal de paiement : la notification NFC s'affiche à l'écran" width={192} height={192} className="w-full h-full object-cover" />
           </div>
         </div>
         <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
@@ -123,7 +123,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                   <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-4">
                     <Image
                       src="/product-main.jpg"
-                      alt="Plaque NFC Swiipx posee sur un comptoir, avec son QR code de secours"
+                      alt="Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours"
                       fill
                       /* Colonne laterale de 240 px : sans sizes, `fill` fait
                          telecharger la variante 3840 px. */
