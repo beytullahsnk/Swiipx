@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { PACK_BY_SLUG, type PackSlug } from '../../../lib/pricing'
 import { offreJsonLd } from '../../../lib/product-schema'
 import { notationJsonLd, reviewsPourPack } from '../../data/reviews'
@@ -89,6 +90,16 @@ const productFAQs: Record<string, Array<{ question: string; answer: string }>> =
   ],
 }
 
+/**
+ * Tout slug hors de cette liste doit renvoyer 404.
+ *
+ * Sans cette ligne, /product/n-importe-quoi etait rendu a la demande avec un
+ * HTTP 200, un <h1>Produit non trouve</h1> ET un meta robots "index, follow"
+ * canonicalise vers l'accueil : un espace d'URL illimite, indexable, qui se
+ * rabattait sur la page d'accueil. /blog et /secteur renvoyaient bien 404.
+ */
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return Object.keys(productsMeta).map((slug) => ({ slug }))
 }
@@ -141,9 +152,9 @@ export default function ProductLayout({ params, children }: { params: { slug: st
   const slug = params.slug
   const product = productsMeta[slug]
 
-  if (!product) {
-    return <>{children}</>
-  }
+  // Filet apres dynamicParams : un slug absent de productsMeta ne doit jamais
+  // produire de page, meme vide.
+  if (!product) notFound()
 
   const specs = productSpecs[slug] || []
   const faqs = productFAQs[slug] || []

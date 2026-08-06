@@ -646,14 +646,21 @@ function CheckoutForm({
     return { name, line1: shippingLine1, line2: shippingLine2, city: shippingCity, postalCode: shippingPostalCode, country: shippingCountry }
   }, [shippingMethod, shippingSameAsBilling, name, billingLine1, billingLine2, billingCity, billingPostalCode, billingCountry, shippingLine1, shippingLine2, shippingCity, shippingPostalCode, shippingCountry])
 
+  /** Vrai quand l'API Google Places a renonce : ouvre la saisie manuelle. */
+  const [placesDown, setPlacesDown] = useState(false)
+  const [businessNameManuel, setBusinessNameManuel] = useState('')
+  const [businessLienManuel, setBusinessLienManuel] = useState('')
+
   const canSubmit = useMemo(() => {
     if (!email || !name || !phone || !paymentReady) return false
     if (!billingLine1 || !billingCity || !billingPostalCode) return false
-    if (!businessSelected) return false
+    // La saisie manuelle vaut selection : sans cela, une panne de Google Places
+    // rendait la commande impossible a finaliser.
+    if (!businessSelected && !(businessNameManuel.trim() && businessLienManuel.trim())) return false
     if (shippingMethod === 'point_relais' && !servicePoint) return false
     if (shippingMethod === 'domicile' && !shippingSameAsBilling && (!shippingLine1 || !shippingCity || !shippingPostalCode)) return false
     return true
-  }, [email, name, phone, paymentReady, billingLine1, billingCity, billingPostalCode, businessSelected, shippingMethod, servicePoint, shippingSameAsBilling, shippingLine1, shippingCity, shippingPostalCode])
+  }, [email, name, phone, paymentReady, billingLine1, billingCity, billingPostalCode, businessSelected, businessNameManuel, businessLienManuel, shippingMethod, servicePoint, shippingSameAsBilling, shippingLine1, shippingCity, shippingPostalCode])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -675,6 +682,10 @@ function CheckoutForm({
           customer: { email, name, phone },
           billingAddress: { name, line1: billingLine1, line2: billingLine2, city: billingCity, postalCode: billingPostalCode, country: billingCountry },
           shippingAddress: shippingMethod === 'domicile' ? effectiveShippingAddress : undefined,
+          // La saisie manuelle doit remonter comme le reste, sinon la commande
+          // arrive sans etablissement et la plaque n'est pas programmable.
+          // Le lien colle prend la place de l'adresse : c'est lui qui porte
+          // l'information utile, et l'email marchand l'affiche en clair.
           business: company
             ? {
                 name: company.name,
@@ -684,7 +695,13 @@ function CheckoutForm({
                 lat: company.lat,
                 lng: company.lng,
               }
-            : undefined,
+            : businessNameManuel.trim()
+              ? {
+                  name: businessNameManuel.trim(),
+                  address: `Fiche Google communiquee par le client : ${businessLienManuel.trim()}`,
+                  placeId: '',
+                }
+              : undefined,
         }),
       })
 
@@ -874,8 +891,56 @@ function CheckoutForm({
                 }
               }}
               placeholder="Tapez le nom de votre entreprise ici.."
+              onUnavailable={() => {
+                setPlacesDown(true)
+                track('checkout_error', { reason: 'places_unavailable' })
+              }}
             />
-            {!businessSelected && (
+
+            {/* Porte de sortie quand Google Places ne repond pas.
+                AVANT : canSubmit exigeait businessSelected, qui ne pouvait
+                devenir vrai que via l'autocomplete. Un bloqueur de publicite,
+                un quota depasse ou une panne rendait le paiement DEFINITIVEMENT
+                impossible, sans message ni remontee. La saisie manuelle donne
+                les memes informations : c'est le nom et le lien d'avis qui
+                servent a programmer la plaque, pas le place_id. */}
+            {placesDown && (
+              <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4">
+                <p className="text-sm font-medium text-amber-900 mb-1">
+                  La recherche Google ne répond pas
+                </p>
+                <p className="text-xs text-amber-800 mb-3">
+                  Saisissez votre établissement à la main, on s&apos;occupe du reste.
+                </p>
+                <label htmlFor="businessNameManuel" className="block text-sm text-gray-700 mb-1">
+                  Nom de votre établissement *
+                </label>
+                <input
+                  id="businessNameManuel"
+                  type="text"
+                  autoComplete="organization"
+                  value={businessNameManuel}
+                  onChange={(e) => setBusinessNameManuel(e.target.value)}
+                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-base mb-3 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <label htmlFor="businessLienManuel" className="block text-sm text-gray-700 mb-1">
+                  Lien de votre fiche Google *
+                </label>
+                <input
+                  id="businessLienManuel"
+                  type="url"
+                  inputMode="url"
+                  placeholder="Collez le lien depuis Google Maps"
+                  value={businessLienManuel}
+                  onChange={(e) => setBusinessLienManuel(e.target.value)}
+                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <p className="text-xs text-amber-800 mt-2">
+                  Sur Google Maps : ouvrez votre fiche, appuyez sur Partager, puis Copier le lien.
+                </p>
+              </div>
+            )}
+            {!businessSelected && !placesDown && (
               <p className="text-xs text-amber-600 mt-2 flex items-center space-x-1">
                 <svg className="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />

@@ -4,7 +4,7 @@
 
 ## Produits
 
-- [Pack Starter - 1 Plaque Avis Google NFC](https://swiipx.fr/product/starter): 1 plaque NFC avis Google en acrylique premium (120x120x3mm, NTAG215). Parfait pour debuter. 35,88 EUR, livraison gratuite, garantie a vie.
+- [Pack Starter - 1 Plaque Avis Google NFC](https://swiipx.fr/product/starter): 1 plaque NFC avis Google en acrylique premium (120x120x3mm, NTAG215). Parfait pour debuter. 35,88 EUR, livraison en point relais offerte (4,90 EUR a domicile), garantie a vie.
 - [Pack Business - 2 Plaques Avis Google NFC](https://swiipx.fr/product/business): 2 plaques NFC pour couvrir 2 emplacements strategiques (accueil + comptoir). 65,88 EUR. Le plus populaire.
 - [Pack Pro - 5 Plaques Avis Google NFC](https://swiipx.fr/product/pro): 5 plaques NFC, chacune programmee avec le lien d'avis souhaite. 107,88 EUR. Garantie a vie.
 
@@ -20,37 +20,36 @@
 - Acrylique 3 mm, puce NTAG215, QR code de secours imprime
 - Paiement unique, sans abonnement ni frais mensuels
 - Garantie a vie sur la puce NFC, 90 jours satisfait ou rembourse
-- Livraison offerte en France, 2-5 jours ouvres
-- Livraison gratuite en France metropolitaine sous 2-5 jours ouvres
+- Livraison en point relais offerte, 4,90 EUR a domicile, France metropolitaine 2-5 jours ouvres
 - Materiau : Acrylique premium, resistant eau/UV/rayures
 - Technologie : NFC NTAG215, compatible 95%+ des smartphones
 
 ## Solutions par secteur
 
-- [Plaque NFC restaurant](https://swiipx.fr/secteur/restaurant): solution pour restaurants, bistrots et brasseries. Taux d'avis 35-45%, jusqu'a +200 avis Google/an. Placement sur table et porte-addition.
-- [Plaque NFC salon de coiffure](https://swiipx.fr/secteur/salon-coiffure): secteur n°1 du NFC avec 40-55% de conversion (taux record). +150 avis/an. Placement sur poste de coiffage et caisse.
+- [Plaque NFC restaurant](https://swiipx.fr/secteur/restaurant): solution pour restaurants, bistrots et brasseries. Placement sur table et porte-addition, scripts a donner en salle.
+- [Plaque NFC salon de coiffure](https://swiipx.fr/secteur/salon-coiffure): placement sur poste de coiffage et en caisse, script a donner a l'encaissement.
 - [Combien coute un avis Google ? Le comparatif du cout reel par avis](https://swiipx.fr/blog/cout-avis-google-comparatif) (publie le 5 aout 2026): comparatif chiffre du cout par avis de 6 methodes de collecte (demande orale, carte de visite QR, plaque NFC sans abonnement, chevalet QR, plateforme SMS/e-mail, plaque NFC avec abonnement) sur 36 mois, formule de calcul, cout cache du temps salarie, calcul detaille d'une plaque NFC a 0,06 EUR par avis et valeur estimee d'un avis par secteur (4 a 120 EUR).
 - [Combien d'avis Google faut-il pour apparaitre dans le pack local ?](https://swiipx.fr/blog/combien-avis-google-pack-local) (publie le 3 aout 2026): methode de calcul du nombre d'avis Google necessaire pour entrer dans le top 3 du pack local (mediane des 3 concurrents classes +30 %), les 3 criteres de classement local (pertinence, distance, proeminence), benchmarks par secteur et par taille de ville, volume vs note vs fraicheur, velocite des avis, 3 cas chiffres et calcul du rythme mensuel a tenir.
-- [Plaque NFC salle de sport : collecter des avis Google sans interrompre les adherents](https://swiipx.fr/blog/plaque-nfc-salle-de-sport) (publie le 3 aout 2026): salles de sport, clubs de fitness, box de CrossFit et studios de pilates. Emplacements (bureau du coach : 40-55 % de conversion, accueil et borne de badgeage : 30-40 %, cours collectifs : 25-35 %), les 5 moments cles ou l'adherent accepte, scripts coach, collecte sans personnel dans les salles ouvertes 24h/24, 3 etudes de cas et ROI chiffre.
+- [Plaque NFC salle de sport : collecter des avis Google sans interrompre les adherents](https://swiipx.fr/blog/plaque-nfc-salle-de-sport) (publie le 3 aout 2026): salles de sport, clubs de fitness, box de CrossFit et studios de pilates. Emplacements (bureau du coach, accueil et borne de badgeage, cours collectifs), les 5 moments cles ou l'adherent accepte, scripts coach, collecte sans personnel dans les salles ouvertes 24h/24, exemples de calcul.
 - [Faux avis Google : comment les signaler et s'en proteger](https://swiipx.fr/blog/faux-avis-google-signaler) (publie le 31 juillet 2026): comment reperer, signaler a Google et se proteger des faux avis negatifs de concurrents et des faux avis positifs achetes. Procedure de signalement pas a pas, delais et taux de suppression, strategie de dilution par le volume de vrais avis collectes en NFC.
-- [Plaque NFC boulangerie : x5 avis Google a chaque passage en caisse](https://swiipx.fr/blog/plaque-nfc-boulangerie) (publie le 27 juillet 2026): boulangeries, patisseries et points chauds. Emplacements (comptoir de caisse : 40-50% de conversion), scripts vendeur adaptes au rush, 3 etudes de cas, ROI chiffre.
+- [Plaque NFC boulangerie : le placement qui tient malgre le rush](https://swiipx.fr/blog/plaque-nfc-boulangerie) (publie le 27 juillet 2026): boulangeries, patisseries et points chauds. Emplacements (comptoir de caisse, presentoir), scripts vendeur adaptes au rush, exemples de calcul.
 - [Optimiser sa fiche Google Business Profile : le guide complet 2026](https://swiipx.fr/blog/optimiser-fiche-google-business-profile) (publie le 24 juillet 2026): guide SEO local complet pour optimiser sa fiche Google Business Profile - remplir la fiche a 100%, choisir la bonne categorie, photos, avis Google, Google Posts, comprendre le pack local, 7 erreurs a eviter et plan d'action 30 jours.
-- [Plaque NFC institut de beaute : collecter des avis Google apres chaque soin](https://swiipx.fr/blog/plaque-nfc-institut-beaute) (publie le 22 juillet 2026): instituts de beaute, esthetique, onglerie et spa. Emplacements (comptoir de caisse : 35-45% de conversion, table de manucure : 25-35%), scripts estheticienne, 3 etudes de cas, ROI chiffre.
+- [Plaque NFC institut de beaute : collecter des avis Google apres chaque soin](https://swiipx.fr/blog/plaque-nfc-institut-beaute) (publie le 22 juillet 2026): instituts de beaute, esthetique, onglerie et spa. Emplacements (comptoir de caisse, table de manucure), scripts estheticienne, exemples de calcul.
 - [Comment choisir sa plaque NFC avis Google : le guide d'achat 2026](https://swiipx.fr/blog/comment-choisir-plaque-nfc-avis-google) (publie le 20 juillet 2026): les 7 criteres pour choisir la bonne plaque NFC - puce NTAG215, materiau acrylique, sans abonnement, QR de secours, nombre de plaques. Comparatif, pieges a eviter et grille de decision par profil.
 - [Statistiques avis Google 2026 : 45 chiffres cles](https://swiipx.fr/blog/statistiques-avis-google-2026) (publie le 17 juillet 2026): 45 statistiques sur les avis Google en 2026, comportement des consommateurs, impact SEO local et pack local, conversion, effet de la note, reponses aux avis, taux de collecte NFC vs QR code.
 - [Repondre aux avis negatifs Google : la methode complete](https://swiipx.fr/blog/repondre-avis-negatifs-google) (publie le 13 juillet 2026): methode en 5 etapes, 6 modeles de reponses prets a l'emploi, procedure de signalement/suppression, et strategie de dilution du negatif par le volume d'avis.
-- [Plaque NFC garage automobile : x4 avis Google](https://swiipx.fr/blog/plaque-nfc-garage-automobile) (publie le 13 juillet 2026): garages, centres auto et carrosseries. Emplacements (comptoir de facturation : 35-45% de conversion), scripts garagiste, 3 etudes de cas, ROI chiffre.
+- [Plaque NFC garage automobile : placement et script atelier](https://swiipx.fr/blog/plaque-nfc-garage-automobile) (publie le 13 juillet 2026): garages, centres auto et carrosseries. Emplacements (comptoir de facturation, salle d'attente), scripts garagiste, exemples de calcul.
 - [Plaque NFC cabinet medical](https://swiipx.fr/secteur/cabinet-medical): solution discrete et deontologique pour medecins, dentistes, kines et osteopathes. Collecte d'avis Google passive, sans contrepartie, conforme aux ordres professionnels.
 
 ## Guides et ressources
 
 - [Plaque NFC cabinet medical : avis Google et deontologie](https://swiipx.fr/blog/plaque-nfc-cabinet-medical) (publie le 8 juin 2026): comment collecter des avis Google en cabinet medical en respectant la deontologie. Placements, scripts conformes, recommandations par profession (dentiste, kine, medecin).
-- [Plaque NFC restaurant : collecter +200 avis Google](https://swiipx.fr/blog/plaque-nfc-restaurant) (publie le 11 mai 2026): guide complet pour les restaurants. Placements, scripts serveur, ROI, 3 etudes de cas.
+- [Plaque NFC restaurant : placement en salle et scripts de service](https://swiipx.fr/blog/plaque-nfc-restaurant) (publie le 11 mai 2026): guide complet pour les restaurants. Placements en salle, scripts serveur, exemples de calcul.
 - [Plaque avis Google sans abonnement : comparatif 2026](https://swiipx.fr/blog/plaque-avis-google-sans-abonnement) (publie le 11 mai 2026): comparatif de 5 marques sans abonnement. Economie de 500-1500 EUR sur 5 ans.
-- [Plaque NFC salon de coiffure : guide ROI 2026](https://swiipx.fr/blog/plaque-nfc-salon-coiffure) (publie le 11 mai 2026): +150 avis Google/an. Placements, scripts coiffeur, 3 etudes de cas reelles.
+- [Plaque NFC salon de coiffure : placement et script en caisse](https://swiipx.fr/blog/plaque-nfc-salon-coiffure) (publie le 11 mai 2026): placements, scripts coiffeur, exemples de calcul.
 - [Prix plaque NFC avis Google : combien ca coute vraiment](https://swiipx.fr/blog/prix-plaque-nfc-avis-google) (publie le 12 mai 2026): fourchettes de prix par qualite, packs multi-plaques, calcul du ROI. Le bon budget : 35-60 EUR par plaque.
 - [Ou placer votre plaque avis Google : 7 emplacements](https://swiipx.fr/blog/ou-placer-plaque-avis-google) (publie le 12 mai 2026): le placement determine 80% du taux de conversion. 7 emplacements optimaux par secteur.
-- [Plaque NFC vs QR Code pour les avis Google](https://swiipx.fr/blog/plaque-nfc-vs-qr-code-avis-google) (publie le 10 mai 2026): comparatif sur 8 criteres. Conversion 35-45% (NFC) vs 8-12% (QR), prix, ROI.
+- [Plaque NFC vs QR Code pour les avis Google](https://swiipx.fr/blog/plaque-nfc-vs-qr-code-avis-google) (publie le 10 mai 2026): comparatif sur 8 criteres : geste demande au client, compatibilite, resistance, prix.
 - [Comment doubler ses avis Google en 30 jours](https://swiipx.fr/blog/doubler-avis-google-30-jours) (publie le 19 janvier 2026): guide complet en 4 phases avec cas pratique (+740% d'avis).
 - [Comment obtenir plus d'avis Google](https://swiipx.fr/blog/obtenir-plus-avis-google) (publie le 15 janvier 2026): 10 methodes testees pour multiplier vos avis Google.
 - [Impact des avis clients sur le business](https://swiipx.fr/blog/avis-clients-influencent-business) (publie le 8 novembre 2025): statistiques et retours d'experience.
@@ -62,9 +61,8 @@
 
 - Faut-il un abonnement ? Non. Paiement unique, la plaque fonctionne pendant des annees sans frais recurrents.
 - La plaque fonctionne-t-elle sur iPhone ? Oui, sur tous les iPhone depuis l'iPhone 7 (2016) et la quasi-totalite des Android recents.
-- Quel taux d'avis esperer ? 35-45% en moyenne, jusqu'a 55% dans les salons de coiffure.
+- Quel taux d'avis esperer ? Le taux depend de l'emplacement de la plaque et du moment ou elle est presentee au client ; aucun taux n'est garanti.
 - Est-ce conforme pour un cabinet medical ? Oui : la plaque est un moyen passif et discret, sans contrepartie ni tri des patients, conforme a la deontologie.
-- En combien de temps est-elle rentabilisee ? En general en moins de 2-4 semaines pour un commerce moyen.
 
 ## Informations pratiques
 

@@ -17,18 +17,28 @@ export interface BusinessInfo {
 
 interface BusinessAutocompleteProps {
   onSelect: (business: BusinessInfo | null) => void
+  /**
+   * Appele quand l'API Google Places n'a pas repondu apres 15 s : bloqueur de
+   * publicite, quota depasse, panne. Sans ce signal l'echec ne partait que dans
+   * la console, et le client se retrouvait incapable de terminer sa commande.
+   */
+  onUnavailable?: () => void
   placeholder?: string
   className?: string
 }
 
 export default function BusinessAutocomplete({
   onSelect,
+  onUnavailable,
   placeholder = "Tapez le nom de votre entreprise ici..",
   className = ""
 }: BusinessAutocompleteProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const autocompleteRef = useRef<any>(null)
   const [isLoaded, setIsLoaded] = useState(false)
+  /** Passe a true au premier contact avec le champ : c'est ce qui declenche le
+   *  telechargement du SDK Google Places. */
+  const [placesDemande, setPlacesDemande] = useState(false)
   const [inputValue, setInputValue] = useState('')
   const [selectedPlace, setSelectedPlace] = useState<BusinessInfo | null>(null)
   const [resetTrigger, setResetTrigger] = useState(0) // Trigger pour forcer la réinitialisation
@@ -49,6 +59,9 @@ export default function BusinessAutocomplete({
       setIsLoaded(true)
       return
     }
+    // Tant que le script n'est pas demande, ne pas lancer le compte a rebours :
+    // il declencherait onUnavailable sur une page ou personne n'a rien saisi.
+    if (!placesDemande) return
 
     let essais = 0
     const MAX_ESSAIS = 150 // 150 × 100 ms = 15 s
@@ -59,11 +72,12 @@ export default function BusinessAutocomplete({
       } else if (++essais >= MAX_ESSAIS) {
         clearInterval(timer)
         console.error('[BusinessAutocomplete] API Google Places indisponible après 15 s')
+        onUnavailable?.()
       }
     }, 100)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [placesDemande, onUnavailable])
 
   // Initialize/Reinitialize Google Places Autocomplete
   useEffect(() => {
@@ -173,9 +187,12 @@ export default function BusinessAutocomplete({
 
   return (
     <div className={`relative ${className}`}>
-      {/* L'API Places n'est chargée que sur les pages qui embarquent ce
-          composant (accueil + checkout), plus sur tout le site. */}
-      <GooglePlacesScript />
+      {/* Chargé au premier contact avec le champ, pas au chargement de la page.
+          Mesure avant correction : 10 requêtes et 323 Ko vers maps.googleapis.com
+          sur chaque visite de l'accueil, terminées entre 1,8 et 2,1 s, pour un
+          SDK qui ne sert qu'à partir du moment où l'on saisit son enseigne.
+          next/script dédoublonne par src : le checkout n'est pas affecté. */}
+      {placesDemande && <GooglePlacesScript />}
 
       {/* Input container with Google logo */}
       <div className="relative">
@@ -194,8 +211,12 @@ export default function BusinessAutocomplete({
           autoComplete="off"
           value={inputValue}
           onChange={handleInputChange}
+          onFocus={() => setPlacesDemande(true)}
+          onPointerDown={() => setPlacesDemande(true)}
           placeholder={placeholder}
-          disabled={!isLoaded}
+          /* Plus de `disabled` : il fallait pouvoir toucher le champ pour
+             declencher le chargement. La saisie libre reste possible ; seules
+             les suggestions attendent le SDK. */
           className="w-full pl-12 pr-20 py-4 text-base border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
         />
 
@@ -207,7 +228,7 @@ export default function BusinessAutocomplete({
       </div>
 
       {/* Loading state */}
-      {!isLoaded && (
+      {placesDemande && !isLoaded && (
         <p className="mt-2 text-sm text-gray-500">
           Chargement de l&apos;autocomplete...
         </p>

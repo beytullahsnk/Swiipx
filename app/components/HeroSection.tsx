@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import ClientLogos from './ClientLogos'
@@ -15,12 +14,14 @@ export default function HeroSection() {
         {/* Layout asymétrique : texte 7/12, image 5/12 décalée */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Colonne texte (7/12) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-7 text-left"
-          >
+          {/* Anime en CSS, pas en JS. Ces deux colonnes sont les seuls candidats
+              LCP de la page : framer-motion les serialisait dans le HTML avec
+              style="opacity:0", donc rien n'etait peint avant le telechargement,
+              l'analyse et l'hydratation du bundle. Le LCP etait borne par le JS
+              plutot que par l'image, deja preloadee en priority. Avec
+              .animate-fadeIn (globals.css) l'etat de base reste opacity:1 :
+              l'element est peint des le premier paint meme si le JS echoue. */}
+          <div className="lg:col-span-7 text-left animate-fadeIn">
             {/* Eyebrow */}
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-5">
               Plaque NFC · Avis Google · Sans application
@@ -68,15 +69,10 @@ export default function HeroSection() {
               Garantie à vie <span className="text-gray-300 mx-1.5">·</span>
               Paiement unique sans abonnement
             </p>
-          </motion.div>
+          </div>
 
           {/* Colonne image (5/12) — décalée verticalement, déborde un peu */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:col-span-5 lg:translate-x-4 lg:-translate-y-4"
-          >
+          <div className="lg:col-span-5 lg:translate-x-4 lg:-translate-y-4 animate-fadeIn">
             <div className="relative">
               {/* Image produit */}
               <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 sm:p-10 aspect-square overflow-hidden">
@@ -102,7 +98,7 @@ export default function HeroSection() {
                 <p className="text-xs text-gray-400 mt-1">Pour un avis</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
