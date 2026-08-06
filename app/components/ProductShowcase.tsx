@@ -10,7 +10,8 @@ import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
 import ClientLogos from './ClientLogos'
 import { track } from '../../lib/analytics'
-import { PACKS, formatHt, unitPriceCents } from '../../lib/pricing'
+import Link from 'next/link'
+import { PACKS, formatHt, formatTtc, unitPriceCents } from '../../lib/pricing'
 
 // Packs : prix issus de lib/pricing.ts (source unique).
 //
@@ -28,12 +29,14 @@ const productPacks = [
   { pack: PACKS.plaque5, name: '5 Plaques', badge: '+ Guide & Cadeau Mystère 🎁', popular: false },
 ].map(({ pack, name, badge, popular }) => ({
   id: pack.id,
+  slug: pack.slug,
   quantity: pack.plaques,
   name,
   badge,
   popular,
   price: pack.priceCents / 100,
   prixHt: formatHt(pack.priceCents),
+  prixTtc: formatTtc(pack.priceCents),
   formerPriceHT: pack.formerPriceCents ? formatHt(pack.formerPriceCents) : null,
   unitPriceHT: pack.plaques > 1 ? formatHt(unitPriceCents(pack)) : null,
 }))
@@ -327,6 +330,17 @@ export default function ProductShowcase() {
                         {pack.badge && (
                           <p className="text-sm text-green-700 font-medium">{pack.badge}</p>
                         )}
+                        {/* Seul lien editorial de l'accueil vers les fiches
+                            produit : elles ne recevaient que des liens de pied
+                            de page, que Google devalue. Le clic est stoppe pour
+                            ne pas declencher la selection du pack. */}
+                        <Link
+                          href={`/product/${pack.slug}`}
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-xs text-primary hover:underline underline-offset-2"
+                        >
+                          Voir le détail du {pack.name === '1 Plaque' ? 'pack 1 plaque' : `pack ${pack.name.toLowerCase()}`}
+                        </Link>
                       </div>
                     </div>
 
@@ -338,8 +352,13 @@ export default function ProductShowcase() {
                         )}
                         <p className="text-2xl font-bold text-gray-900 whitespace-nowrap">{pack.prixHt}</p>
                       </div>
+                      {/* Le TTC est affiche ici : le balisage Product annonce
+                          35,88 EUR a Google, la page ne montrait que 29,90 EUR HT.
+                          Un ecart entre le prix balise et le prix visible fait
+                          desapprouver la fiche par Merchant Center. */}
+                      <p className="text-xs text-gray-500 mt-0.5">{pack.prixTtc}</p>
                       {pack.unitPriceHT && (
-                        <p className="text-xs text-gray-600 mt-0.5">soit {pack.unitPriceHT} la plaque</p>
+                        <p className="text-xs text-gray-600 mt-0.5">soit {pack.unitPriceHT} la plaque HT</p>
                       )}
                     </div>
                   </div>

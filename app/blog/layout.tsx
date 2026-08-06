@@ -33,31 +33,12 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode
 }) {
-  const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Accueil',
-        item: 'https://swiipx.fr',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Blog',
-        item: 'https://swiipx.fr/blog',
-      },
-    ],
-  }
-
+  // PAS de BreadcrumbList ici. Ce layout enveloppe /blog ET les 24 articles :
+  // il en posait un a 2 niveaux (Accueil > Blog) qui doublonnait exactement
+  // celui de /blog et contredisait celui a 3 niveaux des articles. Chaque page
+  // declare desormais le sien, une seule fois.
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
       {children}
     </>
   )

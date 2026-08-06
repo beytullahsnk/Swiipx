@@ -74,6 +74,12 @@ const DUREE_ISO = 'PT8S' // 8 s — mesuré sur les fichiers sources
  */
 const DATE_PUBLICATION = '2026-05-09T10:00:00+02:00'
 
+/** Passe une image de /public par l'optimiseur Next : AVIF/WebP selon le
+ *  navigateur, a la largeur reellement affichee. Les <video poster> ne
+ *  beneficient pas de next/image, il faut construire l'URL a la main. */
+const afficheOptimisee = (src: string) =>
+  `/_next/image?url=${encodeURIComponent(src)}&w=640&q=70`
+
 export default function VideoShowcase() {
   /* VideoObject : sans ce balisage, Google n'a aucun moyen de savoir que la page
      contient des vidéos. thumbnailUrl et uploadDate sont obligatoires, name et
@@ -118,41 +124,24 @@ export default function VideoShowcase() {
           </p>
         </div>
 
-        {/* Mobile : slider horizontal (2 vidéos visibles), Desktop : grille 3 colonnes */}
+        {/* UNE SEULE liste, deux mises en page.
+            AVANT : deux videos.map(), l'un en sm:hidden, l'autre en hidden sm:grid.
+            display:none masque a l'ecran mais ne retire rien du DOM : les six
+            elements <video> etaient ecrits, et le navigateur telechargeait les
+            metadonnees ET l'affiche des trois videos DEUX FOIS, sur mobile comme
+            sur desktop. Le conteneur porte desormais les deux dispositions. */}
         <div className="max-w-4xl mx-auto">
-          {/* Mobile slider — padding égal des 2 côtés (pas de bleed) */}
-          <div className="sm:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-2">
-            <div className="flex gap-3 pb-4 px-2">
-              {videos.map((video) => (
-                <div
-                  key={video.src}
-                  className="relative shrink-0 w-[calc(50%-0.375rem)] aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden shadow-lg snap-start"
-                >
-                  <video
-                    src={video.src}
-                    poster={video.poster}
-                    aria-label={video.name}
-                    controls
-                    playsInline
-                    muted
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop grid */}
-          <div className="hidden sm:grid sm:grid-cols-3 gap-6">
+          <div className="flex gap-3 pb-4 px-2 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible sm:snap-none sm:px-0 sm:pb-0">
             {videos.map((video) => (
               <div
                 key={video.src}
-                className="relative aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden shadow-lg"
+                className="relative shrink-0 w-[calc(50%-0.375rem)] snap-start sm:w-auto sm:shrink aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden shadow-lg"
               >
                 <video
                   src={video.src}
-                  poster={video.poster}
+                  /* Affiche servie par l'optimiseur Next plutot que le JPEG brut
+                     de /public : 332 Ko a trois, contre environ 97 en AVIF. */
+                  poster={afficheOptimisee(video.poster)}
                   aria-label={video.name}
                   controls
                   playsInline

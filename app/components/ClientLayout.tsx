@@ -17,12 +17,24 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const pathname = usePathname()
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [showNotch, setShowNotch] = useState(false)
+  /** Vrai a partir de 1024 px, seule largeur ou le chat est visible. Evalue
+   *  cote client uniquement : false au rendu serveur, donc rien n'est charge
+   *  avant de savoir. */
+  const [chatAffichable, setChatAffichable] = useState(false)
   const POPUP_STORAGE_KEY = 'swiipx-promo-popup-shown'
 
   // Désactive popups + chat sur les pages transactionnelles
   const hidePopups = POPUPLESS_PATHS.some((p) => pathname?.startsWith(p))
 
   // Afficher le popup après 2 minutes OU en exit-intent (desktop) — sauf en checkout/cart/success
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const maj = () => setChatAffichable(mq.matches)
+    maj()
+    mq.addEventListener('change', maj)
+    return () => mq.removeEventListener('change', maj)
+  }, [])
+
   useEffect(() => {
     if (typeof window === 'undefined') return
     if (hidePopups) return // skip toute la logique si on est en flow d'achat
@@ -111,7 +123,12 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             onClick={() => setIsPopupOpen(true)}
             isVisible={!isPopupOpen && showNotch}
           />
-          <WhatsAppButton />
+          {/* Le chat n'est monte que sur les ecrans qui l'affichent.
+              AVANT : le script Tawk partait partout, puis un second script le
+              MASQUAIT sous 1024 px — 20 requetes telechargees sur mobile pour un
+              widget que personne ne verra jamais, sur le terminal ou la bande
+              passante est la plus contrainte. Masquer n'est pas ne pas charger. */}
+          {chatAffichable && <WhatsAppButton />}
         </>
       )}
     </>

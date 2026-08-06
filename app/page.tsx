@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import HeroSection from './components/HeroSection'
 import HowItWorks from './components/HowItWorks'
 import VideoShowcase from './components/VideoShowcase'
@@ -11,6 +12,15 @@ import { PACK_LIST } from '../lib/pricing'
 import { NOM_PACK, offreGammeJsonLd, produitPackJsonLd } from '../lib/product-schema'
 
 export const dynamic = 'force-static'
+
+/**
+ * La canonique etait declaree dans le layout racine, donc HERITEE par toute page
+ * qui n'en declarait pas la sienne : ces pages se designaient elles-memes comme
+ * des doublons de l'accueil. Elle appartient a la page d'accueil, elle est ici.
+ */
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://swiipx.fr' },
+}
 
 export default function Home() {
   const faqJsonLd = {

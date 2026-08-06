@@ -211,18 +211,10 @@ export default function ProductLayout({ params, children }: { params: { slug: st
     ],
   }
 
-  const faqJsonLd = faqs.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  } : null
+  // PAS de FAQPage ici. Ces questions n'etaient affichees NULLE PART sur la fiche
+  // produit : on declarait a Google une FAQ que le visiteur ne trouve pas. Les
+  // regles sur les donnees structurees exigent que le contenu balise soit visible.
+  // Les 8 articles de blog gardent le leur : eux affichent bien leur FAQ.
 
   return (
     <>
@@ -234,12 +226,6 @@ export default function ProductLayout({ params, children }: { params: { slug: st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      {faqJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-      )}
       {children}
     </>
   )

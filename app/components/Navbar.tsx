@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, ShoppingCart } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useCart } from '../store/cart'
 import SideCart from './SideCart'
 import AnnouncementBar from './AnnouncementBar'
@@ -48,12 +47,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link href="/" prefetch={true} className="flex items-center space-x-2">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center space-x-2"
-            >
+            <div className="flex items-center space-x-2 animate-fadeIn">
               {/* Logo Image (si disponible) - Fallback vers SVG si logo.png n'existe pas */}
               <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
                 {!logoError ? (
@@ -77,17 +71,16 @@ export default function Navbar() {
               <span className="text-xl sm:text-2xl font-bold text-gray-900">
                 Swiipx
               </span>
-            </motion.div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <motion.div
+              <div
                 key={item.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="animate-fadeIn"
+                style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
               >
                 {item.href.startsWith('#') ? (
                   <a
@@ -105,7 +98,7 @@ export default function Navbar() {
                     {item.name}
                   </Link>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -153,16 +146,17 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t border-gray-200 overflow-hidden"
-          >
-            <div className="px-4 py-4 space-y-3">
+      {/* Replie en CSS plutot qu'avec AnimatePresence : l'element reste monte et
+          la transition joue dans les deux sens. framer-motion pesait 129 Ko et
+          etait charge sur TOUTES les pages, la navbar etant dans le layout —
+          y compris sur les 21 articles qui portent le trafic et n'animent rien. */}
+      <div
+        className={`md:hidden bg-white border-t border-gray-200 overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+          isMobileMenuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+        aria-hidden={!isMobileMenuOpen}
+      >
+        <div className="px-4 py-4 space-y-3">
               {navItems.map((item) =>
                 item.href.startsWith('/') && !item.href.includes('#') ? (
                   <Link
@@ -191,10 +185,8 @@ export default function Navbar() {
               >
                 Commander
               </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        </div>
+      </div>
 
       {/* Side Cart */}
       <SideCart />

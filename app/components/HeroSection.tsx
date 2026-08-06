@@ -81,6 +81,9 @@ export default function HeroSection() {
                   alt="Plaque avis Google NFC Swiipx"
                   width={800}
                   height={800}
+                  /* Sans sizes, Next sert la variante la plus large du srcset :
+                     1920 px telecharges pour un rendu de 252 px sur mobile. */
+                  sizes="(max-width: 1023px) 70vw, 40vw"
                   className="w-full h-full object-contain"
                   priority
                 />

@@ -28,9 +28,17 @@ function SuccessContent() {
       const { items, totalCents } = useCart.getState()
       const { method } = useShippingStore.getState()
 
+      // Montant debite s'il a ete memorise au paiement, sinon repli sur le
+      // sous-total du panier — qui sous-evalue le CA du port et de l'option.
+      let montantCents = totalCents()
+      try {
+        const memo = sessionStorage.getItem('swiipx-montant-debite')
+        if (memo && Number(memo) > 0) montantCents = Number(memo)
+      } catch { /* mode prive */ }
+
       track('purchase', {
         transaction_id: sessionId,
-        value: toEuros(totalCents()),
+        value: toEuros(montantCents),
         currency: 'EUR',
         shipping_method: method,
         items_count: items.reduce((n, i) => n + i.qty, 0),

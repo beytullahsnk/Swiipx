@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import { Minus, Plus, Trash2, ShoppingBag } from 'lucide-react'
 import { useCart } from '../store/cart'
 import { formatHt } from '@/lib/pricing'
@@ -12,12 +13,32 @@ import {
   SheetTitle,
 } from './ui/sheet'
 import { Button } from './ui/button'
+import { track, toEuros } from '@/lib/analytics'
 
 export default function SideCart() {
   const router = useRouter()
   const { items, isOpen, closeCart, setQty, removeItem, totalCents, totalItems } = useCart()
 
+  // Le SideCart est le chemin principal vers le paiement : c'est lui qui s'ouvre
+  // apres chaque ajout. Il n'emettait aucun evenement, donc l'abandon entre le
+  // panier et le paiement etait invisible dans GA4.
+  useEffect(() => {
+    if (!isOpen) return
+    track('view_cart', {
+      value: toEuros(totalCents()),
+      currency: 'EUR',
+      items_count: totalItems(),
+      source: 'side_cart',
+    })
+  }, [isOpen])
+
   const handleGoToCheckout = () => {
+    track('begin_checkout', {
+      value: toEuros(totalCents()),
+      currency: 'EUR',
+      items_count: totalItems(),
+      source: 'side_cart',
+    })
     closeCart()
     router.push('/checkout')
   }
@@ -99,7 +120,15 @@ export default function SideCart() {
                         <Plus className="w-4 h-4" />
                       </button>
                       <button
-                        onClick={() => removeItem(item.id)}
+                        onClick={() => {
+                          track('remove_from_cart', {
+                            item_id: item.id,
+                            quantity: item.qty,
+                            value: toEuros(item.priceCents * item.qty),
+                            currency: 'EUR',
+                          })
+                          removeItem(item.id)
+                        }}
                         aria-label="Supprimer l'article"
                         className="ml-2 p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
                       >

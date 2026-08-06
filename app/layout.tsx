@@ -45,9 +45,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    canonical: 'https://swiipx.fr',
+    // Sans ces trois directives, Google se limite a une vignette minuscule et a
+    // un extrait court — y compris dans les Apercus IA, qui reprennent l'image.
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
   },
   other: {
     'theme-color': '#2563EB',
@@ -99,7 +101,7 @@ export default function RootLayout({
               email: 'bonjour@swiipx.fr',
               foundingDate: '2026-02',
               founder: { '@type': 'Person', name: 'Beytullah Sonkaya' },
-              vatID: 'FR',
+              vatID: 'FR02948165717',
               taxID: '948 165 717 00026',
               areaServed: 'FR',
               knowsAbout: [

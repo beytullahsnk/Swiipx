@@ -1,4 +1,16 @@
-# Moteurs de recherche classiques
+# ATTENTION EN MODIFIANT CE FICHIER
+#
+# Un robot n'applique QU'UN SEUL groupe : le plus specifique qui le nomme. Des
+# qu'un groupe « User-agent: NomDuRobot » existe, ce robot IGNORE entierement
+# « User-agent: * », y compris ses Disallow.
+#
+# Les groupes nommes ci-dessous ne portaient qu'un « Allow: / ». Bingbot, GPTBot,
+# ClaudeBot et les autres avaient donc le droit d'explorer /cart, /checkout,
+# /success et /api/ — exactement l'inverse de ce qu'on voulait. Les six Disallow
+# sont desormais recopies dans CHAQUE groupe. Toute exclusion ajoutee ici doit
+# l'etre partout, sans exception.
+
+# --- Moteurs de recherche classiques ---
 User-agent: *
 Allow: /
 Disallow: /api/
@@ -9,52 +21,152 @@ Disallow: /checkout/
 Disallow: /success
 Disallow: /success/
 
-# Crawlers IA — Autorisation explicite
+# --- Crawlers IA : autorisation explicite ---
+# Les nommer n'est pas cosmetique : plusieurs de ces robots traitent l'absence de
+# regle explicite differemment de la regle generique.
+
 User-agent: GPTBot
 Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
+
+# OAI-SearchBot : le crawler de ChatGPT Search, DISTINCT de GPTBot.
+# GPTBot sert a l'entrainement des modeles ; OAI-SearchBot est celui qui decide
+# si le site peut etre cite dans une reponse ChatGPT.
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
 
 User-agent: PerplexityBot
 Allow: /
-
-User-agent: Google-Extended
-Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
 
 User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
+
+# Crawler de citation de Claude, distinct de ClaudeBot.
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
+
+# Google-Extended ne pilote pas l'exploration : il autorise ou non l'usage du
+# contenu par Gemini et les Apercus IA. Sans lui, le site peut etre explore mais
+# pas repris dans une reponse generee.
+User-agent: Google-Extended
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-# OAI-SearchBot : le crawler de ChatGPT Search, DISTINCT de GPTBot.
-# GPTBot sert a l'entrainement des modeles ; OAI-SearchBot est celui qui
-# decide si le site peut etre cite dans une reponse ChatGPT. Sans cette
-# ligne, on depend de la regle generique et rien ne garantit l'inclusion.
-User-agent: OAI-SearchBot
-Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
 
 # Copilot / Bing Chat.
 User-agent: Bingbot
 Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
 
 # Assistant Meta (WhatsApp, Instagram).
 User-agent: meta-externalagent
 Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
 
 # Assistant Amazon.
 User-agent: Amazonbot
 Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
 
 # Moteur de recherche IA de Mistral.
 User-agent: MistralAI-User
 Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /api/
+Disallow: /cart
+Disallow: /cart/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /success
+Disallow: /success/
 
 Sitemap: https://swiipx.fr/sitemap.xml

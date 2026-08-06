@@ -123,8 +123,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                   <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-4">
                     <Image
                       src="/product-main.jpg"
-                      alt="Plaque NFC Swiipx pour avis Google"
+                      alt="Plaque NFC Swiipx posee sur un comptoir, avec son QR code de secours"
                       fill
+                      /* Colonne laterale de 240 px : sans sizes, `fill` fait
+                         telecharger la variante 3840 px. */
+                      sizes="240px"
                       className="object-cover"
                     />
                   </div>

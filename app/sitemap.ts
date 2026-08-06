@@ -33,29 +33,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const productSlugs = ['starter', 'business', 'pro']
   const sectorSlugs = ['restaurant', 'salon-coiffure', 'cabinet-medical']
 
-  // Prix et garanties modifiés le 28/07/2026 sur l'ensemble du site.
-  const DERNIERE_MODIF_GLOBALE = '2026-07-28'
+  /**
+   * Dates de derniere modification, par groupe de pages.
+   *
+   * Il n'y avait qu'une constante pour tout le site, figee au 28/07 : l'accueil
+   * et les fiches produit ont ete modifiees plusieurs fois depuis (prix, avis,
+   * balisage), et le sitemap continuait d'annoncer a Google qu'elles n'avaient
+   * pas bouge. Un lastmod perime retarde le reexamen des pages qui comptent.
+   *
+   * A mettre a jour dans le meme commit que le contenu concerne — c'est deja le
+   * modele suivi article par article via dateModified dans seo-data.ts.
+   */
+  const MODIF_COMMERCIAL = '2026-08-07'   // accueil, fiches produit, pages secteur
+  const MODIF_LEGAL = '2026-08-05'        // CGV, livraison, retours, mentions legales
+  const MODIF_EDITORIAL = '2026-08-07'    // /blog et pages de contenu
 
   const staticPages = [
-    { url: BASE_URL, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'weekly' as const, priority: 1 },
-    { url: `${BASE_URL}/blog`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${BASE_URL}/contact`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'monthly' as const, priority: 0.5 },
-    { url: `${BASE_URL}/livraison`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'monthly' as const, priority: 0.4 },
-    { url: `${BASE_URL}/retours`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'monthly' as const, priority: 0.4 },
-    { url: `${BASE_URL}/cgv`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${BASE_URL}/mentions-legales`, lastModified: DERNIERE_MODIF_GLOBALE, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: BASE_URL, lastModified: MODIF_COMMERCIAL, changeFrequency: 'weekly' as const, priority: 1 },
+    { url: `${BASE_URL}/blog`, lastModified: MODIF_EDITORIAL, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${BASE_URL}/contact`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${BASE_URL}/livraison`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${BASE_URL}/retours`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${BASE_URL}/cgv`, lastModified: MODIF_LEGAL, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${BASE_URL}/mentions-legales`, lastModified: MODIF_LEGAL, changeFrequency: 'yearly' as const, priority: 0.3 },
   ]
 
   const productPages = productSlugs.map((slug) => ({
     url: `${BASE_URL}/product/${slug}`,
-    lastModified: DERNIERE_MODIF_GLOBALE,
+    lastModified: MODIF_COMMERCIAL,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }))
 
   const sectorPages = sectorSlugs.map((slug) => ({
     url: `${BASE_URL}/secteur/${slug}`,
-    lastModified: DERNIERE_MODIF_GLOBALE,
+    lastModified: MODIF_COMMERCIAL,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }))

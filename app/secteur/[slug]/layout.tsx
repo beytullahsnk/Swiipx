@@ -93,8 +93,10 @@ function buildJsonLd(slug: string) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://swiipx.fr' },
-      { '@type': 'ListItem', position: 2, name: 'Secteurs', item: 'https://swiipx.fr/secteur' },
-      { '@type': 'ListItem', position: 3, name: data.h1.split(':')[0].trim(), item: `https://swiipx.fr/secteur/${slug}` },
+      // Pas d'echelon « Secteurs » : https://swiipx.fr/secteur renvoie 404, il
+      // n'existe aucune page d'index. Declarer une URL morte dans un fil
+      // d'Ariane invalide le balisage. On colle au fil visible, a 2 niveaux.
+      { '@type': 'ListItem', position: 2, name: data.h1.split(':')[0].trim(), item: `https://swiipx.fr/secteur/${slug}` },
     ],
   }
 

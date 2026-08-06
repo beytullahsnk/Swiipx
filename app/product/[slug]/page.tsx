@@ -5,7 +5,7 @@ import {
   Star, Check, ShoppingCart, Truck, Shield,
   ChevronLeft, ChevronRight, Package, MapPin, Gift, Minus, Plus, ArrowRight
 } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -15,6 +15,7 @@ import ClientLogos from '../../components/ClientLogos'
 import CustomerReviews from '../../components/CustomerReviews'
 import { reviewsPourPack } from '../../data/reviews'
 import { TVA, type PackSlug } from '@/lib/pricing'
+import { track } from '@/lib/analytics'
 import {
   Accordion,
   AccordionItem,
@@ -161,6 +162,14 @@ export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1)
   const [selectedImage, setSelectedImage] = useState(0)
 
+  // Les trois fiches produit sont indexees et recoivent du trafic de recherche,
+  // mais n'emettaient aucun evenement : on ne savait pas si elles vendaient.
+  useEffect(() => {
+    const p = products[slug as keyof typeof products]
+    if (!p) return
+    track('view_item', { item_id: slugToCartId[slug], item_name: p.name, value: p.price, currency: 'EUR' })
+  }, [slug])
+
   if (!product) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -185,6 +194,14 @@ export default function ProductDetailPage() {
     }
     toast.success(`${quantity}x ${product.name} ajouté au panier ! 🎉`)
     openCart()
+    track('add_to_cart', {
+      item_id: cartId,
+      item_name: product.name,
+      quantity,
+      value: product.price * quantity,
+      currency: 'EUR',
+      source: 'product_page',
+    })
   }
 
 

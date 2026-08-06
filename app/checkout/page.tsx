@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { loadStripe } from '@stripe/stripe-js'
 import {
   Elements,
@@ -647,6 +647,8 @@ function CheckoutForm({
   }, [shippingMethod, shippingSameAsBilling, name, billingLine1, billingLine2, billingCity, billingPostalCode, billingCountry, shippingLine1, shippingLine2, shippingCity, shippingPostalCode, shippingCountry])
 
   /** Vrai quand l'API Google Places a renonce : ouvre la saisie manuelle. */
+  /** Empeche add_payment_info de repartir a chaque frappe. */
+  const paymentInfoEnvoye = useRef(false)
   const [placesDown, setPlacesDown] = useState(false)
   const [businessNameManuel, setBusinessNameManuel] = useState('')
   const [businessLienManuel, setBusinessLienManuel] = useState('')
@@ -661,6 +663,26 @@ function CheckoutForm({
     if (shippingMethod === 'domicile' && !shippingSameAsBilling && (!shippingLine1 || !shippingCity || !shippingPostalCode)) return false
     return true
   }, [email, name, phone, paymentReady, billingLine1, billingCity, billingPostalCode, businessSelected, businessNameManuel, businessLienManuel, shippingMethod, servicePoint, shippingSameAsBilling, shippingLine1, shippingCity, shippingPostalCode])
+
+  /**
+   * Ce qui bloque le paiement, en clair.
+   *
+   * Le bouton passait en gris sans un mot : sur un formulaire long, le client
+   * ne voit pas quel champ manque et abandonne. La liste reprend exactement les
+   * conditions de canSubmit, dans le meme ordre que le formulaire.
+   */
+  const champsManquants = useMemo(() => {
+    const m: string[] = []
+    if (!email) m.push('votre e-mail')
+    if (!name) m.push('votre nom')
+    if (!phone) m.push('votre téléphone')
+    if (!billingLine1 || !billingCity || !billingPostalCode) m.push('votre adresse de facturation')
+    if (!businessSelected && !(businessNameManuel.trim() && businessLienManuel.trim())) m.push('votre établissement')
+    if (shippingMethod === 'point_relais' && !servicePoint) m.push('un point relais')
+    if (shippingMethod === 'domicile' && !shippingSameAsBilling && (!shippingLine1 || !shippingCity || !shippingPostalCode)) m.push('votre adresse de livraison')
+    if (!paymentReady) m.push('vos informations de carte')
+    return m
+  }, [email, name, phone, billingLine1, billingCity, billingPostalCode, businessSelected, businessNameManuel, businessLienManuel, shippingMethod, servicePoint, shippingSameAsBilling, shippingLine1, shippingCity, shippingPostalCode, paymentReady])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -704,6 +726,20 @@ function CheckoutForm({
               : undefined,
         }),
       })
+
+      // Montant REELLEMENT debite, memorise pour l'evenement purchase de
+      // /success. Celui-ci se calculait sur le sous-total du panier, hors port
+      // et hors option : le chiffre d'affaires remonte a GA4 etait donc
+      // toujours inferieur a l'encaissement Stripe, et toute mesure de ROI
+      // fondee dessus etait fausse.
+      if (updateRes.ok) {
+        try {
+          const donnees = await updateRes.clone().json()
+          if (donnees?.amount) {
+            sessionStorage.setItem('swiipx-montant-debite', String(donnees.amount))
+          }
+        } catch { /* le montant du panier servira de repli */ }
+      }
 
       if (!updateRes.ok) {
         const data = await updateRes.json()
@@ -1100,7 +1136,12 @@ function CheckoutForm({
             <PaymentElement
               onChange={(e) => {
                 setPaymentReady(e.complete)
-                if (e.complete) track('add_payment_info', { currency: 'EUR' })
+                // Une seule fois : onChange se declenche a chaque frappe, et
+                // l'evenement repartait a chacune une fois le bloc complet.
+                if (e.complete && !paymentInfoEnvoye.current) {
+                  paymentInfoEnvoye.current = true
+                  track('add_payment_info', { currency: 'EUR' })
+                }
               }}
               options={{
                 layout: 'tabs',
@@ -1131,6 +1172,14 @@ function CheckoutForm({
             {isProcessing ? 'Traitement en cours...' : `Payer ${formatPrice(totalCents)}`}
           </span>
         </button>
+
+        {champsManquants.length > 0 && !isProcessing && (
+          <p className="mt-3 text-sm text-amber-700 text-center" role="status">
+            Il manque encore&nbsp;: {champsManquants.length === 1
+              ? champsManquants[0]
+              : `${champsManquants.slice(0, -1).join(', ')} et ${champsManquants[champsManquants.length - 1]}`}.
+          </p>
+        )}
       </form>
     </>
   )
@@ -1140,6 +1189,8 @@ function CheckoutForm({
 
 export default function CheckoutPage() {
   const router = useRouter()
+  /** begin_checkout ne doit partir qu'une fois par session de paiement. */
+  const beginCheckoutEnvoye = useRef(false)
   const { items, totalCents, hasHydrated } = useCart()
   const { company } = useCompanyStore()
   const { method: shippingMethod } = useShippingStore()
@@ -1173,11 +1224,17 @@ export default function CheckoutPage() {
         if (!res.ok) throw new Error(data.error)
         setClientSecret(data.clientSecret)
         setPaymentIntentId(data.paymentIntentId)
-        track('begin_checkout', {
-          value: toEuros(data.amount ?? 0),
-          currency: 'EUR',
-          items_count: items.reduce((n, i) => n + i.qty, 0),
-        })
+        // Une seule fois par session : cet effet se rejoue a chaque changement
+        // de mode de livraison ou d'option, et begin_checkout repartait a chaque
+        // fois — le taux de passage panier -> paiement en etait fausse.
+        if (!beginCheckoutEnvoye.current) {
+          beginCheckoutEnvoye.current = true
+          track('begin_checkout', {
+            value: toEuros(data.amount ?? 0),
+            currency: 'EUR',
+            items_count: items.reduce((n, i) => n + i.qty, 0),
+          })
+        }
         tagSession('funnel_step', 'checkout')
       } catch (err: any) {
         setError(err.message)
