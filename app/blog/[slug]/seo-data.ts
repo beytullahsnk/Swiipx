@@ -166,7 +166,7 @@ export const seoData: Record<string, ArticleSeo> = {
       { q: 'Combien d\'avis Google faut-il pour être crédible ?', a: 'Le seuil psychologique se situe autour de 40 à 50 avis : en dessous, la note est jugée peu fiable. Pour peser dans le pack local face à la concurrence, il faut généralement dépasser 100 avis. Le volume et la régularité comptent autant que la note elle-même.' },
       { q: 'Quel est l\'impact d\'une étoile supplémentaire sur le chiffre d\'affaires ?', a: 'Les études convergent : gagner une étoile (par exemple passer de 3,5 à 4,5) augmente le chiffre d\'affaires de 5 à 9 % pour un commerce local, principalement via une hausse du taux de clic et de conversion depuis Google Maps.' },
       { q: 'Les avis récents comptent-ils plus que les anciens ?', a: 'Oui. 73 % des consommateurs estiment qu\'un avis de plus de trois mois n\'est plus pertinent, et Google pondère la fraîcheur dans son classement local. Une fiche qui collecte des avis chaque semaine surperforme une fiche figée, même mieux notée.' },
-      { q: 'Faut-il répondre aux avis pour le référencement ?', a: 'Oui, indirectement mais réellement. 89 % des consommateurs lisent les réponses du gérant, et les fiches actives voient leur taux de clic augmenter de 15 à 25 %. Google valorise l\'engagement du gérant comme un signal de fiche vivante et légitime.' },
+      { q: 'Faut-il répondre aux avis pour le référencement ?', a: 'Oui, indirectement mais réellement. 89 % des consommateurs attendent que le gérant réponde (BrightLocal 2026, échantillon américain), et les fiches actives voient leur taux de clic augmenter de 15 à 25 %. Google valorise l\'engagement du gérant comme un signal de fiche vivante et légitime.' },
       { q: 'Quelle méthode de collecte d\'avis convertit le mieux ?', a: 'La plaque NFC convertit 35 à 45 % des clients sollicités, contre 8 à 12 % pour un QR code seul, 5 à 8 % pour un SMS et 1 à 3 % pour une carte de visite. La suppression de la friction au moment du paiement explique cet écart.' }
     ],
   },
@@ -331,7 +331,7 @@ export const seoData: Record<string, ArticleSeo> = {
     faq: [
       { q: 'Quel est l\'impact des avis Google sur le chiffre d\'affaires ?', a: 'Passer de 3,5 à 4,5 étoiles sur Google entraîne une augmentation moyenne de 25 % du chiffre d\'affaires. Les entreprises avec plus de 50 avis génèrent 3 fois plus de clics que celles avec moins de 10 avis.' },
       { q: 'Comment les avis influencent-ils le SEO local ?', a: 'Google utilise le volume, la fréquence et la qualité des avis comme facteur de classement dans le pack local. Les fiches avec des avis récents et des réponses du propriétaire sont favorisées dans les résultats de recherche.' },
-      { q: 'Faut-il répondre aux avis négatifs ?', a: 'Oui, toujours. 89 % des prospects lisent les réponses aux avis négatifs. Une réponse professionnelle et empathique peut transformer un avis négatif en démonstration de votre sérieux et de votre engagement client.' },
+      { q: 'Faut-il répondre aux avis négatifs ?', a: 'Oui, toujours. 89 % des consommateurs attendent une réponse du gérant (BrightLocal 2026, échantillon américain). Une réponse professionnelle et empathique peut transformer un avis négatif en démonstration de votre sérieux et de votre engagement client.' },
       { q: 'Quel est le nombre minimum d\'avis pour inspirer confiance ?', a: 'Les études montrent qu\'un minimum de 10 avis est nécessaire pour que les consommateurs considèrent la note comme fiable. Au-delà de 40 avis, l\'effet de confiance atteint son maximum.' },
     ],
   },

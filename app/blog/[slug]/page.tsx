@@ -1,4 +1,4 @@
-import { Calendar, Clock, ArrowRight } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, PenLine } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -94,6 +94,19 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4" />
               <span>{article.readTime} de lecture</span>
+            </div>
+            {/* Signature visible. Le JSON-LD Article declarait deja un author,
+                mais aucun nom n'apparaissait sur la page : Google exige que les
+                donnees structurees refletent le contenu visible, et un guide de
+                conseil sans auteur identifiable n'inspire rien a personne. */}
+            <div className="flex items-center space-x-2">
+              <PenLine className="w-4 h-4" />
+              <span>
+                Par{' '}
+                <Link href="/a-propos" className="text-gray-600 hover:text-primary underline underline-offset-2">
+                  {article.author}
+                </Link>
+              </span>
             </div>
           </div>
 
