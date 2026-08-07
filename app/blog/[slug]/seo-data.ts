@@ -155,8 +155,8 @@ export const seoData: Record<string, ArticleSeo> = {
     ],
   },
   'statistiques-avis-google-2026': {
-    title: 'Statistiques avis Google 2026 : 45 chiffres clés',
-    description: '45 statistiques 2026 sur les avis Google : comportement des consommateurs, impact SEO local, conversion et effet de la note.',
+    title: 'Statistiques avis Google 2026 : les chiffres sourcés',
+    description: 'Les statistiques 2026 sur les avis Google rattachees a une etude publiee, avec leur source et la taille de l\'echantillon.',
     keywords: 'statistiques avis google, chiffres avis google 2026, avis google seo local, impact avis clients, statistiques avis clients, note google etoiles, taux conversion avis, pack local google',
     date: '2026-07-17',
     dateModified: '2026-07-28',

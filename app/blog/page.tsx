@@ -125,8 +125,8 @@ const blogPosts: BlogPost[] = [
     slug: 'comment-choisir-plaque-nfc-avis-google',  },
   {
     id: 16,
-    title: 'Statistiques avis Google 2026 : 45 chiffres clés à connaître',
-    excerpt: '45 statistiques 2026 sur les avis Google : lecture, SEO local, conversion, effet de la note, réponses. Les chiffres qui prouvent le ROI d\'une stratégie d\'avis.',
+    title: 'Statistiques avis Google 2026 : les chiffres sourcés',
+    excerpt: 'Les statistiques 2026 sur les avis Google que l\'on peut rattacher a une etude publiee, avec leur source et leur echantillon. Les chiffres sans source ont ete retires.',
     category: 'Statistiques',
     date: '17 juillet 2026',
     dateIso: '2026-07-17',

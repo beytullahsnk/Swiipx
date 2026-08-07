@@ -21,7 +21,7 @@ export const relatedArticles: RelatedArticle[] = [
   { slug: 'optimiser-fiche-google-business-profile', label: 'Optimiser sa fiche Google Business Profile' },
   { slug: 'plaque-nfc-institut-beaute', label: 'Plaque NFC institut de beauté : guide 2026' },
   { slug: 'comment-choisir-plaque-nfc-avis-google', label: "Choisir sa plaque NFC : guide d'achat 2026" },
-  { slug: 'statistiques-avis-google-2026', label: 'Statistiques avis Google 2026 : 45 chiffres clés' },
+  { slug: 'statistiques-avis-google-2026', label: 'Statistiques avis Google 2026 : les chiffres sourcés' },
   { slug: 'repondre-avis-negatifs-google', label: 'Répondre aux avis négatifs Google' },
   { slug: 'plaque-nfc-garage-automobile', label: 'Plaque NFC garage automobile : guide 2026' },
   { slug: 'plaque-nfc-cabinet-medical', label: 'Plaque NFC cabinet médical : guide déontologie' },

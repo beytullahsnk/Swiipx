@@ -207,7 +207,7 @@ export const articles: Record<string, {
 <h2>Conclusion : un poste de dépense minuscule, un impact disproportionné</h2>
 <p>Ramené à l'unité, un avis Google coûte moins cher qu'un sachet de sucre servi avec un café. C'est le chiffre le plus contre-intuitif de ce comparatif : les commerces qui plafonnent à 20 avis ne sont pas ceux qui ont refusé d'investir, ce sont ceux qui n'ont jamais posé la question en ces termes.</p>
 <p>Trois décisions suffisent à optimiser ce poste. Choisir un support à coût fixe plutôt qu'un abonnement, parce que le coût unitaire baisse alors avec le volume au lieu de rester constant. Réduire à moins de cinq secondes le geste demandé au personnel, sans quoi la méthode sera abandonnée au premier rush. Et vérifier chaque trimestre le seul chiffre qui compte : le nombre d'avis effectivement publiés sur votre fiche.</p>
-<p>Pour aller plus loin : le <a href="/blog/prix-plaque-nfc-avis-google">prix détaillé des plaques NFC</a>, le <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif NFC contre QR code</a>, et les <a href="/blog/statistiques-avis-google-2026">45 statistiques avis Google 2026</a>.</p>
+<p>Pour aller plus loin : le <a href="/blog/prix-plaque-nfc-avis-google">prix détaillé des plaques NFC</a>, le <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif NFC contre QR code</a>, et les <a href="/blog/statistiques-avis-google-2026">statistiques avis Google sourcées</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Le coût par avis le plus bas du marché, sans abonnement</strong></p>
@@ -425,7 +425,7 @@ export const articles: Record<string, {
 <h2>Conclusion : un écart mesurable, pas un mystère</h2>
 <p>« Combien d'avis pour être dans le pack local ? » n'est pas une question d'algorithme, c'est une question de comptage. Dix minutes suffisent : ouvrez Google, relevez les volumes des trois premiers, calculez la médiane, ajoutez 30 %. Vous connaissez alors votre cible exacte, et le rythme mensuel nécessaire pour l'atteindre dans le délai que vous choisissez.</p>
 <p>Le reste est une affaire de méthode. Les commerces qui montent ne sont pas ceux dont les clients sont les plus satisfaits — ce sont ceux qui ont installé <strong>un geste simple, répété à chaque encaissement</strong>, au lieu d'espérer que la satisfaction se transforme spontanément en avis. Elle ne le fait jamais.</p>
-<p>Pour aller plus loin : notre <a href="/blog/seo-local-recherches-google">guide du SEO local</a>, les <a href="/blog/statistiques-avis-google-2026">45 statistiques avis Google 2026</a>, et le <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat des plaques NFC</a>.</p>
+<p>Pour aller plus loin : notre <a href="/blog/seo-local-recherches-google">guide du SEO local</a>, les <a href="/blog/statistiques-avis-google-2026">statistiques avis Google sourcées</a>, et le <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat des plaques NFC</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à combler l'écart avec le pack local ?</strong></p>
@@ -1183,7 +1183,7 @@ export const articles: Record<string, {
 <section id="avis-signal" class="scroll-mt-28 mb-16">
 <h2>Étape 4 : les avis, le carburant n°1 du classement</h2>
 <p>On arrive au facteur décisif. Après la pertinence (catégorie) et la proximité, <strong>les avis sont le troisième pilier du classement local</strong> — et le seul sur lequel vous pouvez agir en volume. Google regarde trois choses : le <strong>nombre</strong> d'avis, la <strong>note</strong> moyenne et la <strong>fraîcheur</strong> (avez-vous des avis récents ?).</p>
-<p>Une fiche figée à 30 avis, même à 4,8, se fait dépasser par une fiche qui en collecte 10 nouveaux chaque mois. La régularité est un signal aussi fort que le volume. Pour tout comprendre, nos <a href="/blog/statistiques-avis-google-2026">45 statistiques sur les avis Google</a> détaillent l'impact chiffré de chaque facteur.</p>
+<p>Une fiche figée à 30 avis, même à 4,8, se fait dépasser par une fiche qui en collecte 10 nouveaux chaque mois. La régularité est un signal aussi fort que le volume. Pour tout comprendre, nos <a href="/blog/statistiques-avis-google-2026">statistiques sourcées sur les avis Google</a> détaillent l'impact chiffré de chaque facteur.</p>
 <h3>Le problème : la satisfaction ne se transforme pas en avis</h3>
 <p>Vos clients sont contents, mais ils oublient de le dire. Le client mécontent, lui, écrit dans l'heure. C'est l'asymétrie émotionnelle : <strong>la frustration écrit, la satisfaction se tait</strong>. Résultat, votre note ne reflète pas votre vrai niveau de service. La solution n'est pas de demander plus fort, mais de <strong>supprimer la friction</strong> au moment exact où le client est satisfait.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
@@ -1282,7 +1282,7 @@ export const articles: Record<string, {
 <h2>Conclusion : une fiche optimisée travaille pour vous 24 h/24</h2>
 <p>Votre fiche Google Business Profile est le premier point de contact entre votre commerce et 76 % des habitants de votre zone. Bien remplie, bien catégorisée, illustrée et alimentée en avis frais, elle devient un commercial infatigable qui vend votre sérieux avant même que le client ne pousse la porte.</p>
 <p>Aucun de ces leviers ne coûte cher — sauf le temps. Et le plus rentable de tous, celui qui pèse le plus dans le classement, c'est le volume d'avis. C'est précisément là qu'un objet posé au bon endroit, au bon moment, change tout.</p>
-<p>Guides complémentaires : <a href="/blog/statistiques-avis-google-2026">45 statistiques avis Google</a>, <a href="/blog/seo-local-recherches-google">SEO local</a>, <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>, ou la <a href="/blog/plaque-nfc-garage-automobile">plaque NFC pour garage</a>.</p>
+<p>Guides complémentaires : <a href="/blog/statistiques-avis-google-2026">statistiques avis Google sourcées</a>, <a href="/blog/seo-local-recherches-google">SEO local</a>, <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>, ou la <a href="/blog/plaque-nfc-garage-automobile">plaque NFC pour garage</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à alimenter votre fiche en avis Google ?</strong></p>
@@ -1714,12 +1714,12 @@ export const articles: Record<string, {
 `,
   },
   'statistiques-avis-google-2026': {
-    title: 'Statistiques avis Google 2026 : 45 chiffres clés à connaître',
+    title: 'Statistiques avis Google 2026 : les chiffres qu\'on peut vérifier',
     category: 'Statistiques',
     date: '17 juillet 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: '45 statistiques 2026 sur les avis Google : lecture des consommateurs, impact SEO local, conversion, effet de la note et réponses. Les chiffres qui prouvent le ROI d\'une stratégie d\'avis.',
+    excerpt: 'Les statistiques 2026 sur les avis Google que l\'on peut rattacher a une etude publiee, avec leur source et leur echantillon.',
     tocSections: [
       { id: 'panorama', label: 'Le panorama 2026' },
       { id: 'comportement', label: 'Comportement des clients' },
@@ -1736,7 +1736,7 @@ export const articles: Record<string, {
 <section id="panorama" class="scroll-mt-28 mb-16">
 <h2>Le poids des avis Google en 2026 : le panorama en un coup d'oeil</h2>
 <p>Les avis Google ne sont plus un accessoire de la réputation locale : ils en sont le coeur. En 2026, avant de pousser la porte d'un commerce, d'appeler un artisan ou de réserver une table, le client fait le même geste réflexe : il tape un mot-clé, regarde la carte, lit les étoiles et parcourt trois avis. Ce parcours de quelques secondes décide de la vente <strong>avant même le premier contact</strong>.</p>
-<p>Nous avons réuni 45 statistiques 2026 sur les avis Google : celles qui décrivent le comportement des consommateurs, celles qui mesurent l'impact réel sur le référencement local, et celles qui chiffrent l'effet sur les ventes. Objectif : vous donner les chiffres qui prouvent qu'une stratégie d'avis n'est pas une option, mais l'un des meilleurs investissements marketing d'un commerce local.</p>
+<p>Cette page ne rassemble que les statistiques que l'on peut rattacher a une etude publiee, avec son commanditaire, son annee et la taille de son echantillon. C'est volontairement peu : la plupart des chiffres qui circulent sur les avis Google se recopient d'un article a l'autre sans que personne ne remonte jamais a la source. Nous avons retire ceux que nous ne pouvions pas verifier.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900"><strong>📊 Les 3 chiffres sourcés à retenir :</strong> <a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français consultent les avis avant de se rendre en point de vente</a> et 80 % en ont déjà déposé un (PRESENCE 2026, 1 350 répondants) · <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent que le gérant réponde</a> (BrightLocal 2026, échantillon américain). Les autres chiffres que vous croiserez sur ce sujet circulent le plus souvent sans source : nous ne les reprenons pas.</p>
 </div>
