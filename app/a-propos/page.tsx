@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Mail, MapPin, Package, Wrench } from 'lucide-react'
-import { LOWEST_PRICE_CENTS, formatHt } from '../../lib/pricing'
+import { LOWEST_PRICE_CENTS, formatHtTtc } from '../../lib/pricing'
 
 /**
  * Page « À propos ».
@@ -8,8 +8,13 @@ import { LOWEST_PRICE_CENTS, formatHt } from '../../lib/pricing'
  * POURQUOI ELLE EXISTE : le site donne des conseils sur 25 guides sans que
  * personne ne sache qui les écrit. L'audit a relevé qu'aucune page auteur,
  * aucune page à propos et aucune signature n'existait — l'EEAT ne reposait donc
- * sur rien. Les 25 articles pointent désormais vers cette page depuis leur
- * signature.
+ * sur rien. Les 24 articles servis par /blog/[slug] pointent désormais vers
+ * cette page depuis leur signature.
+ *
+ * RESTE À FAIRE : /blog/doubler-avis-google-30-jours a sa propre route et
+ * n'affiche aucune signature, alors que son JSON-LD déclare un `author`. C'est
+ * exactement l'écart que la signature corrigeait ailleurs — donnée structurée
+ * sans équivalent visible.
  *
  * RÈGLE D'ÉCRITURE : tout ce qui figure ici est vérifiable. L'identité et
  * l'adresse viennent des mentions légales, la date de création et le SIRET du
@@ -21,12 +26,17 @@ import { LOWEST_PRICE_CENTS, formatHt } from '../../lib/pricing'
  */
 
 const faits = [
-  { icone: Wrench, titre: 'Programmée avant expédition', texte: "Chaque plaque est encodée avec le lien d'avis Google de votre établissement avant de quitter l'atelier. Vous n'avez ni compte à créer, ni application à installer, ni code à activer." },
+  { icone: Wrench, titre: 'Programmée avant expédition', texte: "Chaque plaque est encodée avec le lien d'avis Google de votre établissement avant son envoi. Vous n'avez ni compte à créer, ni application à installer, ni code à activer." },
   { icone: Package, titre: 'Acrylique 120 × 120 × 3 mm', texte: 'Puce NTAG215 passive, sans batterie, avec un QR code de secours imprimé pour les téléphones sans NFC. Adhésif 3M fourni.' },
-  { icone: MapPin, titre: 'Expédié depuis Montreuil', texte: "Sous 24 h ouvrées après commande. Livraison en point relais offerte, 4,90 € à domicile, en 2 à 5 jours ouvrés en France métropolitaine." },
+  { icone: MapPin, titre: 'Expédiée sous 24 h ouvrées', texte: "Après validation du paiement. Livraison en point relais offerte, 4,90 € à domicile, en 2 à 5 jours ouvrés en France métropolitaine." },
 ]
 
 export default function AProposPage() {
+  /* HT et TTC ensemble, comme partout ailleurs sur le site : la clientèle
+     raisonne en HT, mais le TTC est ce que Stripe débite et son affichage est
+     obligatoire dès qu'un particulier peut commander (art. L112-1). */
+  const { ht, ttc } = formatHtTtc(LOWEST_PRICE_CENTS)
+
   return (
     <main className="min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-6 lg:px-8 pt-32 pb-20">
@@ -56,15 +66,31 @@ export default function AProposPage() {
             </p>
             <p>
               Nous ne vendons pas d&apos;abonnement, pas de tableau de bord, pas de service de
-              gestion de réputation. Vous payez la plaque une fois, à partir de {formatHt(LOWEST_PRICE_CENTS)},
-              et elle fonctionne tant que la puce n&apos;est pas détruite. Si elle cesse de
-              fonctionner à cause d&apos;un défaut de fabrication, nous la remplaçons.
+              gestion de réputation. Vous payez la plaque une fois, à partir de {ht} ({ttc}).
+            </p>
+            <p>
+              La puce NFC est garantie à vie : si la plaque cesse de fonctionner sans mauvaise
+              utilisation de votre part, nous la remplaçons gratuitement, sans limite de durée.
+              C&apos;est l&apos;article 6 de nos{' '}
+              <Link href="/cgv" className="text-primary hover:underline">conditions générales de vente</Link>,
+              et non une formule commerciale.
             </p>
             {/* À COMPLÉTER PAR BEYTULLAH : pourquoi tu t'es lancé là-dedans, et
                 ce que tu as constaté chez les commerçants avant de fabriquer la
                 plaque. Deux ou trois phrases suffisent, mais elles doivent être
-                les tiennes — c'est la seule partie de cette page que je ne peux
-                pas écrire à ta place sans inventer. */}
+                les tiennes — je ne peux pas les écrire à ta place sans inventer. */}
+
+            {/* À COMPLÉTER PAR BEYTULLAH : ton parcours, en une phrase, et
+                uniquement s'il est vrai et vérifiable (métier précédent,
+                formation, expérience du commerce). Si tu n'as rien à dire ici,
+                supprime ce bloc : une page courte vaut mieux qu'un parcours
+                étoffé pour faire joli. */}
+
+            {/* À COMPLÉTER PAR BEYTULLAH, OPTIONNEL : les onze commerces déjà
+                équipés et les quatre avis clients (4,8/5) sont des faits réels.
+                Tu peux les citer ici — mais alors dis « onze » et « quatre »,
+                sans arrondir vers le haut et sans en déduire un résultat
+                moyen que personne n'a mesuré. */}
           </div>
         </section>
 

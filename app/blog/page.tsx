@@ -46,6 +46,24 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 25,
+    title: 'Carte NFC avis Google : carte ou plaque, que choisir ?',
+    excerpt: 'Carte NFC ou plaque NFC pour les avis Google : même puce, même lien, même geste. Ce qui les sépare, c\'est que l\'une se transporte et l\'autre reste posée. Comparatif honnête, y compris les cas où Swiipx — qui ne fabrique que la plaque — vous conseille la carte.',
+    category: 'Comparatif',
+    date: '7 août 2026',
+    dateIso: '2026-08-07',
+    readTime: '9 min',
+    slug: 'carte-nfc-avis-google',  },
+  {
+    id: 26,
+    title: 'Magnet NFC avis Google : quand il vaut mieux qu\'une plaque',
+    excerpt: 'Le magnet NFC a un vrai domaine d\'usage : les surfaces métalliques et les supports qu\'on déplace. Il a aussi trois limites rarement expliquées, dont une contrainte physique : le métal perturbe le champ NFC, et un magnet mal conçu se lit mal, voire pas du tout.',
+    category: 'Comparatif',
+    date: '7 août 2026',
+    dateIso: '2026-08-07',
+    readTime: '8 min',
+    slug: 'magnet-nfc-avis-google',  },
+  {
     id: 24,
     title: "Combien coûte un avis Google ? Le comparatif du coût réel",
     excerpt: "Un avis Google coûte entre 0,03 et 1,50 € selon la méthode. Comparatif chiffré de 6 méthodes de collecte, coût caché du temps salarié, calcul sur 36 mois et valeur d'un avis par secteur.",

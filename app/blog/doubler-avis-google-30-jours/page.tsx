@@ -1,8 +1,7 @@
 import {
   Calendar, Clock, ArrowRight, CheckCircle2, TrendingUp, Users,
   Target, Zap, MessageSquare, BarChart3, AlertTriangle,
-  ThumbsUp, Award, Rocket, ChevronRight
-} from 'lucide-react'
+  ThumbsUp, Award, Rocket, ChevronRight, PenLine } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ArticleToc from '../[slug]/ArticleToc'
@@ -97,6 +96,19 @@ export default function DoublerAvisGoogle30Jours() {
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4" />
               <span>10 min de lecture</span>
+            </div>
+            {/* Cet article a sa propre route et n'heritait donc pas de la
+                signature ajoutee a /blog/[slug] : son JSON-LD declarait un
+                author sans equivalent visible, l'ecart meme qu'on corrigeait
+                ailleurs. */}
+            <div className="flex items-center space-x-2">
+              <PenLine className="w-4 h-4" />
+              <span>
+                Par{' '}
+                <Link href="/a-propos" className="text-gray-600 hover:text-primary underline underline-offset-2">
+                  Équipe Swiipx
+                </Link>
+              </span>
             </div>
           </div>
 

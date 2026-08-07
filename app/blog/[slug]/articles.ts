@@ -18,6 +18,302 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'carte-nfc-avis-google': {
+    title: 'Carte NFC avis Google : faut-il une carte ou une plaque ?',
+    category: 'Comparatif',
+    date: '7 août 2026',
+    readTime: '9 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Carte NFC ou plaque NFC pour les avis Google : même puce, même lien, même geste. Ce qui les sépare, c\'est que l\'une se transporte et l\'autre reste posée. Comparatif honnête, y compris les cas où Swiipx — qui ne fabrique que la plaque — vous conseille la carte.',
+    tocSections: [
+      { id: 'definition', label: 'Qu\'est-ce qu\'une carte NFC' },
+      { id: 'critere-decisif', label: 'Le critère qui tranche' },
+      { id: 'comparatif', label: 'Carte et plaque, point par point' },
+      { id: 'cout-reel', label: 'Le coût réel' },
+      { id: 'sedentaire', label: 'Le cas du sédentaire' },
+      { id: 'itinerant', label: 'Le cas de l\'itinérant' },
+      { id: 'pourquoi-plaque', label: 'Pourquoi Swiipx choisit la plaque' },
+      { id: 'lien-google', label: 'Obtenir son lien d\'avis Google' },
+      { id: 'compatibilite', label: 'Quels téléphones lisent le NFC' },
+      { id: 'faq-carte-nfc', label: 'Questions fréquentes' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="definition" class="scroll-mt-28 mb-16">
+<h2>Une carte NFC avis Google, qu'est-ce que c'est ?</h2>
+<p>Une carte NFC avis Google est une carte au format carte bancaire — environ 85 × 54 mm, en PVC ou en papier plastifié — dans laquelle est noyée une puce NFC. Cette puce contient une seule chose : l'adresse du formulaire d'avis de votre fiche Google Business Profile. Le client approche son téléphone, la page s'ouvre, il met ses étoiles.</p>
+<p>Le point important est celui que les vendeurs mentionnent rarement : <strong>techniquement, une carte NFC et une plaque NFC font exactement la même chose</strong>. Même famille de puce (NTAG213, 215 ou 216), même lien, même geste, même absence d'application. Il n'existe pas une technologie « carte » et une technologie « plaque ».</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>💡 À retenir :</strong> le choix entre carte et plaque n'est pas technique, c'est un choix de mobilier. Vous ne choisissez pas une puce : vous choisissez un objet qui se transporte, ou un objet qui reste posé.</p>
+</div>
+<p>Autant le dire tout de suite, puisque vous lisez cette page sur le site d'un vendeur : <strong>Swiipx ne fabrique pas de carte, uniquement la plaque.</strong> Cet article existe parce que dans certains métiers la réponse honnête est « prenez une carte ».</p>
+</section>
+
+<section id="critere-decisif" class="scroll-mt-28 mb-16">
+<h2>Le critère qui tranche : ce qui bouge et ce qui reste</h2>
+<p>Beaucoup de comparatifs commencent par la durabilité ou le prix. C'est l'ordre inverse du bon. Le critère qui décide tient en une question : <strong>votre point de contact avec le client est-il fixe ?</strong></p>
+<p>Si vos clients viennent chez vous, il existe un endroit précis où ils se trouvent au moment où ils sont contents : la table quand l'assiette est finie, le fauteuil face au miroir, le comptoir pendant le rendu de monnaie. Cet endroit ne bouge pas, et un objet posé là reste dans le champ de vision sans que personne ait à y penser.</p>
+<p>Si c'est vous qui allez chez le client, ce point de contact n'existe pas : le support doit tenir dans une poche. Le reste de la comparaison découle de là.</p>
+</section>
+
+<section id="comparatif" class="scroll-mt-28 mb-16">
+<h2>Carte et plaque, point par point</h2>
+<p>Ce tableau ne compare pas des performances — personne ne peut vous dire combien d'avis un support rapporte — mais ce qui est vérifiable : dimensions, matière, manière dont l'objet vit.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Critère</th><th class="border p-3 text-left">Carte NFC</th><th class="border p-3 text-left">Plaque NFC</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Format courant</td><td class="border p-3">85 × 54 mm, moins d'un millimètre</td><td class="border p-3">100 à 120 mm de côté, 3 mm</td></tr>
+<tr><td class="border p-3">Où elle vit</td><td class="border p-3">Poche, portefeuille, tablier</td><td class="border p-3">Comptoir, table, miroir</td></tr>
+<tr><td class="border p-3">Vue sans que personne intervienne</td><td class="border p-3">Non : quelqu'un doit la sortir</td><td class="border p-3">Oui : elle reste dans le champ de vision</td></tr>
+<tr><td class="border p-3">Tenue dans le temps</td><td class="border p-3">Le PVC fin peut se voiler, se rayer, se salir</td><td class="border p-3">Acrylique rigide, se nettoie au chiffon</td></tr>
+<tr><td class="border p-3">Repérable de loin, à l'œil</td><td class="border p-3">Non : format d'une carte bancaire</td><td class="border p-3">Oui : depuis l'autre côté d'un comptoir</td></tr>
+<tr><td class="border p-3">Distance de lecture NFC</td><td class="border p-3" colspan="2">Identique : quelques centimètres. Dans les deux cas, le client pose son téléphone sur le support</td></tr>
+<tr><td class="border p-3">Puce</td><td class="border p-3" colspan="2">Identique : passive, sans batterie, ne s'use pas à l'usage</td></tr>
+</tbody>
+</table>
+</div>
+<p>Deux lignes méritent d'être développées.</p>
+<p><strong>La distance, d'abord, pour couper court à un malentendu.</strong> Le NFC fonctionne à très courte portée : quelques centimètres, en pratique le téléphone posé contre le support. Une plaque ne « capte » pas un client qui passe à un mètre. Ce qui se voit de loin, c'est l'objet et son message, pas la puce — et c'est déjà l'essentiel, puisqu'un support qu'on ne remarque pas n'est jamais approché.</p>
+<p><strong>La puce, ensuite.</strong> Une NTAG215 est <strong>passive</strong> : sans batterie, elle tire son énergie du champ émis par le téléphone au moment de la lecture. Ce qui lâche sur un support NFC n'est donc presque jamais la puce, c'est la matière autour. Une carte fine qui passe ses journées dans un tablier finit cornée ; une plaque d'acrylique de 3 mm ne subit qu'un coup d'éponge.</p>
+</section>
+
+<section id="cout-reel" class="scroll-mt-28 mb-16">
+<h2>Le coût réel : achat unique contre consommable</h2>
+<p>À l'unité, une carte coûte moins cher qu'une plaque. C'est l'argument principal des vendeurs de cartes, et il est exact. Il ne devient trompeur que si l'on oublie de préciser <strong>combien d'exemplaires vous achèterez, et à quelle fréquence</strong>. Il existe deux usages très différents de la carte.</p>
+<ul>
+<li><strong>La carte que vous gardez.</strong> Vous la présentez, le client approche son téléphone, vous la rangez. C'est une plaque nomade : une par personne de l'équipe, remplacée quand elle est abîmée.</li>
+<li><strong>La carte que vous donnez.</strong> Vous la laissez avec la facture : ce n'est plus un support mais un consommable. Son second défaut n'est pas économique — une carte emportée est lue plus tard, à un moment que vous ne choisissez pas, dans la voiture, le soir, ou jamais.</li>
+</ul>
+<p>Une plaque se paie une fois : 35,88 € TTC l'unité chez Swiipx, 65,88 € les deux, 107,88 € les cinq, sans abonnement, garantie à vie sur la puce. La bonne comparaison n'est donc pas « prix de la carte contre prix de la plaque » mais <strong>coût sur trois ans, rachats compris</strong>. Le raisonnement vaut aussi pour les offres à abonnement mensuel, détaillées dans notre comparatif des <a href="/blog/plaque-avis-google-sans-abonnement">plaques sans abonnement</a>.</p>
+<h3>Et si vous changez d'établissement ?</h3>
+<p>Tout dépend de ce qui a été écrit dans la puce. Une redirection modifiable se change sans toucher à l'objet ; une URL écrite en dur peut être réécrite si la puce n'est pas verrouillée ; une puce verrouillée condamne le support. Posez la question avant d'acheter, carte comme plaque. Ce qui est <strong>imprimé</strong>, en revanche, ne se change jamais.</p>
+</section>
+
+<section id="sedentaire" class="scroll-mt-28 mb-16">
+<h2>Le commerçant sédentaire : la plaque, sans hésiter</h2>
+<p>Restaurant, salon de coiffure, institut, boulangerie, garage, cabinet, boutique : si vos clients viennent à vous, la plaque l'emporte pour une raison qui n'a rien de technique.</p>
+<p>Une carte suppose que quelqu'un pense à la sortir. Un service calme, ça se fait. Un vendredi soir à quarante couverts, c'est la première chose qui saute — et ce sont justement les jours d'affluence que vous avez le plus de clients à solliciter. Une plaque posée ne demande rien à personne : votre équipe la mentionne quand elle en a le temps, et le client la voit de lui-même quand elle n'en a pas.</p>
+<p>Un ordre de grandeur, à prendre pour ce qu'il est — une hypothèse de calcul, pas une promesse. Avec 300 clients par semaine et un client sur vingt qui laisse un avis, vous seriez autour de 60 avis en quatre mois ; avec un client sur cinquante, autour de 25. Lequel des deux ressemble à votre commerce, personne ne le sait à votre place, et aucun vendeur de plaques ne devrait prétendre le contraire.</p>
+<p>Reste à savoir où la poser : notre guide des <a href="/blog/ou-placer-plaque-avis-google">emplacements de la plaque avis Google</a> détaille le raisonnement secteur par secteur, et nos pages <a href="/secteur/restaurant">restaurant</a>, <a href="/secteur/salon-coiffure">coiffure</a> et <a href="/secteur/cabinet-medical">cabinet médical</a> reprennent les cas courants.</p>
+</section>
+
+<section id="itinerant" class="scroll-mt-28 mb-16">
+<h2>L'itinérant : là, la carte est le bon choix</h2>
+<p>Il y a des métiers où poser une plaque n'a aucun sens. Trois cas, principalement.</p>
+<ul>
+<li><strong>Vous n'avez pas de comptoir.</strong> Plombier, électricien, dépanneur : vous terminez chez le client, debout dans un couloir, au moment précis où la satisfaction est maximale. Aucune surface ne vous appartient. Une carte sortie de la sacoche pendant la signature du bon d'intervention est le seul support qui tienne.</li>
+<li><strong>Votre point de vente change tous les jours.</strong> Marchés, foires, salons professionnels : l'étal est monté le matin et démonté le soir. Un adhésif suppose une surface stable, un stand ne l'est pas.</li>
+<li><strong>Vous vous déplacez chez des particuliers.</strong> Coach sportif, toiletteur mobile, photographe : le lieu appartient au client, le support doit voyager avec vous.</li>
+</ul>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ À dire clairement :</strong> dans ces trois cas, une carte NFC vous servira mieux qu'une plaque, et Swiipx n'en vend pas. Achetez-la ailleurs : une plaque commandée chez nous finirait dans une boîte à gants.</p>
+</div>
+<p>Un cas mixte revient souvent : le food truck, ou le stand d'une halle couverte. Il y a bien un comptoir, même s'il roule : une plaque fixée dessus fonctionne, à condition d'être à hauteur de regard pendant que le client attend sa commande.</p>
+</section>
+
+<section id="pourquoi-plaque" class="scroll-mt-28 mb-16">
+<h2>Pourquoi Swiipx ne fabrique que la plaque</h2>
+<p>La raison n'a rien de stratégique : nous nous adressons à des commerces où les gens se déplacent, et ce sont eux que nous équipons — onze commerces à ce jour. Fabriquer une carte pour un cas d'usage que nous ne rencontrons pas nous ferait gérer un second produit sans savoir le faire mieux que ceux qui ne font que ça.</p>
+<p>Il y a une seconde raison, plus assumée : un support qu'il faut penser à sortir est un support qu'on oublie de sortir. Nous préférons vendre un objet qui reste en place les jours où le commerçant n'a pas une minute à lui. C'est un choix, pas une vérité universelle.</p>
+<p>Concrètement : plaque acrylique 120 × 120 × 3 mm, puce NTAG215, QR code de secours imprimé, adhésif 3M fourni, livrée déjà programmée avec votre lien d'avis. Aucune application, aucun compte, paiement unique. Les critères à vérifier chez n'importe quel fabricant sont listés dans notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat</a>.</p>
+</section>
+
+<section id="lien-google" class="scroll-mt-28 mb-16">
+<h2>Obtenir votre lien d'avis Google, quel que soit le support</h2>
+<p>Carte ou plaque, la puce ne contient qu'une adresse web. Sans elle, aucun support NFC ne sert à rien.</p>
+<h3>1. Avoir une fiche revendiquée et validée</h3>
+<p>Il n'existe pas de lien d'avis sans fiche Google Business Profile validée. Si vous ne l'avez pas revendiquée, commencez par là : c'est gratuit. Les délais varient selon le mode de validation retenu par Google (vidéo, courrier, téléphone), et c'est Google qui l'impose, pas vous.</p>
+<h3>2. Récupérer le lien court</h3>
+<p>Depuis la gestion de votre fiche, cherchez la fonction « Demander des avis ». Google génère un lien court de la forme <code>https://g.page/r/…/review</code> qui ouvre directement le formulaire de notation.</p>
+<h3>3. La variante par Place ID</h3>
+<p>Chaque établissement possède un identifiant unique, son Place ID, qui construit l'adresse <code>https://search.google.com/local/writereview?placeid=…</code>. C'est notre méthode : à la commande, vous cherchez votre établissement dans le champ prévu, nous récupérons le Place ID et programmons la puce avant expédition.</p>
+<h3>4. Tester avant de graver</h3>
+<p>Ouvrez le lien depuis votre téléphone, en navigation privée pour ne pas être trompé par votre propre session Google. Le formulaire de notation doit s'ouvrir directement sur votre établissement. S'il ouvre votre fiche complète ou une recherche Maps, ce n'est pas le bon lien : vous rajoutez au client les étapes que le NFC était censé lui épargner.</p>
+</section>
+
+<section id="compatibilite" class="scroll-mt-28 mb-16">
+<h2>Quels téléphones lisent réellement le NFC ?</h2>
+<p>La question vaut pour la carte comme pour la plaque. La formule qu'on lit partout — « tous les iPhone depuis 2016 » — mélange deux choses différentes : savoir lire une puce, et la détecter tout seul.</p>
+<p>D'après la page d'assistance d'Apple qui liste les modèles compatibles avec le lecteur de tag NFC, ceux qui détectent une puce <strong>automatiquement</strong>, sans rien ouvrir, sont l'iPhone XR, l'iPhone XS, l'iPhone XS Max, l'iPhone SE de 2<sup>e</sup> génération et tous les modèles ultérieurs : téléphone déverrouillé, on l'approche, une notification apparaît. L'<strong>iPhone 7, le 7 Plus, le 8, le 8 Plus et l'iPhone X</strong> lisent bien les puces NFC, mais il faut d'abord activer le lecteur de tag NFC depuis le centre de contrôle — une manipulation qu'aucun client ne fera spontanément devant votre comptoir.</p>
+<p>Côté Android, le NFC équipe la plupart des modèles vendus ces dernières années. Il doit être activé dans les réglages, ce qu'il est souvent déjà sur les appareils servant au paiement sans contact.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>🎯 C'est à cela que sert le QR code imprimé.</strong> Un client dont le téléphone ne détecte pas la puce — iPhone antérieur au XR, NFC désactivé, coque métallique épaisse — scanne le QR de secours et arrive sur la même page. Raison suffisante pour l'exiger sur n'importe quel support NFC, carte comme plaque.</p>
+</div>
+<p>Le geste NFC et le geste QR sont comparés dans notre <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif plaque NFC contre QR code</a>. Source des modèles : <a href="https://support.apple.com/guide/iphone/aside/asd-nfc-reader/15.0/ios" rel="nofollow noopener" target="_blank">page d'assistance Apple « Modèles compatibles avec le lecteur de tag NFC »</a>.</p>
+</section>
+
+<section id="faq-carte-nfc" class="scroll-mt-28 mb-16">
+<h2>Questions fréquentes</h2>
+
+<h3>Une carte NFC est-elle moins efficace qu'une plaque ?</h3>
+<p>Techniquement, non : même puce, même lien, même geste, même distance de lecture de quelques centimètres. Ce qui change est l'exposition. Une plaque reste dans le champ de vision sans que personne intervienne ; une carte n'est vue que si quelqu'un la sort. Dans un métier itinérant, à l'inverse, la plaque n'a nulle part où être posée.</p>
+
+<h3>Swiipx vend-il des cartes NFC ?</h3>
+<p>Non, uniquement la plaque acrylique 120 × 120 × 3 mm. Si votre activité est itinérante, une carte vous servira mieux, et nous préférons vous le dire.</p>
+
+<h3>Que se passe-t-il si le téléphone du client ne lit pas le NFC ?</h3>
+<p>Il scanne le QR code imprimé sur le support, qui mène à la même page. Cela concerne les iPhone 7, 8 et X, qui doivent activer le lecteur de tag NFC depuis le centre de contrôle, les téléphones dont le NFC est désactivé et les coques métalliques épaisses.</p>
+
+<h3>Faut-il une application pour utiliser une carte ou une plaque NFC ?</h3>
+<p>Ni pour vous, ni pour le client. La puce transmet une adresse au téléphone, qui l'ouvre dans son navigateur. Chez Swiipx, la plaque est programmée avant expédition : aucun compte à créer, aucun code à saisir à la réception.</p>
+
+<h3>La puce s'use-t-elle à force d'être lue ?</h3>
+<p>Non. Une NTAG215 est passive : sans batterie, elle tire son énergie du champ émis par le téléphone pendant la lecture. Ce qui se dégrade, c'est la matière autour de la puce, pas la puce.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : le support suit votre métier</h2>
+<p>La carte NFC avis Google et la plaque font la même chose avec la même puce. Le seul arbitrage réel : <strong>si vos clients viennent chez vous, prenez une plaque ; si c'est vous qui allez chez eux, prenez une carte</strong>. Durabilité, coût, visibilité : le reste découle de là.</p>
+<p>Une dernière chose, valable pour les deux formats. Aucun support ne rend satisfait un client qui ne l'était pas, et aucun ne remplace la phrase de votre équipe au bon moment. Ce que le NFC supprime, c'est l'obstacle matériel entre un client content et le formulaire d'avis : sortir l'appareil photo, cadrer un code, confirmer une redirection. Cela se compte en nombre de gestes, et cela s'arrête là.</p>
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Vous êtes un commerce où les clients viennent ?</strong></p>
+<p class="text-sm text-blue-900">La plaque Swiipx arrive déjà programmée avec le lien d'avis de votre établissement : acrylique 120 × 120 × 3 mm, puce NTAG215, QR code de secours, adhésif 3M fourni. Paiement unique à partir de 35,88 € TTC, sans abonnement, garantie à vie sur la puce NFC, livraison offerte en point relais. <a href="/#product" class="font-semibold underline">Voir les trois packs</a>.</p>
+</div>
+</section>`,
+  },
+  'magnet-nfc-avis-google': {
+    title: 'Magnet NFC pour les avis Google : dans quels cas il est le bon support',
+    category: 'Comparatif',
+    date: '7 août 2026',
+    readTime: '8 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Le magnet NFC a un vrai domaine d\'usage : les surfaces métalliques et les supports qu\'on déplace. Il a aussi trois limites rarement expliquées, dont une contrainte physique : le métal perturbe le champ NFC, et un magnet mal conçu se lit mal, voire pas du tout.',
+    tocSections: [
+      { id: 'de-quoi-parle-t-on', label: 'Ce qu\'est un magnet NFC' },
+      { id: 'metal-nfc', label: 'Le métal perturbe le NFC' },
+      { id: 'ou-le-magnet-gagne', label: 'Où le magnet gagne' },
+      { id: 'limites-magnet', label: 'Ses trois limites réelles' },
+      { id: 'comparatif', label: 'Magnet ou plaque : le tableau' },
+      { id: 'compatibilite', label: 'Quels téléphones le lisent' },
+      { id: 'choisir', label: 'La décision en 3 questions' },
+      { id: 'faq-magnet-nfc', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="de-quoi-parle-t-on" class="scroll-mt-28 mb-16">
+<h2>Un magnet NFC, c'est une plaque dont on a changé la fixation</h2>
+<p>Un magnet NFC pour les avis Google est un support aimanté contenant une puce NFC programmée avec l'adresse de votre page d'avis. Le client approche son téléphone, la page s'ouvre. Le principe est exactement celui d'une plaque : ce qui change, c'est la façon dont l'objet tient. Une plaque tient par un adhésif ou par son propre poids sur un comptoir ; un magnet tient par attraction sur une surface ferromagnétique — le flanc d'un camion, une porte de chambre froide, un rideau métallique, un poteau en acier, la carrosserie d'une remorque.</p>
+<p>Ce seul détail de fixation en entraîne trois autres, et ce sont eux qui décident du bon choix : on peut déplacer un magnet en une seconde, on peut le retirer le soir en fermant, et n'importe qui d'autre peut le retirer aussi.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Transparence :</strong> Swiipx ne vend pas de magnet NFC. Nous vendons des plaques. Cet article existe parce que la question revient souvent et qu'il y a des situations, décrites plus bas, où le magnet est le meilleur support. Dans ces cas-là, achetez un magnet — mais un magnet correctement conçu, et la section suivante explique ce que cela veut dire.</p>
+</div>
+</section>
+
+<section id="metal-nfc" class="scroll-mt-28 mb-16">
+<h2>Le point technique que presque personne n'explique : le métal perturbe le NFC</h2>
+<p>Le NFC ne fonctionne pas comme le Wi-Fi ou le Bluetooth. Il repose sur un couplage magnétique à courte portée entre deux boucles d'antenne : celle du téléphone et celle de la puce. Le téléphone émet un champ magnétique alternatif à 13,56 MHz, ce champ induit un courant dans l'antenne de la puce, et c'est ce courant qui l'alimente — la puce n'a pas de batterie.</p>
+<p>Placez une surface métallique juste derrière cette antenne et le mécanisme se dérègle. Le champ alternatif induit dans le métal des <strong>courants de Foucault</strong>, qui produisent à leur tour un champ orienté en sens inverse, absorbent une partie de l'énergie et <a href="https://www.iotforall.com/nfc-metallic-interference-ferrite-solutions" target="_blank" rel="noopener noreferrer">désaccordent l'antenne de la puce</a>. Concrètement, l'inductance et le facteur de qualité chutent, et la fréquence de résonance du tag s'éloigne de celle du lecteur. Le résultat va de la lecture capricieuse à l'absence totale de détection.</p>
+<p>Or un magnet, par définition, est fait pour se coller sur du métal. Un magnet NFC est donc <em>toujours</em> dans la situation qui met le NFC en difficulté. Ce n'est pas un défaut de qualité, c'est de la physique.</p>
+<h3>La solution : une couche de ferrite, ou un espaceur</h3>
+<p>Les fabricants qui traitent le problème insèrent entre l'antenne et le support une couche de <strong>ferrite</strong>, un matériau à forte perméabilité magnétique. Les lignes de champ empruntent ce chemin plus favorable plutôt que le métal : la ferrite se substitue au support du point de vue de l'antenne, et les courants de Foucault induits dans la carrosserie diminuent d'autant. C'est ce qui distingue un tag dit « anti-métal » ou « on-metal » d'un tag ordinaire. À défaut, un simple espaceur non conducteur, qui éloigne physiquement l'antenne du métal, améliore déjà les choses — c'est moins efficace qu'une ferrite, mais c'est mieux que rien.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>🔎 La question à poser au vendeur :</strong> « votre magnet est-il anti-métal, avec une couche de ferrite ? » Si la réponse est floue, passez votre chemin. Et testez à la réception : posez le magnet sur la surface exacte où il vivra, puis approchez un téléphone. Un magnet qui se lit parfaitement dans la main et mal, ou plus du tout, une fois sur le frigo n'est pas correctement blindé — ferrite absente, ou insuffisante pour ce support.</p>
+</div>
+<h3>Non, l'aimant n'efface pas la puce</h3>
+<p>C'est une crainte fréquente, et elle est infondée. Une puce NTAG215 stocke ses données dans une mémoire EEPROM : l'information y est retenue sous forme de charge électrique, pas d'aimantation, contrairement à la bande d'une vieille carte bancaire. Un aimant ne réécrit rien. Le problème du métal n'est jamais un problème d'effacement : c'est un problème de champ pendant la lecture.</p>
+</section>
+
+<section id="ou-le-magnet-gagne" class="scroll-mt-28 mb-16">
+<h2>Les quatre situations où le magnet est le bon support</h2>
+<p>Il existe des configurations où poser une plaque n'a pas de sens et où le magnet répond exactement au besoin.</p>
+<h3>1. Le point de vente mobile</h3>
+<p>Un food truck, une remorque à pizzas, un camion de marché : la carrosserie est métallique, elle est lavée, elle roule. Un adhésif y vieillit mal et une plaque posée ne survit pas au premier virage. Un magnet se pose à l'ouverture, à hauteur du comptoir de service, et rentre à la fermeture. C'est le cas d'usage le plus évident.</p>
+<h3>2. La surface métallique déjà présente</h3>
+<p>Frigo de supérette, vitrine réfrigérée de boucherie, armoire à boissons, rideau métallique : la surface est là, elle est visible, et percer ou coller n'est pas envisageable. Le magnet évite d'ajouter un support. Attention en revanche à l'inox : contrairement à ce qu'on suppose, une grande partie des aciers inoxydables de cuisine professionnelle n'est pas magnétique. Une hotte ou un plan inox se teste avant d'être choisie comme emplacement, comme expliqué plus bas.</p>
+<h3>3. Le support qu'on déplace tous les jours</h3>
+<p>Marché couvert, stand de salon, terrasse installée le matin et rangée le soir, restaurant qui change la configuration de sa salle selon les services. Un magnet suit le mouvement sans laisser de trace ni consommer d'adhésif.</p>
+<h3>4. La location, ou l'essai</h3>
+<p>Quand le mobilier ne vous appartient pas — local loué, corner dans une galerie, emplacement concédé — l'absence de trace compte. Le magnet se retire sans résidu, ce qu'un adhésif industriel ne garantit jamais totalement.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>🎯 Estimer un volume sans inventer de chiffre :</strong> nous ne publions aucun taux de collecte, parce que nous ne l'avons pas mesuré. Faites plutôt l'arithmétique avec vos propres données. Prenons une hypothèse de travail, et rien de plus : un food truck qui sert environ 200 clients par semaine, et une proportion supposée d'un client sur vingt qui accepte de déposer un avis. Cela donne une dizaine d'avis par semaine. Le premier nombre, vous le connaissez déjà. Le second, personne ne peut vous le donner à l'avance : il dépend de votre clientèle, de l'endroit où le support est placé et du moment où vous le présentez. Deux semaines d'observation vous donneront votre vraie proportion, et le calcul deviendra fiable.</p>
+</div>
+</section>
+
+<section id="limites-magnet" class="scroll-mt-28 mb-16">
+<h2>Les trois limites réelles du magnet</h2>
+<h3>La tenue dans le temps</h3>
+<p>L'aimantation est un point de faiblesse mécanique. Sur une surface qui vibre, qui chauffe, ou simplement grasse et poussiéreuse — une cuisine, un flanc de camion —, l'adhérence se dégrade : le film gras réduit le contact, et le magnet finit par glisser, puis par tomber. Un support souple type aimant caoutchouté se déforme aussi avec les écarts de température. Le vrai risque n'est pas la chute elle-même, c'est qu'elle passe inaperçue : un magnet tombé derrière un meuble ne collecte plus rien, et personne ne s'en rend compte tant que quelqu'un ne pense pas à vérifier. Prenez l'habitude de contrôler sa présence à chaque ouverture, comme le reste de votre mise en place.</p>
+<h3>Le vol et la disparition</h3>
+<p>Ce qui se retire en une seconde s'emporte en une seconde. Un magnet placé à hauteur de client, en libre accès, dans un lieu de passage, s'expose à disparaître. Parfois par malveillance, plus souvent parce qu'un client curieux le manipule et le repose ailleurs, ou qu'un employé le range « pour faire propre ». Une plaque collée au 3M ou lestée sur un comptoir ne pose pas ce problème.</p>
+<h3>Les surfaces non magnétiques, c'est-à-dire la plupart</h3>
+<p>C'est la limite la plus banale et la plus décisive. Un comptoir en bois, un plan de travail stratifié, une vitre, un mur peint, un carrelage, une caisse en plastique, un porte-addition : aucun magnet n'y tient. Et le métal lui-même n'est pas une garantie — les aciers inoxydables austénitiques, les plus courants en cuisine professionnelle, ne sont pas ou sont très peu magnétiques, pas plus que l'aluminium ou le cuivre. Testez avec n'importe quel aimant de cuisine avant de commander.</p>
+</section>
+
+<section id="comparatif" class="scroll-mt-28 mb-16">
+<h2>Magnet NFC ou plaque NFC : le comparatif honnête</h2>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Critère</th><th class="border p-3 text-left">Magnet NFC</th><th class="border p-3 text-left">Plaque NFC (adhésif ou posée)</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Surfaces compatibles</td><td class="border p-3">Uniquement ferromagnétiques</td><td class="border p-3">Toutes : bois, verre, plastique, métal, pierre</td></tr>
+<tr><td class="border p-3">Contrainte technique</td><td class="border p-3">Exige une couche de ferrite pour se lire sur métal</td><td class="border p-3">Aucune, sauf si le support lui-même est métallique</td></tr>
+<tr><td class="border p-3">Déplacement</td><td class="border p-3">Immédiat, sans trace</td><td class="border p-3">Repositionnable si posée, définitif si collée</td></tr>
+<tr><td class="border p-3">Tenue dans le temps</td><td class="border p-3">Sensible à la graisse, à la chaleur et aux vibrations</td><td class="border p-3">Stable une fois posée</td></tr>
+<tr><td class="border p-3">Risque de disparition</td><td class="border p-3">Élevé en libre accès</td><td class="border p-3">Faible</td></tr>
+<tr><td class="border p-3">Usage type</td><td class="border p-3">Food truck, frigo, marché, stand</td><td class="border p-3">Comptoir, caisse, accueil, table, porte-addition</td></tr>
+</tbody>
+</table>
+</div>
+<p>Aucune des deux lignes n'est meilleure dans l'absolu. Le magnet gagne partout où la surface est métallique et le support mobile ; la plaque gagne partout ailleurs, c'est-à-dire dans la grande majorité des commerces sédentaires, où le bon emplacement est un comptoir en bois ou en stratifié. Notre guide sur <a href="/blog/ou-placer-plaque-avis-google">le placement d'une plaque avis Google</a> détaille comment identifier cet emplacement à partir du parcours de vos clients.</p>
+</section>
+
+<section id="compatibilite" class="scroll-mt-28 mb-16">
+<h2>Quels téléphones lisent un magnet NFC</h2>
+<p>La compatibilité ne dépend pas du support mais du téléphone, et elle est identique pour un magnet et pour une plaque.</p>
+<p>Côté Apple, la distinction est publiée <a href="https://support.apple.com/fr-fr/guide/iphone/aside/asd-nfc-reader/14.0/ios/14.0" target="_blank" rel="noopener noreferrer">modèle par modèle dans le guide de l'iPhone</a>. La lecture d'un tag NFC <strong>sans ouvrir la moindre application</strong> est automatique sur l'iPhone XR, l'iPhone XS, l'iPhone XS Max, l'iPhone 11 et ses déclinaisons Pro, l'iPhone SE 2<sup>e</sup> génération, l'iPhone 12 et ses déclinaisons, ainsi que sur tous les modèles sortis depuis. Sur les iPhone 7, 7 Plus, 8, 8 Plus et X, la puce NFC est bien présente, mais il faut activer le Lecteur de tag NFC depuis le centre de contrôle : la lecture reste possible, elle demande simplement un geste de plus au client.</p>
+<p>Côté Android, la lecture en arrière-plan est la norme sur les appareils équipés d'une puce NFC, mais une partie des modèles d'entrée de gamme n'en embarque tout simplement pas.</p>
+<p>Conclusion pratique valable pour les deux supports : <strong>un QR code imprimé à côté de la zone NFC n'est pas un gadget</strong>, c'est le filet de sécurité qui rattrape les téléphones anciens ou non équipés. Nous détaillons les écarts d'usage entre les deux technologies dans notre <a href="/blog/plaque-nfc-vs-qr-code-avis-google">comparatif plaque NFC vs QR code</a>.</p>
+</section>
+
+<section id="choisir" class="scroll-mt-28 mb-16">
+<h2>La décision tient en trois questions</h2>
+<ol>
+<li><strong>Un aimant tient-il à l'endroit exact où le client sera au moment où il est content ?</strong> Pas « quelque part dans le commerce » : à cet endroit précis. Testez avec un aimant de frigo. Si la réponse est non, la question du magnet est réglée.</li>
+<li><strong>Le support bouge-t-il ?</strong> Camion, stand, terrasse démontée chaque soir : le magnet prend l'avantage. Comptoir fixe : il n'apporte rien de plus qu'une plaque, et ajoute un risque de chute et de disparition.</li>
+<li><strong>Le support est-il sous surveillance ?</strong> Derrière un comptoir, un magnet ne risque pas grand-chose. Sur une vitrine côté rue ou une table en terrasse, il est à portée de main de n'importe qui.</li>
+</ol>
+<p>Si les trois réponses désignent le magnet, achetez un magnet anti-métal. Si l'une d'elles désigne la plaque, le choix se déplace vers le format, le matériau et le nombre d'exemplaires — les critères que passe en revue notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat d'une plaque NFC</a>, avec les prix pratiqués sur le marché dans notre <a href="/blog/prix-plaque-nfc-avis-google">comparatif tarifaire</a>.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>🎯 Le cas mixte, très fréquent en restauration :</strong> une plaque au comptoir ou dans le porte-addition pour la salle, et un magnet sur la vitrine réfrigérée ou le camion pour la vente à emporter. Rien n'oblige à choisir un seul support. Le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a> couvre la partie sédentaire à 65,88 € TTC, et notre guide <a href="/blog/plaque-nfc-restaurant">plaque NFC restaurant</a> décrit l'organisation service par service.</p>
+</div>
+</section>
+
+<section id="faq-magnet-nfc" class="scroll-mt-28 mb-16">
+<h2>FAQ — Magnet NFC et avis Google</h2>
+
+<h3>Un magnet NFC fonctionne-t-il vraiment sur une surface métallique ?</h3>
+<p>Oui, à condition qu'il soit conçu pour. Le métal placé derrière l'antenne y induit des courants de Foucault qui créent un champ opposé et désaccordent la puce : un tag NFC ordinaire collé sur du métal devient illisible ou très capricieux. Les magnets corrects intègrent une couche de ferrite entre l'antenne et le support, qui canalise les lignes de champ magnétique et isole la puce du métal. Vérifiez la mention « anti-métal » ou « on-metal » avant d'acheter, et testez sur la surface réelle dès la réception.</p>
+
+<h3>Un aimant peut-il effacer la puce NFC d'un magnet ?</h3>
+<p>Non. Une puce NTAG215 stocke ses données dans une mémoire EEPROM, où l'information est retenue sous forme de charge électrique et non d'aimantation, contrairement à la bande d'une ancienne carte bancaire. Un aimant ne réécrit pas son contenu. La difficulté que pose le métal concerne la lecture du tag, pas la conservation des données qu'il contient.</p>
+
+<h3>Magnet ou plaque NFC : lequel choisir pour un restaurant ?</h3>
+<p>Cela dépend de la surface. En salle, le bon emplacement est presque toujours le porte-addition ou le comptoir d'encaissement, deux supports en bois ou en stratifié sur lesquels aucun aimant ne tient : c'est une plaque qu'il faut. Pour la vente à emporter depuis un camion ou une vitrine réfrigérée métallique, le magnet est plus adapté. Beaucoup d'établissements utilisent les deux supports en parallèle.</p>
+
+<h3>Le magnet tient-il sur toutes les surfaces métalliques ?</h3>
+<p>Non. Il faut une surface ferromagnétique, et de nombreux aciers inoxydables ne le sont pas — c'est le cas des inox austénitiques, les plus répandus en cuisine professionnelle. L'aluminium et le cuivre ne le sont pas non plus. Le test coûte dix secondes : approchez un aimant de frigo de la surface visée avant de commander quoi que ce soit.</p>
+
+<h3>Quels iPhone lisent un magnet ou une plaque NFC sans application ?</h3>
+<p>La lecture automatique d'un tag NFC, sans ouvrir la moindre application, fonctionne sur l'iPhone XR, l'iPhone XS, l'iPhone XS Max, la gamme iPhone 11, l'iPhone SE 2<sup>e</sup> génération, la gamme iPhone 12 et tous les modèles sortis depuis. Sur les iPhone 7, 7 Plus, 8, 8 Plus et X, la puce est présente mais il faut activer le Lecteur de tag NFC depuis le centre de contrôle, comme Apple le documente modèle par modèle. C'est la raison pour laquelle un QR code de secours imprimé à côté de la zone NFC reste utile, quel que soit le support choisi.</p>
+
+<h3>Swiipx vend-il des magnets NFC pour les avis Google ?</h3>
+<p>Non. Swiipx produit des plaques en acrylique de 120 × 120 × 3 mm, livrées déjà programmées avec le lien d'avis Google de votre établissement, avec adhésif 3M fourni et QR code de secours imprimé. Si votre besoin est un support aimanté sur un camion ou un frigo, un magnet anti-métal sera plus adapté que notre produit, et nous préférons le dire plutôt que de vendre le mauvais objet.</p>
+
+<h3>Faut-il un abonnement pour un magnet ou une plaque NFC ?</h3>
+<p>Aucun des deux ne l'exige techniquement. La puce contient une adresse web, celle de votre page d'avis Google, qui ne change pratiquement jamais une fois l'établissement créé. Certains vendeurs facturent un abonnement mensuel pour un lien reprogrammable et un tableau de bord. Les plaques Swiipx sont vendues en paiement unique, à partir de 35,88 € TTC pour une plaque, avec garantie à vie et livraison en point relais offerte.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : le bon support est celui qui tient là où le client est content</h2>
+<p>Le débat magnet contre plaque se règle sans idéologie. Le magnet est le meilleur support quand la surface est métallique et que le point de vente bouge : food truck, marché, stand, frigo de supérette, rideau ou vitrine métallique. Il paie ce confort par trois faiblesses réelles — une tenue qui se dégrade avec la graisse, la chaleur et les vibrations, une disparition facile, et une incompatibilité avec la plupart des surfaces d'un commerce sédentaire.</p>
+<p>Et dans tous les cas, retenez la contrainte physique : le métal perturbe le champ NFC. Un magnet sans couche de ferrite peut très bien se lire dans la main, en magasin, et devenir capricieux ou muet une fois posé sur la carrosserie. C'est le seul point sur lequel il ne faut faire aucune concession — et il se vérifie en trente secondes, sur la surface réelle, dès la réception.</p>
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Votre comptoir n'est pas en métal ?</strong></p>
+<p class="text-sm text-blue-900">Les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> arrivent déjà programmées avec le lien d'avis de votre établissement : rien à configurer, aucune application, aucun compte. Acrylique 120 × 120 mm, adhésif 3M fourni, QR code de secours imprimé, garantie à vie, <strong>sans abonnement</strong>. À partir de 35,88 € TTC (29,90 € HT), livraison en point relais offerte — <a href="/product/starter" class="font-semibold underline">Pack Starter</a>.</p>
+</div>
+</section>`,
+  },
   'cout-avis-google-comparatif': {
     title: "Combien coûte un avis Google ? Le comparatif du coût réel par avis",
     category: 'Comparatif',
