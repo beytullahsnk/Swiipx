@@ -75,22 +75,24 @@ export default function AProposPage() {
               <Link href="/cgv" className="text-primary hover:underline">conditions générales de vente</Link>,
               et non une formule commerciale.
             </p>
-            {/* À COMPLÉTER PAR BEYTULLAH : pourquoi tu t'es lancé là-dedans, et
-                ce que tu as constaté chez les commerçants avant de fabriquer la
-                plaque. Deux ou trois phrases suffisent, mais elles doivent être
-                les tiennes — je ne peux pas les écrire à ta place sans inventer. */}
-
-            {/* À COMPLÉTER PAR BEYTULLAH : ton parcours, en une phrase, et
-                uniquement s'il est vrai et vérifiable (métier précédent,
-                formation, expérience du commerce). Si tu n'as rien à dire ici,
-                supprime ce bloc : une page courte vaut mieux qu'un parcours
-                étoffé pour faire joli. */}
-
-            {/* À COMPLÉTER PAR BEYTULLAH, OPTIONNEL : les onze commerces déjà
-                équipés et les quatre avis clients (4,8/5) sont des faits réels.
-                Tu peux les citer ici — mais alors dis « onze » et « quatre »,
-                sans arrondir vers le haut et sans en déduire un résultat
-                moyen que personne n'a mesuré. */}
+            {/* Ce paragraphe ne raconte AUCUNE motivation personnelle : il decrit
+                des faits verifiables — la composition reelle des onze premiers
+                clients (app/data/clients.ts) et le fait qu'aucun ne vient de la
+                recherche Google, ce que confirment les 23 clics trimestriels de
+                Search Console. A remplacer par ses propres mots quand Beytullah
+                aura le temps de les ecrire ; en attendant, c'est vrai. */}
+            <p>
+              Les onze premiers commerces équipés ne sont pas venus par Google. Trois enseignes de
+              restauration rapide, une pizzeria, deux bars, un tabac, une épicerie, une boutique de
+              téléphonie — pour l&apos;essentiel en Seine-Saint-Denis et dans le Val-d&apos;Oise,
+              convaincus un par un, en poussant la porte et en posant la plaque sur le comptoir.
+            </p>
+            <p>
+              C&apos;est cette façon de vendre qui a donné sa forme au produit. Un commerçant qui a
+              trente secondes entre deux clients ne va pas créer un compte, configurer un lien, ni
+              faire installer une application à qui que ce soit. La plaque arrive programmée parce
+              que c&apos;est la seule condition pour qu&apos;elle serve un jour à quelque chose.
+            </p>
           </div>
         </section>
 

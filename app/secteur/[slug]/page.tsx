@@ -383,6 +383,22 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
           <p className="text-base text-gray-700 leading-relaxed bg-blue-50 border border-blue-100 rounded-xl p-5">
             {sector.formats.conclusion}
           </p>
+
+          {/* Liens editoriaux vers les deux articles de fond sur les formats.
+              Ils repondent aux requetes « carte nfc avis google » et « magnet nfc
+              restaurant », sur lesquelles le site sort deja en position 3 a 7.
+              Cette section est le seul endroit du site ou ces trois formats sont
+              compares : c'est donc d'ici que le lien a le plus de sens. */}
+          <p className="mt-5 text-sm text-gray-600">
+            Pour aller plus loin&nbsp;:{' '}
+            <Link href="/blog/carte-nfc-avis-google" className="text-primary hover:underline underline-offset-2">
+              carte NFC ou plaque, comment trancher
+            </Link>{' '}
+            et{' '}
+            <Link href="/blog/magnet-nfc-avis-google" className="text-primary hover:underline underline-offset-2">
+              dans quels cas le magnet NFC est le bon choix
+            </Link>.
+          </p>
         </section>
 
         {/* Fiche Google Business Profile — repond a « plaque nfc google my
