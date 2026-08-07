@@ -13,6 +13,7 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'plaque-nfc-auto-ecole', label: 'Plaque NFC auto-école : avis et scripts' },
   { slug: 'carte-nfc-avis-google', label: 'Carte NFC ou plaque : que choisir ?' },
   { slug: 'magnet-nfc-avis-google', label: 'Magnet NFC : quand il vaut mieux qu\'une plaque' },
   { slug: 'cout-avis-google-comparatif', label: "Combien coûte un avis Google ?" },

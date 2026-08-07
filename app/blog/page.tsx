@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 27,
+    title: 'Plaque NFC auto-école : collecter des avis Google quand l\'élève réussit',
+    excerpt: 'Auto-écoles et écoles de conduite : votre fiche Google reflète surtout les élèves qui ont échoué, parce que ce sont les seuls qui reviennent au bureau. Emplacements, moments clés, scripts moniteur et exemples de calcul.',
+    category: 'Secteur',
+    date: '7 août 2026',
+    dateIso: '2026-08-07',
+    readTime: '11 min',
+    slug: 'plaque-nfc-auto-ecole',
+  },
+  {
     id: 25,
     title: 'Carte NFC avis Google : carte ou plaque, que choisir ?',
     excerpt: 'Carte NFC ou plaque NFC pour les avis Google : même puce, même lien, même geste. Ce qui les sépare, c\'est que l\'une se transporte et l\'autre reste posée. Comparatif honnête, y compris les cas où Swiipx — qui ne fabrique que la plaque — vous conseille la carte.',

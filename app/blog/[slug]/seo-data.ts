@@ -26,6 +26,23 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'plaque-nfc-auto-ecole': {
+    title: 'Plaque NFC auto-école : avis Google, placement et scripts',
+    description: 'Plaque NFC pour auto-école : où la poser, quoi dire à l\'élève et pourquoi votre fiche Google reflète surtout les échecs. Emplacements, scripts moniteur et calculs.',
+    keywords: 'plaque nfc auto-ecole, avis google auto ecole, avis auto école, auto-école avis google, collecter avis google auto ecole, plaque avis google auto ecole, fiche google auto ecole, seo local auto ecole, ecole de conduite avis google',
+    date: '2026-08-07',
+    dateModified: '2026-08-07',
+    category: 'Secteur',
+    faq: [
+      { q: 'Combien d\'avis Google une auto-école peut-elle collecter avec une plaque NFC ?', a: 'Cela dépend de votre nombre d\'élèves et de la régularité de la demande, pas de la plaque. Le calcul se fait à partir de vos chiffres : un élève ne dépose qu\'un seul avis, donc le plafond est votre nombre d\'inscrits distincts sur l\'année, et le rythme dépend de la part d\'entre eux que vous sollicitez réellement. Sur une auto-école de 180 élèves par an, si un élève sur cinq dépose un avis, cela ferait environ 36 avis annuels. Le facteur déterminant n\'est pas la taille de l\'établissement mais la systématisation de la demande au moment du résultat d\'examen.' },
+      { q: 'Où placer la plaque NFC dans une auto-école ?', a: 'Le comptoir du secrétariat est l\'emplacement de volume : tout le monde y passe pour s\'inscrire, régler une échéance ou réserver des heures, et l\'élève y a déjà son téléphone ou sa carte en main. La salle de code est le meilleur complément, grâce aux temps d\'attente avant séance et à l\'effet d\'entraînement dans un groupe. Le bureau d\'entretien, lors d\'un bilan de progression, donne les avis les plus détaillés mais concerne moins d\'élèves.' },
+      { q: 'Pourquoi la fiche Google d\'une auto-école reçoit-elle surtout des avis négatifs ?', a: 'Parce que le parcours client est asymétrique. L\'élève qui réussit son permis n\'a plus aucune raison de revenir au bureau : son certificat se télécharge en ligne, il n\'a plus rien à régler. Celui qui échoue revient pour reprendre des heures et redemander une place d\'examen, déçu et avec un budget qui dérape. Le seul segment qui repasse par votre secrétariat est donc le segment mécontent. Une plaque posée au comptoir ne corrige pas cette asymétrie à elle seule : c\'est l\'appel de félicitations après chaque résultat favorable qui fait revenir les élèves satisfaits.' },
+      { q: 'Peut-on offrir une heure de conduite en échange d\'un avis Google ?', a: 'Non, c\'est formellement interdit par les règles de Google. Toute contrepartie — heure offerte, réduction, accès illimité au code — expose à la suppression massive de vos avis, y compris les avis légitimes, et à la suspension de votre fiche. Il est tout aussi risqué de ne présenter la plaque qu\'aux élèves reçus : ce filtrage est contraire aux conditions d\'utilisation, et Google repère ces schémas statistiques.' },
+      { q: 'Les élèves ajournés à l\'examen doivent-ils être sollicités ?', a: 'Oui, mais pas au retour de l\'examen. Un élève ajourné qui apprécie sa formation a parfaitement le droit de le dire, et son avis est souvent le plus crédible de votre fiche parce qu\'il distingue explicitement le résultat de la qualité de l\'accompagnement. Le bon moment est un bilan de progression favorable ou la réussite de la tentative suivante, jamais les jours qui suivent un échec.' },
+      { q: 'Faut-il un abonnement pour utiliser la plaque NFC ?', a: 'Non. La plaque Swiipx est un paiement unique, sans frais mensuels ni renouvellement. Elle fonctionne des années grâce à une puce NFC passive, qui n\'a besoin d\'aucune batterie et tire son énergie du champ émis par le téléphone pendant la lecture.' },
+      { q: 'Quel pack choisir pour une auto-école ?', a: 'Agence unique sans salle de code, ou point de vente de petite taille : Pack Starter. Auto-école classique avec secrétariat et salle de code : Pack Business (2 plaques), la configuration la plus fréquente. Réseau multi-agences, établissement proposant moto ou poids lourd, ou salle de code accueillant plusieurs sessions par jour : Pack Pro (5 plaques).' },
+    ],
+  },
   'carte-nfc-avis-google': {
     title: 'Carte NFC avis Google : carte ou plaque, que choisir ?',
     description: 'Carte NFC avis Google ou plaque : le format se choisit selon que votre point de contact bouge ou non. Comparatif honnête, compatibilité iPhone et lien Google.',
