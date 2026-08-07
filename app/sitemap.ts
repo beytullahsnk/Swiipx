@@ -51,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { url: BASE_URL, lastModified: MODIF_COMMERCIAL, changeFrequency: 'weekly' as const, priority: 1 },
     { url: `${BASE_URL}/blog`, lastModified: MODIF_EDITORIAL, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${BASE_URL}/a-propos`, lastModified: MODIF_EDITORIAL, changeFrequency: 'monthly' as const, priority: 0.6 },
     { url: `${BASE_URL}/contact`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${BASE_URL}/livraison`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.4 },
     { url: `${BASE_URL}/retours`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.4 },

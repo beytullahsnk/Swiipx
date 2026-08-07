@@ -26,6 +26,7 @@ export default function Footer() {
       { name: 'Retours et échanges', href: '/retours' },
     ],
     swiipx: [
+      { name: 'À propos', href: '/a-propos' },
       { name: 'Blog', href: '/blog' },
       { name: 'Contactez-nous', href: '/contact' },
       { name: 'Mentions légales', href: '/mentions-legales' },
