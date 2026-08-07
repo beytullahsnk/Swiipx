@@ -8,7 +8,7 @@ import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
 import ProductShowcase from './components/ProductShowcase'
 import { notationJsonLd, reviews, reviewsPourPack } from './data/reviews'
-import { PACK_LIST } from '../lib/pricing'
+import { LOWEST_PRICE_CENTS, PACK_LIST, formatHt } from '../lib/pricing'
 import { NOM_PACK, offreGammeJsonLd, produitPackJsonLd } from '../lib/product-schema'
 
 export const dynamic = 'force-static'
@@ -115,7 +115,7 @@ export default function Home() {
     supply: [
       {
         '@type': 'HowToSupply',
-        name: 'Plaque NFC Swiipx (à partir de 35,88€)',
+        name: `Plaque NFC Swiipx (à partir de ${formatHt(LOWEST_PRICE_CENTS)})`,
       },
     ],
     tool: [

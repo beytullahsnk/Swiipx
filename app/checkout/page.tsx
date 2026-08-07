@@ -88,7 +88,14 @@ function OrderSummaryMobile({ items, subtotalCents, shippingCents, optionCents, 
           </span>
         </div>
         <div className="flex items-center space-x-3">
-          <span className="font-bold text-gray-900">{formatPrice(grandTotal)}</span>
+          {/* « TTC » explicite des l'etat replie : le detail de la TVA est
+              derriere ce bouton, et le paiement est desormais le SEUL endroit du
+              site ou le montant TTC apparait. Le client doit connaitre le
+              montant reellement debite sans avoir a deplier quoi que ce soit
+              (art. L112-1 du Code de la consommation). */}
+          <span className="font-bold text-gray-900">
+            {formatPrice(grandTotal)} <span className="text-xs font-semibold text-gray-500">TTC</span>
+          </span>
           {isOpen ? (
             <ChevronUp className="w-4 h-4 text-gray-400" />
           ) : (
@@ -1169,7 +1176,7 @@ function CheckoutForm({
         >
           <Lock className="w-4 h-4" />
           <span>
-            {isProcessing ? 'Traitement en cours...' : `Payer ${formatPrice(totalCents)}`}
+            {isProcessing ? 'Traitement en cours...' : `Payer ${formatPrice(totalCents)} TTC`}
           </span>
         </button>
 

@@ -97,7 +97,7 @@ const sectors: Record<string, SectorContent> = {
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
-      price: '65,88 €',
+      price: '54,90 €',
       description: 'Le pack idéal pour un restaurant moyen : 1 plaque sur le porte-addition + 1 plaque à la caisse. Configuration incluse, livraison offerte en point relais, garantie à vie.',
     },
     faq: faqSecteurs['restaurant'],
@@ -151,7 +151,7 @@ const sectors: Record<string, SectorContent> = {
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
-      price: '65,88 €',
+      price: '54,90 €',
       description: 'Deux plaques pour couvrir les deux moments utiles : 1 sur le poste principal, 1 à la caisse. Logo et nom du salon inclus.',
     },
     faq: faqSecteurs['salon-coiffure'],
@@ -204,7 +204,7 @@ const sectors: Record<string, SectorContent> = {
     recommendedPack: {
       slug: 'business',
       name: 'Pack Business — 2 plaques NFC',
-      price: '65,88 €',
+      price: '54,90 €',
       description: '2 plaques discrètes pour couvrir accueil + salle d\'attente. Design sobre, configuration personnalisée incluse.',
     },
     faq: faqSecteurs['cabinet-medical'],
@@ -251,7 +251,7 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
                   href={`/product/${sector.recommendedPack.slug}`}
                   className="inline-flex items-center justify-center px-7 py-3.5 bg-primary text-white rounded-xl font-semibold text-base shadow-lg hover:bg-blue-700 transition-colors whitespace-nowrap"
                 >
-                  Commander dès 35,88 €
+                  Commander dès 29,90 €
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link

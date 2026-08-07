@@ -150,7 +150,7 @@ export default function DoublerAvisGoogle30Jours() {
                   </p>
                   {/* Aucun prix barre : les tarifs ont augmente, afficher une
                       reduction serait une reduction fictive. */}
-                  <p className="text-lg font-bold text-primary mb-3">35,88 €</p>
+                  <p className="text-lg font-bold text-primary mb-3">29,90 €</p>
                   <Link
                     href="/#product"
                     className="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-blue-700 transition-colors text-sm shadow-md hover:shadow-lg"
@@ -326,7 +326,7 @@ export default function DoublerAvisGoogle30Jours() {
                       <td className="p-3 border border-gray-200 font-semibold text-green-800">Plaque NFC Swiipx</td>
                       <td className="p-3 border border-gray-200 font-semibold text-green-800">Approcher le téléphone de la plaque</td>
                       <td className="p-3 border border-gray-200 font-semibold text-green-800">Sur place, au moment où vous la lui montrez</td>
-                      <td className="p-3 border border-gray-200 font-semibold text-green-800">À partir de 35,88 €</td>
+                      <td className="p-3 border border-gray-200 font-semibold text-green-800">À partir de 29,90 €</td>
                     </tr>
                   </tbody>
                 </table>
@@ -365,7 +365,7 @@ export default function DoublerAvisGoogle30Jours() {
 
               <div className="bg-gray-900 rounded-2xl p-6 text-center my-8">
                 <p className="text-white font-bold text-lg mb-3">Prêt à passer au NFC ?</p>
-                <p className="text-gray-400 text-sm mb-4">Le pack 2 plaques est le plus populaire : 65,88&nbsp;€, aucun abonnement.</p>
+                <p className="text-gray-400 text-sm mb-4">Le pack 2 plaques est le plus populaire : 54,90&nbsp;€, aucun abonnement.</p>
                 <Link href="/#product" className="inline-block px-6 py-3 bg-accent text-gray-900 font-bold rounded-xl hover:bg-yellow-300 transition-colors">
                   Voir les packs Swiipx →
                 </Link>
@@ -643,7 +643,7 @@ export default function DoublerAvisGoogle30Jours() {
 
               <div className="bg-gray-100 rounded-xl p-5 border border-gray-200">
                 <p className="text-gray-900 font-semibold">Ces trois chiffres sont des hypothèses et leur conséquence arithmétique, pas un résultat client.</p>
-                <p className="text-gray-600 text-sm mt-2">Nous ne mesurons pas le nombre d&apos;avis collectés par les commerces que nous équipons : la plaque ne contient aucun traqueur et nous n&apos;avons pas accès à leur fiche Google. Le seul chiffre certain de cet exemple est le coût : 65,88&nbsp;€ pour le pack 2 plaques, une fois, sans abonnement.</p>
+                <p className="text-gray-600 text-sm mt-2">Nous ne mesurons pas le nombre d&apos;avis collectés par les commerces que nous équipons : la plaque ne contient aucun traqueur et nous n&apos;avons pas accès à leur fiche Google. Le seul chiffre certain de cet exemple est le coût : 54,90&nbsp;€ pour le pack 2 plaques, une fois, sans abonnement.</p>
               </div>
             </section>
 
@@ -682,7 +682,7 @@ export default function DoublerAvisGoogle30Jours() {
 
                 <div className="border-b border-gray-100 pb-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Combien coûte une plaque NFC Swiipx ?</h3>
-                  <p className="text-gray-700 leading-relaxed">À partir de 35,88&nbsp;€ pour une plaque. Le <Link href="/#product" className="text-primary font-medium hover:underline">pack 2 plaques</Link> (le plus populaire) est à 65,88&nbsp;€ et le pack 5 plaques à 107,88&nbsp;€. Aucun abonnement mensuel, aucun frais caché. La plaque fonctionne immédiatement et dure plusieurs années.</p>
+                  <p className="text-gray-700 leading-relaxed">À partir de 29,90&nbsp;€ pour une plaque. Le <Link href="/#product" className="text-primary font-medium hover:underline">pack 2 plaques</Link> (le plus populaire) est à 54,90&nbsp;€ et le pack 5 plaques à 89,90&nbsp;€. Aucun abonnement mensuel, aucun frais caché. La plaque fonctionne immédiatement et dure plusieurs années.</p>
                 </div>
 
                 <div className="border-b border-gray-100 pb-6">

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Mail, MapPin, Package, Wrench } from 'lucide-react'
-import { LOWEST_PRICE_CENTS, formatHtTtc } from '../../lib/pricing'
+import { LOWEST_PRICE_CENTS, formatHt } from '../../lib/pricing'
 
 /**
  * Page « À propos ».
@@ -32,10 +32,10 @@ const faits = [
 ]
 
 export default function AProposPage() {
-  /* HT et TTC ensemble, comme partout ailleurs sur le site : la clientèle
-     raisonne en HT, mais le TTC est ce que Stripe débite et son affichage est
-     obligatoire dès qu'un particulier peut commander (art. L112-1). */
-  const { ht, ttc } = formatHtTtc(LOWEST_PRICE_CENTS)
+  /* HT seul : le client a demandé que le TTC n'apparaisse qu'au paiement.
+     Le montant débité, TTC, reste affiché à l'étape de paiement — c'est là que
+     l'obligation d'affichage TTC (art. L112-1) est satisfaite. */
+  const ht = formatHt(LOWEST_PRICE_CENTS)
 
   return (
     <main className="min-h-screen bg-white">
@@ -66,7 +66,7 @@ export default function AProposPage() {
             </p>
             <p>
               Nous ne vendons pas d&apos;abonnement, pas de tableau de bord, pas de service de
-              gestion de réputation. Vous payez la plaque une fois, à partir de {ht} ({ttc}).
+              gestion de réputation. Vous payez la plaque une fois, à partir de {ht}.
             </p>
             <p>
               La puce NFC est garantie à vie : si la plaque cesse de fonctionner sans mauvaise

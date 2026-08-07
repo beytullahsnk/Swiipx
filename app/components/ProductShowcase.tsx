@@ -11,7 +11,7 @@ import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
 import ClientLogos from './ClientLogos'
 import { track } from '../../lib/analytics'
 import Link from 'next/link'
-import { PACKS, formatHt, formatTtc, unitPriceCents } from '../../lib/pricing'
+import { PACKS, formatHt, unitPriceCents } from '../../lib/pricing'
 
 // Packs : prix issus de lib/pricing.ts (source unique).
 //
@@ -36,7 +36,6 @@ const productPacks = [
   popular,
   price: pack.priceCents / 100,
   prixHt: formatHt(pack.priceCents),
-  prixTtc: formatTtc(pack.priceCents),
   formerPriceHT: pack.formerPriceCents ? formatHt(pack.formerPriceCents) : null,
   unitPriceHT: pack.plaques > 1 ? formatHt(unitPriceCents(pack)) : null,
 }))
@@ -352,11 +351,9 @@ export default function ProductShowcase() {
                         )}
                         <p className="text-2xl font-bold text-gray-900 whitespace-nowrap">{pack.prixHt}</p>
                       </div>
-                      {/* Le TTC est affiche ici : le balisage Product annonce
-                          35,88 EUR a Google, la page ne montrait que 29,90 EUR HT.
-                          Un ecart entre le prix balise et le prix visible fait
-                          desapprouver la fiche par Merchant Center. */}
-                      <p className="text-xs text-gray-500 mt-0.5">{pack.prixTtc}</p>
+                      {/* Pas de TTC : le client le veut uniquement au paiement.
+                          Le balisage reste en TTC, ce qui cree un ecart assume
+                          avec le prix affiche. */}
                       {pack.unitPriceHT && (
                         <p className="text-xs text-gray-600 mt-0.5">soit {pack.unitPriceHT} la plaque HT</p>
                       )}

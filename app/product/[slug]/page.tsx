@@ -437,8 +437,10 @@ export default function ProductDetailPage() {
 
             {/* Price */}
             <div>
-              {/* HT en principal (clientele professionnelle), TTC juste en
-                  dessous : c'est le montant reellement debite. */}
+              {/* HT SEUL, sur decision du client : le TTC n'apparait qu'au
+                  paiement. Le balisage JSON-LD et le feed Merchant restent en
+                  TTC, la loi et Google l'exigent — l'ecart entre le prix affiche
+                  et le prix balise est assume. */}
               <div className="flex items-baseline space-x-4">
                 <span className="text-4xl sm:text-5xl font-bold text-gray-900">
                   {(product.price / (1 + TVA)).toFixed(2).replace('.', ',')}€ <span className="text-xl font-semibold text-gray-500">HT</span>
@@ -454,9 +456,6 @@ export default function ProductDetailPage() {
                   </>
                 )}
               </div>
-              <p className="text-base text-gray-600 mt-1">
-                soit {product.price.toFixed(2).replace('.', ',')}€ TTC
-              </p>
               {product.originalPrice && (
                 <p className="text-green-600 font-semibold mt-1">
                   Économisez {(product.originalPrice - product.price).toFixed(2).replace('.', ',')}€ !
@@ -516,7 +515,7 @@ export default function ProductDetailPage() {
               className="w-full py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center space-x-3"
             >
               <ShoppingCart className="w-6 h-6" />
-              <span>Ajouter au panier — {(product.price * quantity).toFixed(2).replace('.', ',')}€</span>
+              <span>Ajouter au panier — {((product.price * quantity) / (1 + TVA)).toFixed(2).replace('.', ',')}€ HT</span>
             </button>
 
             {/* Preuve sociale : logos clients, pas de noms en clair */}
@@ -722,9 +721,6 @@ function RelatedProducts({ currentSlug }: { currentSlug: string }) {
                     {(p.price / (1 + TVA)).toFixed(2).replace('.', ',')}€ <span className="text-sm font-semibold text-gray-500">HT</span>
                   </span>
                 </div>
-                <p className="text-xs text-gray-600 mt-0.5">
-                  {p.price.toFixed(2).replace('.', ',')}€ TTC
-                </p>
               </div>
 
               <span className="mt-auto inline-flex items-center text-sm font-semibold text-primary group-hover:translate-x-1 transition-transform">

@@ -152,7 +152,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                   </p>
                   {/* Aucun prix barre : les tarifs ont augmente, afficher une
                       reduction serait une reduction fictive. */}
-                  <p className="text-lg font-bold text-primary mb-3">35,88 €</p>
+                  <p className="text-lg font-bold text-primary mb-3">29,90 €</p>
                   <Link
                     href="/#product"
                     className="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-blue-700 transition-colors text-sm shadow-md hover:shadow-lg"

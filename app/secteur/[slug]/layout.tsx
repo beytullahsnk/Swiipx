@@ -11,21 +11,21 @@ const sectorData: Record<string, {
 }> = {
   restaurant: {
     title: 'Plaque avis Google pour restaurant — sans app',
-    description: 'Plaque NFC avis Google pour restaurant, livrée déjà programmée avec votre lien d\'avis. Pack 2 plaques 65,88 € TTC, sans abonnement, livraison offerte en point relais.',
+    description: 'Plaque NFC avis Google pour restaurant, livrée déjà programmée avec votre lien d\'avis. Pack 2 plaques 54,90 € HT, sans abonnement, livraison offerte en point relais.',
     keywords: 'plaque nfc restaurant, avis google restaurant, plaque restaurant nfc, plaque avis google bistrot, nfc restauration france, plaque avis brasserie',
     h1: 'Plaque NFC pour restaurants : l\'avis se laisse en salle, en 10 secondes',
     intro: 'Plaque NFC programmée avec le lien d\'avis Google de votre restaurant. Vos clients laissent un avis en 10 secondes, sans application. Acrylique premium, sans abonnement, livraison offerte en point relais.',
   },
   'salon-coiffure': {
     title: 'Plaque avis Google pour salon de coiffure',
-    description: 'Plaque NFC avis Google pour salon de coiffure, livrée déjà programmée avec votre lien d\'avis. Dès 35,88 € TTC, sans abonnement, sans application à installer.',
+    description: 'Plaque NFC avis Google pour salon de coiffure, livrée déjà programmée avec votre lien d\'avis. Dès 29,90 € HT, sans abonnement, sans application à installer.',
     keywords: 'plaque nfc salon coiffure, plaque avis google coiffeur, nfc coiffure, plaque avis institut beauté, plaque nfc barbier, plaque coiffeur',
     h1: 'Plaque NFC pour salons de coiffure : avis Google en 10 s',
     intro: 'Le passage en caisse d\'un salon dure assez longtemps pour qu\'une cliente pose son téléphone sur la plaque. C\'est ce qui rend ce moment particulièrement favorable.',
   },
   'cabinet-medical': {
     title: 'Plaque avis Google pour cabinet médical',
-    description: 'Plaque NFC avis Google discrète pour cabinet médical, dentiste, kiné, ostéo. Livrée déjà programmée, dès 35,88 € TTC, sans abonnement, sans application.',
+    description: 'Plaque NFC avis Google discrète pour cabinet médical, dentiste, kiné, ostéo. Livrée déjà programmée, dès 29,90 € HT, sans abonnement, sans application.',
     keywords: 'plaque nfc cabinet medical, plaque avis google dentiste, avis google medecin, plaque nfc osteopathe, avis google kinesitherapeute, plaque libéral',
     h1: 'Plaque NFC pour cabinets médicaux et professionnels libéraux',
     intro: 'Une solution discrète et déontologique pour collecter des avis Google de vos patients satisfaits. Conforme aux règles des professions médicales.',

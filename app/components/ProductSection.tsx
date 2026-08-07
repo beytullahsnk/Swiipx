@@ -17,7 +17,7 @@ export default function ProductSection() {
       id: 'plaque1' as const,
       name: 'Starter',
       plaques: 1,
-      price: 35.88,
+      price: 29.90,
       popular: false,
       features: [
         '1 plaque NFC premium',
@@ -31,7 +31,7 @@ export default function ProductSection() {
       id: 'plaque2' as const,
       name: 'Business',
       plaques: 2,
-      price: 65.88,
+      price: 54.90,
       popular: true,
       discount: '20%',
       features: [
@@ -46,7 +46,7 @@ export default function ProductSection() {
       id: 'plaque5' as const,
       name: 'Pro',
       plaques: 5,
-      price: 107.88,
+      price: 89.90,
       popular: false,
       discount: '40%',
       features: [
@@ -140,7 +140,7 @@ export default function ProductSection() {
                     <span className="text-gray-600 ml-2">/ paiement unique</span>
                   </div>
                   {/* Prix barre retire : les tarifs ont augmente, et les
-                      references affichees ici (107,88 / 149,90) n'avaient
+                      references affichees ici (89,90 / 149,90) n'avaient
                       jamais ete pratiquees. */}
                 </div>
 

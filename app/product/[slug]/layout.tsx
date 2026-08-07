@@ -15,7 +15,7 @@ const productsMeta: Record<string, {
 }> = {
   starter: {
     title: 'Pack Starter — 1 Plaque Avis Google NFC',
-    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Parfait pour débuter. Livraison offerte en point relais, garantie à vie, sans abonnement. 35,88€.',
+    description: 'Plaque avis Google NFC pour collecter des avis automatiquement. Parfait pour débuter. Livraison offerte en point relais, garantie à vie, sans abonnement. Dès 29,90 € HT.',
     price: '35.88',
     plaques: 1,
     keywords: 'plaque avis google, plaque avis google nfc, pack starter plaque avis google, collecter avis google',
@@ -24,7 +24,7 @@ const productsMeta: Record<string, {
   },
   business: {
     title: 'Pack Business — 2 Plaques Avis Google NFC',
-    description: '2 plaques avis Google NFC pour multiplier vos avis. Idéal pour les professionnels. Livraison offerte en point relais, garantie à vie, sans abonnement. 65,88€.',
+    description: '2 plaques avis Google NFC pour multiplier vos avis. Idéal pour les professionnels. Livraison offerte en point relais, garantie à vie, sans abonnement. 54,90 € HT.',
     price: '65.88',
     plaques: 2,
     keywords: 'plaque avis google, pack business plaque avis google nfc, 2 plaques avis google',
@@ -33,7 +33,7 @@ const productsMeta: Record<string, {
   },
   pro: {
     title: 'Pack Pro — 5 Plaques Avis Google NFC',
-    description: '5 plaques avis Google NFC pour maximiser vos avis sur plusieurs emplacements. Solution complète avec support dédié et configuration incluse. 107,88€.',
+    description: '5 plaques avis Google NFC pour maximiser vos avis sur plusieurs emplacements. Solution complète avec support dédié et configuration incluse. 89,90 € HT.',
     price: '107.88',
     plaques: 5,
     keywords: 'plaque avis google, pack pro plaque avis google nfc, 5 plaques avis google',
