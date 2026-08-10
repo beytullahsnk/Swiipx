@@ -22,7 +22,7 @@ import { LOWEST_PRICE_CENTS, formatHt } from '../../lib/pricing'
  * romancé : une page honnête de 300 mots vaut mieux qu'un récit inventé.
  *
  * CE QUI MANQUE ENCORE est marqué par un commentaire À COMPLÉTER : seul
- * Beytullah peut l'écrire, et il vaut mieux une page courte qu'une page fausse.
+ * le fondateur peut l'écrire, et il vaut mieux une page courte qu'une page fausse.
  */
 
 const faits = [
@@ -52,8 +52,9 @@ export default function AProposPage() {
 
         <p className="text-lg text-gray-600 leading-relaxed mb-10">
           Swiipx est édité par <strong className="text-gray-900">SKYAKSA</strong>, une entreprise
-          individuelle établie à Montreuil et créée en février 2026. Une seule personne derrière :{' '}
-          <strong className="text-gray-900">Beytullah Sonkaya</strong>.
+          individuelle établie à Montreuil et créée en février 2026. Une entreprise individuelle,
+          donc <strong className="text-gray-900">une seule personne</strong> — pas une équipe, pas
+          de service client externalisé. Quand vous écrivez, c&apos;est elle qui répond.
         </p>
 
         <section className="mb-12">
@@ -79,7 +80,7 @@ export default function AProposPage() {
                 des faits verifiables — la composition reelle des onze premiers
                 clients (app/data/clients.ts) et le fait qu'aucun ne vient de la
                 recherche Google, ce que confirment les 23 clics trimestriels de
-                Search Console. A remplacer par ses propres mots quand Beytullah
+                Search Console. A remplacer par ses propres mots quand le fondateur
                 aura le temps de les ecrire ; en attendant, c'est vrai. */}
             <p>
               Les onze premiers commerces équipés ne sont pas venus par Google. Trois enseignes de

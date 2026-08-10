@@ -100,7 +100,9 @@ export default function RootLayout({
               description: 'Plaque NFC & QR Code pour collecter des avis Google automatiquement. Sans abonnement, fabriquée en France.',
               email: 'bonjour@swiipx.fr',
               foundingDate: '2026-02',
-              founder: { '@type': 'Person', name: 'Beytullah Sonkaya' },
+              // Pas de `founder` : champ facultatif, et le nom du fondateur n'a
+              // pas a etre diffuse dans les donnees structurees. Il reste aux
+              // mentions legales, ou la loi l'impose.
               vatID: 'FR02948165717',
               taxID: '948 165 717 00026',
               areaServed: 'FR',
