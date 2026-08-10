@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 28,
+    title: 'Avis Google disparus : pourquoi ils s\'effacent et comment protéger votre fiche',
+    excerpt: 'Google a bloqué ou supprimé plus de 292 millions d\'avis en 2025, pour un milliard publiés. Les 4 causes d\'une disparition, les 8 motifs de suppression, le nouveau gel des avis en cas de pic suspect, et les 7 règles qui protègent durablement votre fiche.',
+    category: 'SEO Local',
+    date: '10 août 2026',
+    dateIso: '2026-08-10',
+    readTime: '11 min',
+    slug: 'avis-google-disparus',
+  },
+  {
     id: 27,
     title: 'Plaque NFC auto-école : collecter des avis Google quand l\'élève réussit',
     excerpt: 'Auto-écoles et écoles de conduite : votre fiche Google reflète surtout les élèves qui ont échoué, parce que ce sont les seuls qui reviennent au bureau. Emplacements, moments clés, scripts moniteur et exemples de calcul.',

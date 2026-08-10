@@ -13,6 +13,7 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'avis-google-disparus', label: 'Avis Google disparus : les 8 causes' },
   { slug: 'plaque-nfc-auto-ecole', label: 'Plaque NFC auto-école : avis et scripts' },
   { slug: 'carte-nfc-avis-google', label: 'Carte NFC ou plaque : que choisir ?' },
   { slug: 'magnet-nfc-avis-google', label: 'Magnet NFC : quand il vaut mieux qu\'une plaque' },

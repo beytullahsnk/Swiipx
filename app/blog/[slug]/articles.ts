@@ -18,6 +18,185 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'avis-google-disparus': {
+    title: 'Avis Google disparus : pourquoi ils s\'effacent et comment protéger votre fiche',
+    category: 'SEO Local',
+    date: '10 août 2026',
+    readTime: '11 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Google a bloqué ou supprimé plus de 292 millions d\'avis en 2025, pour un milliard publiés. Les 4 causes d\'une disparition, les 8 motifs de suppression, le nouveau gel des avis en cas de pic suspect, et les 7 règles qui protègent durablement votre fiche.',
+    tocSections: [
+      { id: 'ampleur-suppressions', label: 'L\'ampleur réelle du phénomène' },
+      { id: 'avis-supprime-ou-invisible', label: 'Supprimé, ou juste invisible ?' },
+      { id: 'raisons-suppression', label: 'Les 8 raisons de disparition' },
+      { id: 'filtre-automatique', label: 'Le filtre automatique' },
+      { id: 'pic-avis-pause', label: 'Le pic qui gèle votre fiche' },
+      { id: 'collecte-nfc-risques', label: 'Collecte NFC : les vrais risques' },
+      { id: 'verifier-recuperer', label: 'Vérifier et contester' },
+      { id: 'prevenir', label: 'Les 7 règles de prévention' },
+      { id: 'plan-action', label: 'Le plan d\'action' },
+      { id: 'faq-avis-disparus', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="ampleur-suppressions" class="scroll-mt-28 mb-16">
+<h2>Un avis Google sur cinq n'arrive jamais en ligne</h2>
+<p>Vous aviez 84 avis lundi, vous en avez 79 ce matin, et personne dans l'équipe n'a touché à quoi que ce soit. La première réaction est presque toujours la même : « Google a bugué » ou « un concurrent m'a signalé ». Dans l'immense majorité des cas, ni l'un ni l'autre. Ce que vous observez est le fonctionnement normal d'un système de modération qui travaille en continu, à une échelle difficile à imaginer.</p>
+<p>Google publie le bilan annuel de cette modération. Pour l'année 2025, <a href="https://blog.google/products-and-platforms/products/maps/new-ways-were-protecting-businesses-on-maps/" target="_blank" rel="noopener noreferrer">l'entreprise déclare avoir bloqué ou supprimé plus de 292 millions d'avis contraires à ses règles</a>, tout en publiant plus d'un milliard d'avis jugés utiles. Elle indique également avoir bloqué 79 millions de modifications de fiches inexactes ou non vérifiées, restreint plus de 782 000 comptes et supprimé plus de 13 millions de fiches d'établissement frauduleuses. Le détail est consultable dans le <a href="https://transparencyreport.google.com/maps-content/overview" target="_blank" rel="noopener noreferrer">rapport de transparence Maps</a>.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 L'ordre de grandeur :</strong> 292 millions d'avis écartés pour environ 1 milliard d'avis publiés, cela signifie que sur à peu près 1,29 milliard d'avis soumis dans l'année, <strong>un peu plus d'un sur cinq n'a jamais été mis en ligne ou a été retiré</strong>. Les deux chiffres publiés par Google sont des minimums (« plus de »), donc ce ratio est un ordre de grandeur, pas une mesure exacte. Il suffit néanmoins à poser le cadre : la disparition d'avis n'est pas une anomalie, c'est la règle statistique.</p>
+</div>
+<p>Autrement dit, si vous collectez sérieusement des avis, <strong>vous en perdrez</strong>. La question utile n'est donc pas « comment n'en perdre aucun » — personne ne le peut — mais « est-ce que je perds la proportion normale, ou est-ce que quelque chose dans ma méthode déclenche les filtres ». C'est précisément ce que cet article vous permet de trancher.</p>
+</section>
+
+<section id="avis-supprime-ou-invisible" class="scroll-mt-28 mb-16">
+<h2>Avant de paniquer : supprimé, ou simplement invisible ?</h2>
+<p>Quatre situations très différentes produisent le même symptôme — un compteur qui baisse — et elles n'appellent pas du tout les mêmes actions. Commencez toujours par les distinguer, avant d'écrire au support ou d'accuser un concurrent.</p>
+<h3>1. L'avis a été retiré par Google</h3>
+<p>C'est le cas le plus fréquent. L'avis a été jugé contraire aux <a href="https://support.google.com/contributionpolicy/answer/7400114" target="_blank" rel="noopener noreferrer">règles relatives au contenu interdit et soumis à restrictions</a>, soit par un système automatique, soit à la suite d'un signalement. Vous n'êtes prévenu de rien, et aucun historique ne vous est fourni.</p>
+<h3>2. L'auteur l'a supprimé lui-même</h3>
+<p>Un client peut retirer son avis à tout moment depuis son compte Google. Cela arrive plus souvent qu'on ne le croit : changement d'avis, ménage dans ses contributions, ou compte Google entièrement fermé. Quand un compte est supprimé, toutes ses contributions partent avec lui. Vous ne pouvez rien y faire, et ce n'est pas dirigé contre vous.</p>
+<h3>3. L'avis existe toujours, mais pas là où vous regardez</h3>
+<p>Les avis sans texte, la mise en cache, le tri par défaut « les plus pertinents » et les écarts entre l'application Maps, la recherche Google et l'interface de gestion donnent régulièrement des affichages divergents. Avant de conclure à une suppression, vérifiez en navigation privée, sur un autre appareil, en basculant le tri sur « les plus récents ».</p>
+<h3>4. Votre fiche a fusionné, changé d'adresse ou possède un doublon</h3>
+<p>Un déménagement, un changement de nom commercial ou l'existence d'une fiche en double redistribuent les avis de façon parfois brutale. Si la chute est massive et soudaine — plusieurs dizaines d'un coup — c'est la piste à explorer en priorité, avant toute autre.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Le réflexe qui vous fera gagner des heures :</strong> notez le nombre d'avis et la note moyenne de votre fiche <strong>une fois par mois</strong>, dans un simple tableur, avec une capture d'écran. Sans historique, vous ne saurez jamais si vous avez perdu 3 avis ou 15, ni à quel moment. Avec un historique, vous identifiez la période exacte — et donc l'événement qui l'a provoquée.</p>
+</div>
+</section>
+
+<section id="raisons-suppression" class="scroll-mt-28 mb-16">
+<h2>Les 8 raisons qui font disparaître un avis</h2>
+<p>Les règles de Google sur les contenus publiés par les utilisateurs couvrent plusieurs familles d'infractions. Voici celles qui concernent réellement un commerce de proximité, avec la seule colonne qui compte vraiment : pouvez-vous y faire quelque chose ?</p>
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Motif</th><th class="border p-3 text-left">Ce que cela recouvre</th><th class="border p-3 text-left">Récupérable ?</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Faux engagement</td><td class="border p-3">Avis achetés, échangés entre commerces, déposés en série par les mêmes comptes</td><td class="border p-3">Non</td></tr>
+<tr><td class="border p-3">Avis incité</td><td class="border p-3">Toute contrepartie : remise, boisson offerte, tirage au sort, avantage réservé à qui laisse un avis</td><td class="border p-3">Non</td></tr>
+<tr><td class="border p-3">Conflit d'intérêt</td><td class="border p-3">Avis déposé par vous, un salarié, un proche — ou par un concurrent</td><td class="border p-3">Non</td></tr>
+<tr><td class="border p-3">Hors sujet</td><td class="border p-3">Commentaire sans rapport avec une expérience vécue chez vous : politique, actualité, litige visant un autre établissement</td><td class="border p-3">Non, et c'est une bonne nouvelle</td></tr>
+<tr><td class="border p-3">Contenu offensant ou données personnelles</td><td class="border p-3">Insultes, propos haineux, salarié nommément pris à partie, numéro de téléphone</td><td class="border p-3">Non</td></tr>
+<tr><td class="border p-3">Compte de l'auteur restreint ou fermé</td><td class="border p-3">Google a restreint le compte, ou l'auteur a supprimé le sien</td><td class="border p-3">Non</td></tr>
+<tr><td class="border p-3">Signalement traité</td><td class="border p-3">Vous ou un tiers avez signalé l'avis, et Google a tranché</td><td class="border p-3">Contestable</td></tr>
+<tr><td class="border p-3"><strong>Fusion, doublon, changement de fiche</strong></td><td class="border p-3">Réorganisation de votre établissement dans Maps</td><td class="border p-3"><strong>Oui, via le support</strong></td></tr>
+</tbody>
+</table>
+<p>Regardez la dernière colonne : sur huit motifs, <strong>un seul</strong> se règle vraiment auprès du support. C'est la raison pour laquelle ce guide insiste sur la prévention plutôt que sur la récupération — et pourquoi il faut se méfier des prestataires qui promettent de « faire réapparaître » vos avis. Si vous êtes la cible d'une attaque coordonnée, notre article sur <a href="/blog/faux-avis-google-signaler">le signalement des faux avis</a> détaille la procédure pas à pas.</p>
+</section>
+
+<section id="filtre-automatique" class="scroll-mt-28 mb-16">
+<h2>Le filtre automatique : ce que Google dit, et ce qu'il ne dira jamais</h2>
+<p>Google indique désormais s'appuyer sur ses modèles Gemini pour repérer et bloquer les contributions problématiques <strong>avant leur publication</strong>. Le mot important est « avant » : un avis peut ne jamais apparaître, sans que ni vous ni son auteur n'en soyez informés. Votre client est convaincu de l'avoir laissé, vous ne l'avez jamais vu, et vous avez tous les deux raison.</p>
+<p>En revanche, Google ne publie pas ses critères de détection, et ne le fera pas : les rendre publics reviendrait à distribuer le mode d'emploi du contournement à ceux qui vendent de faux avis. Cela a une conséquence directe sur ce que vous lirez ailleurs sur le sujet.</p>
+<div class="bg-red-50 rounded-xl p-4 border border-red-200 not-prose">
+<p class="text-sm text-red-900"><strong>🚩 Méfiez-vous des seuils précis.</strong> « Pas plus de 5 avis par jour », « jamais deux avis depuis la même adresse IP », « attendez 48 h entre chaque » : ces règles circulent partout et ne reposent sur aucune documentation de Google. Elles ne sont pas nécessairement absurdes, mais personne ne peut les vérifier — nous non plus. Nous préférons vous dire ce qui est documenté, et signaler clairement ce qui relève de l'observation de terrain.</p>
+</div>
+<p>Ce qui est documenté reste très utile : les systèmes cherchent des <strong>schémas coordonnés</strong>. Pas un avis isolé, mais une régularité anormale — des comptes qui se ressemblent, qui contribuent aux mêmes endroits, dans la même fenêtre de temps, avec des formulations proches. Un commerce honnête ne produit jamais ce type de motif. Sauf, justement, quand il essaie d'aller trop vite.</p>
+</section>
+
+<section id="pic-avis-pause" class="scroll-mt-28 mb-16">
+<h2>Le pic d'avis qui gèle votre fiche</h2>
+<p>C'est la nouveauté la plus concrète de 2026, et celle que la plupart des commerçants ignorent encore. Google a déployé un dispositif contre les campagnes d'extorsion — ces escrocs qui déposent une salve de 1 étoile, puis réclament un paiement pour les retirer.</p>
+<p>Le mécanisme annoncé est le suivant : en cas de <strong>pic soudain d'avis suspects</strong>, Google supprime le contenu frauduleux, <strong>met en pause les nouveaux avis sur la fiche</strong>, alerte le propriétaire et affiche une bannière expliquant aux visiteurs pourquoi les contributions sont temporairement suspendues.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ La conséquence à retenir :</strong> une variation brutale du volume d'avis est un signal sur lequel Google <strong>agit</strong>, et la sanction n'est pas seulement la perte des avis concernés — c'est le gel temporaire de la collecte sur votre fiche. Le dispositif vise les attaques, mais une montée en flèche produite par un commerce pressé ressemble, vue de l'extérieur, à ce que le système cherche.</p>
+</div>
+<p>Traduction opérationnelle : <strong>la régularité vaut mieux que l'intensité</strong>. Une fiche qui gagne 6 à 10 avis par mois pendant un an termine à un volume que personne ne conteste. La même fiche qui en gagne 90 en une semaine, puis plus rien pendant trois mois, attire l'attention — et son profil en dents de scie est de toute façon moins efficace, puisque la fraîcheur des avis compte dans le classement local. Nous détaillons ce point dans notre guide sur <a href="/blog/combien-avis-google-pack-local">le nombre d'avis nécessaire pour entrer dans le pack local</a>.</p>
+</section>
+
+<section id="collecte-nfc-risques" class="scroll-mt-28 mb-16">
+<h2>Collecte NFC : trois faux risques, trois vrais</h2>
+<p>Nous vendons des plaques NFC, et la question nous est posée toutes les semaines : « est-ce que Google supprime les avis collectés avec une plaque ? ». Voici la réponse honnête, en séparant ce qui est un non-sujet de ce qui mérite réellement votre attention.</p>
+<h3>Les trois faux risques</h3>
+<ul>
+<li><strong>« Le NFC serait détectable par Google. »</strong> Non. Une plaque NFC contient une adresse web — celle de votre formulaire d'avis Google. Le téléphone l'ouvre exactement comme si le client l'avait tapée. Google reçoit une visite sur son propre formulaire, depuis le navigateur du client, connecté à son propre compte. Rien n'indique par quel support le lien a été atteint.</li>
+<li><strong>« La plaque écrirait l'avis à la place du client. »</strong> Non, et aucune plaque sérieuse ne le fait. La puce n'a ni batterie, ni logiciel, ni capacité d'écriture : c'est une étiquette passive qui stocke une adresse. Le client rédige et publie lui-même, depuis son compte.</li>
+<li><strong>« Il faudrait un abonnement ou un tableau de bord pour rester conforme. »</strong> Non. La conformité dépend de votre méthode de sollicitation, pas de l'outil que vous posez sur le comptoir. Notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a> revient sur ce que l'abonnement achète réellement.</li>
+</ul>
+<h3>Les trois vrais risques</h3>
+<ul>
+<li><strong>Le pic de démarrage.</strong> C'est le risque numéro un, et il est presque toujours involontaire. Vous recevez vos plaques, l'équipe est enthousiaste, et vous sollicitez 40 clients dès le premier samedi. Étalez : une fiche qui passe de 12 à 52 avis en trois jours produit exactement le motif décrit plus haut.</li>
+<li><strong>Le téléphone ou la tablette de la maison.</strong> Proposer votre propre appareil pour « aider » le client fait déposer plusieurs avis depuis le même terminal et la même connexion. C'est le seul geste de collecte qui fabrique mécaniquement un schéma coordonné. Avec une plaque, le client utilise son téléphone — c'est précisément l'intérêt du format.</li>
+<li><strong>La contrepartie et le tri des clients.</strong> Offrir quoi que ce soit contre un avis est explicitement interdit. Ne présenter la plaque qu'aux clients visiblement contents l'est tout autant, et se repère statistiquement : une fiche affichant 200 avis tous à 5 étoiles ne paraît crédible à personne, Google compris. Nos <a href="/blog/erreurs-demander-avis">erreurs à éviter en demandant un avis</a> détaillent ces cas.</li>
+</ul>
+</section>
+
+<section id="verifier-recuperer" class="scroll-mt-28 mb-16">
+<h2>Vérifier ce qui a disparu, et quand demander un réexamen</h2>
+<p>Une méthode en quatre temps, dans cet ordre. Les trois premières étapes coûtent quelques minutes et résolvent la majorité des cas ; la quatrième est un recours, pas une solution.</p>
+<h3>Étape 1 — Objectiver la perte</h3>
+<p>Comparez le compteur actuel à votre relevé du mois précédent. Si vous n'en avez pas, prenez-en un aujourd'hui : c'est le point de départ de tout ce qui suit. Notez le nombre d'avis, la note moyenne et la date.</p>
+<h3>Étape 2 — Éliminer les fausses alertes</h3>
+<p>Consultez votre fiche en navigation privée, depuis un autre appareil, en triant par « les plus récents ». Vérifiez au passage qu'aucune fiche en double n'existe pour votre établissement, et que l'adresse et le nom commercial n'ont pas été modifiés.</p>
+<h3>Étape 3 — S'adresser à l'auteur, pas à Google</h3>
+<p>Si un avis précis et important a disparu et que vous connaissez le client, la voie la plus efficace n'est pas le support : c'est lui. Un avis retiré par son auteur peut être redéposé par son auteur. Un avis retiré par Google ne reviendra pas parce que vous l'aurez demandé.</p>
+<h3>Étape 4 — Contester, quand c'est justifié</h3>
+<p>Google met à disposition un outil de <a href="https://support.google.com/business/answer/4596773" target="_blank" rel="noopener noreferrer">gestion et de signalement des avis</a> depuis l'interface de votre fiche, avec possibilité de faire appel d'une décision. Utilisez-le pour les avis manifestement contraires aux règles, ou après une réorganisation de fiche. N'attendez ni délai garanti, ni réponse motivée : Google ne s'engage sur aucun des deux.</p>
+<div class="bg-gray-50 rounded-xl p-4 border border-gray-200 not-prose">
+<p class="text-sm text-gray-800"><strong>Ce que nous ne pouvons pas vous dire :</strong> le taux de succès d'une contestation. Nous ne l'avons pas mesuré, Google ne le publie pas établissement par établissement, et les pourcentages qui circulent sur le sujet ne s'appuient sur rien de vérifiable. Traitez la contestation comme un recours utile mais incertain — jamais comme un plan.</p>
+</div>
+</section>
+
+<section id="prevenir" class="scroll-mt-28 mb-16">
+<h2>Les 7 règles qui protègent durablement votre fiche</h2>
+<ul>
+<li><strong>1. Un rythme régulier plutôt qu'une campagne.</strong> Sollicitez quelques clients chaque jour, plutôt que tout le monde une semaine par trimestre.</li>
+<li><strong>2. Le client, son téléphone, son compte.</strong> Jamais votre appareil, jamais votre connexion pour plusieurs avis d'affilée.</li>
+<li><strong>3. Aucune contrepartie, jamais.</strong> Ni remise, ni boisson offerte, ni tirage au sort. Le risque ne porte pas sur l'avis concerné, mais sur l'ensemble de la fiche.</li>
+<li><strong>4. Aucun tri.</strong> Proposez à tous vos clients, pas seulement à ceux qui sourient. C'est la règle — et c'est aussi ce qui rend une fiche crédible aux yeux d'un lecteur.</li>
+<li><strong>5. Aucun avis interne.</strong> Ni vous, ni vos salariés, ni votre famille. Ces avis sont détectables et fragilisent tout le reste.</li>
+<li><strong>6. Répondez à tout.</strong> Répondre ne protège pas de la suppression, mais entretient l'activité de la fiche et désamorce les avis négatifs. Notre <a href="/blog/repondre-avis-negatifs-google">méthode pour répondre aux avis négatifs</a> propose des modèles prêts à l'emploi.</li>
+<li><strong>7. Tenez un relevé mensuel.</strong> Deux minutes par mois. C'est ce qui transforme une inquiétude vague en diagnostic exploitable.</li>
+</ul>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>✅ Le principe qui résume les sept :</strong> ne cherchez pas à optimiser votre collecte, cherchez à la rendre <strong>ordinaire</strong>. Un flux d'avis authentiques, étalé dans le temps, varié dans les notes et les formulations, ne ressemble à aucun schéma que Google combat — et c'est exactement le profil qui monte dans le pack local. La conformité et la performance vont ici dans le même sens, ce qui est assez rare pour être souligné.</p>
+</div>
+</section>
+
+<section id="plan-action" class="scroll-mt-28 mb-16">
+<h2>Le plan d'action</h2>
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Quand</th><th class="border p-3 text-left">Quoi</th><th class="border p-3 text-left">Temps</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Aujourd'hui</td><td class="border p-3">Relevé initial : nombre d'avis, note moyenne, capture d'écran, date</td><td class="border p-3">5 min</td></tr>
+<tr><td class="border p-3">Aujourd'hui</td><td class="border p-3">Vérifier l'absence de fiche en double, et l'exactitude du nom et de l'adresse</td><td class="border p-3">10 min</td></tr>
+<tr><td class="border p-3">Cette semaine</td><td class="border p-3">Fixer un rythme de sollicitation tenable, et le dire à l'équipe</td><td class="border p-3">15 min</td></tr>
+<tr><td class="border p-3">Cette semaine</td><td class="border p-3">Installer le support de collecte aux points de contact réels</td><td class="border p-3">20 min</td></tr>
+<tr><td class="border p-3">Chaque mois</td><td class="border p-3">Relever le compteur, comparer, répondre aux avis en attente</td><td class="border p-3">10 min</td></tr>
+<tr><td class="border p-3"><strong>En cas de chute</strong></td><td class="border p-3"><strong>Appliquer les 4 étapes de vérification avant toute contestation</strong></td><td class="border p-3"><strong>30 min</strong></td></tr>
+</tbody>
+</table>
+<p>La mise en place tient en moins d'une heure, puis dix minutes par mois. C'est peu comparé au temps que coûte une fiche que l'on découvre amputée six mois trop tard, sans savoir de quoi ni depuis quand.</p>
+<p>Sur le volet « points de contact », si votre fiche est encore incomplète par ailleurs, commencez par là : notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a> couvre les catégories, les photos et les horaires, qui pèsent sur le classement local autant que les avis.</p>
+</section>
+
+<section id="faq-avis-disparus" class="scroll-mt-28 mb-16">
+<h2>FAQ : avis Google disparus</h2>
+<h3>Pourquoi mes avis Google ont-ils disparu du jour au lendemain ?</h3>
+<p>Quatre causes possibles, à écarter dans cet ordre. D'abord une suppression par Google pour non-respect de ses règles sur le contenu : c'est le cas le plus fréquent, et vous n'en êtes jamais informé. Ensuite la suppression par l'auteur lui-même, ou la fermeture de son compte Google, qui emporte toutes ses contributions. Ensuite un simple problème d'affichage : cache, tri par défaut, différence entre Maps et la recherche — vérifiez en navigation privée et en triant par les plus récents. Enfin une fusion de fiches, un doublon ou un changement d'adresse, à explorer en priorité si la chute est massive et soudaine.</p>
+<h3>Un avis supprimé par Google peut-il revenir ?</h3>
+<p>Rarement, et cela dépend de qui l'a retiré. Un avis supprimé par son auteur peut être redéposé par lui : si vous connaissez le client, c'est la voie la plus efficace. Un avis retiré par Google pour non-respect des règles ne revient pas parce que vous le demandez ; seule une contestation via l'outil de gestion des avis de votre fiche peut aboutir, sans délai garanti ni réponse motivée. En revanche, des avis perdus lors d'une fusion de fiches ou d'un changement d'adresse relèvent du support et se récupèrent plus souvent.</p>
+<h3>Google supprime-t-il les avis collectés avec une plaque NFC ?</h3>
+<p>Le support de collecte n'est pas un critère. Une plaque NFC contient l'adresse de votre formulaire d'avis Google : le téléphone du client l'ouvre comme s'il l'avait tapée, et le client rédige depuis son propre compte. Rien n'indique à Google par quel moyen le lien a été atteint. Ce qui déclenche les filtres, ce sont trois pratiques indépendantes du support : un pic soudain de collecte au démarrage, l'usage d'un téléphone ou d'une tablette de l'établissement pour plusieurs avis d'affilée, et toute contrepartie ou tri des clients sollicités.</p>
+<h3>Combien de temps Google met-il à traiter une contestation d'avis ?</h3>
+<p>Google ne s'engage sur aucun délai et ne motive pas ses décisions. Le traitement peut prendre de quelques jours à plusieurs semaines, et l'issue reste incertaine même quand l'avis vous paraît manifestement contraire aux règles. Nous ne publions pas de taux de succès : nous ne l'avons pas mesuré et Google ne le communique pas. Traitez la contestation comme un recours utile mais aléatoire, jamais comme une stratégie — la collecte régulière de vrais avis reste le seul levier que vous contrôlez entièrement.</p>
+<h3>Google peut-il suspendre les nouveaux avis sur ma fiche ?</h3>
+<p>Oui. Depuis 2026, en cas de pic soudain d'avis suspects, Google annonce supprimer le contenu frauduleux, mettre en pause les nouveaux avis sur la fiche concernée, alerter le propriétaire et afficher une bannière expliquant aux visiteurs pourquoi les contributions sont temporairement suspendues. Le dispositif vise les campagnes d'extorsion par faux avis négatifs, mais il rappelle qu'une variation brutale du volume est un signal sur lequel Google agit. C'est l'argument principal en faveur d'un rythme de collecte régulier plutôt que d'une campagne intensive.</p>
+<h3>Combien d'avis perd-on normalement ?</h3>
+<p>Il n'existe pas de taux normal par établissement, mais un ordre de grandeur global. Pour 2025, Google déclare avoir bloqué ou supprimé plus de 292 millions d'avis contraires à ses règles tout en publiant plus d'un milliard d'avis utiles, soit un peu plus d'un avis sur cinq écarté à l'échelle mondiale. Ce ratio ne se transpose pas tel quel à votre fiche : il inclut le spam industriel et les faux avis vendus en masse, que votre commerce ne produit pas. Retenez surtout qu'une perte régulière et modérée est attendue, et que seule une chute brutale justifie une enquête.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : on ne récupère pas les avis perdus, on les remplace</h2>
+<p>Retenez la hiérarchie. La récupération d'un avis disparu n'est réellement possible que dans un seul des huit cas de figure listés plus haut, et sans garantie. La prévention, elle, dépend entièrement de vous : un rythme régulier, le téléphone du client, aucune contrepartie, aucun tri. Et la compensation — collecter en continu de vrais avis — est le seul levier qui fonctionne à tous les coups.</p>
+<p>C'est la même logique que face aux faux avis : <strong>une fiche alimentée régulièrement absorbe les pertes sans les sentir</strong>. Perdre 4 avis quand on en gagne 8 par mois est un non-événement. Perdre les mêmes 4 avis quand on en gagne 2 par an, c'est un quart de sa réputation qui s'efface. Le volume ne fait pas que vous faire monter : il vous rend robuste.</p>
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Collectez assez pour ne plus craindre les pertes</strong></p>
+<p class="text-sm text-blue-900">Transformez chaque client satisfait en avis Google avec les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : le client utilise son propre téléphone et son propre compte, sans application à installer et sans contrepartie. Acrylique premium, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. Pack <a href="/product/starter" class="font-semibold underline">Starter</a> à 29,90 € HT, Pack <a href="/product/business" class="font-semibold underline">Business</a> (2 plaques) à 54,90 € HT, ou Pack <a href="/product/pro" class="font-semibold underline">Pro</a> (5 plaques) à 89,90 € HT pour couvrir tous vos points de contact.</p>
+</div>
+</section>
+`,
+  },
   'plaque-nfc-auto-ecole': {
     title: 'Plaque NFC auto-école : collecter des avis Google quand l\'élève réussit',
     category: 'Secteur',
