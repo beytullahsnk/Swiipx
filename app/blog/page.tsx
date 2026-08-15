@@ -46,7 +46,7 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    id: 29,
+    id: 30,
     title: 'Plaque NFC vétérinaire : collecter des avis Google sans jamais forcer',
     excerpt: 'Cliniques et cabinets vétérinaires : une consultation sur deux se termine par une bonne nouvelle, l\'autre non. Où poser la plaque, à quel moment demander, quand se taire, scripts ASV et exemples de calcul.',
     category: 'Secteur',
