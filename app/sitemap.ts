@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
    */
   const MODIF_COMMERCIAL = '2026-08-07'   // accueil, fiches produit, pages secteur
   const MODIF_LEGAL = '2026-08-05'        // CGV, livraison, retours, mentions legales
-  const MODIF_EDITORIAL = '2026-08-07'    // /blog et pages de contenu
+  const MODIF_EDITORIAL = '2026-08-12'    // /blog et pages de contenu
 
   const staticPages = [
     { url: BASE_URL, lastModified: MODIF_COMMERCIAL, changeFrequency: 'weekly' as const, priority: 1 },

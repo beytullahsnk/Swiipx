@@ -46,6 +46,26 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 29,
+    title: 'Plaque NFC vétérinaire : collecter des avis Google sans jamais forcer',
+    excerpt: 'Cliniques et cabinets vétérinaires : une consultation sur deux se termine par une bonne nouvelle, l\'autre non. Où poser la plaque, à quel moment demander, quand se taire, scripts ASV et exemples de calcul.',
+    category: 'Secteur',
+    date: '15 août 2026',
+    dateIso: '2026-08-15',
+    readTime: '11 min',
+    slug: 'plaque-nfc-veterinaire',
+  },
+  {
+    id: 29,
+    title: 'Plaque NFC agence immobilière : chaque signature devient un avis Google',
+    excerpt: 'Une agence signe 40 ventes par an et affiche 14 avis Google : nulle part ailleurs un avis manquant ne coûte aussi cher. Les 4 clients à solliciter (dont l\'acquéreur, toujours oublié), les 5 moments qui marchent, scripts négociateur et calcul sur 12 mois.',
+    category: 'Secteur',
+    date: '12 août 2026',
+    dateIso: '2026-08-12',
+    readTime: '12 min',
+    slug: 'plaque-nfc-agence-immobiliere',
+  },
+  {
     id: 28,
     title: 'Avis Google disparus : pourquoi ils s\'effacent et comment protéger votre fiche',
     excerpt: 'Google a bloqué ou supprimé plus de 292 millions d\'avis en 2025, pour un milliard publiés. Les 4 causes d\'une disparition, les 8 motifs de suppression, le nouveau gel des avis en cas de pic suspect, et les 7 règles qui protègent durablement votre fiche.',
