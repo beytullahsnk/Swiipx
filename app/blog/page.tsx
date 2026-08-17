@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 31,
+    title: 'Améliorer sa note Google : combien d\'avis 5 étoiles pour passer de 4,2 à 4,6 ?',
+    excerpt: 'Passer de 4,2 à 4,6 sur Google n\'est pas une question de chance : c\'est une division. La formule exacte, le tableau du nombre d\'avis 5 étoiles selon votre volume, le coût réel d\'un seul avis 1 étoile et trois cas chiffrés.',
+    category: 'Statistiques',
+    date: '17 août 2026',
+    dateIso: '2026-08-17',
+    readTime: '10 min',
+    slug: 'ameliorer-note-google',
+  },
+  {
     id: 30,
     title: 'Plaque NFC vétérinaire : collecter des avis Google sans jamais forcer',
     excerpt: 'Cliniques et cabinets vétérinaires : une consultation sur deux se termine par une bonne nouvelle, l\'autre non. Où poser la plaque, à quel moment demander, quand se taire, scripts ASV et exemples de calcul.',
