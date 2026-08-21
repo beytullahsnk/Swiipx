@@ -46,6 +46,26 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 33,
+    title: 'Photos Google Business Profile : combien en publier et lesquelles font venir des clients',
+    excerpt: 'Sur un téléphone, une fiche Google se juge en une seconde et demie, et l\'œil voit l\'image avant la note. Les 8 types de photos classés par rendement, les formats exacts, la bonne fréquence, les 7 erreurs à éviter et un plan 30 jours.',
+    category: 'SEO Local',
+    date: '21 août 2026',
+    dateIso: '2026-08-21',
+    readTime: '11 min',
+    slug: 'photos-google-business-profile',
+  },
+  {
+    id: 32,
+    title: 'Plaque NFC opticien : transformer la livraison des lunettes en avis Google',
+    excerpt: 'Un opticien voit son client quatre fois, puis plus rien pendant deux ans : si l\'avis n\'est pas demandé pendant cette fenêtre, il ne le sera jamais. Le moment qui change tout, les 6 emplacements classés, les scripts magasin et trois exemples de calcul.',
+    category: 'Secteur',
+    date: '19 août 2026',
+    dateIso: '2026-08-19',
+    readTime: '11 min',
+    slug: 'plaque-nfc-opticien',
+  },
+  {
     id: 31,
     title: 'Améliorer sa note Google : combien d\'avis 5 étoiles pour passer de 4,2 à 4,6 ?',
     excerpt: 'Passer de 4,2 à 4,6 sur Google n\'est pas une question de chance : c\'est une division. La formule exacte, le tableau du nombre d\'avis 5 étoiles selon votre volume, le coût réel d\'un seul avis 1 étoile et trois cas chiffrés.',

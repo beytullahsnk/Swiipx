@@ -18,6 +18,454 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'photos-google-business-profile': {
+    title: 'Photos Google Business Profile : combien en publier et lesquelles font venir des clients',
+    category: 'SEO Local',
+    date: '21 août 2026',
+    readTime: '11 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Sur un téléphone, une fiche Google se juge en une seconde et demie, et l\'œil voit l\'image avant la note. Les 8 types de photos classés par rendement, les formats exacts, la bonne fréquence, les 7 erreurs à éviter et un plan 30 jours.',
+    tocSections: [
+      { id: 'pourquoi-photos', label: 'Pourquoi les photos décident' },
+      { id: 'qui-publie-quoi', label: 'Trois sources de photos' },
+      { id: 'types-photos', label: 'Les 8 types de photos' },
+      { id: 'combien-frequence', label: 'Combien et à quelle fréquence' },
+      { id: 'formats-techniques', label: 'Formats et tailles' },
+      { id: 'photos-clients', label: 'Les photos de vos clients' },
+      { id: 'erreurs', label: 'Les 7 erreurs à éviter' },
+      { id: 'mesurer', label: 'Mesurer l\'effet' },
+      { id: 'plan-30-jours', label: 'Le plan 30 jours' },
+      { id: 'faq-photos-gbp', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-photos" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les photos décident du clic avant même les avis</h2>
+<p>Sur un téléphone, une fiche Google se juge en une seconde et demie. Le pouce descend, trois fiches défilent, et l'œil enregistre trois choses dans cet ordre : <strong>l'image, la note, le nombre d'avis</strong>. L'image arrive en premier parce qu'elle occupe la plus grande surface et qu'elle ne demande aucun effort de lecture. Un commerce dont la vignette est une photo floue prise de nuit par un passant a déjà perdu une partie de son avantage, même s'il affiche 4,8 étoiles.</p>
+<p>Google met en avant depuis plusieurs années un chiffre parlant : une fiche avec des photos reçoit environ <strong>42 % de demandes d'itinéraire en plus et 35 % de clics vers le site en plus</strong> qu'une fiche sans photo. C'est une statistique interne, non reproductible par un tiers : prenez-la comme un ordre de grandeur et non comme une mesure indépendante. L'ordre de grandeur suffit à trancher la question — une fiche sans photos laisse partir des clients chez le voisin.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> les photos ne font pas monter votre fiche dans le classement de la même façon que les avis. Elles agissent sur le <strong>taux de clic</strong> une fois que vous êtes affiché. Or Google observe ce taux de clic. Une fiche systématiquement ignorée dans le pack local finit par y perdre sa place, et une fiche systématiquement choisie consolide la sienne.</p>
+</div>
+<p>Les photos et les avis ne se remplacent donc pas : ils travaillent à deux étages différents. Les avis vous font entrer dans les trois résultats affichés — c'est le sujet de notre calcul du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour apparaître dans le pack local</a>. Les photos décident de laquelle des trois fiches le client ouvre.</p>
+</section>
+
+<section id="qui-publie-quoi" class="scroll-mt-28 mb-16">
+<h2>Trois sources de photos, et une seule que vous contrôlez</h2>
+<p>Beaucoup de commerçants croient que leur fiche n'affiche que ce qu'ils ont mis en ligne. C'est faux, et c'est la première chose à comprendre avant de publier quoi que ce soit.</p>
+<ul>
+<li><strong>Vos photos</strong> — celles que vous chargez depuis l'interface Google Business Profile. Elles apparaissent dans l'onglet « Par le propriétaire ».</li>
+<li><strong>Les photos des clients</strong> — chargées par n'importe quel utilisateur Google, avec ou sans avis. Elles sont les plus nombreuses sur les fiches actives et Google leur accorde une confiance particulière puisque personne ne les a mises en scène.</li>
+<li><strong>Les photos issues de Street View et des données Google</strong> — la façade capturée par une voiture Google, parfois vieille de six ans, parfois prise en travaux.</li>
+</ul>
+<p>Vous ne pouvez pas supprimer une photo client, sauf si elle enfreint les règles de Google (contenu hors sujet, photo d'une autre entreprise, contenu offensant, image manifestement trompeuse). Le seul levier réel est donc l'<strong>ajout</strong>, jamais la suppression : plus vous publiez de photos récentes et nettes, plus la photo malheureuse d'un client recule dans la galerie.</p>
+<p>Un détail que presque personne ne connaît : la <strong>vignette affichée dans les résultats de recherche n'est pas choisie par vous</strong>. Google la sélectionne automatiquement selon la requête, la qualité perçue de l'image et son taux d'engagement. Vous ne décidez pas laquelle sort — mais vous décidez de ce qui est dans le lot. Si vos douze meilleures photos sont toutes bonnes, la vignette sera bonne quoi qu'il arrive.</p>
+</section>
+
+<section id="types-photos" class="scroll-mt-28 mb-16">
+<h2>Les 8 types de photos à publier, classés par rendement</h2>
+<p>Toutes les photos ne se valent pas. Certaines rassurent un client hésitant, d'autres ne servent qu'à remplir la galerie. Voici les huit catégories, classées par ce qu'elles apportent réellement à un prospect qui compare trois fiches.</p>
+
+<h3>1. La façade en journée, prise depuis le trottoir ✅</h3>
+<p>C'est la photo la plus utile de toute votre fiche, et celle qui manque le plus souvent. Elle répond à la seule question angoissante du client : « est-ce que je vais trouver ? ». Cadrez comme un piéton qui arrive, enseigne lisible, numéro de rue visible si possible. Une seule photo de façade bien faite réduit les appels du type « vous êtes où exactement ? ».</p>
+
+<h3>2. L'intérieur, depuis l'entrée</h3>
+<p>Le client veut savoir dans quoi il met les pieds. Prenez le même angle que celui qu'il aura en poussant la porte. Lumière du jour, pas de flash, personne de dos au premier plan.</p>
+
+<h3>3. Le produit ou la prestation, en situation</h3>
+<p>Une baguette qui sort du four, une coupe terminée, une voiture rendue propre, une paire de lunettes ajustée. Ce sont les photos les plus vues dans la galerie et celles que les clients agrandissent.</p>
+
+<h3>4. L'équipe, visage découvert</h3>
+<p>Sous-estimée dans tous les secteurs de service. Le client achète une relation, pas un local. Une photo d'équipe correcte fait plus pour la confiance que trois photos de mobilier.</p>
+
+<h3>5. Le parking, l'accès, l'entrée PMR</h3>
+<p>Personne ne publie ça, tout le monde le cherche. Si vous avez trois places devant, montrez-les : c'est un argument de choix décisif en centre-ville.</p>
+
+<h3>6. La carte, les tarifs affichés, la vitrine d'offres</h3>
+<p>Photographier son affichage tarifaire est un excellent filtre : les clients hors budget ne se déplacent pas, ceux qui viennent sont déjà d'accord sur le prix. Moins d'avis négatifs sur le tarif à l'arrivée.</p>
+
+<h3>7. Le logo et la photo de couverture</h3>
+<p>Techniques mais nécessaires : ce sont les deux seules images dont vous choisissez vraiment l'emplacement dans l'interface.</p>
+
+<h3>8. Les photos de saison ou d'événement</h3>
+<p>Décoration de Noël, terrasse en été, nouvelle collection. Elles servent surtout à prouver que la fiche est vivante.</p>
+
+<div class="overflow-x-auto">
+<table>
+<thead>
+<tr><th>Type de photo</th><th>Ce que ça règle</th><th>Priorité</th></tr>
+</thead>
+<tbody>
+<tr><td>Façade en journée</td><td>« Je vais trouver ? »</td><td>Indispensable</td></tr>
+<tr><td>Intérieur depuis l'entrée</td><td>« C'est comment dedans ? »</td><td>Indispensable</td></tr>
+<tr><td>Produit / prestation</td><td>« C'est de la qualité ? »</td><td>Indispensable</td></tr>
+<tr><td>Équipe</td><td>« Je vais être bien reçu ? »</td><td>Forte</td></tr>
+<tr><td>Parking / accès</td><td>« Je me gare où ? »</td><td>Forte</td></tr>
+<tr><td>Tarifs / carte</td><td>« C'est dans mon budget ? »</td><td>Moyenne</td></tr>
+<tr><td>Logo et couverture</td><td>Identité visuelle</td><td>Moyenne</td></tr>
+<tr><td>Saison / événement</td><td>Fiche vivante</td><td>Faible</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="combien-frequence" class="scroll-mt-28 mb-16">
+<h2>Combien de photos, et à quelle fréquence les publier</h2>
+<p>Il n'existe aucun seuil officiel communiqué par Google. La question se pose donc comme celle des avis : non pas dans l'absolu, mais <strong>par rapport aux trois fiches classées devant vous</strong>. Ouvrez-les, comptez leurs photos dans l'onglet « Par le propriétaire », et fixez-vous au-dessus de la médiane.</p>
+<p>En pratique, sur la très grande majorité des commerces locaux, la cible raisonnable est la suivante :</p>
+<ul>
+<li><strong>Au démarrage</strong> : 15 à 25 photos, couvrant les six premiers types ci-dessus. En dessous de 10, la galerie paraît abandonnée.</li>
+<li><strong>Ensuite</strong> : 2 à 4 nouvelles photos par mois, publiées à des dates différentes plutôt que d'un bloc.</li>
+<li><strong>Jamais</strong> : 80 photos chargées le même jour puis plus rien pendant deux ans. C'est le profil type d'une fiche créée par une agence puis abandonnée, et cela se voit.</li>
+</ul>
+<p>La régularité compte davantage que le volume, pour la même raison que sur les avis : elle est le signal qu'un établissement est ouvert et actif. C'est exactement la logique de vélocité décrite dans notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 La routine du vendredi :</strong> bloquez dix minutes le vendredi, tous les quinze jours. Deux photos prises avec le téléphone du comptoir, publiées dans la foulée. Sur un an, cela fait environ 50 photos récentes sans jamais y avoir consacré une demi-journée.</p>
+</div>
+</section>
+
+<section id="formats-techniques" class="scroll-mt-28 mb-16">
+<h2>Formats, tailles et réglages : ce qui compte vraiment</h2>
+<p>Les spécifications techniques sont simples et n'ont pas beaucoup changé. Google accepte le <strong>JPG et le PNG</strong>, jusqu'à 5 Mo par fichier. Le minimum accepté est de 250 × 250 pixels, mais c'est un plancher à ignorer : en dessous de 720 × 720, l'image est agrandie par Google et perd en netteté sur les écrans récents.</p>
+<ul>
+<li><strong>Photo de profil et logo</strong> : 720 × 720 px, format carré. Prévoyez un recadrage circulaire sur plusieurs affichages Google : gardez l'essentiel au centre.</li>
+<li><strong>Photo de couverture</strong> : format paysage 16:9, 1080 × 608 px au minimum. C'est celle que vous proposez comme image principale — Google n'est pas obligé de la retenir comme vignette.</li>
+<li><strong>Photos de galerie</strong> : 1080 × 1080 px ou plus, JPG de bonne qualité. Inutile de charger un fichier de 12 Mo : il sera recompressé.</li>
+<li><strong>Vidéos</strong> : jusqu'à 30 secondes, 100 Mo, 720p minimum. Peu utilisées, très visibles quand elles existent.</li>
+</ul>
+<p>Deux croyances tenaces méritent d'être écartées. Première croyance : renommer le fichier <em>plaque-nfc-avis-google-montreuil.jpg</em> améliorerait le référencement local. Rien n'indique que Google lise le nom de fichier d'une photo de fiche ; cela ne coûte rien, mais n'en attendez aucun effet. Seconde croyance : injecter des <strong>coordonnées GPS dans les données EXIF</strong> ferait monter la fiche. Google déclare retirer les métadonnées à l'import, et l'idée relève du folklore SEO plus que de la méthode.</p>
+<p>Ce qui compte réellement tient en trois points : la photo est <strong>nette</strong>, elle est <strong>prise en lumière naturelle</strong>, elle montre <strong>votre établissement et pas une banque d'images</strong>. Les détails et les règles officielles figurent dans <a href="https://support.google.com/business/answer/6103862" target="_blank" rel="noopener noreferrer">la documentation Google sur l'ajout de photos et de vidéos</a>.</p>
+</section>
+
+<section id="photos-clients" class="scroll-mt-28 mb-16">
+<h2>Faire publier des photos par vos clients</h2>
+<p>Une photo client vaut plus qu'une photo professionnelle, pour la même raison qu'un avis vaut plus qu'un argumentaire : elle n'a pas été mise en scène. Sur les fiches les plus consultées d'un secteur, les photos clients sont souvent trois à dix fois plus nombreuses que celles du propriétaire.</p>
+<p>On ne peut évidemment ni acheter ni échanger une photo contre quoi que ce soit — c'est la même règle que pour les avis, et les sanctions sont les mêmes. En revanche, il se trouve que la photo arrive presque toujours <strong>au même moment que l'avis</strong> : quand le client est déjà sur le formulaire, appareil en main, Google lui propose d'ajouter une image en un bouton. Autrement dit, tout ce qui augmente le nombre d'avis augmente mécaniquement le nombre de photos clients.</p>
+<p>C'est là que le support physique change tout. Une <a href="/#product">plaque NFC posée au comptoir</a> ouvre la page d'avis en approchant le téléphone, sans application ni saisie d'adresse : le client est sur le formulaire en deux secondes, au moment précis où il est content. Le tour de la question des emplacements est fait dans notre guide des <a href="/blog/ou-placer-plaque-avis-google">7 emplacements pour une plaque avis Google</a>.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ La phrase qui déclenche la photo :</strong> « si vous avez pris une photo tout à l'heure, vous pouvez la joindre, ça aide vraiment les gens à se décider ». Elle est neutre, ne promet rien, ne demande rien d'obligatoire — et elle double le taux de photos jointes dans la plupart des retours qui nous remontent.</p>
+</div>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs qui coûtent des clics</h2>
+<ul>
+<li><strong>Utiliser des photos de banque d'images.</strong> Un intérieur de restaurant qui n'est pas le vôtre est le meilleur moyen de décevoir à l'arrivée, et donc de récolter un avis tiède.</li>
+<li><strong>Publier des photos prises de nuit au flash.</strong> Elles écrasent les couleurs et donnent un aspect fermé. Refaites-les en journée, cela prend cinq minutes.</li>
+<li><strong>Ne montrer que le local vide.</strong> Un commerce sans personne dedans paraît sans clients. Un peu de vie, floutée si nécessaire.</li>
+<li><strong>Charger une affiche promotionnelle en guise de photo.</strong> Google déclasse les images essentiellement composées de texte, et le client cherche votre établissement, pas une publicité.</li>
+<li><strong>Laisser une photo obsolète en tête de galerie.</strong> Travaux terminés, enseigne changée, salle refaite : republiez, sinon Street View parlera pour vous.</li>
+<li><strong>Négliger la photo de couverture au motif que Google ne la retient pas toujours.</strong> Elle est utilisée dans plusieurs affichages, et c'est celle que vous maîtrisez.</li>
+<li><strong>Traiter les photos et les avis comme deux chantiers séparés.</strong> Ils se nourrissent l'un l'autre : chaque avis collecté est une occasion de photo, et chaque photo augmente la probabilité qu'on ouvre la fiche pour lire les avis.</li>
+</ul>
+</section>
+
+<section id="mesurer" class="scroll-mt-28 mb-16">
+<h2>Mesurer l'effet : les trois chiffres à regarder</h2>
+<p>L'interface Google Business Profile fournit des statistiques suffisantes pour trancher, à condition de ne pas regarder les mauvais indicateurs. Trois chiffres méritent d'être relevés le premier de chaque mois, dans un simple tableau :</p>
+<ul>
+<li><strong>Les vues de la fiche</strong>, séparées entre recherche et Maps. Elles dépendent surtout de votre position, pas de vos photos.</li>
+<li><strong>Les demandes d'itinéraire et les appels</strong>. C'est le vrai indicateur d'intention. Si vos photos font leur travail, c'est ici que cela se voit en premier.</li>
+<li><strong>Le nombre de vues de vos photos comparé à celui des fiches concurrentes</strong>, que Google affiche directement.</li>
+</ul>
+<p>Comptez six à huit semaines avant de conclure quoi que ce soit, et évitez de comparer un mois d'août à un mois de novembre. Comme pour la note, les effets sont lents mais cumulatifs — c'est le même raisonnement que dans notre article sur le <a href="/blog/ameliorer-note-google">calcul du nombre d'avis nécessaire pour améliorer sa note Google</a>.</p>
+<p>Et si des photos disparaissent de votre fiche sans explication, la mécanique de modération est la même que pour les avis : elle est décrite dans <a href="/blog/avis-google-disparus">avis Google disparus, les causes et les recours</a>.</p>
+</section>
+
+<section id="plan-30-jours" class="scroll-mt-28 mb-16">
+<h2>Le plan 30 jours</h2>
+<h3>Semaine 1 : l'état des lieux</h3>
+<ul>
+<li>Ouvrez votre fiche sur un téléphone, en navigation privée. Notez la vignette affichée : est-ce une de vos photos ou celle d'un client ?</li>
+<li>Comptez les photos des trois concurrents classés devant vous. Vous avez votre objectif chiffré.</li>
+<li>Signalez les photos clients manifestement hors sujet — c'est le seul retrait que vous pouvez obtenir.</li>
+</ul>
+<h3>Semaine 2 : la série de base</h3>
+<ul>
+<li>Une matinée ensoleillée, téléphone récent : façade, intérieur depuis l'entrée, trois prestations, l'équipe, le parking. Quinze photos suffisent.</li>
+<li>Chargez logo et photo de couverture au bon format.</li>
+</ul>
+<h3>Semaine 3 : brancher la collecte</h3>
+<ul>
+<li>Installez la plaque au point d'encaissement et briefez l'équipe sur une phrase unique, identique pour tout le monde.</li>
+<li>Ajoutez la mention de la photo à la fin du script.</li>
+</ul>
+<h3>Semaine 4 : installer le rythme</h3>
+<ul>
+<li>Deux photos publiées, puis une routine de quinze jours inscrite dans le planning.</li>
+<li>Relevez vos trois indicateurs, et refaites le point dans deux mois.</li>
+</ul>
+</section>
+
+<section id="faq-photos-gbp" class="scroll-mt-28 mb-16">
+<h2>FAQ — Photos Google Business Profile</h2>
+
+<h3>Combien de photos faut-il sur une fiche Google Business Profile ?</h3>
+<p>Google ne communique aucun seuil. La bonne cible se lit chez vos concurrents : ouvrez les trois fiches classées devant vous, comptez leurs photos publiées par le propriétaire, et placez-vous au-dessus de la médiane. En pratique, 15 à 25 photos au démarrage couvrent l'essentiel des besoins d'un commerce local, puis 2 à 4 nouvelles photos par mois suffisent à entretenir la fiche. En dessous de 10 photos, la galerie paraît abandonnée et le client passe à la fiche suivante.</p>
+
+<h3>Quelle taille et quel format pour les photos Google Business Profile ?</h3>
+<p>JPG ou PNG, jusqu'à 5 Mo. Le minimum accepté est 250 × 250 pixels mais il faut viser au moins 720 × 720, sans quoi Google agrandit l'image et elle perd en netteté. La photo de profil et le logo se chargent en carré 720 × 720 px, en gardant l'essentiel au centre puisque plusieurs affichages appliquent un recadrage circulaire. La photo de couverture se charge en paysage 16:9, 1080 × 608 px au minimum. Pour les photos de galerie, 1080 × 1080 px est un bon compromis.</p>
+
+<h3>Peut-on supprimer une photo publiée par un client ?</h3>
+<p>Pas directement. Vous pouvez uniquement la signaler, et Google ne la retire que si elle enfreint ses règles : contenu hors sujet, photo d'un autre établissement, image offensante ou manifestement trompeuse. Une photo simplement peu flatteuse mais authentique restera en ligne. Le seul levier réellement efficace consiste donc à publier régulièrement des photos récentes et nettes : la galerie se réorganise et l'image gênante recule.</p>
+
+<h3>Les photos font-elles monter une fiche dans le pack local ?</h3>
+<p>Pas de la même manière que les avis. Le classement local repose sur la pertinence, la distance et la proéminence, et les photos n'entrent pas directement dans ce calcul. Leur effet est indirect mais réel : elles augmentent le taux de clic sur une fiche déjà affichée, et Google observe ce comportement. Une fiche systématiquement ignorée dans le pack local finit par perdre sa place, une fiche systématiquement choisie consolide la sienne.</p>
+
+<h3>Faut-il ajouter des données GPS dans les photos pour le SEO local ?</h3>
+<p>Non. Cette technique circule depuis des années dans les forums SEO, mais Google indique retirer les métadonnées EXIF à l'import : les coordonnées ne survivent pas au chargement. Le temps passé à modifier les EXIF est mieux investi à photographier votre parking ou votre équipe. Il en va de même pour le nom du fichier : cela ne coûte rien de le nommer proprement, mais n'en attendez aucun gain de position.</p>
+
+<h3>Comment obtenir des photos publiées par les clients ?</h3>
+<p>En collectant des avis. Google propose l'ajout d'une photo directement sur le formulaire d'avis : tout ce qui augmente le nombre d'avis augmente mécaniquement le nombre de photos clients. Une plaque NFC posée au comptoir ouvre ce formulaire en approchant le téléphone, sans application ni saisie. Une phrase suffit ensuite à déclencher la photo : « si vous en avez pris une tout à l'heure, vous pouvez la joindre ». En revanche, offrir une contrepartie contre une photo ou un avis est interdit et expose à la suppression de l'ensemble de vos avis.</p>
+
+<h3>À quelle fréquence faut-il publier de nouvelles photos ?</h3>
+<p>Deux à quatre par mois, publiées à des dates différentes plutôt que d'un seul bloc. La régularité est le signal utile : elle indique un établissement ouvert et actif. Le schéma à éviter est celui de la fiche créée par une agence, remplie de 80 photos le premier jour puis laissée intacte pendant deux ans. Dix minutes tous les quinze jours, avec le téléphone du comptoir, suffisent à tenir le rythme sur l'année.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : les photos ouvrent la fiche, les avis la font apparaître</h2>
+<p>Une fiche Google se joue en deux temps, et les confondre fait perdre du temps. Les avis décident si vous êtes <strong>affiché</strong> parmi les trois fiches du pack local. Les photos décident si vous êtes <strong>choisi</strong> une fois affiché. Travailler l'un sans l'autre revient soit à soigner une vitrine dans une rue sans passage, soit à attirer du monde devant un rideau baissé.</p>
+<p>La bonne nouvelle, c'est que les deux chantiers se rejoignent au même endroit : le comptoir, au moment où le client est content. Il y laisse un avis, et souvent une photo dans la foulée. Tout le reste — le format 720 × 720, la routine du vendredi, la photo du parking — n'est que de la mise en œuvre.</p>
+<p>Guides complémentaires : <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>, <a href="/blog/combien-avis-google-pack-local">combien d'avis pour le pack local</a>, <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>, ou <a href="/blog/statistiques-avis-google-2026">les statistiques avis Google 2026 sourcées</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Une belle fiche mérite un flux d'avis régulier</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 EUR HT — <a href="/product/starter" class="font-semibold underline">Starter</a>, <a href="/product/business" class="font-semibold underline">Business</a> ou <a href="/product/pro" class="font-semibold underline">Pro</a>.</p>
+</div>
+</section>
+`,
+  },
+  'plaque-nfc-opticien': {
+    title: 'Plaque NFC opticien : transformer la livraison des lunettes en avis Google',
+    category: 'Secteur',
+    date: '19 août 2026',
+    readTime: '11 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Un opticien voit son client quatre fois, puis plus rien pendant deux ans : si l\'avis n\'est pas demandé pendant cette fenêtre, il ne le sera jamais. Le moment qui change tout, les 6 emplacements classés, les scripts magasin et trois exemples de calcul.',
+    tocSections: [
+      { id: 'pourquoi-avis-opticien', label: 'Pourquoi les avis décident' },
+      { id: 'cycle-long', label: 'Quatre visites, puis deux ans' },
+      { id: 'fonctionnement', label: 'Comment fonctionne la plaque' },
+      { id: 'placements-opticien', label: '6 emplacements classés' },
+      { id: 'moments-demander', label: 'Quand demander, quand se taire' },
+      { id: 'scripts-opticien', label: 'Les scripts magasin' },
+      { id: 'cas-pratiques', label: '3 exemples de calcul' },
+      { id: 'roi-opticien', label: 'Faire le calcul' },
+      { id: 'repondre-avis', label: 'Répondre aux avis négatifs' },
+      { id: 'plan-90-jours', label: 'Le plan 90 jours' },
+      { id: 'faq-opticien', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-avis-opticien" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google décident du choix d'un opticien</h2>
+<p>Un client qui cherche des lunettes ne peut comparer ni la qualité d'un verre progressif, ni la précision d'une prise de mesures, ni la pertinence d'un conseil de monture. Ces trois choses constituent l'essentiel de votre métier, et aucune n'est évaluable depuis un trottoir. Il lui reste deux critères visibles : la vitrine, et ce que les autres clients ont écrit.</p>
+<p>Et il les lit. <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs). Sur une requête « opticien + ville », Google n'affiche que trois fiches dans le pack local avant qu'il faille cliquer pour voir la suite. Un magasin à 23 avis noté 4,1 ne se bat pas à armes égales avec l'enseigne à 340 avis notée 4,8 installée deux rues plus loin.</p>
+<p>Deux particularités du métier rendent l'enjeu plus lourd qu'ailleurs. La première est la densité : dans la plupart des villes moyennes, le client a cinq à dix opticiens à moins de dix minutes, souvent alignés sur les mêmes verriers et les mêmes grandes marques de montures. Quand l'offre se ressemble, le classement se joue ailleurs. La seconde est le panier moyen : un équipement progressif complet se situe fréquemment entre 400 et 900 € selon la monture et l'indice des verres. Une place perdue dans le pack local ne vous coûte pas un café, elle vous coûte un équipement.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> multipliez votre panier moyen par le nombre d'équipements qu'un client achètera chez vous sur dix ans — lui, plus son conjoint, plus ses enfants. Vous obtenez la valeur réelle d'un nouveau client, celle qu'il faut comparer au coût d'une plaque. C'est un ordre de grandeur qui n'a rien à voir avec le prix d'une paire.</p>
+</div>
+</section>
+
+<section id="cycle-long" class="scroll-mt-28 mb-16">
+<h2>Le vrai problème de l'opticien : quatre visites, puis deux ans de silence</h2>
+<p>Un restaurateur voit ses clients toutes les semaines. Un coiffeur toutes les six semaines. Un opticien, lui, concentre toute la relation sur quelques rendez-vous rapprochés — examen de vue, choix de la monture, prise de mesures, livraison, un ajustage ou deux — puis n'entend plus parler de son client pendant deux à trois ans, la plupart des contrats de complémentaire santé ne prenant en charge un nouvel équipement qu'à cette périodicité.</p>
+<p>Conséquence directe : <strong>si l'avis n'est pas demandé pendant cette fenêtre de trois semaines, il ne le sera jamais.</strong> Il n'y a pas de « prochaine fois » dans deux mois pour se rattraper. Le magasin qui compte sur le hasard collecte donc uniquement les avis spontanés — et les avis spontanés, dans l'optique, sont majoritairement écrits par des mécontents, parce que la déception y a presque toujours un montant ou un délai inscrit dessus.</p>
+<h3>Les 4 méthodes qui ne fonctionnent pas en magasin d'optique</h3>
+<ul>
+<li><strong>Le flyer glissé dans l'étui à lunettes</strong> : l'étui part au fond du sac à main ou de la boîte à gants. Le papier est retrouvé six mois plus tard, ou jamais.</li>
+<li><strong>Le mail de relance après livraison</strong> : il arrive une fois le client rentré chez lui, au milieu de cinquante autres messages, à un moment où l'émotion de la livraison est retombée. Et il arrive parfois juste après un problème d'adaptation aux progressifs, ce qui produit exactement l'avis que vous ne vouliez pas.</li>
+<li><strong>L'affiche A4 scotchée près de la caisse</strong> : elle devient invisible en trois jours, y compris pour votre propre équipe.</li>
+<li><strong>Le « n'hésitez pas à nous laisser un avis » lancé au moment de partir</strong> : sans objet à toucher, le client acquiesce sincèrement, y pense sur le parking, puis passe à autre chose.</li>
+</ul>
+<p>Ce qui fonctionne, c'est un objet posé exactement là où le client dépose son téléphone pour régler ou pour ranger son ancienne paire, présenté à l'instant précis où il vient de voir net. Rien d'autre.</p>
+</section>
+
+<section id="fonctionnement" class="scroll-mt-28 mb-16">
+<h2>Comment fonctionne la plaque NFC dans un magasin d'optique</h2>
+<p>La plaque est en acrylique premium (120 × 120 × 3 mm) et contient une puce NTAG215. Le client approche son smartphone à moins de 4 cm : votre page d'avis Google s'ouvre <strong>automatiquement</strong>, sans application à installer, sans code à saisir, sans avoir à chercher votre magasin dans Maps.</p>
+<ol>
+<li>Le client vient de chausser son nouvel équipement à la table d'ajustage</li>
+<li>L'opticien avance la plaque : « Si vous avez trente secondes, approchez votre téléphone ici »</li>
+<li>Le formulaire d'avis de votre fiche s'ouvre directement</li>
+<li>Cinq étoiles et deux lignes — c'est terminé</li>
+</ol>
+<p>Un <strong>QR code de secours</strong> est imprimé sur la plaque pour les téléphones dont le NFC est désactivé. C'est loin d'être un détail dans ce métier : la presbytie commence vers 45 ans, et une partie significative de votre clientèle a plus de 60 ans. Pour ces clients, le geste « scanner » est souvent plus familier que le geste « approcher », et il faut pouvoir proposer les deux sans hésiter.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Spécificité optique :</strong> la table d'ajustage est un plan de travail où l'on manipule en permanence des outils, des chiffonnettes et des produits nettoyants. L'acrylique 3 mm supporte les sprays optiques et les lingettes microfibres sans se voiler ni se rayer, contrairement à un carton plastifié ou à un chevalet imprimé qui gondole en quelques semaines.</p>
+</div>
+</section>
+
+<section id="placements-opticien" class="scroll-mt-28 mb-16">
+<h2>Où placer la plaque en magasin d'optique : 6 emplacements classés</h2>
+<p>Le placement fait la majorité du travail. Le bon critère n'est pas la visibilité, c'est l'état du client au moment où il croise l'objet : a-t-il son téléphone en main ? Est-il assis ou debout ? Vient-il de payer, ou de découvrir un reste à charge ? Voici les six emplacements possibles, classés par rendement réel.</p>
+
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Emplacement</th><th class="border p-3 text-left">Moment du parcours</th><th class="border p-3 text-left">Rendement</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Table d'ajustage / de livraison</td><td class="border p-3">Le client vient de chausser l'équipement</td><td class="border p-3">Excellent</td></tr>
+<tr><td class="border p-3">Comptoir de caisse, à droite du TPE</td><td class="border p-3">Règlement du solde après mutuelle</td><td class="border p-3">Très bon</td></tr>
+<tr><td class="border p-3">Poste de contactologie</td><td class="border p-3">Fin d'un apprentissage de pose réussi</td><td class="border p-3">Bon</td></tr>
+<tr><td class="border p-3">Comptoir de SAV / petites réparations</td><td class="border p-3">Ajustage ou plaquettes changés gratuitement</td><td class="border p-3">Bon</td></tr>
+<tr><td class="border p-3">Bureau d'examen de vue</td><td class="border p-3">Sortie de contrôle, avant la vente</td><td class="border p-3">Moyen</td></tr>
+<tr><td class="border p-3">Vitrine ou mur d'exposition</td><td class="border p-3">Flânerie, sans intention</td><td class="border p-3">Faible</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>1. La table d'ajustage, au moment de la livraison ✅</h3>
+<p>C'est <strong>de très loin le meilleur emplacement de tout le magasin</strong>, et la raison n'a rien d'anecdotique. La livraison est le seul instant du parcours où le client obtient physiquement ce qu'il attendait : il chausse, il regarde au loin, il lit une ligne, et il voit net. C'est le pic émotionnel de toute la relation, et il se produit assis, à une table, avec l'ancienne paire et le téléphone posés devant lui. Aucun autre moment ne combine ces trois conditions.</p>
+
+<h3>2. Le comptoir de caisse, à droite du terminal de paiement</h3>
+<p>Deuxième meilleur emplacement, parce que le téléphone est déjà sorti pour le paiement sans contact. Une nuance propre au métier : dans beaucoup de magasins, le solde réglé en caisse est un reste à charge après mutuelle, c'est-à-dire le moment du parcours où le client pense au prix. Si ce reste à charge a été mal anticipé, ce n'est pas l'instant idéal — d'où l'intérêt d'équiper aussi la table d'ajustage, où la question financière est déjà derrière.</p>
+
+<h3>3. Le poste de contactologie</h3>
+<p>Sous-estimé, et pourtant très performant. Un primo-porteur qui parvient à poser et retirer seul ses lentilles après vingt minutes d'apprentissage vient de vivre une petite victoire personnelle, avec vous. Il est assis, il a les mains libres une fois terminé, et il est reconnaissant d'un temps que beaucoup de magasins ne prennent pas.</p>
+
+<h3>4. Le comptoir de SAV et de petites réparations</h3>
+<p>C'est l'angle mort du secteur. Un client qui repasse faire resserrer une branche, remplacer des plaquettes ou récupérer une vis reçoit un service <strong>gratuit</strong>, en trois minutes, sans rendez-vous. Il repart content et personne ne lui demande jamais rien, précisément parce qu'il n'y a pas eu de transaction. C'est une erreur : ces visites représentent souvent plusieurs passages par jour et constituent un gisement d'avis entièrement inexploité.</p>
+
+<h3>5. Le bureau d'examen de vue</h3>
+<p>Rendement moyen, et pour une bonne raison : le contrôle précède la vente. Solliciter un avis avant d'avoir livré l'équipement revient à demander une note à la mi-temps. À réserver aux contrôles de fin de garantie ou aux renouvellements d'ordonnance qui ne débouchent sur aucun achat, quand le client repart satisfait sans rien acheter.</p>
+
+<h3>6. La vitrine ou le mur de montures</h3>
+<p>Faible rendement. Le client qui flâne devant les montures n'a aucune expérience à raconter — il n'a encore rien vécu chez vous. La plaque y sert au mieux de signal de confiance, jamais d'outil de collecte. Notre <a href="/blog/ou-placer-plaque-avis-google">guide des 7 meilleurs emplacements</a> détaille la logique de placement, tous secteurs confondus.</p>
+</section>
+
+<section id="moments-demander" class="scroll-mt-28 mb-16">
+<h2>Les 5 moments où l'on demande, les 4 où l'on se tait</h2>
+<p>Dans l'optique plus qu'ailleurs, le moment compte davantage que la formulation. Le même client, sollicité à quinze jours d'intervalle, écrira deux avis opposés.</p>
+<h3>Les 5 moments qui fonctionnent</h3>
+<ul>
+<li><strong>La livraison de l'équipement</strong>, juste après le premier essai réussi. Le moment de référence, celui qui produit le plus d'avis et les plus détaillés.</li>
+<li><strong>Le premier ajustage de confort</strong>, huit à quinze jours après la livraison : le client a vécu avec ses verres, l'adaptation est faite, et vous venez de corriger gratuitement un point de gêne.</li>
+<li><strong>La fin d'un apprentissage de lentilles réussi</strong>, quand le primo-porteur repart autonome.</li>
+<li><strong>Une réparation dépannée sur place</strong> : branche resserrée, vis remplacée, verre reclipé en trois minutes et sans facture.</li>
+<li><strong>La sortie d'un équipement enfant réussi</strong>, quand un parent voit son enfant lire correctement pour la première fois. Ce sont les avis les plus émotionnels du secteur, et ceux qui convainquent le mieux les autres parents.</li>
+</ul>
+<h3>Les 4 situations où l'on ne demande jamais</h3>
+<ul>
+<li><strong>Pendant l'annonce du devis</strong>, tant que le reste à charge après mutuelle n'a pas été accepté sans réserve.</li>
+<li><strong>Quand la commande a du retard</strong> chez le verrier, même si le retard ne vous est pas imputable. Le client ne fera pas la distinction.</li>
+<li><strong>Lors d'une difficulté d'adaptation aux progressifs</strong>, tant que le problème n'est pas résolu. Après résolution, en revanche, c'est un excellent moment.</li>
+<li><strong>Après un refus de prise en charge</strong> par la complémentaire santé, ou un litige de garantie encore ouvert.</li>
+</ul>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ La règle qui protège votre fiche :</strong> on s'abstient sur le <em>contexte</em>, jamais sur le <em>client</em>. Ne pas solliciter pendant un litige ouvert est du bon sens commercial ; choisir de ne présenter la plaque qu'aux clients dont on devine qu'ils mettront cinq étoiles est un filtrage contraire aux règles de Google. La différence tient à un point : le critère doit être écrit, identique pour tout le monde, et la plaque doit rester visible en permanence sur le comptoir — personne n'est empêché de la lire.</p>
+</div>
+</section>
+
+<section id="scripts-opticien" class="scroll-mt-28 mb-16">
+<h2>Les scripts à donner à l'équipe</h2>
+<p>Une seule phrase, apprise, identique pour tout le monde. Les magasins qui laissent chacun improviser obtiennent une demande formulée une fois sur cinq, et toujours par la même personne.</p>
+<h3>À la table d'ajustage, après le premier essai</h3>
+<p><em>« Ça vous va très bien. Si vous êtes content du résultat, vous pouvez approcher votre téléphone de la plaque : ça ouvre notre page d'avis Google, ça prend trente secondes. Ça nous aide beaucoup. »</em></p>
+<p>Pourquoi cette formulation : elle enchaîne sur un compliment sincère lié au produit, elle décrit le geste exact, elle annonce la durée. Les trois raisons pour lesquelles un client refuse — la gêne, l'incertitude sur la manipulation, la peur que ce soit long — sont désamorcées dans la même phrase.</p>
+<h3>En caisse, une fois le solde réglé</h3>
+<p><em>« Merci beaucoup. Si tout s'est bien passé, la plaque juste là ouvre notre page d'avis Google en approchant le téléphone. Deux lignes suffisent. »</em></p>
+<h3>Au comptoir de réparation, après un dépannage gratuit</h3>
+<p><em>« C'est offert, bien sûr. Si vous voulez nous rendre service en retour, approchez votre téléphone de la plaque : ça ouvre notre page d'avis. »</em></p>
+<p>C'est le script le plus efficace du magasin, parce qu'il repose sur une réciprocité que le client ressent réellement à cet instant. Vous venez de rendre un service gratuit ; la contrepartie demandée est symbolique et coûte trente secondes.</p>
+<h3>Au poste de contactologie, en fin d'apprentissage</h3>
+<p><em>« Vous êtes autonome, c'était le but. Si l'accompagnement vous a été utile, la plaque là ouvre notre page d'avis Google. »</em></p>
+<div class="bg-red-50 rounded-xl p-4 border border-red-200 not-prose">
+<p class="text-sm text-red-900"><strong>🚫 Trois formulations à bannir :</strong> « laissez-nous un avis 5 étoiles » (orienter la note est interdit et se voit), « en échange je vous fais un geste sur l'étui » (toute contrepartie expose à la suppression de vos avis et à la suspension de la fiche), et « je vous le mets sur ma tablette » (plusieurs avis publiés depuis le même appareil et la même adresse IP constituent un signal de fraude classique pour les filtres automatiques de Google).</p>
+</div>
+</section>
+
+<section id="cas-pratiques" class="scroll-mt-28 mb-16">
+<h2>Trois exemples de calcul</h2>
+<p>Aucun de ces chiffres n'est une promesse : ce sont des calculs posés à partir d'hypothèses que vous devez remplacer par les vôtres. Refaites l'opération avec votre nombre réel de livraisons et le taux que vous constatez sur votre fiche au bout d'un mois.</p>
+<h3>Magasin indépendant de centre-ville</h3>
+<p>Hypothèses : 55 livraisons d'équipement par mois, 40 passages SAV, un client sur cinq qui publie quand la demande est faite, demande formulée deux fois sur trois. Le calcul donne (55 + 40) × 0,66 × 0,20, soit environ <strong>12 avis par mois</strong>. Sur douze mois, une fiche qui plafonnait à 30 avis dépasse les 170. C'est l'ordre de grandeur qui change un classement local, pas une variation de 5 avis.</p>
+<h3>Enseigne de centre commercial</h3>
+<p>Hypothèses : 130 livraisons par mois, deux points d'encaissement, une équipe de quatre personnes. Le facteur limitant n'est plus le flux, il est la régularité : si seulement deux vendeurs sur quatre formulent la demande, vous divisez le résultat par deux quoi qu'il arrive. Avec 130 livraisons, une demande faite une fois sur deux et un publiant sur cinq, on obtient <strong>13 avis par mois</strong> — soit à peine plus que l'indépendant du dessus avec deux fois plus de clients. Le brief d'équipe vaut ici plus cher que le trafic.</p>
+<h3>Opticien mobile ou magasin de quartier à faible flux</h3>
+<p>Hypothèses : 20 livraisons par mois, demande systématique parce qu'il n'y a qu'une personne au magasin, un client sur quatre qui publie du fait de la relation personnelle. Résultat : <strong>5 avis par mois</strong>, soit 60 sur un an. Sur une commune de 6 000 habitants où le concurrent le mieux classé en affiche 40, cela suffit largement à prendre la première place du pack local. Pour situer votre propre seuil, notre méthode de <a href="/blog/combien-avis-google-pack-local">calcul du nombre d'avis nécessaire au pack local</a> donne le repère à viser face à vos concurrents directs.</p>
+</section>
+
+<section id="roi-opticien" class="scroll-mt-28 mb-16">
+<h2>Faire le calcul : ce que coûte un avis, ce que rapporte un client</h2>
+<p>Le raisonnement tient en deux lignes, et il est particulièrement favorable dans l'optique à cause du panier moyen.</p>
+<p><strong>Côté coût.</strong> Une plaque Swiipx est un paiement unique, à partir de 29,90 EUR HT, sans abonnement ni frais mensuels. Si elle contribue à 12 avis par mois, elle a produit 144 avis au bout d'un an, puis continue les années suivantes sans que vous repayiez quoi que ce soit. Le coût unitaire par avis descend très vite sous les quelques dizaines de centimes, puis tend vers zéro. Notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût réel par avis</a> détaille le calcul face aux plateformes à abonnement, dont le coût, lui, ne baisse jamais.</p>
+<p><strong>Côté revenu.</strong> Prenez votre panier moyen — disons 420 € pour un équipement complet — et demandez-vous combien de clients supplémentaires par mois justifieraient l'investissement. La réponse est : moins d'un, une seule fois. Tout le reste est net.</p>
+<p>Le vrai gain, cependant, n'est pas dans ce calcul direct. Il est dans le classement. Passer de la sixième à la troisième position sur « opticien + votre ville » change le nombre de personnes qui poussent votre porte, tous les jours, sans que vous ayez rien à repayer. Et une fois la note installée, elle se défend surtout par le volume : notre article sur <a href="/blog/ameliorer-note-google">le calcul exact du nombre d'avis pour faire monter sa note</a> montre pourquoi agir tôt coûte des dizaines de fois moins cher qu'agir tard.</p>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Répondre aux trois avis négatifs types du secteur</h2>
+<p>Répondez à 100 % des avis, sous 48 heures, négatifs compris. La réponse n'est pas écrite pour l'auteur de l'avis : elle est écrite pour les dizaines de prospects qui la liront ensuite, et elle vaut souvent plus que l'avis lui-même. Trois griefs reviennent systématiquement en optique.</p>
+<h3>« Trois semaines pour recevoir mes lunettes »</h3>
+<p>Ne vous défaussez pas sur le verrier en première phrase, cela se lit comme une excuse. Reconnaissez le délai, expliquez brièvement ce qui allonge une fabrication sur mesure — verres progressifs personnalisés, traitements spécifiques, contrôle avant montage — et indiquez ce que vous avez changé depuis, ou ce que vous proposez maintenant : une estimation annoncée à la commande, un point d'étape à mi-parcours. Le lecteur suivant retient surtout que vous savez de quoi vous parlez.</p>
+<h3>« Beaucoup trop cher pour ce que c'est »</h3>
+<p>Ne discutez jamais votre marge en public et ne citez aucun montant. Expliquez en termes généraux ce que couvre un équipement — examen, prise de mesures individualisée, montage, ajustages et SAV illimités, garantie — puis rappelez qu'une offre 100 % Santé sans reste à charge est proposée systématiquement en magasin, et proposez un échange direct. Cette réponse est lue par tous ceux qui hésitent devant votre vitrine pour la même raison : c'est probablement la plus rentable que vous écrirez cette année.</p>
+<h3>« Je ne m'habitue pas à mes progressifs »</h3>
+<p>C'est le seul des trois où la réponse peut réellement récupérer le client. Rappelez que l'adaptation demande souvent une à trois semaines, que la période d'adaptation est prévue, et invitez la personne à repasser pour un contrôle des mesures et un ajustage — sans frais. Beaucoup de ces avis sont modifiés à la hausse après résolution, ce qui n'arrive presque jamais sur les deux autres griefs. La <a href="/blog/repondre-avis-negatifs-google">méthode complète de réponse aux avis négatifs</a>, avec des modèles prêts à l'emploi, s'applique telle quelle.</p>
+</section>
+
+<section id="plan-90-jours" class="scroll-mt-28 mb-16">
+<h2>Le plan 90 jours pour un magasin d'optique</h2>
+<h3>Semaines 1-2 : la mise en place</h3>
+<ul>
+<li>Vérifiez votre fiche Google Business Profile : catégorie principale « Opticien », horaires exacts, photos récentes de la vitrine et de l'intérieur, mention des services (examen de vue, contactologie, tiers payant). Notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche GBP</a> détaille chaque champ.</li>
+<li>Installez deux plaques : table d'ajustage et comptoir de caisse. Le <a href="/product/business">Pack Business</a> correspond exactement à cette configuration.</li>
+<li>Écrivez les quatre situations d'abstention dans le classeur d'accueil. C'est le point le plus important du brief, avant même le script.</li>
+<li>Briefez toute l'équipe, y compris les alternants et les remplaçants du samedi : une seule phrase, apprise, identique pour tout le monde.</li>
+</ul>
+<h3>Semaines 3-8 : le rythme</h3>
+<ul>
+<li>Demandez à chaque livraison, sans exception hors situations d'abstention. C'est la seule variable que vous pilotez vraiment.</li>
+<li>N'oubliez pas les passages SAV : c'est le gisement que tous vos concurrents laissent dormir.</li>
+<li>Répondez à 100 % des avis sous 48 h.</li>
+<li>Publiez un Google Post par semaine : arrivée d'une collection, opération enfants pour la rentrée, contrôle de vue sans rendez-vous, offre 100 % Santé.</li>
+<li>Ne cherchez pas à rattraper le retard d'un coup : une accélération brutale du volume est exactement le signal que les filtres anti-fraude de Google surveillent en priorité.</li>
+</ul>
+<h3>Semaines 9-12 : la consolidation</h3>
+<ul>
+<li>Les effets sur le pack local deviennent visibles — comptez 4 à 8 semaines de décalage.</li>
+<li>Relisez les mots qui reviennent dans vos avis : ce sont ceux sur lesquels Google vous positionne. S'ils ne parlent que de solaires alors que vous voulez développer la contactologie, déplacez le moment où vous sollicitez.</li>
+<li>Comparez votre nombre d'avis à celui des trois magasins classés devant vous, et fixez votre rythme mensuel en conséquence.</li>
+</ul>
+</section>
+
+<section id="faq-opticien" class="scroll-mt-28 mb-16">
+<h2>FAQ — Plaque NFC pour opticien</h2>
+
+<h3>Combien d'avis Google un magasin d'optique peut-il collecter avec une plaque NFC ?</h3>
+<p>Personne ne peut vous le garantir : cela dépend de votre nombre de livraisons et de la régularité de la demande, pas de la plaque. Le calcul se pose en une minute. Un magasin qui livre 55 équipements par mois et reçoit 40 passages SAV, avec une demande formulée deux fois sur trois et un client sur cinq qui publie, obtient environ 12 avis mensuels. Si la demande n'est faite qu'une fois sur trois, le résultat est divisé par deux. C'est l'hypothèse retenue qui décide du résultat, pas le matériel.</p>
+
+<h3>Où faut-il placer la plaque NFC dans un magasin d'optique ?</h3>
+<p>Sur la table d'ajustage, à l'endroit exact où se fait la livraison de l'équipement. C'est le seul moment du parcours où le client obtient physiquement ce qu'il attendait : il chausse, il voit net, il est assis, et son téléphone est posé devant lui. Le comptoir de caisse arrive juste derrière, à droite du terminal de paiement, puisque le téléphone y est déjà sorti. Le comptoir de SAV est le troisième emplacement, très largement sous-exploité dans le secteur.</p>
+
+<h3>Quel est le meilleur moment pour demander un avis à un client opticien ?</h3>
+<p>À la livraison, juste après le premier essai réussi, et lors du premier ajustage de confort huit à quinze jours plus tard. À l'inverse, on ne sollicite jamais pendant l'annonce d'un devis, tant qu'une commande a du retard chez le verrier, pendant une difficulté d'adaptation aux progressifs non résolue, ou après un refus de prise en charge par la complémentaire santé. L'abstention porte sur le contexte, jamais sur le client : le critère est écrit, identique pour tous, et la plaque reste visible en permanence.</p>
+
+<h3>Peut-on offrir un étui, une remise ou un produit nettoyant contre un avis Google ?</h3>
+<p>Non, c'est formellement interdit par les règles de Google. Toute contrepartie expose à la suppression massive de vos avis, y compris les avis parfaitement légitimes, et à la suspension de votre fiche. Il est tout aussi risqué de faire rédiger l'avis sur la tablette du magasin : plusieurs avis publiés depuis le même appareil et la même adresse IP constituent un signal de fraude classique pour les filtres automatiques. Le client écrit depuis son propre téléphone et son propre compte Google, ou il n'écrit pas.</p>
+
+<h3>Que répondre à un avis négatif sur le prix des lunettes ?</h3>
+<p>Ne discutez jamais votre marge en public et ne citez aucun montant. Expliquez en termes généraux ce que couvre un équipement — examen, prise de mesures individualisée, montage, ajustages et SAV illimités, garantie — rappelez que l'offre 100 % Santé sans reste à charge est proposée systématiquement, puis proposez un échange direct par téléphone. Cette réponse n'est pas écrite pour l'auteur de l'avis mais pour les dizaines de prospects qui hésitent devant votre vitrine exactement pour la même raison.</p>
+
+<h3>La plaque NFC fonctionne-t-elle avec une clientèle âgée ?</h3>
+<p>Oui, et c'est précisément pour cela qu'un QR code de secours est imprimé sur chaque plaque. Le NFC fonctionne sur tous les iPhone depuis le modèle 7 et sur la quasi-totalité des Android récents, mais une partie de la clientèle presbyte est plus à l'aise avec le geste « scanner » qu'avec le geste « approcher ». Avoir les deux options sur le même objet évite d'avoir à choisir, et permet à l'opticien de basculer de l'un à l'autre sans que le client se sente en difficulté.</p>
+
+<h3>Quel pack choisir pour un magasin d'optique ?</h3>
+<p>Magasin indépendant à une seule table d'ajustage et un point d'encaissement : <a href="/product/starter">Pack Starter</a>. Magasin disposant d'une table d'ajustage et d'un comptoir de caisse distincts : <a href="/product/business">Pack Business</a>, deux plaques, la configuration la plus fréquente. Magasin à plusieurs postes de vente, enseigne de centre commercial, ou magasin souhaitant équiper aussi la contactologie et le comptoir de SAV : <a href="/product/pro">Pack Pro</a>, cinq plaques.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : la livraison est votre meilleur moment, ne le laissez pas passer</h2>
+<p>Personne ne pousse la porte d'un opticien au hasard. Le client a comparé <strong>avant de se déplacer</strong>, sur trois fiches, en quelques dizaines de secondes, sur les deux seuls éléments qu'il pouvait évaluer : la note et le nombre d'avis. Ce que vos clients écrivent travaille pour vous tous les jours, y compris quand le rideau est baissé.</p>
+<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong> et que personne ne prend le temps d'écrire. Vos clients sont contents en repartant — vous le voyez sur leur visage à l'instant où ils chaussent leur nouvel équipement. Il leur manque trente secondes et un objet à portée de main, présenté à ce moment-là précisément. Dans deux ans, il sera trop tard.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-cabinet-medical">cabinet médical et déontologie</a>, <a href="/blog/plaque-nfc-institut-beaute">institut de beauté</a>, <a href="/blog/ou-placer-plaque-avis-google">les 7 meilleurs emplacements</a>, ou notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque livraison en avis Google ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 EUR HT.</p>
+</div>
+</section>
+`,
+  },
   'ameliorer-note-google': {
     title: 'Améliorer sa note Google : combien d\'avis 5 étoiles pour passer de 4,2 à 4,6 ?',
     category: 'Statistiques',
