@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 35,
+    title: 'Plaque NFC hôtel : transformer le check-out en avis Google',
+    excerpt: 'Un hôtelier surveille sa note Booking chaque matin et laisse sa fiche Google à l\'abandon — c\'est exactement l\'inverse qu\'il faudrait faire. Le check-out, les 6 emplacements classés, les scripts de réception et trois exemples de calcul.',
+    category: 'Secteur',
+    date: '26 août 2026',
+    dateIso: '2026-08-26',
+    readTime: '11 min',
+    slug: 'plaque-nfc-hotel',
+  },
+  {
     id: 34,
     title: 'Plaque NFC avis Google : acrylique, métal, bois ou PVC ? Le comparatif des matériaux',
     excerpt: 'Le métal bloque le NFC, le PVC jaunit, le bois se voile : le matériau décide si la plaque se lit encore dans trois ans. Comparatif des 5 supports, la vérité sur les puces NTAG213/215/216, l\'adhésif et le coût réel par mois.',

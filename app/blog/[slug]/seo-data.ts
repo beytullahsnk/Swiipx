@@ -26,6 +26,22 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'plaque-nfc-hotel': {
+    title: 'Plaque NFC hôtel : collecter des avis Google au check-out',
+    description: 'Booking collecte vos avis tout seul, pas Google. Les 6 emplacements en hôtel, les scripts de réception au check-out et trois exemples de calcul chiffrés.',
+    keywords: 'plaque nfc hotel, avis google hotel, avis google booking hotel, fiche google hotel, collecter avis google hotellerie, plaque avis google reception, note google hotel, seo local hotel, avis clients hotel, reservation directe hotel',
+    date: '2026-08-26',
+    dateModified: '2026-08-26',
+    category: 'Secteur',
+    faq: [
+      { q: 'Un hôtel peut-il demander un avis Google alors qu\'il collecte déjà des avis Booking ?', a: 'Oui, sans aucune difficulté. Les deux systèmes sont indépendants et aucune plateforme n\'interdit à un établissement de solliciter un avis ailleurs. La seule règle à respecter est celle de Google : pas de contrepartie, pas de tri des clients selon leur satisfaction supposée. En pratique, laissez les plateformes de réservation envoyer leurs relances automatiques après le séjour et réservez le geste humain du comptoir à Google, qui est le seul canal sans commission.' },
+      { q: 'Où placer la plaque NFC dans un hôtel ?', a: 'Le comptoir de réception, orienté vers le client et du côté où l\'on rend la clé, produit à lui seul la majorité des avis. Le deuxième emplacement le plus rentable est la sortie de la salle du petit-déjeuner, qui fonctionne sans mobiliser de personnel. Les chambres arrivent ensuite, avec un rendement plus faible mais un volume important, particulièrement utiles dans les établissements pratiquant le check-out express ou le dépôt de clé automatique.' },
+      { q: 'Combien d\'avis Google un hôtel peut-il espérer par mois ?', a: 'Cela dépend du nombre de départs et de la discipline de la demande. Pour un établissement de 30 chambres à 70 % d\'occupation, soit environ 320 départs mensuels, une demande systématique au check-out place l\'ordre de grandeur entre 25 et 40 avis par mois. Une clientèle affaires dépose moins, une chambre d\'hôtes beaucoup plus en proportion. Le facteur déterminant reste la régularité : un hôtel qui demande à chaque départ collecte plusieurs fois plus qu\'un hôtel qui demande quand il y pense.' },
+      { q: 'Faut-il équiper toutes les chambres d\'une plaque NFC ?', a: 'Ce n\'est pas le meilleur investissement de départ. Le rendement par plaque est bien plus élevé au comptoir et au petit-déjeuner, parce qu\'une demande orale accompagne le support. La configuration efficace consiste à équiper d\'abord la réception et la salle du petit-déjeuner, puis à tester deux ou trois chambres pendant un mois pour mesurer le dépôt réel avant d\'envisager un déploiement complet.' },
+      { q: 'Une plaque NFC fonctionne-t-elle sur un comptoir de réception en métal ?', a: 'Pas directement. Une surface métallique perturbe le champ magnétique émis par le téléphone : la portée s\'effondre et la lecture devient aléatoire. Deux solutions simples : décaler la plaque de quelques centimètres sur une partie non métallique du comptoir, ou la poser librement sur un socle, ce qui permet en plus de la pousser vers le client. Dans tous les cas, testez avec deux téléphones différents à l\'endroit exact avant de fixer quoi que ce soit.' },
+      { q: 'Les clients étrangers peuvent-ils laisser un avis avec une plaque NFC ?', a: 'Oui. Le NFC est un standard mondial, pris en charge par l\'immense majorité des smartphones vendus depuis plusieurs années, iPhone comme Android, sans réglage particulier ni application à installer. La page d\'avis Google qui s\'ouvre s\'affiche dans la langue du compte Google du client. Pour un hôtel accueillant une clientèle internationale, c\'est un avantage net sur toute solution passant par un e-mail ou un SMS, qui suppose de disposer d\'un contact valide à l\'étranger.' },
+    ],
+  },
   'materiaux-plaque-nfc-avis-google': {
     title: 'Plaque NFC avis Google : quel matériau choisir en 2026 ?',
     description: 'Acrylique, métal, bois, PVC ou autocollant : le matériau décide si la plaque NFC se lit. Comparatif, puces NTAG213/215/216, adhésif et coût réel par mois.',

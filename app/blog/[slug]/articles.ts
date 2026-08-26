@@ -18,6 +18,203 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-hotel': {
+    title: 'Plaque NFC hôtel : transformer le check-out en avis Google',
+    category: 'Secteur',
+    date: '26 août 2026',
+    readTime: '11 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Un hôtelier surveille sa note Booking chaque matin et laisse sa fiche Google à l\'abandon — c\'est exactement l\'inverse qu\'il faudrait faire. Le check-out, les 6 emplacements classés, les scripts de réception et trois exemples de calcul.',
+    tocSections: [
+      { id: 'pourquoi-hotel', label: 'Pourquoi l\'avis Google décide' },
+      { id: 'booking-google', label: 'Booking, Tripadvisor ou Google ?' },
+      { id: 'emplacements', label: 'Les 6 emplacements' },
+      { id: 'moments', label: 'Quand demander, quand se taire' },
+      { id: 'scripts', label: 'Trois scripts de réception' },
+      { id: 'chambre', label: 'La plaque en chambre' },
+      { id: 'calcul', label: 'Trois exemples de calcul' },
+      { id: 'avis-negatifs', label: 'Répondre aux avis négatifs' },
+      { id: 'erreurs', label: 'Les 6 erreurs à éviter' },
+      { id: 'faq-hotel', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-hotel" class="scroll-mt-28 mb-16">
+<h2>Pourquoi l'avis Google décide de la réservation d'un hôtel</h2>
+<p>Un hôtelier connaît par cœur sa note Booking. Il la surveille chaque matin, il sait à la décimale près où il se situe par rapport à l'établissement d'en face. Sa fiche Google, elle, vit sa vie : une note plus basse, moins d'avis, aucune réponse depuis huit mois. C'est précisément l'inverse de ce qu'il faudrait faire.</p>
+<p>La raison tient au parcours réel du voyageur. Une partie des clients arrive par une plateforme de réservation, mais une autre part — et c'est celle qui coûte le moins cher — tape le nom de la ville et le mot hôtel dans Google, ou cherche le nom de votre établissement après l'avoir vu ailleurs. Dans les deux cas, ce qui s'affiche en premier sur un téléphone n'est pas votre site : c'est le pack local, ces trois fiches Google encadrées d'une carte, avec une note sur cinq et un nombre d'avis.</p>
+<p><strong>Sur ces trois lignes se joue l'essentiel de votre visibilité gratuite.</strong> Un hôtel à 4,1 avec 62 avis face à un concurrent à 4,6 avec 340 avis ne perd pas seulement un affichage : il perd le clic, donc la visite de son site, donc la réservation directe — la seule qui ne lui coûte pas de commission.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> l'hôtellerie est l'un des rares secteurs où le client passe une nuit entière chez vous et repart le lendemain sans que personne ne lui ait demandé son avis. Le check-out est un moment de contact garanti, daté, avec la quasi-totalité de vos clients. Aucun autre commerce local ne dispose d'une fenêtre aussi fiable — et presque aucun hôtel ne l'utilise.</p>
+</div>
+<p>Le problème n'est pas la satisfaction : la plupart des hôtels ont des clients contents. Le problème est la friction. Un client satisfait qui repart avec ses valises ne se souviendra pas, trois jours plus tard, de chercher votre établissement sur Google pour écrire trois lignes. C'est cette friction qu'une plaque NFC posée sur le comptoir de réception supprime : le client approche son téléphone, le formulaire d'avis Google s'ouvre, l'avis est écrit avant que le taxi n'arrive.</p>
+</section>
+
+<section id="booking-google" class="scroll-mt-28 mb-16">
+<h2>Booking, Tripadvisor, Google : où l'avis rapporte le plus</h2>
+<p>La question revient à chaque fois : faut-il envoyer le client sur Google, sur Booking ou sur Tripadvisor ? Les trois n'ont pas la même fonction et surtout pas le même coût.</p>
+<h3>Ce que chaque plateforme vous apporte</h3>
+<ul>
+<li><strong>Booking et les autres plateformes de réservation</strong> : les avis y sont collectés automatiquement après le séjour, sans effort de votre part. Ils améliorent votre position dans un moteur où chaque réservation vous coûte une commission. Vous travaillez pour améliorer un classement dont la conversion est facturée.</li>
+<li><strong>Tripadvisor</strong> : forte notoriété, influence réelle sur la clientèle loisirs internationale, mais une audience de plus en plus captée par Google sur les recherches mobiles.</li>
+<li><strong>Google Business Profile</strong> : c'est le seul canal où un avis supplémentaire améliore une visibilité que vous ne payez pas. Il alimente le pack local, la carte, et le panneau qui s'affiche quand quelqu'un tape le nom de votre hôtel.</li>
+</ul>
+<p>Le calcul est simple : un avis sur une plateforme de réservation renforce un canal à commission, un avis Google renforce un canal gratuit qui alimente votre réservation directe. À effort égal, l'avis Google vaut mécaniquement plus cher pour votre marge. C'est la même logique de coût par avis que nous détaillons dans notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût réel d'un avis Google</a>.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 La règle à retenir :</strong> laissez les plateformes de réservation collecter leurs avis toutes seules, elles le font très bien. Concentrez le seul geste humain dont vous disposez — la demande au comptoir — sur Google. Vous ne perdez rien côté plateformes, puisque leur relance est automatique, et vous alimentez le canal qui ne vous coûte aucune commission.</p>
+</div>
+<p>Une précision utile : il n'est pas interdit de citer Google explicitement au moment de la demande. Ce qui est interdit, c'est de trier — de ne solliciter que les clients dont vous devinez qu'ils seront élogieux — ou d'offrir une contrepartie. Une plaque posée en évidence sur le comptoir est visible par tout le monde, ce qui la place naturellement du bon côté de la règle.</p>
+</section>
+
+<section id="emplacements" class="scroll-mt-28 mb-16">
+<h2>Les 6 emplacements dans un hôtel, classés par rendement</h2>
+<p>Dans un hôtel, le passage n'est pas réparti uniformément : il se concentre sur deux points de contact obligatoires, l'arrivée et le départ. Un emplacement ne vaut que par la combinaison de trois facteurs — le client passe devant, il a les mains libres, et il vient de vivre un moment positif.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Emplacement</th><th class="border p-3 text-left">Moment</th><th class="border p-3 text-left">Rendement</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Comptoir de réception, côté client</strong></td><td class="border p-3">Check-out, restitution de la clé</td><td class="border p-3"><strong>Le meilleur, de loin</strong></td></tr>
+<tr><td class="border p-3"><strong>Salle du petit-déjeuner, près de la sortie</strong></td><td class="border p-3">Fin du petit-déjeuner</td><td class="border p-3">Très bon, sans mobiliser de personnel</td></tr>
+<tr><td class="border p-3"><strong>Chambre, sur le bureau ou le chevet</strong></td><td class="border p-3">Fin de séjour, soirée</td><td class="border p-3">Bon en volume, plus aléatoire</td></tr>
+<tr><td class="border p-3"><strong>Comptoir du bar</strong></td><td class="border p-3">Après consommation</td><td class="border p-3">Moyen, dépend du type d'hôtel</td></tr>
+<tr><td class="border p-3"><strong>Ascenseur, hall, bagagerie</strong></td><td class="border p-3">Attente</td><td class="border p-3">Faible, mais coût nul</td></tr>
+<tr><td class="border p-3"><strong>Vitrine ou porte d'entrée</strong></td><td class="border p-3">Passage</td><td class="border p-3">Très faible, à éviter</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Le comptoir de réception : la seule position qui compte vraiment</h3>
+<p>La plaque doit être orientée vers le client, pas vers le réceptionniste, et posée du côté où l'on rend la clé. Le geste que vous cherchez à provoquer est un enchaînement : le client pose sa clé, le réceptionniste dit une phrase, la main du client est déjà au-dessus du comptoir. Si la plaque est à trente centimètres sur la gauche, l'enchaînement se casse et le taux de dépôt s'effondre.</p>
+<p>Attention à un piège technique fréquent en hôtellerie : les comptoirs de réception modernes intègrent souvent une structure métallique, un plateau en inox ou un bandeau d'aluminium. Une plaque NFC collée directement sur du métal ne se lit plus, ou très mal — nous expliquons pourquoi dans notre <a href="/blog/materiaux-plaque-nfc-avis-google">comparatif des matériaux de plaque NFC</a>. Testez toujours à l'endroit exact avant de coller.</p>
+<h3>Le petit-déjeuner : l'emplacement le plus sous-estimé</h3>
+<p>Un client qui termine son petit-déjeuner est assis, détendu, son téléphone est sur la table et il vient de vivre un moment agréable. C'est le seul emplacement d'un hôtel où la collecte fonctionne sans qu'aucun membre du personnel n'ait à demander quoi que ce soit. Une plaque sur le meuble du buffet, près de la desserte à plateaux, capte ce flux en continu.</p>
+<p>Pour le raisonnement complet sur le choix d'un point de pose, notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer une plaque d'avis Google</a> détaille les sept configurations types.</p>
+</section>
+
+<section id="moments" class="scroll-mt-28 mb-16">
+<h2>Les 5 moments où l'on demande, les 3 où l'on se tait</h2>
+<p>En hôtellerie plus qu'ailleurs, le moment de la demande fait toute la différence entre un avis 5 étoiles spontané et un client agacé.</p>
+<h3>Les 5 moments favorables</h3>
+<ul>
+<li><strong>Le check-out d'un séjour sans incident</strong>, quand le client dit spontanément que tout s'est bien passé. C'est le moment principal, celui qui produira la majorité de vos avis.</li>
+<li><strong>Un surclassement ou une faveur accordée</strong> : chambre avec vue, départ tardif offert, petit-déjeuner ajouté. Le client est en position de réciprocité naturelle, sans qu'aucune contrepartie n'ait été échangée contre un avis.</li>
+<li><strong>La résolution rapide d'un problème</strong> : une chambre changée en dix minutes, une climatisation réparée dans la soirée. Un client dont on a réglé le souci est souvent plus enthousiaste qu'un client dont le séjour a été plat.</li>
+<li><strong>La fin du petit-déjeuner</strong>, en passif, via la plaque posée près de la sortie.</li>
+<li><strong>Le retour d'un client fidèle</strong>, à qui l'on peut légitimement dire qu'on serait heureux de lire son retour après plusieurs séjours.</li>
+</ul>
+<h3>Les 3 moments où l'on ne demande jamais</h3>
+<ul>
+<li><strong>Après une réclamation non résolue</strong> ou un geste commercial refusé. Vous ne récolterez pas un avis neutre, vous récolterez un 1 étoile documenté.</li>
+<li><strong>Lors d'un départ précipité</strong> : client en retard sur son train, groupe en train de charger un car, famille avec enfants en pleine agitation. La demande sera perçue comme une contrainte de plus.</li>
+<li><strong>Au check-in.</strong> Le client n'a rien vécu encore, et lui demander un avis à l'arrivée envoie exactement le mauvais signal sur la sincérité de la démarche.</li>
+</ul>
+<p>Ces trois abstentions ne constituent pas du filtrage d'avis : vous ne triez pas les clients selon leur satisfaction supposée, vous vous abstenez dans des contextes où la demande serait déplacée. La plaque, elle, reste visible pour tout le monde en permanence.</p>
+</section>
+
+<section id="scripts" class="scroll-mt-28 mb-16">
+<h2>Trois scripts de réception qui fonctionnent</h2>
+<p>Un script d'hôtel doit tenir en une phrase et se placer exactement dans le silence qui suit la restitution de la clé. Trop long, il devient un discours commercial ; trop vague, il ne déclenche aucun geste.</p>
+<h3>Au check-out, cas standard</h3>
+<p>« J'espère que le séjour vous a plu. Si vous avez dix secondes, vous pouvez poser votre téléphone ici, ça ouvre directement notre page d'avis Google. Ça nous aide beaucoup. »</p>
+<p>Trois éléments à ne pas retirer : la formule qui laisse une porte de sortie, la durée annoncée qui doit être ridiculement courte, et le geste désigné du doigt. Le client ne doit pas avoir à deviner ce qu'on attend de lui.</p>
+<h3>Après un surclassement ou un geste commercial</h3>
+<p>« Content que la chambre vous ait convenu. Si vous voulez le dire en deux lignes sur Google, c'est ici, ça prend dix secondes. »</p>
+<p>Le lien entre la faveur et l'avis n'est jamais formulé comme une condition. On mentionne la satisfaction, pas la contrepartie.</p>
+<h3>Après un problème réglé</h3>
+<p>« Encore désolé pour le désagrément d'hier soir, et merci de votre patience. Si vous trouvez qu'on a bien réagi, un mot sur Google nous ferait vraiment plaisir. »</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> formez vos réceptionnistes une seule fois, mais imposez la phrase à tous les check-out sans exception, sauf dans les trois cas d'abstention. Le facteur qui explique l'écart entre un hôtel qui collecte 40 avis par mois et un hôtel qui en collecte 6 n'est presque jamais la satisfaction client : c'est la régularité de la demande.</p>
+</div>
+</section>
+
+<section id="chambre" class="scroll-mt-28 mb-16">
+<h2>La plaque en chambre : intérêt réel et limites</h2>
+<p>Beaucoup d'hôteliers pensent d'abord à la chambre, puisqu'il y en a trente ou soixante. L'intuition est bonne en volume, moins bonne en rendement.</p>
+<p>Une plaque en chambre est lue par un client seul, sans personne pour formuler la demande, souvent en début de séjour au moment où il découvre la pièce — c'est-à-dire trop tôt. Le taux de dépôt y est nettement inférieur à celui du comptoir. Elle présente en revanche trois avantages réels :</p>
+<ul>
+<li>Elle capte les clients qui ne repassent pas par la réception au départ, ce qui est fréquent avec les dépôts de clé automatiques et les check-out express.</li>
+<li>Elle fonctionne la nuit et le week-end, y compris dans les établissements sans réception permanente.</li>
+<li>Elle atteint le second occupant de la chambre, celui qui n'est jamais au comptoir.</li>
+</ul>
+<p>La bonne configuration consiste donc à ne pas équiper toutes les chambres, mais à combiner : une plaque au comptoir de réception, une en sortie de petit-déjeuner, et deux ou trois en chambre à titre de test avant de généraliser. Un <a href="/product/business">pack de 2 plaques</a> couvre le comptoir et le petit-déjeuner ; le <a href="/product/pro">pack de 5 plaques</a> permet d'y ajouter le bar et deux chambres pilotes.</p>
+<p>Un point de vigilance pratique : en chambre, le support doit résister au ménage quotidien et aux produits d'entretien, et l'adhésif doit tenir sur un chevet stratifié. C'est le cas d'usage typique où un autocollant fin ne passe pas l'année.</p>
+</section>
+
+<section id="calcul" class="scroll-mt-28 mb-16">
+<h2>Trois exemples de calcul</h2>
+<p>Le raisonnement est toujours le même : nombre de départs, part des clients réellement sollicités, taux de dépôt observé sur une demande orale accompagnée d'un support sans friction.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Établissement</th><th class="border p-3 text-left">Départs par mois</th><th class="border p-3 text-left">Sollicités</th><th class="border p-3 text-left">Avis estimés par mois</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Hôtel 3 étoiles, 30 chambres, 70 % d'occupation</td><td class="border p-3">Environ 320</td><td class="border p-3">65 %</td><td class="border p-3"><strong>25 à 40</strong></td></tr>
+<tr><td class="border p-3">Hôtel de chaîne, 80 chambres, clientèle affaires</td><td class="border p-3">Environ 900</td><td class="border p-3">45 %</td><td class="border p-3"><strong>50 à 80</strong></td></tr>
+<tr><td class="border p-3">Chambre d'hôtes, 5 chambres</td><td class="border p-3">Environ 45</td><td class="border p-3">90 %</td><td class="border p-3"><strong>8 à 14</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Trois lectures de ce tableau. D'abord, la clientèle affaires dépose moins : le séjour est court, le départ matinal et pressé, et le voyageur n'a pas d'attachement particulier à l'établissement. On compense par le volume. Ensuite, la chambre d'hôtes affiche le meilleur taux et le plus petit volume — mais dans un village, quinze avis supplémentaires peuvent suffire à prendre la première place locale.</p>
+<p>Enfin, le rythme mensuel compte plus que le total. Une fiche qui reçoit régulièrement des avis récents est mieux traitée qu'une fiche à gros volume figée depuis deux ans. Pour savoir combien d'avis viser précisément face à vos concurrents, notre méthode de calcul du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne la formule.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Ordre de grandeur :</strong> pour un hôtel de 30 chambres à 30 avis par mois, une plaque à paiement unique amortie sur trois ans revient à quelques centimes par avis collecté. La même collecte confiée à une plateforme facturée mensuellement coûte plusieurs centaines d'euros par an, pour un résultat identique côté Google.</p>
+</div>
+</section>
+
+<section id="avis-negatifs" class="scroll-mt-28 mb-16">
+<h2>Les 4 avis négatifs types de l'hôtellerie, et quoi répondre</h2>
+<p>Collecter davantage d'avis ne fait pas disparaître les négatifs, cela les dilue. Reste à répondre, publiquement, car cette réponse est lue par les futurs clients bien plus que par l'auteur de l'avis.</p>
+<h3>« Chambre bruyante, impossible de dormir »</h3>
+<p>Ne contestez jamais la perception. Reconnaissez, situez le contexte factuellement, indiquez l'action. « Nous sommes désolés que le bruit ait gâché votre nuit. Nos chambres côté rue sont plus exposées le week-end ; nous pouvons attribuer une chambre sur cour à la réservation, il suffit de le préciser. Nous avons par ailleurs engagé le remplacement des menuiseries de la façade. »</p>
+<h3>« Chambre pas assez propre »</h3>
+<p>C'est le reproche le plus coûteux en hôtellerie et celui sur lequel il ne faut jamais se défendre. Excusez-vous sans réserve, indiquez le contrôle mis en place, et proposez un contact direct hors plateforme.</p>
+<h3>« Petit-déjeuner cher pour ce que c'est »</h3>
+<p>Assumez le positionnement sans justification défensive. Décrivez ce que contient la prestation, mentionnez l'alternative si elle existe, et n'entrez pas dans une comparaison de prix avec le café d'en face.</p>
+<h3>« Parking introuvable »</h3>
+<p>Un avis à faible enjeu émotionnel mais à forte valeur informative : votre réponse servira de renseignement à des dizaines de futurs clients. Donnez l'information précise, elle est plus utile que l'excuse.</p>
+<p>La méthode complète, avec les modèles de réponse et la procédure de signalement des avis illicites, est détaillée dans notre guide sur <a href="/blog/repondre-avis-negatifs-google">comment répondre aux avis négatifs Google</a>.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 6 erreurs qui coûtent des avis en hôtellerie</h2>
+<ul>
+<li><strong>Tout miser sur les plateformes de réservation.</strong> Vous améliorez un classement dont chaque conversion vous est facturée, pendant que votre canal gratuit stagne.</li>
+<li><strong>Demander au check-in.</strong> Le client n'a rien à raconter et la démarche paraît mécanique.</li>
+<li><strong>Placer la plaque face au réceptionniste.</strong> Elle doit être orientée client, du côté de la restitution de la clé.</li>
+<li><strong>Coller sur un plateau métallique</strong> sans avoir testé la lecture à l'endroit exact, avec au moins deux téléphones différents.</li>
+<li><strong>Ne pas répondre aux avis.</strong> En hôtellerie, l'absence de réponse est lue comme du désintérêt par le voyageur qui compare deux établissements.</li>
+<li><strong>Offrir une contrepartie</strong> — une boisson, une remise sur le prochain séjour. C'est interdit par Google et cela expose l'ensemble de votre historique d'avis à une suppression.</li>
+</ul>
+<p>Une septième, plus insidieuse : négliger le reste de la fiche. Un hôtel dont les horaires de réception, les équipements et les photos ne sont pas à jour convertit mal, même avec une bonne note. Notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a> couvre l'ensemble des champs à remplir.</p>
+</section>
+
+<section id="faq-hotel" class="scroll-mt-28 mb-16">
+<h2>Questions fréquentes</h2>
+<h3>Un hôtel peut-il demander un avis Google alors qu'il collecte déjà des avis Booking ?</h3>
+<p>Oui, sans aucune difficulté. Les deux systèmes sont indépendants et aucune plateforme n'interdit à un établissement de solliciter un avis ailleurs. La seule règle à respecter est celle de Google : pas de contrepartie, pas de tri des clients selon leur satisfaction supposée. En pratique, laissez les plateformes de réservation envoyer leurs relances automatiques après le séjour et réservez le geste humain du comptoir à Google, qui est le seul canal sans commission.</p>
+<h3>Où placer la plaque NFC dans un hôtel ?</h3>
+<p>Le comptoir de réception, orienté vers le client et du côté où l'on rend la clé, produit à lui seul la majorité des avis. Le deuxième emplacement le plus rentable est la sortie de la salle du petit-déjeuner, qui fonctionne sans mobiliser de personnel. Les chambres arrivent ensuite, avec un rendement plus faible mais un volume important, particulièrement utiles dans les établissements pratiquant le check-out express ou le dépôt de clé automatique.</p>
+<h3>Combien d'avis Google un hôtel peut-il espérer par mois ?</h3>
+<p>Cela dépend du nombre de départs et de la discipline de la demande. Pour un établissement de 30 chambres à 70 % d'occupation, soit environ 320 départs mensuels, une demande systématique au check-out place l'ordre de grandeur entre 25 et 40 avis par mois. Une clientèle affaires dépose moins, une chambre d'hôtes beaucoup plus en proportion. Le facteur déterminant reste la régularité : un hôtel qui demande à chaque départ collecte plusieurs fois plus qu'un hôtel qui demande quand il y pense.</p>
+<h3>Faut-il équiper toutes les chambres d'une plaque NFC ?</h3>
+<p>Ce n'est pas le meilleur investissement de départ. Le rendement par plaque est bien plus élevé au comptoir et au petit-déjeuner, parce qu'une demande orale accompagne le support. La configuration efficace consiste à équiper d'abord la réception et la salle du petit-déjeuner, puis à tester deux ou trois chambres pendant un mois pour mesurer le dépôt réel avant d'envisager un déploiement complet.</p>
+<h3>Une plaque NFC fonctionne-t-elle sur un comptoir de réception en métal ?</h3>
+<p>Pas directement. Une surface métallique perturbe le champ magnétique émis par le téléphone : la portée s'effondre et la lecture devient aléatoire. Deux solutions simples : décaler la plaque de quelques centimètres sur une partie non métallique du comptoir, ou la poser librement sur un socle, ce qui permet en plus de la pousser vers le client. Dans tous les cas, testez avec deux téléphones différents à l'endroit exact avant de fixer quoi que ce soit.</p>
+<h3>Les clients étrangers peuvent-ils laisser un avis avec une plaque NFC ?</h3>
+<p>Oui. Le NFC est un standard mondial, pris en charge par l'immense majorité des smartphones vendus depuis plusieurs années, iPhone comme Android, sans réglage particulier ni application à installer. La page d'avis Google qui s'ouvre s'affiche dans la langue du compte Google du client. Pour un hôtel accueillant une clientèle internationale, c'est un avantage net sur toute solution passant par un e-mail ou un SMS, qui suppose de disposer d'un contact valide à l'étranger.</p>
+<h3>Que faire des avis Google déjà anciens et négatifs ?</h3>
+<p>Google ne supprime que les avis qui enfreignent ses règles, pas ceux qui déplaisent. Deux actions restent utiles. Répondre publiquement, même tardivement, parce que la réponse est lue par les futurs clients. Et collecter suffisamment d'avis récents pour que les anciens descendent dans la liste et pèsent de moins en moins dans la moyenne — c'est l'effet de dilution, et il est la seule réponse durable à un historique dégradé.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : le check-out est la fenêtre la plus fiable de votre établissement</h2>
+<p>Un hôtel dispose d'un avantage que presque aucun commerce local n'a : un moment de contact garanti avec chacun de ses clients, à une date connue, dans un contexte calme. Le check-out est cette fenêtre. Elle dure quinze secondes et, dans la plupart des établissements, elle n'est pas utilisée.</p>
+<p>La mise en place tient en trois décisions. Une plaque orientée client sur le comptoir de réception, une phrase imposée à chaque départ sauf dans les trois cas d'abstention, et une réponse systématique aux avis publiés. Le reste — le petit-déjeuner, les chambres pilotes, le bar — s'ajoute ensuite, une fois la base en place.</p>
+<p>Les plaques Swiipx sont livrées déjà programmées avec le lien d'avis de votre établissement : aucune application à installer, aucun code d'activation, aucun abonnement. Le <a href="/product/starter">pack Starter</a> équipe le comptoir de réception, le <a href="/product/business">pack Business</a> couvre réception et petit-déjeuner, et le <a href="/product/pro">pack Pro</a> permet d'y ajouter le bar et des chambres pilotes.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>👉 Équipez votre réception dès cette semaine :</strong> <a href="/#product" class="underline font-semibold">découvrir les plaques NFC Swiipx</a> — paiement unique, sans abonnement, garantie à vie sur la puce et livraison en point relais offerte.</p>
+</div>
+</section>
+`,
+  },
   'materiaux-plaque-nfc-avis-google': {
     title: 'Plaque NFC avis Google : acrylique, métal, bois ou PVC ? Le comparatif des matériaux',
     category: 'Comparatif',
