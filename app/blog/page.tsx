@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 34,
+    title: 'Plaque NFC avis Google : acrylique, métal, bois ou PVC ? Le comparatif des matériaux',
+    excerpt: 'Le métal bloque le NFC, le PVC jaunit, le bois se voile : le matériau décide si la plaque se lit encore dans trois ans. Comparatif des 5 supports, la vérité sur les puces NTAG213/215/216, l\'adhésif et le coût réel par mois.',
+    category: 'Comparatif',
+    date: '26 août 2026',
+    dateIso: '2026-08-26',
+    readTime: '12 min',
+    slug: 'materiaux-plaque-nfc-avis-google',
+  },
+  {
     id: 33,
     title: 'Photos Google Business Profile : combien en publier et lesquelles font venir des clients',
     excerpt: 'Sur un téléphone, une fiche Google se juge en une seconde et demie, et l\'œil voit l\'image avant la note. Les 8 types de photos classés par rendement, les formats exacts, la bonne fréquence, les 7 erreurs à éviter et un plan 30 jours.',

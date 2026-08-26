@@ -18,6 +18,213 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'materiaux-plaque-nfc-avis-google': {
+    title: 'Plaque NFC avis Google : acrylique, métal, bois ou PVC ? Le comparatif des matériaux',
+    category: 'Comparatif',
+    date: '26 août 2026',
+    readTime: '12 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Le métal bloque le NFC, le PVC jaunit, le bois se voile : le matériau décide si la plaque se lit encore dans trois ans. Comparatif des 5 supports, la vérité sur les puces NTAG213/215/216, l\'adhésif et le coût réel par mois.',
+    tocSections: [
+      { id: 'pourquoi-materiau', label: 'Pourquoi le matériau décide' },
+      { id: 'metal-probleme', label: 'Le piège du métal' },
+      { id: 'comparatif-materiaux', label: 'Comparatif des 5 matériaux' },
+      { id: 'acrylique', label: "L'acrylique et l'épaisseur" },
+      { id: 'puce-nfc', label: 'NTAG213, 215 ou 216 ?' },
+      { id: 'fixation', label: "L'adhésif et la fixation" },
+      { id: 'duree-de-vie', label: 'Durée de vie et coût par mois' },
+      { id: 'choisir-selon-lieu', label: 'Choisir selon votre lieu' },
+      { id: 'erreurs', label: "Les 6 erreurs d'achat" },
+      { id: 'faq-materiaux', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-materiau" class="scroll-mt-28 mb-16">
+<h2>Pourquoi le matériau d'une plaque NFC n'est pas un détail esthétique</h2>
+<p>Quand on compare deux plaques NFC pour collecter des avis Google, on regarde le prix, la couleur et le message imprimé. Le matériau, lui, passe pour un détail de finition. C'est l'inverse : <strong>le matériau conditionne trois choses qui décident du résultat</strong> — si la puce se lit ou non, combien de temps l'objet reste présentable sur un comptoir, et si l'adhésif tient au-delà de quelques semaines.</p>
+<p>Une plaque NFC est un objet passif : elle n'a ni batterie, ni écran, ni alerte. Personne dans votre équipe ne saura qu'elle a cessé de fonctionner. Un support qui se voile, un vernis qui jaunit, une puce collée sur une surface métallique qui ne répond plus : dans les trois cas, le résultat est identique et silencieux. Les avis s'arrêtent d'arriver et personne ne fait le lien.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une plaque d'avis vit sur un comptoir, c'est-à-dire l'endroit le plus maltraité d'un commerce — projections, produit désinfectant, sacs posés dessus, soleil direct en vitrine. Un support choisi pour la photo du site marchand ne survit pas à cet usage. Le bon critère d'achat n'est pas « est-ce que c'est beau sur la fiche produit », c'est « à quoi est-ce que ça ressemble dans dix-huit mois ».</p>
+</div>
+<p>Ce guide compare les cinq matériaux réellement proposés sur le marché français — acrylique, métal, bois, PVC et autocollant époxy — sur les seuls critères qui comptent : compatibilité NFC, tenue dans le temps, lisibilité et coût réel rapporté à la durée de vie.</p>
+</section>
+
+<section id="metal-probleme" class="scroll-mt-28 mb-16">
+<h2>Le métal : le piège technique que personne n'explique</h2>
+<p>C'est le point le plus important de cet article, et c'est celui qu'aucune fiche produit ne mentionne. <strong>Le NFC et le métal ne s'entendent pas.</strong></p>
+<p>Une puce NFC ne contient pas de batterie. Elle est alimentée par le champ magnétique émis par le téléphone, à 13,56 MHz, capté par une antenne en spirale de cuivre ou d'aluminium imprimée autour de la puce. Ce couplage inductif est ce qui permet d'ouvrir une page en approchant le smartphone à moins de quatre centimètres.</p>
+<p>Placez cette antenne contre une plaque métallique et le champ magnétique induit des courants de Foucault dans le métal. Ces courants absorbent l'énergie destinée à la puce et décalent la fréquence d'accord de l'antenne. Le résultat pratique : <strong>la portée s'effondre, la lecture devient aléatoire, ou la plaque ne répond plus du tout</strong>.</p>
+<h3>Ce qui rend une plaque métallique utilisable</h3>
+<p>Le problème a une solution industrielle : une couche de ferrite intercalée entre l'antenne et le métal, qui canalise le champ et empêche les courants de Foucault. C'est ce qu'on appelle un tag on-metal. Trois conséquences pour l'acheteur :</p>
+<ul>
+<li>La plaque coûte plus cher, la couche de ferrite étant un composant supplémentaire.</li>
+<li>La portée reste inférieure à celle d'un support non métallique, même correctement blindé : il faut souvent poser le téléphone au contact, pas l'approcher.</li>
+<li>Beaucoup de plaques vendues comme métalliques sont en réalité des plaques plastiques avec une finition aluminium ou un habillage métallisé, ce qui règle le problème technique sans le dire — ou le crée, si l'habillage est un vrai film d'aluminium.</li>
+</ul>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Le test en trente secondes :</strong> avant d'installer définitivement une plaque, testez-la avec trois téléphones différents, dont au moins un iPhone et un Android d'entrée de gamme, et testez-la <strong>posée à l'endroit exact où elle vivra</strong>. Une plaque qui fonctionne parfaitement dans la main peut ne plus rien donner une fois collée sur un comptoir à structure métallique ou sur un présentoir en inox. Le support d'accueil compte autant que la plaque elle-même.</p>
+</div>
+<p>La même logique s'applique aux emplacements : coller une plaque non blindée sur une caisse enregistreuse métallique, un frigo, un présentoir en inox ou une barre de comptoir en aluminium produit exactement le même effet qu'une plaque métallique. Le sujet du placement va donc au-delà de la question du passage client — nous l'avons traité en détail dans notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer une plaque d'avis Google</a>.</p>
+</section>
+
+<section id="comparatif-materiaux" class="scroll-mt-28 mb-16">
+<h2>Le comparatif des cinq matériaux</h2>
+<p>Voici les cinq familles de supports proposées sur le marché, comparées sur les critères qui déterminent le nombre d'avis effectivement collectés au bout d'un an.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Matériau</th><th class="border p-3 text-left">Compatibilité NFC</th><th class="border p-3 text-left">Tenue dans le temps</th><th class="border p-3 text-left">Verdict</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Acrylique (PMMA)</strong></td><td class="border p-3">Excellente, transparente au champ</td><td class="border p-3">Ne jaunit pas, résiste aux UV, à l'eau et aux rayures légères</td><td class="border p-3"><strong>Le standard du comptoir</strong></td></tr>
+<tr><td class="border p-3"><strong>Métal / inox</strong></td><td class="border p-3">Mauvaise sans couche de ferrite</td><td class="border p-3">Excellente, mais rayures et traces de doigts très visibles</td><td class="border p-3">À éviter sauf tag on-metal certifié</td></tr>
+<tr><td class="border p-3"><strong>Bois</strong></td><td class="border p-3">Bonne</td><td class="border p-3">Sensible à l'humidité, se voile en cuisine et en salle de bain</td><td class="border p-3">Esthétique, fragile en usage réel</td></tr>
+<tr><td class="border p-3"><strong>PVC / ABS imprimé</strong></td><td class="border p-3">Bonne</td><td class="border p-3">Jaunit aux UV, impression qui s'efface au nettoyage</td><td class="border p-3">Le prix bas se paie en durée de vie</td></tr>
+<tr><td class="border p-3"><strong>Autocollant époxy (dôme)</strong></td><td class="border p-3">Bonne</td><td class="border p-3">Décollement des bords, se marque, se ternit</td><td class="border p-3">Dépannage, pas équipement</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Bois : le bon objet au mauvais endroit</h3>
+<p>Le bois est le matériau le plus flatteur en photo et le plus cohérent avec l'identité d'un restaurant de quartier, d'un salon ou d'un caviste. Il est aussi hygroscopique : il absorbe l'humidité de l'air, gonfle, puis se rétracte. Sur un comptoir de bar, dans une cuisine ouverte, dans un institut où l'on fait de la vapeur, une plaque en bois non traitée se voile en quelques mois et l'adhésif lâche par un coin. Dans une agence immobilière ou un cabinet, en revanche, il tient parfaitement.</p>
+<h3>PVC et autocollants : le calcul qui trompe</h3>
+<p>Un autocollant NFC coûte deux à quatre euros. Il paraît donc dix fois moins cher qu'une plaque. Le calcul oublie deux choses. D'abord, sa durée de vie sur un comptoir se compte en mois, pas en années : les bords se soulèvent, la surface se raye et l'impression se ternit sous les produits de nettoyage. Ensuite et surtout, <strong>un autocollant plat ne se voit pas</strong> : il se confond avec l'inox du comptoir, et une plaque qui ne se remarque pas ne collecte rien, quel que soit le prix payé.</p>
+<p>Si le format autocollant vous intéresse pour sa discrétion ou sa mobilité, comparez-le plutôt à sa vraie alternative dans notre article sur le <a href="/blog/magnet-nfc-avis-google">magnet NFC et les cas où il vaut mieux qu'une plaque</a>.</p>
+</section>
+
+<section id="acrylique" class="scroll-mt-28 mb-16">
+<h2>L'acrylique, et pourquoi l'épaisseur compte</h2>
+<p>L'acrylique — de son nom technique le polyméthacrylate de méthyle, ou PMMA — est le matériau retenu par la quasi-totalité des fabricants sérieux, pour quatre raisons cumulées.</p>
+<ul>
+<li><strong>Il est transparent au champ magnétique.</strong> Aucune atténuation, aucune correction à apporter : la portée est celle de l'antenne, point.</li>
+<li><strong>Il ne jaunit pas.</strong> C'est sa différence majeure avec le PVC et l'ABS. Une plaque posée en vitrine, en plein soleil, garde sa teinte d'origine là où un support PVC vire à l'ivoire en une saison.</li>
+<li><strong>Il se nettoie.</strong> Un chiffon microfibre suffit, y compris dans un environnement gras d'atelier ou de cuisine.</li>
+<li><strong>Il tient la lumière.</strong> La surface renvoie la lumière ambiante, ce qui donne à l'objet une présence visuelle qu'un carton imprimé n'a pas. Sur un comptoir chargé, c'est ce qui fait qu'un client remarque la plaque sans qu'on la lui désigne.</li>
+</ul>
+<h3>Trois millimètres, ni plus ni moins</h3>
+<p>L'épaisseur est le critère silencieux du marché. En dessous de deux millimètres, la plaque se comporte comme une feuille rigide : elle gondole légèrement, et un coin finit par se décoller. Au-delà de quatre millimètres, elle devient un bloc coûteux à expédier, sans bénéfice technique. Les plaques Swiipx sont en acrylique premium de 120 x 120 x 3 mm : le format tient dans la main, reste stable sur un plan de travail et présente une surface d'approche suffisamment large pour que le client trouve la zone de lecture du premier coup.</p>
+<p>La différence de coût entre un support fin et un support rigide correspond à quelques euros. Rapportée à trois ans d'utilisation, elle est marginale — nous avons détaillé ces fourchettes dans notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
+</section>
+
+<section id="puce-nfc" class="scroll-mt-28 mb-16">
+<h2>Sous le matériau : la puce, et ce qui compte vraiment</h2>
+<p>Les fiches produit mettent en avant une référence de puce, généralement NTAG213, NTAG215 ou NTAG216. La différence annoncée porte sur la mémoire disponible.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Puce</th><th class="border p-3 text-left">Mémoire utilisateur</th><th class="border p-3 text-left">Ce que cela permet</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">NTAG213</td><td class="border p-3">144 octets</td><td class="border p-3">Une URL courte, suffisante pour un lien d'avis</td></tr>
+<tr><td class="border p-3"><strong>NTAG215</strong></td><td class="border p-3"><strong>504 octets</strong></td><td class="border p-3"><strong>Marge confortable, URL longues et paramètres de suivi</strong></td></tr>
+<tr><td class="border p-3">NTAG216</td><td class="border p-3">888 octets</td><td class="border p-3">Surdimensionné pour cet usage</td></tr>
+</tbody>
+</table>
+</div>
+<p>Soyons précis, parce que le marketing du secteur entretient une confusion : <strong>pour un lien d'avis Google, la mémoire n'est pas le facteur limitant</strong>. Une URL de collecte d'avis tient largement dans les 144 octets d'une NTAG213. Choisir une NTAG215 n'apporte pas une meilleure lecture ; cela apporte de la marge, ce qui devient utile le jour où l'on veut ajouter des paramètres de suivi à l'URL ou reprogrammer la plaque pour un autre établissement.</p>
+<p>Ce qui détermine réellement la qualité de lecture, ce sont deux paramètres dont personne ne parle : <strong>la taille de l'antenne</strong> et <strong>la qualité de l'encapsulation</strong>. Une grande antenne se couple mieux au téléphone et pardonne un placement approximatif du smartphone ; une petite antenne exige que le client vise juste. Sur un comptoir, où le geste est fait en une seconde et sans regarder, cette tolérance fait toute la différence entre un avis collecté et un client qui abandonne.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Bon à savoir :</strong> les puces de la famille NTAG21x sont passives et annoncées par le fabricant pour une rétention de données de l'ordre de dix ans et environ 100 000 cycles de réécriture. Une plaque d'avis n'est programmée qu'une fois : la limite de réécriture ne sera jamais atteinte. Il n'y a rien à recharger, rien à connecter au wifi, aucune pile à remplacer — et donc aucun abonnement technique à justifier.</p>
+</div>
+<p>Un dernier point d'achat, souvent négligé : la plaque doit arriver <strong>déjà programmée avec votre lien d'avis</strong>. Une plaque vierge suppose de télécharger une application d'encodage, de récupérer l'URL exacte de votre formulaire d'avis Google et de verrouiller la puce en lecture seule. Ce n'est pas difficile, mais c'est le point où la moitié des achats s'arrêtent, dans un tiroir. Le sujet est développé dans notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat complet d'une plaque NFC</a>.</p>
+</section>
+
+<section id="fixation" class="scroll-mt-28 mb-16">
+<h2>L'adhésif : le vrai point de rupture</h2>
+<p>Dans les retours d'expérience, la panne la plus fréquente n'est ni la puce ni le support. C'est la fixation. Une plaque qui se décolle est ramassée, posée près de la caisse, puis rangée dans un tiroir « en attendant » — et la collecte s'arrête là.</p>
+<h3>Les trois modes de fixation</h3>
+<ul>
+<li><strong>Adhésif double face acrylique haute performance (type 3M VHB)</strong> : la solution la plus fiable sur surface lisse et propre. Il faut dégraisser la zone à l'alcool avant pose, appuyer vingt secondes, et attendre vingt-quatre heures avant utilisation intensive pour que l'adhésion atteigne sa valeur nominale.</li>
+<li><strong>Pose libre sur socle ou chevalet</strong> : idéale quand la plaque doit être poussée vers le client au moment du paiement, ce qui est précisément le geste qui convertit le mieux. L'inconvénient est qu'un objet libre se déplace, disparaît sous un carnet et finit derrière la caisse.</li>
+<li><strong>Vis ou fixation murale</strong> : réservée aux emplacements en accès libre, sans personnel, dans un couloir ou une salle d'attente.</li>
+</ul>
+<p>Trois surfaces posent problème et méritent d'être connues avant l'achat : le bois brut ou huilé, sur lequel l'adhésif n'accroche pas durablement ; les revêtements texturés, où le contact réel se limite aux points hauts ; et les surfaces traitées anti-graisse, courantes en restauration, conçues précisément pour que rien n'y adhère. Dans ces trois cas, le socle libre bat l'adhésif.</p>
+</section>
+
+<section id="duree-de-vie" class="scroll-mt-28 mb-16">
+<h2>Durée de vie réelle et coût par mois</h2>
+<p>Le prix d'achat ne dit rien tant qu'on ne le divise pas par la durée de vie. Voici l'ordre de grandeur pour un usage en comptoir, plusieurs sollicitations par jour.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Support</th><th class="border p-3 text-left">Prix indicatif</th><th class="border p-3 text-left">Durée de vie observée</th><th class="border p-3 text-left">Coût par mois</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Autocollant NFC époxy</td><td class="border p-3">2 à 5 €</td><td class="border p-3">6 à 12 mois</td><td class="border p-3">≈ 0,40 €</td></tr>
+<tr><td class="border p-3">Plaque PVC imprimée</td><td class="border p-3">12 à 20 €</td><td class="border p-3">12 à 24 mois</td><td class="border p-3">≈ 0,80 €</td></tr>
+<tr><td class="border p-3"><strong>Plaque acrylique 3 mm</strong></td><td class="border p-3"><strong>29,90 €</strong></td><td class="border p-3"><strong>3 à 5 ans</strong></td><td class="border p-3"><strong>≈ 0,50 €</strong></td></tr>
+<tr><td class="border p-3">Solution avec abonnement</td><td class="border p-3">0 à 20 € + mensualité</td><td class="border p-3">Tant que l'abonnement court</td><td class="border p-3">9 à 29 € par mois</td></tr>
+</tbody>
+</table>
+</div>
+<p>Les trois premières lignes se tiennent dans un mouchoir de poche : sur la durée, le matériau ne fait pas de différence de coût décisive. La quatrième ligne, elle, change complètement l'échelle. Un abonnement à 19 € par mois représente 684 € sur trois ans pour un objet dont le composant coûte quelques euros — et l'arrêt du paiement peut interrompre la redirection, donc la collecte. C'est la seule ligne du tableau où le choix a un impact financier réel, et nous l'avons documentée dans notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a>.</p>
+<p class="text-sm text-gray-600"><em>Les prix indicatifs et durées de vie ci-dessus sont des ordres de grandeur constatés sur le marché français en 2026, à ajuster selon les références et l'intensité d'usage.</em></p>
+</section>
+
+<section id="choisir-selon-lieu" class="scroll-mt-28 mb-16">
+<h2>Choisir selon votre environnement</h2>
+<p>Le bon matériau dépend moins de votre métier que des contraintes physiques de l'endroit où la plaque va vivre. Trois questions suffisent : y a-t-il de l'eau ou de la vapeur, y a-t-il du soleil direct, et la surface d'accueil est-elle métallique ?</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Environnement</th><th class="border p-3 text-left">Contrainte dominante</th><th class="border p-3 text-left">Recommandation</th></tr></thead>
+<tbody>
+<tr><td class="border p-3">Restaurant, bar, boulangerie</td><td class="border p-3">Graisse, nettoyage quotidien, comptoir inox</td><td class="border p-3">Acrylique, en pose libre ou déportée de l'inox</td></tr>
+<tr><td class="border p-3">Salon de coiffure, institut</td><td class="border p-3">Humidité, produits, vapeur</td><td class="border p-3">Acrylique — le bois se voile</td></tr>
+<tr><td class="border p-3">Garage, atelier</td><td class="border p-3">Huile, poussière, chocs</td><td class="border p-3">Acrylique 3 mm, adhésif VHB</td></tr>
+<tr><td class="border p-3">Vitrine plein sud</td><td class="border p-3">UV permanents</td><td class="border p-3">Acrylique — le PVC jaunit en une saison</td></tr>
+<tr><td class="border p-3">Cabinet, agence, bureau</td><td class="border p-3">Aucune contrainte forte</td><td class="border p-3">Acrylique ou bois, au choix esthétique</td></tr>
+</tbody>
+</table>
+</div>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>🎯 Combien de plaques :</strong> un point d'encaissement unique se couvre avec le <a href="/product/starter" class="font-semibold underline">Pack Starter</a>. La configuration la plus fréquente — accueil et comptoir de paiement distincts — correspond au <a href="/product/business" class="font-semibold underline">Pack Business</a>. Les établissements à plusieurs postes de vente, à plusieurs salles ou en plusieurs points de restitution passent au <a href="/product/pro" class="font-semibold underline">Pack Pro</a>. Dans les trois cas, il s'agit d'un paiement unique.</p>
+</div>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les six erreurs d'achat les plus coûteuses</h2>
+<ul>
+<li><strong>Acheter une plaque métallique sans vérifier le blindage ferrite.</strong> C'est la seule erreur de cette liste qui peut rendre l'objet totalement inopérant.</li>
+<li><strong>Coller une plaque non blindée sur une surface métallique.</strong> Même effet, même silence : rien n'indique la panne, les avis cessent simplement d'arriver.</li>
+<li><strong>Choisir sur la référence de la puce plutôt que sur l'antenne.</strong> La mémoire est surdimensionnée dans tous les cas ; la tolérance de placement, elle, se ressent à chaque geste.</li>
+<li><strong>Commander une plaque vierge à programmer soi-même.</strong> Techniquement faisable, pratiquement fatal : la plaque attend dans un tiroir le jour où l'on aura le temps.</li>
+<li><strong>Poser l'adhésif sur une surface grasse ou texturée.</strong> Dégraissez à l'alcool, appuyez vingt secondes, ou passez en pose libre.</li>
+<li><strong>Payer un abonnement pour une redirection d'URL.</strong> C'est le seul poste où le surcoût se compte en centaines d'euros sur trois ans.</li>
+</ul>
+<p>Une septième erreur ne relève pas du matériau mais annule tout le reste : installer la plaque sans donner une phrase à l'équipe. Un objet posé sans un mot passe inaperçu, quel que soit le support. La comparaison avec les autres formats de collecte est détaillée dans notre article <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC contre QR code</a>.</p>
+</section>
+
+<section id="faq-materiaux" class="scroll-mt-28 mb-16">
+<h2>FAQ — Matériaux des plaques NFC pour avis Google</h2>
+
+<h3>Une plaque NFC en métal fonctionne-t-elle vraiment ?</h3>
+<p>Seulement si elle intègre une couche de ferrite entre l'antenne et le métal, ce qu'on appelle un tag on-metal. Sans ce blindage, le champ magnétique du téléphone induit des courants de Foucault dans le métal, qui absorbent l'énergie destinée à la puce et décalent la fréquence d'accord de l'antenne : la portée s'effondre et la lecture devient aléatoire. Même correctement blindée, une plaque métallique demande généralement de poser le téléphone au contact plutôt que de l'approcher. Sur un comptoir, où le geste se fait en une seconde et sans regarder, cette contrainte supplémentaire coûte des avis.</p>
+
+<h3>Pourquoi l'acrylique plutôt que le PVC, qui coûte moins cher ?</h3>
+<p>Pour trois raisons mesurables. L'acrylique ne jaunit pas aux UV là où le PVC vire à l'ivoire en une saison derrière une vitrine. Sa surface résiste aux produits de nettoyage quotidiens qui ternissent une impression sur PVC. Enfin, un support acrylique de 3 mm reste plan alors qu'un PVC fin gondole et se décolle par un coin. Rapporté à la durée de vie, l'écart de prix initial s'efface : environ 0,50 € par mois pour une plaque acrylique tenant trois à cinq ans, contre 0,80 € pour un PVC à remplacer au bout d'un ou deux ans.</p>
+
+<h3>Faut-il une puce NTAG215 ou une NTAG213 suffit-elle ?</h3>
+<p>Pour un simple lien d'avis Google, une NTAG213 et ses 144 octets suffisent techniquement. La NTAG215, avec 504 octets, n'améliore pas la qualité de lecture : elle apporte de la marge, utile le jour où l'on ajoute des paramètres de suivi à l'URL ou où l'on reprogramme la plaque pour un autre établissement. Le vrai facteur de qualité de lecture n'est pas la mémoire mais la taille de l'antenne : une grande antenne pardonne un placement approximatif du téléphone, une petite antenne oblige le client à viser juste.</p>
+
+<h3>Une plaque NFC en bois est-elle un bon choix ?</h3>
+<p>Le bois ne pose aucun problème technique : il est transparent au champ magnétique et se lit parfaitement. Son problème est physique. Le bois est hygroscopique : il absorbe l'humidité de l'air, gonfle puis se rétracte. Sur un comptoir de bar, dans une cuisine ouverte ou dans un institut de beauté où l'on produit de la vapeur, une plaque en bois se voile en quelques mois et l'adhésif lâche par un coin. Dans une agence immobilière, un cabinet ou un bureau, en revanche, elle tient sans difficulté et l'esthétique peut légitimement trancher.</p>
+
+<h3>Combien de temps dure une plaque NFC ?</h3>
+<p>La puce n'est pas le facteur limitant : les NTAG21x sont annoncées par le fabricant pour une rétention de données de l'ordre de dix ans, et une plaque d'avis n'est programmée qu'une seule fois. C'est le support et l'adhésif qui décident. Un autocollant époxy tient six à douze mois sur un comptoir, une plaque PVC un à deux ans, une plaque acrylique de 3 mm trois à cinq ans. La panne la plus fréquente n'est d'ailleurs pas une panne électronique mais un décollement : la plaque est ramassée, posée à côté de la caisse, puis rangée dans un tiroir.</p>
+
+<h3>Peut-on coller une plaque NFC sur une caisse enregistreuse ou un frigo ?</h3>
+<p>Pas directement si la surface est métallique : l'effet est identique à celui d'une plaque en métal, la lecture devient aléatoire ou nulle. Deux solutions : déporter la plaque de quelques centimètres sur une surface non métallique voisine, ou la poser librement sur un socle, ce qui présente en plus l'avantage de pouvoir la pousser vers le client au moment du paiement. Dans tous les cas, testez la plaque à l'endroit exact où elle vivra, avec au moins deux téléphones différents, avant de coller quoi que ce soit.</p>
+
+<h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
+<p>Non, et c'est le poste où le choix a le plus d'impact financier. Une puce NFC est passive : elle stocke une adresse et n'a besoin d'aucun serveur, d'aucune connexion et d'aucune pile. Un abonnement à 19 € par mois représente 684 € sur trois ans pour un objet dont le composant coûte quelques euros, et l'arrêt du paiement peut interrompre la redirection donc la collecte. Les plaques Swiipx sont vendues en paiement unique à partir de 29,90 €, expédiées déjà programmées avec le lien d'avis de l'établissement.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : un objet qu'on oublie, et c'est le but</h2>
+<p>Une plaque d'avis réussie est une plaque dont on ne parle plus. Elle est posée, elle est visible, elle se lit du premier coup, et trois ans plus tard elle ressemble encore à ce qu'elle était le premier jour. C'est le seul cahier des charges qui compte, et il se joue presque entièrement sur deux décisions d'achat : un support non métallique et rigide, et une puce livrée déjà programmée.</p>
+<p>Le reste — la référence exacte de la puce, la couleur, le message imprimé — se discute. Le métal non blindé et l'abonnement mensuel, eux, ne se rattrapent pas : le premier vous prive des avis sans prévenir, le second vous fait payer pendant des années une redirection qui ne coûte rien.</p>
+<p>Pour aller plus loin : notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat complet</a>, le <a href="/blog/cout-avis-google-comparatif">coût réel par avis collecté</a> selon la méthode retenue, et le <a href="/blog/ou-placer-plaque-avis-google">choix de l'emplacement</a>, qui pèse encore plus lourd que le matériau.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Le bon matériau, la bonne puce, déjà programmée</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium 120 x 120 x 3 mm, puce NTAG215, QR code de secours imprimé, adhésif 3M inclus, expédiées déjà programmées avec votre lien d'avis Google. Garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+</div>
+</section>
+    `,
+  },
   'photos-google-business-profile': {
     title: 'Photos Google Business Profile : combien en publier et lesquelles font venir des clients',
     category: 'SEO Local',

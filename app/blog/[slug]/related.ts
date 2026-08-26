@@ -13,6 +13,7 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'materiaux-plaque-nfc-avis-google', label: 'Quel matériau pour une plaque NFC ?' },
   { slug: 'photos-google-business-profile', label: 'Photos Google Business Profile : le guide' },
   { slug: 'plaque-nfc-opticien', label: 'Plaque NFC opticien : livraison et scripts' },
   { slug: 'ameliorer-note-google', label: 'Améliorer sa note Google : le calcul exact' },
