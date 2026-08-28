@@ -18,6 +18,180 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'taux-scan-plaque-nfc': {
+    title: 'Taux de scan d\'une plaque NFC : combien de clients laissent vraiment un avis ?',
+    category: 'Statistiques',
+    date: '28 août 2026',
+    readTime: '12 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Un fournisseur annonce un taux unique, la réalité en donne dix. L\'entonnoir en 4 étapes, les ordres de grandeur par secteur, la formule de calcul et les leviers classés par impact.',
+    tocSections: [
+      { id: 'pourquoi-taux', label: 'Le seul chiffre qui compte' },
+      { id: 'entonnoir', label: 'L\'entonnoir en 4 étapes' },
+      { id: 'chiffres', label: 'Les taux par secteur' },
+      { id: 'calcul', label: 'Formule et 3 exemples' },
+      { id: 'leviers', label: 'Les leviers par impact' },
+      { id: 'mesurer', label: 'Mesurer son taux réel' },
+      { id: 'plan-30-jours', label: 'Doubler en 30 jours' },
+      { id: 'erreurs', label: 'Les 6 erreurs' },
+      { id: 'faq-taux-scan', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-taux" class="scroll-mt-28 mb-16">
+<h2>Le taux de scan : le seul chiffre qui décide de votre volume d'avis</h2>
+<p>Quand un commerçant hésite à installer une plaque NFC, il ne pose jamais la question du prix en premier. Il pose celle-ci : <strong>combien de mes clients vont réellement s'en servir ?</strong> C'est la bonne question, et c'est aussi la seule dont la réponse conditionne tout le reste. Une plaque à 29,90 EUR qui produit 2 avis par mois n'a pas le même sens économique que la même plaque qui en produit 25.</p>
+<p>Le taux de scan est le pourcentage de clients servis qui approchent effectivement leur téléphone de la plaque. Il ne dit pas tout — encore faut-il que l'avis soit publié — mais il est le premier maillon, et c'est celui qui varie le plus d'un établissement à l'autre. Deux commerces identiques, même métier, même flux, même plaque, peuvent afficher un écart de un à dix. La différence ne vient jamais du matériel. Elle vient de l'endroit où la plaque est posée et de ce qui est dit au moment où le client passe devant.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> le taux de scan n'est pas une caractéristique du produit, c'est une caractéristique de votre mise en place. C'est une bonne nouvelle : contrairement au prix d'achat, c'est un chiffre sur lequel vous avez la main, et qu'on peut doubler ou tripler sans dépenser un euro de plus.</p>
+</div>
+<p>Cet article démonte l'enchaînement complet, du client servi à l'avis publié, donne des ordres de grandeur par secteur, la formule pour estimer votre propre volume, et les leviers classés par impact réel.</p>
+</section>
+
+<section id="entonnoir" class="scroll-mt-28 mb-16">
+<h2>L'entonnoir en 4 étapes : de 100 clients à 6 avis</h2>
+<p>Un avis Google déposé via une plaque NFC est le résultat de quatre filtres successifs. Chacun élimine une partie du flux, et le volume final est le produit des quatre — ce qui explique pourquoi un progrès modeste sur chaque étape produit un résultat spectaculaire à l'arrivée.</p>
+<h3>Étape 1 — L'exposition</h3>
+<p>Le client doit passer physiquement à portée de la plaque, à un moment où il n'a pas les mains prises. Une plaque posée derrière le comptoir, du côté du commerçant, ou collée sur une porte que l'on pousse avec un sac dans chaque main, perd la partie ici. Dans une bonne configuration de comptoir, l'exposition approche 100 % des clients encaissés ; sur un présentoir dans un coin de la salle, elle peut tomber sous les 30 %.</p>
+<h3>Étape 2 — Le déclencheur</h3>
+<p>Le client doit comprendre qu'on lui propose quelque chose et décider de faire le geste. C'est ici que se joue l'essentiel de l'écart entre établissements. Une plaque muette, sans un mot du personnel, est un objet décoratif : elle est vue, comprise à moitié, et ignorée. Une phrase de cinq secondes prononcée en poussant la plaque vers le client change complètement l'ordre de grandeur.</p>
+<h3>Étape 3 — La lecture technique</h3>
+<p>Le téléphone doit lire la puce et ouvrir la page. Sur un support adapté et un placement testé, cette étape ne coûte presque rien : le NFC est actif par défaut sur l'immense majorité des smartphones en circulation, et le QR code imprimé rattrape les rares cas restants. En revanche, une plaque collée sur une surface métallique fait chuter cette étape brutalement — le champ est perturbé, la lecture devient aléatoire, et le client abandonne au deuxième essai.</p>
+<h3>Étape 4 — La publication</h3>
+<p>Le client doit être connecté à un compte Google, choisir une note et valider. Une part non négligeable des scans s'arrête là : page ouverte, puis refermée. C'est normal, et c'est aussi l'étape sur laquelle vous avez le moins de prise. Le seul levier réel est le moment choisi : un client qui vient de vivre quelque chose de positif va jusqu'au bout bien plus souvent qu'un client neutre.</p>
+<p>Le volume d'avis est donc le produit : <strong>clients servis × exposition × déclenchement × lecture × publication</strong>. Sur 100 clients, une mise en place moyenne donne souvent 5 à 8 avis ; une mise en place travaillée, deux à trois fois plus.</p>
+</section>
+
+<section id="chiffres" class="scroll-mt-28 mb-16">
+<h2>Les ordres de grandeur observés, par secteur</h2>
+<p>Les chiffres ci-dessous sont des ordres de grandeur, pas des mesures universelles : ils reposent sur la structure du contact client de chaque métier — durée de la relation, existence d'un moment de paiement en face-à-face, charge émotionnelle du service rendu. Ils servent à se situer, pas à promettre.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Secteur</th><th class="border p-3 text-left">Taux d'avis / clients servis</th><th class="border p-3 text-left">Ce qui explique le niveau</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Garage, carrosserie</strong></td><td class="border p-3">10 à 20 %</td><td class="border p-3">Facture élevée, soulagement, contact long au comptoir</td></tr>
+<tr><td class="border p-3"><strong>Salon de coiffure, institut</strong></td><td class="border p-3">10 à 18 %</td><td class="border p-3">Relation personnelle, encaissement en face-à-face</td></tr>
+<tr><td class="border p-3"><strong>Hôtel</strong></td><td class="border p-3">8 à 12 %</td><td class="border p-3">Check-out garanti, mais départs pressés</td></tr>
+<tr><td class="border p-3"><strong>Restaurant</strong></td><td class="border p-3">4 à 10 %</td><td class="border p-3">Fort volume, addition parfois expédiée</td></tr>
+<tr><td class="border p-3"><strong>Cabinet, clinique vétérinaire</strong></td><td class="border p-3">5 à 12 %</td><td class="border p-3">Contexte de soin, demande à manier avec réserve</td></tr>
+<tr><td class="border p-3"><strong>Boulangerie, commerce de flux</strong></td><td class="border p-3">1 à 4 %</td><td class="border p-3">Passage très rapide, ticket faible, file d'attente</td></tr>
+</tbody>
+</table>
+</div>
+<p>La lecture importante n'est pas le classement : c'est que le commerce le mieux placé en pourcentage n'est pas forcément celui qui collecte le plus d'avis. Une boulangerie à 2 % sur 400 clients par jour dépose bien plus d'avis qu'un garage à 15 % sur 12 interventions quotidiennes. <strong>Le pourcentage sert à évaluer votre mise en place ; le volume absolu sert à évaluer votre progression Google.</strong></p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Attention aux promesses rondes :</strong> tout fournisseur qui annonce un taux unique, valable partout, décrit un argumentaire commercial et non une réalité de terrain. Le même produit posé à deux endroits différents dans la même boutique ne donne déjà pas le même résultat. Pour comparer honnêtement les solutions, mieux vaut raisonner en <a href="/blog/cout-avis-google-comparatif">coût réel par avis collecté</a> qu'en taux affiché.</p>
+</div>
+</section>
+
+<section id="calcul" class="scroll-mt-28 mb-16">
+<h2>La formule et trois exemples de calcul</h2>
+<p>Pour estimer votre volume mensuel, une seule opération suffit :</p>
+<div class="bg-gray-50 rounded-xl p-4 border border-gray-200 not-prose">
+<p class="text-sm text-gray-900"><strong>Avis par mois = clients servis par mois × taux d'avis</strong> — où le taux d'avis est le produit des quatre étapes de l'entonnoir.</p>
+</div>
+<h3>Exemple 1 — Salon de coiffure, 3 fauteuils</h3>
+<p>Environ 420 clients par mois. Plaque unique posée en caisse, orientée client, avec une phrase systématique à l'encaissement. Taux observé de l'ordre de 12 %, soit <strong>environ 50 avis par mois</strong>. Sans la phrase, avec la seule plaque posée, le même salon tomberait autour de 4 %, soit une quinzaine d'avis. La phrase vaut donc à elle seule 35 avis mensuels.</p>
+<h3>Exemple 2 — Restaurant, 45 couverts, 22 jours d'ouverture</h3>
+<p>Environ 1 400 clients par mois, mais la bonne unité ici est la table, pas le couvert : environ 480 additions. Avec une plaque sur le porte-addition et une seconde en caisse, un taux de 7 % sur les additions donne <strong>environ 34 avis par mois</strong>. C'est la configuration à deux emplacements du <a href="/product/business">pack Business</a>.</p>
+<h3>Exemple 3 — Boulangerie, forte fréquentation</h3>
+<p>Environ 9 000 passages par mois. Le taux est structurellement bas — la file avance, le client a déjà sa monnaie en main — disons 1,5 %. Cela donne tout de même <strong>environ 135 avis par mois</strong>, un volume qu'aucun garage n'atteindra jamais. Ici, le levier n'est pas le pourcentage mais la constance : la plaque doit être visible sur chaque poste de caisse.</p>
+<p>Ces trois cas montrent la même chose sous trois angles : le volume d'avis se pilote par le flux et par la discipline, jamais par le matériel. Une fois le volume connu, on peut le convertir en points de note avec la méthode détaillée dans notre guide pour <a href="/blog/ameliorer-note-google">améliorer sa note Google</a>.</p>
+</section>
+
+<section id="leviers" class="scroll-mt-28 mb-16">
+<h2>Les leviers classés par impact réel</h2>
+<p>Tous les réglages ne se valent pas. Voici ceux qui comptent, du plus au moins puissant, avec l'ordre de grandeur du gain constaté quand on passe d'une situation dégradée à une situation correcte.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Levier</th><th class="border p-3 text-left">Effet sur le taux</th><th class="border p-3 text-left">Coût</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Une phrase dite à chaque encaissement</strong></td><td class="border p-3">× 3 à × 5</td><td class="border p-3">Nul</td></tr>
+<tr><td class="border p-3"><strong>Plaque orientée client, à portée de main</strong></td><td class="border p-3">× 2 à × 3</td><td class="border p-3">Nul</td></tr>
+<tr><td class="border p-3"><strong>Moment choisi (après un bon résultat)</strong></td><td class="border p-3">× 1,5 à × 2</td><td class="border p-3">Nul</td></tr>
+<tr><td class="border p-3"><strong>Deuxième emplacement pertinent</strong></td><td class="border p-3">+ 30 à + 60 %</td><td class="border p-3">Une plaque</td></tr>
+<tr><td class="border p-3"><strong>Support non métallique et testé</strong></td><td class="border p-3">Évite − 50 à − 90 %</td><td class="border p-3">Nul</td></tr>
+<tr><td class="border p-3"><strong>Visuel de la plaque, couleur, format</strong></td><td class="border p-3">Marginal</td><td class="border p-3">Variable</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Le script pèse plus lourd que tout le reste réuni</h3>
+<p>C'est le résultat le plus contre-intuitif et le plus constant. Une plaque posée sans un mot fonctionne, mais à un niveau plancher : le client la voit, ne sait pas si elle lui est destinée, et ne prend pas le risque social de tendre son téléphone vers un objet dont il n'est pas sûr. La phrase lève exactement cette incertitude. Elle doit être courte, dire ce que ça coûte en temps, et être prononcée pendant que la main du client est déjà au-dessus du comptoir.</p>
+<p>Trois formulations qui tiennent en une respiration : « Si vous avez dix secondes, approchez votre téléphone ici, ça nous aide beaucoup. » — « On collecte les avis avec ça maintenant, un contact avec le téléphone et c'est fait. » — « Vous pouvez nous laisser un mot en approchant votre téléphone, ça prend le temps d'un paiement sans contact. »</p>
+<p>À l'inverse, deux formulations à bannir : celle qui insiste (« vous pourriez nous mettre cinq étoiles ? ») parce qu'elle est perçue comme une pression et qu'orienter la note est contraire aux règles de Google, et celle qui s'excuse (« je sais que ça vous embête, mais… ») parce qu'elle donne au client la permission de refuser. Le détail de ce qui fait fuir un client est traité dans notre article sur les <a href="/blog/erreurs-demander-avis">erreurs à éviter quand on demande un avis</a>.</p>
+<h3>L'emplacement décide de l'exposition</h3>
+<p>La règle tient en une ligne : la plaque doit se trouver dans le champ visuel du client au moment où il attend, et à moins d'un mouvement de bras. Un décalage de trente centimètres vers la gauche du terminal de paiement suffit à faire chuter le taux de moitié, parce que le geste cesse d'être naturel et demande une décision. Le classement complet des emplacements, métier par métier, est détaillé dans notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque d'avis Google</a>.</p>
+</section>
+
+<section id="mesurer" class="scroll-mt-28 mb-16">
+<h2>Comment mesurer votre taux réel en 30 jours</h2>
+<p>Estimer, c'est bien ; mesurer, c'est mieux, et c'est à la portée de n'importe quel commerce sans outil particulier.</p>
+<ol>
+<li><strong>Relevez votre point de départ.</strong> Notez le nombre total d'avis affiché sur votre fiche Google le jour J, ainsi que la note moyenne. C'est votre ligne de base.</li>
+<li><strong>Comptez vos clients.</strong> Sur la même période, relevez le nombre de tickets, d'additions ou d'interventions — la caisse le donne déjà.</li>
+<li><strong>Attendez 30 jours pleins</strong> sans rien changer d'autre à votre mise en place. Un seul changement à la fois, sinon la mesure ne veut rien dire.</li>
+<li><strong>Divisez.</strong> Nouveaux avis ÷ clients servis = votre taux réel. Comparez-le à la fourchette de votre secteur dans le tableau plus haut.</li>
+</ol>
+<p>Google Business Profile fournit en complément des statistiques utiles : nombre de vues de la fiche, appels, demandes d'itinéraire. Elles ne mesurent pas le taux de scan, mais elles montrent l'effet en aval — c'est là que se voit le retour sur investissement réel.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Le test des deux téléphones :</strong> avant toute mesure, faites lire la plaque à l'endroit exact où elle vivra, avec un iPhone et un Android. Si l'un des deux demande plus d'une seconde ou oblige à chercher la zone, corrigez le placement avant de compter quoi que ce soit — vous mesureriez sinon un problème technique et non un comportement client.</p>
+</div>
+</section>
+
+<section id="plan-30-jours" class="scroll-mt-28 mb-16">
+<h2>Le plan pour doubler le taux en 30 jours</h2>
+<p>Un doublement n'a rien d'exceptionnel quand on part d'une plaque posée sans méthode. Il s'obtient presque toujours par la même séquence.</p>
+<ul>
+<li><strong>Semaine 1 — Le placement.</strong> Déplacez la plaque du côté client, à droite du terminal de paiement, orientée vers lui. Testez la lecture avec deux téléphones. Retirez tout autre support concurrent qui disperse l'attention.</li>
+<li><strong>Semaine 2 — La phrase.</strong> Choisissez une seule formulation, écrivez-la sur un post-it collé côté personnel, et imposez-la à chaque encaissement. Une phrase que tout le monde dit vaut mieux que trois phrases que chacun improvise.</li>
+<li><strong>Semaine 3 — Les exceptions.</strong> Listez les deux ou trois situations où l'on ne demande pas : réclamation en cours, client visiblement pressé, incident non résolu. Une règle d'abstention claire évite les demandes maladroites qui produisent des avis tièdes.</li>
+<li><strong>Semaine 4 — Le second point.</strong> Si le premier emplacement tourne bien, ajoutez-en un deuxième là où passe une partie du flux qui échappe à la caisse : sortie, comptoir d'accueil, poste de retrait.</li>
+</ul>
+<p>Et une habitude qui court sur les quatre semaines : répondre à chaque avis publié, y compris aux avis à cinq étoiles sans commentaire. Les réponses sont lues par les futurs clients, et elles entretiennent la fiche entre deux vagues de collecte.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 6 erreurs qui écrasent le taux de scan</h2>
+<ul>
+<li><strong>Poser la plaque côté commerçant.</strong> Elle devient un objet de décoration pour votre équipe. Le client ne la voit jamais dans le bon axe.</li>
+<li><strong>Compter sur la plaque seule.</strong> Sans phrase, vous restez au plancher du taux, quel que soit le secteur.</li>
+<li><strong>Coller sur une surface métallique</strong> — caisse, frigo, comptoir à plateau inox — sans avoir testé. La lecture devient aléatoire et le client conclut que « ça ne marche pas ».</li>
+<li><strong>Demander à tout le monde, tout le temps.</strong> Solliciter un client en litige, ou juste après une réclamation non résolue, ne produit pas un avis neutre : cela produit un avis négatif qui n'aurait pas existé.</li>
+<li><strong>Offrir une contrepartie</strong> — un café, une remise, un tirage au sort. C'est interdit par les règles de Google et cela expose l'ensemble de votre historique d'avis à une suppression.</li>
+<li><strong>Changer trois paramètres en même temps.</strong> Vous ne saurez jamais lequel a produit l'effet, et vous ne pourrez pas le reproduire sur un second point de vente.</li>
+</ul>
+<p>Une septième, plus discrète : abandonner au bout de trois semaines. La collecte d'avis est un effet cumulatif — le volume compte autant que le rythme, et une fiche alimentée régulièrement est mieux valorisée qu'une fiche qui reçoit trente avis en un mois puis plus rien. Les mécanismes de fond sont détaillés dans nos <a href="/blog/statistiques-avis-google-2026">statistiques avis Google 2026</a>.</p>
+</section>
+
+<section id="faq-taux-scan" class="scroll-mt-28 mb-16">
+<h2>Questions fréquentes</h2>
+<h3>Quel est le taux de scan moyen d'une plaque NFC ?</h3>
+<p>Il n'existe pas de moyenne universelle, et méfiez-vous des chiffres uniques annoncés sans contexte. Ce qui se constate, ce sont des fourchettes par type de commerce : de 1 à 4 % des passages dans un commerce de flux rapide comme une boulangerie, jusqu'à 10 à 20 % dans un garage ou un salon, où le contact est long et l'encaissement se fait en face-à-face. À l'intérieur de chaque fourchette, l'écart entre le bas et le haut s'explique presque entièrement par deux facteurs : l'emplacement de la plaque et l'existence d'une phrase systématique à l'encaissement.</p>
+<h3>Pourquoi ma plaque NFC ne génère-t-elle presque aucun avis ?</h3>
+<p>Trois causes couvrent la quasi-totalité des cas. La plaque est mal placée : trop loin de la main du client, orientée vers le personnel, ou dans un angle où le client ne regarde pas pendant qu'il attend. Personne ne dit rien au moment du paiement, et l'objet reste muet. Ou bien la lecture est mauvaise parce que la plaque est fixée sur du métal, ce qui perturbe le champ magnétique et rend le scan aléatoire. Vérifiez ces trois points dans cet ordre avant de conclure quoi que ce soit sur le produit.</p>
+<h3>Combien d'avis Google puis-je espérer par mois avec une plaque ?</h3>
+<p>Multipliez votre nombre de clients mensuels par le taux correspondant à votre secteur. Un salon de coiffure servant 400 clients avec une demande systématique se situe autour de 40 à 50 avis mensuels ; un restaurant à 480 additions, autour de 30 à 35 ; une boulangerie à 9 000 passages, plus de 100 malgré un taux très bas. Le facteur déterminant n'est pas le secteur mais la régularité : un établissement qui demande à chaque encaissement collecte plusieurs fois plus qu'un établissement qui demande quand il y pense.</p>
+<h3>Le taux de scan baisse-t-il avec le temps ?</h3>
+<p>Le taux lui-même ne baisse pas, mais la discipline qui le porte s'érode. Après quelques semaines, la phrase se dit moins souvent, la plaque migre de dix centimètres, un nouveau membre de l'équipe n'a jamais été formé au geste. C'est le motif de décrochage le plus fréquent. Le remède est simple : un relevé du nombre d'avis chaque début de mois, et une remise à plat du placement dès que la courbe s'aplatit. Un client habitué à voir la plaque ne s'en lasse pas — il ne laisse tout simplement pas deux avis, ce qui est normal.</p>
+<h3>Une plaque NFC convertit-elle mieux qu'un QR code ?</h3>
+<p>Sur le même emplacement et avec le même script, le NFC réduit le nombre de gestes : pas d'appareil photo à ouvrir, pas de cadrage, pas de bandeau à toucher. Cette économie de friction se traduit par un taux supérieur, surtout auprès des clients peu à l'aise avec leur téléphone. Le QR code garde toutefois deux avantages : il fonctionne à distance, derrière une vitrine par exemple, et il ne dépend d'aucun réglage du téléphone. C'est pour cela que les deux sont présents sur la même plaque, l'un servant de secours à l'autre. La comparaison complète figure dans notre article <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC contre QR code</a>.</p>
+<h3>Faut-il plusieurs plaques pour augmenter le taux ?</h3>
+<p>Une deuxième plaque n'augmente pas le taux du premier emplacement : elle capte une partie du flux qui ne passe pas devant lui. Le gain est donc réel mais additif, de l'ordre de 30 à 60 % de volume supplémentaire lorsque le deuxième point est bien choisi, et proche de zéro s'il double simplement le premier. Commencez toujours par optimiser un seul emplacement jusqu'à ce qu'il tourne bien, puis ajoutez le second là où passe le flux orphelin.</p>
+<h3>Est-il légal d'inciter ses clients à laisser un avis Google ?</h3>
+<p>Oui, demander un avis est parfaitement autorisé, et c'est même une pratique recommandée par Google. Deux limites à respecter strictement. Aucune contrepartie, même symbolique : ni remise, ni boisson offerte, ni participation à un tirage au sort. Et aucun filtrage : vous ne pouvez pas réserver la demande aux clients que vous supposez satisfaits, ni orienter la note attendue. Une plaque posée en libre accès et une phrase neutre adressée à tous respectent ces deux règles par construction, ce qui est précisément leur intérêt.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : le chiffre se pilote, il ne s'achète pas</h2>
+<p>Le taux de scan n'est pas une donnée technique livrée avec la plaque. C'est le résultat de trois décisions que vous prenez : où l'objet est posé, ce qui est dit au moment du paiement, et à quel moment on s'abstient de demander. Le matériel ne fait que rendre le geste possible en une seconde ; tout le reste appartient à la mise en place.</p>
+<p>La conséquence pratique est encourageante. Un établissement qui collecte peu n'a pas besoin d'un autre produit : il a besoin de déplacer sa plaque de trente centimètres et d'imposer une phrase à son équipe. C'est un travail d'une semaine, sans dépense, et c'est le seul qui produit systématiquement un doublement.</p>
+<p>Les plaques Swiipx sont livrées déjà programmées avec le lien d'avis de votre établissement : aucune application à installer, aucun code d'activation, aucun abonnement. Le <a href="/product/starter">pack Starter</a> équipe le point d'encaissement, le <a href="/product/business">pack Business</a> couvre les deux emplacements qui captent la majorité du flux, et le <a href="/product/pro">pack Pro</a> permet de couvrir plusieurs postes ou plusieurs points de vente.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>👉 Mesurez votre propre taux dès ce mois-ci :</strong> <a href="/#product" class="underline font-semibold">découvrir les plaques NFC Swiipx</a> — paiement unique, sans abonnement, garantie à vie sur la puce et livraison en point relais offerte.</p>
+</div>
+</section>
+`,
+  },
   'plaque-nfc-hotel': {
     title: 'Plaque NFC hôtel : transformer le check-out en avis Google',
     category: 'Secteur',

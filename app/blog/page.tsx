@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 36,
+    title: 'Taux de scan d\'une plaque NFC : combien de clients laissent vraiment un avis ?',
+    excerpt: 'Un fournisseur annonce un taux unique, la réalité en donne dix. L\'entonnoir en 4 étapes, les ordres de grandeur par secteur, la formule de calcul et les leviers classés par impact.',
+    category: 'Statistiques',
+    date: '28 août 2026',
+    dateIso: '2026-08-28',
+    readTime: '12 min',
+    slug: 'taux-scan-plaque-nfc',
+  },
+  {
     id: 35,
     title: 'Plaque NFC hôtel : transformer le check-out en avis Google',
     excerpt: 'Un hôtelier surveille sa note Booking chaque matin et laisse sa fiche Google à l\'abandon — c\'est exactement l\'inverse qu\'il faudrait faire. Le check-out, les 6 emplacements classés, les scripts de réception et trois exemples de calcul.',
