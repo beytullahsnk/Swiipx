@@ -26,6 +26,23 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'google-posts-fiche-google-business-profile': {
+    title: 'Google Posts : le guide complet pour sa fiche Google 2026',
+    description: 'Les 4 types de Google Posts, la durée d\'affichage réelle, la bonne fréquence, 12 sujets prêts à publier et les 7 erreurs qui rendent vos posts inutiles.',
+    keywords: 'google posts, google business profile post, publier sur fiche google, post google my business, google post duree, google post frequence, google post seo local, fiche google business profile 2026, publication fiche google, google post offre evenement',
+    date: '2026-08-31',
+    dateModified: '2026-08-31',
+    category: 'SEO Local',
+    faq: [
+      { q: 'Les Google Posts améliorent-ils le référencement local ?', a: 'Pas directement. Le classement dans le pack local repose sur la pertinence, la distance et la proéminence, et les publications n\'entrent dans aucun de ces trois critères. Leur effet est indirect : elles occupent une surface visible du panneau de connaissance et augmentent le taux de clic et de contact sur une fiche déjà affichée. Si vous cherchez à gagner des positions, le levier utile reste le volume et la fraîcheur des avis, pas la fréquence de publication.' },
+      { q: 'Combien de temps un Google Post reste-t-il affiché ?', a: 'La règle des sept jours qui circule encore est obsolète : les publications restent aujourd\'hui consultables plusieurs mois dans le fil de la fiche. Mais seule la plus récente s\'affiche en évidence, les autres reculent d\'un cran à chaque nouvelle publication. La durée qui compte n\'est donc pas la conservation mais l\'exposition, et celle-ci dure jusqu\'à votre post suivant. Les offres et les événements font exception : ils disparaissent à la date de fin que vous avez renseignée.' },
+      { q: 'Quelle est la longueur idéale d\'un Google Post ?', a: 'La limite technique est de 1 500 caractères, mais seuls les 80 à 100 premiers s\'affichent avant la troncature. Visez 150 à 300 caractères au total, avec l\'information décisive — le prix, la date, la disponibilité — dans la toute première ligne. Un post long n\'est pas pénalisé, il est simplement replié, et l\'immense majorité des lecteurs ne le dépliera jamais.' },
+      { q: 'À quelle fréquence faut-il publier sur sa fiche Google ?', a: 'Deux à quatre fois par mois est un rythme réaliste, tenable sur une année entière. La recommandation hebdomadaire souvent citée n\'est pas fausse, mais elle produit surtout des fiches abandonnées au bout de six semaines. La régularité vaut mieux que l\'intensité : une publication tous les quinze jours pendant douze mois est plus efficace que huit publications en janvier suivies d\'un silence complet.' },
+      { q: 'Faut-il mettre une image sur chaque publication ?', a: 'Oui. La publication sans image est autorisée mais perd l\'essentiel de sa surface d\'affichage, donc de son attention. Une photo en paysage d\'au moins 720 pixels de large suffit, prise avec le téléphone du comptoir. Inutile de produire un visuel graphique : une photo réelle de votre établissement, de votre équipe ou d\'une réalisation récente fonctionne mieux qu\'une image de banque d\'images.' },
+      { q: 'Peut-on publier un post pour demander des avis Google ?', a: 'Oui, à condition de ne rien offrir en échange. Vous pouvez rappeler que les avis sont les bienvenus, remercier vos clients ou mettre en avant un avis récent. En revanche, promettre une remise, un cadeau ou une participation à un tirage au sort contre un avis enfreint les règles de Google et expose à la suppression de l\'ensemble des avis de la fiche. Un dispositif passif au comptoir, comme une plaque NFC, produit le même résultat sans prendre ce risque.' },
+      { q: 'Quelle différence entre un post « Offre » et un post « Nouveautés » ?', a: 'Le post « Nouveautés » est le format par défaut, sans date, adapté à l\'actualité courante. Le post « Offre » impose une date de début et de fin, permet de saisir un code promotionnel et des conditions, et bénéficie d\'une mise en forme visuelle distincte qui attire davantage le regard. Réservez-le aux promotions réelles et datées : une offre permanente perd son effet en quelques semaines et affaiblit la crédibilité de la fiche.' },
+    ],
+  },
   'taux-scan-plaque-nfc': {
     title: 'Taux de scan plaque NFC : les chiffres réels par secteur',
     description: 'Combien de clients scannent vraiment une plaque NFC ? L\'entonnoir en 4 étapes, les taux par secteur, la formule de calcul et les leviers qui les doublent.',

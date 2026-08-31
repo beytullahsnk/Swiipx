@@ -18,6 +18,208 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'google-posts-fiche-google-business-profile': {
+    title: 'Google Posts : publier sur sa fiche Google Business Profile (et ce que ça rapporte)',
+    category: 'SEO Local',
+    date: '31 août 2026',
+    readTime: '11 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Un post ne fait pas monter une fiche dans le pack local, et c\'est justement pour ça qu\'on l\'utilise mal. Les 4 types de posts, la règle des 7 jours qui n\'existe plus, les 80 premiers caractères qui décident, 12 sujets prêts à publier et les 7 erreurs.',
+    tocSections: [
+      { id: 'pourquoi-google-posts', label: 'Ce que ça fait vraiment' },
+      { id: 'types-posts', label: 'Les 4 types de posts' },
+      { id: 'duree-visibilite', label: 'Combien de temps c\'est visible' },
+      { id: 'anatomie-post', label: 'Anatomie d\'un bon post' },
+      { id: 'frequence', label: 'À quelle fréquence publier' },
+      { id: 'quoi-publier', label: '12 sujets qui fonctionnent' },
+      { id: 'posts-avis', label: 'Le lien posts / avis' },
+      { id: 'erreurs', label: 'Les 7 erreurs' },
+      { id: 'mesurer', label: 'Mesurer l\'effet' },
+      { id: 'faq-google-posts', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-google-posts" class="scroll-mt-28 mb-16">
+<h2>Google Posts : ce que ça fait vraiment, et ce que ça ne fait pas</h2>
+<p>Google Posts est la fonction la plus mal comprise de Google Business Profile. Deux discours s'affrontent, et les deux sont faux. Le premier promet qu'une publication hebdomadaire fait monter la fiche dans le pack local. Le second, plus répandu chez les commerçants, considère que « personne ne lit ça » et laisse la fonction inutilisée depuis trois ans.</p>
+<p>La réalité tient en une phrase : <strong>un post n'agit pas sur votre position, il agit sur ce qui se passe une fois que vous êtes affiché.</strong> Le classement local repose sur trois critères que Google documente publiquement — la pertinence, la distance et la proéminence — et les publications n'entrent dans aucun des trois. En revanche, elles occupent une surface visible du panneau de connaissance, juste sous les avis, et elles s'affichent au moment exact où le client compare deux ou trois établissements.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>À retenir :</strong> les avis décident si vous êtes <strong>affiché</strong>. Les photos décident si vous êtes <strong>regardé</strong>. Les posts décident si vous êtes <strong>choisi maintenant plutôt que demain</strong>. Ce sont trois leviers différents, qui ne se remplacent pas.</p>
+</div>
+<p>C'est pour cette raison qu'un post n'a de sens que s'il porte une information périssable : une ouverture exceptionnelle, une promotion qui se termine dimanche, un créneau libre jeudi matin. Un post qui répète « Nous sommes une entreprise familiale au service de nos clients depuis 1998 » ne fait rien gagner à personne — l'information est déjà dans la description de la fiche, et elle ne pousse à aucune action.</p>
+</section>
+
+<section id="types-posts" class="scroll-mt-28 mb-16">
+<h2>Les quatre types de posts, et lequel choisir</h2>
+<p>L'interface propose quatre formats. Ils ne se valent pas, et le choix du format conditionne à la fois la durée d'affichage et l'endroit où la publication apparaît.</p>
+
+<h3>1. Nouveautés (« Quoi de neuf »)</h3>
+<p>Le format par défaut : une image, un texte, un bouton d'action facultatif. C'est le plus souple et celui qui convient à 70 % des besoins d'un commerce local. Aucune date à renseigner, donc aucune contrainte de calendrier.</p>
+
+<h3>2. Offre</h3>
+<p>Le seul format qui affiche un bandeau visuel distinct sur la fiche, avec date de début et de fin obligatoires. Il permet aussi de saisir un code promotionnel et les conditions. Sur un même contenu, une offre attire nettement plus le regard qu'une nouveauté, parce que Google la met en forme différemment. À réserver aux vraies promotions : une offre permanente perd son effet en deux semaines.</p>
+
+<h3>3. Événement</h3>
+<p>Titre, date de début, date de fin. Utile bien au-delà de l'événementiel au sens strict : une opération portes ouvertes, un contrôle technique à prix réduit sur une semaine, une collection présentée un samedi, une session de découverte dans une salle de sport. L'événement reste affiché tant qu'il n'est pas terminé, ce qui lui donne une longévité que la nouveauté n'a pas.</p>
+
+<h3>4. Produit</h3>
+<p>Il alimente l'onglet « Produits » de la fiche plutôt que le fil de publications. C'est de loin la surface la moins exploitée par les commerces français, alors qu'elle sert de source aux réponses générées par Google quand un internaute cherche un produit précis à proximité. Une prestation avec un prix affiché y a toute sa place, même dans un métier de service.</p>
+
+<div class="overflow-x-auto">
+<table>
+<thead>
+<tr><th>Type</th><th>Contrainte</th><th>Quand l'utiliser</th></tr>
+</thead>
+<tbody>
+<tr><td>Nouveautés</td><td>Aucune date</td><td>Usage courant, actualité de la semaine</td></tr>
+<tr><td>Offre</td><td>Date de fin obligatoire</td><td>Promotion réelle, code, remise datée</td></tr>
+<tr><td>Événement</td><td>Dates de début et fin</td><td>Opération sur plusieurs jours</td></tr>
+<tr><td>Produit</td><td>Prix et description</td><td>Catalogue, prestations, gammes de tarifs</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="duree-visibilite" class="scroll-mt-28 mb-16">
+<h2>Combien de temps un post reste-t-il visible ?</h2>
+<p>C'est le point sur lequel circulent le plus d'informations périmées. Pendant des années, une publication de type « Nouveautés » disparaissait au bout de <strong>sept jours</strong>, et cette règle est encore reprise telle quelle dans la moitié des articles disponibles en ligne. Elle a évolué : les publications restent désormais consultables bien plus longtemps, plusieurs mois dans la plupart des cas, dans un fil que l'internaute peut faire défiler.</p>
+<p>Mais il faut distinguer deux choses, et c'est là que la confusion s'installe :</p>
+<ul>
+<li><strong>La durée de conservation</strong> : le post reste accessible dans l'historique de la fiche pendant plusieurs mois.</li>
+<li><strong>La durée d'exposition utile</strong> : seule la publication la plus récente s'affiche en évidence. Dès que vous en publiez une nouvelle, la précédente recule d'un cran et ne sera vue que par les rares visiteurs qui font défiler.</li>
+</ul>
+<p>Conclusion pratique : raisonner en durée de conservation ne sert à rien. Ce qui compte, c'est la fenêtre pendant laquelle votre post occupe la première place, et cette fenêtre dure exactement jusqu'à votre publication suivante. Un post laissé en tête pendant six semaines devient un post daté — un « Menu spécial Saint-Valentin » toujours affiché fin mars dit surtout au client que la fiche n'est plus tenue.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Le test des trente secondes :</strong> ouvrez votre fiche sur votre téléphone, en navigation privée, comme le ferait un client. Le post affiché est-il encore d'actualité aujourd'hui ? Si la réponse est non, vous perdez de la crédibilité au lieu d'en gagner. Mieux vaut aucun post qu'un post périmé.</p>
+</div>
+</section>
+
+<section id="anatomie-post" class="scroll-mt-28 mb-16">
+<h2>Anatomie d'un post qui fonctionne</h2>
+<p>Les contraintes techniques sont simples et se retiennent en une lecture.</p>
+<ul>
+<li><strong>Longueur maximale : 1 500 caractères.</strong> C'est une limite, pas un objectif. Personne ne lit 1 500 caractères sur une fiche Google.</li>
+<li><strong>Seuls les 80 à 100 premiers caractères sont visibles</strong> avant que le texte ne soit tronqué par un lien « Plus ». Tout ce qui compte doit tenir dans cette première ligne et demie.</li>
+<li><strong>Une image en paysage</strong>, JPG ou PNG. Visez au moins 720 pixels de large ; en dessous, l'image est agrandie et devient floue sur les écrans récents.</li>
+<li><strong>Un bouton d'action facultatif</strong> : Réserver, Commander en ligne, Acheter, En savoir plus, S'inscrire, Appeler. Il ne consomme aucun caractère et augmente sensiblement le taux d'action. Ne pas en mettre est l'erreur la plus fréquente.</li>
+</ul>
+<p>Le schéma qui fonctionne tient en quatre lignes : une accroche concrète dans les 80 premiers caractères, une précision utile (le prix, la date, le créneau), une contrainte de temps si elle est réelle, un bouton. Comparez :</p>
+<div class="bg-gray-50 rounded-xl p-4 border border-gray-200 not-prose">
+<p class="text-sm text-gray-700 mb-2"><strong>❌ Ce qui ne marche pas :</strong> « Chez Garage Martin, notre équipe de professionnels qualifiés met tout son savoir-faire à votre service depuis plus de vingt ans pour l'entretien de votre véhicule... »</p>
+<p class="text-sm text-gray-900"><strong>✅ Ce qui marche :</strong> « Révision + vidange à 129 EUR jusqu'au 15 septembre. Deux créneaux libres jeudi matin. » + bouton Appeler.</p>
+</div>
+<p>La deuxième version dit ce que ça coûte, quand ça se termine, et ce qu'il reste à faire. Elle tient dans la zone visible. C'est tout ce qu'on demande à un post.</p>
+</section>
+
+<section id="frequence" class="scroll-mt-28 mb-16">
+<h2>À quelle fréquence publier, réellement</h2>
+<p>La recommandation la plus répandue est « une fois par semaine ». Elle est raisonnable, mais elle a produit des milliers de fiches abandonnées au bout d'un mois, parce qu'elle suppose une charge de travail que peu de commerces tiennent seuls.</p>
+<p>Le rythme soutenable, celui qui survit à un été chargé et à un remplacement d'équipe, se situe entre <strong>deux et quatre publications par mois</strong>. Une publication toutes les deux semaines, préparée à l'avance, vaut infiniment mieux que quatre publications en janvier puis plus rien jusqu'en octobre.</p>
+<p>La méthode qui fonctionne le mieux consiste à préparer un mois d'avance, en une seule séance de vingt minutes :</p>
+<ul>
+<li><strong>Semaine 1</strong> : une actualité concrète (arrivage, nouveau service, changement d'horaires).</li>
+<li><strong>Semaine 2</strong> : un rappel pratique (parking, accès, moyens de paiement, prise de rendez-vous).</li>
+<li><strong>Semaine 3</strong> : une offre datée, si vous en avez une réelle. Sinon, une photo de réalisation récente.</li>
+<li><strong>Semaine 4</strong> : la preuve sociale — un avis client récent mis en avant, la note atteinte, un cap franchi.</li>
+</ul>
+<p>Ce dernier créneau est le plus rentable, et c'est celui que presque personne n'utilise. Il exige simplement d'avoir un flux d'avis régulier, ce qui renvoie au sujet traité dans notre guide sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>.</p>
+</section>
+
+<section id="quoi-publier" class="scroll-mt-28 mb-16">
+<h2>Douze sujets de posts qui fonctionnent, par métier</h2>
+<p>La difficulté n'est jamais technique, elle est éditoriale : au bout de trois publications, on ne sait plus quoi dire. Voici une réserve de sujets, valables dans à peu près tous les secteurs.</p>
+<ul>
+<li>Les <strong>créneaux disponibles</strong> de la semaine, actualisés le lundi. Redoutablement efficace pour tout métier sur rendez-vous.</li>
+<li>Un <strong>horaire exceptionnel</strong> : jour férié, fermeture annuelle, ouverture d'un dimanche.</li>
+<li>Une <strong>nouveauté au catalogue</strong>, avec le prix. Le prix affiché fait la différence entre un post lu et un post ignoré.</li>
+<li>Une <strong>réalisation récente</strong> photographiée le jour même : une coupe, une vitrine, une réparation, une assiette.</li>
+<li>Une <strong>réponse à une question fréquente</strong> : « Faut-il prendre rendez-vous ? », « Acceptez-vous la carte ? », « Y a-t-il un parking ? ».</li>
+<li>Un <strong>rappel saisonnier</strong> : pneus hiver, révision avant les départs, protection solaire, allergies.</li>
+<li>Une <strong>nouvelle arrivée dans l'équipe</strong>, avec une photo. Très bien reçu dans les métiers de service.</li>
+<li>Un <strong>avis client récent</strong> mis en avant, avec un mot de remerciement.</li>
+<li>Un <strong>cap franchi</strong> : 100 avis, 200 avis, dix ans d'activité.</li>
+<li>Une <strong>précision d'accès</strong> : entrée par la cour, arrêt de bus, place PMR.</li>
+<li>Un <strong>service méconnu</strong> que vous rendez déjà et que personne ne vous demande.</li>
+<li>Une <strong>offre datée</strong> réelle, avec date de fin et code.</li>
+</ul>
+<p>Chacun de ces sujets se rédige en trois minutes et s'accompagne d'une photo prise avec le téléphone du comptoir. C'est le même principe que celui décrit dans notre guide sur les <a href="/blog/photos-google-business-profile">photos Google Business Profile</a> : la régularité fait plus que la qualité de production.</p>
+</section>
+
+<section id="posts-avis" class="scroll-mt-28 mb-16">
+<h2>Le lien entre les posts et les avis : le levier négligé</h2>
+<p>Un post ne fait pas monter une fiche. Un avis, oui. Mais les deux se renforcent, et la manière dont ils se renforcent est rarement expliquée.</p>
+<p>Un visiteur qui arrive sur votre fiche voit d'abord la note et le nombre d'avis. S'ils sont bons, il descend. C'est là qu'il rencontre vos publications, et c'est là qu'un post bien fait transforme une comparaison en visite. Sans avis, personne n'arrive jamais jusqu'au post. Sans post, celui qui arrive n'a aucune raison de venir aujourd'hui plutôt que la semaine prochaine.</p>
+<p>Le point de contact commun aux deux, c'est le comptoir. Un client satisfait qui repart peut laisser un avis en dix secondes s'il a quelque chose à approcher de son téléphone — c'est exactement la fonction d'une <a href="/blog/comment-choisir-plaque-nfc-avis-google">plaque NFC posée près de la caisse</a>. Ce même avis alimente ensuite votre publication « preuve sociale » de la quatrième semaine, et fait remonter la note qui déclenche la lecture de la fiche.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>La boucle, en trois temps :</strong> le client laisse un avis au comptoir → la note et le volume montent, la fiche s'affiche plus souvent → le post transforme l'affichage en déplacement. Retirez le premier maillon et les deux autres tournent à vide.</p>
+</div>
+<p>Une précision juridique qui a son importance : vous pouvez publier un post pour <strong>rappeler</strong> que les avis sont les bienvenus, mais jamais pour offrir une contrepartie. Une remise, un tirage au sort ou un café gratuit contre un avis constitue une infraction aux règles de Google et expose à la suppression de l'ensemble des avis de la fiche, pas seulement des avis concernés.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les sept erreurs qui rendent les posts inutiles</h2>
+<ul>
+<li><strong>Publier sans bouton d'action.</strong> Le post devient une image décorative. Le bouton est gratuit et ne coûte aucun caractère.</li>
+<li><strong>Mettre l'information importante après le 100e caractère.</strong> Elle est tronquée, donc invisible pour la quasi-totalité des lecteurs.</li>
+<li><strong>Republier le contenu Instagram tel quel.</strong> Les hashtags, les émojis en rafale et le ton des réseaux sociaux détonnent dans une fiche Google, qui est un contexte de recherche, pas de divertissement.</li>
+<li><strong>Laisser un post daté en tête.</strong> Une offre expirée ou un événement passé signale une fiche abandonnée, ce qui est pire que l'absence de publication.</li>
+<li><strong>Publier huit posts d'un coup puis plus rien.</strong> Sept d'entre eux ne seront jamais vus, et le huitième vieillira seul pendant six mois.</li>
+<li><strong>Écrire un post sans image.</strong> C'est autorisé, mais l'affichage perd l'essentiel de sa surface et donc de son attention.</li>
+<li><strong>Attendre des posts un effet de classement.</strong> Ils n'en ont pas. Chercher à faire monter sa fiche par les publications revient à repeindre la façade en espérant que la rue devienne plus passante : le travail utile est du côté des avis, comme détaillé dans notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</li>
+</ul>
+</section>
+
+<section id="mesurer" class="scroll-mt-28 mb-16">
+<h2>Mesurer l'effet, sans se raconter d'histoires</h2>
+<p>Les statistiques de Google Business Profile donnent, pour chaque publication, le nombre de vues et le nombre de clics sur le bouton. Ces chiffres sont utiles mais insuffisants pris isolément : une publication vue 300 fois ne dit rien si vous ignorez combien de fois la fiche a été consultée sur la même période.</p>
+<p>Trois indicateurs suffisent, relevés une fois par mois, toujours le même jour :</p>
+<ul>
+<li><strong>Les appels et demandes d'itinéraire</strong>, dans l'onglet Performances. C'est la mesure la plus proche d'une visite réelle.</li>
+<li><strong>Les clics sur le bouton d'action</strong> de vos publications, cumulés sur le mois.</li>
+<li><strong>Le nombre d'avis reçus</strong> dans le mois. C'est le seul des trois qui agisse sur le classement, donc celui qu'il faut surveiller en priorité.</li>
+</ul>
+<p>Une remarque de méthode : ne comparez jamais deux mois consécutifs sans tenir compte de la saison. Un institut de beauté en août et le même institut en décembre ne se comparent pas. Comparez plutôt le même mois d'une année sur l'autre, ou regardez la pente sur trois mois glissants.</p>
+<p>Et gardez en tête l'ordre de grandeur : sur une fiche de commerce local, un post bien fait produit typiquement quelques dizaines de vues et une poignée de clics. Ce n'est pas un canal d'acquisition massif. C'est un argument de dernière seconde, au moment où le client hésite entre vous et le concurrent d'en face.</p>
+</section>
+
+<section id="faq-google-posts" class="scroll-mt-28 mb-16">
+<h2>FAQ — Google Posts</h2>
+
+<h3>Les Google Posts améliorent-ils le référencement local ?</h3>
+<p>Pas directement. Le classement dans le pack local repose sur la pertinence, la distance et la proéminence, et les publications n'entrent dans aucun de ces trois critères. Leur effet est indirect : elles occupent une surface visible du panneau de connaissance et augmentent le taux de clic et de contact sur une fiche déjà affichée. Si vous cherchez à gagner des positions, le levier utile reste le volume et la fraîcheur des avis, pas la fréquence de publication.</p>
+
+<h3>Combien de temps un Google Post reste-t-il affiché ?</h3>
+<p>La règle des sept jours qui circule encore est obsolète : les publications restent aujourd'hui consultables plusieurs mois dans le fil de la fiche. Mais seule la plus récente s'affiche en évidence, les autres reculent d'un cran à chaque nouvelle publication. La durée qui compte n'est donc pas la conservation mais l'exposition, et celle-ci dure jusqu'à votre post suivant. Les offres et les événements font exception : ils disparaissent à la date de fin que vous avez renseignée.</p>
+
+<h3>Quelle est la longueur idéale d'un Google Post ?</h3>
+<p>La limite technique est de 1 500 caractères, mais seuls les 80 à 100 premiers s'affichent avant la troncature. Visez 150 à 300 caractères au total, avec l'information décisive — le prix, la date, la disponibilité — dans la toute première ligne. Un post long n'est pas pénalisé, il est simplement replié, et l'immense majorité des lecteurs ne le dépliera jamais.</p>
+
+<h3>À quelle fréquence faut-il publier sur sa fiche Google ?</h3>
+<p>Deux à quatre fois par mois est un rythme réaliste, tenable sur une année entière. La recommandation hebdomadaire souvent citée n'est pas fausse, mais elle produit surtout des fiches abandonnées au bout de six semaines. La régularité vaut mieux que l'intensité : une publication tous les quinze jours pendant douze mois est plus efficace que huit publications en janvier suivies d'un silence complet.</p>
+
+<h3>Faut-il mettre une image sur chaque publication ?</h3>
+<p>Oui. La publication sans image est autorisée mais perd l'essentiel de sa surface d'affichage, donc de son attention. Une photo en paysage d'au moins 720 pixels de large suffit, prise avec le téléphone du comptoir. Inutile de produire un visuel graphique : une photo réelle de votre établissement, de votre équipe ou d'une réalisation récente fonctionne mieux qu'une image de banque d'images.</p>
+
+<h3>Peut-on publier un post pour demander des avis Google ?</h3>
+<p>Oui, à condition de ne rien offrir en échange. Vous pouvez rappeler que les avis sont les bienvenus, remercier vos clients ou mettre en avant un avis récent. En revanche, promettre une remise, un cadeau ou une participation à un tirage au sort contre un avis enfreint les règles de Google et expose à la suppression de l'ensemble des avis de la fiche. Un dispositif passif au comptoir, comme une plaque NFC, produit le même résultat sans prendre ce risque.</p>
+
+<h3>Quelle différence entre un post « Offre » et un post « Nouveautés » ?</h3>
+<p>Le post « Nouveautés » est le format par défaut, sans date, adapté à l'actualité courante. Le post « Offre » impose une date de début et de fin, permet de saisir un code promotionnel et des conditions, et bénéficie d'une mise en forme visuelle distincte qui attire davantage le regard. Réservez-le aux promotions réelles et datées : une offre permanente perd son effet en quelques semaines et affaiblit la crédibilité de la fiche.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : un bon post ne remplace jamais un bon flux d'avis</h2>
+<p>Google Posts est un outil honnête à condition de lui demander ce qu'il sait faire. Il ne vous fera pas passer de la sixième à la deuxième place du pack local. Il transforme une fiche consultée en client qui pousse la porte, à condition de porter une information périssable, lisible dans les 80 premiers caractères, avec un bouton d'action.</p>
+<p>Deux à quatre publications par mois, préparées en une séance de vingt minutes, tenues sur douze mois : c'est tout le programme. Le reste du travail se joue ailleurs, au comptoir, au moment où un client satisfait s'apprête à repartir sans rien laisser. C'est ce moment-là qui décide de votre note, de votre volume d'avis et donc de votre position — et c'est le seul des trois leviers que vous contrôlez entièrement.</p>
+<p>Guides complémentaires : <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>, <a href="/blog/photos-google-business-profile">quelles photos publier sur sa fiche</a>, <a href="/blog/combien-avis-google-pack-local">combien d'avis pour le pack local</a>, <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>, ou <a href="/blog/statistiques-avis-google-2026">les statistiques avis Google 2026 sourcées</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Une fiche vivante mérite un flux d'avis régulier</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 EUR HT — <a href="/product/starter" class="font-semibold underline">Starter</a>, <a href="/product/business" class="font-semibold underline">Business</a> ou <a href="/product/pro" class="font-semibold underline">Pro</a>.</p>
+</div>
+</section>
+`,
+  },
   'taux-scan-plaque-nfc': {
     title: 'Taux de scan d\'une plaque NFC : combien de clients laissent vraiment un avis ?',
     category: 'Statistiques',

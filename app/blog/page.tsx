@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 37,
+    title: 'Google Posts : publier sur sa fiche Google Business Profile (et ce que ça rapporte)',
+    excerpt: 'Un post ne fait pas monter une fiche dans le pack local, et c\'est justement pour ça qu\'on l\'utilise mal. Les 4 types de posts, la règle des 7 jours qui n\'existe plus, les 80 premiers caractères qui décident, 12 sujets prêts à publier et les 7 erreurs.',
+    category: 'SEO Local',
+    date: '31 août 2026',
+    dateIso: '2026-08-31',
+    readTime: '11 min',
+    slug: 'google-posts-fiche-google-business-profile',
+  },
+  {
     id: 36,
     title: 'Taux de scan d\'une plaque NFC : combien de clients laissent vraiment un avis ?',
     excerpt: 'Un fournisseur annonce un taux unique, la réalité en donne dix. L\'entonnoir en 4 étapes, les ordres de grandeur par secteur, la formule de calcul et les leviers classés par impact.',
