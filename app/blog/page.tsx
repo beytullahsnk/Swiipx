@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 38,
+    title: 'Plaque NFC plombier et artisan : collecter des avis Google sans boutique',
+    excerpt: 'Tous les dispositifs d\'avis ont été pensés pour un comptoir que l\'artisan n\'a pas. Les 6 emplacements qui marchent sans boutique, la fiche en zone de service, les 5 moments où l\'on demande, 3 scripts et les 6 erreurs.',
+    category: 'Secteur',
+    date: '2 septembre 2026',
+    dateIso: '2026-09-02',
+    readTime: '12 min',
+    slug: 'plaque-nfc-artisan-plombier',
+  },
+  {
     id: 37,
     title: 'Google Posts : publier sur sa fiche Google Business Profile (et ce que ça rapporte)',
     excerpt: 'Un post ne fait pas monter une fiche dans le pack local, et c\'est justement pour ça qu\'on l\'utilise mal. Les 4 types de posts, la règle des 7 jours qui n\'existe plus, les 80 premiers caractères qui décident, 12 sujets prêts à publier et les 7 erreurs.',

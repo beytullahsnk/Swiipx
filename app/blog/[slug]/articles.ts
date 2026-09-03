@@ -18,6 +18,221 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-artisan-plombier': {
+    title: 'Plaque NFC plombier et artisan : collecter des avis Google sans boutique',
+    category: 'Secteur',
+    date: '2 septembre 2026',
+    readTime: '12 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Plombiers, électriciens, chauffagistes, menuisiers : tous les dispositifs d\'avis ont été pensés pour un comptoir que vous n\'avez pas. Les 6 emplacements qui marchent sans boutique, la fiche en zone de service, 3 scripts et les 6 erreurs.',
+    tocSections: [
+      { id: 'pourquoi-avis-artisan', label: 'Pourquoi les avis décident' },
+      { id: 'probleme-artisan', label: 'Le problème : pas de comptoir' },
+      { id: 'fiche-zone-service', label: 'La fiche en zone de service' },
+      { id: 'ou-poser-plaque', label: '6 emplacements sans boutique' },
+      { id: 'moments-demander', label: 'Quand demander, quand se taire' },
+      { id: 'scripts-artisan', label: '3 scripts d\'artisan' },
+      { id: 'cas-pratiques', label: '3 exemples de calcul' },
+      { id: 'repondre-avis', label: 'Répondre aux avis négatifs' },
+      { id: 'erreurs', label: 'Les 6 erreurs' },
+      { id: 'faq-artisan', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-avis-artisan" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google décident des chantiers d'un artisan</h2>
+<p>Un particulier qui cherche un plombier ne compare pas des devis : il n'en a aucun. Il tape « plombier + sa ville » sur son téléphone, regarde les trois fiches du pack local, et appelle celle qui affiche le plus d'avis avec la meilleure note. Le devis vient après, et il vient rarement de plus de deux entreprises.</p>
+<p>Ce réflexe de vérification est désormais général : <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français consultent les avis avant de faire appel à un professionnel</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs). Dans le bâtiment, la méfiance est plus forte qu'ailleurs : le client laisse entrer un inconnu chez lui, signe un devis qu'il ne sait pas juger, et paie un travail qu'il ne reverra jamais une fois le carrelage reposé.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> un artisan du bâtiment ne joue pas quelques euros de panier moyen sur une place dans le pack local. Un dépannage tourne autour de 150 à 300 €, une salle de bains complète dépasse souvent 6 000 €. Deux chantiers gagnés dans l'année grâce à une meilleure position pèsent plus lourd qu'un mois entier de petit dépannage.</p>
+</div>
+<p>Le problème n'est jamais la qualité du travail. Les artisans font très majoritairement du bon travail et leurs clients le disent — au téléphone, sur le pas de la porte, jamais sur Google. Ce qui manque, ce n'est pas la satisfaction, c'est le <strong>passage à l'acte</strong>.</p>
+</section>
+
+<section id="probleme-artisan" class="scroll-mt-28 mb-16">
+<h2>Le vrai problème : l'artisan n'a pas de comptoir</h2>
+<p>Tous les dispositifs de collecte d'avis ont été conçus pour un commerce avec une caisse. Le client est debout devant vous, son téléphone est déjà en main pour payer sans contact, et l'objet est posé à dix centimètres. Un plombier, un électricien, un chauffagiste ou un menuisier n'a rien de tout cela. Il termine chez le client, range son matériel, encaisse parfois par virement une semaine plus tard, et repart.</p>
+<p>Résultat : la fenêtre de demande est courte, elle se produit hors de vos murs, et elle ne se rattrape pas. Le client satisfait passe à autre chose dès le lendemain ; le client mécontent, lui, écrit le soir même. C'est l'asymétrie classique — <strong>la frustration écrit, la satisfaction se tait</strong>. Une fiche d'artisan à 3,8 étoiles avec 14 avis ne raconte pas la qualité du travail, elle raconte l'absence de méthode de collecte.</p>
+<h3>Les 4 tentatives qui échouent presque toujours</h3>
+<ul>
+<li><strong>La carte de visite avec un QR code au dos</strong> : elle finit dans un tiroir de cuisine avec la facture. Le client ne la ressort jamais.</li>
+<li><strong>Le SMS de relance envoyé trois jours après</strong> : le chantier est déjà loin, le message est perçu comme du démarchage, et vous risquez de réveiller un client qui avait oublié le détail qui l'agaçait.</li>
+<li><strong>Le « n'hésitez pas à nous mettre un avis » lancé sur le palier</strong> : sans support physique, le client acquiesce sincèrement et n'y pense plus dans l'ascenseur.</li>
+<li><strong>Le lien dans le mail de facture</strong> : il est ouvert par ceux qui vérifient le montant, pas par ceux qui sont contents. Le taux de clic réel se compte en pourcents.</li>
+</ul>
+<p>Ce qui fonctionne, c'est un <strong>objet physique présent au moment où le client vous remercie</strong>, avec un geste à faire tout de suite. Le problème de l'artisan n'est donc pas de trouver un comptoir : c'est d'emporter le comptoir avec lui.</p>
+</section>
+
+<section id="fiche-zone-service" class="scroll-mt-28 mb-16">
+<h2>La fiche Google d'un artisan : le cas particulier de la zone de service</h2>
+<p>Avant même de collecter, encore faut-il que la fiche existe correctement. Un artisan qui travaille chez ses clients relève d'un type de fiche spécifique dans Google Business Profile : la <strong>zone de service</strong> (service-area business). Concrètement, l'adresse du siège — souvent le domicile — est saisie pour la vérification puis <em>masquée</em>, et vous déclarez à la place les communes ou codes postaux que vous desservez.</p>
+<p>Trois conséquences que beaucoup d'artisans découvrent trop tard :</p>
+<ul>
+<li><strong>Vous n'apparaissez pas partout dans la zone déclarée.</strong> Google classe toujours sur la distance entre l'internaute et votre point de rattachement réel. Déclarer trente communes n'étale pas votre visibilité sur trente communes : cela indique seulement où vous intervenez.</li>
+<li><strong>La proéminence devient le seul levier que vous contrôlez.</strong> Des trois critères de classement — pertinence, distance, proéminence — la distance est figée et la pertinence se joue une fois pour toutes dans le paramétrage. Le volume, la fraîcheur et la note des avis sont ce qui reste actionnable au quotidien.</li>
+<li><strong>La vérification est plus stricte.</strong> Les fiches sans vitrine sont davantage suspectées de fraude, et un pic anormal d'avis sur une jeune fiche peut déclencher une mise en pause. Une collecte régulière, étalée, ressemble à ce qu'elle est : de l'activité normale.</li>
+</ul>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Le réglage qui rapporte le plus :</strong> renseignez la liste complète de vos prestations dans la section Services (débouchage, recherche de fuite, remplacement de chauffe-eau, mise aux normes…). C'est le seul endroit où vous dictez à Google les requêtes sur lesquelles vous êtes pertinent. Notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a> détaille chaque champ.</p>
+</div>
+</section>
+
+<section id="ou-poser-plaque" class="scroll-mt-28 mb-16">
+<h2>Où poser la plaque quand on n'a pas de boutique : 6 emplacements classés</h2>
+<p>La question n'est pas « où la coller » mais « à quel moment le client la croise-t-il, téléphone en main et sentiment positif ». Voici les six emplacements possibles pour un artisan, du plus au moins rentable.</p>
+
+<h3>1. Sur la pochette de devis ou le porte-documents ✅</h3>
+<p>De loin le meilleur support. Vous sortez la pochette pour faire signer le bon d'intervention ou remettre la facture, la plaque est dessus, orientée vers le client. Le geste est naturel : « pendant que je range, approchez votre téléphone ici ». Le client vient de vous remercier, il est encore debout devant vous.</p>
+
+<h3>2. Sur la mallette à outils, côté couvercle</h3>
+<p>Excellent complément. La mallette reste ouverte pendant toute l'intervention, posée au sol dans le couloir ou la salle de bains. Le client la regarde plus souvent qu'on ne le croit, et la plaque devient un objet familier avant même qu'on en parle. Fixation adhésive sur une zone plate et non métallique.</p>
+
+<h3>3. Dans le véhicule, côté passager</h3>
+<p>Utile pour les métiers où une partie du règlement se fait au camion (remise de matériel, récupération d'une pièce). Fonctionne aussi comme rappel pour vous : une plaque visible depuis le siège conducteur entretient le réflexe de la sortir.</p>
+
+<h3>4. À l'atelier ou au dépôt, sur le comptoir</h3>
+<p>Pertinent pour les menuisiers, les serruriers et tous les artisans qui reçoivent pour un retrait ou un devis. La logique redevient celle d'un commerce classique : plaque à droite du poste de règlement, orientée client.</p>
+
+<h3>5. Sur le classeur remis en fin de chantier</h3>
+<p>Sur les chantiers longs — salle de bains, mise aux normes électriques, remplacement de chaudière — la remise du dossier (garanties, notices, attestations) est un moment solennel et positif. Une plaque posée sur le classeur capte précisément ce moment.</p>
+
+<h3>6. Sur le véhicule, en extérieur</h3>
+<p>Aucune valeur de collecte : personne ne scanne un camion garé dans la rue. Valeur réputationnelle uniquement, comme un floquage. À ne jamais utiliser comme dispositif principal.</p>
+
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 La règle des 2 plaques pour un artisan :</strong> la configuration qui fonctionne est <strong>pochette de devis + mallette</strong>, soit exactement le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a>. Un artisan seul qui démarre peut se contenter du <a href="/product/starter" class="font-semibold underline">Pack Starter</a> ; une équipe de trois compagnons a besoin d'une plaque par véhicule, donc du <a href="/product/pro" class="font-semibold underline">Pack Pro</a>.</p>
+</div>
+
+<h3>Attention au métal</h3>
+<p>Une mallette en aluminium, une caisse à outils en acier ou un plan de travail inox perturbent le champ magnétique et rendent la lecture aléatoire. C'est la première cause de « ma plaque ne marche pas » chez les artisans. Choisissez une zone plastique, ou intercalez un support non métallique. Le sujet est traité en détail dans notre <a href="/blog/materiaux-plaque-nfc-avis-google">comparatif des matériaux de plaque NFC</a>.</p>
+</section>
+
+<section id="moments-demander" class="scroll-mt-28 mb-16">
+<h2>Les 5 moments où l'on demande, les 3 où l'on se tait</h2>
+<p>Dans le bâtiment, le mauvais timing ne produit pas zéro avis : il produit des avis négatifs. La règle est simple — on demande quand le résultat est visible et accepté, jamais quand une incertitude reste ouverte.</p>
+<h3>Les 5 moments qui fonctionnent</h3>
+<ul>
+<li><strong>Juste après la démonstration du résultat.</strong> Vous ouvrez le robinet, vous montrez que ça ne fuit plus, le client souffle. C'est le pic émotionnel de l'intervention.</li>
+<li><strong>À la signature du bon d'intervention.</strong> Le client a déjà un stylo ou un téléphone en main : il est en posture de valider.</li>
+<li><strong>Au dépannage d'urgence résolu.</strong> Une fuite arrêtée un dimanche soir génère la gratitude la plus forte de tout le métier. C'est votre meilleur gisement d'avis à cinq étoiles.</li>
+<li><strong>À la remise du dossier de fin de chantier.</strong> Attestations, garanties, notices : le client perçoit du sérieux, il est réceptif.</li>
+<li><strong>Au passage de contrôle à un an</strong>, sur une chaudière ou une installation. Le client constate que rien n'a bougé — c'est exactement ce qu'il voulait acheter.</li>
+</ul>
+<h3>Les 3 moments où l'on ne demande jamais</h3>
+<ul>
+<li><strong>Quand le devis a été dépassé</strong> et que la discussion sur le supplément vient d'avoir lieu, même si elle s'est bien terminée.</li>
+<li><strong>Quand une pièce manque et qu'un second passage est prévu.</strong> Le chantier n'est pas fini dans la tête du client, quoi que vous en pensiez.</li>
+<li><strong>Après un retard sur le rendez-vous</strong>, même prévenu. La demande est perçue comme un manque de tact et transforme un agacement passager en avis écrit.</li>
+</ul>
+<p>S'abstenir dans ces trois cas n'est pas du filtrage. Vous ne triez pas les clients selon leur satisfaction supposée — ce qui, fait systématiquement, contrevient aux règles de Google. Vous choisissez un moment où la demande est appropriée, exactement comme un commerçant ne demande rien pendant une réclamation.</p>
+</section>
+
+<section id="scripts-artisan" class="scroll-mt-28 mb-16">
+<h2>Trois scripts d'artisan qui fonctionnent</h2>
+<p>Une plaque posée sans un mot ne produit presque rien. C'est la phrase qui la transforme en proposition, et elle doit tenir en une respiration, sans jamais quémander.</p>
+
+<h3>✅ Le script « démonstration » (le plus efficace)</h3>
+<p class="italic">« Voilà, plus de fuite. Si le dépannage vous a convenu, approchez votre téléphone de la plaque : ça prend vingt secondes et ça nous aide beaucoup. »</p>
+<p>Il enchaîne directement sur la preuve du travail fait. Le client vient de constater le résultat : il ne peut pas dire non sans se contredire.</p>
+
+<h3>✅ Le script « signature »</h3>
+<p class="italic">« Je vous fais signer le bon ici. Et si le passage vous a convenu, l'avis Google se fait juste là, en un geste. »</p>
+<p>Il profite d'un moment où le client a déjà accepté de faire quelque chose avec ses mains. La transition est mécanique.</p>
+
+<h3>✅ Le script « urgence »</h3>
+<p class="italic">« Content d'avoir pu passer ce soir. Le meilleur remerciement, c'est un avis Google : approchez votre téléphone, c'est immédiat. »</p>
+<p>À réserver aux dépannages hors horaires. Le rapport de gratitude est tel que le taux d'acceptation dépasse largement celui d'une intervention ordinaire.</p>
+
+<h3>❌ Les deux formulations à bannir</h3>
+<ul>
+<li><strong>« Vous pourrez nous laisser un avis sur internet ? »</strong> — diffère l'action, donc l'annule. Tout ce qui n'est pas fait devant vous n'est pas fait.</li>
+<li><strong>« Un avis 5 étoiles et je vous fais un geste sur la prochaine intervention »</strong> — offrir une contrepartie contre un avis enfreint les règles de Google et expose à la suppression de l'ensemble des avis de la fiche.</li>
+</ul>
+</section>
+
+<section id="cas-pratiques" class="scroll-mt-28 mb-16">
+<h2>Trois exemples de calcul</h2>
+<p>Le nombre d'avis mensuels est le produit de deux choses seulement : le nombre d'interventions terminées, et la proportion de clients à qui la demande est réellement faite multipliée par le taux de publication. Les ordres de grandeur ci-dessous partent d'un taux de publication de 20 à 30 %, cohérent avec les métiers à contact long analysés dans notre article sur le <a href="/blog/taux-scan-plaque-nfc">taux de scan réel d'une plaque NFC</a>.</p>
+
+<table>
+<thead>
+<tr><th>Profil</th><th>Interventions / mois</th><th>Demande faite</th><th>Avis / mois</th></tr>
+</thead>
+<tbody>
+<tr><td>Plombier seul, dépannage</td><td>60</td><td>1 fois sur 2</td><td>7 à 9</td></tr>
+<tr><td>Électricien, 2 compagnons</td><td>110</td><td>3 fois sur 4</td><td>18 à 25</td></tr>
+<tr><td>Chauffagiste, gros chantiers</td><td>14</td><td>systématique</td><td>3 à 4</td></tr>
+</tbody>
+</table>
+
+<p>Deux enseignements. D'abord, l'artisan à faible volume n'est pas pénalisé : quatre avis par mois font quarante-huit avis par an, largement de quoi passer devant une concurrence locale qui plafonne à une vingtaine. Ensuite, la variable qui bouge le résultat n'est pas le secteur mais la <strong>régularité de la demande</strong> : passer de « une fois sur deux » à « systématique » double le volume sans changer une seule ligne du reste.</p>
+<p>Pour situer l'objectif, notre analyse du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne les seuils par densité concurrentielle.</p>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Répondre aux trois avis négatifs types du bâtiment</h2>
+<p>Collecter ne suffit pas : <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent une réponse du professionnel</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 répondants). Une réponse est lue par cent futurs clients, jamais seulement par l'auteur.</p>
+<h3>« Le devis a doublé en cours de chantier »</h3>
+<p>Ne discutez pas le montant en public. Rappelez factuellement le mécanisme — un imprévu constaté, un avenant proposé et accepté avant exécution — puis proposez de reprendre le détail par téléphone. Le lecteur ne cherche pas qui a raison : il cherche à savoir si vous prévenez avant de facturer.</p>
+<h3>« Il n'est jamais venu / il ne répond pas »</h3>
+<p>C'est l'avis le plus fréquent du secteur, et souvent le plus injuste. Répondez sans ironie, indiquez le canal fiable pour vous joindre et le délai de rappel que vous vous engagez à tenir. Une réponse calme sur un reproche de joignabilité rassure davantage qu'un avis cinq étoiles de plus.</p>
+<h3>« Malfaçon constatée après coup »</h3>
+<p>Ne niez jamais en ligne. Reconnaissez le principe — un travail défectueux se reprend — sans reconnaître des faits que vous n'avez pas vérifiés, et proposez un passage de contrôle daté. La méthode complète est détaillée dans notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs Google</a>.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Le calcul qui dérange :</strong> à 30 avis et 4,2 de moyenne, un seul avis à 1 étoile fait perdre environ un dixième de point. Il faut ensuite quatre avis à 5 étoiles pour revenir au point de départ. C'est la raison pour laquelle un flux régulier protège mieux qu'une contestation : le volume dilue, l'inaction expose. Le détail du calcul est dans notre article sur <a href="/blog/ameliorer-note-google">l'amélioration de la note Google</a>.</p>
+</div>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 6 erreurs qui coûtent le plus d'avis</h2>
+<ul>
+<li><strong>Coller la plaque sur du métal.</strong> Mallette aluminium, caisse acier, plan de travail inox : la lecture devient aléatoire et l'artisan conclut que le produit est défectueux.</li>
+<li><strong>Garder la plaque dans le camion.</strong> Un objet qui ne monte pas chez le client ne collecte rien. La plaque doit voyager avec la pochette de devis, pas avec le véhicule.</li>
+<li><strong>Demander par SMS trois jours après.</strong> Le moment émotionnel est passé, et la relance écrite réveille les insatisfactions latentes.</li>
+<li><strong>Ne pas former les compagnons.</strong> Sur une équipe de trois, si un seul dit la phrase, vous perdez les deux tiers du gisement sans jamais le voir dans les chiffres.</li>
+<li><strong>Promettre une remise contre un avis.</strong> Interdit par Google, avec un risque de suppression massive et de suspension de la fiche.</li>
+<li><strong>Laisser la fiche sans services renseignés.</strong> Un plombier qui n'a déclaré aucune prestation n'apparaît sur aucune requête spécialisée, quel que soit son nombre d'avis.</li>
+</ul>
+</section>
+
+<section id="faq-artisan" class="scroll-mt-28 mb-16">
+<h2>FAQ — Plaque NFC pour plombier et artisan du bâtiment</h2>
+
+<h3>Une plaque NFC a-t-elle un intérêt quand on n'a pas de boutique ?</h3>
+<p>Oui, et c'est même le cas où l'écart avec les autres méthodes est le plus grand. L'artisan n'a pas de comptoir, donc pas de moment de caisse : sa seule fenêtre est la fin d'intervention, chez le client, et elle dure une minute. Une plaque fixée sur la pochette de devis ou sur la mallette recrée ce comptoir et le rend transportable. Toutes les alternatives — carte de visite, SMS, lien dans le mail de facture — reportent l'action à plus tard, et ce qui est reporté n'est pas fait.</p>
+
+<h3>Où fixer la plaque quand on travaille chez le client ?</h3>
+<p>Sur la pochette de devis ou le porte-documents en priorité : c'est l'objet que vous sortez au moment de la signature ou de la remise de facture, donc au moment exact où la demande est légitime. La mallette à outils, côté couvercle et sur une zone non métallique, constitue un excellent second emplacement puisqu'elle reste visible pendant toute l'intervention. Le véhicule et l'atelier n'arrivent qu'ensuite, et le floquage extérieur ne collecte rien du tout.</p>
+
+<h3>Combien d'avis Google un plombier peut-il espérer par mois ?</h3>
+<p>Cela dépend de deux nombres que vous connaissez : vos interventions terminées et la fréquence à laquelle la phrase est réellement dite. Un plombier seul à soixante interventions mensuelles qui demande une fois sur deux se situe autour de sept à neuf avis par mois. La même activité avec une demande systématique dépasse quinze. Un chauffagiste à quatorze gros chantiers obtient trois à quatre avis, soit une quarantaine par an, ce qui suffit largement dans un secteur où la concurrence locale plafonne souvent sous les vingt avis.</p>
+
+<h3>La plaque fonctionne-t-elle si je la colle sur ma caisse à outils en métal ?</h3>
+<p>Mal, et parfois pas du tout. Le métal génère des courants de Foucault qui absorbent le champ magnétique et désaccordent l'antenne de la puce : la lecture devient aléatoire selon l'angle du téléphone. C'est la première cause de plaque jugée défectueuse. Choisissez une zone en plastique, un couvercle de mallette composite, ou intercalez un support non métallique entre la plaque et la surface.</p>
+
+<h3>Peut-on demander un avis alors que la facture n'est pas encore payée ?</h3>
+<p>Oui, et c'est même souvent préférable. L'avis porte sur la prestation, pas sur le règlement, et le moment où le client constate le résultat est nettement plus favorable que le jour où il reçoit la facture. Attendre le paiement, dans un métier où le virement arrive parfois trois semaines plus tard, revient à laisser passer la seule fenêtre exploitable.</p>
+
+<h3>Un artisan sans adresse visible peut-il avoir une fiche Google ?</h3>
+<p>Oui, via une fiche en zone de service : vous saisissez votre adresse pour la vérification puis vous la masquez, et vous déclarez les communes où vous intervenez. Attention toutefois à une illusion fréquente : déclarer trente communes n'étale pas votre visibilité sur trente communes, car Google continue de classer sur la distance réelle à votre point de rattachement. Cela indique seulement votre périmètre d'intervention. Le levier qui reste sous votre contrôle est la proéminence, c'est-à-dire le volume, la fraîcheur et la note de vos avis.</p>
+
+<h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
+<p>Non. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel. Elle continue de fonctionner des années après l'achat, et la puce est garantie à vie. C'est la différence de fond avec les offres à abonnement, où l'arrêt du prélèvement désactive le support que vous avez pourtant payé.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : le comptoir de l'artisan, c'est sa pochette de devis</h2>
+<p>Un artisan ne perd pas des avis parce que ses clients sont mécontents. Il en perd parce que le seul moment où la demande a du sens — la minute qui suit la démonstration du résultat — se produit chez le client, sans caisse, sans comptoir, et sans rien à lui tendre.</p>
+<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>, en donnant un objet à toucher au moment précis où le client vous remercie. Fixez-la sur ce que vous sortez à chaque fin de chantier, dites une phrase de dix mots, et laissez la régularité faire le reste.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a>, <a href="/blog/carte-nfc-avis-google">carte NFC ou plaque</a>, <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, ou notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque chantier en avis Google ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+</div>
+</section>
+`,
+  },
   'google-posts-fiche-google-business-profile': {
     title: 'Google Posts : publier sur sa fiche Google Business Profile (et ce que ça rapporte)',
     category: 'SEO Local',
