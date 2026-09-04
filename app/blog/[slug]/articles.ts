@@ -18,6 +18,237 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'combien-de-plaques-nfc': {
+    title: 'Combien de plaques NFC faut-il ? Le guide pour choisir entre 1, 2 et 5',
+    category: 'Comparatif',
+    date: '4 septembre 2026',
+    readTime: '13 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'La seule décision d\'achat qui change vraiment le volume d\'avis n\'est pas le matériau, c\'est le nombre d\'emplacements couverts. La méthode de calcul en 3 questions, un tableau par secteur, le coût par avis selon le pack et les 6 erreurs de dimensionnement.',
+    tocSections: [
+      { id: 'pourquoi-nombre-compte', label: 'Pourquoi le nombre compte' },
+      { id: 'regle-emplacement', label: 'Une plaque = un point de contact' },
+      { id: 'calcul-besoin', label: 'La méthode en 3 questions' },
+      { id: 'tableau-secteurs', label: 'Combien par établissement' },
+      { id: 'une-plaque', label: 'Quand 1 plaque suffit' },
+      { id: 'deux-plaques', label: 'Le duo à 2 plaques' },
+      { id: 'cinq-plaques', label: '5 plaques : multi-sites' },
+      { id: 'erreurs', label: 'Les 6 erreurs' },
+      { id: 'objectif-avis', label: 'Atteindre un objectif' },
+      { id: 'faq-nombre-plaques', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-nombre-compte" class="scroll-mt-28 mb-16">
+<h2>Pourquoi le nombre de plaques compte plus que le modèle choisi</h2>
+<p>La question qui revient le plus souvent avant un achat n'est pas « quelle plaque » mais « combien ». Et c'est une bonne question, parce que c'est la seule variable d'achat qui change réellement le nombre d'avis collectés. Le matériau, la couleur, la puce, le format : tout cela se joue à la marge. Le nombre d'emplacements couverts, lui, agit directement sur le volume.</p>
+<p>La raison tient à un mécanisme simple. Une plaque ne collecte pas des avis parce qu'elle existe, mais parce qu'un client la croise à un moment précis : téléphone en main, prestation terminée, sentiment positif. Ce moment ne se produit pas partout dans votre établissement. Il se produit à des endroits identifiables, et chaque endroit non couvert est un gisement d'avis qui ne sera jamais exploité.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> ajouter un second emplacement pertinent augmente le volume d'avis collectés de <strong>30 à 60 %</strong> selon le type d'établissement. Aucune autre décision d'achat — matériau, taille, design — ne produit un écart de cet ordre. Passer de l'acrylique au bois ne change rien au volume ; passer de un à deux points de contact le change massivement.</p>
+</div>
+<p>L'erreur classique consiste à raisonner en objet plutôt qu'en parcours. On achète « une plaque pour le commerce », on la colle près de la caisse, et on considère le sujet réglé. Or un client de salon de coiffure passe par trois zones où la demande est légitime — le poste de coiffage, la caisse, la sortie — et un seul support ne peut en couvrir qu'une.</p>
+<p>L'erreur inverse existe aussi, moins coûteuse mais bien réelle : acheter cinq plaques pour un local de quarante mètres carrés avec un seul point de passage. Trois d'entre elles finiront dans un tiroir, et la dilution visuelle — des plaques partout, donc plus aucune qui attire l'œil — annule le bénéfice attendu.</p>
+<p>Cet article donne la méthode pour trancher : un calcul en trois questions, un tableau par secteur, et le coût réel par avis collecté selon le pack retenu.</p>
+</section>
+
+<section id="regle-emplacement" class="scroll-mt-28 mb-16">
+<h2>La règle de base : une plaque égale un point de contact, pas une pièce</h2>
+<p>Le raisonnement le plus fréquent est géographique : « j'ai deux salles, donc deux plaques ». C'est le mauvais découpage. Une plaque ne couvre pas une surface, elle couvre un <strong>moment</strong>. Le bon découpage est celui du parcours client, pas celui des murs.</p>
+<h3>Ce qui définit un point de contact valable</h3>
+<p>Un emplacement mérite une plaque s'il réunit quatre conditions simultanément. Retirez-en une seule et le rendement s'effondre.</p>
+<ul>
+<li><strong>Le client s'y arrête.</strong> Un couloir, une zone de circulation ou une vitrine ne produisent rien : personne ne sort son téléphone en marchant.</li>
+<li><strong>La prestation est terminée ou visible.</strong> On ne demande pas un avis à quelqu'un qui attend encore son plat, sa coupe ou son diagnostic.</li>
+<li><strong>Le téléphone est déjà en main, ou à dix centimètres.</strong> C'est ce qui rend le geste gratuit. L'encaissement sans contact est le meilleur allié de la collecte d'avis.</li>
+<li><strong>Quelqu'un peut dire la phrase.</strong> Une plaque sans phrase associée collecte trois à cinq fois moins qu'une plaque accompagnée d'une invitation orale.</li>
+</ul>
+<p>Ce dernier point élimine à lui seul beaucoup d'emplacements séduisants sur le papier. La plaque en salle d'attente, la plaque en vitrine, la plaque sur la porte des toilettes : personne n'est là pour dire la phrase, donc le taux s'écroule. Le détail de ce classement figure dans notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque d'avis Google</a>.</p>
+<h3>La hiérarchie universelle des emplacements</h3>
+<p>Tous secteurs confondus, l'ordre de rendement est remarquablement stable :</p>
+<ul>
+<li><strong>1. Le poste d'encaissement, côté client.</strong> C'est le seul endroit où les quatre conditions sont réunies systématiquement, pour chaque client, sans exception.</li>
+<li><strong>2. Le poste de prestation.</strong> Fauteuil de coiffage, table d'ajustage, comptoir de remise : le pic émotionnel s'y trouve, mais tous les clients n'y repassent pas au bon moment.</li>
+<li><strong>3. Le point de sortie ou d'attente courte.</strong> Rendement moyen, utile en complément quand le flux est élevé.</li>
+<li><strong>4. La vitrine et les zones de passage.</strong> Valeur de réputation, valeur de collecte quasi nulle.</li>
+</ul>
+<p>Conséquence directe pour le dimensionnement : votre première plaque va toujours au poste d'encaissement, la deuxième au poste de prestation le plus fréquenté, et les suivantes seulement s'il existe plusieurs postes de prestation parallèles ou plusieurs points d'encaissement.</p>
+</section>
+
+<section id="calcul-besoin" class="scroll-mt-28 mb-16">
+<h2>La méthode de calcul en trois questions</h2>
+<p>Pas besoin d'un audit. Trois questions suffisent à sortir un nombre, et elles se répondent en deux minutes en se plaçant mentalement à la place d'un client qui vient de payer.</p>
+<h3>Question 1 : combien de points d'encaissement distincts ?</h3>
+<p>Comptez les endroits où un client peut régler. Un commerce classique en a un. Une brasserie avec un bar et une caisse en salle en a deux. Un garage avec un comptoir atelier et un comptoir pièces détachées en a deux également. Chaque point d'encaissement mérite une plaque, car un client ne verra jamais celle de l'autre comptoir.</p>
+<h3>Question 2 : combien de postes de prestation fonctionnent en parallèle ?</h3>
+<p>Un salon avec trois fauteuils actifs simultanément a trois postes de prestation. Un cabinet avec deux praticiens en a deux. Un restaurant a autant de « postes » que de tables, ce qui rend le raisonnement différent — on y raisonne par zone, pas par table.</p>
+<p>Attention : un poste ne compte que si le client y reste assis avec son téléphone accessible et que la prestation s'y termine visiblement. Un poste de shampoing ne compte pas ; un fauteuil de coiffage, oui.</p>
+<h3>Question 3 : le flux justifie-t-il de la redondance ?</h3>
+<p>Au-delà d'environ cent clients par jour, un seul support crée un goulot d'étranglement : trois personnes ne scannent pas la même plaque en même temps, et la deuxième renonce. Les boulangeries, les commerces de proximité et les points de vente à forte rotation gagnent à doubler le support sur le même comptoir, à deux endroits distincts du plan de travail.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>✅ La formule courte :</strong> nombre de plaques = points d'encaissement + postes de prestation réellement exploitables, plafonné à ce que vous pouvez accompagner d'une phrase. Si personne ne peut dire la phrase à un emplacement, ne comptez pas cet emplacement.</p>
+</div>
+<p>Ce plafond est essentiel. Une plaque supplémentaire dans une zone sans personnel ne produit pas un avis de plus. C'est la raison pour laquelle un commerce tenu par une personne seule dépasse rarement deux plaques utiles, quel que soit le nombre de mètres carrés.</p>
+</section>
+
+<section id="tableau-secteurs" class="scroll-mt-28 mb-16">
+<h2>Combien de plaques par type d'établissement</h2>
+<p>Le tableau ci-dessous applique la méthode aux configurations les plus courantes. La colonne « avis / mois estimés » suppose une demande orale faite régulièrement, avec les ordres de grandeur détaillés dans notre analyse du <a href="/blog/taux-scan-plaque-nfc">taux de scan réel d'une plaque NFC</a>.</p>
+<table>
+<thead>
+<tr><th>Établissement</th><th>Emplacements utiles</th><th>Nombre conseillé</th><th>Avis / mois estimés</th></tr>
+</thead>
+<tbody>
+<tr><td>Artisan seul (plombier, électricien)</td><td>Pochette de devis</td><td>1</td><td>7 à 9</td></tr>
+<tr><td>Commerce de proximité, 1 caisse</td><td>Caisse</td><td>1 à 2</td><td>10 à 20</td></tr>
+<tr><td>Salon de coiffure, 3 fauteuils</td><td>Caisse + 2 postes</td><td>2 à 3</td><td>25 à 50</td></tr>
+<tr><td>Restaurant, 45 couverts</td><td>Caisse + porte-addition</td><td>2 à 5</td><td>30 à 40</td></tr>
+<tr><td>Boulangerie, fort flux</td><td>2 zones de comptoir</td><td>2</td><td>100 à 140</td></tr>
+<tr><td>Garage automobile</td><td>Comptoir + zone restitution</td><td>2</td><td>15 à 30</td></tr>
+<tr><td>Cabinet médical, 2 praticiens</td><td>Accueil + 2 bureaux</td><td>3</td><td>20 à 35</td></tr>
+<tr><td>Hôtel 30 chambres</td><td>Réception + petit-déjeuner</td><td>2 à 3</td><td>25 à 40</td></tr>
+<tr><td>Réseau de 4 points de vente</td><td>1 caisse par site + réserve</td><td>5</td><td>60 à 120</td></tr>
+</tbody>
+</table>
+<p>Deux lectures de ce tableau. D'abord, <strong>la majorité des établissements se situe à deux plaques</strong> : c'est la configuration qui couvre le point d'encaissement et le point de prestation, c'est-à-dire les deux moments où la demande est légitime pour la quasi-totalité des métiers de service.</p>
+<p>Ensuite, la troisième plaque ne se justifie que dans deux cas de figure : plusieurs praticiens ou postes travaillant en parallèle, ou plusieurs adresses. Ajouter un troisième support dans un local où deux suffisent ne fait pas monter le volume — il le redistribue.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Le cas du multi-établissements :</strong> chaque plaque Swiipx est expédiée programmée avec le lien d'avis que vous indiquez. Si vous gérez plusieurs adresses, chacune possède sa propre fiche Google et donc son propre lien : précisez-le à la commande pour recevoir des plaques distinctes plutôt que cinq plaques pointant vers la même fiche.</p>
+</div>
+</section>
+
+<section id="une-plaque" class="scroll-mt-28 mb-16">
+<h2>Quand une seule plaque suffit vraiment</h2>
+<p>Une plaque unique est un choix pertinent, pas un choix par défaut. Trois profils s'y retrouvent parfaitement.</p>
+<h3>L'artisan et le professionnel itinérant</h3>
+<p>Un plombier, un électricien ou un installateur n'a pas de local recevant du public. Sa seule fenêtre de collecte se produit chez le client, à la remise du bon d'intervention. Une plaque sur la pochette de devis couvre cette fenêtre intégralement — et une seconde plaque, restée dans le camion, ne couvre rien du tout.</p>
+<h3>Le commerce à point de passage unique</h3>
+<p>Kiosque, boutique de moins de trente mètres carrés, atelier de retouche, cordonnerie : le client entre, il est servi, il paie au même endroit. Le parcours est linéaire, il n'y a qu'un seul moment, une plaque le couvre.</p>
+<h3>Le test avant déploiement</h3>
+<p>C'est l'usage le plus fréquent et le plus rationnel. Vous voulez mesurer votre propre taux avant d'équiper trois sites : commandez une plaque, posez-la au point d'encaissement, dites la phrase pendant trente jours et comptez les avis obtenus. Vous disposerez d'un chiffre réel — le vôtre — plutôt que d'une estimation.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/starter" class="font-semibold underline">Pack Starter</a> contient une plaque acrylique 120 x 120 mm, adhésif inclus, QR code de secours imprimé, expédiée déjà programmée. 29,90 € en paiement unique, sans abonnement, garantie à vie. C'est le point d'entrée logique pour un professionnel seul ou pour un test de trente jours.</p>
+</div>
+<h3>La limite à connaître</h3>
+<p>Avec une seule plaque, votre volume dépend entièrement d'un emplacement. Si cet emplacement est mal choisi — trop haut, orienté vers le personnel, posé sur une surface métallique — vous perdez la totalité du gisement sans avoir de point de comparaison. C'est le seul risque réel du support unique : l'absence de redondance rend l'erreur invisible. Le sujet des surfaces est traité dans notre <a href="/blog/materiaux-plaque-nfc-avis-google">comparatif des matériaux de plaque NFC</a>.</p>
+</section>
+
+<section id="deux-plaques" class="scroll-mt-28 mb-16">
+<h2>Deux plaques : la configuration qui convient à huit établissements sur dix</h2>
+<p>Si vous ne devez retenir qu'une recommandation de cet article, c'est celle-ci. Le duo <strong>encaissement + prestation</strong> est la configuration la plus rentable pour l'immense majorité des commerces et cabinets, et l'écart avec la plaque unique est mesurable dès le premier mois.</p>
+<h3>Pourquoi le duo fonctionne si bien</h3>
+<p>Les deux emplacements ne captent pas les mêmes clients. Celui de l'encaissement capte tout le monde, mais dans un moment fonctionnel où l'attention est partagée entre le paiement et la sortie. Celui du poste de prestation capte moins de clients, mais au moment où la satisfaction est la plus forte — juste après le miroir, le diagnostic rassurant, la livraison de la commande.</p>
+<p>Additionner ces deux populations ne double pas mécaniquement le volume : il existe un recouvrement, puisqu'un client qui a scanné au fauteuil ne rescannera pas en caisse. L'observation terrain situe le gain réel entre <strong>30 et 60 %</strong>, ce qui reste le meilleur rapport entre un euro dépensé et un avis obtenu de toute la gamme.</p>
+<h3>Les cinq duos qui marchent le mieux</h3>
+<ul>
+<li><strong>Caisse + fauteuil</strong> pour les salons de coiffure, barbiers et instituts de beauté.</li>
+<li><strong>Comptoir + porte-addition</strong> pour la restauration, où l'addition arrive à table et où le client a déjà son téléphone posé.</li>
+<li><strong>Accueil + bureau de consultation</strong> pour les cabinets médicaux, paramédicaux et vétérinaires.</li>
+<li><strong>Comptoir de réception + zone de restitution</strong> pour les garages, carrosseries et ateliers.</li>
+<li><strong>Pochette de devis + mallette</strong> pour les artisans en équipe, où la seconde plaque suit un second compagnon.</li>
+</ul>
+<h3>La règle des deux mètres</h3>
+<p>Une erreur fréquente consiste à poser les deux plaques trop près l'une de l'autre, sur le même comptoir. Elles se cannibalisent : le client en voit une, ignore l'autre, et vous avez payé deux supports pour un seul point de contact. Espacez-les d'au moins deux mètres, ou placez-les dans deux zones fonctionnellement différentes.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/business" class="font-semibold underline">Pack Business</a> réunit deux plaques pour 54,90 €, soit 27,45 € l'unité — moins cher que deux Starter achetés séparément. C'est le pack le plus vendu, précisément parce qu'il correspond à la configuration standard d'un commerce ou d'un cabinet.</p>
+</div>
+</section>
+
+<section id="cinq-plaques" class="scroll-mt-28 mb-16">
+<h2>Cinq plaques : multi-postes, multi-sites et remplacement</h2>
+<p>Le pack de cinq n'est pas un pack « pour les gros ». Il répond à trois situations précises, dont deux concernent des structures très ordinaires.</p>
+<h3>Situation 1 : plusieurs postes en parallèle</h3>
+<p>Un salon à quatre fauteuils, un cabinet à trois praticiens, un institut avec trois cabines : chaque poste est un point de contact indépendant, et le client qui sort de la cabine 3 ne verra jamais la plaque de la cabine 1. Ici, cinq plaques couvrent quatre postes plus la caisse, ce qui est exactement le bon dimensionnement.</p>
+<h3>Situation 2 : plusieurs adresses</h3>
+<p>C'est le cas le plus évident. Trois boulangeries, deux agences, quatre points de vente : chaque site a sa fiche Google, son lien d'avis, et donc sa plaque dédiée. Attention à un piège fréquent — équiper tous les sites avec le même lien fait converger les avis sur une seule fiche, ce qui affaiblit les autres et fausse le pack local sur chaque zone.</p>
+<h3>Situation 3 : la rotation et le remplacement</h3>
+<p>Les plaques bougent. Un réagencement, une caisse déplacée, un décollement sur une surface mal préparée, une plaque emportée par mégarde dans un carton : disposer d'une ou deux unités d'avance évite de rester deux semaines sans dispositif. Sur un commerce qui collecte quinze avis par mois, deux semaines d'interruption représentent sept ou huit avis perdus, soit largement le prix d'une plaque de rechange.</p>
+<h3>Le calcul du coût unitaire</h3>
+<p>Le tableau ci-dessous compare le prix par plaque selon le pack. La dernière colonne rapporte la dépense au nombre d'avis attendus sur trois ans, durée de vie moyenne d'une plaque acrylique.</p>
+<table>
+<thead>
+<tr><th>Pack</th><th>Prix</th><th>Prix / plaque</th><th>Coût par avis sur 3 ans</th></tr>
+</thead>
+<tbody>
+<tr><td>Starter (1 plaque)</td><td>29,90 €</td><td>29,90 €</td><td>≈ 0,08 €</td></tr>
+<tr><td>Business (2 plaques)</td><td>54,90 €</td><td>27,45 €</td><td>≈ 0,05 €</td></tr>
+<tr><td>Pro (5 plaques)</td><td>89,90 €</td><td>17,98 €</td><td>≈ 0,03 €</td></tr>
+<tr><td>Solution par abonnement</td><td>19 € / mois</td><td>—</td><td>≈ 0,95 €</td></tr>
+</tbody>
+</table>
+<p>Le calcul repose sur une hypothèse volontairement prudente de douze avis par mois et par établissement. L'écart avec une formule par abonnement n'est pas de quelques euros : sur trois ans, 19 € mensuels représentent 684 €, contre 89,90 € une seule fois. La comparaison complète figure dans notre article sur le <a href="/blog/prix-plaque-nfc-avis-google">prix d'une plaque NFC pour avis Google</a>.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/pro" class="font-semibold underline">Pack Pro</a> propose cinq plaques à 89,90 €, chacune programmable avec un lien différent. Garantie à vie sur les puces, livraison en point relais offerte. C'est le seul pack qui permet d'équiper plusieurs fiches Google distinctes en une commande.</p>
+</div>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les six erreurs de dimensionnement les plus coûteuses</h2>
+<p>Ces erreurs ne se voient pas immédiatement. Elles se traduisent par un volume d'avis décevant que l'on attribue au produit, alors qu'il vient du plan de pose.</p>
+<ul>
+<li><strong>Compter les pièces plutôt que les moments.</strong> Deux salles ne font pas deux points de contact si le client ne paie que dans une seule. Inversement, un comptoir unique peut en concentrer deux si l'encaissement et la remise de commande s'y font à deux endroits distincts.</li>
+<li><strong>Poser les deux plaques côte à côte.</strong> Elles se neutralisent visuellement. Deux mètres d'écart minimum, ou deux zones fonctionnelles différentes.</li>
+<li><strong>Équiper une zone sans personnel.</strong> Salle d'attente, vitrine, couloir : sans quelqu'un pour dire la phrase, le taux tombe à un niveau qui ne justifie pas le support. La plaque amplifie une demande orale, elle ne la remplace pas.</li>
+<li><strong>Sous-équiper un multi-sites.</strong> Trois adresses avec une seule plaque tournante, c'est deux fiches Google qui stagnent pendant que la troisième progresse. Les fiches ne se transfèrent pas leur proéminence.</li>
+<li><strong>Programmer plusieurs plaques sur le même lien alors que les fiches diffèrent.</strong> Les avis atterrissent sur la mauvaise fiche, et l'erreur est irréversible : Google ne déplace pas un avis d'un établissement vers un autre.</li>
+<li><strong>Acheter plusieurs plaques sans changer la phrase.</strong> Doubler le support sans doubler la sollicitation orale produit un gain marginal. Le support est le multiplicateur, la phrase reste le déclencheur.</li>
+</ul>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Le test des trente jours :</strong> si vous hésitez entre deux dimensionnements, prenez le plus petit et mesurez. Comptez vos avis sur trente jours, divisez par votre nombre de clients servis, et vous obtenez votre taux réel. Un taux inférieur à 3 % signale un problème d'emplacement ou de phrase — pas un manque de plaques. Ajouter des supports sur un dispositif mal réglé multiplie le défaut, pas le résultat.</p>
+</div>
+</section>
+
+<section id="objectif-avis" class="scroll-mt-28 mb-16">
+<h2>Combien de plaques pour atteindre un objectif d'avis précis</h2>
+<p>Beaucoup de professionnels raisonnent à l'envers, et c'est plus efficace : ils partent d'un objectif — passer devant un concurrent, atteindre le pack local, remonter une note — et cherchent le dispositif qui y mène.</p>
+<h3>Étape 1 : fixer le nombre d'avis cible</h3>
+<p>Regardez les trois fiches affichées dans le pack local sur votre requête principale, relevez leur nombre d'avis, et prenez la plus faible comme cible. Les seuils par densité concurrentielle sont détaillés dans notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>. En zone rurale, quarante avis suffisent souvent ; en centre-ville dense, il en faut fréquemment plus de cent cinquante.</p>
+<h3>Étape 2 : calculer le rythme mensuel</h3>
+<p>Divisez l'écart par le nombre de mois que vous vous donnez. Un commerce à 32 avis qui vise 120 en un an doit produire environ 7 à 8 avis par mois. Un cabinet à 15 avis qui vise 90 en six mois doit en produire 12 à 13, ce qui est un tout autre effort.</p>
+<h3>Étape 3 : en déduire le nombre de supports</h3>
+<p>Rapportez ce rythme à votre flux. Avec un taux de collecte réaliste de 5 à 12 % des clients servis selon le secteur, vous savez immédiatement si un emplacement suffit. Un salon qui sert 400 clients par mois atteint 20 à 40 avis avec deux plaques bien placées : l'objectif est atteignable. Un cabinet qui reçoit 120 patients par mois plafonnera autour de 8 à 12 avis, et devra donc allonger le délai plutôt que multiplier les supports.</p>
+<p>Ce dernier point est important : au-delà d'un certain nombre de plaques, la contrainte n'est plus le support mais le flux. Cinq plaques ne créent pas de clients. Elles garantissent seulement qu'aucun client servi ne passe à côté du moment où la demande a du sens.</p>
+<p>Enfin, si votre objectif porte sur la note plutôt que sur le volume, le calcul est différent et repose sur une formule d'inertie que nous détaillons dans notre guide pour <a href="/blog/ameliorer-note-google">améliorer sa note Google</a> — remonter de 4,2 à 4,6 avec 200 avis existants demande beaucoup plus d'avis positifs qu'avec 30.</p>
+</section>
+
+<section id="faq-nombre-plaques" class="scroll-mt-28 mb-16">
+<h2>FAQ — Combien de plaques NFC pour votre établissement</h2>
+
+<h3>Une seule plaque NFC suffit-elle pour un commerce ?</h3>
+<p>Oui, si votre parcours client est linéaire et se termine à un seul endroit : petite boutique, kiosque, atelier de retouche, artisan itinérant. Dans ces cas, le point d'encaissement concentre la totalité des occasions de demande et un second support n'ajouterait rien. En revanche, dès qu'il existe un poste de prestation distinct de la caisse — un fauteuil, un bureau, une table — vous laissez entre 30 et 60 % du gisement inexploité avec une seule plaque. La règle pratique : comptez les endroits où un client s'arrête après la fin de la prestation, et non le nombre de pièces.</p>
+
+<h3>Deux plaques collectent-elles deux fois plus d'avis ?</h3>
+<p>Non, et il faut s'en méfier. Les deux emplacements captent des populations qui se recouvrent partiellement : un client qui a scanné au fauteuil ne rescannera pas en caisse. Le gain réel observé se situe entre 30 et 60 % de volume supplémentaire, ce qui reste excellent rapporté au coût. Un doublement n'est possible que si les deux plaques touchent des flux réellement distincts, par exemple deux comptoirs séparés d'un garage ou deux points de vente différents.</p>
+
+<h3>Peut-on programmer chaque plaque avec un lien d'avis différent ?</h3>
+<p>Oui, et c'est indispensable si vous gérez plusieurs établissements. Chaque adresse possède sa propre fiche Google Business Profile, donc son propre lien d'avis : il suffit de préciser les liens souhaités à la commande. Une erreur fréquente consiste à équiper trois boutiques avec le même lien — tous les avis se concentrent alors sur une seule fiche, et les deux autres restent invisibles dans le pack local de leur quartier. Google ne permet pas de déplacer un avis d'un établissement vers un autre après coup.</p>
+
+<h3>Faut-il une plaque par salarié ou par poste de travail ?</h3>
+<p>Par poste, jamais par salarié. Ce qui compte est le point physique où le client se trouve à la fin de la prestation, pas la personne qui l'a servi. Trois coiffeurs qui se partagent deux fauteuils actifs n'ont besoin que de deux plaques plus celle de la caisse. À l'inverse, un cabinet où deux praticiens exercent simultanément dans deux bureaux distincts a bien besoin de deux plaques, plus une à l'accueil, car les patients ne repassent pas tous par le même point de sortie.</p>
+
+<h3>Que faire si j'ai acheté trop de plaques ?</h3>
+<p>Rien n'est perdu, mais évitez de toutes les poser dans le même local : au-delà de deux ou trois supports visibles, l'effet de saturation visuelle réduit l'attention portée à chacune. Les meilleures utilisations d'un surplus sont la plaque de rechange en réserve, la plaque confiée à un commercial ou un technicien itinérant, et la plaque destinée à un futur second point de vente. Une plaque non posée conserve toute sa valeur : la puce ne se dégrade pas au stockage et la garantie reste acquise.</p>
+
+<h3>Le pack de 5 est-il rentable pour un commerce unique ?</h3>
+<p>Il l'est dans un cas précis : quand l'établissement compte plusieurs postes de prestation fonctionnant en parallèle, comme un salon à quatre fauteuils ou un institut à trois cabines. En dehors de cette configuration, le pack de deux couvre l'essentiel et le surplus dort. Cela dit, le coût unitaire chute nettement — environ 18 € la plaque contre 29,90 € à l'unité — donc garder deux unités d'avance reste économiquement défendable si vous anticipez un réagencement ou une ouverture.</p>
+
+<h3>Combien de plaques faut-il pour entrer dans le pack local Google ?</h3>
+<p>Aucun nombre de plaques ne garantit une position : le pack local se joue sur la pertinence, la distance et la proéminence, et seule la troisième dépend de vos avis. La bonne façon de poser la question est inverse — combien d'avis vous manque-t-il par rapport aux trois fiches actuellement affichées, en combien de mois voulez-vous les obtenir, et votre flux client permet-il ce rythme. Un dispositif à deux plaques accompagné d'une demande orale systématique produit typiquement 10 à 40 avis mensuels selon le secteur, ce qui suffit à combler la plupart des écarts en six à douze mois.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : comptez les moments, pas les mètres carrés</h2>
+<p>Le dimensionnement d'un dispositif de collecte d'avis ne dépend ni de la taille du local, ni du chiffre d'affaires, ni du nombre de salariés. Il dépend d'une seule chose : le nombre d'endroits où un client, prestation terminée et téléphone en main, peut recevoir une invitation naturelle à laisser un avis.</p>
+<p>Pour la grande majorité des commerces et cabinets, ces endroits sont au nombre de deux — le point d'encaissement et le poste de prestation — et c'est pourquoi la configuration à deux plaques reste la plus efficace. Une plaque suffit à un professionnel itinérant ou à une boutique à parcours unique. Cinq deviennent nécessaires dès qu'il existe plusieurs postes parallèles ou plusieurs fiches Google à alimenter.</p>
+<p>Et si le doute persiste, commencez petit et mesurez : trente jours d'observation valent mieux que n'importe quelle estimation, y compris celles de cet article.</p>
+<p>Guides complémentaires : <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, <a href="/blog/comment-choisir-plaque-nfc-avis-google">comment choisir sa plaque NFC</a>, <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC ou QR code</a>, ou notre comparatif des <a href="/blog/plaque-avis-google-sans-abonnement">solutions sans abonnement</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à équiper vos points de contact ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, expédiées déjà programmées, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € — et 17,98 € la plaque en Pack Pro.</p>
+</div>
+</section>
+`,
+  },
   'plaque-nfc-artisan-plombier': {
     title: 'Plaque NFC plombier et artisan : collecter des avis Google sans boutique',
     category: 'Secteur',

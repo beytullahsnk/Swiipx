@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 39,
+    title: 'Combien de plaques NFC faut-il ? Le guide pour choisir entre 1, 2 et 5',
+    excerpt: 'La seule décision d\'achat qui change vraiment le volume d\'avis n\'est pas le matériau, c\'est le nombre d\'emplacements couverts. La méthode de calcul en 3 questions, un tableau par secteur, le coût par avis selon le pack et les 6 erreurs de dimensionnement.',
+    category: 'Comparatif',
+    date: '4 septembre 2026',
+    dateIso: '2026-09-04',
+    readTime: '13 min',
+    slug: 'combien-de-plaques-nfc',
+  },
+  {
     id: 38,
     title: 'Plaque NFC plombier et artisan : collecter des avis Google sans boutique',
     excerpt: 'Tous les dispositifs d\'avis ont été pensés pour un comptoir que l\'artisan n\'a pas. Les 6 emplacements qui marchent sans boutique, la fiche en zone de service, les 5 moments où l\'on demande, 3 scripts et les 6 erreurs.',

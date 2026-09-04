@@ -13,6 +13,7 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'combien-de-plaques-nfc', label: 'Combien de plaques NFC faut-il ? 1, 2 ou 5' },
   { slug: 'plaque-nfc-artisan-plombier', label: 'Plaque NFC plombier et artisan : avis sans boutique' },
   { slug: 'google-posts-fiche-google-business-profile', label: 'Google Posts : publier sur sa fiche Google' },
   { slug: 'taux-scan-plaque-nfc', label: 'Taux de scan d\'une plaque NFC : les chiffres' },
