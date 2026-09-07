@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 40,
+    title: 'Quand vos clients laissent-ils leurs avis Google ? Heures, jours et saisons',
+    excerpt: 'Un avis Google n\'arrive pas au hasard : délai réel entre le scan et la publication, courbe horaire, rendement par jour de la semaine, saisonnalité par secteur, fraîcheur et vélocité. Deux tableaux chiffrés, trois cas de calcul et les 7 erreurs de timing.',
+    category: 'Statistiques',
+    date: '7 septembre 2026',
+    dateIso: '2026-09-07',
+    readTime: '14 min',
+    slug: 'quand-clients-laissent-avis-google',
+  },
+  {
     id: 39,
     title: 'Combien de plaques NFC faut-il ? Le guide pour choisir entre 1, 2 et 5',
     excerpt: 'La seule décision d\'achat qui change vraiment le volume d\'avis n\'est pas le matériau, c\'est le nombre d\'emplacements couverts. La méthode de calcul en 3 questions, un tableau par secteur, le coût par avis selon le pack et les 6 erreurs de dimensionnement.',

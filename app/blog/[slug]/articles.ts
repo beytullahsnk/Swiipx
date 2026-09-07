@@ -18,6 +18,231 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'quand-clients-laissent-avis-google': {
+    title: 'Quand vos clients laissent-ils leurs avis Google ? Heures, jours et saisons',
+    category: 'Statistiques',
+    date: '7 septembre 2026',
+    readTime: '14 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Un avis Google n\'arrive pas au hasard : délai réel entre le scan et la publication, courbe horaire, rendement par jour de la semaine, saisonnalité par secteur, fraîcheur et vélocité. Deux tableaux chiffrés, trois cas de calcul et les 7 erreurs de timing.',
+    tocSections: [
+      { id: 'pourquoi-le-moment-compte', label: 'Pourquoi le moment compte' },
+      { id: 'delai-scan-publication', label: 'Du scan à la publication' },
+      { id: 'heures', label: 'L\'heure de publication' },
+      { id: 'jours-semaine', label: 'Les jours de la semaine' },
+      { id: 'saisonnalite', label: 'La saisonnalité par secteur' },
+      { id: 'fraicheur-google', label: 'Fraîcheur et vélocité' },
+      { id: 'calendrier', label: '3 exemples chiffrés' },
+      { id: 'mesurer', label: 'Mesurer en 30 jours' },
+      { id: 'erreurs', label: 'Les 7 erreurs de timing' },
+      { id: 'faq-timing', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-le-moment-compte" class="scroll-mt-28 mb-16">
+<h2>Pourquoi le moment où l'avis est déposé compte autant que son contenu</h2>
+<p>La plupart des commerçants raisonnent sur un seul nombre : le total d'avis affiché sur leur fiche. C'est le chiffre visible, celui qu'on compare au concurrent d'en face, et c'est aussi le plus trompeur. Deux établissements peuvent afficher 180 avis chacun et ne pas jouer du tout dans la même catégorie : le premier les a accumulés sur sept ans, le second sur dix-huit mois. Pour un internaute comme pour l'algorithme local, ce ne sont pas les mêmes 180 avis.</p>
+<p>La temporalité intervient à trois endroits, et chacun se travaille séparément :</p>
+<ul>
+<li><strong>Le moment du déclenchement</strong> : la minute précise, dans le parcours client, où la demande est faite et le support présenté. C'est le seul des trois que vous contrôlez entièrement.</li>
+<li><strong>Le délai de rédaction</strong> : ce qui s'écoule entre le scan et la publication effective. Il est bien plus long qu'on ne le croit, et il est décisif pour interpréter vos statistiques.</li>
+<li><strong>La distribution dans l'année</strong> : les creux et les pics de votre secteur, qui font qu'un même dispositif produit 4 avis en janvier et 19 en juillet sans que rien n'ait changé dans votre méthode.</li>
+</ul>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> le réflexe de consultation est désormais général — <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français consultent les avis avant de choisir un professionnel</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs). Mais l'internaute ne lit pas votre total : il lit les cinq avis affichés en premier, et Google y met les plus récents en bonne place. Un avis de 2021 ne travaille plus pour vous.</p>
+</div>
+<p>Autrement dit, le volume vous fait entrer dans la course, la fraîcheur vous y maintient. Un commerce qui collecte 8 avis par mois pendant deux ans finit à un meilleur endroit qu'un commerce qui en a récolté 200 lors d'une opération unique il y a quatre ans, même si le second affiche un total supérieur.</p>
+</section>
+
+<section id="delai-scan-publication" class="scroll-mt-28 mb-16">
+<h2>Du scan à la publication : ce qui se passe vraiment entre les deux</h2>
+<p>C'est le point le plus mal compris, et celui qui fait conclure à tort qu'un dispositif ne fonctionne pas. Quand un client approche son téléphone d'une plaque NFC, il ne publie pas un avis : il ouvre une page. Entre cette ouverture et un texte publié, il existe une chaîne d'étapes dont chacune perd du monde.</p>
+<h3>Les quatre étapes du délai</h3>
+<ul>
+<li><strong>L'ouverture de la page (instantanée)</strong> : le téléphone bascule sur le formulaire d'avis Google en une à deux secondes. Rien ne se perd ici, sauf problème technique de lecture.</li>
+<li><strong>L'identification au compte Google (0 à 60 secondes)</strong> : un client déjà connecté enchaîne directement. Un client déconnecté, ou sur un iPhone où le compte Google n'est pas actif dans le navigateur, doit se connecter — et c'est là que la majorité des abandons se produit.</li>
+<li><strong>La note en étoiles (5 à 15 secondes)</strong> : très peu d'abandon à ce stade. Celui qui est allé jusqu'au formulaire clique presque toujours sur les étoiles.</li>
+<li><strong>Le texte, puis la validation (30 secondes à plusieurs jours)</strong> : c'est l'étape longue. Beaucoup de clients notent sur place et rédigent plus tard, dans le métro, le soir, ou le lendemain matin. L'avis est alors publié à un moment sans rapport avec celui du scan.</li>
+</ul>
+<p>Cette dissociation explique un phénomène que les commerçants observent tous : les avis n'apparaissent pas aux heures d'ouverture. Un salon qui ferme à 19 h voit ses avis tomber à 21 h. Un restaurant du soir en reçoit à 8 h le lendemain. Ce n'est pas anormal, c'est simplement le décalage entre le déclenchement et la rédaction.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Délai entre le scan et la publication</th><th class="border p-3 text-left">Part estimée des avis</th><th class="border p-3 text-left">Profil de client concerné</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Moins de 2 minutes</strong></td><td class="border p-3">45 à 60 %</td><td class="border p-3">Déjà connecté à Google, note seule ou texte très court</td></tr>
+<tr><td class="border p-3"><strong>2 minutes à 2 heures</strong></td><td class="border p-3">15 à 25 %</td><td class="border p-3">Rédige une fois sorti, dans les transports ou la voiture</td></tr>
+<tr><td class="border p-3"><strong>Le soir même</strong></td><td class="border p-3">10 à 20 %</td><td class="border p-3">Reprend le formulaire resté ouvert dans un onglet</td></tr>
+<tr><td class="border p-3"><strong>1 à 3 jours</strong></td><td class="border p-3">5 à 10 %</td><td class="border p-3">Client engagé, avis long et détaillé</td></tr>
+<tr><td class="border p-3"><strong>Jamais publié</strong></td><td class="border p-3">Le reste</td><td class="border p-3">Abandon à la connexion Google, interruption, oubli</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ces ordres de grandeur ne sont pas des mesures universelles : ils dépendent fortement du secteur et de la durée du contact. Ils servent à une chose précise — <strong>ne jamais juger un dispositif de collecte sur moins de trois semaines</strong>. La première semaine sous-estime systématiquement le résultat, parce qu'une partie des avis déclenchés n'est pas encore publiée.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 L'erreur classique :</strong> installer une plaque un lundi, compter les avis le vendredi, et conclure que « ça ne marche pas ». À ce stade, une partie des scans est encore en cours de rédaction, une autre attend une reconnexion Google, et le personnel n'a pas encore pris l'habitude de la phrase. Le régime de croisière s'établit vers la quatrième semaine. La méthode de mesure complète est détaillée dans notre analyse du <a href="/blog/taux-scan-plaque-nfc">taux de scan d'une plaque NFC</a>.</p>
+</div>
+</section>
+
+<section id="heures" class="scroll-mt-28 mb-16">
+<h2>À quelle heure vos clients publient réellement</h2>
+<p>Si vous exportez la liste de vos avis et que vous relevez l'heure de publication, vous obtenez presque toujours la même forme de courbe, quel que soit le secteur : deux bosses, l'une en fin d'après-midi, l'autre entre 20 h et 22 h, et un creux marqué entre 9 h et 11 h.</p>
+<h3>Ce que cette courbe raconte</h3>
+<p>Elle ne décrit pas vos horaires d'affluence. Elle décrit les moments où le client dispose de trente secondes d'attention libre et de son téléphone en main. Le matin, il travaille ou se déplace ; le soir, il est immobile et disponible. C'est pour cette raison que la tranche 20 h - 22 h concentre souvent le quart du volume, y compris pour des commerces fermés depuis longtemps.</p>
+<p>Trois conséquences pratiques :</p>
+<ul>
+<li><strong>Un avis déposé à 21 h ne prouve pas que le client a scanné à 21 h.</strong> Il a scanné à 17 h 40 en sortant, et il a fini de rédiger le soir. Ne cherchez pas à corréler l'heure de publication avec vos pics de fréquentation, la relation est indirecte.</li>
+<li><strong>Le pic du soir concerne surtout les avis rédigés.</strong> Les avis sans texte, eux, tombent presque en temps réel : ils sont l'image fidèle de vos heures d'affluence.</li>
+<li><strong>Répondre le lendemain matin est suffisant.</strong> Inutile de surveiller sa fiche le soir : Google ne valorise pas la vitesse de réponse, seulement le fait de répondre. Un créneau fixe de dix minutes en début de journée suffit.</li>
+</ul>
+<h3>Le cas particulier des commerces du soir</h3>
+<p>Restaurants, bars, salles de spectacle, hôtels : le décalage joue en leur faveur. Le client sort à 22 h 30 et le moment disponible arrive immédiatement après — dans le taxi, dans le métro, au lit. Un restaurant qui présente son support au moment de l'addition capte donc une fenêtre plus favorable qu'une boulangerie dont le client est déjà reparti travailler trois minutes après son achat. C'est l'une des raisons pour lesquelles les taux de collecte diffèrent autant d'un secteur à l'autre, bien plus que la qualité du service.</p>
+</section>
+
+<section id="jours-semaine" class="scroll-mt-28 mb-16">
+<h2>Les jours de la semaine : où se cache le vrai gisement</h2>
+<p>Le samedi domine presque partout dans le commerce de détail et les services de proximité. Ce n'est pas un mystère : c'est le jour où le flux client est le plus élevé et où le client est le moins pressé. Le dimanche suit dans les métiers ouverts ce jour-là, et lundi arrive en dernier.</p>
+<p>Mais le chiffre intéressant n'est pas le classement des jours en volume : c'est le <strong>rendement par client servi</strong>. Et là, le classement s'inverse souvent.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Jour</th><th class="border p-3 text-left">Part du volume d'avis</th><th class="border p-3 text-left">Rendement par client servi</th><th class="border p-3 text-left">Ce qui l'explique</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Samedi</strong></td><td class="border p-3">Le plus élevé</td><td class="border p-3">Moyen</td><td class="border p-3">Flux maximal mais file d'attente, demande souvent oubliée</td></tr>
+<tr><td class="border p-3"><strong>Mardi et mercredi</strong></td><td class="border p-3">Moyen</td><td class="border p-3">Le meilleur</td><td class="border p-3">Prestation sans presse, personnel disponible pour la phrase</td></tr>
+<tr><td class="border p-3"><strong>Jeudi et vendredi</strong></td><td class="border p-3">Moyen à élevé</td><td class="border p-3">Bon</td><td class="border p-3">Bonne humeur de fin de semaine, clients réguliers</td></tr>
+<tr><td class="border p-3"><strong>Dimanche</strong></td><td class="border p-3">Variable</td><td class="border p-3">Bon</td><td class="border p-3">Client détendu, mais équipe souvent réduite</td></tr>
+<tr><td class="border p-3"><strong>Lundi</strong></td><td class="border p-3">Le plus faible</td><td class="border p-3">Faible</td><td class="border p-3">Fermeture fréquente, reprise, clients pressés</td></tr>
+</tbody>
+</table>
+</div>
+<p>La conclusion opérationnelle est contre-intuitive. Le samedi produit du volume malgré vous ; c'est en semaine que la méthode change tout. Un salon de coiffure qui sert 40 clients le samedi et 22 le mercredi obtiendra plus d'avis supplémentaires en travaillant le mercredi : le personnel a le temps de dire la phrase, le client n'a personne derrière lui, et le support est vu. Le samedi, la file d'attente écrase la demande orale et il ne reste que la plaque visible pour faire le travail toute seule.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>✅ Le réglage qui rapporte le plus :</strong> en jour de rush, ne comptez pas sur la parole — comptez sur le placement. Une plaque orientée vers le client, à hauteur de regard, à l'endroit exact où il attend son ticket, collecte sans qu'aucun mot ne soit prononcé. En jour creux, inversez : c'est la phrase qui fait le travail, la plaque n'est plus qu'un support. Les emplacements sont classés par rendement dans notre guide <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque à avis Google</a>.</p>
+</div>
+</section>
+
+<section id="saisonnalite" class="scroll-mt-28 mb-16">
+<h2>La saisonnalité par secteur : les creux qu'il ne faut pas confondre avec un échec</h2>
+<p>Un dispositif de collecte ne produit pas un débit constant. Il suit votre activité, et votre activité suit un calendrier que vous connaissez déjà. Le problème n'est pas la saisonnalité : c'est de l'interpréter comme une panne. Chaque année, des commerçants rangent une plaque en janvier parce qu'elle « ne marche plus », alors qu'elle a simplement moins de clients à convertir.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Secteur</th><th class="border p-3 text-left">Mois les plus productifs</th><th class="border p-3 text-left">Mois creux</th><th class="border p-3 text-left">Écart typique entre pic et creux</th></tr></thead>
+<tbody>
+<tr><td class="border p-3"><strong>Restaurant, bar</strong></td><td class="border p-3">Mai à septembre, décembre</td><td class="border p-3">Janvier, février</td><td class="border p-3">x2 à x3</td></tr>
+<tr><td class="border p-3"><strong>Hôtel, chambre d'hôtes</strong></td><td class="border p-3">Juin à septembre</td><td class="border p-3">Novembre à février</td><td class="border p-3">x3 à x5</td></tr>
+<tr><td class="border p-3"><strong>Salon de coiffure, institut</strong></td><td class="border p-3">Juin, septembre, décembre</td><td class="border p-3">Janvier, août</td><td class="border p-3">x1,5 à x2</td></tr>
+<tr><td class="border p-3"><strong>Garage, carrosserie</strong></td><td class="border p-3">Mars-avril, octobre-novembre</td><td class="border p-3">Août</td><td class="border p-3">x1,5</td></tr>
+<tr><td class="border p-3"><strong>Auto-école, formation</strong></td><td class="border p-3">Juin-juillet, septembre</td><td class="border p-3">Décembre, août</td><td class="border p-3">x2</td></tr>
+<tr><td class="border p-3"><strong>Artisan du bâtiment</strong></td><td class="border p-3">Mars à juin, septembre-octobre</td><td class="border p-3">Août, fin décembre</td><td class="border p-3">x1,5 à x2</td></tr>
+<tr><td class="border p-3"><strong>Boulangerie, commerce de flux</strong></td><td class="border p-3">Décembre, périodes de fêtes</td><td class="border p-3">Août</td><td class="border p-3">x1,2 à x1,5</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Les deux façons d'utiliser cette information</h3>
+<p><strong>La première est défensive.</strong> Comparez toujours un mois à ce même mois l'année précédente, jamais au mois qui vient de s'écouler. Un institut qui passe de 14 avis en décembre à 6 en janvier n'a rien perdu ; il vit sa saison. Le seul indicateur honnête est le nombre d'avis rapporté au nombre de clients servis, et celui-là reste remarquablement stable quand la méthode ne change pas.</p>
+<p><strong>La seconde est offensive, et c'est la plus rentable.</strong> Vos mois de pointe sont ceux où vous pouvez fabriquer un écart durable avec vos concurrents, parce que le gisement de clients est là. Un hôtel qui obtient 40 avis en juillet-août et 8 sur tout l'hiver a intérêt à concentrer ses efforts de formation, de placement et de rappel au personnel <em>avant</em> juin, pas en février. Le dispositif se prépare hors saison et se rentabilise en saison.</p>
+<p>Enfin, une remarque qui vaut pour tous les secteurs : le creux estival ou hivernal est le bon moment pour les tâches qui ne dépendent pas du flux — mettre à jour les photos de la fiche, répondre au retard accumulé d'avis sans réponse, revoir les catégories et attributs. Le détail de ces chantiers figure dans notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>.</p>
+</section>
+
+<section id="fraicheur-google" class="scroll-mt-28 mb-16">
+<h2>Fraîcheur et régularité : ce que Google regarde vraiment</h2>
+<p>Le classement local repose sur trois critères officiels : la pertinence, la distance et la proéminence. Les deux premiers ne dépendent quasiment pas de vous — vous ne déplacerez pas votre boutique et votre catégorie est ce qu'elle est. La proéminence, en revanche, intègre vos avis, et pas seulement leur nombre.</p>
+<h3>Trois signaux distincts que l'on confond souvent</h3>
+<ul>
+<li><strong>Le volume</strong> : le total cumulé. Il ne décroît jamais, sauf suppression. C'est le signal le plus lent à bouger et le plus difficile à rattraper si vous partez de loin.</li>
+<li><strong>La fraîcheur</strong> : la date du dernier avis, et plus largement la proportion d'avis récents. Une fiche dont le dernier avis date de huit mois envoie un signal d'activité faible, et l'internaute le voit tout aussi bien que l'algorithme.</li>
+<li><strong>La régularité (ou vélocité)</strong> : le rythme d'arrivée. C'est le seul des trois qui se dégrade tout seul, et le seul qui se pilote au quotidien.</li>
+</ul>
+<p>La régularité mérite une précision, car elle génère beaucoup d'idées fausses. Non, il n'existe pas de rythme « autorisé » au-delà duquel Google sanctionne. Ce qui déclenche une vérification, c'est l'anomalie : une fiche à 3 avis par an qui en reçoit 60 en une semaine, tous rédigés en une phrase, depuis des comptes sans historique. Une progression continue de 10 à 15 avis mensuels pour un commerce qui sert 400 clients par mois n'a rien d'anormal et ne déclenche rien.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Le calcul qui remet les choses à leur place :</strong> à 30 avis et 4,2 de moyenne, un seul avis à 1 étoile fait perdre environ un dixième de point, et il faut quatre avis à 5 étoiles pour revenir au point de départ. À 200 avis, le même avis négatif est presque invisible. La régularité ne sert donc pas seulement à monter : elle amortit. Le détail du calcul figure dans notre article sur <a href="/blog/ameliorer-note-google">l'amélioration de la note Google</a>.</p>
+</div>
+<p>À l'inverse, l'opération ponctuelle — la campagne de trois semaines, la relance massive par e-mail — produit une bosse puis un plat. Six mois plus tard, la fiche est à nouveau silencieuse, et le bénéfice s'est en grande partie évaporé. C'est exactement pour cette raison qu'un support physique permanent bat une campagne : il travaille tous les jours sans qu'on y pense, y compris les jours où personne ne se souvient de demander.</p>
+</section>
+
+<section id="calendrier" class="scroll-mt-28 mb-16">
+<h2>Construire un calendrier de collecte : trois exemples chiffrés</h2>
+<p>Une fois la temporalité comprise, la planification devient simple. Vous ne cherchez pas un maximum instantané, vous cherchez un débit tenable qui traverse vos saisons. Voici trois configurations réelles, calculées avec la même formule : clients servis × taux de conversion en avis.</p>
+<h3>Cas 1 — Salon de coiffure, 3 fauteuils, ville moyenne</h3>
+<p>Le salon sert environ 260 clients par mois, avec un pic le samedi (35 % du volume hebdomadaire) et un creux le mardi. Avec une plaque en caisse seule et une demande orale irrégulière, il tourne à 6 % de conversion, soit 15 à 16 avis mensuels. En ajoutant une seconde plaque au poste de coiffage et en systématisant la phrase les jours calmes, le taux monte vers 10 à 12 %, soit 26 à 31 avis. Sur un an, l'écart cumulé dépasse 150 avis — largement de quoi changer de position dans le <a href="/blog/combien-avis-google-pack-local">pack local</a>. La configuration à deux supports correspond au <a href="/product/business">Pack Business</a>.</p>
+<h3>Cas 2 — Restaurant, 45 couverts par service, forte saison estivale</h3>
+<p>Le restaurant sert environ 1 100 couverts par mois d'octobre à mars, et jusqu'à 2 400 en juillet-août. À 4 % de conversion sur les tables (le taux réaliste en restauration, où l'addition est souvent expédiée), cela donne 44 avis en basse saison et 96 en haute saison. La bonne décision de calendrier n'est pas de renforcer le dispositif en juillet, quand l'équipe est débordée : c'est de le mettre en place en mai, de former les extras dès leur arrivée, et de laisser le pic faire son travail. Avec des supports sur le porte-addition et en sortie, on parle de plus de 700 avis sur l'année.</p>
+<h3>Cas 3 — Artisan plombier, 60 interventions par mois</h3>
+<p>Le gisement est petit mais la conversion y est très élevée, parce que le contact est long et le soulagement réel. À une demande faite une fois sur deux, l'artisan obtient 7 à 9 avis mensuels ; à demande systématique, il dépasse 15. La saisonnalité joue peu, sauf en août. Une seule plaque suffit s'il travaille seul — c'est le <a href="/product/starter">Pack Starter</a> — mais dès qu'une équipe de trois compagnons intervient en parallèle, il faut un support par pochette de devis, donc le <a href="/product/pro">Pack Pro</a>. Le dimensionnement complet est expliqué dans notre guide sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques NFC nécessaires</a>.</p>
+<p>Dans les trois cas, la variable décisive n'est ni le produit ni le budget : c'est le nombre de jours où la méthode est réellement appliquée. Un dispositif appliqué 20 jours sur 25 bat un dispositif parfait appliqué 8 jours sur 25, et l'écart se creuse mois après mois.</p>
+</section>
+
+<section id="mesurer" class="scroll-mt-28 mb-16">
+<h2>Mesurer votre propre temporalité en 30 jours</h2>
+<p>Toutes les moyennes sectorielles du monde ne remplacent pas vos chiffres. La bonne nouvelle, c'est que la mesure ne coûte rien et ne demande pas d'outil : elle se fait depuis votre fiche Google et un tableau à cinq colonnes.</p>
+<h3>La méthode, semaine par semaine</h3>
+<ul>
+<li><strong>Semaine 1 — l'état des lieux.</strong> Relevez la date et l'heure de vos 30 derniers avis. Notez le jour de la semaine et la tranche horaire. En une heure, vous connaissez votre courbe réelle, et elle diffère souvent des moyennes ci-dessus.</li>
+<li><strong>Semaine 2 — le compteur de clients.</strong> Notez chaque jour le nombre de clients servis. Sans ce dénominateur, aucun taux n'est calculable et toute comparaison mensuelle est trompeuse.</li>
+<li><strong>Semaine 3 — le test de la phrase.</strong> Systématisez la demande orale sur trois jours creux uniquement, sans rien changer d'autre. L'écart avec les trois jours équivalents de la semaine précédente vous donne la valeur exacte de la phrase dans votre établissement. Elle vaut généralement un facteur 3 à 5.</li>
+<li><strong>Semaine 4 — la lecture.</strong> Calculez votre taux global, votre meilleur jour en rendement, votre pire jour, et la part de vos avis publiés hors horaires d'ouverture. Ces quatre nombres suffisent à piloter toute l'année suivante.</li>
+</ul>
+<h3>Les trois indicateurs à suivre ensuite, chaque mois</h3>
+<ul>
+<li><strong>Avis par mois rapportés aux clients servis</strong>, et non en valeur absolue. C'est le seul chiffre qui neutralise la saisonnalité.</li>
+<li><strong>Nombre de jours depuis le dernier avis.</strong> S'il dépasse dix jours pour un commerce ouvert tous les jours, quelque chose s'est arrêté : la plaque a été déplacée, l'équipe a changé, ou le support est masqué par un présentoir.</li>
+<li><strong>Part des avis avec texte.</strong> Une chute de cette part sans baisse du volume signale généralement que la plaque collecte seule, sans phrase d'accompagnement — le volume tient, mais la qualité des avis, elle, s'appauvrit.</li>
+</ul>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>💡 Avant de conclure à une baisse :</strong> vérifiez que vos avis n'ont pas simplement disparu de l'affichage. Un avis publié puis retiré par le filtre automatique de Google, une fusion de fiches ou un compte supprimé produisent une chute qui n'a rien à voir avec votre collecte. Les huit causes possibles sont détaillées dans notre article sur les <a href="/blog/avis-google-disparus">avis Google disparus</a>.</p>
+</div>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs de timing qui coûtent le plus d'avis</h2>
+<ul>
+<li><strong>Juger un dispositif au bout d'une semaine.</strong> Une partie des scans n'est pas encore publiée et l'équipe n'a pas pris l'habitude. Le régime réel s'observe à partir de la quatrième semaine.</li>
+<li><strong>Comparer un mois au mois précédent.</strong> Sur des secteurs à saisonnalité forte, cette comparaison ne mesure que le calendrier. Comparez au même mois de l'année précédente, ou raisonnez en taux.</li>
+<li><strong>Demander pendant l'attente plutôt qu'après la prestation.</strong> Un client qui attend n'a rien à évaluer. La demande faite trop tôt produit soit un refus, soit un avis creux.</li>
+<li><strong>Lancer une campagne massive ponctuelle.</strong> Un pic isolé sur une fiche habituellement calme est le profil qui attire le plus l'attention des filtres, et il retombe entièrement en quelques mois.</li>
+<li><strong>Relancer par SMS trois jours après.</strong> Le moment émotionnel est passé, le message est perçu comme du démarchage, et il réveille les insatisfactions latentes qui n'auraient jamais été écrites.</li>
+<li><strong>Renforcer le dispositif en pleine haute saison.</strong> L'équipe est débordée, personne n'apprend une nouvelle habitude en plein rush. La mise en place se fait un mois avant le pic.</li>
+<li><strong>Arrêter en période creuse.</strong> C'est précisément le moment où la fraîcheur de la fiche se joue, puisque vos concurrents ralentissent aussi. Quelques avis en janvier pèsent plus lourd, en écart relatif, que vingt en juillet.</li>
+</ul>
+</section>
+
+<section id="faq-timing" class="scroll-mt-28 mb-16">
+<h2>FAQ — Le timing des avis Google</h2>
+
+<h3>Combien de temps un avis met-il à apparaître sur ma fiche Google ?</h3>
+<p>La plupart des avis sont visibles en quelques secondes à quelques minutes après leur validation. Un délai plus long, de quelques heures à deux ou trois jours, survient quand l'avis passe par une vérification automatique : compte récent, avis très court, pic inhabituel sur la fiche, ou texte contenant un lien ou un numéro de téléphone. Si un client vous affirme avoir publié un avis que vous ne voyez pas après 72 heures, il est probable qu'il ait été filtré ; demandez-lui de vérifier depuis son propre compte, dans la section « Vos contributions », où l'avis reste visible pour lui même lorsqu'il n'est plus affiché publiquement.</p>
+
+<h3>Y a-t-il une heure idéale pour demander un avis ?</h3>
+<p>L'heure de la journée compte beaucoup moins que la position dans le parcours client. Le bon moment est toujours le même : juste après la fin de la prestation, quand le résultat est constaté et que le téléphone est déjà en main pour payer. Une demande faite à 10 h après une coupe réussie fonctionne mieux qu'une demande faite à 20 h pendant l'attente. En revanche, l'heure influence le délai de publication : un client servi en fin de journée publiera plus vite, parce que son moment de disponibilité arrive immédiatement après.</p>
+
+<h3>Faut-il éviter de collecter trop d'avis d'un coup ?</h3>
+<p>Il faut éviter les anomalies, pas le volume. Une fiche qui reçoit habituellement deux avis par mois et qui en enregistre quarante en trois jours présente un profil atypique qui peut déclencher une vérification, voire une mise en pause temporaire des nouveaux avis. En revanche, une montée progressive proportionnelle à votre fréquentation ne pose aucun problème : un commerce qui sert 400 clients mensuels peut parfaitement en collecter 40 sans que cela paraisse anormal. La règle sûre est de viser un rythme régulier plutôt qu'une opération coup de poing.</p>
+
+<h3>Un avis ancien perd-il de la valeur ?</h3>
+<p>Il conserve sa valeur dans le calcul de la note moyenne et dans le total affiché, mais il perd sa valeur d'influence. D'une part, Google met en avant les avis récents dans l'aperçu de la fiche, donc un avis de 2020 n'est presque jamais lu. D'autre part, un internaute qui voit que le dernier avis date d'un an en tire une conclusion sur l'activité de l'établissement. Concrètement : les anciens avis vous font exister, les récents vous font choisir.</p>
+
+<h3>Comment maintenir la collecte pendant la basse saison ?</h3>
+<p>En cessant de raisonner en volume et en raisonnant en taux. Si vous servez trois fois moins de clients, obtenir trois fois moins d'avis est un fonctionnement normal, pas un échec. Le seul réglage utile en creux est de relever la conversion : comme le personnel est moins sous pression, c'est la période où la demande orale peut être faite à chaque client, ce qui compense une partie de la baisse de flux. C'est aussi le bon moment pour traiter les chantiers de fiche qui ne dépendent pas du passage — photos, réponses en retard, attributs.</p>
+
+<h3>Le jour de fermeture influence-t-il ma fiche ?</h3>
+<p>Pas directement. Ce qui compte pour Google, c'est que vos horaires déclarés soient exacts, y compris les jours fériés, car une fiche qui envoie des clients devant une porte close génère des avis négatifs faciles à éviter. L'absence d'avis un jour de fermeture n'est en revanche pas un signal négatif : les publications se répartissent naturellement, et une partie des avis d'un samedi apparaîtra le dimanche, jour où beaucoup de commerces sont fermés.</p>
+
+<h3>Combien de temps faut-il pour voir un effet sur mon classement local ?</h3>
+<p>Comptez trois à six mois pour un effet lisible, et davantage si l'écart avec les trois fiches du pack local est important. Le classement ne réagit pas à un avis mais à une tendance : il faut que le volume, la fraîcheur et la note bougent ensemble sur plusieurs mois. Un dispositif installé en janvier montre généralement ses premiers effets de position au printemps, à condition que le rythme n'ait pas été interrompu. La méthode pour chiffrer l'écart à combler est détaillée dans notre guide sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour le pack local</a>.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : la régularité bat l'intensité</h2>
+<p>La temporalité des avis Google se résume à une opposition simple. D'un côté, la campagne : intense, visible, épuisante, et dont l'effet s'efface en quelques mois. De l'autre, le dispositif permanent : discret, appliqué tous les jours, y compris les jours où personne ne pense à demander, et dont l'effet se cumule.</p>
+<p>Ce que révèle l'analyse des heures, des jours et des saisons, c'est que vos avis ne dépendent presque jamais de votre qualité de service — elle est déjà là — mais du nombre de fois où l'occasion de demander est effectivement saisie. Un support physique posé au bon endroit transforme cette occasion en réflexe, et le réflexe en régularité. C'est précisément ce qui manque aux fiches à 4,7 étoiles et 23 avis.</p>
+<p>Guides complémentaires : <a href="/blog/statistiques-avis-google-2026">les statistiques avis Google 2026</a>, <a href="/blog/taux-scan-plaque-nfc">le taux de scan réel d'une plaque</a>, <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, ou notre méthode pour <a href="/blog/ameliorer-note-google">améliorer sa note Google</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à collecter des avis tous les jours plutôt qu'en campagne ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+</div>
+</section>
+`,
+  },
   'combien-de-plaques-nfc': {
     title: 'Combien de plaques NFC faut-il ? Le guide pour choisir entre 1, 2 et 5',
     category: 'Comparatif',
