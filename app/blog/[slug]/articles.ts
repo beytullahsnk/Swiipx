@@ -18,6 +18,330 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'questions-reponses-google-business-profile': {
+    title: 'Questions/Réponses Google Business Profile : le champ que personne ne remplit',
+    category: 'SEO Local',
+    date: '9 septembre 2026',
+    readTime: '13 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'N\'importe qui peut poser une question sur votre fiche Google, et n\'importe qui peut y répondre à votre place. Comment fonctionne le bloc Q/R, comment le pré-remplir soi-même (c\'est autorisé), les 12 questions qui rapportent, un tableau de reformulations et les 7 erreurs.',
+    tocSections: [
+      { id: 'pourquoi-questions-reponses', label: 'Le champ que personne ne remplit' },
+      { id: 'comment-ca-marche', label: 'Comment ça fonctionne vraiment' },
+      { id: 'pre-remplir', label: 'Pré-remplir sa section Q/R' },
+      { id: 'quelles-questions', label: 'Les 12 questions qui rapportent' },
+      { id: 'rediger-reponses', label: 'Rédiger une réponse qui convertit' },
+      { id: 'surveiller-moderer', label: 'Surveiller, corriger, signaler' },
+      { id: 'qr-et-avis', label: 'Q/R et avis : deux leviers' },
+      { id: 'par-secteur', label: '5 jeux de questions par secteur' },
+      { id: 'erreurs', label: 'Les 7 erreurs' },
+      { id: 'faq-questions-reponses', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-questions-reponses" class="scroll-mt-28 mb-16">
+<h2>Questions/Réponses : le champ de la fiche Google que personne ne remplit</h2>
+<p>Sur une fiche Google Business Profile, tout le monde regarde la note, le nombre d'avis et les photos. Presque personne ne descend jusqu'à la section « Questions et réponses ». C'est une erreur, parce que ce bloc a une propriété que ni les avis ni les photos ne possèdent : <strong>il est ouvert à n'importe qui, y compris à vos concurrents et à des internautes qui ne sont jamais venus chez vous</strong>.</p>
+<p>Concrètement, un inconnu peut poser publiquement une question sur votre établissement, et un autre inconnu peut y répondre à votre place. Cette réponse s'affiche ensuite sur votre fiche, avec la même mise en avant que si elle venait de vous. Si personne dans votre entreprise ne surveille ce bloc, votre fiche répond aux clients sans vous.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> sur les fiches d'établissements locaux qui reçoivent du trafic, la majorité des questions publiées restent sans réponse du propriétaire pendant des semaines. Chaque question sans réponse est un internaute qui hésitait, qui a demandé, et qui est parti chez un concurrent parce que personne ne lui a dit si vous aviez un parking.</p>
+</div>
+<p>La section Q/R n'est pas un canal de service client : c'est une <strong>page de vente en libre-service</strong> attachée à votre fiche. Les questions qui y figurent sont, presque toujours, les objections d'achat les plus fréquentes de votre métier. Y répondre revient à traiter ces objections une fois pour toutes, devant tout le monde, avant même que le client ne vous appelle.</p>
+<p>Ce guide explique comment fonctionne ce bloc, comment le pré-remplir soi-même — une pratique explicitement autorisée par Google —, quelles questions publier, et comment articuler ce travail avec la collecte d'avis, qui reste le levier de classement dominant.</p>
+</section>
+
+<section id="comment-ca-marche" class="scroll-mt-28 mb-16">
+<h2>Comment fonctionne vraiment la section Questions/Réponses</h2>
+<p>Avant de publier quoi que ce soit, il faut comprendre trois mécanismes qui expliquent la plupart des mauvaises surprises.</p>
+
+<h3>Qui peut poser une question, qui peut répondre</h3>
+<p>Toute personne disposant d'un compte Google peut poser une question sur n'importe quelle fiche, sans y être jamais allée. Et toute personne disposant d'un compte Google peut répondre à cette question, y compris un concurrent, un ancien salarié ou un client mal informé. Le propriétaire de la fiche n'a aucun droit de veto sur ce qui est publié : il peut seulement répondre, et signaler ce qui viole les règles.</p>
+<p>La seule différence de traitement est visuelle : quand vous répondez depuis le compte qui gère la fiche, votre réponse porte la mention <strong>« Propriétaire »</strong>. Cette mention change tout en termes de crédibilité, et c'est précisément pour cela qu'il faut être le premier à répondre.</p>
+
+<h3>L'ordre d'affichage n'est pas chronologique</h3>
+<p>Google n'affiche pas les questions de la plus récente à la plus ancienne : il met en avant celles qui ont reçu le plus de <strong>votes positifs</strong> (le pouce). Une seule question est visible dans l'aperçu de la fiche sur mobile, deux à trois sur ordinateur, et le reste est replié derrière un lien « Voir toutes les questions ».</p>
+<p>La conséquence est directe : la question qui compte n'est pas la plus récente, c'est celle qui a le plus de pouces. Une question embarrassante qui recueille quelques votes peut rester en tête de votre fiche pendant des mois, tandis que quelques votes sur vos propres questions suffisent à les installer en première position.</p>
+
+<h3>Les notifications sont peu fiables</h3>
+<p>De nombreux propriétaires découvrent une question vieille de six mois. Les alertes de nouvelles questions arrivent de façon irrégulière selon le canal de gestion utilisé, et elles se perdent dans les mails automatiques. La seule méthode fiable reste de <strong>consulter volontairement la section une à deux fois par mois</strong>, en cherchant son propre établissement sur Google Maps depuis un compte connecté.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Piège fréquent :</strong> les réponses d'internautes ne sont pas vérifiées par Google. Un ancien client qui affirme de bonne foi que vous fermez à 18 h alors que vous fermez à 19 h 30 crée une information fausse, durable, affichée sur votre fiche. Ce n'est pas de la malveillance : c'est du bruit, et le bruit coûte des visites.</p>
+</div>
+</section>
+
+<section id="pre-remplir" class="scroll-mt-28 mb-16">
+<h2>Pré-remplir sa propre section Q/R : autorisé, et sous-exploité</h2>
+<p>Le point le plus contre-intuitif du dispositif est aussi le plus rentable : <strong>Google autorise explicitement un propriétaire à poser lui-même des questions sur sa propre fiche, puis à y répondre</strong>. Il ne s'agit pas d'une faille tolérée mais d'un usage recommandé, à la manière d'une FAQ officielle.</p>
+<p>La marche à suivre tient en quatre étapes et prend une trentaine de minutes :</p>
+<ul>
+<li><strong>Étape 1 — Sortez du compte gestionnaire.</strong> Une question ne peut pas être posée depuis le compte propriétaire de la fiche. Utilisez un second compte Google personnel, ou celui d'un collaborateur, pour publier la question.</li>
+<li><strong>Étape 2 — Publiez la question,</strong> formulée exactement comme un client la poserait, avec les mots qu'il emploie et non votre vocabulaire métier.</li>
+<li><strong>Étape 3 — Reconnectez-vous au compte gestionnaire</strong> et répondez à la question. La réponse s'affichera avec la mention « Propriétaire », c'est-à-dire avec le maximum de crédibilité.</li>
+<li><strong>Étape 4 — Votez pour la question</strong> depuis un ou deux comptes différents. Ce sont les votes qui décident de la position d'affichage : sans eux, votre travail restera enterré sous une question de 2022.</li>
+</ul>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>✅ La règle à ne pas franchir :</strong> vous pouvez poser et répondre à vos propres questions, mais elles doivent être <strong>authentiques et informatives</strong>. Une question du type « Êtes-vous le meilleur plombier de la ville ? » est du contenu promotionnel, pas une question, et elle peut être supprimée. Une question du type « Intervenez-vous le dimanche en urgence ? » est utile, donc légitime.</p>
+</div>
+<h3>Combien de questions publier</h3>
+<p>Entre six et dix questions couvrent l'essentiel des objections d'un établissement local. En dessous de cinq, la section paraît vide et les questions d'inconnus reprennent la main. Au-delà de douze, l'internaute décroche et l'effet devient nul. La bonne cible est <strong>huit questions, dont trois qui traitent vos objections d'achat réelles</strong> : le prix, l'accès et le délai.</p>
+</section>
+
+<section id="quelles-questions" class="scroll-mt-28 mb-16">
+<h2>Les 12 questions qui rapportent le plus, classées par intention</h2>
+<p>Toutes les questions ne se valent pas. Celles qui déclenchent une visite traitent une friction concrète entre l'envie et le passage à l'acte. Voici les douze modèles les plus efficaces, dans lesquels il suffit de remplacer les éléments propres à votre activité.</p>
+
+<h3>Les 4 questions d'accès (les plus rentables)</h3>
+<ul>
+<li><strong>« Y a-t-il un parking à proximité ? »</strong> — première cause d'abandon en zone urbaine, et question qui recueille le plus de votes dans presque tous les secteurs.</li>
+<li><strong>« L'établissement est-il accessible en fauteuil roulant ? »</strong> — utile en soi, et doublée d'un signal positif pour les attributs de votre fiche.</li>
+<li><strong>« Faut-il prendre rendez-vous ou peut-on venir sans réservation ? »</strong> — lève l'hésitation la plus fréquente sur les fiches de prestation.</li>
+<li><strong>« Êtes-vous ouverts le dimanche / entre midi et deux ? »</strong> — les horaires atypiques sont mal lus dans le bloc horaires, une question les rend explicites.</li>
+</ul>
+
+<h3>Les 4 questions de prix et de paiement</h3>
+<ul>
+<li><strong>« Quel est le tarif d'une première consultation / d'un diagnostic ? »</strong></li>
+<li><strong>« Le devis est-il gratuit ? »</strong> — question décisive pour tous les métiers du bâtiment et de la réparation.</li>
+<li><strong>« Acceptez-vous la carte bancaire, les titres restaurant, les chèques ? »</strong></li>
+<li><strong>« Proposez-vous un paiement en plusieurs fois ? »</strong> — pertinent au-dessus de 300 € de panier.</li>
+</ul>
+
+<h3>Les 4 questions de prestation</h3>
+<ul>
+<li><strong>« Combien de temps faut-il compter pour [votre prestation type] ? »</strong></li>
+<li><strong>« Travaillez-vous avec [marque / gamme / spécialité] ? »</strong> — capte des recherches très qualifiées.</li>
+<li><strong>« Quel est le délai pour obtenir un rendez-vous ? »</strong></li>
+<li><strong>« Que se passe-t-il si le résultat ne me convient pas ? »</strong> — la question de la garantie, rarement posée et toujours lue.</li>
+</ul>
+
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>💡 Où trouver vos vraies questions :</strong> ouvrez l'historique des appels manqués et les messages reçus sur votre fiche du mois écoulé. Les trois questions qui reviennent le plus au téléphone sont exactement celles qui doivent figurer dans le bloc Q/R. Chaque question publiée est un appel que vous n'aurez plus à prendre — et un client qui n'aura pas raccroché faute de réponse.</p>
+</div>
+</section>
+
+<section id="rediger-reponses" class="scroll-mt-28 mb-16">
+<h2>Rédiger une réponse qui convertit plutôt qu'une réponse qui informe</h2>
+<p>Une réponse en trois mots règle la question mais ne produit rien. Une bonne réponse comporte trois éléments : <strong>la réponse directe, un élément de réassurance, et une invitation à agir</strong>. Le tout en trois phrases maximum, parce que la section est lue sur mobile, au milieu d'une comparaison entre trois fiches.</p>
+
+<h3>Le tableau des reformulations</h3>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead>
+<tr class="bg-gray-100">
+<th class="border border-gray-300 px-3 py-2 text-left">Question</th>
+<th class="border border-gray-300 px-3 py-2 text-left">Réponse faible</th>
+<th class="border border-gray-300 px-3 py-2 text-left">Réponse qui convertit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-gray-300 px-3 py-2">Y a-t-il un parking ?</td>
+<td class="border border-gray-300 px-3 py-2">Oui.</td>
+<td class="border border-gray-300 px-3 py-2">Oui, un parking gratuit de 12 places devant l'entrée, plus le parking municipal à 80 m. Aucun besoin de tourner, même le samedi matin.</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="border border-gray-300 px-3 py-2">Le devis est-il gratuit ?</td>
+<td class="border border-gray-300 px-3 py-2">Oui, devis gratuit.</td>
+<td class="border border-gray-300 px-3 py-2">Oui, le devis et le déplacement sont gratuits et sans engagement. Comptez 48 h pour le recevoir par mail après la visite.</td>
+</tr>
+<tr>
+<td class="border border-gray-300 px-3 py-2">Faut-il réserver ?</td>
+<td class="border border-gray-300 px-3 py-2">C'est mieux.</td>
+<td class="border border-gray-300 px-3 py-2">Sans rendez-vous du mardi au vendredi avant 11 h, sur réservation le reste du temps. Le samedi se remplit environ dix jours à l'avance.</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="border border-gray-300 px-3 py-2">Quel est le délai ?</td>
+<td class="border border-gray-300 px-3 py-2">Ça dépend.</td>
+<td class="border border-gray-300 px-3 py-2">Deux à quatre jours pour une intervention courante, le jour même pour une urgence signalée avant 10 h. Nous vous confirmons le créneau par SMS.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3>Les quatre règles de rédaction</h3>
+<ul>
+<li><strong>Donnez un chiffre.</strong> Un nombre de places, un délai en heures, un tarif de départ. Le chiffre est ce qui distingue une réponse crédible d'une réponse commerciale.</li>
+<li><strong>Écrivez les mots que les gens tapent.</strong> « parking », « sans rendez-vous », « ouvert le dimanche » : la section Q/R est du texte indexé, associé à votre établissement.</li>
+<li><strong>N'ajoutez jamais de numéro de téléphone ni de lien dans la réponse.</strong> C'est le principal motif de suppression automatique, et vos coordonnées figurent déjà en haut de la fiche.</li>
+<li><strong>Ne promettez rien que vous ne tiendrez pas.</strong> Une réponse trop optimiste sur les délais se retrouve, trois semaines plus tard, citée dans un avis à deux étoiles.</li>
+</ul>
+<p>Ce travail rejoint celui des autres champs de la fiche : services, attributs, description. Si ces éléments ne sont pas encore renseignés, commencez par là — notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a> passe chaque champ en revue dans l'ordre de rentabilité.</p>
+</section>
+
+<section id="surveiller-moderer" class="scroll-mt-28 mb-16">
+<h2>Surveiller, corriger, signaler : la routine mensuelle</h2>
+<p>Le bloc Q/R est le seul endroit de votre fiche où du contenu peut apparaître sans que vous en soyez averti de manière fiable. Une routine de dix minutes par mois suffit à en garder le contrôle.</p>
+
+<h3>La routine en quatre gestes</h3>
+<ul>
+<li><strong>Cherchez votre établissement sur Google Maps depuis un compte connecté</strong>, et ouvrez « Voir toutes les questions ». C'est la seule vue exhaustive.</li>
+<li><strong>Répondez à toute question non traitée</strong>, même ancienne. Une réponse publiée un an après reste utile : la question, elle, est toujours affichée.</li>
+<li><strong>Corrigez les réponses erronées d'internautes</strong> en publiant la vôtre. Vous ne pouvez pas supprimer la leur, mais la mention « Propriétaire » place la vôtre au-dessus dans la lecture.</li>
+<li><strong>Votez pour les trois questions que vous voulez voir en tête.</strong> C'est le seul levier de hiérarchisation dont vous disposez.</li>
+</ul>
+
+<h3>Ce qui peut être signalé, et ce qui ne peut pas l'être</h3>
+<p>Le signalement fonctionne quand le contenu enfreint une règle : propos haineux ou obscènes, contenu manifestement hors sujet, contenu promotionnel pour un autre établissement, données personnelles, ou usurpation. Il ne fonctionne pas parce que la question vous dérange. Une question du type « Pourquoi vos tarifs ont-ils augmenté ? » est légitime, restera en ligne, et la seule réponse gagnante est une réponse honnête et factuelle.</p>
+<p>La logique est la même que pour les avis : on ne fait pas disparaître une critique, on la met en perspective. Voir notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs sur Google</a> et, pour les contenus illégitimes, la méthode pour <a href="/blog/faux-avis-google-signaler">signaler un faux avis Google</a>.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Le cas du concurrent :</strong> il arrive qu'une question orientée soit publiée par une entreprise rivale (« Est-ce vrai que vous ne faites plus les réparations sous garantie ? »). N'entrez pas dans le conflit et ne mentionnez jamais l'auteur. Répondez factuellement, en deux phrases, et votez pour deux autres questions afin de faire redescendre celle-ci dans l'affichage. Une joute publique attire les votes, donc la met en avant : c'est exactement ce qu'il faut éviter.</p>
+</div>
+</section>
+
+<section id="qr-et-avis" class="scroll-mt-28 mb-16">
+<h2>Q/R et avis : deux leviers qui ne jouent pas au même endroit</h2>
+<p>Il faut être clair sur ce que ce travail produit, et sur ce qu'il ne produit pas. Google classe les fiches locales sur trois critères : la <strong>pertinence</strong>, la <strong>distance</strong> et la <strong>proéminence</strong>. La section Questions/Réponses n'agit pas directement sur la proéminence : elle ne fait pas monter une fiche dans le pack local.</p>
+<p>Son effet se situe une étape plus loin dans le parcours, au moment du choix. Une fiche affichée en troisième position mais qui répond à toutes les objections d'un internaute pressé peut lui être préférée à la première. Les avis, eux, jouent aux deux étages : ils pèsent sur le classement <em>et</em> sur le choix.</p>
+
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead>
+<tr class="bg-gray-100">
+<th class="border border-gray-300 px-3 py-2 text-left">Critère</th>
+<th class="border border-gray-300 px-3 py-2 text-left">Questions / Réponses</th>
+<th class="border border-gray-300 px-3 py-2 text-left">Avis Google</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-gray-300 px-3 py-2">Effet sur le classement local</td>
+<td class="border border-gray-300 px-3 py-2">Indirect, faible</td>
+<td class="border border-gray-300 px-3 py-2">Direct, majeur (proéminence)</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="border border-gray-300 px-3 py-2">Effet sur le taux de contact</td>
+<td class="border border-gray-300 px-3 py-2">Fort sur les fiches déjà vues</td>
+<td class="border border-gray-300 px-3 py-2">Très fort</td>
+</tr>
+<tr>
+<td class="border border-gray-300 px-3 py-2">Contrôle du contenu</td>
+<td class="border border-gray-300 px-3 py-2">Partiel : chacun peut écrire</td>
+<td class="border border-gray-300 px-3 py-2">Nul : seul le client écrit</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="border border-gray-300 px-3 py-2">Effort initial</td>
+<td class="border border-gray-300 px-3 py-2">30 à 45 minutes, une fois</td>
+<td class="border border-gray-300 px-3 py-2">Continu, à chaque client</td>
+</tr>
+<tr>
+<td class="border border-gray-300 px-3 py-2">Entretien</td>
+<td class="border border-gray-300 px-3 py-2">10 minutes par mois</td>
+<td class="border border-gray-300 px-3 py-2">Une phrase à chaque encaissement</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="border border-gray-300 px-3 py-2">Durée de vie du travail</td>
+<td class="border border-gray-300 px-3 py-2">Permanente</td>
+<td class="border border-gray-300 px-3 py-2">Décroissante : la fraîcheur compte</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>La conclusion pratique est simple : un établissement avec huit questions parfaitement rédigées et onze avis restera derrière un concurrent à cent quarante avis. L'ordre rationnel est donc : <strong>d'abord un dispositif de collecte qui tourne tout seul, ensuite le remplissage de la section Q/R</strong>.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ La combinaison qui marche :</strong> une plaque NFC posée côté client à l'encaissement collecte les avis en continu, sans effort quotidien, pendant que la section Q/R traite les objections des internautes qui vous découvrent. La première fait monter la fiche, la seconde transforme la visite en appel. Voir le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a> pour couvrir accueil et comptoir, ou le <a href="/product/starter" class="font-semibold underline">Pack Starter</a> pour un point de contact unique.</p>
+</div>
+</section>
+
+<section id="par-secteur" class="scroll-mt-28 mb-16">
+<h2>Cinq jeux de questions prêts à publier, par secteur</h2>
+<p>Voici, pour cinq activités courantes, les quatre questions qui obtiennent le plus de votes. Elles peuvent être publiées telles quelles, en adaptant les chiffres.</p>
+
+<h3>Restaurant</h3>
+<ul>
+<li>« Faut-il réserver le soir en semaine ? »</li>
+<li>« Avez-vous une terrasse et est-elle chauffée ? »</li>
+<li>« Proposez-vous des plats végétariens et sans gluten ? »</li>
+<li>« Acceptez-vous les titres restaurant ? »</li>
+</ul>
+
+<h3>Garage et carrosserie</h3>
+<ul>
+<li>« Le devis est-il gratuit et sans engagement ? »</li>
+<li>« Proposez-vous un véhicule de courtoisie ? »</li>
+<li>« Travaillez-vous avec toutes les assurances ? »</li>
+<li>« Combien de temps faut-il pour une révision complète ? »</li>
+</ul>
+
+<h3>Salon de coiffure et institut</h3>
+<ul>
+<li>« Prenez-vous sans rendez-vous ? »</li>
+<li>« Quel est le tarif d'une coupe femme avec brushing ? »</li>
+<li>« Faites-vous les colorations végétales ? »</li>
+<li>« Y a-t-il un parking à proximité ? »</li>
+</ul>
+
+<h3>Cabinet médical et paramédical</h3>
+<ul>
+<li>« Êtes-vous conventionné secteur 1 ? »</li>
+<li>« Quel est le délai pour un premier rendez-vous ? »</li>
+<li>« Le cabinet est-il accessible en fauteuil roulant ? »</li>
+<li>« Prenez-vous les urgences dans la journée ? »</li>
+</ul>
+
+<h3>Hôtel et hébergement</h3>
+<ul>
+<li>« À quelle heure sont le check-in et le check-out ? »</li>
+<li>« Le petit-déjeuner est-il inclus et jusqu'à quelle heure est-il servi ? »</li>
+<li>« Y a-t-il un parking privé et est-il payant ? »</li>
+<li>« Les animaux sont-ils acceptés ? »</li>
+</ul>
+
+<p>Le principe reste identique quel que soit le métier : ce sont les questions que l'on vous pose au téléphone dix fois par mois. Nos guides sectoriels détaillent le reste du dispositif, notamment pour le <a href="/blog/plaque-nfc-restaurant">restaurant</a>, le <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a> et le <a href="/blog/plaque-nfc-hotel">hôtel</a>.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs qui rendent la section Q/R inutile ou nuisible</h2>
+<ul>
+<li><strong>Ne jamais consulter la section.</strong> C'est l'erreur de base : des questions y dorment, parfois avec des réponses fausses écrites par des inconnus, et elles s'affichent sur votre fiche depuis des mois.</li>
+<li><strong>Publier ses questions et oublier de voter.</strong> Sans votes, vos questions restent enfouies derrière celles d'internautes. Le vote est ce qui décide de l'ordre d'affichage, pas la date.</li>
+<li><strong>Poser des questions promotionnelles.</strong> « Êtes-vous les meilleurs de la région ? » n'informe personne, fait mauvais effet et peut être supprimé. Une question doit répondre à une friction réelle.</li>
+<li><strong>Répondre par oui ou par non.</strong> Une réponse sans chiffre ni précision ne lève aucune hésitation et ne se distingue pas d'une fiche vide.</li>
+<li><strong>Glisser un numéro ou un lien dans la réponse.</strong> Motif de suppression fréquent, et parfaitement inutile puisque les coordonnées figurent déjà en haut de la fiche.</li>
+<li><strong>Entrer en conflit avec un auteur hostile.</strong> Une réponse défensive attire l'attention, donc les votes, donc remonte la question litigieuse en tête de fiche. Répondre factuellement, une fois, et passer à autre chose.</li>
+<li><strong>Traiter la Q/R comme une alternative aux avis.</strong> Huit questions parfaites ne compensent pas quinze avis face à un concurrent qui en a cent. La Q/R améliore la conversion d'une fiche déjà vue ; ce sont les avis qui la font voir.</li>
+</ul>
+<p>Cette dernière erreur est la plus coûteuse : elle donne le sentiment d'avoir travaillé son référencement local sans avoir touché au seul levier qui déplace vraiment une fiche. Pour situer l'écart à combler, notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne la méthode de calcul.</p>
+</section>
+
+<section id="faq-questions-reponses" class="scroll-mt-28 mb-16">
+<h2>FAQ — Questions/Réponses Google Business Profile</h2>
+
+<h3>Ai-je le droit de poser moi-même des questions sur ma fiche Google ?</h3>
+<p>Oui, Google l'autorise explicitement et le présente même comme une bonne pratique, à la manière d'une FAQ officielle. La seule contrainte technique est qu'une question ne peut pas être publiée depuis le compte qui gère la fiche : il faut utiliser un second compte Google, personnel ou celui d'un collaborateur. Vous répondez ensuite depuis le compte gestionnaire, ce qui affiche la mention « Propriétaire ». La limite à respecter est le contenu : les questions doivent être informatives et refléter des interrogations réelles de clients, jamais des accroches publicitaires.</p>
+
+<h3>Puis-je supprimer une question gênante posée par quelqu'un d'autre ?</h3>
+<p>Non, sauf si elle enfreint les règles de Google : propos haineux ou obscènes, contenu manifestement hors sujet, promotion d'un autre établissement, données personnelles ou usurpation d'identité. Dans ces cas, le signalement fonctionne. Une question simplement dérangeante ou critique reste en ligne, et la seule stratégie efficace est d'y répondre factuellement en deux phrases, puis de voter pour d'autres questions afin de la faire redescendre dans l'ordre d'affichage.</p>
+
+<h3>Les questions et réponses influencent-elles mon classement dans le pack local ?</h3>
+<p>Pas directement. Le classement local repose sur la pertinence, la distance et la proéminence, et c'est le volume, la fraîcheur et la note de vos avis qui pèsent sur ce dernier critère. La section Q/R agit à l'étape suivante : elle améliore le taux de contact d'une fiche déjà affichée, en levant les objections d'un internaute qui compare plusieurs établissements. Son texte étant indexé et associé à votre établissement, elle peut marginalement aider sur des requêtes très spécifiques, mais il ne faut pas en attendre un gain de position.</p>
+
+<h3>À quelle fréquence faut-il consulter la section Questions/Réponses ?</h3>
+<p>Une à deux fois par mois suffit pour un établissement local classique, davantage si votre fiche reçoit beaucoup de trafic. Les notifications de nouvelles questions étant irrégulières selon le canal de gestion, la seule méthode fiable consiste à chercher volontairement votre établissement sur Google Maps depuis un compte connecté et à ouvrir « Voir toutes les questions ». Comptez dix minutes : répondre aux nouvelles questions, corriger les réponses erronées d'internautes et voter pour les questions que vous voulez voir en tête.</p>
+
+<h3>Combien de questions faut-il publier sur sa fiche ?</h3>
+<p>Entre six et dix. En dessous de cinq, la section paraît vide et les questions d'inconnus occupent tout l'espace. Au-delà de douze, l'internaute décroche et l'effet devient nul. La cible efficace est huit questions, dont au moins trois traitent les objections d'achat réelles de votre métier : le prix, l'accès et le délai. Pour les trouver, la meilleure source n'est pas votre imagination mais votre téléphone — les trois questions que vos clients vous posent le plus souvent sont exactement celles qui manquent à votre fiche.</p>
+
+<h3>Une réponse d'un internaute a-t-elle le même poids que la mienne ?</h3>
+<p>Visuellement, elles s'affichent au même endroit, mais la vôtre porte la mention « Propriétaire » lorsqu'elle est publiée depuis le compte gestionnaire, ce qui change nettement sa crédibilité aux yeux du lecteur. Le vrai risque n'est pas la concurrence entre les deux réponses, c'est l'absence de la vôtre : une information fausse écrite de bonne foi par un ancien client — un horaire, un tarif, une prestation abandonnée — reste affichée indéfiniment tant que personne ne la corrige. Vous ne pouvez pas effacer sa réponse, mais vous pouvez publier la bonne.</p>
+
+<h3>Faut-il d'abord travailler ses avis ou sa section Q/R ?</h3>
+<p>Les avis, sans hésitation. Ce sont eux qui déterminent si votre fiche apparaît dans les trois résultats du pack local ; la section Q/R n'intervient qu'après, quand l'internaute a déjà ouvert votre fiche. L'ordre rationnel consiste donc à installer d'abord un dispositif de collecte qui fonctionne sans effort quotidien — une plaque NFC posée côté client à l'encaissement, accompagnée d'une phrase courte — puis à consacrer une session de trente à quarante-cinq minutes au remplissage de la section Q/R. Le second chantier est ponctuel, le premier est permanent, et c'est le permanent qui décide de votre visibilité.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : trente minutes pour reprendre la main sur un bloc que vous ne contrôliez pas</h2>
+<p>La section Questions/Réponses est le seul endroit de votre fiche Google où des inconnus peuvent écrire à votre place, et le seul que presque personne ne surveille. Ce déséquilibre en fait une opportunité rare : trente à quarante-cinq minutes de travail, une fois, suffisent à installer huit questions bien rédigées qui traiteront vos objections d'achat pendant des années.</p>
+<p>Mais il faut garder l'ordre des priorités. Une fiche parfaitement documentée qui n'apparaît jamais dans les trois résultats du pack local ne sert à rien. <strong>Les avis font voir votre fiche, la section Q/R fait choisir votre établissement</strong> — et la première moitié du travail est celle qui exige un dispositif quotidien, pas une session de rédaction.</p>
+<p>Guides complémentaires : <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>, <a href="/blog/photos-google-business-profile">les photos de fiche</a>, <a href="/blog/google-posts-fiche-google-business-profile">les Google Posts</a>, ou notre méthode pour <a href="/blog/obtenir-plus-avis-google">obtenir plus d'avis Google</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Une fiche bien remplie mérite un flux d'avis régulier</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+</div>
+</section>
+`,
+  },
   'quand-clients-laissent-avis-google': {
     title: 'Quand vos clients laissent-ils leurs avis Google ? Heures, jours et saisons',
     category: 'Statistiques',

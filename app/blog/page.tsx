@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 41,
+    title: 'Questions/Réponses Google Business Profile : le champ que personne ne remplit',
+    excerpt: 'N\'importe qui peut poser une question sur votre fiche Google, et n\'importe qui peut y répondre à votre place. Comment fonctionne le bloc Q/R, comment le pré-remplir soi-même (c\'est autorisé), les 12 questions qui rapportent, un tableau de reformulations et les 7 erreurs.',
+    category: 'SEO Local',
+    date: '9 septembre 2026',
+    dateIso: '2026-09-09',
+    readTime: '13 min',
+    slug: 'questions-reponses-google-business-profile',
+  },
+  {
     id: 40,
     title: 'Quand vos clients laissent-ils leurs avis Google ? Heures, jours et saisons',
     excerpt: 'Un avis Google n\'arrive pas au hasard : délai réel entre le scan et la publication, courbe horaire, rendement par jour de la semaine, saisonnalité par secteur, fraîcheur et vélocité. Deux tableaux chiffrés, trois cas de calcul et les 7 erreurs de timing.',
