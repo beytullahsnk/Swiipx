@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 42,
+    title: 'Plaque NFC taxi et VTC : collecter des avis Google dans un véhicule',
+    excerpt: 'Taxis, VTC, transferts aéroport : la course se termine sur un trottoir, avec un client debout et pressé. Les 6 emplacements exploitables dans un véhicule, la fiche en zone de service, 3 scripts de chauffeur et les 6 erreurs qui coûtent le plus d\'avis.',
+    category: 'Secteur',
+    date: '11 septembre 2026',
+    dateIso: '2026-09-11',
+    readTime: '14 min',
+    slug: 'plaque-nfc-taxi-vtc',
+  },
+  {
     id: 41,
     title: 'Questions/Réponses Google Business Profile : le champ que personne ne remplit',
     excerpt: 'N\'importe qui peut poser une question sur votre fiche Google, et n\'importe qui peut y répondre à votre place. Comment fonctionne le bloc Q/R, comment le pré-remplir soi-même (c\'est autorisé), les 12 questions qui rapportent, un tableau de reformulations et les 7 erreurs.',

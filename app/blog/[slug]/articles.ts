@@ -18,6 +18,219 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-taxi-vtc': {
+    title: 'Plaque NFC taxi et VTC : collecter des avis Google dans un véhicule',
+    category: 'Secteur',
+    date: '11 septembre 2026',
+    readTime: '14 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Taxis, VTC, transferts aéroport : la course se termine sur un trottoir, avec un client debout et pressé. Les 6 emplacements exploitables dans un véhicule, la fiche en zone de service, 3 scripts de chauffeur et les 6 erreurs qui coûtent le plus d\'avis.',
+    tocSections: [
+      { id: 'pourquoi-avis-vtc', label: 'Pourquoi les avis décident' },
+      { id: 'probleme-vtc', label: 'Le problème : la course finit dans la rue' },
+      { id: 'fiche-google-vtc', label: 'La fiche en zone de service' },
+      { id: 'ou-poser-plaque', label: '6 emplacements dans un véhicule' },
+      { id: 'moments-demander', label: 'Quand demander, quand se taire' },
+      { id: 'scripts-chauffeur', label: '3 scripts de chauffeur' },
+      { id: 'cas-pratiques', label: '3 exemples de calcul' },
+      { id: 'repondre-avis', label: 'Répondre aux avis négatifs' },
+      { id: 'erreurs', label: 'Les 6 erreurs' },
+      { id: 'faq-vtc', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-avis-vtc" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google décident des courses d'un taxi ou d'un VTC</h2>
+<p>Un chauffeur de VTC qui travaille exclusivement sur Uber ou Bolt ne se pose pas la question : sa note est dans l'application, et l'application lui envoie les courses. Le jour où il veut sortir de la plateforme — et c'est ce que tente à peu près tout chauffeur au bout de deux ans, parce que 20 à 25 % de commission sur chaque course finissent par se voir — il découvre que sa réputation ne lui appartient pas. Elle reste dans l'application, et il repart de zéro.</p>
+<p>Hors plateforme, le client ne choisit pas un chauffeur : il tape « taxi + sa ville » ou « VTC aéroport Roissy » sur son téléphone, regarde les trois fiches du pack local et appelle celle qui affiche le plus d'avis avec la meilleure note. Le réflexe est massif : <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français consultent les avis avant de faire appel à un professionnel</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs).</p>
+<p>Le transport de personnes ajoute une couche de méfiance que les autres métiers n'ont pas. Le client monte seul dans la voiture d'un inconnu, souvent de nuit, parfois avec ses enfants ou ses bagages. Les avis ne servent pas à départager deux offres : ils servent à se rassurer avant de monter.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> un transfert aéroport facturé 70 à 90 € ne se joue pas sur quelques euros. Un client d'affaires qui trouve un chauffeur fiable garde son numéro et rappelle : la valeur d'une course gagnée via Google n'est pas 80 €, c'est 80 € multipliés par le nombre de fois où il rappellera dans l'année. C'est exactement ce que la commission d'une plateforme ne vous laisse jamais construire.</p>
+</div>
+<p>Le problème n'est presque jamais la qualité du service. Les chauffeurs indépendants sont très majoritairement ponctuels, propres et corrects, et leurs clients le disent — en descendant de voiture, jamais sur Google. Ce qui manque n'est pas la satisfaction, c'est le <strong>passage à l'acte</strong> au moment précis où elle existe.</p>
+</section>
+
+<section id="probleme-vtc" class="scroll-mt-28 mb-16">
+<h2>Le vrai problème : la course se termine dans la rue</h2>
+<p>Tous les dispositifs de collecte d'avis ont été pensés pour un comptoir. Le client est debout devant vous, son téléphone est déjà en main pour payer sans contact, et l'objet est posé à dix centimètres de sa main. Un chauffeur n'a rien de tout cela. La course se termine sur un trottoir, souvent sous la pluie, avec un client pressé qui attrape sa valise et un véhicule en double file derrière lequel quelqu'un klaxonne déjà.</p>
+<p>La fenêtre de demande n'est pas seulement courte : elle est <strong>hostile</strong>. Elle dure entre dix et trente secondes, elle se produit debout, dehors, et elle ne se rattrape jamais. Le client satisfait pense à autre chose dès qu'il a passé la porte du hall d'arrivée ; le client agacé par un détour, lui, écrit le soir même. C'est l'asymétrie classique — la frustration écrit, la satisfaction se tait. Une fiche de VTC à 4,1 étoiles avec 11 avis ne raconte pas la qualité de la conduite, elle raconte l'absence de méthode de collecte.</p>
+<h3>Les 4 tentatives qui échouent presque toujours</h3>
+<ul>
+<li><strong>La carte de visite glissée avec le reçu.</strong> Elle rejoint le ticket de parking au fond de la poche, puis la poubelle du hall d'arrivée. Le client ne la ressort jamais.</li>
+<li><strong>Le SMS de remerciement envoyé le lendemain.</strong> La course est déjà loin, le message ressemble à du démarchage, et il réveille les clients qui avaient oublié le détour de trois minutes qui les avait agacés.</li>
+<li><strong>Le « n'hésitez pas à me mettre un avis » lancé par la vitre.</strong> Sans support à toucher, le client acquiesce sincèrement et n'y pense plus dans l'escalator.</li>
+<li><strong>Le QR code imprimé sur le reçu ou le pare-soleil.</strong> Il suppose que le client sorte son appareil photo, cadre, attende la reconnaissance, puis tape sur une notification. Trois gestes de trop pour quelqu'un qui a une valise dans une main. Le détail de l'écart est dans notre comparatif <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC contre QR code</a>.</li>
+</ul>
+<p>Ce qui fonctionne, c'est un <strong>objet physique présent à l'intérieur du véhicule, à portée de main, pendant que le client est encore assis</strong>. La différence entre le taxi et tous les autres métiers tient en une phrase : le seul endroit où le client est immobile, détendu et disponible, c'est la banquette arrière — pas le trottoir.</p>
+</section>
+
+<section id="fiche-google-vtc" class="scroll-mt-28 mb-16">
+<h2>La fiche Google d'un chauffeur : le cas de la zone de service</h2>
+<p>Avant de collecter, encore faut-il que la fiche existe correctement. Un chauffeur de taxi ou de VTC relève d'un type de fiche spécifique dans Google Business Profile : la <strong>zone de service</strong> (service-area business). Concrètement, l'adresse de domiciliation — souvent le domicile — est saisie pour la vérification puis <em>masquée</em>, et vous déclarez à la place les communes, départements ou codes postaux que vous desservez.</p>
+<p>Trois conséquences que beaucoup de chauffeurs découvrent trop tard :</p>
+<ul>
+<li><strong>Déclarer toute l'Île-de-France n'étale pas votre visibilité sur toute l'Île-de-France.</strong> Google classe toujours sur la distance entre l'internaute et votre point de rattachement réel : la zone déclarée indique un périmètre, elle ne crée pas de présence à Versailles quand vous êtes domicilié à Meaux.</li>
+<li><strong>La catégorie principale pèse plus lourd que la liste des zones.</strong> « Service de voiture avec chauffeur », « Compagnie de taxi » et « Service de navette aéroport » ne déclenchent pas les mêmes requêtes.</li>
+<li><strong>Le seul levier entièrement sous votre contrôle est la proéminence</strong> — volume, fraîcheur et note de vos avis. C'est la seule des trois composantes du classement local, avec la pertinence et la distance, sur laquelle vous agissez chaque jour.</li>
+</ul>
+<p>Deux réglages rapportent immédiatement. D'abord, <strong>les horaires réels, y compris la nuit</strong> : un chauffeur disponible à 5 h du matin qui affiche 9 h - 18 h se retire lui-même des recherches de transfert matinal, précisément les plus rentables. Ensuite, <strong>les prestations détaillées</strong> — transfert aéroport, longue distance, mise à disposition, transport de groupe, siège enfant, véhicule accessible — car chaque prestation déclarée est une requête sur laquelle vous devenez éligible. La méthode complète est dans notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Attention :</strong> la note affichée dans Uber, Bolt ou Heetch ne vous appartient pas et ne sera jamais transférée sur votre fiche Google. Quatre ans de 4,92 étoiles sur une plateforme valent zéro le jour où vous prenez vos propres clients. Tant que vous roulez encore pour une application, chaque avis Google collecté en parallèle est du capital que vous emportez avec vous.</p>
+</div>
+</section>
+
+<section id="ou-poser-plaque" class="scroll-mt-28 mb-16">
+<h2>Les 6 emplacements dans un véhicule, classés par rendement</h2>
+<p>Un habitacle offre peu de surfaces, beaucoup de métal et énormément de vibrations. Voici les emplacements réellement exploitables, classés par ce qu'ils rapportent.</p>
+
+<table>
+<thead>
+<tr><th>Emplacement</th><th>Rendement</th><th>Pourquoi</th></tr>
+</thead>
+<tbody>
+<tr><td>Dos d'appui-tête passager avant</td><td>Excellent</td><td>Dans le champ de vision du client pendant toute la course</td></tr>
+<tr><td>Accoudoir central arrière</td><td>Très bon</td><td>À portée de main, geste naturel assis</td></tr>
+<tr><td>Vide-poche de portière arrière</td><td>Bon</td><td>Le client s'y appuie avant de descendre</td></tr>
+<tr><td>Console centrale, côté passager avant</td><td>Bon</td><td>Idéal pour les courses à une personne à l'avant</td></tr>
+<tr><td>Porte-documents de transfert</td><td>Moyen</td><td>Utile pour l'accueil gare et aéroport avec pancarte</td></tr>
+<tr><td>Carrosserie extérieure</td><td>Nul</td><td>Personne ne scanne une voiture depuis le trottoir</td></tr>
+</tbody>
+</table>
+
+<h3>Le dos d'appui-tête : le vrai comptoir du chauffeur</h3>
+<p>C'est l'emplacement numéro un, et de loin. Le passager arrière regarde ce dossier pendant vingt, quarante ou soixante minutes. La plaque n'a pas besoin d'attirer l'attention en trois secondes comme dans un commerce : elle a le temps de se faire remarquer, si bien qu'à l'arrivée la phrase du chauffeur ne découvre rien, elle confirme un objet déjà vu. Fixez-la à hauteur de regard, sur la partie rigide du dossier ou sur la pochette, jamais sur le tissu souple qui plisse.</p>
+<h3>L'accoudoir central : le geste sans effort</h3>
+<p>Deuxième emplacement, en complément du premier. Le client assis à l'arrière a la main posée dessus : approcher son téléphone ne demande aucun mouvement. C'est le meilleur choix quand la demande se fait pendant le trajet plutôt qu'à l'arrivée. Deux plaques — un appui-tête, un accoudoir — augmentent le volume de 30 à 60 % par rapport à un seul point de contact, comme détaillé dans notre guide sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques nécessaire</a>.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Le piège du métal, version automobile :</strong> une voiture est une cage de métal. Toute surface métallique — montant de portière, partie chromée de console, plaque de seuil — absorbe le champ magnétique par courants de Foucault et désaccorde l'antenne de la puce. La lecture devient aléatoire selon l'angle, et le chauffeur en conclut que le produit est défectueux. Collez uniquement sur du plastique, du cuir, du simili ou du composite. Le détail technique est dans notre comparatif des <a href="/blog/materiaux-plaque-nfc-avis-google">matériaux de plaque NFC</a>.</p>
+</div>
+<h3>Chaleur, vibrations et adhésif</h3>
+<p>Un habitacle monte à 60 °C derrière un pare-brise en juillet et redescend sous zéro en janvier. Évitez donc la planche de bord et la lunette arrière, où l'adhésif finit par migrer, et privilégiez un support rigide en acrylique, insensible aux UV, plutôt qu'un autocollant souple qui gondole en une saison. Sur les plastiques texturés type grain de cuir, nettoyez à l'alcool isopropylique et pressez trente secondes : c'est la seule vraie cause de décollement.</p>
+</section>
+
+<section id="moments-demander" class="scroll-mt-28 mb-16">
+<h2>Quand demander un avis, et quand se taire</h2>
+<p>Dans ce métier, le timing compte plus que partout ailleurs, parce que la fenêtre est minuscule et que le client est en mouvement.</p>
+<h3>Les 5 moments qui fonctionnent</h3>
+<ul>
+<li><strong>Trois minutes avant l'arrivée, pendant que le client est encore assis.</strong> C'est le meilleur moment de tous, et le seul où le client est immobile, détendu, téléphone en main. La route est finie, plus rien ne peut mal se passer, et il a encore trente secondes de disponibilité totale.</li>
+<li><strong>Juste après le paiement par carte dans le véhicule.</strong> Le téléphone ou la carte est déjà sorti, le geste de tendre la main est engagé. La transition est naturelle.</li>
+<li><strong>À la fin d'un transfert aéroport réussi.</strong> Le client arrive en avance, sans stress, avec un vol confortablement devant lui : c'est le pic de gratitude du métier. Un transfert matinal vers Roissy ou Orly qui se passe bien vaut trois courses urbaines.</li>
+<li><strong>Pendant une mise à disposition ou une attente.</strong> Le client remonte entre deux rendez-vous, il a du temps, la relation est déjà établie sur plusieurs heures.</li>
+<li><strong>Sur le trajet retour d'un client régulier.</strong> Le lien de confiance existe, et ce sont ces clients-là qui écrivent les avis les plus détaillés.</li>
+</ul>
+<h3>Les 3 moments où il faut se taire</h3>
+<ul>
+<li><strong>Quand le client est en retard.</strong> Embouteillage, vol manqué, rendez-vous raté : même si vous n'y êtes pour rien, demander un avis à ce moment-là transforme une frustration diffuse en avis écrit.</li>
+<li><strong>Quand le client a contesté le prix ou l'itinéraire.</strong> Le litige n'est pas tranché dans sa tête. Réglez d'abord, ne demandez rien, et laissez la plaque faire son travail silencieusement s'il change d'avis.</li>
+<li><strong>Quand le client est au téléphone ou visiblement absorbé.</strong> Un client d'affaires en conférence téléphonique qu'on interrompt pour un avis est un client d'affaires perdu. La plaque reste visible, c'est suffisant.</li>
+</ul>
+<p>Une règle simple résume tout : <strong>demandez à l'assis, jamais au debout</strong>. Le trottoir n'est pas un lieu de collecte, l'habitacle en est un.</p>
+</section>
+
+<section id="scripts-chauffeur" class="scroll-mt-28 mb-16">
+<h2>Trois scripts de chauffeur</h2>
+<p>Une phrase de dix à quinze mots, dite d'une voix normale, sans insistance. C'est le levier qui multiplie les résultats par trois à cinq, bien avant le choix de l'emplacement.</p>
+<h3>Course urbaine, client pressé</h3>
+<p>« On arrive dans deux minutes. Si le trajet vous a convenu, il y a une plaque derrière mon siège : vous posez votre téléphone dessus, ça prend dix secondes. »</p>
+<p>Ce script fonctionne parce qu'il annonce la durée. Un client pressé refuse par crainte du temps que ça va prendre, pas par mauvaise volonté : « dix secondes » lève l'objection avant qu'elle se formule.</p>
+<h3>Transfert aéroport ou gare</h3>
+<p>« Vous êtes largement dans les temps, bon voyage. Si vous avez été satisfait, un avis Google m'aide vraiment à travailler en direct plutôt que par les applications. »</p>
+<p>Ici, l'honnêteté de la raison invoquée est l'argument. Un client comprend parfaitement ce que représente une commission de 25 %, et beaucoup ont envie d'aider un indépendant. Ne maquillez pas la demande.</p>
+<h3>Client régulier ou compte entreprise</h3>
+<p>« Je vous vois toutes les semaines, donc je me permets : si vous avez deux minutes, un avis Google me servirait beaucoup. La plaque est sur l'accoudoir. »</p>
+<p>Avec un habitué, la demande directe est non seulement acceptable, elle est attendue. C'est le segment qui produit les avis les plus longs et les plus crédibles, ceux que les futurs clients lisent en entier.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>✅ Deux formulations à bannir :</strong> « Mettez-moi cinq étoiles » — vous orientez la note, ce qui est contraire aux règles de Google et se retourne contre vous si le client était à quatre. Et « laissez un avis, ça m'aide pour mon score » — le client ne sait pas ce qu'est un score, et la phrase ressemble à une contrainte administrative. Dites ce que vous voulez : un avis, sur Google, maintenant.</p>
+</div>
+</section>
+
+<section id="cas-pratiques" class="scroll-mt-28 mb-16">
+<h2>Trois exemples de calcul</h2>
+<p>Le nombre d'avis mensuels est le produit de deux choses seulement : le nombre de courses terminées, et la proportion de clients à qui la demande est réellement faite multipliée par le taux de publication. Le transport de personnes se situe dans la fourchette haute des taux observés — contact long, relation personnelle, client assis — soit 8 à 15 %, cohérent avec les métiers analysés dans notre article sur le <a href="/blog/taux-scan-plaque-nfc">taux de scan réel d'une plaque NFC</a>.</p>
+
+<table>
+<thead>
+<tr><th>Profil</th><th>Courses / mois</th><th>Demande faite</th><th>Avis / mois</th></tr>
+</thead>
+<tbody>
+<tr><td>VTC indépendant, courses urbaines</td><td>180</td><td>1 fois sur 3</td><td>6 à 9</td></tr>
+<tr><td>Chauffeur transferts aéroport</td><td>70</td><td>systématique</td><td>8 à 11</td></tr>
+<tr><td>Taxi communal, clientèle mixte</td><td>240</td><td>1 fois sur 2</td><td>12 à 18</td></tr>
+</tbody>
+</table>
+
+<p>Trois enseignements. D'abord, le chauffeur à faible volume n'est pas pénalisé : un spécialiste du transfert aéroport qui demande systématiquement obtient plus d'avis qu'un VTC urbain qui fait deux fois et demie plus de courses. Ensuite, la variable qui bouge vraiment le résultat est la <strong>régularité de la demande</strong> : passer de « une fois sur trois » à « systématique » triple le volume sans changer une ligne du reste — ni le véhicule, ni la plaque, ni la conduite.</p>
+<p>Enfin, même le profil le plus modeste dépasse 70 avis sur douze mois. Dans un secteur où la concurrence locale plafonne souvent sous les trente avis, c'est largement de quoi entrer et rester dans le pack local. Notre analyse du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne les seuils par densité concurrentielle.</p>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Répondre aux quatre avis négatifs types du transport</h2>
+<p>Collecter ne suffit pas : <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent une réponse du professionnel</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 répondants). Une réponse est lue par cent futurs clients, jamais seulement par son auteur.</p>
+<h3>« Il est arrivé en retard »</h3>
+<p>Le reproche le plus fréquent du métier, et souvent le moins imputable au chauffeur. Ne plaidez pas la circulation en général : donnez le fait précis si vous l'avez (accident signalé, adresse imprécise, attente au point de rendez-vous) et indiquez ce que vous faites pour l'éviter — marge de sécurité sur les transferts, appel systématique en cas d'aléa. Le lecteur ne cherche pas un coupable, il cherche à savoir si vous prévenez.</p>
+<h3>« Le prix annoncé n'était pas le prix payé »</h3>
+<p>Ne discutez jamais un montant en public. Rappelez le mécanisme — forfait confirmé avant la course, ou tarif au compteur avec majorations réglementées — et proposez de reprendre le détail par téléphone. Un lecteur veut vérifier une chose : que le prix est connu avant de monter.</p>
+<h3>« Véhicule sale » ou « conduite désagréable »</h3>
+<p>Les deux reproches qui font le plus de dégâts, parce qu'ils touchent au confort physique. Reconnaissez le principe sans reconnaître un fait que vous n'avez pas constaté, et donnez une information vérifiable : fréquence de nettoyage, contrôle en début de service.</p>
+<h3>« Il a fait un détour »</h3>
+<p>Expliquez brièvement le choix d'itinéraire — axe bloqué, sens interdit temporaire — et proposez un geste si l'écart est réel. Ne laissez jamais cet avis sans réponse : c'est celui qui installe le doute le plus durable. La méthode complète est détaillée dans notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs Google</a>.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Le calcul qui dérange :</strong> à 30 avis et 4,2 de moyenne, un seul avis à 1 étoile fait perdre environ un dixième de point. Il faut ensuite quatre avis à 5 étoiles pour revenir au point de départ. C'est la raison pour laquelle un flux régulier protège mieux qu'une contestation : le volume dilue, l'inaction expose. Le détail du calcul est dans notre article sur <a href="/blog/ameliorer-note-google">l'amélioration de la note Google</a>.</p>
+</div>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 6 erreurs qui coûtent le plus d'avis à un chauffeur</h2>
+<ul>
+<li><strong>Coller la plaque sur une surface métallique ou chromée.</strong> Montant de portière, console chromée, seuil de porte : la lecture devient aléatoire et le chauffeur conclut que le produit ne marche pas. Plastique, cuir ou simili uniquement.</li>
+<li><strong>Placer la plaque hors du champ de vision du passager arrière.</strong> Une plaque dans la boîte à gants ou sur la planche de bord côté conducteur n'existe pas pour le client. Le dos de l'appui-tête passager avant fait la différence à lui seul.</li>
+<li><strong>Demander sur le trottoir.</strong> Debout, valise en main, sous la pluie : le client dit oui et ne fait rien. La demande se fait assis, deux à trois minutes avant l'arrivée.</li>
+<li><strong>Compter sur la note de la plateforme.</strong> Elle ne se transfère pas et ne vous appartient pas. Chaque mois passé sans collecter en propre est un mois de capital perdu.</li>
+<li><strong>Offrir une remise ou une course gratuite contre un avis.</strong> Formellement interdit par Google, avec un risque de suppression massive des avis et de suspension de la fiche. Le risque est disproportionné par rapport au gain.</li>
+<li><strong>Laisser des horaires incomplets sur la fiche.</strong> Un chauffeur disponible à 5 h qui affiche 9 h - 18 h se supprime lui-même des recherches de transfert matinal — les mieux rémunérées du métier.</li>
+</ul>
+<p>Une septième erreur, plus discrète : changer de véhicule et oublier de transférer la plaque. Elle est neutre techniquement, mais elle interrompt un flux qui avait mis six mois à s'installer. Deux plaques dans un pack <a href="/product/business">Business</a> règlent la question : une dans chaque véhicule, ou une de rechange dans la boîte à gants.</p>
+</section>
+
+<section id="faq-vtc" class="scroll-mt-28 mb-16">
+<h2>FAQ — Plaque NFC pour taxi et VTC</h2>
+
+<h3>Une plaque NFC a-t-elle un intérêt quand on n'a pas de local commercial ?</h3>
+<p>Oui, et le transport de personnes est un des cas où l'écart avec les autres méthodes est le plus grand. Un chauffeur n'a pas de comptoir, mais il a ce que presque aucun commerce ne possède : un client immobile et disponible pendant vingt à soixante minutes, à un mètre de lui. L'habitacle est un comptoir, simplement il roule. Toutes les alternatives — carte de visite, SMS le lendemain, lien sur le reçu — reportent l'action à plus tard, et ce qui est reporté n'est pas fait.</p>
+
+<h3>Où coller la plaque dans une voiture ?</h3>
+<p>Au dos de l'appui-tête passager avant en priorité : c'est ce que le passager arrière regarde pendant toute la course, donc le seul emplacement qui bénéficie de plusieurs dizaines de minutes d'exposition. L'accoudoir central arrière constitue un excellent second point de contact, à portée de main sans que le client ait à bouger. Évitez la planche de bord, où la chaleur estivale fatigue l'adhésif, et toute surface métallique ou chromée, qui perturbe la lecture NFC.</p>
+
+<h3>Combien d'avis Google un chauffeur VTC peut-il espérer par mois ?</h3>
+<p>Cela dépend de deux nombres que vous connaissez : vos courses terminées et la fréquence à laquelle la phrase est réellement dite. Un VTC urbain à 180 courses mensuelles qui demande une fois sur trois se situe autour de six à neuf avis par mois. Un chauffeur spécialisé dans les transferts aéroport, avec seulement 70 courses mais une demande systématique, en obtient huit à onze — davantage, malgré deux fois et demie moins de courses. Un taxi communal à 240 courses qui demande une fois sur deux atteint douze à dix-huit avis mensuels.</p>
+
+<h3>Puis-je utiliser une plaque NFC si je roule pour Uber ou Bolt ?</h3>
+<p>Rien ne l'interdit du côté de Google, et c'est même le meilleur moment pour commencer. Votre note sur une plateforme ne vous appartient pas et ne sera jamais transférée : le jour où vous voudrez travailler en direct, vous repartirez de zéro sauf si vous avez collecté en parallèle. Vérifiez simplement les conditions de votre contrat de partenariat concernant la sollicitation de clients pendant une course commandée via l'application, qui varient selon les plateformes et les pays.</p>
+
+<h3>La plaque fonctionne-t-elle malgré la chaleur et les vibrations d'un véhicule ?</h3>
+<p>Oui, à condition de choisir le bon support et la bonne surface. Une plaque en acrylique 3 mm ne se déforme pas, ne jaunit pas aux UV et supporte les écarts thermiques d'un habitacle, là où un autocollant souple gondole en une saison. Nettoyez la surface à l'alcool isopropylique avant la pose et pressez trente secondes : c'est la seule cause réelle de décollement sur les plastiques texturés d'intérieur de voiture.</p>
+
+<h3>Un taxi ou un VTC peut-il avoir une fiche Google sans adresse publique ?</h3>
+<p>Oui, via une fiche en zone de service : vous saisissez votre adresse pour la vérification puis vous la masquez, et vous déclarez les communes ou départements que vous desservez. Attention à une illusion fréquente : déclarer toute une région n'étale pas votre visibilité sur toute la région, car Google continue de classer sur la distance réelle à votre point de rattachement. Le levier qui reste sous votre contrôle est la proéminence, c'est-à-dire le volume, la fraîcheur et la note de vos avis.</p>
+
+<h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
+<p>Non. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel. Elle continue de fonctionner des années après l'achat, et la puce est garantie à vie. C'est la différence de fond avec les offres à abonnement, où l'arrêt du prélèvement désactive un support que vous avez pourtant payé — logique qui rappelle furieusement celle des commissions de plateforme.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : le comptoir du chauffeur, c'est sa banquette arrière</h2>
+<p>Un chauffeur ne perd pas des avis parce que ses clients sont mécontents. Il en perd parce qu'il demande au mauvais endroit : sur un trottoir, à un client debout, valise en main, alors que ce même client était assis, détendu et disponible trois minutes plus tôt.</p>
+<p>Déplacer la demande de trente secondes vers l'amont change tout. La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>, en donnant un objet à toucher au moment précis où le client est encore dans la voiture et vous remercie. Un pack <a href="/product/starter">Starter</a> suffit pour un véhicule unique ; le pack <a href="/product/business">Business</a> couvre l'appui-tête et l'accoudoir, la configuration qui rapporte le plus ; le pack <a href="/product/pro">Pro</a> équipe une petite flotte ou plusieurs véhicules.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-artisan-plombier">plombier et artisan</a>, <a href="/blog/plaque-nfc-hotel">hôtel et check-out</a>, <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, ou notre méthode pour <a href="/blog/obtenir-plus-avis-google">obtenir plus d'avis Google</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque course en avis Google ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+</div>
+</section>
+`,
+  },
   'questions-reponses-google-business-profile': {
     title: 'Questions/Réponses Google Business Profile : le champ que personne ne remplit',
     category: 'SEO Local',
