@@ -8,7 +8,7 @@ const BASE_URL = 'https://swiipx.fr'
  * Ils ne sont pas dans seoData, il faut donc les déclarer ici à la main.
  */
 const ARTICLES_ROUTE_DEDIEE = [
-  { slug: 'doubler-avis-google-30-jours', date: '2026-01-19', dateModified: '2026-07-28' },
+  { slug: 'doubler-avis-google-30-jours', date: '2026-01-19', dateModified: '2026-09-13' },
 ]
 
 /**

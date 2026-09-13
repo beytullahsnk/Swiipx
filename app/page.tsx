@@ -121,7 +121,7 @@ export default function Home() {
     tool: [
       {
         '@type': 'HowToTool',
-        name: 'Smartphone compatible NFC (iPhone 7+ ou Android récent)',
+        name: 'Smartphone équipé du NFC, ou appareil photo pour le QR code de secours',
       },
     ],
     step: [

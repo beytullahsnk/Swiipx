@@ -6950,7 +6950,7 @@ export const articles: Record<string, {
 <h2>Questions fréquentes — Plaque NFC salon de coiffure</h2>
 
 <h3>Mes clientes sont surtout des seniors, elles vont savoir utiliser le NFC ?</h3>
-<p>Oui. Le NFC fonctionne avec tout smartphone récent (iPhone 7+ ou Android post-2018). La cliente n'a rien à comprendre : elle approche son téléphone, ça s'ouvre tout seul. Plus simple qu'un QR code (où il faut ouvrir l'appareil photo, viser...). Et le QR de secours intégré couvre les très rares cas non-NFC.</p>
+<p>Oui. Sur un iPhone XS ou plus récent, la lecture se fait en arrière-plan, sans application (documentation Core NFC d'Apple) ; sur Android, il faut un téléphone équipé du NFC, avec la fonction activée. La cliente n'a rien à comprendre : elle approche son téléphone, la page s'ouvre. Plus simple qu'un QR code, où il faut ouvrir l'appareil photo et viser. Et pour les téléphones qui ne lisent pas la puce, le QR code de secours intégré prend le relais.</p>
 
 <h3>Combien de temps avant de voir l'impact dans Google Maps ?</h3>
 <p>Les nouveaux avis apparaissent sur votre fiche immédiatement. En revanche, personne ne peut vous dire au bout de combien de temps votre position dans le pack local bougera : Google ne publie pas ses délais de recalcul, et le classement dépend aussi de ce que font les salons voisins pendant ce temps-là. Le seul suivi fiable est le vôtre : notez votre nombre d'avis et votre note le jour où vous posez la plaque, puis relevez-les chaque mois. Et tapez de temps en temps "coiffeur + votre ville" en navigation privée, pour voir où vous sortez.</p>
@@ -7240,10 +7240,9 @@ export const articles: Record<string, {
 
 <h3>Compatibilité smartphones (en mai 2026)</h3>
 <ul>
-<li><strong>iPhone</strong> : tous les modèles depuis l'iPhone 7 (2016) — NFC en arrière-plan natif depuis iOS 14</li>
-<li><strong>Android</strong> : la quasi-totalité des modèles lancés depuis 2018</li>
-<li><strong>Au total</strong> : la très grande majorité des smartphones de vos clients</li>
-<li><strong>Filet de sécurité</strong> : QR code de secours intégré pour les rares téléphones sans NFC actif</li>
+<li><strong>iPhone</strong> : lecture en arrière-plan, sans application, à partir de l'iPhone XS (documentation Core NFC d'Apple)</li>
+<li><strong>Android</strong> : lecture possible si le téléphone est équipé du NFC et que la fonction est activée</li>
+<li><strong>Filet de sécurité</strong> : QR code de secours intégré, pour les téléphones qui ne lisent pas la puce</li>
 </ul>
 </section>
 
@@ -7498,9 +7497,9 @@ export const articles: Record<string, {
 
 <h3>Compatibilité actuelle (mai 2026)</h3>
 <ul>
-<li><strong>iPhone</strong> : tous les modèles depuis l'iPhone 7 (2016), NFC en arrière-plan depuis iOS 14</li>
-<li><strong>Android</strong> : la quasi-totalité des modèles lancés depuis 2018</li>
-<li><strong>En pratique</strong> : les téléphones incapables de lire une puce NFC sont devenus rares, mais nous n'avons pas de chiffre du parc français à vous donner</li>
+<li><strong>iPhone</strong> : lecture en arrière-plan, sans application, à partir de l'iPhone XS (documentation Core NFC d'Apple)</li>
+<li><strong>Android</strong> : lecture possible si le téléphone est équipé du NFC et que la fonction est activée</li>
+<li><strong>En pratique</strong> : nous n'avons pas de chiffre du parc français à vous donner ; le QR code imprimé sur la plaque couvre les téléphones qui ne lisent pas la puce</li>
 </ul>
 </section>
 
@@ -7607,19 +7606,19 @@ export const articles: Record<string, {
 </section>
 
 <section id="compatibilite" class="scroll-mt-28 mb-16">
-<h2>Compatibilité smartphone : le mythe des "iPhone qui ne lisent pas le NFC"</h2>
-<p>L'objection la plus fréquente contre la plaque NFC est : <em>"Mais tous les iPhone ne lisent pas le NFC en arrière-plan, non ?"</em></p>
-<p>C'était vrai... <strong>jusqu'en 2018</strong>. Depuis iOS 14 (2020), <strong>tous les iPhone depuis le 7</strong> lisent le NFC en arrière-plan automatiquement. Aucune app à ouvrir.</p>
+<h2>Compatibilité smartphone : quels iPhone lisent la plaque sans application</h2>
+<p>Une objection mérite une réponse précise : <em>"Mais tous les iPhone ne lisent pas le NFC en arrière-plan, non ?"</em></p>
+<p>C'est exact. Selon la <a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading" target="_blank" rel="noopener noreferrer">documentation Core NFC d'Apple</a>, seuls les <strong>iPhone XS et modèles ultérieurs</strong> lisent une puce NFC en arrière-plan, sans application. Apple précise que cette lecture reste indisponible dans certains cas, par exemple quand l'appareil photo ou le portefeuille Apple Pay est en cours d'utilisation, ou en mode avion.</p>
 
-<h3>État des lieux compatibilité NFC en mai 2026</h3>
+<h3>Ce que cela change pour vos clients</h3>
 <ul>
-<li><strong>iPhone (depuis iPhone 7, 2016) : 100 % compatibles</strong> — NFC en arrière-plan natif depuis iOS 14</li>
-<li><strong>Android (quasi-tous les modèles depuis 2018) : compatibles</strong> — NFC activé par défaut</li>
-<li><strong>Anciens smartphones (avant 2015) : non compatibles</strong> — ils sont devenus rares, mais nous ne chiffrons pas leur part du parc</li>
+<li><strong>iPhone XS et modèles ultérieurs</strong> : le client approche son téléphone, une notification s'affiche, sans application</li>
+<li><strong>iPhone plus anciens</strong> : pas de lecture en arrière-plan, le client passe par le QR code</li>
+<li><strong>Android</strong> : lecture possible si le téléphone est équipé du NFC et que la fonction est activée</li>
 </ul>
 
 <h3>Le filet de sécurité : le QR code intégré</h3>
-<p>Les plaques NFC professionnelles modernes intègrent un <strong>QR code imprimé</strong> à côté de la zone NFC. Si un client a un téléphone trop ancien (rare), il peut scanner le QR. Cette solution hybride couvre <strong>tous les téléphones</strong> sans rien retirer à ceux, largement majoritaires, qui bénéficient de l'expérience NFC fluide.</p>
+<p>Les plaques Swiipx intègrent un <strong>QR code imprimé</strong>. Si le téléphone d'un client ne lit pas la puce, il scanne le QR code avec son appareil photo et arrive sur la même page d'avis. Nous n'avons pas de chiffre sur la part de téléphones concernés en France : le QR code évite justement d'avoir à la connaître.</p>
 </section>
 
 <section id="cas-usage-secteur" class="scroll-mt-28 mb-16">
@@ -8635,7 +8634,7 @@ export const articles: Record<string, {
 <section id="faq" class="scroll-mt-28 mb-16">
 <h2>FAQ</h2>
 <h3>Est-ce que ça marche sur iPhone ?</h3>
-<p>Oui. Les iPhone récents lisent le NFC nativement. Aucun téléchargement nécessaire.</p>
+<p>Oui : les iPhone XS et modèles ultérieurs lisent la puce en arrière-plan, sans application (documentation Core NFC d'Apple). Sur un modèle plus ancien, le QR code de secours imprimé sur la plaque prend le relais.</p>
 <h3>Est-ce que le NFC marche si le client n’a pas internet ?</h3>
 <p>Non : il faut une connexion pour ouvrir la page d’avis. Mais le tap fonctionne quand même, et le client peut le faire juste après.</p>
 <h3>Que faire si un client ne sait pas où poser le téléphone ?</h3>

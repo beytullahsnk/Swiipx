@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     type: 'article',
     publishedTime: '2026-01-19',
-    modifiedTime: '2026-07-28',
+    modifiedTime: '2026-09-13',
     authors: ['Équipe Swiipx'],
     images: [
       {
@@ -46,7 +46,7 @@ const jsonLdArticle = {
   description:
     'Méthode en 4 phases pour doubler vos avis Google en 30 jours : fiche Google Business, plaque NFC, scripts de demande et modèles de réponse.',
   datePublished: '2026-01-19',
-  dateModified: '2026-07-28',
+  dateModified: '2026-09-13',
   author: {
     '@type': 'Organization',
     name: 'Swiipx',
@@ -133,7 +133,7 @@ const jsonLdFaq = {
       name: 'Est-ce que le NFC fonctionne avec tous les smartphones ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Oui. Tous les iPhone depuis le modèle 7 (2016) lisent les puces NFC sans réglage ni application, et la quasi-totalité des smartphones Android vendus depuis le milieu des années 2010 également. Pour les rares téléphones qui ne le font pas, un QR code est imprimé au dos de chaque plaque Swiipx.',
+        text: 'Non, pas tous de la même manière. Selon la documentation Core NFC d\'Apple, les iPhone XS et modèles ultérieurs lisent les puces NFC en arrière-plan, sans application ; sur Android, il faut un téléphone équipé du NFC, avec la fonction activée. Pour les autres téléphones, un QR code de secours est imprimé sur chaque plaque Swiipx.',
       },
     },
   ],

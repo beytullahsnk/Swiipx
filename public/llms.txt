@@ -76,7 +76,7 @@
 ## Questions frequentes
 
 - Faut-il un abonnement ? Non. Paiement unique, la plaque fonctionne pendant des annees sans frais recurrents.
-- La plaque fonctionne-t-elle sur iPhone ? Oui, sur tous les iPhone depuis l'iPhone 7 (2016) et la quasi-totalite des Android recents.
+- La plaque fonctionne-t-elle sur iPhone ? Les iPhone XS et modeles ulterieurs la lisent en arriere-plan, sans application (documentation Core NFC d'Apple). Sur un iPhone plus ancien ou un telephone sans NFC, le QR code imprime sur la plaque prend le relais.
 - Quel taux d'avis esperer ? Le taux depend de l'emplacement de la plaque et du moment ou elle est presentee au client ; aucun taux n'est garanti.
 - Est-ce conforme pour un cabinet medical ? Oui : la plaque est un moyen passif et discret, sans contrepartie ni tri des patients, conforme a la deontologie.
 
