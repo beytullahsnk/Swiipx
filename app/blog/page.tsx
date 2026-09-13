@@ -57,8 +57,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 41,
-    title: 'Questions/Réponses Google Business Profile : le champ que personne ne remplit',
-    excerpt: 'N\'importe qui peut poser une question sur votre fiche Google, et n\'importe qui peut y répondre à votre place. Comment fonctionne le bloc Q/R, comment le pré-remplir soi-même (c\'est autorisé), les 12 questions qui rapportent, un tableau de reformulations et les 7 erreurs.',
+    title: 'Questions/Réponses Google Business Profile : ce qui a changé et quoi faire',
+    excerpt: 'Google a arrêté l\'API Questions/Réponses le 3 novembre 2025 et réserve la section à certaines activités et régions. Ce que Google documente en 2026, les méthodes à abandonner, les 12 questions clients à anticiper, où publier les réponses et les 7 erreurs.',
     category: 'SEO Local',
     date: '9 septembre 2026',
     dateIso: '2026-09-09',
@@ -68,7 +68,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 40,
     title: 'Quand vos clients laissent-ils leurs avis Google ? Heures, jours et saisons',
-    excerpt: 'Un avis Google n\'arrive pas au hasard : délai réel entre le scan et la publication, courbe horaire, rendement par jour de la semaine, saisonnalité par secteur, fraîcheur et vélocité. Deux tableaux chiffrés, trois cas de calcul et les 7 erreurs de timing.',
+    excerpt: 'Un avis Google n\'arrive pas forcément au moment du passage en caisse : ce qui sépare le scan de la publication, ce que l\'heure, le jour et la saison changent vraiment, pourquoi la régularité compte, comment mesurer votre propre rythme en 30 jours et les 7 erreurs de timing.',
     category: 'Statistiques',
     date: '7 septembre 2026',
     dateIso: '2026-09-07',
@@ -78,7 +78,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 39,
     title: 'Combien de plaques NFC faut-il ? Le guide pour choisir entre 1, 2 et 5',
-    excerpt: 'La seule décision d\'achat qui change vraiment le volume d\'avis n\'est pas le matériau, c\'est le nombre d\'emplacements couverts. La méthode de calcul en 3 questions, un tableau par secteur, le coût par avis selon le pack et les 6 erreurs de dimensionnement.',
+    excerpt: 'Ce qui change le nombre d\'occasions de laisser un avis, ce n\'est pas le matériau de la plaque, c\'est le nombre de moments du parcours client couverts. La méthode en 3 questions, le nombre de plaques conseillé par type d\'établissement, le prix par plaque selon le pack et les 6 erreurs de dimensionnement.',
     category: 'Comparatif',
     date: '4 septembre 2026',
     dateIso: '2026-09-04',
@@ -97,8 +97,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 37,
-    title: 'Google Posts : publier sur sa fiche Google Business Profile (et ce que ça rapporte)',
-    excerpt: 'Un post ne fait pas monter une fiche dans le pack local, et c\'est justement pour ça qu\'on l\'utilise mal. Les 4 types de posts, la règle des 7 jours qui n\'existe plus, les 80 premiers caractères qui décident, 12 sujets prêts à publier et les 7 erreurs.',
+    title: 'Google Posts : publier sur sa fiche Google Business Profile (et ce que ça change)',
+    excerpt: 'Google ne cite pas les posts parmi ses critères de classement local, et c\'est justement pour ça qu\'on les utilise mal. Les 3 types de posts, la règle des 7 jours contredite par l\'aide Google (archivage à six mois), 12 sujets prêts à publier et les 7 erreurs.',
     category: 'SEO Local',
     date: '31 août 2026',
     dateIso: '2026-08-31',
@@ -107,8 +107,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 36,
-    title: 'Taux de scan d\'une plaque NFC : combien de clients laissent vraiment un avis ?',
-    excerpt: 'Un fournisseur annonce un taux unique, la réalité en donne dix. L\'entonnoir en 4 étapes, les ordres de grandeur par secteur, la formule de calcul et les leviers classés par impact.',
+    title: 'Taux de scan d\'une plaque NFC : comment mesurer le vôtre et l\'améliorer',
+    excerpt: 'Aucun taux de scan ne vaut pour tous les commerces : le seul chiffre utile est le vôtre. Comment le mesurer (avis publiés rapportés aux clients servis), ce qui le fait varier, les leviers pour l\'améliorer et le bon rythme de suivi.',
     category: 'Statistiques',
     date: '28 août 2026',
     dateIso: '2026-08-28',
@@ -118,7 +118,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 35,
     title: 'Plaque NFC hôtel : transformer le check-out en avis Google',
-    excerpt: 'Un hôtelier surveille sa note Booking chaque matin et laisse sa fiche Google à l\'abandon — c\'est exactement l\'inverse qu\'il faudrait faire. Le check-out, les 6 emplacements classés, les scripts de réception et trois exemples de calcul.',
+    excerpt: 'Surveiller sa note Booking chaque matin et laisser sa fiche Google à l\'abandon, c\'est l\'inverse de ce qu\'il faudrait faire. Le check-out, les 6 emplacements passés en revue, les scripts de réception et la méthode pour estimer vos avis à partir de vos propres départs.',
     category: 'Secteur',
     date: '26 août 2026',
     dateIso: '2026-08-26',
@@ -128,7 +128,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 34,
     title: 'Plaque NFC avis Google : acrylique, métal, bois ou PVC ? Le comparatif des matériaux',
-    excerpt: 'Le métal bloque le NFC, le PVC jaunit, le bois se voile : le matériau décide si la plaque se lit encore dans trois ans. Comparatif des 5 supports, la vérité sur les puces NTAG213/215/216, l\'adhésif et le coût réel par mois.',
+    excerpt: 'Le métal perturbe le NFC, beaucoup de plastiques jaunissent aux UV, le bois travaille avec l\'humidité : le matériau décide si la plaque se lit et reste présentable. Comparatif des 5 supports, les puces NTAG213/215/216, l\'adhésif et le vrai poste de coût.',
     category: 'Comparatif',
     date: '26 août 2026',
     dateIso: '2026-08-26',
@@ -138,7 +138,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 33,
     title: 'Photos Google Business Profile : combien en publier et lesquelles font venir des clients',
-    excerpt: 'Sur un téléphone, une fiche Google se juge en une seconde et demie, et l\'œil voit l\'image avant la note. Les 8 types de photos classés par rendement, les formats exacts, la bonne fréquence, les 7 erreurs à éviter et un plan 30 jours.',
+    excerpt: 'Sur un téléphone, une fiche Google se compare en un coup d\'œil, photo comprise. Les 8 types de photos classés par priorité, les formats recommandés par Google, la bonne fréquence, les 7 erreurs à éviter et un plan 30 jours.',
     category: 'SEO Local',
     date: '21 août 2026',
     dateIso: '2026-08-21',
@@ -148,7 +148,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 32,
     title: 'Plaque NFC opticien : transformer la livraison des lunettes en avis Google',
-    excerpt: 'Un opticien voit son client quatre fois, puis plus rien pendant deux ans : si l\'avis n\'est pas demandé pendant cette fenêtre, il ne le sera jamais. Le moment qui change tout, les 6 emplacements classés, les scripts magasin et trois exemples de calcul.',
+    excerpt: 'Un opticien voit son client lors de quelques rendez-vous rapprochés, puis parfois plus pendant des années : si l\'avis n\'est pas demandé pendant cette fenêtre, l\'occasion ne se représentera pas avant longtemps. Le moment qui compte, les 6 emplacements passés en revue, les scripts magasin et trois exemples de calcul fondés sur des hypothèses.',
     category: 'Secteur',
     date: '19 août 2026',
     dateIso: '2026-08-19',
@@ -158,7 +158,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 31,
     title: 'Améliorer sa note Google : combien d\'avis 5 étoiles pour passer de 4,2 à 4,6 ?',
-    excerpt: 'Passer de 4,2 à 4,6 sur Google n\'est pas une question de chance : c\'est une division. La formule exacte, le tableau du nombre d\'avis 5 étoiles selon votre volume, le coût réel d\'un seul avis 1 étoile et trois cas chiffrés.',
+    excerpt: 'Passer de 4,2 à 4,6 sur Google n\'est pas une question de chance : c\'est une division. La formule exacte, le tableau du nombre d\'avis 5 étoiles selon votre volume, le coût réel d\'un seul avis 1 étoile et trois exemples de calcul.',
     category: 'Statistiques',
     date: '17 août 2026',
     dateIso: '2026-08-17',
@@ -168,7 +168,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 30,
     title: 'Plaque NFC vétérinaire : collecter des avis Google sans jamais forcer',
-    excerpt: 'Cliniques et cabinets vétérinaires : une consultation sur deux se termine par une bonne nouvelle, l\'autre non. Où poser la plaque, à quel moment demander, quand se taire, scripts ASV et exemples de calcul.',
+    excerpt: 'Cliniques et cabinets vétérinaires : toutes les consultations ne se terminent pas par une bonne nouvelle, et la demande d\'avis doit en tenir compte. Où poser la plaque, à quel moment demander, quand se taire, scripts ASV et exemples de calcul.',
     category: 'Secteur',
     date: '15 août 2026',
     dateIso: '2026-08-15',
@@ -177,8 +177,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 29,
-    title: 'Plaque NFC agence immobilière : chaque signature devient un avis Google',
-    excerpt: 'Une agence signe 40 ventes par an et affiche 14 avis Google : nulle part ailleurs un avis manquant ne coûte aussi cher. Les 4 clients à solliciter (dont l\'acquéreur, toujours oublié), les 5 moments qui marchent, scripts négociateur et calcul sur 12 mois.',
+    title: 'Plaque NFC agence immobilière : demander un avis Google à chaque signature',
+    excerpt: 'Une agence signe peu de ventes dans l\'année, et chacune pèse lourd : chaque occasion de demander un avis compte. Les 4 clients à solliciter (dont l\'acquéreur, souvent oublié), les 5 moments où demander, scripts négociateur et exemple de calcul sur 12 mois.',
     category: 'Secteur',
     date: '12 août 2026',
     dateIso: '2026-08-12',

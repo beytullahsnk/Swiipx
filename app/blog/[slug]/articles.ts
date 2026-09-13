@@ -22,7 +22,7 @@ export const articles: Record<string, {
     title: 'Plaque NFC taxi et VTC : collecter des avis Google dans un véhicule',
     category: 'Secteur',
     date: '11 septembre 2026',
-    readTime: '14 min',
+    readTime: '15 min',
     author: 'Équipe Swiipx',
     excerpt: 'Taxis, VTC, transferts aéroport : la course se termine sur un trottoir, avec un client debout et pressé. Les 6 emplacements exploitables dans un véhicule, la fiche en zone de service, 3 scripts de chauffeur et les 6 erreurs qui coûtent le plus d\'avis.',
     tocSections: [
@@ -41,11 +41,11 @@ export const articles: Record<string, {
     content: `
 <section id="pourquoi-avis-vtc" class="scroll-mt-28 mb-16">
 <h2>Pourquoi les avis Google décident des courses d'un taxi ou d'un VTC</h2>
-<p>Un chauffeur de VTC qui travaille exclusivement sur Uber ou Bolt ne se pose pas la question : sa note est dans l'application, et l'application lui envoie les courses. Le jour où il veut sortir de la plateforme — et c'est ce que tente à peu près tout chauffeur au bout de deux ans, parce que 20 à 25 % de commission sur chaque course finissent par se voir — il découvre que sa réputation ne lui appartient pas. Elle reste dans l'application, et il repart de zéro.</p>
-<p>Hors plateforme, le client ne choisit pas un chauffeur : il tape « taxi + sa ville » ou « VTC aéroport Roissy » sur son téléphone, regarde les trois fiches du pack local et appelle celle qui affiche le plus d'avis avec la meilleure note. Le réflexe est massif : <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français consultent les avis avant de faire appel à un professionnel</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs).</p>
+<p>Un chauffeur de VTC qui travaille exclusivement sur Uber ou Bolt ne se pose pas la question : sa note est dans l'application, et l'application lui envoie les courses. Le jour où il veut sortir de la plateforme — parce que la commission prélevée sur chaque course finit par se voir — il découvre que sa réputation ne lui appartient pas. Elle reste dans l'application, et il repart de zéro.</p>
+<p>Hors plateforme, le client ne choisit pas un chauffeur dans une application : il tape « taxi + sa ville » ou « VTC aéroport Roissy » sur son téléphone, regarde les fiches du pack local, compare les notes et lit quelques avis avant d'appeler. La lecture des avis est un geste répandu : <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026, 1 350 Français représentatifs). L'étude porte sur les points de vente, pas sur la réservation d'un chauffeur : elle ne mesure pas ce réflexe dans le transport, mais elle montre à quel point consulter les avis fait partie des habitudes.</p>
 <p>Le transport de personnes ajoute une couche de méfiance que les autres métiers n'ont pas. Le client monte seul dans la voiture d'un inconnu, souvent de nuit, parfois avec ses enfants ou ses bagages. Les avis ne servent pas à départager deux offres : ils servent à se rassurer avant de monter.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> un transfert aéroport facturé 70 à 90 € ne se joue pas sur quelques euros. Un client d'affaires qui trouve un chauffeur fiable garde son numéro et rappelle : la valeur d'une course gagnée via Google n'est pas 80 €, c'est 80 € multipliés par le nombre de fois où il rappellera dans l'année. C'est exactement ce que la commission d'une plateforme ne vous laisse jamais construire.</p>
+<p class="text-sm text-blue-900"><strong>📊 Hypothèse de calcul :</strong> si un transfert aéroport vous rapporte 80 €, un client d'affaires satisfait qui garde votre numéro ne vaut pas 80 € : il vaut 80 € multipliés par le nombre de fois où il vous rappellera dans l'année. Remplacez les 80 € par votre tarif et comptez vos habitués : c'est ce capital-là qu'une plateforme ne vous laisse pas construire, puisque le client reste le sien.</p>
 </div>
 <p>Le problème n'est presque jamais la qualité du service. Les chauffeurs indépendants sont très majoritairement ponctuels, propres et corrects, et leurs clients le disent — en descendant de voiture, jamais sur Google. Ce qui manque n'est pas la satisfaction, c'est le <strong>passage à l'acte</strong> au moment précis où elle existe.</p>
 </section>
@@ -66,14 +66,14 @@ export const articles: Record<string, {
 
 <section id="fiche-google-vtc" class="scroll-mt-28 mb-16">
 <h2>La fiche Google d'un chauffeur : le cas de la zone de service</h2>
-<p>Avant de collecter, encore faut-il que la fiche existe correctement. Un chauffeur de taxi ou de VTC relève d'un type de fiche spécifique dans Google Business Profile : la <strong>zone de service</strong> (service-area business). Concrètement, l'adresse de domiciliation — souvent le domicile — est saisie pour la vérification puis <em>masquée</em>, et vous déclarez à la place les communes, départements ou codes postaux que vous desservez.</p>
+<p>Avant de collecter, encore faut-il que la fiche existe correctement. Un chauffeur de taxi ou de VTC relève d'un type de fiche spécifique dans Google Business Profile : la <strong>zone de service</strong> (service-area business). Concrètement, si vous ne recevez pas de clients à votre adresse — souvent votre domicile —, <a href="https://support.google.com/business/answer/9157481?hl=fr" target="_blank" rel="noopener noreferrer">Google demande de la retirer de la fiche</a> et d'indiquer à la place la zone que vous desservez : jusqu'à 20 villes, codes postaux ou autres zones géographiques.</p>
 <p>Trois conséquences que beaucoup de chauffeurs découvrent trop tard :</p>
 <ul>
-<li><strong>Déclarer toute l'Île-de-France n'étale pas votre visibilité sur toute l'Île-de-France.</strong> Google classe toujours sur la distance entre l'internaute et votre point de rattachement réel : la zone déclarée indique un périmètre, elle ne crée pas de présence à Versailles quand vous êtes domicilié à Meaux.</li>
-<li><strong>La catégorie principale pèse plus lourd que la liste des zones.</strong> « Service de voiture avec chauffeur », « Compagnie de taxi » et « Service de navette aéroport » ne déclenchent pas les mêmes requêtes.</li>
-<li><strong>Le seul levier entièrement sous votre contrôle est la proéminence</strong> — volume, fraîcheur et note de vos avis. C'est la seule des trois composantes du classement local, avec la pertinence et la distance, sur laquelle vous agissez chaque jour.</li>
+<li><strong>Déclarer toute l'Île-de-France ne garantit pas d'être visible dans toute l'Île-de-France.</strong> La distance reste l'un des trois critères du classement local, et Google recommande de limiter la zone desservie à deux heures de trajet depuis votre établissement : la zone déclarée décrit votre périmètre, elle ne vous rapproche pas de Versailles quand vous êtes installé à Meaux.</li>
+<li><strong>La catégorie principale compte.</strong> « Service de voiture avec chauffeur », « Compagnie de taxi » et « Service de navette aéroport » ne décrivent pas la même activité : choisissez celle qui correspond à ce que vos clients cherchent.</li>
+<li><strong>Le levier que vous actionnez chaque jour, ce sont vos avis.</strong> Des trois critères du classement local — pertinence, distance, proéminence —, <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">Google range le nombre d'avis et les notes positives dans la proéminence</a> : c'est la composante sur laquelle vous agissez au quotidien.</li>
 </ul>
-<p>Deux réglages rapportent immédiatement. D'abord, <strong>les horaires réels, y compris la nuit</strong> : un chauffeur disponible à 5 h du matin qui affiche 9 h - 18 h se retire lui-même des recherches de transfert matinal, précisément les plus rentables. Ensuite, <strong>les prestations détaillées</strong> — transfert aéroport, longue distance, mise à disposition, transport de groupe, siège enfant, véhicule accessible — car chaque prestation déclarée est une requête sur laquelle vous devenez éligible. La méthode complète est dans notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>.</p>
+<p>Deux réglages sont à faire dès le départ. D'abord, <strong>les horaires réels, y compris la nuit</strong> : un chauffeur disponible à 5 h du matin qui affiche 9 h - 18 h apparaît fermé au moment exact où un voyageur cherche un transfert matinal. Ensuite, <strong>les prestations détaillées</strong> — transfert aéroport, longue distance, mise à disposition, transport de groupe, siège enfant, véhicule accessible — car Google demande des informations aussi complètes que possible pour faire correspondre une fiche aux recherches. La méthode complète est dans notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
 <p class="text-sm text-amber-900"><strong>⚠️ Attention :</strong> la note affichée dans Uber, Bolt ou Heetch ne vous appartient pas et ne sera jamais transférée sur votre fiche Google. Quatre ans de 4,92 étoiles sur une plateforme valent zéro le jour où vous prenez vos propres clients. Tant que vous roulez encore pour une application, chaque avis Google collecté en parallèle est du capital que vous emportez avec vous.</p>
 </div>
@@ -100,12 +100,12 @@ export const articles: Record<string, {
 <h3>Le dos d'appui-tête : le vrai comptoir du chauffeur</h3>
 <p>C'est l'emplacement numéro un, et de loin. Le passager arrière regarde ce dossier pendant vingt, quarante ou soixante minutes. La plaque n'a pas besoin d'attirer l'attention en trois secondes comme dans un commerce : elle a le temps de se faire remarquer, si bien qu'à l'arrivée la phrase du chauffeur ne découvre rien, elle confirme un objet déjà vu. Fixez-la à hauteur de regard, sur la partie rigide du dossier ou sur la pochette, jamais sur le tissu souple qui plisse.</p>
 <h3>L'accoudoir central : le geste sans effort</h3>
-<p>Deuxième emplacement, en complément du premier. Le client assis à l'arrière a la main posée dessus : approcher son téléphone ne demande aucun mouvement. C'est le meilleur choix quand la demande se fait pendant le trajet plutôt qu'à l'arrivée. Deux plaques — un appui-tête, un accoudoir — augmentent le volume de 30 à 60 % par rapport à un seul point de contact, comme détaillé dans notre guide sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques nécessaire</a>.</p>
+<p>Deuxième emplacement, en complément du premier. Le client assis à l'arrière a la main posée dessus : approcher son téléphone ne demande aucun mouvement. C'est le bon choix quand la demande se fait pendant le trajet plutôt qu'à l'arrivée. Avec deux plaques — un appui-tête, un accoudoir —, la plaque est à la fois sous les yeux pendant la course et sous la main au moment de la demande ; pour décider entre une et deux plaques, voyez notre guide sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques nécessaire</a>.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
 <p class="text-sm text-amber-900"><strong>⚠️ Le piège du métal, version automobile :</strong> une voiture est une cage de métal. Toute surface métallique — montant de portière, partie chromée de console, plaque de seuil — absorbe le champ magnétique par courants de Foucault et désaccorde l'antenne de la puce. La lecture devient aléatoire selon l'angle, et le chauffeur en conclut que le produit est défectueux. Collez uniquement sur du plastique, du cuir, du simili ou du composite. Le détail technique est dans notre comparatif des <a href="/blog/materiaux-plaque-nfc-avis-google">matériaux de plaque NFC</a>.</p>
 </div>
 <h3>Chaleur, vibrations et adhésif</h3>
-<p>Un habitacle monte à 60 °C derrière un pare-brise en juillet et redescend sous zéro en janvier. Évitez donc la planche de bord et la lunette arrière, où l'adhésif finit par migrer, et privilégiez un support rigide en acrylique, insensible aux UV, plutôt qu'un autocollant souple qui gondole en une saison. Sur les plastiques texturés type grain de cuir, nettoyez à l'alcool isopropylique et pressez trente secondes : c'est la seule vraie cause de décollement.</p>
+<p>Un habitacle garé en plein soleil chauffe fortement l'été et passe sous zéro l'hiver. Évitez donc la planche de bord et la lunette arrière, directement exposées au soleil, et préférez un support rigide à un autocollant souple. Sur les plastiques texturés type grain de cuir, nettoyez la surface à l'alcool isopropylique avant la pose, puis pressez trente secondes.</p>
 </section>
 
 <section id="moments-demander" class="scroll-mt-28 mb-16">
@@ -115,7 +115,7 @@ export const articles: Record<string, {
 <ul>
 <li><strong>Trois minutes avant l'arrivée, pendant que le client est encore assis.</strong> C'est le meilleur moment de tous, et le seul où le client est immobile, détendu, téléphone en main. La route est finie, plus rien ne peut mal se passer, et il a encore trente secondes de disponibilité totale.</li>
 <li><strong>Juste après le paiement par carte dans le véhicule.</strong> Le téléphone ou la carte est déjà sorti, le geste de tendre la main est engagé. La transition est naturelle.</li>
-<li><strong>À la fin d'un transfert aéroport réussi.</strong> Le client arrive en avance, sans stress, avec un vol confortablement devant lui : c'est le pic de gratitude du métier. Un transfert matinal vers Roissy ou Orly qui se passe bien vaut trois courses urbaines.</li>
+<li><strong>À la fin d'un transfert aéroport réussi.</strong> Le client arrive en avance, sans stress, avec un vol confortablement devant lui : il est soulagé, et il sait à qui il le doit.</li>
 <li><strong>Pendant une mise à disposition ou une attente.</strong> Le client remonte entre deux rendez-vous, il a du temps, la relation est déjà établie sur plusieurs heures.</li>
 <li><strong>Sur le trajet retour d'un client régulier.</strong> Le lien de confiance existe, et ce sont ces clients-là qui écrivent les avis les plus détaillés.</li>
 </ul>
@@ -130,13 +130,13 @@ export const articles: Record<string, {
 
 <section id="scripts-chauffeur" class="scroll-mt-28 mb-16">
 <h2>Trois scripts de chauffeur</h2>
-<p>Une phrase de dix à quinze mots, dite d'une voix normale, sans insistance. C'est le levier qui multiplie les résultats par trois à cinq, bien avant le choix de l'emplacement.</p>
+<p>Une phrase de dix à quinze mots, dite d'une voix normale, sans insistance. C'est elle qui transforme un objet posé là en demande explicite.</p>
 <h3>Course urbaine, client pressé</h3>
 <p>« On arrive dans deux minutes. Si le trajet vous a convenu, il y a une plaque derrière mon siège : vous posez votre téléphone dessus, ça prend dix secondes. »</p>
 <p>Ce script fonctionne parce qu'il annonce la durée. Un client pressé refuse par crainte du temps que ça va prendre, pas par mauvaise volonté : « dix secondes » lève l'objection avant qu'elle se formule.</p>
 <h3>Transfert aéroport ou gare</h3>
 <p>« Vous êtes largement dans les temps, bon voyage. Si vous avez été satisfait, un avis Google m'aide vraiment à travailler en direct plutôt que par les applications. »</p>
-<p>Ici, l'honnêteté de la raison invoquée est l'argument. Un client comprend parfaitement ce que représente une commission de 25 %, et beaucoup ont envie d'aider un indépendant. Ne maquillez pas la demande.</p>
+<p>Ici, l'honnêteté de la raison invoquée est l'argument. Un client comprend très bien ce que représente une commission prélevée sur chaque course, et il peut avoir envie d'aider un indépendant. Ne maquillez pas la demande.</p>
 <h3>Client régulier ou compte entreprise</h3>
 <p>« Je vous vois toutes les semaines, donc je me permets : si vous avez deux minutes, un avis Google me servirait beaucoup. La plaque est sur l'accoudoir. »</p>
 <p>Avec un habitué, la demande directe est non seulement acceptable, elle est attendue. C'est le segment qui produit les avis les plus longs et les plus crédibles, ceux que les futurs clients lisent en entier.</p>
@@ -147,28 +147,22 @@ export const articles: Record<string, {
 
 <section id="cas-pratiques" class="scroll-mt-28 mb-16">
 <h2>Trois exemples de calcul</h2>
-<p>Le nombre d'avis mensuels est le produit de deux choses seulement : le nombre de courses terminées, et la proportion de clients à qui la demande est réellement faite multipliée par le taux de publication. Le transport de personnes se situe dans la fourchette haute des taux observés — contact long, relation personnelle, client assis — soit 8 à 15 %, cohérent avec les métiers analysés dans notre article sur le <a href="/blog/taux-scan-plaque-nfc">taux de scan réel d'une plaque NFC</a>.</p>
-
-<table>
-<thead>
-<tr><th>Profil</th><th>Courses / mois</th><th>Demande faite</th><th>Avis / mois</th></tr>
-</thead>
-<tbody>
-<tr><td>VTC indépendant, courses urbaines</td><td>180</td><td>1 fois sur 3</td><td>6 à 9</td></tr>
-<tr><td>Chauffeur transferts aéroport</td><td>70</td><td>systématique</td><td>8 à 11</td></tr>
-<tr><td>Taxi communal, clientèle mixte</td><td>240</td><td>1 fois sur 2</td><td>12 à 18</td></tr>
-</tbody>
-</table>
-
-<p>Trois enseignements. D'abord, le chauffeur à faible volume n'est pas pénalisé : un spécialiste du transfert aéroport qui demande systématiquement obtient plus d'avis qu'un VTC urbain qui fait deux fois et demie plus de courses. Ensuite, la variable qui bouge vraiment le résultat est la <strong>régularité de la demande</strong> : passer de « une fois sur trois » à « systématique » triple le volume sans changer une ligne du reste — ni le véhicule, ni la plaque, ni la conduite.</p>
-<p>Enfin, même le profil le plus modeste dépasse 70 avis sur douze mois. Dans un secteur où la concurrence locale plafonne souvent sous les trente avis, c'est largement de quoi entrer et rester dans le pack local. Notre analyse du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne les seuils par densité concurrentielle.</p>
+<p>Le nombre d'avis mensuels dépend de trois choses : le nombre de courses terminées, la proportion de clients à qui la demande est réellement faite, et la part de ceux qui publient ensuite un avis. Les deux premières, vous les connaissez ou vous les décidez. La troisième, personne ne peut vous la donner à l'avance : nous n'en connaissons aucune mesure fiable pour le transport de personnes, et elle varie d'un chauffeur à l'autre.</p>
+<p><strong>Hypothèse de calcul</strong>, la même pour les trois profils afin que seules vos décisions fassent la différence : un client sollicité sur dix publierait un avis. Ce n'est pas un taux mesuré ; remplacez-le par ce que donnent vos premières semaines.</p>
+<ul>
+<li><strong>VTC indépendant, courses urbaines</strong> : 180 courses par mois, la phrase dite une fois sur trois, soit 60 clients sollicités. Si un sur dix publiait, cela ferait 6 avis par mois.</li>
+<li><strong>Chauffeur spécialisé dans les transferts aéroport</strong> : 70 courses par mois, la phrase dite à chaque fois, soit 70 clients sollicités. Cela ferait 7 avis par mois.</li>
+<li><strong>Taxi communal, clientèle mixte</strong> : 240 courses par mois, la phrase dite une fois sur deux, soit 120 clients sollicités. Cela ferait 12 avis par mois.</li>
+</ul>
+<p>Deux enseignements tiennent quelle que soit la part retenue, pourvu qu'elle soit la même pour tous. D'abord, le chauffeur de transferts sollicite plus de clients que le VTC urbain avec deux fois et demie moins de courses, simplement parce qu'il demande à chaque fois. Ensuite, la <strong>régularité de la demande</strong> est la variable que vous tenez : passer de « une fois sur trois » à « à chaque fois », c'est s'adresser à trois fois plus de clients, sans changer ni le véhicule, ni la plaque, ni la conduite.</p>
+<p>La part qui publie, elle, bouge avec des facteurs que vous pouvez repérer : le moment de la demande (assis avant l'arrivée plutôt que debout sur le trottoir), la durée et le déroulé de la course, un client pressé ou disponible, un habitué ou un inconnu, et surtout la phrase, dite ou non. Notre article sur le <a href="/blog/taux-scan-plaque-nfc">taux de scan d'une plaque NFC</a> revient sur ces leviers. Pour situer votre objectif, comparez-vous aux fiches déjà présentes dans le pack local de votre ville : voyez notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>.</p>
 </section>
 
 <section id="repondre-avis" class="scroll-mt-28 mb-16">
 <h2>Répondre aux quatre avis négatifs types du transport</h2>
-<p>Collecter ne suffit pas : <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent une réponse du professionnel</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 répondants). Une réponse est lue par cent futurs clients, jamais seulement par son auteur.</p>
+<p>Collecter ne suffit pas : <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent que le gérant réponde aux avis</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 consommateurs américains). Votre réponse ne s'adresse pas seulement à l'auteur de l'avis : elle reste affichée pour tous ceux qui consultent la fiche ensuite.</p>
 <h3>« Il est arrivé en retard »</h3>
-<p>Le reproche le plus fréquent du métier, et souvent le moins imputable au chauffeur. Ne plaidez pas la circulation en général : donnez le fait précis si vous l'avez (accident signalé, adresse imprécise, attente au point de rendez-vous) et indiquez ce que vous faites pour l'éviter — marge de sécurité sur les transferts, appel systématique en cas d'aléa. Le lecteur ne cherche pas un coupable, il cherche à savoir si vous prévenez.</p>
+<p>Un reproche classique du métier, et souvent peu imputable au chauffeur. Ne plaidez pas la circulation en général : donnez le fait précis si vous l'avez (accident signalé, adresse imprécise, attente au point de rendez-vous) et indiquez ce que vous faites pour l'éviter — marge de sécurité sur les transferts, appel systématique en cas d'aléa. Le lecteur ne cherche pas un coupable, il cherche à savoir si vous prévenez.</p>
 <h3>« Le prix annoncé n'était pas le prix payé »</h3>
 <p>Ne discutez jamais un montant en public. Rappelez le mécanisme — forfait confirmé avant la course, ou tarif au compteur avec majorations réglementées — et proposez de reprendre le détail par téléphone. Un lecteur veut vérifier une chose : que le prix est connu avant de monter.</p>
 <h3>« Véhicule sale » ou « conduite désagréable »</h3>
@@ -184,68 +178,68 @@ export const articles: Record<string, {
 <h2>Les 6 erreurs qui coûtent le plus d'avis à un chauffeur</h2>
 <ul>
 <li><strong>Coller la plaque sur une surface métallique ou chromée.</strong> Montant de portière, console chromée, seuil de porte : la lecture devient aléatoire et le chauffeur conclut que le produit ne marche pas. Plastique, cuir ou simili uniquement.</li>
-<li><strong>Placer la plaque hors du champ de vision du passager arrière.</strong> Une plaque dans la boîte à gants ou sur la planche de bord côté conducteur n'existe pas pour le client. Le dos de l'appui-tête passager avant fait la différence à lui seul.</li>
+<li><strong>Placer la plaque hors du champ de vision du passager arrière.</strong> Une plaque dans la boîte à gants ou sur la planche de bord côté conducteur n'existe pas pour le client. Le dos de l'appui-tête passager avant, lui, reste dans son champ de vision pendant toute la course.</li>
 <li><strong>Demander sur le trottoir.</strong> Debout, valise en main, sous la pluie : le client dit oui et ne fait rien. La demande se fait assis, deux à trois minutes avant l'arrivée.</li>
 <li><strong>Compter sur la note de la plateforme.</strong> Elle ne se transfère pas et ne vous appartient pas. Chaque mois passé sans collecter en propre est un mois de capital perdu.</li>
-<li><strong>Offrir une remise ou une course gratuite contre un avis.</strong> Formellement interdit par Google, avec un risque de suppression massive des avis et de suspension de la fiche. Le risque est disproportionné par rapport au gain.</li>
-<li><strong>Laisser des horaires incomplets sur la fiche.</strong> Un chauffeur disponible à 5 h qui affiche 9 h - 18 h se supprime lui-même des recherches de transfert matinal — les mieux rémunérées du métier.</li>
+<li><strong>Offrir une remise ou une course gratuite contre un avis.</strong> Google l'interdit strictement et peut, en cas d'engagement artificiel, <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">empêcher la fiche de recevoir de nouveaux avis, retirer les avis existants pendant une période donnée ou afficher un avertissement</a> aux internautes.</li>
+<li><strong>Laisser des horaires incomplets sur la fiche.</strong> Un chauffeur disponible à 5 h qui affiche 9 h - 18 h apparaît fermé au moment où l'on cherche un transfert matinal.</li>
 </ul>
-<p>Une septième erreur, plus discrète : changer de véhicule et oublier de transférer la plaque. Elle est neutre techniquement, mais elle interrompt un flux qui avait mis six mois à s'installer. Deux plaques dans un pack <a href="/product/business">Business</a> règlent la question : une dans chaque véhicule, ou une de rechange dans la boîte à gants.</p>
+<p>Une septième erreur, plus discrète : changer de véhicule et oublier de transférer la plaque. Elle est neutre techniquement, mais elle interrompt une habitude de collecte que vous aviez mis du temps à installer. Deux plaques dans un pack <a href="/product/business">Business</a> règlent la question : une dans chaque véhicule, ou une de rechange dans la boîte à gants.</p>
 </section>
 
 <section id="faq-vtc" class="scroll-mt-28 mb-16">
 <h2>FAQ — Plaque NFC pour taxi et VTC</h2>
 
 <h3>Une plaque NFC a-t-elle un intérêt quand on n'a pas de local commercial ?</h3>
-<p>Oui, et le transport de personnes est un des cas où l'écart avec les autres méthodes est le plus grand. Un chauffeur n'a pas de comptoir, mais il a ce que presque aucun commerce ne possède : un client immobile et disponible pendant vingt à soixante minutes, à un mètre de lui. L'habitacle est un comptoir, simplement il roule. Toutes les alternatives — carte de visite, SMS le lendemain, lien sur le reçu — reportent l'action à plus tard, et ce qui est reporté n'est pas fait.</p>
+<p>Oui. Un chauffeur n'a pas de comptoir, mais il a ce que presque aucun commerce ne possède : un client assis et disponible pendant toute la course, à un mètre de lui. L'habitacle est un comptoir, simplement il roule. Les alternatives — carte de visite, SMS le lendemain, lien sur le reçu — reportent l'action à plus tard, et ce qui est reporté est souvent oublié.</p>
 
 <h3>Où coller la plaque dans une voiture ?</h3>
 <p>Au dos de l'appui-tête passager avant en priorité : c'est ce que le passager arrière regarde pendant toute la course, donc le seul emplacement qui bénéficie de plusieurs dizaines de minutes d'exposition. L'accoudoir central arrière constitue un excellent second point de contact, à portée de main sans que le client ait à bouger. Évitez la planche de bord, où la chaleur estivale fatigue l'adhésif, et toute surface métallique ou chromée, qui perturbe la lecture NFC.</p>
 
 <h3>Combien d'avis Google un chauffeur VTC peut-il espérer par mois ?</h3>
-<p>Cela dépend de deux nombres que vous connaissez : vos courses terminées et la fréquence à laquelle la phrase est réellement dite. Un VTC urbain à 180 courses mensuelles qui demande une fois sur trois se situe autour de six à neuf avis par mois. Un chauffeur spécialisé dans les transferts aéroport, avec seulement 70 courses mais une demande systématique, en obtient huit à onze — davantage, malgré deux fois et demie moins de courses. Un taxi communal à 240 courses qui demande une fois sur deux atteint douze à dix-huit avis mensuels.</p>
+<p>Personne ne peut vous le dire à l'avance : cela dépend de vos courses terminées, de la fréquence à laquelle la phrase est réellement dite, et de la part des clients sollicités qui publient, que rien ne permet de fixer avant d'avoir essayé. Hypothèse de calcul : un VTC urbain à 180 courses mensuelles qui poserait la question une fois sur trois solliciterait 60 clients ; si un sur dix publiait, cela ferait 6 avis par mois. Un chauffeur de transferts aéroport à 70 courses qui demanderait à chaque fois en obtiendrait 7 avec la même hypothèse, soit davantage malgré deux fois et demie moins de courses.</p>
 
 <h3>Puis-je utiliser une plaque NFC si je roule pour Uber ou Bolt ?</h3>
 <p>Rien ne l'interdit du côté de Google, et c'est même le meilleur moment pour commencer. Votre note sur une plateforme ne vous appartient pas et ne sera jamais transférée : le jour où vous voudrez travailler en direct, vous repartirez de zéro sauf si vous avez collecté en parallèle. Vérifiez simplement les conditions de votre contrat de partenariat concernant la sollicitation de clients pendant une course commandée via l'application, qui varient selon les plateformes et les pays.</p>
 
 <h3>La plaque fonctionne-t-elle malgré la chaleur et les vibrations d'un véhicule ?</h3>
-<p>Oui, à condition de choisir le bon support et la bonne surface. Une plaque en acrylique 3 mm ne se déforme pas, ne jaunit pas aux UV et supporte les écarts thermiques d'un habitacle, là où un autocollant souple gondole en une saison. Nettoyez la surface à l'alcool isopropylique avant la pose et pressez trente secondes : c'est la seule cause réelle de décollement sur les plastiques texturés d'intérieur de voiture.</p>
+<p>La puce est passive, sans batterie : ce qui demande de l'attention dans une voiture, c'est l'emplacement et la tenue de l'adhésif. Tenez la plaque à l'écart du plein soleil — ni planche de bord, ni lunette arrière —, préférez un support rigide à un autocollant souple, et collez-la sur du plastique, du cuir ou du simili, jamais sur du métal. Nettoyez la surface à l'alcool isopropylique avant la pose, puis pressez trente secondes.</p>
 
 <h3>Un taxi ou un VTC peut-il avoir une fiche Google sans adresse publique ?</h3>
-<p>Oui, via une fiche en zone de service : vous saisissez votre adresse pour la vérification puis vous la masquez, et vous déclarez les communes ou départements que vous desservez. Attention à une illusion fréquente : déclarer toute une région n'étale pas votre visibilité sur toute la région, car Google continue de classer sur la distance réelle à votre point de rattachement. Le levier qui reste sous votre contrôle est la proéminence, c'est-à-dire le volume, la fraîcheur et la note de vos avis.</p>
+<p>Oui. Si vous ne recevez pas de clients à votre adresse, Google demande de la retirer de la fiche et d'indiquer à la place la zone desservie : jusqu'à 20 villes, codes postaux ou autres zones géographiques, en restant dans les deux heures de trajet qu'il recommande. Déclarer toute une région ne garantit pas d'y être visible partout : la distance reste l'un des trois critères du classement local. Le levier qui reste sous votre contrôle, ce sont vos avis : Google compte leur nombre et les notes positives dans la proéminence.</p>
 
 <h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
-<p>Non. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel. Elle continue de fonctionner des années après l'achat, et la puce est garantie à vie. C'est la différence de fond avec les offres à abonnement, où l'arrêt du prélèvement désactive un support que vous avez pourtant payé — logique qui rappelle furieusement celle des commissions de plateforme.</p>
+<p>Non. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel. Elle continue de fonctionner des années après l'achat, et la puce est garantie à vie. C'est la différence de fond avec les offres à abonnement, où l'arrêt du prélèvement peut désactiver un support que vous avez pourtant payé — logique qui rappelle furieusement celle des commissions de plateforme.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : le comptoir du chauffeur, c'est sa banquette arrière</h2>
 <p>Un chauffeur ne perd pas des avis parce que ses clients sont mécontents. Il en perd parce qu'il demande au mauvais endroit : sur un trottoir, à un client debout, valise en main, alors que ce même client était assis, détendu et disponible trois minutes plus tôt.</p>
-<p>Déplacer la demande de trente secondes vers l'amont change tout. La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>, en donnant un objet à toucher au moment précis où le client est encore dans la voiture et vous remercie. Un pack <a href="/product/starter">Starter</a> suffit pour un véhicule unique ; le pack <a href="/product/business">Business</a> couvre l'appui-tête et l'accoudoir, la configuration qui rapporte le plus ; le pack <a href="/product/pro">Pro</a> équipe une petite flotte ou plusieurs véhicules.</p>
+<p>La solution consiste à déplacer la demande de quelques minutes vers l'amont, pendant que le client est encore assis. La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>, en donnant un objet à toucher au moment précis où le client est encore dans la voiture et vous remercie. Un pack <a href="/product/starter">Starter</a> suffit pour un véhicule unique ; le pack <a href="/product/business">Business</a> couvre l'appui-tête et l'accoudoir ; le pack <a href="/product/pro">Pro</a> équipe une petite flotte ou plusieurs véhicules.</p>
 <p>Guides complémentaires : <a href="/blog/plaque-nfc-artisan-plombier">plombier et artisan</a>, <a href="/blog/plaque-nfc-hotel">hôtel et check-out</a>, <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, ou notre méthode pour <a href="/blog/obtenir-plus-avis-google">obtenir plus d'avis Google</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque course en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à demander un avis Google à chaque course ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT.</p>
 </div>
 </section>
 `,
   },
   'questions-reponses-google-business-profile': {
-    title: 'Questions/Réponses Google Business Profile : le champ que personne ne remplit',
+    title: 'Questions/Réponses Google Business Profile : ce qui a changé et quoi faire',
     category: 'SEO Local',
     date: '9 septembre 2026',
-    readTime: '13 min',
+    readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: 'N\'importe qui peut poser une question sur votre fiche Google, et n\'importe qui peut y répondre à votre place. Comment fonctionne le bloc Q/R, comment le pré-remplir soi-même (c\'est autorisé), les 12 questions qui rapportent, un tableau de reformulations et les 7 erreurs.',
+    excerpt: 'Google a arrêté l\'API Questions/Réponses le 3 novembre 2025 et réserve la section à certaines activités et régions. Ce que Google documente en 2026, les méthodes à abandonner, les 12 questions clients à anticiper, où publier les réponses et les 7 erreurs.',
     tocSections: [
-      { id: 'pourquoi-questions-reponses', label: 'Le champ que personne ne remplit' },
-      { id: 'comment-ca-marche', label: 'Comment ça fonctionne vraiment' },
-      { id: 'pre-remplir', label: 'Pré-remplir sa section Q/R' },
-      { id: 'quelles-questions', label: 'Les 12 questions qui rapportent' },
-      { id: 'rediger-reponses', label: 'Rédiger une réponse qui convertit' },
-      { id: 'surveiller-moderer', label: 'Surveiller, corriger, signaler' },
-      { id: 'qr-et-avis', label: 'Q/R et avis : deux leviers' },
+      { id: 'pourquoi-questions-reponses', label: 'Ce qui a changé' },
+      { id: 'comment-ca-marche', label: 'Ce que Google documente en 2026' },
+      { id: 'pre-remplir', label: 'Les méthodes à abandonner' },
+      { id: 'quelles-questions', label: 'Les 12 questions à anticiper' },
+      { id: 'rediger-reponses', label: 'Où publier les réponses' },
+      { id: 'surveiller-moderer', label: 'Vérifier ce que voit le client' },
+      { id: 'qr-et-avis', label: 'Informations et avis : deux leviers' },
       { id: 'par-secteur', label: '5 jeux de questions par secteur' },
       { id: 'erreurs', label: 'Les 7 erreurs' },
       { id: 'faq-questions-reponses', label: 'FAQ' },
@@ -253,119 +247,113 @@ export const articles: Record<string, {
     ],
     content: `
 <section id="pourquoi-questions-reponses" class="scroll-mt-28 mb-16">
-<h2>Questions/Réponses : le champ de la fiche Google que personne ne remplit</h2>
-<p>Sur une fiche Google Business Profile, tout le monde regarde la note, le nombre d'avis et les photos. Presque personne ne descend jusqu'à la section « Questions et réponses ». C'est une erreur, parce que ce bloc a une propriété que ni les avis ni les photos ne possèdent : <strong>il est ouvert à n'importe qui, y compris à vos concurrents et à des internautes qui ne sont jamais venus chez vous</strong>.</p>
-<p>Concrètement, un inconnu peut poser publiquement une question sur votre établissement, et un autre inconnu peut y répondre à votre place. Cette réponse s'affiche ensuite sur votre fiche, avec la même mise en avant que si elle venait de vous. Si personne dans votre entreprise ne surveille ce bloc, votre fiche répond aux clients sans vous.</p>
+<h2>Questions/Réponses Google Business Profile : ce qui a changé</h2>
+<p>Pendant des années, la section « Questions et réponses » des fiches Google a été décrite comme un espace public : un internaute posait une question sur un établissement, et le propriétaire comme d'autres internautes pouvaient y répondre. De nombreux guides recommandaient de la surveiller, de la pré-remplir et de faire voter pour ses propres questions.</p>
+<p>Ce tableau n'est plus à jour. Le 3 novembre 2025, Google a arrêté l'API Questions/Réponses de Google Business Profile, en indiquant que la fonctionnalité et l'expérience utilisateur étaient en cours de mise à jour (<a href="https://developers.google.com/my-business/content/qanda/change-log" target="_blank" rel="noopener noreferrer">journal des modifications de l'API, Google for Developers</a>). Et l'aide de Google précise désormais que la section n'est disponible que pour certaines catégories d'activité et certaines régions, et que son apparence et son fonctionnement pourront changer.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> sur les fiches d'établissements locaux qui reçoivent du trafic, la majorité des questions publiées restent sans réponse du propriétaire pendant des semaines. Chaque question sans réponse est un internaute qui hésitait, qui a demandé, et qui est parti chez un concurrent parce que personne ne lui a dit si vous aviez un parking.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> les méthodes construites autour de l'ancienne section — pré-remplir ses questions depuis un second compte, faire voter, surveiller un fil de questions — ne correspondent plus à ce que Google documente. Le besoin, lui, reste entier : vos clients continuent de se poser des questions avant de venir, et la réponse doit être facile à trouver.</p>
 </div>
-<p>La section Q/R n'est pas un canal de service client : c'est une <strong>page de vente en libre-service</strong> attachée à votre fiche. Les questions qui y figurent sont, presque toujours, les objections d'achat les plus fréquentes de votre métier. Y répondre revient à traiter ces objections une fois pour toutes, devant tout le monde, avant même que le client ne vous appelle.</p>
-<p>Ce guide explique comment fonctionne ce bloc, comment le pré-remplir soi-même — une pratique explicitement autorisée par Google —, quelles questions publier, et comment articuler ce travail avec la collecte d'avis, qui reste le levier de classement dominant.</p>
+<p>Ce guide fait le point sur ce que Google décrit aujourd'hui, sur les pratiques à abandonner, et sur l'endroit où publier désormais les réponses aux questions de vos clients — sans perdre de vue la collecte d'avis, que Google cite parmi ce qui peut aider le classement local.</p>
 </section>
 
 <section id="comment-ca-marche" class="scroll-mt-28 mb-16">
-<h2>Comment fonctionne vraiment la section Questions/Réponses</h2>
-<p>Avant de publier quoi que ce soit, il faut comprendre trois mécanismes qui expliquent la plupart des mauvaises surprises.</p>
+<h2>Ce que Google documente en 2026</h2>
+<p>Quatre pages officielles permettent de faire le point. Elles décrivent un dispositif plus restreint que celui dont parlent encore beaucoup de guides.</p>
 
-<h3>Qui peut poser une question, qui peut répondre</h3>
-<p>Toute personne disposant d'un compte Google peut poser une question sur n'importe quelle fiche, sans y être jamais allée. Et toute personne disposant d'un compte Google peut répondre à cette question, y compris un concurrent, un ancien salarié ou un client mal informé. Le propriétaire de la fiche n'a aucun droit de veto sur ce qui est publié : il peut seulement répondre, et signaler ce qui viole les règles.</p>
-<p>La seule différence de traitement est visuelle : quand vous répondez depuis le compte qui gère la fiche, votre réponse porte la mention <strong>« Propriétaire »</strong>. Cette mention change tout en termes de crédibilité, et c'est précisément pour cela qu'il faut être le premier à répondre.</p>
+<h3>Côté fiche : une section limitée à certaines catégories et régions</h3>
+<p>Dans son <a href="https://support.google.com/business/answer/3039617?hl=fr" target="_blank" rel="noopener noreferrer">aide sur la modification d'une fiche d'établissement</a>, Google indique que les propriétaires et les autres personnes qui gèrent la fiche peuvent répondre à des questions sur leur établissement dans la section « Questions/Réponses ». La même page précise que cette fonctionnalité n'est disponible que pour certaines catégories d'activité et certaines régions, et que son apparence et son fonctionnement pourront changer. Autrement dit : selon votre activité et votre pays, la section peut ne pas apparaître sur votre fiche.</p>
 
-<h3>L'ordre d'affichage n'est pas chronologique</h3>
-<p>Google n'affiche pas les questions de la plus récente à la plus ancienne : il met en avant celles qui ont reçu le plus de <strong>votes positifs</strong> (le pouce). Une seule question est visible dans l'aperçu de la fiche sur mobile, deux à trois sur ordinateur, et le reste est replié derrière un lien « Voir toutes les questions ».</p>
-<p>La conséquence est directe : la question qui compte n'est pas la plus récente, c'est celle qui a le plus de pouces. Une question embarrassante qui recueille quelques votes peut rester en tête de votre fiche pendant des mois, tandis que quelques votes sur vos propres questions suffisent à les installer en première position.</p>
+<h3>Côté Google Maps : des questions posées par Google</h3>
+<p>L'aide Google Maps ne décrit plus comment un internaute pose une question publique sur un lieu. Elle décrit comment <a href="https://support.google.com/maps/answer/7384591?hl=fr" target="_blank" rel="noopener noreferrer">répondre aux questions que Google propose</a> : elles portent sur des informations dans lesquelles Google a moins confiance, et chaque réponse est combinée aux contributions d'autres utilisateurs, des propriétaires des établissements et d'autres sources, avant de s'afficher sur la page du lieu, dans l'onglet « À propos », et dans les résultats de recherche. Le nom de la personne et ses réponses individuelles ne sont pas affichés.</p>
 
-<h3>Les notifications sont peu fiables</h3>
-<p>De nombreux propriétaires découvrent une question vieille de six mois. Les alertes de nouvelles questions arrivent de façon irrégulière selon le canal de gestion utilisé, et elles se perdent dans les mails automatiques. La seule méthode fiable reste de <strong>consulter volontairement la section une à deux fois par mois</strong>, en cherchant son propre établissement sur Google Maps depuis un compte connecté.</p>
-<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>⚠️ Piège fréquent :</strong> les réponses d'internautes ne sont pas vérifiées par Google. Un ancien client qui affirme de bonne foi que vous fermez à 18 h alors que vous fermez à 19 h 30 crée une information fausse, durable, affichée sur votre fiche. Ce n'est pas de la malveillance : c'est du bruit, et le bruit coûte des visites.</p>
-</div>
+<h3>« Demander à Maps », propulsé par Gemini</h3>
+<p>Google Maps permet aussi de <a href="https://support.google.com/maps/answer/16842041?hl=fr" target="_blank" rel="noopener noreferrer">poser des questions via « Demander à Maps »</a> et d'obtenir des recommandations et des réponses de Gemini. La page d'aide ne détaille pas les sources utilisées pour construire ces réponses : il serait hasardeux de promettre qu'un champ précis de votre fiche sera repris tel quel.</p>
+
+<h3>Ce qui reste sous votre contrôle</h3>
+<p>Les informations que vous renseignez vous-même dans votre fiche restent ce que vous maîtrisez directement. Google indique d'ailleurs, dans sa page sur le <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">classement local</a>, que les établissements dont les informations sont complètes et exactes ont plus de chances d'apparaître dans les résultats de recherche locale. D'où la méthode qui suit : repérer les questions de vos clients, puis publier les réponses aux bons endroits.</p>
 </section>
 
 <section id="pre-remplir" class="scroll-mt-28 mb-16">
-<h2>Pré-remplir sa propre section Q/R : autorisé, et sous-exploité</h2>
-<p>Le point le plus contre-intuitif du dispositif est aussi le plus rentable : <strong>Google autorise explicitement un propriétaire à poser lui-même des questions sur sa propre fiche, puis à y répondre</strong>. Il ne s'agit pas d'une faille tolérée mais d'un usage recommandé, à la manière d'une FAQ officielle.</p>
-<p>La marche à suivre tient en quatre étapes et prend une trentaine de minutes :</p>
+<h2>Les méthodes à abandonner</h2>
+<p>Plusieurs conseils répandus reposaient sur l'ancienne section publique. Ils sont à retirer de vos habitudes, pour deux raisons : la documentation actuelle de Google ne les décrit pas, et certains exposent à un risque au regard du règlement.</p>
 <ul>
-<li><strong>Étape 1 — Sortez du compte gestionnaire.</strong> Une question ne peut pas être posée depuis le compte propriétaire de la fiche. Utilisez un second compte Google personnel, ou celui d'un collaborateur, pour publier la question.</li>
-<li><strong>Étape 2 — Publiez la question,</strong> formulée exactement comme un client la poserait, avec les mots qu'il emploie et non votre vocabulaire métier.</li>
-<li><strong>Étape 3 — Reconnectez-vous au compte gestionnaire</strong> et répondez à la question. La réponse s'affichera avec la mention « Propriétaire », c'est-à-dire avec le maximum de crédibilité.</li>
-<li><strong>Étape 4 — Votez pour la question</strong> depuis un ou deux comptes différents. Ce sont les votes qui décident de la position d'affichage : sans eux, votre travail restera enterré sous une question de 2022.</li>
+<li><strong>Publier des questions depuis un second compte.</strong> Le <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">règlement relatif aux contenus ajoutés par les utilisateurs dans Maps</a> range parmi les engagements artificiels le « contenu publié à partir de plusieurs comptes par une même personne ou à sa demande ».</li>
+<li><strong>Faire voter pour ses propres questions depuis d'autres comptes.</strong> Même logique : ce sont des interactions produites depuis plusieurs comptes à la demande d'une même personne.</li>
+<li><strong>Bâtir sa stratégie sur l'ordre d'affichage des questions ou sur une mention « Propriétaire ».</strong> Ni l'un ni l'autre ne figure dans les pages d'aide consultées, et Google prévient que l'apparence et le fonctionnement de la section pourront changer.</li>
+<li><strong>Programmer la surveillance mensuelle d'un fil de questions.</strong> Si la section n'apparaît pas sur votre fiche, il n'y a rien à surveiller ; le temps est mieux employé à vérifier les informations que voit le client, comme expliqué plus bas.</li>
 </ul>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>✅ La règle à ne pas franchir :</strong> vous pouvez poser et répondre à vos propres questions, mais elles doivent être <strong>authentiques et informatives</strong>. Une question du type « Êtes-vous le meilleur plombier de la ville ? » est du contenu promotionnel, pas une question, et elle peut être supprimée. Une question du type « Intervenez-vous le dimanche en urgence ? » est utile, donc légitime.</p>
+<p class="text-sm text-emerald-900"><strong>✅ Ce qui reste valable :</strong> si la section « Questions/Réponses » apparaît sur votre fiche, répondez aux questions présentes depuis le compte qui gère la fiche, factuellement et sans promotion. Et quel que soit le canal, le règlement de Google rappelle que les contributions à Google Maps doivent refléter une expérience réellement vécue.</p>
 </div>
-<h3>Combien de questions publier</h3>
-<p>Entre six et dix questions couvrent l'essentiel des objections d'un établissement local. En dessous de cinq, la section paraît vide et les questions d'inconnus reprennent la main. Au-delà de douze, l'internaute décroche et l'effet devient nul. La bonne cible est <strong>huit questions, dont trois qui traitent vos objections d'achat réelles</strong> : le prix, l'accès et le délai.</p>
 </section>
 
 <section id="quelles-questions" class="scroll-mt-28 mb-16">
-<h2>Les 12 questions qui rapportent le plus, classées par intention</h2>
-<p>Toutes les questions ne se valent pas. Celles qui déclenchent une visite traitent une friction concrète entre l'envie et le passage à l'acte. Voici les douze modèles les plus efficaces, dans lesquels il suffit de remplacer les éléments propres à votre activité.</p>
+<h2>Les 12 questions à anticiper, classées par intention</h2>
+<p>Les questions de vos clients, elles, n'ont pas changé. Chacune correspond à une hésitation entre l'envie de venir et le passage à l'acte. Voici douze modèles, dans lesquels il suffit de remplacer les éléments propres à votre activité ; la section suivante indique où publier chaque réponse.</p>
 
-<h3>Les 4 questions d'accès (les plus rentables)</h3>
+<h3>Les 4 questions d'accès</h3>
 <ul>
-<li><strong>« Y a-t-il un parking à proximité ? »</strong> — première cause d'abandon en zone urbaine, et question qui recueille le plus de votes dans presque tous les secteurs.</li>
-<li><strong>« L'établissement est-il accessible en fauteuil roulant ? »</strong> — utile en soi, et doublée d'un signal positif pour les attributs de votre fiche.</li>
-<li><strong>« Faut-il prendre rendez-vous ou peut-on venir sans réservation ? »</strong> — lève l'hésitation la plus fréquente sur les fiches de prestation.</li>
-<li><strong>« Êtes-vous ouverts le dimanche / entre midi et deux ? »</strong> — les horaires atypiques sont mal lus dans le bloc horaires, une question les rend explicites.</li>
+<li><strong>« Y a-t-il un parking à proximité ? »</strong> — une question pratique qui peut décider d'un déplacement en ville.</li>
+<li><strong>« L'établissement est-il accessible en fauteuil roulant ? »</strong> — une information attendue, à renseigner précisément.</li>
+<li><strong>« Faut-il prendre rendez-vous ou peut-on venir sans réservation ? »</strong> — l'hésitation classique des métiers de prestation.</li>
+<li><strong>« Êtes-vous ouverts le dimanche / entre midi et deux ? »</strong> — les horaires atypiques gagnent à être explicites.</li>
 </ul>
 
 <h3>Les 4 questions de prix et de paiement</h3>
 <ul>
 <li><strong>« Quel est le tarif d'une première consultation / d'un diagnostic ? »</strong></li>
-<li><strong>« Le devis est-il gratuit ? »</strong> — question décisive pour tous les métiers du bâtiment et de la réparation.</li>
+<li><strong>« Le devis est-il gratuit ? »</strong> — une question centrale pour les métiers du bâtiment et de la réparation.</li>
 <li><strong>« Acceptez-vous la carte bancaire, les titres restaurant, les chèques ? »</strong></li>
-<li><strong>« Proposez-vous un paiement en plusieurs fois ? »</strong> — pertinent au-dessus de 300 € de panier.</li>
+<li><strong>« Proposez-vous un paiement en plusieurs fois ? »</strong> — surtout pertinent pour les paniers élevés.</li>
 </ul>
 
 <h3>Les 4 questions de prestation</h3>
 <ul>
 <li><strong>« Combien de temps faut-il compter pour [votre prestation type] ? »</strong></li>
-<li><strong>« Travaillez-vous avec [marque / gamme / spécialité] ? »</strong> — capte des recherches très qualifiées.</li>
+<li><strong>« Travaillez-vous avec [marque / gamme / spécialité] ? »</strong> — une précision utile aux clients qui cherchent quelque chose de précis.</li>
 <li><strong>« Quel est le délai pour obtenir un rendez-vous ? »</strong></li>
-<li><strong>« Que se passe-t-il si le résultat ne me convient pas ? »</strong> — la question de la garantie, rarement posée et toujours lue.</li>
+<li><strong>« Que se passe-t-il si le résultat ne me convient pas ? »</strong> — la question de la garantie, à traiter avant qu'elle ne soit posée.</li>
 </ul>
 
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>💡 Où trouver vos vraies questions :</strong> ouvrez l'historique des appels manqués et les messages reçus sur votre fiche du mois écoulé. Les trois questions qui reviennent le plus au téléphone sont exactement celles qui doivent figurer dans le bloc Q/R. Chaque question publiée est un appel que vous n'aurez plus à prendre — et un client qui n'aura pas raccroché faute de réponse.</p>
+<p class="text-sm text-blue-900"><strong>💡 Où trouver vos vraies questions :</strong> notez pendant un mois les questions posées au téléphone, par mail et au comptoir. Celles qui reviennent le plus souvent sont celles dont la réponse doit être la plus facile à trouver en ligne.</p>
 </div>
 </section>
 
 <section id="rediger-reponses" class="scroll-mt-28 mb-16">
-<h2>Rédiger une réponse qui convertit plutôt qu'une réponse qui informe</h2>
-<p>Une réponse en trois mots règle la question mais ne produit rien. Une bonne réponse comporte trois éléments : <strong>la réponse directe, un élément de réassurance, et une invitation à agir</strong>. Le tout en trois phrases maximum, parce que la section est lue sur mobile, au milieu d'une comparaison entre trois fiches.</p>
+<h2>Où publier les réponses, et comment les rédiger</h2>
+<p>Une question de client mérite une réponse qu'il trouve sans avoir à appeler. La section Questions/Réponses n'étant disponible que pour certaines activités et régions, la réponse doit aussi vivre ailleurs : dans les informations officielles de la fiche, dans vos posts et sur votre site.</p>
 
-<h3>Le tableau des reformulations</h3>
+<h3>Le tableau des emplacements</h3>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
 <thead>
 <tr class="bg-gray-100">
-<th class="border border-gray-300 px-3 py-2 text-left">Question</th>
-<th class="border border-gray-300 px-3 py-2 text-left">Réponse faible</th>
-<th class="border border-gray-300 px-3 py-2 text-left">Réponse qui convertit</th>
+<th class="border border-gray-300 px-3 py-2 text-left">Question du client</th>
+<th class="border border-gray-300 px-3 py-2 text-left">Où publier la réponse</th>
+<th class="border border-gray-300 px-3 py-2 text-left">Réponse précise (exemple fictif)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="border border-gray-300 px-3 py-2">Y a-t-il un parking ?</td>
-<td class="border border-gray-300 px-3 py-2">Oui.</td>
-<td class="border border-gray-300 px-3 py-2">Oui, un parking gratuit de 12 places devant l'entrée, plus le parking municipal à 80 m. Aucun besoin de tourner, même le samedi matin.</td>
+<td class="border border-gray-300 px-3 py-2">Description de la fiche, et page d'accès de votre site</td>
+<td class="border border-gray-300 px-3 py-2">Parking gratuit de 12 places devant l'entrée, plus le parking municipal à 80 m.</td>
 </tr>
 <tr class="bg-gray-50">
 <td class="border border-gray-300 px-3 py-2">Le devis est-il gratuit ?</td>
-<td class="border border-gray-300 px-3 py-2">Oui, devis gratuit.</td>
-<td class="border border-gray-300 px-3 py-2">Oui, le devis et le déplacement sont gratuits et sans engagement. Comptez 48 h pour le recevoir par mail après la visite.</td>
+<td class="border border-gray-300 px-3 py-2">Éditeur de services de la fiche, et FAQ de votre site</td>
+<td class="border border-gray-300 px-3 py-2">Devis et déplacement gratuits et sans engagement, envoyés par mail sous 48 h après la visite.</td>
 </tr>
 <tr>
 <td class="border border-gray-300 px-3 py-2">Faut-il réserver ?</td>
-<td class="border border-gray-300 px-3 py-2">C'est mieux.</td>
-<td class="border border-gray-300 px-3 py-2">Sans rendez-vous du mardi au vendredi avant 11 h, sur réservation le reste du temps. Le samedi se remplit environ dix jours à l'avance.</td>
+<td class="border border-gray-300 px-3 py-2">Description de la fiche, et post « Actualités » quand l'organisation change</td>
+<td class="border border-gray-300 px-3 py-2">Sans rendez-vous du mardi au vendredi avant 11 h, sur réservation le reste du temps.</td>
 </tr>
 <tr class="bg-gray-50">
-<td class="border border-gray-300 px-3 py-2">Quel est le délai ?</td>
-<td class="border border-gray-300 px-3 py-2">Ça dépend.</td>
-<td class="border border-gray-300 px-3 py-2">Deux à quatre jours pour une intervention courante, le jour même pour une urgence signalée avant 10 h. Nous vous confirmons le créneau par SMS.</td>
+<td class="border border-gray-300 px-3 py-2">Êtes-vous ouverts le lundi de Pâques ?</td>
+<td class="border border-gray-300 px-3 py-2">Horaires exceptionnels de la fiche</td>
+<td class="border border-gray-300 px-3 py-2">Ouvert le lundi de Pâques de 9 h à 13 h.</td>
 </tr>
 </tbody>
 </table>
@@ -373,92 +361,78 @@ export const articles: Record<string, {
 
 <h3>Les quatre règles de rédaction</h3>
 <ul>
-<li><strong>Donnez un chiffre.</strong> Un nombre de places, un délai en heures, un tarif de départ. Le chiffre est ce qui distingue une réponse crédible d'une réponse commerciale.</li>
-<li><strong>Écrivez les mots que les gens tapent.</strong> « parking », « sans rendez-vous », « ouvert le dimanche » : la section Q/R est du texte indexé, associé à votre établissement.</li>
-<li><strong>N'ajoutez jamais de numéro de téléphone ni de lien dans la réponse.</strong> C'est le principal motif de suppression automatique, et vos coordonnées figurent déjà en haut de la fiche.</li>
-<li><strong>Ne promettez rien que vous ne tiendrez pas.</strong> Une réponse trop optimiste sur les délais se retrouve, trois semaines plus tard, citée dans un avis à deux étoiles.</li>
+<li><strong>Donnez un chiffre.</strong> Un nombre de places, un délai en heures, un tarif de départ. Le chiffre est ce qui distingue une réponse précise d'une réponse commerciale.</li>
+<li><strong>Écrivez les mots que vos clients emploient.</strong> « parking », « sans rendez-vous », « ouvert le dimanche » : ce sont ceux que vous entendez au téléphone.</li>
+<li><strong>Dans un post, pas de numéro de téléphone dans le texte.</strong> Google indique, dans son <a href="https://support.google.com/business/answer/7342169?hl=fr" target="_blank" rel="noopener noreferrer">aide sur les posts</a>, qu'un post dont la description contient un numéro de téléphone peut être refusé ; le bouton d'action fait ce travail.</li>
+<li><strong>Ne promettez rien que vous ne tiendrez pas.</strong> Une réponse trop optimiste sur les délais peut se retrouver citée dans un avis négatif.</li>
 </ul>
-<p>Ce travail rejoint celui des autres champs de la fiche : services, attributs, description. Si ces éléments ne sont pas encore renseignés, commencez par là — notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a> passe chaque champ en revue dans l'ordre de rentabilité.</p>
+<p>Ce travail rejoint celui des autres champs de la fiche : services, attributs, description. Si ces éléments ne sont pas encore renseignés, commencez par là — notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a> passe chaque champ en revue.</p>
 </section>
 
 <section id="surveiller-moderer" class="scroll-mt-28 mb-16">
-<h2>Surveiller, corriger, signaler : la routine mensuelle</h2>
-<p>Le bloc Q/R est le seul endroit de votre fiche où du contenu peut apparaître sans que vous en soyez averti de manière fiable. Une routine de dix minutes par mois suffit à en garder le contrôle.</p>
+<h2>Vérifier ce que voit le client : la routine</h2>
+<p>Puisque l'information affichée peut combiner plusieurs sources, la vérification change d'objet : il ne s'agit plus de lire un fil de questions, mais de contrôler ce qu'un client voit réellement.</p>
 
 <h3>La routine en quatre gestes</h3>
 <ul>
-<li><strong>Cherchez votre établissement sur Google Maps depuis un compte connecté</strong>, et ouvrez « Voir toutes les questions ». C'est la seule vue exhaustive.</li>
-<li><strong>Répondez à toute question non traitée</strong>, même ancienne. Une réponse publiée un an après reste utile : la question, elle, est toujours affichée.</li>
-<li><strong>Corrigez les réponses erronées d'internautes</strong> en publiant la vôtre. Vous ne pouvez pas supprimer la leur, mais la mention « Propriétaire » place la vôtre au-dessus dans la lecture.</li>
-<li><strong>Votez pour les trois questions que vous voulez voir en tête.</strong> C'est le seul levier de hiérarchisation dont vous disposez.</li>
+<li><strong>Ouvrez votre fiche comme un client</strong>, sur un téléphone, dans Google Maps et dans la recherche Google, et lisez l'onglet « À propos ».</li>
+<li><strong>Comparez chaque information à la réalité</strong> : horaires, accès, moyens de paiement, prestations. Corrigez dans votre fiche tout ce qui est inexact ou manquant.</li>
+<li><strong>Si la section « Questions/Réponses » apparaît</strong>, répondez aux questions restées sans réponse depuis le compte qui gère la fiche.</li>
+<li><strong>Relisez votre dernier post</strong> : s'il annonce une offre ou un horaire qui n'est plus valable, remplacez-le.</li>
 </ul>
 
-<h3>Ce qui peut être signalé, et ce qui ne peut pas l'être</h3>
-<p>Le signalement fonctionne quand le contenu enfreint une règle : propos haineux ou obscènes, contenu manifestement hors sujet, contenu promotionnel pour un autre établissement, données personnelles, ou usurpation. Il ne fonctionne pas parce que la question vous dérange. Une question du type « Pourquoi vos tarifs ont-ils augmenté ? » est légitime, restera en ligne, et la seule réponse gagnante est une réponse honnête et factuelle.</p>
-<p>La logique est la même que pour les avis : on ne fait pas disparaître une critique, on la met en perspective. Voir notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs sur Google</a> et, pour les contenus illégitimes, la méthode pour <a href="/blog/faux-avis-google-signaler">signaler un faux avis Google</a>.</p>
-<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>⚠️ Le cas du concurrent :</strong> il arrive qu'une question orientée soit publiée par une entreprise rivale (« Est-ce vrai que vous ne faites plus les réparations sous garantie ? »). N'entrez pas dans le conflit et ne mentionnez jamais l'auteur. Répondez factuellement, en deux phrases, et votez pour deux autres questions afin de faire redescendre celle-ci dans l'affichage. Une joute publique attire les votes, donc la met en avant : c'est exactement ce qu'il faut éviter.</p>
-</div>
+<h3>Signaler un contenu, dans les cas prévus</h3>
+<p>Le signalement sert aux contenus qui enfreignent le règlement de Google, pas aux informations qui dérangent. La logique est la même que pour les avis : on ne fait pas disparaître une critique, on la met en perspective. Voir notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs sur Google</a> et, pour les contenus illégitimes, la méthode pour <a href="/blog/faux-avis-google-signaler">signaler un faux avis Google</a>.</p>
 </section>
 
 <section id="qr-et-avis" class="scroll-mt-28 mb-16">
-<h2>Q/R et avis : deux leviers qui ne jouent pas au même endroit</h2>
-<p>Il faut être clair sur ce que ce travail produit, et sur ce qu'il ne produit pas. Google classe les fiches locales sur trois critères : la <strong>pertinence</strong>, la <strong>distance</strong> et la <strong>proéminence</strong>. La section Questions/Réponses n'agit pas directement sur la proéminence : elle ne fait pas monter une fiche dans le pack local.</p>
-<p>Son effet se situe une étape plus loin dans le parcours, au moment du choix. Une fiche affichée en troisième position mais qui répond à toutes les objections d'un internaute pressé peut lui être préférée à la première. Les avis, eux, jouent aux deux étages : ils pèsent sur le classement <em>et</em> sur le choix.</p>
+<h2>Informations de fiche et avis : deux leviers qui ne jouent pas au même endroit</h2>
+<p>Il faut être clair sur ce que ce travail produit. Google indique que les résultats locaux reposent principalement sur la <strong>pertinence</strong>, la <strong>distance</strong> et la <strong>proéminence</strong>. Deux de ses indications concernent directement ce guide : les établissements dont les informations sont complètes et exactes ont plus de chances d'apparaître dans les résultats locaux, et davantage d'avis et de notes positives peuvent améliorer le classement.</p>
+<p>Les deux chantiers sont donc complémentaires, mais ils ne demandent pas le même effort : des informations exactes se renseignent une fois puis se vérifient, les avis se collectent en continu.</p>
 
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
 <thead>
 <tr class="bg-gray-100">
 <th class="border border-gray-300 px-3 py-2 text-left">Critère</th>
-<th class="border border-gray-300 px-3 py-2 text-left">Questions / Réponses</th>
+<th class="border border-gray-300 px-3 py-2 text-left">Informations de la fiche</th>
 <th class="border border-gray-300 px-3 py-2 text-left">Avis Google</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="border border-gray-300 px-3 py-2">Effet sur le classement local</td>
-<td class="border border-gray-300 px-3 py-2">Indirect, faible</td>
-<td class="border border-gray-300 px-3 py-2">Direct, majeur (proéminence)</td>
+<td class="border border-gray-300 px-3 py-2">Ce qu'en dit Google</td>
+<td class="border border-gray-300 px-3 py-2">Des informations complètes et exactes augmentent les chances d'apparaître</td>
+<td class="border border-gray-300 px-3 py-2">Davantage d'avis et de notes positives peuvent améliorer le classement</td>
 </tr>
 <tr class="bg-gray-50">
-<td class="border border-gray-300 px-3 py-2">Effet sur le taux de contact</td>
-<td class="border border-gray-300 px-3 py-2">Fort sur les fiches déjà vues</td>
-<td class="border border-gray-300 px-3 py-2">Très fort</td>
+<td class="border border-gray-300 px-3 py-2">Qui écrit</td>
+<td class="border border-gray-300 px-3 py-2">Vous, et d'autres sources que Google peut combiner</td>
+<td class="border border-gray-300 px-3 py-2">Vos clients uniquement</td>
 </tr>
 <tr>
-<td class="border border-gray-300 px-3 py-2">Contrôle du contenu</td>
-<td class="border border-gray-300 px-3 py-2">Partiel : chacun peut écrire</td>
-<td class="border border-gray-300 px-3 py-2">Nul : seul le client écrit</td>
-</tr>
-<tr class="bg-gray-50">
-<td class="border border-gray-300 px-3 py-2">Effort initial</td>
-<td class="border border-gray-300 px-3 py-2">30 à 45 minutes, une fois</td>
+<td class="border border-gray-300 px-3 py-2">Rythme de travail</td>
+<td class="border border-gray-300 px-3 py-2">Une mise en place, puis des vérifications</td>
 <td class="border border-gray-300 px-3 py-2">Continu, à chaque client</td>
 </tr>
-<tr>
-<td class="border border-gray-300 px-3 py-2">Entretien</td>
-<td class="border border-gray-300 px-3 py-2">10 minutes par mois</td>
-<td class="border border-gray-300 px-3 py-2">Une phrase à chaque encaissement</td>
-</tr>
 <tr class="bg-gray-50">
-<td class="border border-gray-300 px-3 py-2">Durée de vie du travail</td>
-<td class="border border-gray-300 px-3 py-2">Permanente</td>
-<td class="border border-gray-300 px-3 py-2">Décroissante : la fraîcheur compte</td>
+<td class="border border-gray-300 px-3 py-2">Ce qui les périme</td>
+<td class="border border-gray-300 px-3 py-2">Un changement d'horaires, de tarif ou de prestation</td>
+<td class="border border-gray-300 px-3 py-2">Le temps : un avis ancien renseigne moins sur l'établissement d'aujourd'hui</td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<p>La conclusion pratique est simple : un établissement avec huit questions parfaitement rédigées et onze avis restera derrière un concurrent à cent quarante avis. L'ordre rationnel est donc : <strong>d'abord un dispositif de collecte qui tourne tout seul, ensuite le remplissage de la section Q/R</strong>.</p>
+<p>La conclusion pratique est simple : une fiche parfaitement renseignée mais pauvre en avis se prive du levier que Google cite explicitement pour le classement. L'ordre rationnel est donc : <strong>d'abord un dispositif de collecte qui tourne tout seul, ensuite une séance pour mettre la fiche à jour</strong>.</p>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>⚙️ La combinaison qui marche :</strong> une plaque NFC posée côté client à l'encaissement collecte les avis en continu, sans effort quotidien, pendant que la section Q/R traite les objections des internautes qui vous découvrent. La première fait monter la fiche, la seconde transforme la visite en appel. Voir le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a> pour couvrir accueil et comptoir, ou le <a href="/product/starter" class="font-semibold underline">Pack Starter</a> pour un point de contact unique.</p>
+<p class="text-sm text-emerald-900"><strong>⚙️ La combinaison utile :</strong> une plaque NFC posée côté client à l'encaissement permet de proposer l'avis à chaque client, sans effort quotidien ni contrepartie, pendant que des informations de fiche exactes répondent aux questions des internautes qui vous découvrent. Voir le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a> pour couvrir accueil et comptoir, ou le <a href="/product/starter" class="font-semibold underline">Pack Starter</a> pour un point de contact unique.</p>
 </div>
 </section>
 
 <section id="par-secteur" class="scroll-mt-28 mb-16">
-<h2>Cinq jeux de questions prêts à publier, par secteur</h2>
-<p>Voici, pour cinq activités courantes, les quatre questions qui obtiennent le plus de votes. Elles peuvent être publiées telles quelles, en adaptant les chiffres.</p>
+<h2>Cinq jeux de questions à anticiper, par secteur</h2>
+<p>Voici, pour cinq activités courantes, quatre questions fréquentes. Pour chacune, vérifiez qu'un client trouve la réponse sur votre fiche ou sur votre site, sans avoir à vous appeler.</p>
 
 <h3>Restaurant</h3>
 <ul>
@@ -500,76 +474,73 @@ export const articles: Record<string, {
 <li>« Les animaux sont-ils acceptés ? »</li>
 </ul>
 
-<p>Le principe reste identique quel que soit le métier : ce sont les questions que l'on vous pose au téléphone dix fois par mois. Nos guides sectoriels détaillent le reste du dispositif, notamment pour le <a href="/blog/plaque-nfc-restaurant">restaurant</a>, le <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a> et le <a href="/blog/plaque-nfc-hotel">hôtel</a>.</p>
+<p>Le principe reste identique quel que soit le métier : ce sont les questions que l'on vous pose le plus souvent au téléphone. Nos guides sectoriels détaillent le reste du dispositif, notamment pour le <a href="/blog/plaque-nfc-restaurant">restaurant</a>, le <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a> et le <a href="/blog/plaque-nfc-hotel">hôtel</a>.</p>
 </section>
 
 <section id="erreurs" class="scroll-mt-28 mb-16">
-<h2>Les 7 erreurs qui rendent la section Q/R inutile ou nuisible</h2>
+<h2>Les 7 erreurs qui rendent ce travail inutile ou risqué</h2>
 <ul>
-<li><strong>Ne jamais consulter la section.</strong> C'est l'erreur de base : des questions y dorment, parfois avec des réponses fausses écrites par des inconnus, et elles s'affichent sur votre fiche depuis des mois.</li>
-<li><strong>Publier ses questions et oublier de voter.</strong> Sans votes, vos questions restent enfouies derrière celles d'internautes. Le vote est ce qui décide de l'ordre d'affichage, pas la date.</li>
-<li><strong>Poser des questions promotionnelles.</strong> « Êtes-vous les meilleurs de la région ? » n'informe personne, fait mauvais effet et peut être supprimé. Une question doit répondre à une friction réelle.</li>
-<li><strong>Répondre par oui ou par non.</strong> Une réponse sans chiffre ni précision ne lève aucune hésitation et ne se distingue pas d'une fiche vide.</li>
-<li><strong>Glisser un numéro ou un lien dans la réponse.</strong> Motif de suppression fréquent, et parfaitement inutile puisque les coordonnées figurent déjà en haut de la fiche.</li>
-<li><strong>Entrer en conflit avec un auteur hostile.</strong> Une réponse défensive attire l'attention, donc les votes, donc remonte la question litigieuse en tête de fiche. Répondre factuellement, une fois, et passer à autre chose.</li>
-<li><strong>Traiter la Q/R comme une alternative aux avis.</strong> Huit questions parfaites ne compensent pas quinze avis face à un concurrent qui en a cent. La Q/R améliore la conversion d'une fiche déjà vue ; ce sont les avis qui la font voir.</li>
+<li><strong>Continuer à appliquer les anciennes méthodes.</strong> Pré-remplir depuis un second compte ou faire voter depuis plusieurs comptes ne correspond plus à ce que Google documente, et le règlement vise le contenu publié depuis plusieurs comptes par une même personne.</li>
+<li><strong>Chercher une section qui n'existe pas sur sa fiche.</strong> Google réserve la section Questions/Réponses à certaines catégories et régions : si elle n'apparaît pas, publiez les réponses ailleurs.</li>
+<li><strong>Laisser des informations incomplètes.</strong> Horaires, accès, moyens de paiement, prestations : chaque trou oblige le client à appeler, ou à chercher ailleurs.</li>
+<li><strong>Oublier les horaires exceptionnels.</strong> Un jour férié mal renseigné produit une information fausse au pire moment.</li>
+<li><strong>Mettre un numéro de téléphone dans le texte d'un post.</strong> Google indique qu'un tel post peut être refusé, et vos coordonnées figurent déjà sur la fiche.</li>
+<li><strong>Répondre par oui ou par non.</strong> Une réponse sans chiffre ni précision ne lève aucune hésitation.</li>
+<li><strong>Traiter les informations de fiche comme une alternative aux avis.</strong> Des informations parfaites ne remplacent pas le levier que Google cite explicitement pour le classement : elles aident à choisir une fiche déjà vue, les avis peuvent aider à la faire voir.</li>
 </ul>
-<p>Cette dernière erreur est la plus coûteuse : elle donne le sentiment d'avoir travaillé son référencement local sans avoir touché au seul levier qui déplace vraiment une fiche. Pour situer l'écart à combler, notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne la méthode de calcul.</p>
+<p>Cette dernière erreur est la plus coûteuse : elle donne le sentiment d'avoir travaillé son référencement local sans avoir touché aux avis. Pour situer l'écart à combler, notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne la méthode de calcul.</p>
 </section>
 
 <section id="faq-questions-reponses" class="scroll-mt-28 mb-16">
 <h2>FAQ — Questions/Réponses Google Business Profile</h2>
 
-<h3>Ai-je le droit de poser moi-même des questions sur ma fiche Google ?</h3>
-<p>Oui, Google l'autorise explicitement et le présente même comme une bonne pratique, à la manière d'une FAQ officielle. La seule contrainte technique est qu'une question ne peut pas être publiée depuis le compte qui gère la fiche : il faut utiliser un second compte Google, personnel ou celui d'un collaborateur. Vous répondez ensuite depuis le compte gestionnaire, ce qui affiche la mention « Propriétaire ». La limite à respecter est le contenu : les questions doivent être informatives et refléter des interrogations réelles de clients, jamais des accroches publicitaires.</p>
+<h3>La section Questions/Réponses existe-t-elle encore sur les fiches Google ?</h3>
+<p>Elle est toujours mentionnée dans l'aide de Google, mais sous une forme restreinte : les propriétaires et gestionnaires peuvent répondre aux questions dans la section « Questions/Réponses », une fonctionnalité que Google dit réservée à certaines catégories d'activité et certaines régions, et dont l'apparence et le fonctionnement pourront changer. Google a par ailleurs arrêté l'API Questions/Réponses le 3 novembre 2025, en indiquant mettre à jour la fonctionnalité. Si la section n'apparaît pas sur votre fiche, publiez vos réponses ailleurs.</p>
 
-<h3>Puis-je supprimer une question gênante posée par quelqu'un d'autre ?</h3>
-<p>Non, sauf si elle enfreint les règles de Google : propos haineux ou obscènes, contenu manifestement hors sujet, promotion d'un autre établissement, données personnelles ou usurpation d'identité. Dans ces cas, le signalement fonctionne. Une question simplement dérangeante ou critique reste en ligne, et la seule stratégie efficace est d'y répondre factuellement en deux phrases, puis de voter pour d'autres questions afin de la faire redescendre dans l'ordre d'affichage.</p>
+<h3>Peut-on encore pré-remplir ses propres questions depuis un second compte ?</h3>
+<p>C'est à éviter. L'aide actuelle de Google ne décrit pas cette pratique, et le règlement relatif aux contenus ajoutés dans Maps range parmi les engagements artificiels le « contenu publié à partir de plusieurs comptes par une même personne ou à sa demande ». Les réponses que vous vouliez publier ainsi ont leur place dans les informations de votre fiche, vos posts et votre site.</p>
 
-<h3>Les questions et réponses influencent-elles mon classement dans le pack local ?</h3>
-<p>Pas directement. Le classement local repose sur la pertinence, la distance et la proéminence, et c'est le volume, la fraîcheur et la note de vos avis qui pèsent sur ce dernier critère. La section Q/R agit à l'étape suivante : elle améliore le taux de contact d'une fiche déjà affichée, en levant les objections d'un internaute qui compare plusieurs établissements. Son texte étant indexé et associé à votre établissement, elle peut marginalement aider sur des requêtes très spécifiques, mais il ne faut pas en attendre un gain de position.</p>
+<h3>Qui répond aux questions que Google pose sur un lieu ?</h3>
+<p>Selon l'aide Google Maps, ces questions portent sur des informations dans lesquelles Google a moins confiance. Les réponses des utilisateurs sont combinées aux contributions d'autres utilisateurs, des propriétaires des établissements et d'autres sources, puis l'information s'affiche sur la page du lieu, dans l'onglet « À propos », sans le nom de la personne qui a répondu. Pour un propriétaire, le levier direct reste de tenir à jour les informations de sa fiche.</p>
 
-<h3>À quelle fréquence faut-il consulter la section Questions/Réponses ?</h3>
-<p>Une à deux fois par mois suffit pour un établissement local classique, davantage si votre fiche reçoit beaucoup de trafic. Les notifications de nouvelles questions étant irrégulières selon le canal de gestion, la seule méthode fiable consiste à chercher volontairement votre établissement sur Google Maps depuis un compte connecté et à ouvrir « Voir toutes les questions ». Comptez dix minutes : répondre aux nouvelles questions, corriger les réponses erronées d'internautes et voter pour les questions que vous voulez voir en tête.</p>
+<h3>Les questions et réponses influencent-elles le classement dans le pack local ?</h3>
+<p>Google ne les cite pas parmi ses critères. Sa page sur le classement local indique que les résultats reposent principalement sur la pertinence, la distance et la proéminence, que les fiches aux informations complètes et exactes ont plus de chances d'apparaître, et que davantage d'avis et de notes positives peuvent améliorer le classement. Le travail utile porte donc sur l'exactitude de la fiche et sur les avis.</p>
 
-<h3>Combien de questions faut-il publier sur sa fiche ?</h3>
-<p>Entre six et dix. En dessous de cinq, la section paraît vide et les questions d'inconnus occupent tout l'espace. Au-delà de douze, l'internaute décroche et l'effet devient nul. La cible efficace est huit questions, dont au moins trois traitent les objections d'achat réelles de votre métier : le prix, l'accès et le délai. Pour les trouver, la meilleure source n'est pas votre imagination mais votre téléphone — les trois questions que vos clients vous posent le plus souvent sont exactement celles qui manquent à votre fiche.</p>
+<h3>Où publier les réponses aux questions de vos clients ?</h3>
+<p>Dans les informations officielles de la fiche : description, horaires et horaires exceptionnels, attributs, services ou produits selon votre activité. Pour une information temporaire, dans un post Google « Actualités », « Offres » ou « Événements », sans numéro de téléphone dans le texte, puisque Google indique qu'un tel post peut être refusé. Pour le détail, sur une page FAQ de votre site.</p>
 
-<h3>Une réponse d'un internaute a-t-elle le même poids que la mienne ?</h3>
-<p>Visuellement, elles s'affichent au même endroit, mais la vôtre porte la mention « Propriétaire » lorsqu'elle est publiée depuis le compte gestionnaire, ce qui change nettement sa crédibilité aux yeux du lecteur. Le vrai risque n'est pas la concurrence entre les deux réponses, c'est l'absence de la vôtre : une information fausse écrite de bonne foi par un ancien client — un horaire, un tarif, une prestation abandonnée — reste affichée indéfiniment tant que personne ne la corrige. Vous ne pouvez pas effacer sa réponse, mais vous pouvez publier la bonne.</p>
-
-<h3>Faut-il d'abord travailler ses avis ou sa section Q/R ?</h3>
-<p>Les avis, sans hésitation. Ce sont eux qui déterminent si votre fiche apparaît dans les trois résultats du pack local ; la section Q/R n'intervient qu'après, quand l'internaute a déjà ouvert votre fiche. L'ordre rationnel consiste donc à installer d'abord un dispositif de collecte qui fonctionne sans effort quotidien — une plaque NFC posée côté client à l'encaissement, accompagnée d'une phrase courte — puis à consacrer une session de trente à quarante-cinq minutes au remplissage de la section Q/R. Le second chantier est ponctuel, le premier est permanent, et c'est le permanent qui décide de votre visibilité.</p>
+<h3>Faut-il d'abord travailler ses avis ou ses informations de fiche ?</h3>
+<p>Les deux, mais pas au même rythme. Des informations exactes se renseignent en une séance puis se vérifient de temps en temps ; les avis se collectent en continu, et Google les cite explicitement parmi ce qui peut aider le classement local. L'ordre rationnel consiste donc à installer un dispositif de collecte qui fonctionne sans effort quotidien — une plaque NFC posée côté client à l'encaissement, accompagnée d'une phrase courte —, puis à consacrer une séance à la mise à jour de la fiche.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
-<h2>Conclusion : trente minutes pour reprendre la main sur un bloc que vous ne contrôliez pas</h2>
-<p>La section Questions/Réponses est le seul endroit de votre fiche Google où des inconnus peuvent écrire à votre place, et le seul que presque personne ne surveille. Ce déséquilibre en fait une opportunité rare : trente à quarante-cinq minutes de travail, une fois, suffisent à installer huit questions bien rédigées qui traiteront vos objections d'achat pendant des années.</p>
-<p>Mais il faut garder l'ordre des priorités. Une fiche parfaitement documentée qui n'apparaît jamais dans les trois résultats du pack local ne sert à rien. <strong>Les avis font voir votre fiche, la section Q/R fait choisir votre établissement</strong> — et la première moitié du travail est celle qui exige un dispositif quotidien, pas une session de rédaction.</p>
+<h2>Conclusion : la section a changé, les questions de vos clients non</h2>
+<p>La section Questions/Réponses n'est plus l'espace ouvert que décrivent encore beaucoup de guides : Google a arrêté son API le 3 novembre 2025, la réserve à certaines catégories d'activité et certaines régions, et prévient que son fonctionnement pourra changer. Pré-remplir, faire voter et surveiller un fil public ne sont plus des méthodes à recommander.</p>
+<p>Ce qui reste utile tient en deux chantiers. Le premier est ponctuel : repérer les questions de vos clients et publier les réponses dans les informations de votre fiche, dans vos posts et sur votre site. Le second est permanent : collecter des avis, le levier que Google cite explicitement pour le classement local. <strong>Des informations exactes aident à choisir votre établissement, les avis peuvent aider à le faire voir</strong> — et c'est cette seconde moitié du travail qui exige un dispositif quotidien.</p>
 <p>Guides complémentaires : <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>, <a href="/blog/photos-google-business-profile">les photos de fiche</a>, <a href="/blog/google-posts-fiche-google-business-profile">les Google Posts</a>, ou notre méthode pour <a href="/blog/obtenir-plus-avis-google">obtenir plus d'avis Google</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900 mb-3"><strong>🎯 Une fiche bien remplie mérite un flux d'avis régulier</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Une fiche bien renseignée mérite un flux d'avis régulier</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT.</p>
 </div>
 </section>
 `,
   },
   'quand-clients-laissent-avis-google': {
     title: 'Quand vos clients laissent-ils leurs avis Google ? Heures, jours et saisons',
-    category: 'Statistiques',
+    category: 'Conseils',
     date: '7 septembre 2026',
-    readTime: '14 min',
+    readTime: '15 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Un avis Google n\'arrive pas au hasard : délai réel entre le scan et la publication, courbe horaire, rendement par jour de la semaine, saisonnalité par secteur, fraîcheur et vélocité. Deux tableaux chiffrés, trois cas de calcul et les 7 erreurs de timing.',
+    excerpt: 'Un avis Google n\'arrive pas forcément au moment du passage en caisse : ce qui sépare le scan de la publication, ce que l\'heure, le jour et la saison changent vraiment, pourquoi la régularité compte, comment mesurer votre propre rythme en 30 jours et les 7 erreurs de timing.',
     tocSections: [
       { id: 'pourquoi-le-moment-compte', label: 'Pourquoi le moment compte' },
       { id: 'delai-scan-publication', label: 'Du scan à la publication' },
       { id: 'heures', label: 'L\'heure de publication' },
       { id: 'jours-semaine', label: 'Les jours de la semaine' },
-      { id: 'saisonnalite', label: 'La saisonnalité par secteur' },
+      { id: 'saisonnalite', label: 'La saisonnalité de votre activité' },
       { id: 'fraicheur-google', label: 'Fraîcheur et vélocité' },
-      { id: 'calendrier', label: '3 exemples chiffrés' },
+      { id: 'calendrier', label: 'Planifier sa collecte' },
       { id: 'mesurer', label: 'Mesurer en 30 jours' },
       { id: 'erreurs', label: 'Les 7 erreurs de timing' },
       { id: 'faq-timing', label: 'FAQ' },
@@ -578,17 +549,17 @@ export const articles: Record<string, {
     content: `
 <section id="pourquoi-le-moment-compte" class="scroll-mt-28 mb-16">
 <h2>Pourquoi le moment où l'avis est déposé compte autant que son contenu</h2>
-<p>La plupart des commerçants raisonnent sur un seul nombre : le total d'avis affiché sur leur fiche. C'est le chiffre visible, celui qu'on compare au concurrent d'en face, et c'est aussi le plus trompeur. Deux établissements peuvent afficher 180 avis chacun et ne pas jouer du tout dans la même catégorie : le premier les a accumulés sur sept ans, le second sur dix-huit mois. Pour un internaute comme pour l'algorithme local, ce ne sont pas les mêmes 180 avis.</p>
+<p>La plupart des commerçants raisonnent sur un seul nombre : le total d'avis affiché sur leur fiche. C'est le chiffre visible, celui qu'on compare au concurrent d'en face, et c'est aussi le plus trompeur. Deux établissements peuvent afficher 180 avis chacun et ne pas jouer du tout dans la même catégorie : le premier les a accumulés sur sept ans, le second sur dix-huit mois. Pour un internaute qui regarde les dates, ce ne sont pas les mêmes 180 avis.</p>
 <p>La temporalité intervient à trois endroits, et chacun se travaille séparément :</p>
 <ul>
 <li><strong>Le moment du déclenchement</strong> : la minute précise, dans le parcours client, où la demande est faite et le support présenté. C'est le seul des trois que vous contrôlez entièrement.</li>
 <li><strong>Le délai de rédaction</strong> : ce qui s'écoule entre le scan et la publication effective. Il est bien plus long qu'on ne le croit, et il est décisif pour interpréter vos statistiques.</li>
-<li><strong>La distribution dans l'année</strong> : les creux et les pics de votre secteur, qui font qu'un même dispositif produit 4 avis en janvier et 19 en juillet sans que rien n'ait changé dans votre méthode.</li>
+<li><strong>La distribution dans l'année</strong> : les creux et les pics de votre secteur, qui font qu'un même dispositif, appliqué avec la même rigueur, produit moins d'avis les mois où vous servez moins de clients.</li>
 </ul>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> le réflexe de consultation est désormais général — <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français consultent les avis avant de choisir un professionnel</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs). Mais l'internaute ne lit pas votre total : il lit les cinq avis affichés en premier, et Google y met les plus récents en bonne place. Un avis de 2021 ne travaille plus pour vous.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> le réflexe de consultation est largement répandu — <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026 menée auprès de 1 350 Français représentatifs). Or ce qu'on lit, ce ne sont pas des totaux : ce sont des avis, chacun daté. Un avis de 2021 décrit votre établissement tel qu'il était en 2021.</p>
 </div>
-<p>Autrement dit, le volume vous fait entrer dans la course, la fraîcheur vous y maintient. Un commerce qui collecte 8 avis par mois pendant deux ans finit à un meilleur endroit qu'un commerce qui en a récolté 200 lors d'une opération unique il y a quatre ans, même si le second affiche un total supérieur.</p>
+<p>Autrement dit, le volume se voit, mais les dates aussi. Un commerce qui reçoit des avis chaque mois montre une activité présente ; un commerce dont tous les avis datent d'une opération menée il y a quatre ans montre surtout son passé, même s'il affiche un total supérieur.</p>
 </section>
 
 <section id="delai-scan-publication" class="scroll-mt-28 mb-16">
@@ -596,149 +567,141 @@ export const articles: Record<string, {
 <p>C'est le point le plus mal compris, et celui qui fait conclure à tort qu'un dispositif ne fonctionne pas. Quand un client approche son téléphone d'une plaque NFC, il ne publie pas un avis : il ouvre une page. Entre cette ouverture et un texte publié, il existe une chaîne d'étapes dont chacune perd du monde.</p>
 <h3>Les quatre étapes du délai</h3>
 <ul>
-<li><strong>L'ouverture de la page (instantanée)</strong> : le téléphone bascule sur le formulaire d'avis Google en une à deux secondes. Rien ne se perd ici, sauf problème technique de lecture.</li>
-<li><strong>L'identification au compte Google (0 à 60 secondes)</strong> : un client déjà connecté enchaîne directement. Un client déconnecté, ou sur un iPhone où le compte Google n'est pas actif dans le navigateur, doit se connecter — et c'est là que la majorité des abandons se produit.</li>
-<li><strong>La note en étoiles (5 à 15 secondes)</strong> : très peu d'abandon à ce stade. Celui qui est allé jusqu'au formulaire clique presque toujours sur les étoiles.</li>
-<li><strong>Le texte, puis la validation (30 secondes à plusieurs jours)</strong> : c'est l'étape longue. Beaucoup de clients notent sur place et rédigent plus tard, dans le métro, le soir, ou le lendemain matin. L'avis est alors publié à un moment sans rapport avec celui du scan.</li>
+<li><strong>L'ouverture de la page</strong> : le téléphone affiche le formulaire d'avis Google. Rien ne se perd ici, sauf problème de lecture.</li>
+<li><strong>L'identification au compte Google</strong> : pour publier un avis, il faut être connecté à un compte Google (<a href="https://support.google.com/maps/answer/6230175?hl=fr" target="_blank" rel="noopener noreferrer">aide Google Maps</a>). Un client déjà connecté enchaîne ; un client déconnecté doit d'abord se connecter, et c'est une étape où il peut renoncer.</li>
+<li><strong>La note en étoiles</strong> : le geste le plus rapide du parcours.</li>
+<li><strong>Le texte, puis la validation</strong> : c'est l'étape la plus longue et la plus variable. Un client peut écrire tout de suite, ou remettre la rédaction au soir ou au lendemain. L'avis est alors publié à un moment sans rapport avec celui du scan.</li>
 </ul>
-<p>Cette dissociation explique un phénomène que les commerçants observent tous : les avis n'apparaissent pas aux heures d'ouverture. Un salon qui ferme à 19 h voit ses avis tomber à 21 h. Un restaurant du soir en reçoit à 8 h le lendemain. Ce n'est pas anormal, c'est simplement le décalage entre le déclenchement et la rédaction.</p>
+<p>Deux décalages s'ajoutent donc. Le premier vient du client : un avis peut très bien apparaître après la fermeture, ou le lendemain matin, sans que rien soit anormal. Le second vient de Google, qui vérifie les avis pour s'assurer qu'ils respectent ses règles : <a href="https://support.google.com/business/answer/10313341?hl=fr" target="_blank" rel="noopener noreferrer">selon son aide officielle</a>, cet examen peut, dans certains cas, prendre quelques jours et retarder l'affichage.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Délai entre le scan et la publication</th><th class="border p-3 text-left">Part estimée des avis</th><th class="border p-3 text-left">Profil de client concerné</th></tr></thead>
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Ce qui joue sur le délai</th><th class="border p-3 text-left">Ce qui tend à le raccourcir</th><th class="border p-3 text-left">Ce qui tend à l'allonger</th></tr></thead>
 <tbody>
-<tr><td class="border p-3"><strong>Moins de 2 minutes</strong></td><td class="border p-3">45 à 60 %</td><td class="border p-3">Déjà connecté à Google, note seule ou texte très court</td></tr>
-<tr><td class="border p-3"><strong>2 minutes à 2 heures</strong></td><td class="border p-3">15 à 25 %</td><td class="border p-3">Rédige une fois sorti, dans les transports ou la voiture</td></tr>
-<tr><td class="border p-3"><strong>Le soir même</strong></td><td class="border p-3">10 à 20 %</td><td class="border p-3">Reprend le formulaire resté ouvert dans un onglet</td></tr>
-<tr><td class="border p-3"><strong>1 à 3 jours</strong></td><td class="border p-3">5 à 10 %</td><td class="border p-3">Client engagé, avis long et détaillé</td></tr>
-<tr><td class="border p-3"><strong>Jamais publié</strong></td><td class="border p-3">Le reste</td><td class="border p-3">Abandon à la connexion Google, interruption, oubli</td></tr>
+<tr><td class="border p-3"><strong>Connexion au compte Google</strong></td><td class="border p-3">Client déjà connecté sur son téléphone</td><td class="border p-3">Connexion à faire, mot de passe oublié</td></tr>
+<tr><td class="border p-3"><strong>Disponibilité du client</strong></td><td class="border p-3">Client assis, qui attend son ticket ou sa voiture</td><td class="border p-3">Client pressé, enfant à la main, file derrière lui</td></tr>
+<tr><td class="border p-3"><strong>Ce qu'il veut écrire</strong></td><td class="border p-3">Une note et une phrase</td><td class="border p-3">Un avis détaillé, rédigé au calme</td></tr>
+<tr><td class="border p-3"><strong>Vérification par Google</strong></td><td class="border p-3">Avis affiché sans examen prolongé</td><td class="border p-3">Examen qui peut prendre quelques jours</td></tr>
 </tbody>
 </table>
 </div>
-<p>Ces ordres de grandeur ne sont pas des mesures universelles : ils dépendent fortement du secteur et de la durée du contact. Ils servent à une chose précise — <strong>ne jamais juger un dispositif de collecte sur moins de trois semaines</strong>. La première semaine sous-estime systématiquement le résultat, parce qu'une partie des avis déclenchés n'est pas encore publiée.</p>
+<p>Aucun de ces facteurs ne se chiffre à l'avance : ils dépendent de votre clientèle et de la durée du contact. Ils justifient en revanche une règle simple — <strong>ne jugez pas un dispositif de collecte sur sa première semaine</strong>. Une partie des avis déclenchés peut ne pas être encore publiée, et l'équipe n'a pas encore pris le pli.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 L'erreur classique :</strong> installer une plaque un lundi, compter les avis le vendredi, et conclure que « ça ne marche pas ». À ce stade, une partie des scans est encore en cours de rédaction, une autre attend une reconnexion Google, et le personnel n'a pas encore pris l'habitude de la phrase. Le régime de croisière s'établit vers la quatrième semaine. La méthode de mesure complète est détaillée dans notre analyse du <a href="/blog/taux-scan-plaque-nfc">taux de scan d'une plaque NFC</a>.</p>
+<p class="text-sm text-amber-900"><strong>💡 L'erreur classique :</strong> installer une plaque un lundi, compter les avis le vendredi, et conclure que « ça ne marche pas ». À ce stade, une partie des avis peut ne pas être encore rédigée ou affichée, et le personnel n'a pas encore pris l'habitude de la phrase. Laissez passer au moins quatre semaines complètes avant de tirer une conclusion. La méthode de mesure complète est détaillée dans notre analyse du <a href="/blog/taux-scan-plaque-nfc">taux de scan d'une plaque NFC</a>.</p>
 </div>
 </section>
 
 <section id="heures" class="scroll-mt-28 mb-16">
-<h2>À quelle heure vos clients publient réellement</h2>
-<p>Si vous exportez la liste de vos avis et que vous relevez l'heure de publication, vous obtenez presque toujours la même forme de courbe, quel que soit le secteur : deux bosses, l'une en fin d'après-midi, l'autre entre 20 h et 22 h, et un creux marqué entre 9 h et 11 h.</p>
-<h3>Ce que cette courbe raconte</h3>
-<p>Elle ne décrit pas vos horaires d'affluence. Elle décrit les moments où le client dispose de trente secondes d'attention libre et de son téléphone en main. Le matin, il travaille ou se déplace ; le soir, il est immobile et disponible. C'est pour cette raison que la tranche 20 h - 22 h concentre souvent le quart du volume, y compris pour des commerces fermés depuis longtemps.</p>
+<h2>L'heure de publication : ce qu'elle révèle, ce qu'elle cache</h2>
+<p>Aucune courbe horaire ne vaut pour tous les commerces, et nous n'en publierons pas : aucune mesure fiable ne permet d'en tracer une. La seule qui compte est la vôtre, et la méthode pour la relever figure plus bas. Ce que l'on peut expliquer, en revanche, c'est ce que l'heure de publication reflète.</p>
+<h3>Ce que l'heure de publication reflète</h3>
+<p>Elle ne décrit pas forcément vos horaires d'affluence. Elle décrit le moment où le client a trouvé le temps de terminer son avis, téléphone en main. Ce moment peut suivre immédiatement le passage en caisse, ou arriver bien plus tard, une fois rentré chez lui — y compris quand votre commerce est fermé depuis longtemps.</p>
 <p>Trois conséquences pratiques :</p>
 <ul>
-<li><strong>Un avis déposé à 21 h ne prouve pas que le client a scanné à 21 h.</strong> Il a scanné à 17 h 40 en sortant, et il a fini de rédiger le soir. Ne cherchez pas à corréler l'heure de publication avec vos pics de fréquentation, la relation est indirecte.</li>
-<li><strong>Le pic du soir concerne surtout les avis rédigés.</strong> Les avis sans texte, eux, tombent presque en temps réel : ils sont l'image fidèle de vos heures d'affluence.</li>
-<li><strong>Répondre le lendemain matin est suffisant.</strong> Inutile de surveiller sa fiche le soir : Google ne valorise pas la vitesse de réponse, seulement le fait de répondre. Un créneau fixe de dix minutes en début de journée suffit.</li>
+<li><strong>Un avis publié à 21 h ne prouve pas que le client a scanné à 21 h.</strong> Il a pu scanner en sortant, en fin d'après-midi, et terminer sa rédaction le soir. Ne cherchez pas à corréler l'heure de publication avec vos pics de fréquentation : la relation est indirecte.</li>
+<li><strong>Distinguez les notes seules des avis rédigés.</strong> Une note se donne en quelques gestes ; un avis détaillé se garde plus volontiers pour un moment calme. Si vous comparez des heures de publication, ne mélangez pas les deux.</li>
+<li><strong>Répondre le lendemain matin suffit.</strong> Inutile de surveiller sa fiche le soir : un créneau fixe de dix minutes en début de journée permet de répondre à chaque avis sous 48 h.</li>
 </ul>
 <h3>Le cas particulier des commerces du soir</h3>
-<p>Restaurants, bars, salles de spectacle, hôtels : le décalage joue en leur faveur. Le client sort à 22 h 30 et le moment disponible arrive immédiatement après — dans le taxi, dans le métro, au lit. Un restaurant qui présente son support au moment de l'addition capte donc une fenêtre plus favorable qu'une boulangerie dont le client est déjà reparti travailler trois minutes après son achat. C'est l'une des raisons pour lesquelles les taux de collecte diffèrent autant d'un secteur à l'autre, bien plus que la qualité du service.</p>
+<p>Restaurants, bars, salles de spectacle, hôtels : le client repart souvent au moment où sa soirée se termine, et le temps disponible peut arriver juste après — dans le taxi, dans le métro, chez lui. Le client d'une boulangerie, lui, est parfois reparti travailler juste après son achat. C'est une différence de contexte, pas une loi : elle suffit à expliquer que deux commerces appliquant la même méthode ne voient pas leurs avis arriver aux mêmes heures.</p>
 </section>
 
 <section id="jours-semaine" class="scroll-mt-28 mb-16">
-<h2>Les jours de la semaine : où se cache le vrai gisement</h2>
-<p>Le samedi domine presque partout dans le commerce de détail et les services de proximité. Ce n'est pas un mystère : c'est le jour où le flux client est le plus élevé et où le client est le moins pressé. Le dimanche suit dans les métiers ouverts ce jour-là, et lundi arrive en dernier.</p>
-<p>Mais le chiffre intéressant n'est pas le classement des jours en volume : c'est le <strong>rendement par client servi</strong>. Et là, le classement s'inverse souvent.</p>
+<h2>Les jours de la semaine : volume et conditions ne vont pas ensemble</h2>
+<p>Dans beaucoup de commerces, un ou deux jours concentrent l'essentiel de la fréquentation, souvent le samedi. Si c'est votre cas, c'est logiquement aussi le jour qui produit le plus d'avis en valeur absolue : il y a simplement plus de clients devant la plaque.</p>
+<p>Mais le nombre d'avis d'une journée ne dit rien de la qualité de la demande ce jour-là. Pour comparer les jours entre eux, il faut rapporter les avis au <strong>nombre de clients servis</strong>, et regarder ce qui change d'un jour à l'autre dans les conditions de la demande.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Jour</th><th class="border p-3 text-left">Part du volume d'avis</th><th class="border p-3 text-left">Rendement par client servi</th><th class="border p-3 text-left">Ce qui l'explique</th></tr></thead>
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Type de journée</th><th class="border p-3 text-left">Ce qui aide la demande</th><th class="border p-3 text-left">Ce qui la freine</th></tr></thead>
 <tbody>
-<tr><td class="border p-3"><strong>Samedi</strong></td><td class="border p-3">Le plus élevé</td><td class="border p-3">Moyen</td><td class="border p-3">Flux maximal mais file d'attente, demande souvent oubliée</td></tr>
-<tr><td class="border p-3"><strong>Mardi et mercredi</strong></td><td class="border p-3">Moyen</td><td class="border p-3">Le meilleur</td><td class="border p-3">Prestation sans presse, personnel disponible pour la phrase</td></tr>
-<tr><td class="border p-3"><strong>Jeudi et vendredi</strong></td><td class="border p-3">Moyen à élevé</td><td class="border p-3">Bon</td><td class="border p-3">Bonne humeur de fin de semaine, clients réguliers</td></tr>
-<tr><td class="border p-3"><strong>Dimanche</strong></td><td class="border p-3">Variable</td><td class="border p-3">Bon</td><td class="border p-3">Client détendu, mais équipe souvent réduite</td></tr>
-<tr><td class="border p-3"><strong>Lundi</strong></td><td class="border p-3">Le plus faible</td><td class="border p-3">Faible</td><td class="border p-3">Fermeture fréquente, reprise, clients pressés</td></tr>
+<tr><td class="border p-3"><strong>Jour d'affluence</strong></td><td class="border p-3">Beaucoup de clients passent devant la plaque</td><td class="border p-3">File d'attente, personnel sous pression, phrase oubliée</td></tr>
+<tr><td class="border p-3"><strong>Jour calme</strong></td><td class="border p-3">Temps pour dire la phrase, client sans personne derrière lui</td><td class="border p-3">Moins de clients, donc moins d'occasions</td></tr>
+<tr><td class="border p-3"><strong>Jour d'équipe réduite</strong></td><td class="border p-3">Plaque bien placée, compréhensible sans explication</td><td class="border p-3">Personne de disponible pour la présenter</td></tr>
+<tr><td class="border p-3"><strong>Journée de rendez-vous longs</strong></td><td class="border p-3">Contact long, résultat visible au moment de payer</td><td class="border p-3">Client qui enchaîne sur un autre rendez-vous</td></tr>
 </tbody>
 </table>
 </div>
-<p>La conclusion opérationnelle est contre-intuitive. Le samedi produit du volume malgré vous ; c'est en semaine que la méthode change tout. Un salon de coiffure qui sert 40 clients le samedi et 22 le mercredi obtiendra plus d'avis supplémentaires en travaillant le mercredi : le personnel a le temps de dire la phrase, le client n'a personne derrière lui, et le support est vu. Le samedi, la file d'attente écrase la demande orale et il ne reste que la plaque visible pour faire le travail toute seule.</p>
+<p>La conséquence opérationnelle est simple. En jour d'affluence, la demande orale est la première chose qui saute : c'est la plaque visible qui doit travailler seule. En jour calme, le personnel a le temps de dire la phrase à chaque client, et le support est vu. C'est donc en jour calme que la méthode peut réellement être appliquée à tout le monde, et c'est là que votre propre mesure vous dira ce qu'elle change chez vous.</p>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>✅ Le réglage qui rapporte le plus :</strong> en jour de rush, ne comptez pas sur la parole — comptez sur le placement. Une plaque orientée vers le client, à hauteur de regard, à l'endroit exact où il attend son ticket, collecte sans qu'aucun mot ne soit prononcé. En jour creux, inversez : c'est la phrase qui fait le travail, la plaque n'est plus qu'un support. Les emplacements sont classés par rendement dans notre guide <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque à avis Google</a>.</p>
+<p class="text-sm text-emerald-900"><strong>✅ Le réglage à retenir :</strong> en jour de rush, ne comptez pas sur la parole — comptez sur le placement. Une plaque orientée vers le client, à hauteur de regard, à l'endroit exact où il attend son ticket, peut être utilisée sans qu'aucun mot ne soit prononcé. En jour creux, inversez : c'est la phrase qui porte la demande, la plaque n'est plus qu'un support. Les emplacements possibles sont passés en revue dans notre guide <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque à avis Google</a>.</p>
 </div>
 </section>
 
 <section id="saisonnalite" class="scroll-mt-28 mb-16">
-<h2>La saisonnalité par secteur : les creux qu'il ne faut pas confondre avec un échec</h2>
-<p>Un dispositif de collecte ne produit pas un débit constant. Il suit votre activité, et votre activité suit un calendrier que vous connaissez déjà. Le problème n'est pas la saisonnalité : c'est de l'interpréter comme une panne. Chaque année, des commerçants rangent une plaque en janvier parce qu'elle « ne marche plus », alors qu'elle a simplement moins de clients à convertir.</p>
-<div class="overflow-x-auto not-prose my-6">
-<table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Secteur</th><th class="border p-3 text-left">Mois les plus productifs</th><th class="border p-3 text-left">Mois creux</th><th class="border p-3 text-left">Écart typique entre pic et creux</th></tr></thead>
-<tbody>
-<tr><td class="border p-3"><strong>Restaurant, bar</strong></td><td class="border p-3">Mai à septembre, décembre</td><td class="border p-3">Janvier, février</td><td class="border p-3">x2 à x3</td></tr>
-<tr><td class="border p-3"><strong>Hôtel, chambre d'hôtes</strong></td><td class="border p-3">Juin à septembre</td><td class="border p-3">Novembre à février</td><td class="border p-3">x3 à x5</td></tr>
-<tr><td class="border p-3"><strong>Salon de coiffure, institut</strong></td><td class="border p-3">Juin, septembre, décembre</td><td class="border p-3">Janvier, août</td><td class="border p-3">x1,5 à x2</td></tr>
-<tr><td class="border p-3"><strong>Garage, carrosserie</strong></td><td class="border p-3">Mars-avril, octobre-novembre</td><td class="border p-3">Août</td><td class="border p-3">x1,5</td></tr>
-<tr><td class="border p-3"><strong>Auto-école, formation</strong></td><td class="border p-3">Juin-juillet, septembre</td><td class="border p-3">Décembre, août</td><td class="border p-3">x2</td></tr>
-<tr><td class="border p-3"><strong>Artisan du bâtiment</strong></td><td class="border p-3">Mars à juin, septembre-octobre</td><td class="border p-3">Août, fin décembre</td><td class="border p-3">x1,5 à x2</td></tr>
-<tr><td class="border p-3"><strong>Boulangerie, commerce de flux</strong></td><td class="border p-3">Décembre, périodes de fêtes</td><td class="border p-3">Août</td><td class="border p-3">x1,2 à x1,5</td></tr>
-</tbody>
-</table>
-</div>
+<h2>La saisonnalité : les creux qu'il ne faut pas confondre avec un échec</h2>
+<p>Un dispositif de collecte ne produit pas un débit constant. Il suit votre activité, et votre activité suit un calendrier que vous connaissez déjà. Le problème n'est pas la saisonnalité : c'est de l'interpréter comme une panne. Ranger une plaque en janvier parce qu'elle « ne marche plus » est une erreur si elle a simplement moins de clients à qui se présenter.</p>
+<p>Aucun calendrier par secteur ne remplace le vôtre, parce que les mêmes métiers vivent des saisons opposées selon l'endroit. Votre meilleur repère est déjà dans vos comptes : reprenez votre chiffre d'affaires ou votre agenda mois par mois. Les facteurs qui dessinent cette saisonnalité sont, eux, bien identifiés :</p>
+<ul>
+<li><strong>Le tourisme</strong> : un hôtel de bord de mer et un hôtel de station de ski n'ont pas le même creux.</li>
+<li><strong>Le calendrier scolaire</strong> : rentrée, vacances et examens rythment les auto-écoles, les activités pour enfants ou les équipements des plus jeunes.</li>
+<li><strong>La météo</strong> : chantiers extérieurs, entretien automobile, terrasses.</li>
+<li><strong>Les fêtes et les cadeaux</strong> : commerces de bouche, instituts, boutiques.</li>
+<li><strong>Vos propres fermetures</strong> : congés annuels, travaux, jours fériés.</li>
+</ul>
 <h3>Les deux façons d'utiliser cette information</h3>
-<p><strong>La première est défensive.</strong> Comparez toujours un mois à ce même mois l'année précédente, jamais au mois qui vient de s'écouler. Un institut qui passe de 14 avis en décembre à 6 en janvier n'a rien perdu ; il vit sa saison. Le seul indicateur honnête est le nombre d'avis rapporté au nombre de clients servis, et celui-là reste remarquablement stable quand la méthode ne change pas.</p>
-<p><strong>La seconde est offensive, et c'est la plus rentable.</strong> Vos mois de pointe sont ceux où vous pouvez fabriquer un écart durable avec vos concurrents, parce que le gisement de clients est là. Un hôtel qui obtient 40 avis en juillet-août et 8 sur tout l'hiver a intérêt à concentrer ses efforts de formation, de placement et de rappel au personnel <em>avant</em> juin, pas en février. Le dispositif se prépare hors saison et se rentabilise en saison.</p>
+<p><strong>La première est défensive.</strong> Comparez toujours un mois à ce même mois l'année précédente, jamais au mois qui vient de s'écouler. Si un institut passe de 14 avis en décembre à 7 en janvier alors qu'il a servi deux fois moins de clients, il n'a rien perdu : il vit sa saison. L'indicateur à suivre est le nombre d'avis rapporté au nombre de clients servis : c'est lui qui dit si la méthode tient.</p>
+<p><strong>La seconde est offensive.</strong> Vos mois de pointe sont ceux où le plus de clients passent devant la plaque : c'est là que l'effort de préparation sert au plus grand nombre. Un hôtel dont l'essentiel des clients arrive en juillet-août a intérêt à concentrer la formation, le placement et les rappels au personnel <em>avant</em> juin, pas en février. Le dispositif se prépare hors saison et sert en saison.</p>
 <p>Enfin, une remarque qui vaut pour tous les secteurs : le creux estival ou hivernal est le bon moment pour les tâches qui ne dépendent pas du flux — mettre à jour les photos de la fiche, répondre au retard accumulé d'avis sans réponse, revoir les catégories et attributs. Le détail de ces chantiers figure dans notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>.</p>
 </section>
 
 <section id="fraicheur-google" class="scroll-mt-28 mb-16">
-<h2>Fraîcheur et régularité : ce que Google regarde vraiment</h2>
-<p>Le classement local repose sur trois critères officiels : la pertinence, la distance et la proéminence. Les deux premiers ne dépendent quasiment pas de vous — vous ne déplacerez pas votre boutique et votre catégorie est ce qu'elle est. La proéminence, en revanche, intègre vos avis, et pas seulement leur nombre.</p>
+<h2>Fraîcheur et régularité : ce que dit Google, ce que voit l'internaute</h2>
+<p>Selon <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">les conseils officiels de Google pour le classement local</a>, les résultats locaux reposent principalement sur trois critères : la pertinence, la distance et la proéminence, c'est-à-dire la notoriété de l'établissement. La distance ne dépend pas de vous. La pertinence mesure la correspondance entre votre fiche et la recherche de l'internaute : Google précise que des informations complètes et détaillées l'aident à mieux comprendre votre établissement. Quant aux avis, Google indique que davantage d'avis et de notes positives peuvent aider votre classement local. Cette page ne dit rien, en revanche, de la date des avis : la fraîcheur compte d'abord pour l'internaute qui les lit.</p>
 <h3>Trois signaux distincts que l'on confond souvent</h3>
 <ul>
 <li><strong>Le volume</strong> : le total cumulé. Il ne décroît jamais, sauf suppression. C'est le signal le plus lent à bouger et le plus difficile à rattraper si vous partez de loin.</li>
-<li><strong>La fraîcheur</strong> : la date du dernier avis, et plus largement la proportion d'avis récents. Une fiche dont le dernier avis date de huit mois envoie un signal d'activité faible, et l'internaute le voit tout aussi bien que l'algorithme.</li>
+<li><strong>La fraîcheur</strong> : la date du dernier avis, et plus largement la proportion d'avis récents. Une fiche dont le dernier avis date de huit mois donne l'image d'une activité au ralenti, et l'internaute le voit du premier coup d'œil.</li>
 <li><strong>La régularité (ou vélocité)</strong> : le rythme d'arrivée. C'est le seul des trois qui se dégrade tout seul, et le seul qui se pilote au quotidien.</li>
 </ul>
-<p>La régularité mérite une précision, car elle génère beaucoup d'idées fausses. Non, il n'existe pas de rythme « autorisé » au-delà duquel Google sanctionne. Ce qui déclenche une vérification, c'est l'anomalie : une fiche à 3 avis par an qui en reçoit 60 en une semaine, tous rédigés en une phrase, depuis des comptes sans historique. Une progression continue de 10 à 15 avis mensuels pour un commerce qui sert 400 clients par mois n'a rien d'anormal et ne déclenche rien.</p>
+<p>La régularité mérite une précision, car elle génère beaucoup d'idées fausses. Les règles de Google ne fixent aucun nombre d'avis à ne pas dépasser. Ce qu'elles interdisent, c'est la manipulation : <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">le règlement de Google sur les contenus</a> proscrit notamment les avantages offerts en échange d'un avis, les contenus publiés depuis plusieurs comptes par une même personne, la sollicitation sélective d'avis positifs et le fait de demander au personnel de solliciter un certain nombre d'avis. Lorsque Google estime qu'un propriétaire a enfreint son règlement sur l'engagement artificiel, <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">il peut restreindre sa fiche</a> : plus de nouveaux avis pendant une période donnée, avis existants dépubliés pendant une période donnée, avertissement affiché. Une collecte loyale, qui suit simplement votre fréquentation, n'entre dans aucun de ces cas.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 Le calcul qui remet les choses à leur place :</strong> à 30 avis et 4,2 de moyenne, un seul avis à 1 étoile fait perdre environ un dixième de point, et il faut quatre avis à 5 étoiles pour revenir au point de départ. À 200 avis, le même avis négatif est presque invisible. La régularité ne sert donc pas seulement à monter : elle amortit. Le détail du calcul figure dans notre article sur <a href="/blog/ameliorer-note-google">l'amélioration de la note Google</a>.</p>
+<p class="text-sm text-blue-900"><strong>📊 Le calcul qui remet les choses à leur place :</strong> en raisonnant sur la moyenne simple des notes, une fiche à 30 avis notée 4,2 perd environ un dixième de point avec un seul avis à 1 étoile, et il faut quatre avis à 5 étoiles pour revenir au point de départ. À 200 avis, le même avis négatif est presque invisible. La régularité ne sert donc pas seulement à monter : elle amortit. Le détail du calcul figure dans notre article sur <a href="/blog/ameliorer-note-google">l'amélioration de la note Google</a>.</p>
 </div>
-<p>À l'inverse, l'opération ponctuelle — la campagne de trois semaines, la relance massive par e-mail — produit une bosse puis un plat. Six mois plus tard, la fiche est à nouveau silencieuse, et le bénéfice s'est en grande partie évaporé. C'est exactement pour cette raison qu'un support physique permanent bat une campagne : il travaille tous les jours sans qu'on y pense, y compris les jours où personne ne se souvient de demander.</p>
+<p>À l'inverse, l'opération ponctuelle — la campagne de trois semaines, la relance massive par e-mail — produit des avis tant qu'elle dure, puis plus rien : dès qu'elle s'arrête, la date du dernier avis recommence à vieillir. C'est l'intérêt d'un support physique permanent : il reste en place les jours où personne ne pense à demander, sans nouvelle campagne à relancer.</p>
 </section>
 
 <section id="calendrier" class="scroll-mt-28 mb-16">
-<h2>Construire un calendrier de collecte : trois exemples chiffrés</h2>
-<p>Une fois la temporalité comprise, la planification devient simple. Vous ne cherchez pas un maximum instantané, vous cherchez un débit tenable qui traverse vos saisons. Voici trois configurations réelles, calculées avec la même formule : clients servis × taux de conversion en avis.</p>
-<h3>Cas 1 — Salon de coiffure, 3 fauteuils, ville moyenne</h3>
-<p>Le salon sert environ 260 clients par mois, avec un pic le samedi (35 % du volume hebdomadaire) et un creux le mardi. Avec une plaque en caisse seule et une demande orale irrégulière, il tourne à 6 % de conversion, soit 15 à 16 avis mensuels. En ajoutant une seconde plaque au poste de coiffage et en systématisant la phrase les jours calmes, le taux monte vers 10 à 12 %, soit 26 à 31 avis. Sur un an, l'écart cumulé dépasse 150 avis — largement de quoi changer de position dans le <a href="/blog/combien-avis-google-pack-local">pack local</a>. La configuration à deux supports correspond au <a href="/product/business">Pack Business</a>.</p>
-<h3>Cas 2 — Restaurant, 45 couverts par service, forte saison estivale</h3>
-<p>Le restaurant sert environ 1 100 couverts par mois d'octobre à mars, et jusqu'à 2 400 en juillet-août. À 4 % de conversion sur les tables (le taux réaliste en restauration, où l'addition est souvent expédiée), cela donne 44 avis en basse saison et 96 en haute saison. La bonne décision de calendrier n'est pas de renforcer le dispositif en juillet, quand l'équipe est débordée : c'est de le mettre en place en mai, de former les extras dès leur arrivée, et de laisser le pic faire son travail. Avec des supports sur le porte-addition et en sortie, on parle de plus de 700 avis sur l'année.</p>
-<h3>Cas 3 — Artisan plombier, 60 interventions par mois</h3>
-<p>Le gisement est petit mais la conversion y est très élevée, parce que le contact est long et le soulagement réel. À une demande faite une fois sur deux, l'artisan obtient 7 à 9 avis mensuels ; à demande systématique, il dépasse 15. La saisonnalité joue peu, sauf en août. Une seule plaque suffit s'il travaille seul — c'est le <a href="/product/starter">Pack Starter</a> — mais dès qu'une équipe de trois compagnons intervient en parallèle, il faut un support par pochette de devis, donc le <a href="/product/pro">Pack Pro</a>. Le dimensionnement complet est expliqué dans notre guide sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques NFC nécessaires</a>.</p>
-<p>Dans les trois cas, la variable décisive n'est ni le produit ni le budget : c'est le nombre de jours où la méthode est réellement appliquée. Un dispositif appliqué 20 jours sur 25 bat un dispositif parfait appliqué 8 jours sur 25, et l'écart se creuse mois après mois.</p>
+<h2>Construire un calendrier de collecte : trois exemples fictifs</h2>
+<p>Une fois la temporalité comprise, la planification devient simple. Vous ne cherchez pas un maximum instantané, vous cherchez un rythme tenable qui traverse vos saisons. Les trois cas ci-dessous sont des exemples fictifs : ils illustrent un raisonnement, pas des résultats. La formule est toujours la même — clients servis × part des clients qui laissent un avis — et seule votre propre mesure peut fournir le second terme.</p>
+<h3>Cas 1 — Salon de coiffure, 3 fauteuils</h3>
+<p>Imaginons un salon qui sert 260 clients par mois, avec une plaque en caisse et une demande orale irrégulière. Hypothèse de calcul : si un client sur vingt laissait un avis, cela ferait 13 avis par mois. Si le même ratio s'appliquait à un mois creux de 180 clients, cela en ferait 9 : la baisse ne dirait rien de la méthode, seulement du calendrier. Ce que le salon peut régler, c'est ce qui dépend de lui : une seconde plaque au poste de coiffage, là où le client découvre le résultat, et la phrase dite systématiquement les jours calmes. Ce que cela change chez lui, seule sa mesure le dira. La configuration à deux supports correspond au <a href="/product/business">Pack Business</a>, et l'écart à combler face aux concurrents se chiffre avec notre méthode du <a href="/blog/combien-avis-google-pack-local">pack local</a>.</p>
+<h3>Cas 2 — Restaurant à forte saison estivale</h3>
+<p>Imaginons un restaurant qui sert 1 100 couverts par mois d'octobre à mars et 2 400 en juillet-août. Hypothèse de calcul : si un couvert sur cinquante donnait lieu à un avis, cela ferait 22 avis par mois en hiver et 48 en été, sans que rien ait changé dans la méthode. La bonne décision de calendrier n'est pas de renforcer le dispositif en juillet, quand l'équipe est débordée : c'est de le mettre en place en mai, de former les extras dès leur arrivée, et de laisser la saison faire le reste. Les supports se placent là où le client a les mains libres : sur le porte-addition et en sortie.</p>
+<h3>Cas 3 — Artisan plombier</h3>
+<p>Imaginons un plombier qui réalise 60 interventions par mois. Plusieurs facteurs jouent en faveur de la demande : un contact long, un problème réglé devant le client, un échange en tête-à-tête. D'autres jouent contre : pas de comptoir où poser une plaque, un règlement parfois fait plus tard, sur facture. Si la demande n'était faite qu'une intervention sur deux, la moitié des clients ne serait jamais sollicitée : c'est la première chose à corriger. Une seule plaque suffit s'il travaille seul — c'est le <a href="/product/starter">Pack Starter</a> — mais dès qu'une équipe de trois compagnons intervient en parallèle, il faut un support par pochette de devis, donc le <a href="/product/pro">Pack Pro</a>. Le dimensionnement complet est expliqué dans notre guide sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques NFC nécessaires</a>.</p>
+<p>Dans les trois cas, la variable décisive n'est ni le produit ni le budget : c'est le nombre de jours où la méthode est réellement appliquée. Chaque jour sans demande est un jour où seuls les clients qui remarquent la plaque d'eux-mêmes peuvent laisser un avis.</p>
 </section>
 
 <section id="mesurer" class="scroll-mt-28 mb-16">
 <h2>Mesurer votre propre temporalité en 30 jours</h2>
-<p>Toutes les moyennes sectorielles du monde ne remplacent pas vos chiffres. La bonne nouvelle, c'est que la mesure ne coûte rien et ne demande pas d'outil : elle se fait depuis votre fiche Google et un tableau à cinq colonnes.</p>
+<p>Aucun repère général ne remplace vos propres chiffres. La bonne nouvelle, c'est que la mesure ne coûte rien et ne demande pas d'outil : elle se fait depuis votre fiche Google, ses notifications et un tableau à cinq colonnes.</p>
 <h3>La méthode, semaine par semaine</h3>
 <ul>
-<li><strong>Semaine 1 — l'état des lieux.</strong> Relevez la date et l'heure de vos 30 derniers avis. Notez le jour de la semaine et la tranche horaire. En une heure, vous connaissez votre courbe réelle, et elle diffère souvent des moyennes ci-dessus.</li>
+<li><strong>Semaine 1 — le relevé.</strong> Activez les alertes de nouveaux avis dans les <a href="https://support.google.com/business/answer/7198436?hl=fr" target="_blank" rel="noopener noreferrer">notifications de votre fiche d'établissement</a> (rubrique « Activité des clients »), puis notez chaque nouvel avis le jour où il arrive : date, jour de la semaine, heure de réception de l'alerte, avec ou sans texte. Tenez ce relevé pendant les quatre semaines.</li>
 <li><strong>Semaine 2 — le compteur de clients.</strong> Notez chaque jour le nombre de clients servis. Sans ce dénominateur, aucun taux n'est calculable et toute comparaison mensuelle est trompeuse.</li>
-<li><strong>Semaine 3 — le test de la phrase.</strong> Systématisez la demande orale sur trois jours creux uniquement, sans rien changer d'autre. L'écart avec les trois jours équivalents de la semaine précédente vous donne la valeur exacte de la phrase dans votre établissement. Elle vaut généralement un facteur 3 à 5.</li>
-<li><strong>Semaine 4 — la lecture.</strong> Calculez votre taux global, votre meilleur jour en rendement, votre pire jour, et la part de vos avis publiés hors horaires d'ouverture. Ces quatre nombres suffisent à piloter toute l'année suivante.</li>
+<li><strong>Semaine 3 — le test de la phrase.</strong> Systématisez la demande orale sur trois jours creux uniquement, sans rien changer d'autre, et comparez avec les trois jours équivalents de la semaine précédente. Sur si peu de jours, le résultat reste une indication, pas une preuve : il vous dit dans quel sens joue la phrase chez vous.</li>
+<li><strong>Semaine 4 — la lecture.</strong> Calculez votre taux global, votre meilleur jour rapporté aux clients servis, votre jour le plus faible, et la part de vos avis arrivés hors horaires d'ouverture. Ces quatre nombres vous donnent une base pour piloter la suite, à mettre à jour au fil des mois.</li>
 </ul>
 <h3>Les trois indicateurs à suivre ensuite, chaque mois</h3>
 <ul>
-<li><strong>Avis par mois rapportés aux clients servis</strong>, et non en valeur absolue. C'est le seul chiffre qui neutralise la saisonnalité.</li>
-<li><strong>Nombre de jours depuis le dernier avis.</strong> S'il dépasse dix jours pour un commerce ouvert tous les jours, quelque chose s'est arrêté : la plaque a été déplacée, l'équipe a changé, ou le support est masqué par un présentoir.</li>
-<li><strong>Part des avis avec texte.</strong> Une chute de cette part sans baisse du volume signale généralement que la plaque collecte seule, sans phrase d'accompagnement — le volume tient, mais la qualité des avis, elle, s'appauvrit.</li>
+<li><strong>Avis par mois rapportés aux clients servis</strong>, et non en valeur absolue. C'est ce ratio qui permet de comparer des mois de fréquentation différente.</li>
+<li><strong>Nombre de jours depuis le dernier avis.</strong> S'il devient nettement plus long que d'habitude pour votre commerce, vérifiez ce qui a pu s'arrêter : plaque déplacée, équipe changée, support masqué par un présentoir.</li>
+<li><strong>Part des avis avec texte.</strong> Si cette part baisse sans que le volume baisse, vérifiez que la phrase d'accompagnement est toujours dite : un avis sans texte renseigne moins les futurs clients.</li>
 </ul>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 Avant de conclure à une baisse :</strong> vérifiez que vos avis n'ont pas simplement disparu de l'affichage. Un avis publié puis retiré par le filtre automatique de Google, une fusion de fiches ou un compte supprimé produisent une chute qui n'a rien à voir avec votre collecte. Les huit causes possibles sont détaillées dans notre article sur les <a href="/blog/avis-google-disparus">avis Google disparus</a>.</p>
+<p class="text-sm text-amber-900"><strong>💡 Avant de conclure à une baisse :</strong> vérifiez que vos avis n'ont pas simplement disparu de l'affichage. Un avis supprimé pour non-respect des règles, une fusion de fiches ou une désactivation temporaire des contenus par Google peuvent produire une baisse qui n'a rien à voir avec votre collecte. Les huit causes possibles sont détaillées dans notre article sur les <a href="/blog/avis-google-disparus">avis Google disparus</a>.</p>
 </div>
 </section>
 
 <section id="erreurs" class="scroll-mt-28 mb-16">
 <h2>Les 7 erreurs de timing qui coûtent le plus d'avis</h2>
 <ul>
-<li><strong>Juger un dispositif au bout d'une semaine.</strong> Une partie des scans n'est pas encore publiée et l'équipe n'a pas pris l'habitude. Le régime réel s'observe à partir de la quatrième semaine.</li>
+<li><strong>Juger un dispositif au bout d'une semaine.</strong> Une partie des avis déclenchés peut ne pas être encore publiée, et l'équipe n'a pas pris l'habitude. Attendez au moins quatre semaines complètes.</li>
 <li><strong>Comparer un mois au mois précédent.</strong> Sur des secteurs à saisonnalité forte, cette comparaison ne mesure que le calendrier. Comparez au même mois de l'année précédente, ou raisonnez en taux.</li>
-<li><strong>Demander pendant l'attente plutôt qu'après la prestation.</strong> Un client qui attend n'a rien à évaluer. La demande faite trop tôt produit soit un refus, soit un avis creux.</li>
-<li><strong>Lancer une campagne massive ponctuelle.</strong> Un pic isolé sur une fiche habituellement calme est le profil qui attire le plus l'attention des filtres, et il retombe entièrement en quelques mois.</li>
-<li><strong>Relancer par SMS trois jours après.</strong> Le moment émotionnel est passé, le message est perçu comme du démarchage, et il réveille les insatisfactions latentes qui n'auraient jamais été écrites.</li>
+<li><strong>Demander pendant l'attente plutôt qu'après la prestation.</strong> Un client qui attend n'a rien à évaluer. La demande faite trop tôt risque de produire un refus ou un avis sans contenu.</li>
+<li><strong>Lancer une campagne massive ponctuelle.</strong> Elle produit des avis tant qu'elle dure, puis plus rien. Et si elle passe par des moyens interdits — avantage offert, objectif chiffré d'avis imposé au personnel —, elle expose la fiche aux restrictions prévues par Google.</li>
+<li><strong>Compter sur une relance par SMS trois jours après.</strong> Le client est reparti, le moment où il avait son téléphone en main devant vous est passé, et un message qu'il n'attendait pas peut être perçu comme du démarchage.</li>
 <li><strong>Renforcer le dispositif en pleine haute saison.</strong> L'équipe est débordée, personne n'apprend une nouvelle habitude en plein rush. La mise en place se fait un mois avant le pic.</li>
-<li><strong>Arrêter en période creuse.</strong> C'est précisément le moment où la fraîcheur de la fiche se joue, puisque vos concurrents ralentissent aussi. Quelques avis en janvier pèsent plus lourd, en écart relatif, que vingt en juillet.</li>
+<li><strong>Arrêter en période creuse.</strong> La date du dernier avis recommence alors à vieillir, et il faudra réinstaller les habitudes de l'équipe au redémarrage. Une plaque laissée en place continue de se présenter aux clients sans effort supplémentaire.</li>
 </ul>
 </section>
 
@@ -746,36 +709,36 @@ export const articles: Record<string, {
 <h2>FAQ — Le timing des avis Google</h2>
 
 <h3>Combien de temps un avis met-il à apparaître sur ma fiche Google ?</h3>
-<p>La plupart des avis sont visibles en quelques secondes à quelques minutes après leur validation. Un délai plus long, de quelques heures à deux ou trois jours, survient quand l'avis passe par une vérification automatique : compte récent, avis très court, pic inhabituel sur la fiche, ou texte contenant un lien ou un numéro de téléphone. Si un client vous affirme avoir publié un avis que vous ne voyez pas après 72 heures, il est probable qu'il ait été filtré ; demandez-lui de vérifier depuis son propre compte, dans la section « Vos contributions », où l'avis reste visible pour lui même lorsqu'il n'est plus affiché publiquement.</p>
+<p>Google ne donne pas de délai standard. Son aide officielle indique qu'il vérifie les avis pour s'assurer qu'ils respectent ses règles, et que cet examen peut, dans certains cas, prendre quelques jours et retarder l'affichage. Après une fusion de fiches, l'affichage des avis des deux fiches peut lui aussi prendre quelques jours. Si un client vous dit avoir publié un avis que vous ne voyez pas, laissez passer quelques jours ; il peut retrouver les avis qu'il a publiés dans la rubrique « Vos contributions » de Google Maps. Et si l'avis a été supprimé pour non-respect des règles, Google précise qu'il ne sera pas restauré.</p>
 
 <h3>Y a-t-il une heure idéale pour demander un avis ?</h3>
-<p>L'heure de la journée compte beaucoup moins que la position dans le parcours client. Le bon moment est toujours le même : juste après la fin de la prestation, quand le résultat est constaté et que le téléphone est déjà en main pour payer. Une demande faite à 10 h après une coupe réussie fonctionne mieux qu'une demande faite à 20 h pendant l'attente. En revanche, l'heure influence le délai de publication : un client servi en fin de journée publiera plus vite, parce que son moment de disponibilité arrive immédiatement après.</p>
+<p>L'heure de la journée compte beaucoup moins que la position dans le parcours client. Le bon moment est toujours le même : juste après la fin de la prestation, quand le résultat est visible et que le téléphone est déjà en main pour payer. Une demande faite à 10 h après une coupe réussie a plus de sens qu'une demande faite à 20 h pendant l'attente. L'heure peut en revanche jouer sur le moment de publication : un client servi en fin de journée a parfois du temps libre juste après, un client du matin peut repartir aussitôt travailler.</p>
 
 <h3>Faut-il éviter de collecter trop d'avis d'un coup ?</h3>
-<p>Il faut éviter les anomalies, pas le volume. Une fiche qui reçoit habituellement deux avis par mois et qui en enregistre quarante en trois jours présente un profil atypique qui peut déclencher une vérification, voire une mise en pause temporaire des nouveaux avis. En revanche, une montée progressive proportionnelle à votre fréquentation ne pose aucun problème : un commerce qui sert 400 clients mensuels peut parfaitement en collecter 40 sans que cela paraisse anormal. La règle sûre est de viser un rythme régulier plutôt qu'une opération coup de poing.</p>
+<p>Il faut éviter la manipulation, pas le volume. Les règles de Google ne fixent aucun nombre d'avis à ne pas dépasser ; elles interdisent en revanche les avantages offerts en échange d'un avis, la sollicitation sélective d'avis positifs ou le fait de demander au personnel de solliciter un certain nombre d'avis. Lorsqu'un propriétaire enfreint son règlement sur l'engagement artificiel, Google peut notamment empêcher sa fiche de recevoir de nouveaux avis pendant une période donnée. Une collecte qui suit votre fréquentation, sans contrepartie ni tri des clients, ne relève d'aucun de ces cas. La règle sûre reste de viser un rythme régulier plutôt qu'une opération coup de poing.</p>
 
 <h3>Un avis ancien perd-il de la valeur ?</h3>
-<p>Il conserve sa valeur dans le calcul de la note moyenne et dans le total affiché, mais il perd sa valeur d'influence. D'une part, Google met en avant les avis récents dans l'aperçu de la fiche, donc un avis de 2020 n'est presque jamais lu. D'autre part, un internaute qui voit que le dernier avis date d'un an en tire une conclusion sur l'activité de l'établissement. Concrètement : les anciens avis vous font exister, les récents vous font choisir.</p>
+<p>Il continue de figurer sur votre fiche et dans son total d'avis, mais il décrit votre établissement tel qu'il était au moment où il a été écrit. Chaque avis porte sa date, et un internaute qui voit que le dernier avis remonte à un an en tire une conclusion sur l'activité de l'établissement. Concrètement : les anciens avis vous font exister, les récents montrent que vous êtes toujours là.</p>
 
 <h3>Comment maintenir la collecte pendant la basse saison ?</h3>
-<p>En cessant de raisonner en volume et en raisonnant en taux. Si vous servez trois fois moins de clients, obtenir trois fois moins d'avis est un fonctionnement normal, pas un échec. Le seul réglage utile en creux est de relever la conversion : comme le personnel est moins sous pression, c'est la période où la demande orale peut être faite à chaque client, ce qui compense une partie de la baisse de flux. C'est aussi le bon moment pour traiter les chantiers de fiche qui ne dépendent pas du passage — photos, réponses en retard, attributs.</p>
+<p>En cessant de raisonner en volume et en raisonnant en taux. Si vous servez trois fois moins de clients, obtenir trois fois moins d'avis est un fonctionnement normal, pas un échec. Le réglage utile en creux est de solliciter une plus grande part des clients : comme le personnel est moins sous pression, c'est la période où la demande orale peut être faite à chaque client, ce qui peut compenser une partie de la baisse de flux. C'est aussi le bon moment pour traiter les chantiers de fiche qui ne dépendent pas du passage — photos, réponses en retard, attributs.</p>
 
 <h3>Le jour de fermeture influence-t-il ma fiche ?</h3>
-<p>Pas directement. Ce qui compte pour Google, c'est que vos horaires déclarés soient exacts, y compris les jours fériés, car une fiche qui envoie des clients devant une porte close génère des avis négatifs faciles à éviter. L'absence d'avis un jour de fermeture n'est en revanche pas un signal négatif : les publications se répartissent naturellement, et une partie des avis d'un samedi apparaîtra le dimanche, jour où beaucoup de commerces sont fermés.</p>
+<p>Ce que Google demande, c'est que vos horaires soient exacts : ses conseils pour le classement local citent les horaires d'ouverture, y compris les horaires exceptionnels. Une fiche qui envoie des clients devant une porte close s'expose à des avis négatifs faciles à éviter. Quant aux avis eux-mêmes, ils n'ont aucune raison de suivre vos jours d'ouverture : un client servi le samedi peut très bien publier le dimanche.</p>
 
 <h3>Combien de temps faut-il pour voir un effet sur mon classement local ?</h3>
-<p>Comptez trois à six mois pour un effet lisible, et davantage si l'écart avec les trois fiches du pack local est important. Le classement ne réagit pas à un avis mais à une tendance : il faut que le volume, la fraîcheur et la note bougent ensemble sur plusieurs mois. Un dispositif installé en janvier montre généralement ses premiers effets de position au printemps, à condition que le rythme n'ait pas été interrompu. La méthode pour chiffrer l'écart à combler est détaillée dans notre guide sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour le pack local</a>.</p>
+<p>Personne ne peut vous donner ce délai honnêtement : Google n'en publie aucun, et le classement dépend aussi d'autres critères, comme la distance. Google indique seulement que davantage d'avis et de notes positives peuvent aider le classement local. Le plus sûr est de suivre votre position sur vos requêtes principales une fois par mois, sans interrompre le rythme de collecte. La méthode pour chiffrer l'écart à combler est détaillée dans notre guide sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour le pack local</a>.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : la régularité bat l'intensité</h2>
 <p>La temporalité des avis Google se résume à une opposition simple. D'un côté, la campagne : intense, visible, épuisante, et dont l'effet s'efface en quelques mois. De l'autre, le dispositif permanent : discret, appliqué tous les jours, y compris les jours où personne ne pense à demander, et dont l'effet se cumule.</p>
-<p>Ce que révèle l'analyse des heures, des jours et des saisons, c'est que vos avis ne dépendent presque jamais de votre qualité de service — elle est déjà là — mais du nombre de fois où l'occasion de demander est effectivement saisie. Un support physique posé au bon endroit transforme cette occasion en réflexe, et le réflexe en régularité. C'est précisément ce qui manque aux fiches à 4,7 étoiles et 23 avis.</p>
-<p>Guides complémentaires : <a href="/blog/statistiques-avis-google-2026">les statistiques avis Google 2026</a>, <a href="/blog/taux-scan-plaque-nfc">le taux de scan réel d'une plaque</a>, <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, ou notre méthode pour <a href="/blog/ameliorer-note-google">améliorer sa note Google</a>.</p>
+<p>Ce que révèle l'analyse des heures, des jours et des saisons, c'est que à qualité de service égale, le nombre d'avis dépend du nombre de fois où l'occasion de demander est effectivement saisie. Un support physique posé au bon endroit aide à transformer cette occasion en réflexe, et le réflexe en régularité. C'est la première chose à vérifier sur une fiche bien notée mais peu commentée.</p>
+<p>Guides complémentaires : <a href="/blog/statistiques-avis-google-2026">les statistiques avis Google 2026</a>, <a href="/blog/taux-scan-plaque-nfc">le taux de scan d'une plaque</a>, <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, ou notre méthode pour <a href="/blog/ameliorer-note-google">améliorer sa note Google</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à collecter des avis tous les jours plutôt qu'en campagne ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT.</p>
 </div>
 </section>
 `,
@@ -784,9 +747,9 @@ export const articles: Record<string, {
     title: 'Combien de plaques NFC faut-il ? Le guide pour choisir entre 1, 2 et 5',
     category: 'Comparatif',
     date: '4 septembre 2026',
-    readTime: '13 min',
+    readTime: '14 min',
     author: 'Équipe Swiipx',
-    excerpt: 'La seule décision d\'achat qui change vraiment le volume d\'avis n\'est pas le matériau, c\'est le nombre d\'emplacements couverts. La méthode de calcul en 3 questions, un tableau par secteur, le coût par avis selon le pack et les 6 erreurs de dimensionnement.',
+    excerpt: 'Ce qui change le nombre d\'occasions de laisser un avis, ce n\'est pas le matériau de la plaque, c\'est le nombre de moments du parcours client couverts. La méthode en 3 questions, le nombre de plaques conseillé par type d\'établissement, le prix par plaque selon le pack et les 6 erreurs de dimensionnement.',
     tocSections: [
       { id: 'pourquoi-nombre-compte', label: 'Pourquoi le nombre compte' },
       { id: 'regle-emplacement', label: 'Une plaque = un point de contact' },
@@ -803,30 +766,30 @@ export const articles: Record<string, {
     content: `
 <section id="pourquoi-nombre-compte" class="scroll-mt-28 mb-16">
 <h2>Pourquoi le nombre de plaques compte plus que le modèle choisi</h2>
-<p>La question qui revient le plus souvent avant un achat n'est pas « quelle plaque » mais « combien ». Et c'est une bonne question, parce que c'est la seule variable d'achat qui change réellement le nombre d'avis collectés. Le matériau, la couleur, la puce, le format : tout cela se joue à la marge. Le nombre d'emplacements couverts, lui, agit directement sur le volume.</p>
+<p>Au moment d'acheter, la question « combien de plaques » mérite d'être posée avant « quelle plaque ». C'est la variable d'achat qui décide du nombre d'occasions où un client croise une plaque au bon moment. Le matériau, la couleur, la puce ou le format ne changent pas ce nombre ; les emplacements couverts, si.</p>
 <p>La raison tient à un mécanisme simple. Une plaque ne collecte pas des avis parce qu'elle existe, mais parce qu'un client la croise à un moment précis : téléphone en main, prestation terminée, sentiment positif. Ce moment ne se produit pas partout dans votre établissement. Il se produit à des endroits identifiables, et chaque endroit non couvert est un gisement d'avis qui ne sera jamais exploité.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> ajouter un second emplacement pertinent augmente le volume d'avis collectés de <strong>30 à 60 %</strong> selon le type d'établissement. Aucune autre décision d'achat — matériau, taille, design — ne produit un écart de cet ordre. Passer de l'acrylique au bois ne change rien au volume ; passer de un à deux points de contact le change massivement.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> un second emplacement pertinent ne double pas les avis : il couvre un second moment du parcours client, et touche des clients que le premier emplacement manque ou croise au mauvais moment. Le matériau, la taille ou le design de la plaque ne changent pas le nombre de clients qui la croisent ; le nombre d'emplacements, si. Ce que ce second point rapporte chez vous, seul un relevé avant et après sa pose peut le dire.</p>
 </div>
 <p>L'erreur classique consiste à raisonner en objet plutôt qu'en parcours. On achète « une plaque pour le commerce », on la colle près de la caisse, et on considère le sujet réglé. Or un client de salon de coiffure passe par trois zones où la demande est légitime — le poste de coiffage, la caisse, la sortie — et un seul support ne peut en couvrir qu'une.</p>
 <p>L'erreur inverse existe aussi, moins coûteuse mais bien réelle : acheter cinq plaques pour un local de quarante mètres carrés avec un seul point de passage. Trois d'entre elles finiront dans un tiroir, et la dilution visuelle — des plaques partout, donc plus aucune qui attire l'œil — annule le bénéfice attendu.</p>
-<p>Cet article donne la méthode pour trancher : un calcul en trois questions, un tableau par secteur, et le coût réel par avis collecté selon le pack retenu.</p>
+<p>Cet article donne la méthode pour trancher : un calcul en trois questions, le nombre de plaques conseillé par type d'établissement, et le prix par plaque selon le pack retenu, avec la façon de calculer votre coût par avis à partir de vos propres relevés.</p>
 </section>
 
 <section id="regle-emplacement" class="scroll-mt-28 mb-16">
 <h2>La règle de base : une plaque égale un point de contact, pas une pièce</h2>
-<p>Le raisonnement le plus fréquent est géographique : « j'ai deux salles, donc deux plaques ». C'est le mauvais découpage. Une plaque ne couvre pas une surface, elle couvre un <strong>moment</strong>. Le bon découpage est celui du parcours client, pas celui des murs.</p>
+<p>Un raisonnement tentant est géographique : « j'ai deux salles, donc deux plaques ». C'est le mauvais découpage. Une plaque ne couvre pas une surface, elle couvre un <strong>moment</strong>. Le bon découpage est celui du parcours client, pas celui des murs.</p>
 <h3>Ce qui définit un point de contact valable</h3>
 <p>Un emplacement mérite une plaque s'il réunit quatre conditions simultanément. Retirez-en une seule et le rendement s'effondre.</p>
 <ul>
 <li><strong>Le client s'y arrête.</strong> Un couloir, une zone de circulation ou une vitrine ne produisent rien : personne ne sort son téléphone en marchant.</li>
 <li><strong>La prestation est terminée ou visible.</strong> On ne demande pas un avis à quelqu'un qui attend encore son plat, sa coupe ou son diagnostic.</li>
 <li><strong>Le téléphone est déjà en main, ou à dix centimètres.</strong> C'est ce qui rend le geste gratuit. L'encaissement sans contact est le meilleur allié de la collecte d'avis.</li>
-<li><strong>Quelqu'un peut dire la phrase.</strong> Une plaque sans phrase associée collecte trois à cinq fois moins qu'une plaque accompagnée d'une invitation orale.</li>
+<li><strong>Quelqu'un peut dire la phrase.</strong> Sans invitation orale, le client voit la plaque sans savoir qu'elle lui est destinée, et rien ne l'incite à faire le geste.</li>
 </ul>
 <p>Ce dernier point élimine à lui seul beaucoup d'emplacements séduisants sur le papier. La plaque en salle d'attente, la plaque en vitrine, la plaque sur la porte des toilettes : personne n'est là pour dire la phrase, donc le taux s'écroule. Le détail de ce classement figure dans notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque d'avis Google</a>.</p>
 <h3>La hiérarchie universelle des emplacements</h3>
-<p>Tous secteurs confondus, l'ordre de rendement est remarquablement stable :</p>
+<p>Appliquées à n'importe quel métier, ces quatre conditions donnent le classement suivant :</p>
 <ul>
 <li><strong>1. Le poste d'encaissement, côté client.</strong> C'est le seul endroit où les quatre conditions sont réunies systématiquement, pour chaque client, sans exception.</li>
 <li><strong>2. Le poste de prestation.</strong> Fauteuil de coiffage, table d'ajustage, comptoir de remise : le pic émotionnel s'y trouve, mais tous les clients n'y repassent pas au bon moment.</li>
@@ -845,7 +808,7 @@ export const articles: Record<string, {
 <p>Un salon avec trois fauteuils actifs simultanément a trois postes de prestation. Un cabinet avec deux praticiens en a deux. Un restaurant a autant de « postes » que de tables, ce qui rend le raisonnement différent — on y raisonne par zone, pas par table.</p>
 <p>Attention : un poste ne compte que si le client y reste assis avec son téléphone accessible et que la prestation s'y termine visiblement. Un poste de shampoing ne compte pas ; un fauteuil de coiffage, oui.</p>
 <h3>Question 3 : le flux justifie-t-il de la redondance ?</h3>
-<p>Au-delà d'environ cent clients par jour, un seul support crée un goulot d'étranglement : trois personnes ne scannent pas la même plaque en même temps, et la deuxième renonce. Les boulangeries, les commerces de proximité et les points de vente à forte rotation gagnent à doubler le support sur le même comptoir, à deux endroits distincts du plan de travail.</p>
+<p>Quand plusieurs clients règlent en même temps au même comptoir, un seul support crée un goulot d'étranglement : deux personnes ne scannent pas la même plaque en même temps, et celle qui attend risque de renoncer. Les boulangeries, les commerces de proximité et les points de vente à forte rotation gagnent à doubler le support sur le même comptoir, à deux endroits distincts du plan de travail.</p>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
 <p class="text-sm text-emerald-900"><strong>✅ La formule courte :</strong> nombre de plaques = points d'encaissement + postes de prestation réellement exploitables, plafonné à ce que vous pouvez accompagner d'une phrase. Si personne ne peut dire la phrase à un emplacement, ne comptez pas cet emplacement.</p>
 </div>
@@ -854,27 +817,27 @@ export const articles: Record<string, {
 
 <section id="tableau-secteurs" class="scroll-mt-28 mb-16">
 <h2>Combien de plaques par type d'établissement</h2>
-<p>Le tableau ci-dessous applique la méthode aux configurations les plus courantes. La colonne « avis / mois estimés » suppose une demande orale faite régulièrement, avec les ordres de grandeur détaillés dans notre analyse du <a href="/blog/taux-scan-plaque-nfc">taux de scan réel d'une plaque NFC</a>.</p>
+<p>Le tableau ci-dessous applique la méthode des trois questions à des configurations courantes. Il indique un nombre de plaques, pas un nombre d'avis : celui-ci dépend de votre flux et de votre propre taux, que vous pouvez mesurer avec la méthode détaillée dans notre guide sur le <a href="/blog/taux-scan-plaque-nfc">taux de scan d'une plaque NFC</a>.</p>
 <table>
 <thead>
-<tr><th>Établissement</th><th>Emplacements utiles</th><th>Nombre conseillé</th><th>Avis / mois estimés</th></tr>
+<tr><th>Établissement</th><th>Emplacements utiles</th><th>Nombre conseillé</th></tr>
 </thead>
 <tbody>
-<tr><td>Artisan seul (plombier, électricien)</td><td>Pochette de devis</td><td>1</td><td>7 à 9</td></tr>
-<tr><td>Commerce de proximité, 1 caisse</td><td>Caisse</td><td>1 à 2</td><td>10 à 20</td></tr>
-<tr><td>Salon de coiffure, 3 fauteuils</td><td>Caisse + 2 postes</td><td>2 à 3</td><td>25 à 50</td></tr>
-<tr><td>Restaurant, 45 couverts</td><td>Caisse + porte-addition</td><td>2 à 5</td><td>30 à 40</td></tr>
-<tr><td>Boulangerie, fort flux</td><td>2 zones de comptoir</td><td>2</td><td>100 à 140</td></tr>
-<tr><td>Garage automobile</td><td>Comptoir + zone restitution</td><td>2</td><td>15 à 30</td></tr>
-<tr><td>Cabinet médical, 2 praticiens</td><td>Accueil + 2 bureaux</td><td>3</td><td>20 à 35</td></tr>
-<tr><td>Hôtel 30 chambres</td><td>Réception + petit-déjeuner</td><td>2 à 3</td><td>25 à 40</td></tr>
-<tr><td>Réseau de 4 points de vente</td><td>1 caisse par site + réserve</td><td>5</td><td>60 à 120</td></tr>
+<tr><td>Artisan seul (plombier, électricien)</td><td>Pochette de devis</td><td>1</td></tr>
+<tr><td>Commerce de proximité, 1 caisse</td><td>Caisse</td><td>1 à 2</td></tr>
+<tr><td>Salon de coiffure, 3 fauteuils</td><td>Caisse + 2 postes</td><td>2 à 3</td></tr>
+<tr><td>Restaurant, 45 couverts</td><td>Caisse + porte-addition</td><td>2 à 5</td></tr>
+<tr><td>Boulangerie, fort flux</td><td>2 zones de comptoir</td><td>2</td></tr>
+<tr><td>Garage automobile</td><td>Comptoir + zone restitution</td><td>2</td></tr>
+<tr><td>Cabinet médical, 2 praticiens</td><td>Accueil + 2 bureaux</td><td>3</td></tr>
+<tr><td>Hôtel 30 chambres</td><td>Réception + petit-déjeuner</td><td>2 à 3</td></tr>
+<tr><td>Réseau de 4 points de vente</td><td>1 caisse par site + réserve</td><td>5</td></tr>
 </tbody>
 </table>
-<p>Deux lectures de ce tableau. D'abord, <strong>la majorité des établissements se situe à deux plaques</strong> : c'est la configuration qui couvre le point d'encaissement et le point de prestation, c'est-à-dire les deux moments où la demande est légitime pour la quasi-totalité des métiers de service.</p>
+<p>Deux lectures de ce tableau. D'abord, <strong>la plupart des configurations aboutissent à deux plaques</strong> : c'est ce qui couvre le point d'encaissement et le point de prestation, les deux moments où la demande a du sens dans les métiers où le client paie à un endroit et reçoit la prestation à un autre.</p>
 <p>Ensuite, la troisième plaque ne se justifie que dans deux cas de figure : plusieurs praticiens ou postes travaillant en parallèle, ou plusieurs adresses. Ajouter un troisième support dans un local où deux suffisent ne fait pas monter le volume — il le redistribue.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 Le cas du multi-établissements :</strong> chaque plaque Swiipx est expédiée programmée avec le lien d'avis que vous indiquez. Si vous gérez plusieurs adresses, chacune possède sa propre fiche Google et donc son propre lien : précisez-le à la commande pour recevoir des plaques distinctes plutôt que cinq plaques pointant vers la même fiche.</p>
+<p class="text-sm text-amber-900"><strong>💡 Le cas du multi-établissements :</strong> chaque plaque Swiipx est programmée individuellement avant expédition et peut pointer vers une fiche différente. Si vous gérez plusieurs établissements, Google prévoit <a href="https://support.google.com/business/answer/3038177?hl=fr" target="_blank" rel="noopener noreferrer">une seule fiche par établissement</a>, donc un lien d'avis propre à chacun : vérifiez que chaque plaque porte le lien de l'établissement où elle sera posée, pour ne pas vous retrouver avec cinq plaques pointant vers la même fiche.</p>
 </div>
 </section>
 
@@ -886,21 +849,21 @@ export const articles: Record<string, {
 <h3>Le commerce à point de passage unique</h3>
 <p>Kiosque, boutique de moins de trente mètres carrés, atelier de retouche, cordonnerie : le client entre, il est servi, il paie au même endroit. Le parcours est linéaire, il n'y a qu'un seul moment, une plaque le couvre.</p>
 <h3>Le test avant déploiement</h3>
-<p>C'est l'usage le plus fréquent et le plus rationnel. Vous voulez mesurer votre propre taux avant d'équiper trois sites : commandez une plaque, posez-la au point d'encaissement, dites la phrase pendant trente jours et comptez les avis obtenus. Vous disposerez d'un chiffre réel — le vôtre — plutôt que d'une estimation.</p>
+<p>C'est l'usage le plus rationnel d'une plaque unique. Vous voulez mesurer votre propre taux avant d'équiper trois sites : commandez une plaque, posez-la au point d'encaissement, dites la phrase pendant trente jours et comptez les avis obtenus. Vous disposerez d'un chiffre réel — le vôtre — plutôt que d'une estimation.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/starter" class="font-semibold underline">Pack Starter</a> contient une plaque acrylique 120 x 120 mm, adhésif inclus, QR code de secours imprimé, expédiée déjà programmée. 29,90 € en paiement unique, sans abonnement, garantie à vie. C'est le point d'entrée logique pour un professionnel seul ou pour un test de trente jours.</p>
+<p class="text-sm text-blue-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/starter" class="font-semibold underline">Pack Starter</a> contient une plaque acrylique 120 x 120 mm, adhésif inclus, QR code de secours imprimé, expédiée déjà programmée. 29,90 € HT en paiement unique, sans abonnement, garantie à vie. C'est le point d'entrée logique pour un professionnel seul ou pour un test de trente jours.</p>
 </div>
 <h3>La limite à connaître</h3>
-<p>Avec une seule plaque, votre volume dépend entièrement d'un emplacement. Si cet emplacement est mal choisi — trop haut, orienté vers le personnel, posé sur une surface métallique — vous perdez la totalité du gisement sans avoir de point de comparaison. C'est le seul risque réel du support unique : l'absence de redondance rend l'erreur invisible. Le sujet des surfaces est traité dans notre <a href="/blog/materiaux-plaque-nfc-avis-google">comparatif des matériaux de plaque NFC</a>.</p>
+<p>Avec une seule plaque, votre volume dépend entièrement d'un emplacement. Si cet emplacement est mal choisi — trop haut, orienté vers le personnel, posé sur une surface métallique — vous perdez des avis sans avoir de point de comparaison pour vous en rendre compte. C'est le seul risque réel du support unique : l'absence de redondance rend l'erreur invisible. Le sujet des surfaces est traité dans notre <a href="/blog/materiaux-plaque-nfc-avis-google">comparatif des matériaux de plaque NFC</a>.</p>
 </section>
 
 <section id="deux-plaques" class="scroll-mt-28 mb-16">
-<h2>Deux plaques : la configuration qui convient à huit établissements sur dix</h2>
-<p>Si vous ne devez retenir qu'une recommandation de cet article, c'est celle-ci. Le duo <strong>encaissement + prestation</strong> est la configuration la plus rentable pour l'immense majorité des commerces et cabinets, et l'écart avec la plaque unique est mesurable dès le premier mois.</p>
-<h3>Pourquoi le duo fonctionne si bien</h3>
+<h2>Deux plaques : couvrir l'encaissement et la prestation</h2>
+<p>Si vous ne devez retenir qu'une recommandation de cet article, c'est celle-ci. Dès que votre client reçoit la prestation à un endroit et paie à un autre, le duo <strong>encaissement + prestation</strong> est la configuration à envisager en premier. Son effet se vérifie chez vous : comparez votre taux d'avis du mois qui précède la pose de la seconde plaque à celui du mois qui suit.</p>
+<h3>Pourquoi deux emplacements valent mieux qu'un</h3>
 <p>Les deux emplacements ne captent pas les mêmes clients. Celui de l'encaissement capte tout le monde, mais dans un moment fonctionnel où l'attention est partagée entre le paiement et la sortie. Celui du poste de prestation capte moins de clients, mais au moment où la satisfaction est la plus forte — juste après le miroir, le diagnostic rassurant, la livraison de la commande.</p>
-<p>Additionner ces deux populations ne double pas mécaniquement le volume : il existe un recouvrement, puisqu'un client qui a scanné au fauteuil ne rescannera pas en caisse. L'observation terrain situe le gain réel entre <strong>30 et 60 %</strong>, ce qui reste le meilleur rapport entre un euro dépensé et un avis obtenu de toute la gamme.</p>
-<h3>Les cinq duos qui marchent le mieux</h3>
+<p>Additionner ces deux emplacements ne double pas mécaniquement le volume : il existe un recouvrement, puisqu'un client qui a scanné au fauteuil ne rescannera pas en caisse. L'intérêt du second point est ailleurs : il touche, au moment où la satisfaction est la plus forte, des clients qui passeront ensuite en caisse trop pressés pour faire le geste. Combien de clients cela représente dépend de votre parcours, et c'est ce que votre relevé mensuel vous dira.</p>
+<h3>Cinq duos selon le métier</h3>
 <ul>
 <li><strong>Caisse + fauteuil</strong> pour les salons de coiffure, barbiers et instituts de beauté.</li>
 <li><strong>Comptoir + porte-addition</strong> pour la restauration, où l'addition arrive à table et où le client a déjà son téléphone posé.</li>
@@ -909,9 +872,9 @@ export const articles: Record<string, {
 <li><strong>Pochette de devis + mallette</strong> pour les artisans en équipe, où la seconde plaque suit un second compagnon.</li>
 </ul>
 <h3>La règle des deux mètres</h3>
-<p>Une erreur fréquente consiste à poser les deux plaques trop près l'une de l'autre, sur le même comptoir. Elles se cannibalisent : le client en voit une, ignore l'autre, et vous avez payé deux supports pour un seul point de contact. Espacez-les d'au moins deux mètres, ou placez-les dans deux zones fonctionnellement différentes.</p>
+<p>L'erreur à éviter consiste à poser les deux plaques trop près l'une de l'autre, sur le même comptoir. Elles se cannibalisent : le client en voit une, ignore l'autre, et vous avez payé deux supports pour un seul point de contact. Espacez-les d'au moins deux mètres, ou placez-les dans deux zones fonctionnellement différentes.</p>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/business" class="font-semibold underline">Pack Business</a> réunit deux plaques pour 54,90 €, soit 27,45 € l'unité — moins cher que deux Starter achetés séparément. C'est le pack le plus vendu, précisément parce qu'il correspond à la configuration standard d'un commerce ou d'un cabinet.</p>
+<p class="text-sm text-emerald-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/business" class="font-semibold underline">Pack Business</a> réunit deux plaques pour 54,90 € HT, soit 27,45 € HT l'unité — moins cher que deux Starter achetés séparément. Il correspond à la configuration encaissement + prestation décrite ci-dessus, et chaque plaque peut pointer vers un lien différent.</p>
 </div>
 </section>
 
@@ -921,25 +884,24 @@ export const articles: Record<string, {
 <h3>Situation 1 : plusieurs postes en parallèle</h3>
 <p>Un salon à quatre fauteuils, un cabinet à trois praticiens, un institut avec trois cabines : chaque poste est un point de contact indépendant, et le client qui sort de la cabine 3 ne verra jamais la plaque de la cabine 1. Ici, cinq plaques couvrent quatre postes plus la caisse, ce qui est exactement le bon dimensionnement.</p>
 <h3>Situation 2 : plusieurs adresses</h3>
-<p>C'est le cas le plus évident. Trois boulangeries, deux agences, quatre points de vente : chaque site a sa fiche Google, son lien d'avis, et donc sa plaque dédiée. Attention à un piège fréquent — équiper tous les sites avec le même lien fait converger les avis sur une seule fiche, ce qui affaiblit les autres et fausse le pack local sur chaque zone.</p>
+<p>C'est le cas le plus évident. Trois boulangeries, deux agences, quatre points de vente : chaque site a sa fiche Google, son lien d'avis, et donc sa plaque dédiée. Attention à un piège — équiper tous les sites avec le même lien fait converger les avis sur une seule fiche, et laisse les autres fiches sans les avis de leurs propres clients.</p>
 <h3>Situation 3 : la rotation et le remplacement</h3>
-<p>Les plaques bougent. Un réagencement, une caisse déplacée, un décollement sur une surface mal préparée, une plaque emportée par mégarde dans un carton : disposer d'une ou deux unités d'avance évite de rester deux semaines sans dispositif. Sur un commerce qui collecte quinze avis par mois, deux semaines d'interruption représentent sept ou huit avis perdus, soit largement le prix d'une plaque de rechange.</p>
+<p>Les plaques bougent. Un réagencement, une caisse déplacée, un décollement sur une surface mal préparée, une plaque emportée par mégarde dans un carton : disposer d'une ou deux unités d'avance évite de rester deux semaines sans dispositif. Hypothèse de calcul : pour un commerce qui recevrait quinze avis par mois, deux semaines d'interruption représenteraient sept ou huit avis de moins, à mettre en regard du prix d'une plaque de rechange.</p>
 <h3>Le calcul du coût unitaire</h3>
-<p>Le tableau ci-dessous compare le prix par plaque selon le pack. La dernière colonne rapporte la dépense au nombre d'avis attendus sur trois ans, durée de vie moyenne d'une plaque acrylique.</p>
+<p>Le tableau ci-dessous compare le prix par plaque selon le pack. Il ne contient pas de coût par avis : ce coût dépend du nombre d'avis que vous obtiendrez, et ce nombre, seul votre relevé peut le donner.</p>
 <table>
 <thead>
-<tr><th>Pack</th><th>Prix</th><th>Prix / plaque</th><th>Coût par avis sur 3 ans</th></tr>
+<tr><th>Pack</th><th>Prix HT</th><th>Prix HT / plaque</th></tr>
 </thead>
 <tbody>
-<tr><td>Starter (1 plaque)</td><td>29,90 €</td><td>29,90 €</td><td>≈ 0,08 €</td></tr>
-<tr><td>Business (2 plaques)</td><td>54,90 €</td><td>27,45 €</td><td>≈ 0,05 €</td></tr>
-<tr><td>Pro (5 plaques)</td><td>89,90 €</td><td>17,98 €</td><td>≈ 0,03 €</td></tr>
-<tr><td>Solution par abonnement</td><td>19 € / mois</td><td>—</td><td>≈ 0,95 €</td></tr>
+<tr><td>Starter (1 plaque)</td><td>29,90 €</td><td>29,90 €</td></tr>
+<tr><td>Business (2 plaques)</td><td>54,90 €</td><td>27,45 €</td></tr>
+<tr><td>Pro (5 plaques)</td><td>89,90 €</td><td>17,98 €</td></tr>
 </tbody>
 </table>
-<p>Le calcul repose sur une hypothèse volontairement prudente de douze avis par mois et par établissement. L'écart avec une formule par abonnement n'est pas de quelques euros : sur trois ans, 19 € mensuels représentent 684 €, contre 89,90 € une seule fois. La comparaison complète figure dans notre article sur le <a href="/blog/prix-plaque-nfc-avis-google">prix d'une plaque NFC pour avis Google</a>.</p>
+<p>Pour obtenir votre coût par avis, divisez le prix du pack par le nombre d'avis publiés depuis la pose. Hypothèse de calcul : si un Pack Business vous apportait 100 avis, chaque avis vous aurait coûté environ 55 centimes HT ; s'il en apportait 300, environ 18 centimes. Le paiement étant unique, ce coût baisse à chaque nouvel avis. Une formule par abonnement se calcule autrement, puisque la dépense continue : à 19 € HT par mois, elle représenterait 684 € HT sur trois ans. La comparaison complète figure dans notre article sur le <a href="/blog/prix-plaque-nfc-avis-google">prix d'une plaque NFC pour avis Google</a>.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/pro" class="font-semibold underline">Pack Pro</a> propose cinq plaques à 89,90 €, chacune programmable avec un lien différent. Garantie à vie sur les puces, livraison en point relais offerte. C'est le seul pack qui permet d'équiper plusieurs fiches Google distinctes en une commande.</p>
+<p class="text-sm text-blue-900"><strong>🎯 Le pack correspondant :</strong> le <a href="/product/pro" class="font-semibold underline">Pack Pro</a> propose cinq plaques à 89,90 € HT, chacune programmable avec un lien différent. Garantie à vie sur les puces, livraison en point relais offerte. C'est le pack qui permet d'équiper jusqu'à cinq emplacements ou cinq établissements en une seule commande.</p>
 </div>
 </section>
 
@@ -951,23 +913,23 @@ export const articles: Record<string, {
 <li><strong>Poser les deux plaques côte à côte.</strong> Elles se neutralisent visuellement. Deux mètres d'écart minimum, ou deux zones fonctionnelles différentes.</li>
 <li><strong>Équiper une zone sans personnel.</strong> Salle d'attente, vitrine, couloir : sans quelqu'un pour dire la phrase, le taux tombe à un niveau qui ne justifie pas le support. La plaque amplifie une demande orale, elle ne la remplace pas.</li>
 <li><strong>Sous-équiper un multi-sites.</strong> Trois adresses avec une seule plaque tournante, c'est deux fiches Google qui stagnent pendant que la troisième progresse. Les fiches ne se transfèrent pas leur proéminence.</li>
-<li><strong>Programmer plusieurs plaques sur le même lien alors que les fiches diffèrent.</strong> Les avis atterrissent sur la mauvaise fiche, et l'erreur est irréversible : Google ne déplace pas un avis d'un établissement vers un autre.</li>
-<li><strong>Acheter plusieurs plaques sans changer la phrase.</strong> Doubler le support sans doubler la sollicitation orale produit un gain marginal. Le support est le multiplicateur, la phrase reste le déclencheur.</li>
+<li><strong>Programmer plusieurs plaques sur le même lien alors que les fiches diffèrent.</strong> Les avis atterrissent sur la mauvaise fiche, et ne comptez pas les récupérer : la <a href="https://support.google.com/business/answer/3098204?hl=fr" target="_blank" rel="noopener noreferrer">page d'aide de Google sur le déplacement des avis</a> ne prévoit de transfert qu'entre deux fiches d'un même établissement, par exemple après un déménagement.</li>
+<li><strong>Acheter plusieurs plaques sans changer la phrase.</strong> Doubler le support sans que la phrase soit dite au second emplacement risque de n'apporter presque rien. Le support est le multiplicateur, la phrase reste le déclencheur.</li>
 </ul>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 Le test des trente jours :</strong> si vous hésitez entre deux dimensionnements, prenez le plus petit et mesurez. Comptez vos avis sur trente jours, divisez par votre nombre de clients servis, et vous obtenez votre taux réel. Un taux inférieur à 3 % signale un problème d'emplacement ou de phrase — pas un manque de plaques. Ajouter des supports sur un dispositif mal réglé multiplie le défaut, pas le résultat.</p>
+<p class="text-sm text-amber-900"><strong>💡 Le test des trente jours :</strong> si vous hésitez entre deux dimensionnements, prenez le plus petit et mesurez. Comptez les avis publiés sur trente jours, divisez par le nombre de clients servis sur la même période, et vous obtenez votre propre taux. S'il vous paraît faible, cherchez d'abord du côté de l'emplacement et de la phrase, pas du nombre de plaques : ajouter des supports sur un dispositif mal réglé reproduit le défaut à plusieurs endroits.</p>
 </div>
 </section>
 
 <section id="objectif-avis" class="scroll-mt-28 mb-16">
 <h2>Combien de plaques pour atteindre un objectif d'avis précis</h2>
-<p>Beaucoup de professionnels raisonnent à l'envers, et c'est plus efficace : ils partent d'un objectif — passer devant un concurrent, atteindre le pack local, remonter une note — et cherchent le dispositif qui y mène.</p>
+<p>On peut aussi raisonner à l'envers : partir d'un objectif — passer devant un concurrent, atteindre le pack local, remonter une note — et chercher le dispositif qui y mène.</p>
 <h3>Étape 1 : fixer le nombre d'avis cible</h3>
-<p>Regardez les trois fiches affichées dans le pack local sur votre requête principale, relevez leur nombre d'avis, et prenez la plus faible comme cible. Les seuils par densité concurrentielle sont détaillés dans notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>. En zone rurale, quarante avis suffisent souvent ; en centre-ville dense, il en faut fréquemment plus de cent cinquante.</p>
+<p>Regardez les trois fiches affichées dans le pack local sur votre requête principale, relevez leur nombre d'avis, et prenez la plus faible comme cible. La démarche est détaillée dans notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>. Gardez en tête que le nombre d'avis n'est qu'un élément du classement : <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">selon Google</a>, celui-ci repose principalement sur la pertinence, la distance et la proéminence. Cette cible est donc un repère de travail, pas une garantie de position.</p>
 <h3>Étape 2 : calculer le rythme mensuel</h3>
 <p>Divisez l'écart par le nombre de mois que vous vous donnez. Un commerce à 32 avis qui vise 120 en un an doit produire environ 7 à 8 avis par mois. Un cabinet à 15 avis qui vise 90 en six mois doit en produire 12 à 13, ce qui est un tout autre effort.</p>
 <h3>Étape 3 : en déduire le nombre de supports</h3>
-<p>Rapportez ce rythme à votre flux. Avec un taux de collecte réaliste de 5 à 12 % des clients servis selon le secteur, vous savez immédiatement si un emplacement suffit. Un salon qui sert 400 clients par mois atteint 20 à 40 avis avec deux plaques bien placées : l'objectif est atteignable. Un cabinet qui reçoit 120 patients par mois plafonnera autour de 8 à 12 avis, et devra donc allonger le délai plutôt que multiplier les supports.</p>
+<p>Rapportez ce rythme à votre flux et à votre propre taux, mesuré sur un mois avec le test des trente jours décrit plus haut. Hypothèse de calcul : si votre relevé donnait un avis pour vingt clients servis, un cabinet qui reçoit 120 patients par mois en obtiendrait six ; viser douze ou treize avis mensuels demanderait alors de doubler ce taux ou d'allonger le délai. Une plaque de plus n'y changerait rien si tous les patients passent déjà devant la première.</p>
 <p>Ce dernier point est important : au-delà d'un certain nombre de plaques, la contrainte n'est plus le support mais le flux. Cinq plaques ne créent pas de clients. Elles garantissent seulement qu'aucun client servi ne passe à côté du moment où la demande a du sens.</p>
 <p>Enfin, si votre objectif porte sur la note plutôt que sur le volume, le calcul est différent et repose sur une formule d'inertie que nous détaillons dans notre guide pour <a href="/blog/ameliorer-note-google">améliorer sa note Google</a> — remonter de 4,2 à 4,6 avec 200 avis existants demande beaucoup plus d'avis positifs qu'avec 30.</p>
 </section>
@@ -976,37 +938,37 @@ export const articles: Record<string, {
 <h2>FAQ — Combien de plaques NFC pour votre établissement</h2>
 
 <h3>Une seule plaque NFC suffit-elle pour un commerce ?</h3>
-<p>Oui, si votre parcours client est linéaire et se termine à un seul endroit : petite boutique, kiosque, atelier de retouche, artisan itinérant. Dans ces cas, le point d'encaissement concentre la totalité des occasions de demande et un second support n'ajouterait rien. En revanche, dès qu'il existe un poste de prestation distinct de la caisse — un fauteuil, un bureau, une table — vous laissez entre 30 et 60 % du gisement inexploité avec une seule plaque. La règle pratique : comptez les endroits où un client s'arrête après la fin de la prestation, et non le nombre de pièces.</p>
+<p>Oui, si votre parcours client est linéaire et se termine à un seul endroit : petite boutique, kiosque, atelier de retouche, artisan itinérant. Dans ces cas, le point d'encaissement concentre la totalité des occasions de demande et un second support n'ajouterait rien. En revanche, dès qu'il existe un poste de prestation distinct de la caisse — un fauteuil, un bureau, une table — une seule plaque laisse de côté le moment où la satisfaction du client est la plus forte. La règle pratique : comptez les endroits où un client s'arrête après la fin de la prestation, et non le nombre de pièces.</p>
 
 <h3>Deux plaques collectent-elles deux fois plus d'avis ?</h3>
-<p>Non, et il faut s'en méfier. Les deux emplacements captent des populations qui se recouvrent partiellement : un client qui a scanné au fauteuil ne rescannera pas en caisse. Le gain réel observé se situe entre 30 et 60 % de volume supplémentaire, ce qui reste excellent rapporté au coût. Un doublement n'est possible que si les deux plaques touchent des flux réellement distincts, par exemple deux comptoirs séparés d'un garage ou deux points de vente différents.</p>
+<p>Non, et il faut s'en méfier. Les deux emplacements captent des populations qui se recouvrent partiellement : un client qui a scanné au fauteuil ne rescannera pas en caisse. Le second emplacement ajoute les clients que le premier ne touche pas, et son apport se mesure en comparant votre taux d'avis du mois qui précède sa pose à celui du mois qui suit. Un doublement n'est envisageable que si les deux plaques touchent des flux réellement distincts, par exemple deux comptoirs séparés d'un garage ou deux points de vente différents.</p>
 
 <h3>Peut-on programmer chaque plaque avec un lien d'avis différent ?</h3>
-<p>Oui, et c'est indispensable si vous gérez plusieurs établissements. Chaque adresse possède sa propre fiche Google Business Profile, donc son propre lien d'avis : il suffit de préciser les liens souhaités à la commande. Une erreur fréquente consiste à équiper trois boutiques avec le même lien — tous les avis se concentrent alors sur une seule fiche, et les deux autres restent invisibles dans le pack local de leur quartier. Google ne permet pas de déplacer un avis d'un établissement vers un autre après coup.</p>
+<p>Oui, et c'est indispensable si vous gérez plusieurs établissements. Google prévoit une seule fiche par établissement, donc un lien d'avis propre à chacun, et chaque plaque Swiipx est programmée individuellement avant expédition. Le piège consiste à équiper trois boutiques avec le même lien : tous les avis se concentrent alors sur une seule fiche, et les deux autres ne reçoivent pas ceux de leurs clients. Ne comptez pas sur une correction après coup : l'aide de Google ne prévoit le transfert d'avis entre fiches que pour un même établissement, par exemple après un déménagement.</p>
 
 <h3>Faut-il une plaque par salarié ou par poste de travail ?</h3>
 <p>Par poste, jamais par salarié. Ce qui compte est le point physique où le client se trouve à la fin de la prestation, pas la personne qui l'a servi. Trois coiffeurs qui se partagent deux fauteuils actifs n'ont besoin que de deux plaques plus celle de la caisse. À l'inverse, un cabinet où deux praticiens exercent simultanément dans deux bureaux distincts a bien besoin de deux plaques, plus une à l'accueil, car les patients ne repassent pas tous par le même point de sortie.</p>
 
 <h3>Que faire si j'ai acheté trop de plaques ?</h3>
-<p>Rien n'est perdu, mais évitez de toutes les poser dans le même local : au-delà de deux ou trois supports visibles, l'effet de saturation visuelle réduit l'attention portée à chacune. Les meilleures utilisations d'un surplus sont la plaque de rechange en réserve, la plaque confiée à un commercial ou un technicien itinérant, et la plaque destinée à un futur second point de vente. Une plaque non posée conserve toute sa valeur : la puce ne se dégrade pas au stockage et la garantie reste acquise.</p>
+<p>Rien n'est perdu, mais évitez de toutes les poser dans le même local : des plaques partout finissent par ne plus attirer l'œil, et aucune ne se remarque vraiment. Les meilleures utilisations d'un surplus sont la plaque de rechange en réserve, la plaque confiée à un commercial ou un technicien itinérant, et la plaque destinée à un futur second point de vente. Une plaque non posée se garde pour plus tard, et la garantie à vie sur la puce s'applique de la même façon.</p>
 
 <h3>Le pack de 5 est-il rentable pour un commerce unique ?</h3>
-<p>Il l'est dans un cas précis : quand l'établissement compte plusieurs postes de prestation fonctionnant en parallèle, comme un salon à quatre fauteuils ou un institut à trois cabines. En dehors de cette configuration, le pack de deux couvre l'essentiel et le surplus dort. Cela dit, le coût unitaire chute nettement — environ 18 € la plaque contre 29,90 € à l'unité — donc garder deux unités d'avance reste économiquement défendable si vous anticipez un réagencement ou une ouverture.</p>
+<p>Il l'est dans un cas précis : quand l'établissement compte plusieurs postes de prestation fonctionnant en parallèle, comme un salon à quatre fauteuils ou un institut à trois cabines. En dehors de cette configuration, le pack de deux couvre l'essentiel et le surplus dort. Cela dit, le coût unitaire chute nettement — environ 18 € HT la plaque contre 29,90 € HT à l'unité — donc garder deux unités d'avance reste économiquement défendable si vous anticipez un réagencement ou une ouverture.</p>
 
 <h3>Combien de plaques faut-il pour entrer dans le pack local Google ?</h3>
-<p>Aucun nombre de plaques ne garantit une position : le pack local se joue sur la pertinence, la distance et la proéminence, et seule la troisième dépend de vos avis. La bonne façon de poser la question est inverse — combien d'avis vous manque-t-il par rapport aux trois fiches actuellement affichées, en combien de mois voulez-vous les obtenir, et votre flux client permet-il ce rythme. Un dispositif à deux plaques accompagné d'une demande orale systématique produit typiquement 10 à 40 avis mensuels selon le secteur, ce qui suffit à combler la plupart des écarts en six à douze mois.</p>
+<p>Aucun nombre de plaques ne garantit une position : selon Google, le classement local repose principalement sur la pertinence, la distance et la proéminence, et c'est à cette dernière que se rattachent vos avis. La bonne façon de poser la question est inverse — combien d'avis vous manque-t-il par rapport aux trois fiches actuellement affichées, en combien de mois voulez-vous les obtenir, et votre flux client permet-il ce rythme. Mesurez votre rythme réel sur un mois, divisez l'écart par ce rythme, et vous saurez en combien de mois il peut être comblé, ou s'il faut d'abord améliorer votre taux.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : comptez les moments, pas les mètres carrés</h2>
 <p>Le dimensionnement d'un dispositif de collecte d'avis ne dépend ni de la taille du local, ni du chiffre d'affaires, ni du nombre de salariés. Il dépend d'une seule chose : le nombre d'endroits où un client, prestation terminée et téléphone en main, peut recevoir une invitation naturelle à laisser un avis.</p>
-<p>Pour la grande majorité des commerces et cabinets, ces endroits sont au nombre de deux — le point d'encaissement et le poste de prestation — et c'est pourquoi la configuration à deux plaques reste la plus efficace. Une plaque suffit à un professionnel itinérant ou à une boutique à parcours unique. Cinq deviennent nécessaires dès qu'il existe plusieurs postes parallèles ou plusieurs fiches Google à alimenter.</p>
-<p>Et si le doute persiste, commencez petit et mesurez : trente jours d'observation valent mieux que n'importe quelle estimation, y compris celles de cet article.</p>
+<p>Dans un salon, un restaurant, un garage ou un cabinet, où la prestation et l'encaissement ont lieu à deux endroits différents, ces endroits sont au nombre de deux — le point d'encaissement et le poste de prestation — et la configuration à deux plaques est le point de départ logique. Une plaque suffit à un professionnel itinérant ou à une boutique à parcours unique. Cinq deviennent nécessaires dès qu'il existe plusieurs postes parallèles ou plusieurs fiches Google à alimenter.</p>
+<p>Et si le doute persiste, commencez petit et mesurez : trente jours de relevés valent mieux que n'importe quelle estimation.</p>
 <p>Guides complémentaires : <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, <a href="/blog/comment-choisir-plaque-nfc-avis-google">comment choisir sa plaque NFC</a>, <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC ou QR code</a>, ou notre comparatif des <a href="/blog/plaque-avis-google-sans-abonnement">solutions sans abonnement</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à équiper vos points de contact ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, expédiées déjà programmées, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € — et 17,98 € la plaque en Pack Pro.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, expédiées déjà programmées, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT — et 17,98 € HT la plaque en Pack Pro.</p>
 </div>
 </section>
 `,
@@ -1015,7 +977,7 @@ export const articles: Record<string, {
     title: 'Plaque NFC plombier et artisan : collecter des avis Google sans boutique',
     category: 'Secteur',
     date: '2 septembre 2026',
-    readTime: '12 min',
+    readTime: '13 min',
     author: 'Équipe Swiipx',
     excerpt: 'Plombiers, électriciens, chauffagistes, menuisiers : tous les dispositifs d\'avis ont été pensés pour un comptoir que vous n\'avez pas. Les 6 emplacements qui marchent sans boutique, la fiche en zone de service, 3 scripts et les 6 erreurs.',
     tocSections: [
@@ -1034,10 +996,10 @@ export const articles: Record<string, {
     content: `
 <section id="pourquoi-avis-artisan" class="scroll-mt-28 mb-16">
 <h2>Pourquoi les avis Google décident des chantiers d'un artisan</h2>
-<p>Un particulier qui cherche un plombier ne compare pas des devis : il n'en a aucun. Il tape « plombier + sa ville » sur son téléphone, regarde les trois fiches du pack local, et appelle celle qui affiche le plus d'avis avec la meilleure note. Le devis vient après, et il vient rarement de plus de deux entreprises.</p>
-<p>Ce réflexe de vérification est désormais général : <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français consultent les avis avant de faire appel à un professionnel</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs). Dans le bâtiment, la méfiance est plus forte qu'ailleurs : le client laisse entrer un inconnu chez lui, signe un devis qu'il ne sait pas juger, et paie un travail qu'il ne reverra jamais une fois le carrelage reposé.</p>
+<p>Un particulier qui cherche un plombier ne compare pas des devis : il n'en a aucun. Il tape « plombier + sa ville » sur son téléphone, regarde les fiches du pack local, compare les notes et lit quelques avis avant d'appeler. Le devis vient après, et seulement auprès des entreprises qui ont passé ce premier tri.</p>
+<p>La lecture des avis est un geste répandu : <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026, 1 350 Français représentatifs). L'étude porte sur les points de vente, pas sur les artisans qui interviennent à domicile : elle ne mesure donc pas ce réflexe dans le bâtiment. Mais la méfiance y a ses raisons propres : le client laisse entrer un inconnu chez lui, signe un devis qu'il ne sait pas juger, et paie un travail qu'il ne reverra jamais une fois le carrelage reposé.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> un artisan du bâtiment ne joue pas quelques euros de panier moyen sur une place dans le pack local. Un dépannage tourne autour de 150 à 300 €, une salle de bains complète dépasse souvent 6 000 €. Deux chantiers gagnés dans l'année grâce à une meilleure position pèsent plus lourd qu'un mois entier de petit dépannage.</p>
+<p class="text-sm text-blue-900"><strong>📊 Hypothèse de calcul :</strong> un artisan du bâtiment ne joue pas quelques euros de panier moyen sur une place dans le pack local. Si un dépannage vous rapportait 200 € et une salle de bains complète 6 000 €, un seul chantier de ce type pèserait autant que trente dépannages. Remplacez ces montants par les vôtres : l'écart dit ce que vaut un client de plus venu de votre fiche.</p>
 </div>
 <p>Le problème n'est jamais la qualité du travail. Les artisans font très majoritairement du bon travail et leurs clients le disent — au téléphone, sur le pas de la porte, jamais sur Google. Ce qui manque, ce n'est pas la satisfaction, c'est le <strong>passage à l'acte</strong>.</p>
 </section>
@@ -1051,22 +1013,22 @@ export const articles: Record<string, {
 <li><strong>La carte de visite avec un QR code au dos</strong> : elle finit dans un tiroir de cuisine avec la facture. Le client ne la ressort jamais.</li>
 <li><strong>Le SMS de relance envoyé trois jours après</strong> : le chantier est déjà loin, le message est perçu comme du démarchage, et vous risquez de réveiller un client qui avait oublié le détail qui l'agaçait.</li>
 <li><strong>Le « n'hésitez pas à nous mettre un avis » lancé sur le palier</strong> : sans support physique, le client acquiesce sincèrement et n'y pense plus dans l'ascenseur.</li>
-<li><strong>Le lien dans le mail de facture</strong> : il est ouvert par ceux qui vérifient le montant, pas par ceux qui sont contents. Le taux de clic réel se compte en pourcents.</li>
+<li><strong>Le lien dans le mail de facture</strong> : le mail est ouvert pour vérifier un montant, pas pour remercier, et le lien d'avis se perd sous la facture.</li>
 </ul>
 <p>Ce qui fonctionne, c'est un <strong>objet physique présent au moment où le client vous remercie</strong>, avec un geste à faire tout de suite. Le problème de l'artisan n'est donc pas de trouver un comptoir : c'est d'emporter le comptoir avec lui.</p>
 </section>
 
 <section id="fiche-zone-service" class="scroll-mt-28 mb-16">
 <h2>La fiche Google d'un artisan : le cas particulier de la zone de service</h2>
-<p>Avant même de collecter, encore faut-il que la fiche existe correctement. Un artisan qui travaille chez ses clients relève d'un type de fiche spécifique dans Google Business Profile : la <strong>zone de service</strong> (service-area business). Concrètement, l'adresse du siège — souvent le domicile — est saisie pour la vérification puis <em>masquée</em>, et vous déclarez à la place les communes ou codes postaux que vous desservez.</p>
+<p>Avant même de collecter, encore faut-il que la fiche existe correctement. Un artisan qui travaille chez ses clients relève d'un type de fiche spécifique dans Google Business Profile : la <strong>zone de service</strong> (service-area business). Concrètement, si vous ne recevez pas de clients à votre adresse — souvent votre domicile —, <a href="https://support.google.com/business/answer/9157481?hl=fr" target="_blank" rel="noopener noreferrer">Google demande de la retirer de la fiche</a> et d'indiquer à la place la zone que vous desservez : jusqu'à 20 villes, codes postaux ou autres zones géographiques.</p>
 <p>Trois conséquences que beaucoup d'artisans découvrent trop tard :</p>
 <ul>
-<li><strong>Vous n'apparaissez pas partout dans la zone déclarée.</strong> Google classe toujours sur la distance entre l'internaute et votre point de rattachement réel. Déclarer trente communes n'étale pas votre visibilité sur trente communes : cela indique seulement où vous intervenez.</li>
-<li><strong>La proéminence devient le seul levier que vous contrôlez.</strong> Des trois critères de classement — pertinence, distance, proéminence — la distance est figée et la pertinence se joue une fois pour toutes dans le paramétrage. Le volume, la fraîcheur et la note des avis sont ce qui reste actionnable au quotidien.</li>
-<li><strong>La vérification est plus stricte.</strong> Les fiches sans vitrine sont davantage suspectées de fraude, et un pic anormal d'avis sur une jeune fiche peut déclencher une mise en pause. Une collecte régulière, étalée, ressemble à ce qu'elle est : de l'activité normale.</li>
+<li><strong>Déclarer une zone ne garantit pas d'y apparaître partout.</strong> La distance reste l'un des trois critères du classement local, et Google recommande de limiter la zone desservie à deux heures de trajet depuis votre établissement. Déclarer trente communes indique où vous intervenez ; cela ne vous rapproche pas des clients installés à l'autre bout de votre zone.</li>
+<li><strong>Les avis sont le levier que vous actionnez au quotidien.</strong> Des trois critères de classement — pertinence, distance, proéminence —, la distance ne dépend pas de vous et la pertinence se règle surtout dans le paramétrage de la fiche. <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">Google range le nombre d'avis et les notes positives dans la proéminence</a> : c'est ce qui reste actionnable chaque semaine.</li>
+<li><strong>Une collecte régulière vaut mieux qu'un afflux.</strong> En cas d'engagement artificiel, Google peut <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">empêcher une fiche de recevoir de nouveaux avis pendant une période donnée</a>. Une collecte régulière, étalée, ressemble à ce qu'elle est : de l'activité normale.</li>
 </ul>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>⚙️ Le réglage qui rapporte le plus :</strong> renseignez la liste complète de vos prestations dans la section Services (débouchage, recherche de fuite, remplacement de chauffe-eau, mise aux normes…). C'est le seul endroit où vous dictez à Google les requêtes sur lesquelles vous êtes pertinent. Notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a> détaille chaque champ.</p>
+<p class="text-sm text-emerald-900"><strong>⚙️ Le réglage à ne pas oublier :</strong> renseignez la liste complète de vos prestations dans la section Services (débouchage, recherche de fuite, remplacement de chauffe-eau, mise aux normes…). Google demande des informations aussi complètes que possible : c'est là que vous lui dites, prestation par prestation, ce que vous faites. Notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a> détaille chaque champ.</p>
 </div>
 </section>
 
@@ -1093,7 +1055,7 @@ export const articles: Record<string, {
 <p>Aucune valeur de collecte : personne ne scanne un camion garé dans la rue. Valeur réputationnelle uniquement, comme un floquage. À ne jamais utiliser comme dispositif principal.</p>
 
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 La règle des 2 plaques pour un artisan :</strong> la configuration qui fonctionne est <strong>pochette de devis + mallette</strong>, soit exactement le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a>. Un artisan seul qui démarre peut se contenter du <a href="/product/starter" class="font-semibold underline">Pack Starter</a> ; une équipe de trois compagnons a besoin d'une plaque par véhicule, donc du <a href="/product/pro" class="font-semibold underline">Pack Pro</a>.</p>
+<p class="text-sm text-amber-900"><strong>💡 La règle des 2 plaques pour un artisan :</strong> la configuration la plus logique est <strong>pochette de devis + mallette</strong>, soit exactement le <a href="/product/business" class="font-semibold underline">Pack Business (2 plaques)</a>. Un artisan seul qui démarre peut se contenter du <a href="/product/starter" class="font-semibold underline">Pack Starter</a> ; une équipe de trois compagnons a besoin d'une plaque par véhicule, donc du <a href="/product/pro" class="font-semibold underline">Pack Pro</a>.</p>
 </div>
 
 <h3>Attention au métal</h3>
@@ -1107,7 +1069,7 @@ export const articles: Record<string, {
 <ul>
 <li><strong>Juste après la démonstration du résultat.</strong> Vous ouvrez le robinet, vous montrez que ça ne fuit plus, le client souffle. C'est le pic émotionnel de l'intervention.</li>
 <li><strong>À la signature du bon d'intervention.</strong> Le client a déjà un stylo ou un téléphone en main : il est en posture de valider.</li>
-<li><strong>Au dépannage d'urgence résolu.</strong> Une fuite arrêtée un dimanche soir génère la gratitude la plus forte de tout le métier. C'est votre meilleur gisement d'avis à cinq étoiles.</li>
+<li><strong>Au dépannage d'urgence résolu.</strong> Une fuite arrêtée un dimanche soir laisse un client soulagé, qui sait ce que votre déplacement lui a évité.</li>
 <li><strong>À la remise du dossier de fin de chantier.</strong> Attestations, garanties, notices : le client perçoit du sérieux, il est réceptif.</li>
 <li><strong>Au passage de contrôle à un an</strong>, sur une chaudière ou une installation. Le client constate que rien n'a bougé — c'est exactement ce qu'il voulait acheter.</li>
 </ul>
@@ -1124,9 +1086,9 @@ export const articles: Record<string, {
 <h2>Trois scripts d'artisan qui fonctionnent</h2>
 <p>Une plaque posée sans un mot ne produit presque rien. C'est la phrase qui la transforme en proposition, et elle doit tenir en une respiration, sans jamais quémander.</p>
 
-<h3>✅ Le script « démonstration » (le plus efficace)</h3>
+<h3>✅ Le script « démonstration »</h3>
 <p class="italic">« Voilà, plus de fuite. Si le dépannage vous a convenu, approchez votre téléphone de la plaque : ça prend vingt secondes et ça nous aide beaucoup. »</p>
-<p>Il enchaîne directement sur la preuve du travail fait. Le client vient de constater le résultat : il ne peut pas dire non sans se contredire.</p>
+<p>Il enchaîne directement sur la preuve du travail fait : la demande arrive au moment où le client peut juger le résultat, et la condition « si le dépannage vous a convenu » lui laisse la liberté de ne rien faire.</p>
 
 <h3>✅ Le script « signature »</h3>
 <p class="italic">« Je vous fais signer le bon ici. Et si le passage vous a convenu, l'avis Google se fait juste là, en un geste. »</p>
@@ -1134,41 +1096,35 @@ export const articles: Record<string, {
 
 <h3>✅ Le script « urgence »</h3>
 <p class="italic">« Content d'avoir pu passer ce soir. Le meilleur remerciement, c'est un avis Google : approchez votre téléphone, c'est immédiat. »</p>
-<p>À réserver aux dépannages hors horaires. Le rapport de gratitude est tel que le taux d'acceptation dépasse largement celui d'une intervention ordinaire.</p>
+<p>À réserver aux dépannages hors horaires, quand le client mesure ce que votre déplacement lui a évité.</p>
 
 <h3>❌ Les deux formulations à bannir</h3>
 <ul>
 <li><strong>« Vous pourrez nous laisser un avis sur internet ? »</strong> — diffère l'action, donc l'annule. Tout ce qui n'est pas fait devant vous n'est pas fait.</li>
-<li><strong>« Un avis 5 étoiles et je vous fais un geste sur la prochaine intervention »</strong> — offrir une contrepartie contre un avis enfreint les règles de Google et expose à la suppression de l'ensemble des avis de la fiche.</li>
+<li><strong>« Un avis 5 étoiles et je vous fais un geste sur la prochaine intervention »</strong> — offrir une contrepartie contre un avis est strictement interdit par Google, et réclamer une note précise revient à tenter d'influencer l'avis, ce que ses règles n'autorisent pas non plus.</li>
 </ul>
 </section>
 
 <section id="cas-pratiques" class="scroll-mt-28 mb-16">
 <h2>Trois exemples de calcul</h2>
-<p>Le nombre d'avis mensuels est le produit de deux choses seulement : le nombre d'interventions terminées, et la proportion de clients à qui la demande est réellement faite multipliée par le taux de publication. Les ordres de grandeur ci-dessous partent d'un taux de publication de 20 à 30 %, cohérent avec les métiers à contact long analysés dans notre article sur le <a href="/blog/taux-scan-plaque-nfc">taux de scan réel d'une plaque NFC</a>.</p>
-
-<table>
-<thead>
-<tr><th>Profil</th><th>Interventions / mois</th><th>Demande faite</th><th>Avis / mois</th></tr>
-</thead>
-<tbody>
-<tr><td>Plombier seul, dépannage</td><td>60</td><td>1 fois sur 2</td><td>7 à 9</td></tr>
-<tr><td>Électricien, 2 compagnons</td><td>110</td><td>3 fois sur 4</td><td>18 à 25</td></tr>
-<tr><td>Chauffagiste, gros chantiers</td><td>14</td><td>systématique</td><td>3 à 4</td></tr>
-</tbody>
-</table>
-
-<p>Deux enseignements. D'abord, l'artisan à faible volume n'est pas pénalisé : quatre avis par mois font quarante-huit avis par an, largement de quoi passer devant une concurrence locale qui plafonne à une vingtaine. Ensuite, la variable qui bouge le résultat n'est pas le secteur mais la <strong>régularité de la demande</strong> : passer de « une fois sur deux » à « systématique » double le volume sans changer une seule ligne du reste.</p>
-<p>Pour situer l'objectif, notre analyse du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne les seuils par densité concurrentielle.</p>
+<p>Le nombre d'avis mensuels dépend de trois choses : le nombre d'interventions terminées, la proportion de clients à qui la demande est réellement faite, et la part de ceux qui publient ensuite un avis. Les deux premières, vous les connaissez ou vous les décidez. La troisième, personne ne peut vous la donner à l'avance : nous n'en connaissons aucune mesure fiable pour les artisans du bâtiment, et elle varie d'une entreprise à l'autre.</p>
+<p><strong>Hypothèse de calcul</strong>, la même pour les trois profils afin que seules vos décisions fassent la différence : un client sollicité sur dix publierait un avis. Ce n'est pas un taux mesuré ; remplacez-le par ce que donnent vos premières semaines.</p>
+<ul>
+<li><strong>Plombier seul, dépannage</strong> : 60 interventions par mois, la phrase dite une fois sur deux, soit 30 clients sollicités. Si un sur dix publiait, cela ferait 3 avis par mois.</li>
+<li><strong>Électricien avec 2 compagnons</strong> : 110 interventions par mois, la phrase dite trois fois sur quatre, soit un peu plus de 80 clients sollicités. Cela ferait 8 avis par mois.</li>
+<li><strong>Chauffagiste, gros chantiers</strong> : 14 chantiers par mois, la phrase dite à chaque fois, soit 14 clients sollicités. Cela ferait un peu plus d'un avis par mois, environ 17 sur l'année.</li>
+</ul>
+<p>Deux enseignements tiennent quelle que soit la part retenue, pourvu qu'elle soit la même pour tous. D'abord, ce n'est pas le nombre d'interventions qui compte, mais le nombre de clients réellement sollicités. Ensuite, la <strong>régularité de la demande</strong> est la variable que vous tenez : passer de « une fois sur deux » à « à chaque fois », c'est s'adresser à deux fois plus de clients, sans changer une seule ligne du reste.</p>
+<p>La part qui publie, elle, bouge avec des facteurs que vous pouvez repérer : le moment de la demande (juste après la démonstration du résultat plutôt qu'à l'envoi de la facture), la durée du chantier et la relation nouée, un client pressé ou disponible, et surtout la phrase, dite ou non. Notre article sur le <a href="/blog/taux-scan-plaque-nfc">taux de scan d'une plaque NFC</a> revient sur ces leviers. Pour situer l'objectif, comparez-vous aux fiches déjà présentes dans le pack local de votre ville : voyez notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>.</p>
 </section>
 
 <section id="repondre-avis" class="scroll-mt-28 mb-16">
 <h2>Répondre aux trois avis négatifs types du bâtiment</h2>
-<p>Collecter ne suffit pas : <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent une réponse du professionnel</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 répondants). Une réponse est lue par cent futurs clients, jamais seulement par l'auteur.</p>
+<p>Collecter ne suffit pas : <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent que le gérant réponde aux avis</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 consommateurs américains). Votre réponse ne s'adresse pas seulement à l'auteur de l'avis : elle reste affichée pour tous ceux qui consultent la fiche ensuite.</p>
 <h3>« Le devis a doublé en cours de chantier »</h3>
 <p>Ne discutez pas le montant en public. Rappelez factuellement le mécanisme — un imprévu constaté, un avenant proposé et accepté avant exécution — puis proposez de reprendre le détail par téléphone. Le lecteur ne cherche pas qui a raison : il cherche à savoir si vous prévenez avant de facturer.</p>
 <h3>« Il n'est jamais venu / il ne répond pas »</h3>
-<p>C'est l'avis le plus fréquent du secteur, et souvent le plus injuste. Répondez sans ironie, indiquez le canal fiable pour vous joindre et le délai de rappel que vous vous engagez à tenir. Une réponse calme sur un reproche de joignabilité rassure davantage qu'un avis cinq étoiles de plus.</p>
+<p>Un avis classique du secteur, et souvent injuste. Répondez sans ironie, indiquez le canal fiable pour vous joindre et le délai de rappel que vous vous engagez à tenir. Une réponse calme sur un reproche de joignabilité montre au lecteur suivant ce qui l'attend s'il vous appelle.</p>
 <h3>« Malfaçon constatée après coup »</h3>
 <p>Ne niez jamais en ligne. Reconnaissez le principe — un travail défectueux se reprend — sans reconnaître des faits que vous n'avez pas vérifiés, et proposez un passage de contrôle daté. La méthode complète est détaillée dans notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs Google</a>.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
@@ -1183,8 +1139,8 @@ export const articles: Record<string, {
 <li><strong>Garder la plaque dans le camion.</strong> Un objet qui ne monte pas chez le client ne collecte rien. La plaque doit voyager avec la pochette de devis, pas avec le véhicule.</li>
 <li><strong>Demander par SMS trois jours après.</strong> Le moment émotionnel est passé, et la relance écrite réveille les insatisfactions latentes.</li>
 <li><strong>Ne pas former les compagnons.</strong> Sur une équipe de trois, si un seul dit la phrase, vous perdez les deux tiers du gisement sans jamais le voir dans les chiffres.</li>
-<li><strong>Promettre une remise contre un avis.</strong> Interdit par Google, avec un risque de suppression massive et de suspension de la fiche.</li>
-<li><strong>Laisser la fiche sans services renseignés.</strong> Un plombier qui n'a déclaré aucune prestation n'apparaît sur aucune requête spécialisée, quel que soit son nombre d'avis.</li>
+<li><strong>Promettre une remise contre un avis.</strong> Strictement interdit par Google, qui peut en retour bloquer les nouveaux avis de la fiche, retirer les avis existants pendant une période donnée ou afficher un avertissement public.</li>
+<li><strong>Laisser la fiche sans services renseignés.</strong> Google demande des informations aussi complètes que possible : un plombier qui n'a déclaré aucune prestation lui laisse deviner ce qu'il fait, quel que soit son nombre d'avis.</li>
 </ul>
 </section>
 
@@ -1192,13 +1148,13 @@ export const articles: Record<string, {
 <h2>FAQ — Plaque NFC pour plombier et artisan du bâtiment</h2>
 
 <h3>Une plaque NFC a-t-elle un intérêt quand on n'a pas de boutique ?</h3>
-<p>Oui, et c'est même le cas où l'écart avec les autres méthodes est le plus grand. L'artisan n'a pas de comptoir, donc pas de moment de caisse : sa seule fenêtre est la fin d'intervention, chez le client, et elle dure une minute. Une plaque fixée sur la pochette de devis ou sur la mallette recrée ce comptoir et le rend transportable. Toutes les alternatives — carte de visite, SMS, lien dans le mail de facture — reportent l'action à plus tard, et ce qui est reporté n'est pas fait.</p>
+<p>Oui. L'artisan n'a pas de comptoir, donc pas de moment de caisse : sa seule fenêtre est la fin d'intervention, chez le client, et elle est courte. Une plaque fixée sur la pochette de devis ou sur la mallette recrée ce comptoir et le rend transportable. Les alternatives — carte de visite, SMS, lien dans le mail de facture — reportent l'action à plus tard, et ce qui est reporté est souvent oublié.</p>
 
 <h3>Où fixer la plaque quand on travaille chez le client ?</h3>
 <p>Sur la pochette de devis ou le porte-documents en priorité : c'est l'objet que vous sortez au moment de la signature ou de la remise de facture, donc au moment exact où la demande est légitime. La mallette à outils, côté couvercle et sur une zone non métallique, constitue un excellent second emplacement puisqu'elle reste visible pendant toute l'intervention. Le véhicule et l'atelier n'arrivent qu'ensuite, et le floquage extérieur ne collecte rien du tout.</p>
 
 <h3>Combien d'avis Google un plombier peut-il espérer par mois ?</h3>
-<p>Cela dépend de deux nombres que vous connaissez : vos interventions terminées et la fréquence à laquelle la phrase est réellement dite. Un plombier seul à soixante interventions mensuelles qui demande une fois sur deux se situe autour de sept à neuf avis par mois. La même activité avec une demande systématique dépasse quinze. Un chauffagiste à quatorze gros chantiers obtient trois à quatre avis, soit une quarantaine par an, ce qui suffit largement dans un secteur où la concurrence locale plafonne souvent sous les vingt avis.</p>
+<p>Personne ne peut vous le dire à l'avance : cela dépend de vos interventions terminées, de la fréquence à laquelle la phrase est réellement dite, et de la part des clients sollicités qui publient, que rien ne permet de fixer avant d'avoir essayé. Hypothèse de calcul : un plombier seul à soixante interventions mensuelles qui poserait la question une fois sur deux solliciterait trente clients ; si un sur dix publiait, cela ferait trois avis par mois, et six en demandant à chaque fois. Remplacez cette part par ce que donnent vos premières semaines, puis comparez le résultat au nombre d'avis des fiches déjà présentes dans le pack local de votre ville.</p>
 
 <h3>La plaque fonctionne-t-elle si je la colle sur ma caisse à outils en métal ?</h3>
 <p>Mal, et parfois pas du tout. Le métal génère des courants de Foucault qui absorbent le champ magnétique et désaccordent l'antenne de la puce : la lecture devient aléatoire selon l'angle du téléphone. C'est la première cause de plaque jugée défectueuse. Choisissez une zone en plastique, un couvercle de mallette composite, ou intercalez un support non métallique entre la plaque et la surface.</p>
@@ -1207,39 +1163,39 @@ export const articles: Record<string, {
 <p>Oui, et c'est même souvent préférable. L'avis porte sur la prestation, pas sur le règlement, et le moment où le client constate le résultat est nettement plus favorable que le jour où il reçoit la facture. Attendre le paiement, dans un métier où le virement arrive parfois trois semaines plus tard, revient à laisser passer la seule fenêtre exploitable.</p>
 
 <h3>Un artisan sans adresse visible peut-il avoir une fiche Google ?</h3>
-<p>Oui, via une fiche en zone de service : vous saisissez votre adresse pour la vérification puis vous la masquez, et vous déclarez les communes où vous intervenez. Attention toutefois à une illusion fréquente : déclarer trente communes n'étale pas votre visibilité sur trente communes, car Google continue de classer sur la distance réelle à votre point de rattachement. Cela indique seulement votre périmètre d'intervention. Le levier qui reste sous votre contrôle est la proéminence, c'est-à-dire le volume, la fraîcheur et la note de vos avis.</p>
+<p>Oui. Si vous ne recevez pas de clients à votre adresse, Google demande de la retirer de la fiche et d'indiquer à la place la zone desservie : jusqu'à 20 villes, codes postaux ou autres zones géographiques, en restant dans les deux heures de trajet qu'il recommande. Attention toutefois : déclarer trente communes ne garantit pas d'être visible dans les trente, car la distance reste l'un des trois critères du classement local. Cela indique surtout votre périmètre d'intervention. Le levier qui reste sous votre contrôle, ce sont vos avis : Google compte leur nombre et les notes positives dans la proéminence.</p>
 
 <h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
-<p>Non. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel. Elle continue de fonctionner des années après l'achat, et la puce est garantie à vie. C'est la différence de fond avec les offres à abonnement, où l'arrêt du prélèvement désactive le support que vous avez pourtant payé.</p>
+<p>Non. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel. Elle continue de fonctionner des années après l'achat, et la puce est garantie à vie. C'est la différence de fond avec les offres à abonnement, où l'arrêt du prélèvement peut désactiver le support que vous avez pourtant payé.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : le comptoir de l'artisan, c'est sa pochette de devis</h2>
 <p>Un artisan ne perd pas des avis parce que ses clients sont mécontents. Il en perd parce que le seul moment où la demande a du sens — la minute qui suit la démonstration du résultat — se produit chez le client, sans caisse, sans comptoir, et sans rien à lui tendre.</p>
 <p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>, en donnant un objet à toucher au moment précis où le client vous remercie. Fixez-la sur ce que vous sortez à chaque fin de chantier, dites une phrase de dix mots, et laissez la régularité faire le reste.</p>
-<p>Guides complémentaires : <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a>, <a href="/blog/carte-nfc-avis-google">carte NFC ou plaque</a>, <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, ou notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a>, <a href="/blog/carte-nfc-avis-google">carte NFC ou plaque</a>, <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a>, ou notre <a href="/blog/doubler-avis-google-30-jours">plan d'action sur 30 jours</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque chantier en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à demander un avis Google à chaque fin de chantier ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT.</p>
 </div>
 </section>
 `,
   },
   'google-posts-fiche-google-business-profile': {
-    title: 'Google Posts : publier sur sa fiche Google Business Profile (et ce que ça rapporte)',
+    title: 'Google Posts : publier sur sa fiche Google Business Profile (et ce que ça change)',
     category: 'SEO Local',
     date: '31 août 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Un post ne fait pas monter une fiche dans le pack local, et c\'est justement pour ça qu\'on l\'utilise mal. Les 4 types de posts, la règle des 7 jours qui n\'existe plus, les 80 premiers caractères qui décident, 12 sujets prêts à publier et les 7 erreurs.',
+    excerpt: 'Google ne cite pas les posts parmi ses critères de classement local, et c\'est justement pour ça qu\'on les utilise mal. Les 3 types de posts, la règle des 7 jours contredite par l\'aide Google (archivage à six mois), 12 sujets prêts à publier et les 7 erreurs.',
     tocSections: [
       { id: 'pourquoi-google-posts', label: 'Ce que ça fait vraiment' },
-      { id: 'types-posts', label: 'Les 4 types de posts' },
+      { id: 'types-posts', label: 'Les 3 types de posts' },
       { id: 'duree-visibilite', label: 'Combien de temps c\'est visible' },
       { id: 'anatomie-post', label: 'Anatomie d\'un bon post' },
       { id: 'frequence', label: 'À quelle fréquence publier' },
-      { id: 'quoi-publier', label: '12 sujets qui fonctionnent' },
+      { id: 'quoi-publier', label: '12 sujets à publier' },
       { id: 'posts-avis', label: 'Le lien posts / avis' },
       { id: 'erreurs', label: 'Les 7 erreurs' },
       { id: 'mesurer', label: 'Mesurer l\'effet' },
@@ -1249,40 +1205,39 @@ export const articles: Record<string, {
     content: `
 <section id="pourquoi-google-posts" class="scroll-mt-28 mb-16">
 <h2>Google Posts : ce que ça fait vraiment, et ce que ça ne fait pas</h2>
-<p>Google Posts est la fonction la plus mal comprise de Google Business Profile. Deux discours s'affrontent, et les deux sont faux. Le premier promet qu'une publication hebdomadaire fait monter la fiche dans le pack local. Le second, plus répandu chez les commerçants, considère que « personne ne lit ça » et laisse la fonction inutilisée depuis trois ans.</p>
-<p>La réalité tient en une phrase : <strong>un post n'agit pas sur votre position, il agit sur ce qui se passe une fois que vous êtes affiché.</strong> Le classement local repose sur trois critères que Google documente publiquement — la pertinence, la distance et la proéminence — et les publications n'entrent dans aucun des trois. En revanche, elles occupent une surface visible du panneau de connaissance, juste sous les avis, et elles s'affichent au moment exact où le client compare deux ou trois établissements.</p>
+<p>Google Posts est la fonction la plus mal comprise de Google Business Profile. Deux discours s'affrontent, et les deux sont faux. Le premier promet qu'une publication hebdomadaire fait monter la fiche dans le pack local. Le second considère que « personne ne lit ça » et laisse la fonction inutilisée.</p>
+<p>Ce que l'on peut dire avec certitude tient en une phrase : <strong>Google ne présente pas les posts comme un levier de classement ; leur rôle se joue une fois que vous êtes affiché.</strong> Sa page sur le <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">classement local</a> cite trois critères — la pertinence, la distance et la proéminence — et indique que davantage d'avis et de notes positives peuvent améliorer le classement ; elle ne mentionne pas les publications. En revanche, selon <a href="https://support.google.com/business/answer/7342169?hl=fr" target="_blank" rel="noopener noreferrer">l'aide de Google sur les posts</a>, les publications s'affichent sur la fiche elle-même : dans les onglets « Actualités » ou « Présentation » sur mobile, et dans la section « Du propriétaire » sur ordinateur, là où le client compare les établissements.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>À retenir :</strong> les avis décident si vous êtes <strong>affiché</strong>. Les photos décident si vous êtes <strong>regardé</strong>. Les posts décident si vous êtes <strong>choisi maintenant plutôt que demain</strong>. Ce sont trois leviers différents, qui ne se remplacent pas.</p>
+<p class="text-sm text-blue-900"><strong>À retenir :</strong> les avis peuvent vous aider à être <strong>affiché</strong>. Les photos aident à être <strong>regardé</strong>. Les posts donnent une raison d'être <strong>choisi maintenant plutôt que demain</strong>. Ce sont trois leviers différents, qui ne se remplacent pas.</p>
 </div>
 <p>C'est pour cette raison qu'un post n'a de sens que s'il porte une information périssable : une ouverture exceptionnelle, une promotion qui se termine dimanche, un créneau libre jeudi matin. Un post qui répète « Nous sommes une entreprise familiale au service de nos clients depuis 1998 » ne fait rien gagner à personne — l'information est déjà dans la description de la fiche, et elle ne pousse à aucune action.</p>
 </section>
 
 <section id="types-posts" class="scroll-mt-28 mb-16">
-<h2>Les quatre types de posts, et lequel choisir</h2>
-<p>L'interface propose quatre formats. Ils ne se valent pas, et le choix du format conditionne à la fois la durée d'affichage et l'endroit où la publication apparaît.</p>
+<h2>Les trois types de posts, et lequel choisir</h2>
+<p>Google propose trois formats de posts : « Actualités », « Offres » et « Événements ». Ils ne se remplissent pas de la même façon, et le format choisi détermine combien de temps la publication reste en ligne.</p>
 
-<h3>1. Nouveautés (« Quoi de neuf »)</h3>
-<p>Le format par défaut : une image, un texte, un bouton d'action facultatif. C'est le plus souple et celui qui convient à 70 % des besoins d'un commerce local. Aucune date à renseigner, donc aucune contrainte de calendrier.</p>
+<h3>1. Actualités</h3>
+<p>Le format courant : une description, une photo ou une vidéo, et un bouton d'action avec un lien, facultatif. C'est le plus souple. Aucune date à renseigner, donc aucune contrainte de calendrier.</p>
 
-<h3>2. Offre</h3>
-<p>Le seul format qui affiche un bandeau visuel distinct sur la fiche, avec date de début et de fin obligatoires. Il permet aussi de saisir un code promotionnel et les conditions. Sur un même contenu, une offre attire nettement plus le regard qu'une nouveauté, parce que Google la met en forme différemment. À réserver aux vraies promotions : une offre permanente perd son effet en deux semaines.</p>
+<h3>2. Offres</h3>
+<p>Le format des promotions : un titre, des dates et des horaires sont obligatoires, et Google ajoute automatiquement un bouton pour consulter l'offre. Vous pouvez aussi indiquer une description, une photo ou une vidéo, un code promotionnel, un lien et des conditions générales. À réserver aux vraies promotions : une offre qui se prolonge sans fin n'est plus crédible.</p>
 
-<h3>3. Événement</h3>
-<p>Titre, date de début, date de fin. Utile bien au-delà de l'événementiel au sens strict : une opération portes ouvertes, un contrôle technique à prix réduit sur une semaine, une collection présentée un samedi, une session de découverte dans une salle de sport. L'événement reste affiché tant qu'il n'est pas terminé, ce qui lui donne une longévité que la nouveauté n'a pas.</p>
+<h3>3. Événements</h3>
+<p>Un titre, des dates et des horaires de début et de fin ; sans horaires, Google affiche l'événement comme durant 24 heures sur les dates indiquées. Utile bien au-delà de l'événementiel au sens strict : une opération portes ouvertes, un contrôle technique à prix réduit sur une semaine, une collection présentée un samedi, une session de découverte dans une salle de sport. Comme l'offre, l'événement porte une période, ce qui le soustrait à l'archivage automatique des posts de plus de six mois.</p>
 
-<h3>4. Produit</h3>
-<p>Il alimente l'onglet « Produits » de la fiche plutôt que le fil de publications. C'est de loin la surface la moins exploitée par les commerces français, alors qu'elle sert de source aux réponses générées par Google quand un internaute cherche un produit précis à proximité. Une prestation avec un prix affiché y a toute sa place, même dans un métier de service.</p>
+<h3>Et les produits ?</h3>
+<p>Les produits ne sont pas un type de post : ils se gèrent dans la rubrique « Produits » de la fiche, via l'éditeur de produits, que Google réserve à certaines activités. Une gamme de prestations avec un prix affiché peut aussi trouver sa place dans l'éditeur de services, qui figure parmi les informations modifiables de la fiche.</p>
 
 <div class="overflow-x-auto">
 <table>
 <thead>
-<tr><th>Type</th><th>Contrainte</th><th>Quand l'utiliser</th></tr>
+<tr><th>Type</th><th>Ce qu'il exige</th><th>Quand l'utiliser</th></tr>
 </thead>
 <tbody>
-<tr><td>Nouveautés</td><td>Aucune date</td><td>Usage courant, actualité de la semaine</td></tr>
-<tr><td>Offre</td><td>Date de fin obligatoire</td><td>Promotion réelle, code, remise datée</td></tr>
-<tr><td>Événement</td><td>Dates de début et fin</td><td>Opération sur plusieurs jours</td></tr>
-<tr><td>Produit</td><td>Prix et description</td><td>Catalogue, prestations, gammes de tarifs</td></tr>
+<tr><td>Actualités</td><td>Aucune date</td><td>Usage courant, actualité de la semaine</td></tr>
+<tr><td>Offres</td><td>Titre, dates et horaires</td><td>Promotion réelle, code, remise datée</td></tr>
+<tr><td>Événements</td><td>Titre, dates et horaires de début et de fin</td><td>Opération sur un ou plusieurs jours</td></tr>
 </tbody>
 </table>
 </div>
@@ -1290,60 +1245,60 @@ export const articles: Record<string, {
 
 <section id="duree-visibilite" class="scroll-mt-28 mb-16">
 <h2>Combien de temps un post reste-t-il visible ?</h2>
-<p>C'est le point sur lequel circulent le plus d'informations périmées. Pendant des années, une publication de type « Nouveautés » disparaissait au bout de <strong>sept jours</strong>, et cette règle est encore reprise telle quelle dans la moitié des articles disponibles en ligne. Elle a évolué : les publications restent désormais consultables bien plus longtemps, plusieurs mois dans la plupart des cas, dans un fil que l'internaute peut faire défiler.</p>
+<p>C'est le point sur lequel circulent le plus d'informations périmées. On lit encore qu'une publication disparaîtrait au bout de <strong>sept jours</strong>. Ce n'est pas ce que dit l'aide actuelle de Google : « Les posts datant de plus de six mois sont archivés, sauf si une période est définie. » Une offre ou un événement, qui portent des dates, suivent donc leur propre calendrier.</p>
 <p>Mais il faut distinguer deux choses, et c'est là que la confusion s'installe :</p>
 <ul>
-<li><strong>La durée de conservation</strong> : le post reste accessible dans l'historique de la fiche pendant plusieurs mois.</li>
-<li><strong>La durée d'exposition utile</strong> : seule la publication la plus récente s'affiche en évidence. Dès que vous en publiez une nouvelle, la précédente recule d'un cran et ne sera vue que par les rares visiteurs qui font défiler.</li>
+<li><strong>La durée de conservation</strong> : jusqu'à six mois pour un post sans période, avant archivage.</li>
+<li><strong>La durée d'exposition utile</strong> : un post conservé n'est pas forcément un post vu. Rien ne garantit qu'un visiteur fera défiler vos anciennes publications : raisonnez comme si seule la dernière comptait.</li>
 </ul>
-<p>Conclusion pratique : raisonner en durée de conservation ne sert à rien. Ce qui compte, c'est la fenêtre pendant laquelle votre post occupe la première place, et cette fenêtre dure exactement jusqu'à votre publication suivante. Un post laissé en tête pendant six semaines devient un post daté — un « Menu spécial Saint-Valentin » toujours affiché fin mars dit surtout au client que la fiche n'est plus tenue.</p>
+<p>Conclusion pratique : ce qui compte, c'est que votre publication la plus récente soit encore vraie aujourd'hui. Un post qui n'est plus d'actualité devient un post daté — un « Menu spécial Saint-Valentin » toujours visible fin mars dit surtout au client que la fiche n'est plus tenue.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
 <p class="text-sm text-amber-900"><strong>💡 Le test des trente secondes :</strong> ouvrez votre fiche sur votre téléphone, en navigation privée, comme le ferait un client. Le post affiché est-il encore d'actualité aujourd'hui ? Si la réponse est non, vous perdez de la crédibilité au lieu d'en gagner. Mieux vaut aucun post qu'un post périmé.</p>
 </div>
 </section>
 
 <section id="anatomie-post" class="scroll-mt-28 mb-16">
-<h2>Anatomie d'un post qui fonctionne</h2>
-<p>Les contraintes techniques sont simples et se retiennent en une lecture.</p>
+<h2>Anatomie d'un bon post</h2>
+<p>Les contraintes à connaître sont simples et se retiennent en une lecture.</p>
 <ul>
-<li><strong>Longueur maximale : 1 500 caractères.</strong> C'est une limite, pas un objectif. Personne ne lit 1 500 caractères sur une fiche Google.</li>
-<li><strong>Seuls les 80 à 100 premiers caractères sont visibles</strong> avant que le texte ne soit tronqué par un lien « Plus ». Tout ce qui compte doit tenir dans cette première ligne et demie.</li>
-<li><strong>Une image en paysage</strong>, JPG ou PNG. Visez au moins 720 pixels de large ; en dessous, l'image est agrandie et devient floue sur les écrans récents.</li>
-<li><strong>Un bouton d'action facultatif</strong> : Réserver, Commander en ligne, Acheter, En savoir plus, S'inscrire, Appeler. Il ne consomme aucun caractère et augmente sensiblement le taux d'action. Ne pas en mettre est l'erreur la plus fréquente.</li>
+<li><strong>Un texte court.</strong> Un post se lit en passant : mettez l'essentiel dans la première phrase.</li>
+<li><strong>Pas de numéro de téléphone dans le texte.</strong> Google indique qu'un post dont la description contient un numéro de téléphone peut être refusé. Utilisez plutôt le bouton Appeler.</li>
+<li><strong>Une photo ou une vidéo</strong>, réelle et prise dans l'établissement. L'aide de Google sur les posts ne publie pas de format d'image spécifique.</li>
+<li><strong>Un bouton d'action facultatif</strong> : réserver, commander, acheter, en savoir plus, s'inscrire ou appeler, les types d'action que documente <a href="https://developers.google.com/my-business/reference/rest/v4/accounts.locations.localPosts" target="_blank" rel="noopener noreferrer">l'API Google Business Profile</a>. Il ne demande aucune rédaction et donne au lecteur quelque chose à faire.</li>
 </ul>
-<p>Le schéma qui fonctionne tient en quatre lignes : une accroche concrète dans les 80 premiers caractères, une précision utile (le prix, la date, le créneau), une contrainte de temps si elle est réelle, un bouton. Comparez :</p>
+<p>Un schéma simple tient en quatre éléments : une accroche concrète dès la première phrase, une précision utile (le prix, la date, le créneau), une contrainte de temps si elle est réelle, un bouton. Comparez ces deux posts fictifs :</p>
 <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 not-prose">
 <p class="text-sm text-gray-700 mb-2"><strong>❌ Ce qui ne marche pas :</strong> « Chez Garage Martin, notre équipe de professionnels qualifiés met tout son savoir-faire à votre service depuis plus de vingt ans pour l'entretien de votre véhicule... »</p>
 <p class="text-sm text-gray-900"><strong>✅ Ce qui marche :</strong> « Révision + vidange à 129 EUR jusqu'au 15 septembre. Deux créneaux libres jeudi matin. » + bouton Appeler.</p>
 </div>
-<p>La deuxième version dit ce que ça coûte, quand ça se termine, et ce qu'il reste à faire. Elle tient dans la zone visible. C'est tout ce qu'on demande à un post.</p>
+<p>La deuxième version dit ce que ça coûte, quand ça se termine, et ce qu'il reste à faire. C'est tout ce qu'on demande à un post.</p>
 </section>
 
 <section id="frequence" class="scroll-mt-28 mb-16">
 <h2>À quelle fréquence publier, réellement</h2>
-<p>La recommandation la plus répandue est « une fois par semaine ». Elle est raisonnable, mais elle a produit des milliers de fiches abandonnées au bout d'un mois, parce qu'elle suppose une charge de travail que peu de commerces tiennent seuls.</p>
-<p>Le rythme soutenable, celui qui survit à un été chargé et à un remplacement d'équipe, se situe entre <strong>deux et quatre publications par mois</strong>. Une publication toutes les deux semaines, préparée à l'avance, vaut infiniment mieux que quatre publications en janvier puis plus rien jusqu'en octobre.</p>
-<p>La méthode qui fonctionne le mieux consiste à préparer un mois d'avance, en une seule séance de vingt minutes :</p>
+<p>On lit souvent qu'il faudrait publier « une fois par semaine ». C'est raisonnable, mais ce rythme suppose une charge de travail qui peut être difficile à tenir seul.</p>
+<p>Notre recommandation : <strong>deux à quatre publications par mois</strong>, un rythme pensé pour survivre à un été chargé et à un remplacement d'équipe. Une publication toutes les deux semaines, préparée à l'avance, vaut mieux que quatre publications en janvier puis plus rien jusqu'en octobre.</p>
+<p>La méthode la plus simple consiste à préparer un mois d'avance, en une seule séance de vingt minutes :</p>
 <ul>
 <li><strong>Semaine 1</strong> : une actualité concrète (arrivage, nouveau service, changement d'horaires).</li>
 <li><strong>Semaine 2</strong> : un rappel pratique (parking, accès, moyens de paiement, prise de rendez-vous).</li>
 <li><strong>Semaine 3</strong> : une offre datée, si vous en avez une réelle. Sinon, une photo de réalisation récente.</li>
 <li><strong>Semaine 4</strong> : la preuve sociale — un avis client récent mis en avant, la note atteinte, un cap franchi.</li>
 </ul>
-<p>Ce dernier créneau est le plus rentable, et c'est celui que presque personne n'utilise. Il exige simplement d'avoir un flux d'avis régulier, ce qui renvoie au sujet traité dans notre guide sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>.</p>
+<p>Ce dernier créneau a un avantage : il s'appuie sur ce que disent vos clients. Il exige simplement d'avoir un flux d'avis régulier, ce qui renvoie au sujet traité dans notre guide sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a>.</p>
 </section>
 
 <section id="quoi-publier" class="scroll-mt-28 mb-16">
-<h2>Douze sujets de posts qui fonctionnent, par métier</h2>
+<h2>Douze sujets de posts à publier, par métier</h2>
 <p>La difficulté n'est jamais technique, elle est éditoriale : au bout de trois publications, on ne sait plus quoi dire. Voici une réserve de sujets, valables dans à peu près tous les secteurs.</p>
 <ul>
-<li>Les <strong>créneaux disponibles</strong> de la semaine, actualisés le lundi. Redoutablement efficace pour tout métier sur rendez-vous.</li>
+<li>Les <strong>créneaux disponibles</strong> de la semaine, actualisés le lundi. Utile pour tout métier sur rendez-vous.</li>
 <li>Un <strong>horaire exceptionnel</strong> : jour férié, fermeture annuelle, ouverture d'un dimanche.</li>
-<li>Une <strong>nouveauté au catalogue</strong>, avec le prix. Le prix affiché fait la différence entre un post lu et un post ignoré.</li>
+<li>Une <strong>nouveauté au catalogue</strong>, avec le prix. Un prix affiché répond à la première question du client.</li>
 <li>Une <strong>réalisation récente</strong> photographiée le jour même : une coupe, une vitrine, une réparation, une assiette.</li>
 <li>Une <strong>réponse à une question fréquente</strong> : « Faut-il prendre rendez-vous ? », « Acceptez-vous la carte ? », « Y a-t-il un parking ? ».</li>
 <li>Un <strong>rappel saisonnier</strong> : pneus hiver, révision avant les départs, protection solaire, allergies.</li>
-<li>Une <strong>nouvelle arrivée dans l'équipe</strong>, avec une photo. Très bien reçu dans les métiers de service.</li>
+<li>Une <strong>nouvelle arrivée dans l'équipe</strong>, avec une photo. Une façon simple de présenter l'équipe dans les métiers de service.</li>
 <li>Un <strong>avis client récent</strong> mis en avant, avec un mot de remerciement.</li>
 <li>Un <strong>cap franchi</strong> : 100 avis, 200 avis, dix ans d'activité.</li>
 <li>Une <strong>précision d'accès</strong> : entrée par la cour, arrêt de bus, place PMR.</li>
@@ -1355,70 +1310,70 @@ export const articles: Record<string, {
 
 <section id="posts-avis" class="scroll-mt-28 mb-16">
 <h2>Le lien entre les posts et les avis : le levier négligé</h2>
-<p>Un post ne fait pas monter une fiche. Un avis, oui. Mais les deux se renforcent, et la manière dont ils se renforcent est rarement expliquée.</p>
-<p>Un visiteur qui arrive sur votre fiche voit d'abord la note et le nombre d'avis. S'ils sont bons, il descend. C'est là qu'il rencontre vos publications, et c'est là qu'un post bien fait transforme une comparaison en visite. Sans avis, personne n'arrive jamais jusqu'au post. Sans post, celui qui arrive n'a aucune raison de venir aujourd'hui plutôt que la semaine prochaine.</p>
-<p>Le point de contact commun aux deux, c'est le comptoir. Un client satisfait qui repart peut laisser un avis en dix secondes s'il a quelque chose à approcher de son téléphone — c'est exactement la fonction d'une <a href="/blog/comment-choisir-plaque-nfc-avis-google">plaque NFC posée près de la caisse</a>. Ce même avis alimente ensuite votre publication « preuve sociale » de la quatrième semaine, et fait remonter la note qui déclenche la lecture de la fiche.</p>
+<p>Google ne cite pas les posts parmi ce qui aide le classement local ; il cite les avis. Mais les deux se complètent, et la manière dont ils se complètent est rarement expliquée.</p>
+<p>Un visiteur qui arrive sur votre fiche voit la note et le nombre d'avis avant d'en lire le détail. S'ils le rassurent, il poursuit, et c'est là qu'il peut rencontrer vos publications : un post bien fait lui donne une raison de venir aujourd'hui plutôt que la semaine prochaine.</p>
+<p>Le point de contact commun aux deux, c'est le comptoir. Un client satisfait qui repart n'a qu'à approcher son téléphone d'une <a href="/blog/comment-choisir-plaque-nfc-avis-google">plaque NFC posée près de la caisse</a> pour arriver sur le formulaire d'avis. Ce même avis peut ensuite nourrir votre publication « preuve sociale » de la quatrième semaine.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>La boucle, en trois temps :</strong> le client laisse un avis au comptoir → la note et le volume montent, la fiche s'affiche plus souvent → le post transforme l'affichage en déplacement. Retirez le premier maillon et les deux autres tournent à vide.</p>
+<p class="text-sm text-blue-900"><strong>La boucle, en trois temps :</strong> le client laisse un avis au comptoir → davantage d'avis et de notes positives peuvent aider le classement local, selon Google → le post donne une raison de passer à l'acte. Retirez le premier maillon et les deux autres tournent à vide.</p>
 </div>
-<p>Une précision juridique qui a son importance : vous pouvez publier un post pour <strong>rappeler</strong> que les avis sont les bienvenus, mais jamais pour offrir une contrepartie. Une remise, un tirage au sort ou un café gratuit contre un avis constitue une infraction aux règles de Google et expose à la suppression de l'ensemble des avis de la fiche, pas seulement des avis concernés.</p>
+<p>Une précision qui a son importance : vous pouvez publier un post pour <strong>rappeler</strong> que les avis sont les bienvenus, mais jamais pour offrir une contrepartie. Le <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">règlement de Google sur les contenus ajoutés dans Maps</a> interdit de « proposer des avantages (comme un paiement, des remises, des produits et/ou services gratuits) en échange de la publication d'un avis », et Google indique pouvoir, en cas d'engagement artificiel, <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">restreindre la fiche</a> : blocage des nouveaux avis pendant une période donnée, dépublication temporaire des avis existants, avertissement affiché aux consommateurs.</p>
 </section>
 
 <section id="erreurs" class="scroll-mt-28 mb-16">
 <h2>Les sept erreurs qui rendent les posts inutiles</h2>
 <ul>
-<li><strong>Publier sans bouton d'action.</strong> Le post devient une image décorative. Le bouton est gratuit et ne coûte aucun caractère.</li>
-<li><strong>Mettre l'information importante après le 100e caractère.</strong> Elle est tronquée, donc invisible pour la quasi-totalité des lecteurs.</li>
+<li><strong>Publier sans bouton d'action.</strong> Le post devient une image décorative. Le bouton est gratuit et ne demande aucune rédaction.</li>
+<li><strong>Enterrer l'information importante en fin de texte.</strong> Un post se lit en passant : ce qui n'est pas dans la première phrase risque de ne pas être lu.</li>
 <li><strong>Republier le contenu Instagram tel quel.</strong> Les hashtags, les émojis en rafale et le ton des réseaux sociaux détonnent dans une fiche Google, qui est un contexte de recherche, pas de divertissement.</li>
 <li><strong>Laisser un post daté en tête.</strong> Une offre expirée ou un événement passé signale une fiche abandonnée, ce qui est pire que l'absence de publication.</li>
-<li><strong>Publier huit posts d'un coup puis plus rien.</strong> Sept d'entre eux ne seront jamais vus, et le huitième vieillira seul pendant six mois.</li>
-<li><strong>Écrire un post sans image.</strong> C'est autorisé, mais l'affichage perd l'essentiel de sa surface et donc de son attention.</li>
-<li><strong>Attendre des posts un effet de classement.</strong> Ils n'en ont pas. Chercher à faire monter sa fiche par les publications revient à repeindre la façade en espérant que la rue devienne plus passante : le travail utile est du côté des avis, comme détaillé dans notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</li>
+<li><strong>Publier huit posts d'un coup puis plus rien.</strong> Ils se font concurrence le même jour, puis la fiche reste figée jusqu'à leur archivage, six mois plus tard.</li>
+<li><strong>Écrire un post sans image.</strong> C'est possible, mais vous vous privez de ce qui montre l'établissement.</li>
+<li><strong>Attendre des posts un effet de classement.</strong> Google ne les cite pas parmi ses critères. Chercher à faire monter sa fiche par les publications revient à repeindre la façade en espérant que la rue devienne plus passante : le travail utile est du côté des avis, comme détaillé dans notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</li>
 </ul>
 </section>
 
 <section id="mesurer" class="scroll-mt-28 mb-16">
 <h2>Mesurer l'effet, sans se raconter d'histoires</h2>
-<p>Les statistiques de Google Business Profile donnent, pour chaque publication, le nombre de vues et le nombre de clics sur le bouton. Ces chiffres sont utiles mais insuffisants pris isolément : une publication vue 300 fois ne dit rien si vous ignorez combien de fois la fiche a été consultée sur la même période.</p>
+<p>La page d'aide du <a href="https://support.google.com/business/answer/9918094?hl=fr" target="_blank" rel="noopener noreferrer">rapport Performances</a> de Google Business Profile ne décrit pas de statistiques par publication : elle liste des indicateurs à l'échelle de la fiche, comme les vues, les appels, les demandes d'itinéraire et les clics vers le site web. Impossible, donc, d'attribuer un résultat à un post précis ; on peut en revanche suivre une tendance.</p>
 <p>Trois indicateurs suffisent, relevés une fois par mois, toujours le même jour :</p>
 <ul>
-<li><strong>Les appels et demandes d'itinéraire</strong>, dans l'onglet Performances. C'est la mesure la plus proche d'une visite réelle.</li>
-<li><strong>Les clics sur le bouton d'action</strong> de vos publications, cumulés sur le mois.</li>
-<li><strong>Le nombre d'avis reçus</strong> dans le mois. C'est le seul des trois qui agisse sur le classement, donc celui qu'il faut surveiller en priorité.</li>
+<li><strong>Les appels et demandes d'itinéraire</strong>, dans le rapport Performances. Ce sont les mesures les plus proches d'une visite réelle.</li>
+<li><strong>Les clics vers votre site web</strong>, relevés dans le même rapport.</li>
+<li><strong>Le nombre d'avis reçus</strong> dans le mois. C'est le seul des trois que Google cite parmi ce qui peut aider le classement local, donc celui qu'il faut surveiller en priorité.</li>
 </ul>
 <p>Une remarque de méthode : ne comparez jamais deux mois consécutifs sans tenir compte de la saison. Un institut de beauté en août et le même institut en décembre ne se comparent pas. Comparez plutôt le même mois d'une année sur l'autre, ou regardez la pente sur trois mois glissants.</p>
-<p>Et gardez en tête l'ordre de grandeur : sur une fiche de commerce local, un post bien fait produit typiquement quelques dizaines de vues et une poignée de clics. Ce n'est pas un canal d'acquisition massif. C'est un argument de dernière seconde, au moment où le client hésite entre vous et le concurrent d'en face.</p>
+<p>Et gardez en tête ce qu'est un post : pas un canal d'acquisition massif, mais un argument de dernière seconde, au moment où le client hésite entre vous et le concurrent d'en face.</p>
 </section>
 
 <section id="faq-google-posts" class="scroll-mt-28 mb-16">
 <h2>FAQ — Google Posts</h2>
 
 <h3>Les Google Posts améliorent-ils le référencement local ?</h3>
-<p>Pas directement. Le classement dans le pack local repose sur la pertinence, la distance et la proéminence, et les publications n'entrent dans aucun de ces trois critères. Leur effet est indirect : elles occupent une surface visible du panneau de connaissance et augmentent le taux de clic et de contact sur une fiche déjà affichée. Si vous cherchez à gagner des positions, le levier utile reste le volume et la fraîcheur des avis, pas la fréquence de publication.</p>
+<p>Rien ne l'indique. La page de Google sur le classement local cite la pertinence, la distance et la proéminence, et indique que davantage d'avis et de notes positives peuvent améliorer le classement ; elle ne mentionne pas les publications. Leur rôle se joue sur la fiche elle-même, où elles s'affichent pour le client qui compare. Si vous cherchez à gagner des positions, le levier que Google cite reste les avis, pas la fréquence de publication.</p>
 
 <h3>Combien de temps un Google Post reste-t-il affiché ?</h3>
-<p>La règle des sept jours qui circule encore est obsolète : les publications restent aujourd'hui consultables plusieurs mois dans le fil de la fiche. Mais seule la plus récente s'affiche en évidence, les autres reculent d'un cran à chaque nouvelle publication. La durée qui compte n'est donc pas la conservation mais l'exposition, et celle-ci dure jusqu'à votre post suivant. Les offres et les événements font exception : ils disparaissent à la date de fin que vous avez renseignée.</p>
+<p>La règle des sept jours qui circule encore ne correspond pas à l'aide actuelle de Google, selon laquelle « les posts datant de plus de six mois sont archivés, sauf si une période est définie ». Une offre ou un événement, qui portent des dates, suivent donc leur propre calendrier. Conservé ne veut pas dire vu : raisonnez comme si seule votre dernière publication comptait, et veillez à ce qu'elle soit toujours d'actualité.</p>
 
 <h3>Quelle est la longueur idéale d'un Google Post ?</h3>
-<p>La limite technique est de 1 500 caractères, mais seuls les 80 à 100 premiers s'affichent avant la troncature. Visez 150 à 300 caractères au total, avec l'information décisive — le prix, la date, la disponibilité — dans la toute première ligne. Un post long n'est pas pénalisé, il est simplement replié, et l'immense majorité des lecteurs ne le dépliera jamais.</p>
+<p>Google ne publie pas de longueur idéale. Notre recommandation : quelques phrases, 150 à 300 caractères au total, avec l'information décisive — le prix, la date, la disponibilité — dès la première ligne. Un post se lit en passant : ce qui n'est pas au début risque de ne pas être lu.</p>
 
 <h3>À quelle fréquence faut-il publier sur sa fiche Google ?</h3>
-<p>Deux à quatre fois par mois est un rythme réaliste, tenable sur une année entière. La recommandation hebdomadaire souvent citée n'est pas fausse, mais elle produit surtout des fiches abandonnées au bout de six semaines. La régularité vaut mieux que l'intensité : une publication tous les quinze jours pendant douze mois est plus efficace que huit publications en janvier suivies d'un silence complet.</p>
+<p>Nous recommandons deux à quatre publications par mois, un rythme tenable sur une année entière. La recommandation hebdomadaire souvent citée n'est pas fausse, mais elle suppose une charge de travail difficile à tenir seul. La régularité vaut mieux que l'intensité : une publication tous les quinze jours pendant douze mois vaut mieux que huit publications en janvier suivies d'un silence complet.</p>
 
 <h3>Faut-il mettre une image sur chaque publication ?</h3>
-<p>Oui. La publication sans image est autorisée mais perd l'essentiel de sa surface d'affichage, donc de son attention. Une photo en paysage d'au moins 720 pixels de large suffit, prise avec le téléphone du comptoir. Inutile de produire un visuel graphique : une photo réelle de votre établissement, de votre équipe ou d'une réalisation récente fonctionne mieux qu'une image de banque d'images.</p>
+<p>C'est recommandé. Une publication peut contenir une photo ou une vidéo, et un post sans visuel se prive de ce qui montre l'établissement. L'aide de Google sur les posts ne publie pas de format d'image spécifique : une photo nette, prise avec le téléphone du comptoir, suffit. Inutile de produire un visuel graphique : une photo réelle de votre établissement, de votre équipe ou d'une réalisation récente dit plus qu'une image de banque d'images.</p>
 
 <h3>Peut-on publier un post pour demander des avis Google ?</h3>
-<p>Oui, à condition de ne rien offrir en échange. Vous pouvez rappeler que les avis sont les bienvenus, remercier vos clients ou mettre en avant un avis récent. En revanche, promettre une remise, un cadeau ou une participation à un tirage au sort contre un avis enfreint les règles de Google et expose à la suppression de l'ensemble des avis de la fiche. Un dispositif passif au comptoir, comme une plaque NFC, produit le même résultat sans prendre ce risque.</p>
+<p>Oui, à condition de ne rien offrir en échange. Vous pouvez rappeler que les avis sont les bienvenus, remercier vos clients ou mettre en avant un avis récent. En revanche, promettre une remise, un cadeau ou une participation à un tirage au sort contre un avis enfreint le règlement de Google, qui peut alors restreindre la fiche : blocage temporaire des nouveaux avis, dépublication temporaire des avis existants, avertissement affiché aux consommateurs. Un dispositif passif au comptoir, comme une plaque NFC, permet de proposer l'avis à tous les clients sans rien leur offrir en échange.</p>
 
-<h3>Quelle différence entre un post « Offre » et un post « Nouveautés » ?</h3>
-<p>Le post « Nouveautés » est le format par défaut, sans date, adapté à l'actualité courante. Le post « Offre » impose une date de début et de fin, permet de saisir un code promotionnel et des conditions, et bénéficie d'une mise en forme visuelle distincte qui attire davantage le regard. Réservez-le aux promotions réelles et datées : une offre permanente perd son effet en quelques semaines et affaiblit la crédibilité de la fiche.</p>
+<h3>Quelle différence entre un post « Offres » et un post « Actualités » ?</h3>
+<p>Le post « Actualités » est le format courant, sans date : une description, une photo ou une vidéo et un bouton d'action facultatif. Le post « Offres » exige un titre, des dates et des horaires ; Google y ajoute automatiquement un bouton pour consulter l'offre, et vous pouvez indiquer un code promotionnel, un lien et des conditions générales. Réservez-le aux promotions réelles et datées : une offre qui se prolonge sans fin n'est plus crédible.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : un bon post ne remplace jamais un bon flux d'avis</h2>
-<p>Google Posts est un outil honnête à condition de lui demander ce qu'il sait faire. Il ne vous fera pas passer de la sixième à la deuxième place du pack local. Il transforme une fiche consultée en client qui pousse la porte, à condition de porter une information périssable, lisible dans les 80 premiers caractères, avec un bouton d'action.</p>
-<p>Deux à quatre publications par mois, préparées en une séance de vingt minutes, tenues sur douze mois : c'est tout le programme. Le reste du travail se joue ailleurs, au comptoir, au moment où un client satisfait s'apprête à repartir sans rien laisser. C'est ce moment-là qui décide de votre note, de votre volume d'avis et donc de votre position — et c'est le seul des trois leviers que vous contrôlez entièrement.</p>
+<p>Google Posts est un outil honnête à condition de lui demander ce qu'il sait faire. Rien n'indique qu'il vous fera gagner des places dans le pack local. Il peut en revanche aider une fiche consultée à devenir un client qui pousse la porte, à condition de porter une information périssable, lisible dès la première phrase, avec un bouton d'action.</p>
+<p>Deux à quatre publications par mois, préparées en une séance de vingt minutes, tenues sur douze mois : c'est tout le programme. Le reste du travail se joue ailleurs, au comptoir, au moment où un client satisfait s'apprête à repartir sans rien laisser. C'est ce moment-là qui décide de votre note et de votre volume d'avis, que Google cite parmi ce qui peut aider le classement local.</p>
 <p>Guides complémentaires : <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>, <a href="/blog/photos-google-business-profile">quelles photos publier sur sa fiche</a>, <a href="/blog/combien-avis-google-pack-local">combien d'avis pour le pack local</a>, <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>, ou <a href="/blog/statistiques-avis-google-2026">les statistiques avis Google 2026 sourcées</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
@@ -1429,173 +1384,187 @@ export const articles: Record<string, {
 `,
   },
   'taux-scan-plaque-nfc': {
-    title: 'Taux de scan d\'une plaque NFC : combien de clients laissent vraiment un avis ?',
-    category: 'Statistiques',
+    title: 'Taux de scan d\'une plaque NFC : comment mesurer le vôtre et l\'améliorer',
+    category: 'Conseils',
     date: '28 août 2026',
-    readTime: '12 min',
+    readTime: '15 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Un fournisseur annonce un taux unique, la réalité en donne dix. L\'entonnoir en 4 étapes, les ordres de grandeur par secteur, la formule de calcul et les leviers classés par impact.',
+    excerpt: 'Aucun taux de scan ne vaut pour tous les commerces : le seul chiffre utile est le vôtre. Comment le mesurer (avis publiés rapportés aux clients servis), ce qui le fait varier, les leviers pour l\'améliorer et le bon rythme de suivi.',
     tocSections: [
-      { id: 'pourquoi-taux', label: 'Le seul chiffre qui compte' },
+      { id: 'pourquoi-taux', label: 'Un chiffre qui se mesure chez vous' },
       { id: 'entonnoir', label: 'L\'entonnoir en 4 étapes' },
-      { id: 'chiffres', label: 'Les taux par secteur' },
-      { id: 'calcul', label: 'Formule et 3 exemples' },
-      { id: 'leviers', label: 'Les leviers par impact' },
-      { id: 'mesurer', label: 'Mesurer son taux réel' },
-      { id: 'plan-30-jours', label: 'Doubler en 30 jours' },
+      { id: 'facteurs', label: 'Ce qui fait varier le taux' },
+      { id: 'calcul', label: 'Mesurer son taux' },
+      { id: 'leviers', label: 'Les leviers pour l\'améliorer' },
+      { id: 'mesurer', label: 'Tester un changement' },
+      { id: 'suivi', label: 'À quelle fréquence le suivre' },
       { id: 'erreurs', label: 'Les 6 erreurs' },
       { id: 'faq-taux-scan', label: 'FAQ' },
       { id: 'conclusion', label: 'Conclusion' },
     ],
     content: `
 <section id="pourquoi-taux" class="scroll-mt-28 mb-16">
-<h2>Le taux de scan : le seul chiffre qui décide de votre volume d'avis</h2>
-<p>Quand un commerçant hésite à installer une plaque NFC, il ne pose jamais la question du prix en premier. Il pose celle-ci : <strong>combien de mes clients vont réellement s'en servir ?</strong> C'est la bonne question, et c'est aussi la seule dont la réponse conditionne tout le reste. Une plaque à 29,90 EUR qui produit 2 avis par mois n'a pas le même sens économique que la même plaque qui en produit 25.</p>
-<p>Le taux de scan est le pourcentage de clients servis qui approchent effectivement leur téléphone de la plaque. Il ne dit pas tout — encore faut-il que l'avis soit publié — mais il est le premier maillon, et c'est celui qui varie le plus d'un établissement à l'autre. Deux commerces identiques, même métier, même flux, même plaque, peuvent afficher un écart de un à dix. La différence ne vient jamais du matériel. Elle vient de l'endroit où la plaque est posée et de ce qui est dit au moment où le client passe devant.</p>
+<h2>Le taux de scan : un chiffre qui se mesure chez vous</h2>
+<p>Avant d'installer une plaque NFC, une question compte plus que le prix : <strong>combien de mes clients vont réellement s'en servir ?</strong> C'est la bonne question. Mais personne ne peut y répondre à votre place, et surtout pas avec un chiffre valable pour tous les commerces.</p>
+<p>Dans cet article, le taux de scan désigne le nombre d'avis publiés sur votre fiche Google pendant une période, rapporté au nombre de clients servis pendant la même période. Ce n'est pas exactement le nombre de téléphones approchés de la plaque : certains clients scannent puis referment la page, d'autres laissent un avis depuis chez eux sans passer par la plaque. Mais le nombre exact de scans ne se compte pas — la plaque ouvre directement la page d'avis de votre fiche, sans compteur intermédiaire —, alors que les avis publiés se relèvent en deux minutes. Et ce sont eux qui font vivre votre fiche.</p>
+<p>Les chiffres généraux ne vous aideront pas davantage. L'habitude de laisser un avis existe bel et bien : <a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">80 % des Français déclarent avoir déjà déposé un ou plusieurs avis</a> (étude PRESENCE 2026, 1 350 Français représentatifs). Mais ce chiffre dit combien de personnes l'ont fait au moins une fois, pas combien de vos clients le feront ce mois-ci à votre comptoir. Deux commerces du même métier, équipés de la même plaque, peuvent obtenir des résultats très différents : l'écart tient à l'endroit où la plaque est posée, à ce qui est dit au moment du paiement et au type de contact avec le client.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> le taux de scan n'est pas une caractéristique du produit, c'est une caractéristique de votre mise en place. C'est une bonne nouvelle : contrairement au prix d'achat, c'est un chiffre sur lequel vous avez la main, et qu'on peut doubler ou tripler sans dépenser un euro de plus.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> le taux de scan n'est pas une caractéristique du produit, c'est une caractéristique de votre mise en place. Aucun fournisseur ne peut donc vous le garantir à l'avance. En revanche, vous pouvez le mesurer vous-même, et agir sur plusieurs des éléments qui le déterminent sans rien acheter de plus.</p>
 </div>
-<p>Cet article démonte l'enchaînement complet, du client servi à l'avis publié, donne des ordres de grandeur par secteur, la formule pour estimer votre propre volume, et les leviers classés par impact réel.</p>
+<p>La suite de l'article détaille ce que ce taux recouvre, ce qui le fait varier, la méthode pour mesurer le vôtre, les leviers pour l'améliorer et le rythme auquel le suivre.</p>
 </section>
 
 <section id="entonnoir" class="scroll-mt-28 mb-16">
-<h2>L'entonnoir en 4 étapes : de 100 clients à 6 avis</h2>
-<p>Un avis Google déposé via une plaque NFC est le résultat de quatre filtres successifs. Chacun élimine une partie du flux, et le volume final est le produit des quatre — ce qui explique pourquoi un progrès modeste sur chaque étape produit un résultat spectaculaire à l'arrivée.</p>
+<h2>Ce que le taux recouvre : l'entonnoir en 4 étapes</h2>
+<p>Un avis Google déposé via une plaque NFC est le résultat de quatre filtres successifs. Chacun laisse passer une partie des clients, et le nombre d'avis final dépend des quatre à la fois : un progrès sur une étape profite à toutes celles qui suivent.</p>
 <h3>Étape 1 — L'exposition</h3>
-<p>Le client doit passer physiquement à portée de la plaque, à un moment où il n'a pas les mains prises. Une plaque posée derrière le comptoir, du côté du commerçant, ou collée sur une porte que l'on pousse avec un sac dans chaque main, perd la partie ici. Dans une bonne configuration de comptoir, l'exposition approche 100 % des clients encaissés ; sur un présentoir dans un coin de la salle, elle peut tomber sous les 30 %.</p>
+<p>Le client doit passer physiquement à portée de la plaque, à un moment où il n'a pas les mains prises. Une plaque posée derrière le comptoir, du côté du commerçant, ou collée sur une porte que l'on pousse avec un sac dans chaque main, perd la partie ici. Au point d'encaissement, côté client, chaque client qui paie passe devant ; sur un présentoir dans un coin de la salle, une partie des clients ne la croise jamais.</p>
 <h3>Étape 2 — Le déclencheur</h3>
-<p>Le client doit comprendre qu'on lui propose quelque chose et décider de faire le geste. C'est ici que se joue l'essentiel de l'écart entre établissements. Une plaque muette, sans un mot du personnel, est un objet décoratif : elle est vue, comprise à moitié, et ignorée. Une phrase de cinq secondes prononcée en poussant la plaque vers le client change complètement l'ordre de grandeur.</p>
+<p>Le client doit comprendre qu'on lui propose quelque chose et décider de faire le geste. C'est l'étape sur laquelle vous avez le plus de prise, parce qu'elle dépend de ce que dit votre équipe. Une plaque muette est vue, comprise à moitié, puis ignorée : le client ne sait pas si l'objet lui est destiné. Une phrase de cinq secondes, prononcée en montrant la plaque, lève cette hésitation.</p>
 <h3>Étape 3 — La lecture technique</h3>
-<p>Le téléphone doit lire la puce et ouvrir la page. Sur un support adapté et un placement testé, cette étape ne coûte presque rien : le NFC est actif par défaut sur l'immense majorité des smartphones en circulation, et le QR code imprimé rattrape les rares cas restants. En revanche, une plaque collée sur une surface métallique fait chuter cette étape brutalement — le champ est perturbé, la lecture devient aléatoire, et le client abandonne au deuxième essai.</p>
+<p>Le téléphone doit lire la puce et ouvrir la page. Cette étape se vérifie en une minute : approchez un iPhone puis un Android à l'endroit exact où la plaque restera. Un téléphone sans NFC, ou dont le NFC est désactivé, peut passer par le QR code imprimé sur la plaque. Le vrai piège est le métal : les puces NFC passives classiques fonctionnent mal, voire pas du tout, dans un environnement métallique, comme le signale <a href="https://www.nxp.com/docs/en/application-note/AN12339.pdf" target="_blank" rel="noopener noreferrer">une note technique de NXP</a>, fabricant de puces NFC. Une plaque collée sur une caisse ou un comptoir en inox sans test préalable risque de décourager le client dès le deuxième essai.</p>
 <h3>Étape 4 — La publication</h3>
-<p>Le client doit être connecté à un compte Google, choisir une note et valider. Une part non négligeable des scans s'arrête là : page ouverte, puis refermée. C'est normal, et c'est aussi l'étape sur laquelle vous avez le moins de prise. Le seul levier réel est le moment choisi : un client qui vient de vivre quelque chose de positif va jusqu'au bout bien plus souvent qu'un client neutre.</p>
-<p>Le volume d'avis est donc le produit : <strong>clients servis × exposition × déclenchement × lecture × publication</strong>. Sur 100 clients, une mise en place moyenne donne souvent 5 à 8 avis ; une mise en place travaillée, deux à trois fois plus.</p>
+<p>Le client doit être connecté à son compte Google, choisir une note et valider. Une partie des scans s'arrête là : page ouverte, puis refermée. C'est normal, et c'est l'étape sur laquelle vous avez le moins de prise. Le seul levier est le moment choisi : un client qui vient de voir le résultat d'un service apprécié a une raison de prendre ces quelques secondes, un client pressé n'en a pas.</p>
+<p>Le nombre d'avis dépend donc de ces quatre étapes à la fois. Aucune ne se mesure séparément sans outil. Ce qui se compte facilement, c'est leur résultat : les avis publiés. C'est lui que vous allez rapporter à vos clients servis.</p>
 </section>
 
-<section id="chiffres" class="scroll-mt-28 mb-16">
-<h2>Les ordres de grandeur observés, par secteur</h2>
-<p>Les chiffres ci-dessous sont des ordres de grandeur, pas des mesures universelles : ils reposent sur la structure du contact client de chaque métier — durée de la relation, existence d'un moment de paiement en face-à-face, charge émotionnelle du service rendu. Ils servent à se situer, pas à promettre.</p>
+<section id="facteurs" class="scroll-mt-28 mb-16">
+<h2>Ce qui fait varier le taux d'un commerce à l'autre</h2>
+<p>Vous croiserez en ligne des « taux de scan par secteur ». Méfiez-vous-en : sans méthode, sans échantillon et sans définition de ce qui est compté, un tel chiffre ne dit rien de votre établissement. Ce qui est utile, en revanche, c'est de connaître les facteurs qui poussent le résultat vers le haut ou vers le bas. Ils tiennent à la façon dont chaque métier rencontre ses clients, et à ce que vous en faites.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Secteur</th><th class="border p-3 text-left">Taux d'avis / clients servis</th><th class="border p-3 text-left">Ce qui explique le niveau</th></tr></thead>
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Facteur</th><th class="border p-3 text-left">Ce qui aide</th><th class="border p-3 text-left">Ce qui freine</th></tr></thead>
 <tbody>
-<tr><td class="border p-3"><strong>Garage, carrosserie</strong></td><td class="border p-3">10 à 20 %</td><td class="border p-3">Facture élevée, soulagement, contact long au comptoir</td></tr>
-<tr><td class="border p-3"><strong>Salon de coiffure, institut</strong></td><td class="border p-3">10 à 18 %</td><td class="border p-3">Relation personnelle, encaissement en face-à-face</td></tr>
-<tr><td class="border p-3"><strong>Hôtel</strong></td><td class="border p-3">8 à 12 %</td><td class="border p-3">Check-out garanti, mais départs pressés</td></tr>
-<tr><td class="border p-3"><strong>Restaurant</strong></td><td class="border p-3">4 à 10 %</td><td class="border p-3">Fort volume, addition parfois expédiée</td></tr>
-<tr><td class="border p-3"><strong>Cabinet, clinique vétérinaire</strong></td><td class="border p-3">5 à 12 %</td><td class="border p-3">Contexte de soin, demande à manier avec réserve</td></tr>
-<tr><td class="border p-3"><strong>Boulangerie, commerce de flux</strong></td><td class="border p-3">1 à 4 %</td><td class="border p-3">Passage très rapide, ticket faible, file d'attente</td></tr>
+<tr><td class="border p-3"><strong>Le moment du paiement</strong></td><td class="border p-3">Encaissement en face-à-face, téléphone déjà en main pour le sans contact</td><td class="border p-3">Paiement en ligne ou différé, client qui repart sans passer en caisse</td></tr>
+<tr><td class="border p-3"><strong>La durée du contact</strong></td><td class="border p-3">Rendez-vous, prestation longue, échange personnel</td><td class="border p-3">Passage de quelques secondes, client servi sans échange</td></tr>
+<tr><td class="border p-3"><strong>La disponibilité du client</strong></td><td class="border p-3">Client assis, ou qui attend sa monnaie, son ticket, sa commande</td><td class="border p-3">File d'attente derrière lui, client pressé, mains prises</td></tr>
+<tr><td class="border p-3"><strong>La phrase à l'oral</strong></td><td class="border p-3">Une invitation courte, dite à chaque client par toute l'équipe</td><td class="border p-3">Plaque muette, demande faite seulement quand on y pense</td></tr>
+<tr><td class="border p-3"><strong>Ce que le client vient de vivre</strong></td><td class="border p-3">Un résultat visible : coupe terminée, voiture réparée, problème réglé</td><td class="border p-3">Un service vite oublié, ou un incident encore en cours</td></tr>
+<tr><td class="border p-3"><strong>La nature de la clientèle</strong></td><td class="border p-3">Clients qui n'ont encore jamais laissé d'avis chez vous</td><td class="border p-3">Habitués qui ont déjà laissé le leur, contexte de soin où la demande se fait avec réserve</td></tr>
 </tbody>
 </table>
 </div>
-<p>La lecture importante n'est pas le classement : c'est que le commerce le mieux placé en pourcentage n'est pas forcément celui qui collecte le plus d'avis. Une boulangerie à 2 % sur 400 clients par jour dépose bien plus d'avis qu'un garage à 15 % sur 12 interventions quotidiennes. <strong>Le pourcentage sert à évaluer votre mise en place ; le volume absolu sert à évaluer votre progression Google.</strong></p>
+<p>Deux conséquences pratiques. D'abord, comparer votre taux à celui d'un autre métier n'a pas de sens : un commerce de passage et un garage ne partent pas des mêmes conditions. Comparez-vous à vous-même, d'un mois sur l'autre. Ensuite, le pourcentage et le volume ne racontent pas la même histoire : un commerce qui sert des centaines de clients par jour peut recevoir plus d'avis qu'un garage tout en affichant un taux bien plus faible. <strong>Le taux sert à évaluer votre mise en place ; le nombre d'avis sert à suivre votre fiche.</strong></p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 Attention aux promesses rondes :</strong> tout fournisseur qui annonce un taux unique, valable partout, décrit un argumentaire commercial et non une réalité de terrain. Le même produit posé à deux endroits différents dans la même boutique ne donne déjà pas le même résultat. Pour comparer honnêtement les solutions, mieux vaut raisonner en <a href="/blog/cout-avis-google-comparatif">coût réel par avis collecté</a> qu'en taux affiché.</p>
+<p class="text-sm text-amber-900"><strong>💡 Attention aux promesses rondes :</strong> un fournisseur qui annonce un taux unique, valable partout, présente un argument commercial, pas une mesure. La même plaque posée à deux endroits de la même boutique ne donne déjà pas le même résultat. Pour comparer les solutions entre elles, raisonnez plutôt en <a href="/blog/cout-avis-google-comparatif">coût par avis collecté</a>, calculé avec vos propres relevés.</p>
 </div>
 </section>
 
 <section id="calcul" class="scroll-mt-28 mb-16">
-<h2>La formule et trois exemples de calcul</h2>
-<p>Pour estimer votre volume mensuel, une seule opération suffit :</p>
+<h2>Mesurer votre taux : la formule et la méthode</h2>
+<p>La mesure ne demande aucun outil particulier. Il vous faut deux nombres que vous avez déjà, relevés sur la même période.</p>
 <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 not-prose">
-<p class="text-sm text-gray-900"><strong>Avis par mois = clients servis par mois × taux d'avis</strong> — où le taux d'avis est le produit des quatre étapes de l'entonnoir.</p>
+<p class="text-sm text-gray-900"><strong>Taux d'avis = nouveaux avis publiés sur la période ÷ clients servis sur la même période</strong> — multiplié par 100 si vous préférez le lire en pourcentage.</p>
 </div>
-<h3>Exemple 1 — Salon de coiffure, 3 fauteuils</h3>
-<p>Environ 420 clients par mois. Plaque unique posée en caisse, orientée client, avec une phrase systématique à l'encaissement. Taux observé de l'ordre de 12 %, soit <strong>environ 50 avis par mois</strong>. Sans la phrase, avec la seule plaque posée, le même salon tomberait autour de 4 %, soit une quinzaine d'avis. La phrase vaut donc à elle seule 35 avis mensuels.</p>
-<h3>Exemple 2 — Restaurant, 45 couverts, 22 jours d'ouverture</h3>
-<p>Environ 1 400 clients par mois, mais la bonne unité ici est la table, pas le couvert : environ 480 additions. Avec une plaque sur le porte-addition et une seconde en caisse, un taux de 7 % sur les additions donne <strong>environ 34 avis par mois</strong>. C'est la configuration à deux emplacements du <a href="/product/business">pack Business</a>.</p>
-<h3>Exemple 3 — Boulangerie, forte fréquentation</h3>
-<p>Environ 9 000 passages par mois. Le taux est structurellement bas — la file avance, le client a déjà sa monnaie en main — disons 1,5 %. Cela donne tout de même <strong>environ 135 avis par mois</strong>, un volume qu'aucun garage n'atteindra jamais. Ici, le levier n'est pas le pourcentage mais la constance : la plaque doit être visible sur chaque poste de caisse.</p>
-<p>Ces trois cas montrent la même chose sous trois angles : le volume d'avis se pilote par le flux et par la discipline, jamais par le matériel. Une fois le volume connu, on peut le convertir en points de note avec la méthode détaillée dans notre guide pour <a href="/blog/ameliorer-note-google">améliorer sa note Google</a>.</p>
+<h3>1. Relevez votre point de départ</h3>
+<p>Le premier jour de la période, notez le nombre total d'avis affiché sur votre fiche Google, ainsi que la note affichée. Faites-le toujours à date fixe, par exemple le 1er du mois : c'est votre ligne de base.</p>
+<h3>2. Comptez vos clients dans la bonne unité</h3>
+<p>Choisissez l'unité qui correspond à une occasion de demander : un ticket de caisse, une intervention, un rendez-vous. Au restaurant, comptez les additions plutôt que les couverts, puisque la demande se fait une fois par table. Votre caisse ou votre agenda donne déjà ce nombre ; gardez la même unité d'une période à l'autre.</p>
+<h3>3. Laissez passer un mois complet</h3>
+<p>Une semaine est trop courte : quand les avis se comptent à l'unité, le hasard pèse lourd. Si une semaine compte trois avis, trois de plus suffisent à doubler le résultat sans que rien n'ait changé. Un mois complet lisse les jours creux et les jours pleins. Pendant ce mois, ne modifiez rien d'autre à votre mise en place.</p>
+<h3>4. Divisez</h3>
+<p>Le premier jour de la période suivante, relevez de nouveau le total d'avis de la fiche. La différence avec votre point de départ, divisée par le nombre de clients servis, donne votre taux.</p>
+<p><em>Exemple fictif, pour la seule mécanique du calcul :</em> un salon relève 212 avis le 1er mars et 230 le 1er avril, pour 410 tickets de caisse en mars. Il a reçu 18 avis pour 410 clients servis, soit un avis pour 23 clients environ. Ce résultat n'est ni bon ni mauvais en soi : il devient utile le mois suivant, quand vous le comparez au relevé d'après.</p>
+<h3>Ce que ce chiffre mesure, et ce qu'il ne mesure pas</h3>
+<p>Le taux obtenu est un taux d'avis global. Il ne distingue pas les avis venus de la plaque de ceux laissés spontanément, et il ne compte pas les scans restés sans avis. Les <a href="https://support.google.com/business/answer/9918094?hl=fr" target="_blank" rel="noopener noreferrer">statistiques de performances de Google Business Profile</a> ne comblent pas ce manque : elles suivent notamment les vues de la fiche, les appels, les demandes d'itinéraire et les clics vers le site Web, mais aucune ne compte les scans d'une plaque. Pour isoler l'effet de la plaque, comparez donc des périodes : avant et après la pose, avant et après un changement.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Le test des deux téléphones :</strong> avant toute mesure, faites lire la plaque à l'endroit exact où elle restera, avec un iPhone et un Android. Si l'un des deux demande plusieurs essais ou oblige à chercher la zone de lecture, corrigez le placement avant de compter quoi que ce soit — vous mesureriez sinon un problème technique et non un comportement client.</p>
+</div>
 </section>
 
 <section id="leviers" class="scroll-mt-28 mb-16">
-<h2>Les leviers classés par impact réel</h2>
-<p>Tous les réglages ne se valent pas. Voici ceux qui comptent, du plus au moins puissant, avec l'ordre de grandeur du gain constaté quand on passe d'une situation dégradée à une situation correcte.</p>
+<h2>Les leviers pour améliorer votre taux</h2>
+<p>Le tableau range les leviers dans l'ordre où il est logique de les vérifier : d'abord ce qui ne coûte rien et concerne chaque client, ensuite ce qui demande un achat. Il ne dit pas de combien chacun fera progresser votre taux : cela dépend de votre point de départ, et c'est ce que votre relevé mensuel vous montrera.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Levier</th><th class="border p-3 text-left">Effet sur le taux</th><th class="border p-3 text-left">Coût</th></tr></thead>
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Levier</th><th class="border p-3 text-left">Ce qu'il corrige</th><th class="border p-3 text-left">Coût</th></tr></thead>
 <tbody>
-<tr><td class="border p-3"><strong>Une phrase dite à chaque encaissement</strong></td><td class="border p-3">× 3 à × 5</td><td class="border p-3">Nul</td></tr>
-<tr><td class="border p-3"><strong>Plaque orientée client, à portée de main</strong></td><td class="border p-3">× 2 à × 3</td><td class="border p-3">Nul</td></tr>
-<tr><td class="border p-3"><strong>Moment choisi (après un bon résultat)</strong></td><td class="border p-3">× 1,5 à × 2</td><td class="border p-3">Nul</td></tr>
-<tr><td class="border p-3"><strong>Deuxième emplacement pertinent</strong></td><td class="border p-3">+ 30 à + 60 %</td><td class="border p-3">Une plaque</td></tr>
-<tr><td class="border p-3"><strong>Support non métallique et testé</strong></td><td class="border p-3">Évite − 50 à − 90 %</td><td class="border p-3">Nul</td></tr>
-<tr><td class="border p-3"><strong>Visuel de la plaque, couleur, format</strong></td><td class="border p-3">Marginal</td><td class="border p-3">Variable</td></tr>
+<tr><td class="border p-3"><strong>Une phrase dite à chaque encaissement</strong></td><td class="border p-3">Le client voit la plaque sans savoir qu'elle lui est destinée</td><td class="border p-3">Aucun</td></tr>
+<tr><td class="border p-3"><strong>Plaque orientée client, à portée de main</strong></td><td class="border p-3">La plaque est hors du champ visuel du client ou hors de sa portée</td><td class="border p-3">Aucun</td></tr>
+<tr><td class="border p-3"><strong>Support non métallique, lecture testée</strong></td><td class="border p-3">La lecture échoue et le client abandonne</td><td class="border p-3">Aucun</td></tr>
+<tr><td class="border p-3"><strong>Demande faite après la prestation</strong></td><td class="border p-3">La demande arrive avant que le client ait vu le résultat</td><td class="border p-3">Aucun</td></tr>
+<tr><td class="border p-3"><strong>Deuxième emplacement sur un autre flux</strong></td><td class="border p-3">Une partie des clients ne passe jamais devant la première plaque</td><td class="border p-3">Une plaque</td></tr>
+<tr><td class="border p-3"><strong>Visuel de la plaque, couleur, format</strong></td><td class="border p-3">À traiter en dernier, une fois le reste en place</td><td class="border p-3">Variable</td></tr>
 </tbody>
 </table>
 </div>
-<h3>Le script pèse plus lourd que tout le reste réuni</h3>
-<p>C'est le résultat le plus contre-intuitif et le plus constant. Une plaque posée sans un mot fonctionne, mais à un niveau plancher : le client la voit, ne sait pas si elle lui est destinée, et ne prend pas le risque social de tendre son téléphone vers un objet dont il n'est pas sûr. La phrase lève exactement cette incertitude. Elle doit être courte, dire ce que ça coûte en temps, et être prononcée pendant que la main du client est déjà au-dessus du comptoir.</p>
+<h3>La phrase : le levier à tester en premier</h3>
+<p>Une plaque posée sans un mot fonctionne, mais elle laisse le client deviner seul : il la voit, ne sait pas si elle lui est destinée, et ne prend pas le risque de tendre son téléphone vers un objet dont il n'est pas sûr. La phrase lève exactement cette incertitude. Elle doit être courte, dire ce que ça coûte en temps, et être prononcée pendant que le client est encore au comptoir.</p>
 <p>Trois formulations qui tiennent en une respiration : « Si vous avez dix secondes, approchez votre téléphone ici, ça nous aide beaucoup. » — « On collecte les avis avec ça maintenant, un contact avec le téléphone et c'est fait. » — « Vous pouvez nous laisser un mot en approchant votre téléphone, ça prend le temps d'un paiement sans contact. »</p>
-<p>À l'inverse, deux formulations à bannir : celle qui insiste (« vous pourriez nous mettre cinq étoiles ? ») parce qu'elle est perçue comme une pression et qu'orienter la note est contraire aux règles de Google, et celle qui s'excuse (« je sais que ça vous embête, mais… ») parce qu'elle donne au client la permission de refuser. Le détail de ce qui fait fuir un client est traité dans notre article sur les <a href="/blog/erreurs-demander-avis">erreurs à éviter quand on demande un avis</a>.</p>
+<p>À l'inverse, deux formulations à bannir. Celle qui réclame une note (« vous pourriez nous mettre cinq étoiles ? ») : les <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">règles de Google sur les contenus des utilisateurs</a> autorisent un établissement à demander des avis, mais sans tenter d'influencer la note ou le contenu, et sans obliger ni pousser le client à laisser un avis sur place. Et celle qui s'excuse (« je sais que ça vous embête, mais… »), parce qu'elle présente la demande comme une corvée. La bonne phrase reste une invitation : le client doit pouvoir passer son chemin sans gêne. Le détail de ce qui fait fuir un client est traité dans notre article sur les <a href="/blog/erreurs-demander-avis">erreurs à éviter quand on demande un avis</a>.</p>
 <h3>L'emplacement décide de l'exposition</h3>
-<p>La règle tient en une ligne : la plaque doit se trouver dans le champ visuel du client au moment où il attend, et à moins d'un mouvement de bras. Un décalage de trente centimètres vers la gauche du terminal de paiement suffit à faire chuter le taux de moitié, parce que le geste cesse d'être naturel et demande une décision. Le classement complet des emplacements, métier par métier, est détaillé dans notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque d'avis Google</a>.</p>
+<p>La règle tient en une ligne : la plaque doit se trouver dans le champ visuel du client au moment où il attend, et à moins d'un mouvement de bras. Posée à l'écart du terminal de paiement, elle sort du chemin naturel du geste et demande au client une décision de plus. Le classement des emplacements, métier par métier, est détaillé dans notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque d'avis Google</a>.</p>
 </section>
 
 <section id="mesurer" class="scroll-mt-28 mb-16">
-<h2>Comment mesurer votre taux réel en 30 jours</h2>
-<p>Estimer, c'est bien ; mesurer, c'est mieux, et c'est à la portée de n'importe quel commerce sans outil particulier.</p>
+<h2>Tester un changement sans vous tromper</h2>
+<p>Un levier ne vaut que si vous pouvez voir son effet chez vous. La méthode est celle d'un test tout simple : un changement, une période, une comparaison.</p>
 <ol>
-<li><strong>Relevez votre point de départ.</strong> Notez le nombre total d'avis affiché sur votre fiche Google le jour J, ainsi que la note moyenne. C'est votre ligne de base.</li>
-<li><strong>Comptez vos clients.</strong> Sur la même période, relevez le nombre de tickets, d'additions ou d'interventions — la caisse le donne déjà.</li>
-<li><strong>Attendez 30 jours pleins</strong> sans rien changer d'autre à votre mise en place. Un seul changement à la fois, sinon la mesure ne veut rien dire.</li>
-<li><strong>Divisez.</strong> Nouveaux avis ÷ clients servis = votre taux réel. Comparez-le à la fourchette de votre secteur dans le tableau plus haut.</li>
+<li><strong>Un seul changement à la fois.</strong> Si vous déplacez la plaque, introduisez la phrase et ajoutez un second support le même mois, vous ne saurez jamais lequel a produit l'effet, et vous ne pourrez pas le reproduire sur un autre point de vente.</li>
+<li><strong>Notez la date.</strong> Un carnet ou une note sur le téléphone suffit : « 3 avril, plaque déplacée à droite du terminal ». Sans date, les relevés ne se relisent pas.</li>
+<li><strong>Comparez des mois comparables.</strong> Un mois de vacances ne se compare pas à un mois de rentrée. C'est tout l'intérêt de rapporter les avis aux clients servis plutôt que de regarder les avis seuls : le taux neutralise en partie les écarts de fréquentation.</li>
+<li><strong>Gardez ce qui fonctionne.</strong> Si le taux progresse le mois suivant et que rien d'autre n'a bougé, le changement devient la nouvelle règle, et vous passez au levier suivant. S'il ne bouge pas, revenez en arrière ou essayez autre chose.</li>
 </ol>
-<p>Google Business Profile fournit en complément des statistiques utiles : nombre de vues de la fiche, appels, demandes d'itinéraire. Elles ne mesurent pas le taux de scan, mais elles montrent l'effet en aval — c'est là que se voit le retour sur investissement réel.</p>
-<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>⚙️ Le test des deux téléphones :</strong> avant toute mesure, faites lire la plaque à l'endroit exact où elle vivra, avec un iPhone et un Android. Si l'un des deux demande plus d'une seconde ou oblige à chercher la zone, corrigez le placement avant de compter quoi que ce soit — vous mesureriez sinon un problème technique et non un comportement client.</p>
-</div>
+<p>Les statistiques de votre fiche complètent ce relevé sans le remplacer : une hausse des vues ou des appels ne peut pas être attribuée à la seule plaque. Pour savoir à quels moments vos clients publient leurs avis, voyez notre article sur <a href="/blog/quand-clients-laissent-avis-google">quand les clients laissent leurs avis Google</a>.</p>
 </section>
 
-<section id="plan-30-jours" class="scroll-mt-28 mb-16">
-<h2>Le plan pour doubler le taux en 30 jours</h2>
-<p>Un doublement n'a rien d'exceptionnel quand on part d'une plaque posée sans méthode. Il s'obtient presque toujours par la même séquence.</p>
+<section id="suivi" class="scroll-mt-28 mb-16">
+<h2>À quelle fréquence suivre votre taux</h2>
+<p>Le suivi tient en trois rendez-vous, du plus fréquent au plus ponctuel. Aucun ne prend plus de quelques minutes.</p>
 <ul>
-<li><strong>Semaine 1 — Le placement.</strong> Déplacez la plaque du côté client, à droite du terminal de paiement, orientée vers lui. Testez la lecture avec deux téléphones. Retirez tout autre support concurrent qui disperse l'attention.</li>
-<li><strong>Semaine 2 — La phrase.</strong> Choisissez une seule formulation, écrivez-la sur un post-it collé côté personnel, et imposez-la à chaque encaissement. Une phrase que tout le monde dit vaut mieux que trois phrases que chacun improvise.</li>
-<li><strong>Semaine 3 — Les exceptions.</strong> Listez les deux ou trois situations où l'on ne demande pas : réclamation en cours, client visiblement pressé, incident non résolu. Une règle d'abstention claire évite les demandes maladroites qui produisent des avis tièdes.</li>
-<li><strong>Semaine 4 — Le second point.</strong> Si le premier emplacement tourne bien, ajoutez-en un deuxième là où passe une partie du flux qui échappe à la caisse : sortie, comptoir d'accueil, poste de retrait.</li>
+<li><strong>Chaque semaine : la plaque et la phrase.</strong> Approchez votre propre téléphone de la plaque pour vérifier qu'elle ouvre toujours la page d'avis, regardez si elle n'a pas bougé, et demandez à l'équipe si la phrase est toujours dite. Ce contrôle repère un décollement, un déplacement ou une phrase oubliée avant qu'ils ne faussent un mois entier de relevé.</li>
+<li><strong>Chaque mois : le relevé.</strong> Même jour, même méthode : total d'avis de la fiche, clients servis du mois, division. Notez le résultat à la suite des précédents ; c'est cette série, plus que chaque chiffre isolé, qui vous renseigne. Et pas plus d'un changement par mois, pour que chaque relevé corresponde à une seule modification.</li>
+<li><strong>À chaque arrivée dans l'équipe : la formation au geste.</strong> Montrez la plaque, la phrase et les rares situations où l'on s'abstient. Un collaborateur qui n'a jamais été formé peut, à lui seul, faire baisser le relevé du mois.</li>
 </ul>
-<p>Et une habitude qui court sur les quatre semaines : répondre à chaque avis publié, y compris aux avis à cinq étoiles sans commentaire. Les réponses sont lues par les futurs clients, et elles entretiennent la fiche entre deux vagues de collecte.</p>
+<h3>Le plan mois par mois pour une plaque posée sans méthode</h3>
+<ul>
+<li><strong>Mois 1 — Le placement.</strong> Déplacez la plaque du côté client, près du terminal de paiement, orientée vers lui. Faites le test des deux téléphones. Retirez les autres supports qui dispersent l'attention. Relevez le taux en fin de mois.</li>
+<li><strong>Mois 2 — La phrase.</strong> Choisissez une seule formulation, écrivez-la sur un post-it collé côté personnel, et demandez à chacun de la dire à chaque encaissement. Une phrase que tout le monde dit vaut mieux que trois phrases que chacun improvise.</li>
+<li><strong>Mois 3 — La règle d'abstention.</strong> Fixez à l'avance les rares situations où l'on ne sollicite personne : client visiblement pressé, moment difficile comme une mauvaise nouvelle en contexte de soin. Cette règle relève du tact, pas du tri : Google interdit de solliciter des avis positifs de façon sélective, donc la demande ne se réserve jamais aux clients dont on attend une bonne note.</li>
+<li><strong>Mois 4 — Le second point.</strong> Si votre taux s'est stabilisé après ces trois mois, ajoutez un deuxième emplacement là où passe une partie des clients qui échappe à la caisse : sortie, comptoir d'accueil, poste de retrait.</li>
+</ul>
+<h3>Entre deux relevés : répondre aux avis</h3>
+<p>Une habitude court sur tous les mois : répondre à chaque avis publié, y compris aux avis cinq étoiles sans commentaire, idéalement sous 48 heures. L'attente existe côté clients : <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent que le gérant réponde aux avis</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 consommateurs américains). L'enquête porte sur les États-Unis ; la recommandation, elle, vaut pour toute fiche.</p>
 </section>
 
 <section id="erreurs" class="scroll-mt-28 mb-16">
-<h2>Les 6 erreurs qui écrasent le taux de scan</h2>
+<h2>Les 6 erreurs qui faussent ou freinent votre taux</h2>
 <ul>
 <li><strong>Poser la plaque côté commerçant.</strong> Elle devient un objet de décoration pour votre équipe. Le client ne la voit jamais dans le bon axe.</li>
-<li><strong>Compter sur la plaque seule.</strong> Sans phrase, vous restez au plancher du taux, quel que soit le secteur.</li>
-<li><strong>Coller sur une surface métallique</strong> — caisse, frigo, comptoir à plateau inox — sans avoir testé. La lecture devient aléatoire et le client conclut que « ça ne marche pas ».</li>
-<li><strong>Demander à tout le monde, tout le temps.</strong> Solliciter un client en litige, ou juste après une réclamation non résolue, ne produit pas un avis neutre : cela produit un avis négatif qui n'aurait pas existé.</li>
-<li><strong>Offrir une contrepartie</strong> — un café, une remise, un tirage au sort. C'est interdit par les règles de Google et cela expose l'ensemble de votre historique d'avis à une suppression.</li>
+<li><strong>Compter sur la plaque seule.</strong> Sans phrase, le client doit deviner que l'objet lui est destiné, et rien ne l'invite à faire le geste.</li>
+<li><strong>Coller sur une surface métallique</strong> — caisse, frigo, comptoir à plateau inox — sans avoir testé. La lecture devient incertaine et le client conclut que « ça ne marche pas ».</li>
+<li><strong>Trier les clients à qui l'on demande.</strong> Réserver la phrase aux clients qui ont l'air contents revient à solliciter des avis positifs de façon sélective, ce que les règles de Google interdisent. La demande se fait à tous, avec les mêmes mots ; seules les situations fixées à l'avance justifient de s'abstenir.</li>
+<li><strong>Offrir une contrepartie</strong> — un café, une remise, un tirage au sort. Google l'interdit expressément : ses <a href="https://support.google.com/business/answer/3474122?hl=fr" target="_blank" rel="noopener noreferrer">conseils pour obtenir plus d'avis</a> qualifient ces avantages d'engagement artificiel. En cas d'avis frauduleux, Google peut supprimer les avis concernés et <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">restreindre la fiche</a> : plus aucun nouvel avis pendant une période donnée, avis existants dépubliés pendant une période donnée, avertissement affiché aux internautes.</li>
 <li><strong>Changer trois paramètres en même temps.</strong> Vous ne saurez jamais lequel a produit l'effet, et vous ne pourrez pas le reproduire sur un second point de vente.</li>
 </ul>
-<p>Une septième, plus discrète : abandonner au bout de trois semaines. La collecte d'avis est un effet cumulatif — le volume compte autant que le rythme, et une fiche alimentée régulièrement est mieux valorisée qu'une fiche qui reçoit trente avis en un mois puis plus rien. Les mécanismes de fond sont détaillés dans nos <a href="/blog/statistiques-avis-google-2026">statistiques avis Google 2026</a>.</p>
+<p>Une septième, plus discrète : juger le dispositif sur un seul mois, ou sur un mois inhabituel. Le taux se lit sur une série de relevés. Et la régularité compte autant que le total : une fiche qui reçoit des avis tout au long de l'année montre à ses visiteurs des avis récents, ce que ne fait pas une fiche qui en a reçu une vague puis plus rien. Pour aller plus loin, consultez nos <a href="/blog/statistiques-avis-google-2026">statistiques avis Google 2026</a>.</p>
 </section>
 
 <section id="faq-taux-scan" class="scroll-mt-28 mb-16">
 <h2>Questions fréquentes</h2>
 <h3>Quel est le taux de scan moyen d'une plaque NFC ?</h3>
-<p>Il n'existe pas de moyenne universelle, et méfiez-vous des chiffres uniques annoncés sans contexte. Ce qui se constate, ce sont des fourchettes par type de commerce : de 1 à 4 % des passages dans un commerce de flux rapide comme une boulangerie, jusqu'à 10 à 20 % dans un garage ou un salon, où le contact est long et l'encaissement se fait en face-à-face. À l'intérieur de chaque fourchette, l'écart entre le bas et le haut s'explique presque entièrement par deux facteurs : l'emplacement de la plaque et l'existence d'une phrase systématique à l'encaissement.</p>
+<p>Nous ne donnons pas de taux moyen, et nous vous conseillons de vous méfier de tout chiffre unique annoncé sans méthode ni échantillon. Le résultat dépend de votre mise en place et de votre métier : emplacement de la plaque, phrase dite ou non au moment du paiement, durée du contact, client assis ou pressé. Le seul taux qui vous renseigne est le vôtre : les avis publiés sur votre fiche pendant un mois, divisés par le nombre de clients servis pendant ce même mois.</p>
+<h3>Comment calculer le taux de scan de ma plaque NFC ?</h3>
+<p>Relevez le nombre total d'avis de votre fiche Google le premier jour du mois, puis le premier jour du mois suivant. Divisez la différence par le nombre de clients servis entre ces deux dates — tickets, additions ou interventions selon votre métier. Vous obtenez un taux d'avis global, qui inclut les avis laissés sans passer par la plaque : pour isoler l'effet de la plaque, comparez un mois avant et un mois après sa pose, sans rien changer d'autre.</p>
 <h3>Pourquoi ma plaque NFC ne génère-t-elle presque aucun avis ?</h3>
-<p>Trois causes couvrent la quasi-totalité des cas. La plaque est mal placée : trop loin de la main du client, orientée vers le personnel, ou dans un angle où le client ne regarde pas pendant qu'il attend. Personne ne dit rien au moment du paiement, et l'objet reste muet. Ou bien la lecture est mauvaise parce que la plaque est fixée sur du métal, ce qui perturbe le champ magnétique et rend le scan aléatoire. Vérifiez ces trois points dans cet ordre avant de conclure quoi que ce soit sur le produit.</p>
+<p>Vérifiez trois causes, dans cet ordre. L'emplacement : la plaque doit être à portée de main du client, orientée vers lui, dans son champ visuel pendant qu'il attend. La phrase : si personne ne dit rien au moment du paiement, l'objet reste muet. La lecture : une plaque fixée sur du métal peut devenir difficile, voire impossible à lire. Testez avec deux téléphones à l'endroit exact de la pose avant de conclure quoi que ce soit sur le produit.</p>
 <h3>Combien d'avis Google puis-je espérer par mois avec une plaque ?</h3>
-<p>Multipliez votre nombre de clients mensuels par le taux correspondant à votre secteur. Un salon de coiffure servant 400 clients avec une demande systématique se situe autour de 40 à 50 avis mensuels ; un restaurant à 480 additions, autour de 30 à 35 ; une boulangerie à 9 000 passages, plus de 100 malgré un taux très bas. Le facteur déterminant n'est pas le secteur mais la régularité : un établissement qui demande à chaque encaissement collecte plusieurs fois plus qu'un établissement qui demande quand il y pense.</p>
+<p>Personne ne peut vous l'annoncer de façon fiable avant la pose, et un fournisseur qui le fait vous vend une promesse. Le calcul, lui, est simple : clients servis par mois multipliés par votre taux mesuré. Hypothèse de calcul : si vous servez 300 clients par mois et qu'un sur vingt laisse un avis, cela ferait une quinzaine d'avis. Remplacez ces deux nombres par les vôtres dès votre premier relevé mensuel : c'est la seule estimation qui tienne.</p>
 <h3>Le taux de scan baisse-t-il avec le temps ?</h3>
-<p>Le taux lui-même ne baisse pas, mais la discipline qui le porte s'érode. Après quelques semaines, la phrase se dit moins souvent, la plaque migre de dix centimètres, un nouveau membre de l'équipe n'a jamais été formé au geste. C'est le motif de décrochage le plus fréquent. Le remède est simple : un relevé du nombre d'avis chaque début de mois, et une remise à plat du placement dès que la courbe s'aplatit. Un client habitué à voir la plaque ne s'en lasse pas — il ne laisse tout simplement pas deux avis, ce qui est normal.</p>
+<p>Il peut baisser, pour deux raisons. La première tient à la discipline : au fil des semaines, la phrase se dit moins souvent, la plaque se déplace, un nouveau membre de l'équipe n'a jamais été formé au geste. La seconde tient à la clientèle : dans un commerce d'habitués, une partie des clients a déjà laissé son avis et ne le refera pas à chaque visite, ce qui est normal. Le relevé de chaque début de mois, complété par le contrôle hebdomadaire de la plaque, permet de distinguer les deux : un relâchement se corrige, une clientèle fidèle qui a déjà donné son avis est un plafond naturel.</p>
 <h3>Une plaque NFC convertit-elle mieux qu'un QR code ?</h3>
-<p>Sur le même emplacement et avec le même script, le NFC réduit le nombre de gestes : pas d'appareil photo à ouvrir, pas de cadrage, pas de bandeau à toucher. Cette économie de friction se traduit par un taux supérieur, surtout auprès des clients peu à l'aise avec leur téléphone. Le QR code garde toutefois deux avantages : il fonctionne à distance, derrière une vitrine par exemple, et il ne dépend d'aucun réglage du téléphone. C'est pour cela que les deux sont présents sur la même plaque, l'un servant de secours à l'autre. La comparaison complète figure dans notre article <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC contre QR code</a>.</p>
+<p>Nous n'avons pas de mesure comparative à vous donner, et le résultat dépend autant de l'emplacement et de la phrase que du support. La différence certaine porte sur le geste : avec le NFC, le client approche son téléphone ; avec le QR code, il ouvre l'appareil photo, cadre le code et touche le lien qui s'affiche. Le QR code garde des avantages : il se lit à distance, derrière une vitrine par exemple, et il sert aux téléphones sans NFC. C'est pour cela que les deux sont présents sur la même plaque, l'un servant de secours à l'autre. La comparaison complète figure dans notre article <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC contre QR code</a>.</p>
 <h3>Faut-il plusieurs plaques pour augmenter le taux ?</h3>
-<p>Une deuxième plaque n'augmente pas le taux du premier emplacement : elle capte une partie du flux qui ne passe pas devant lui. Le gain est donc réel mais additif, de l'ordre de 30 à 60 % de volume supplémentaire lorsque le deuxième point est bien choisi, et proche de zéro s'il double simplement le premier. Commencez toujours par optimiser un seul emplacement jusqu'à ce qu'il tourne bien, puis ajoutez le second là où passe le flux orphelin.</p>
-<h3>Est-il légal d'inciter ses clients à laisser un avis Google ?</h3>
-<p>Oui, demander un avis est parfaitement autorisé, et c'est même une pratique recommandée par Google. Deux limites à respecter strictement. Aucune contrepartie, même symbolique : ni remise, ni boisson offerte, ni participation à un tirage au sort. Et aucun filtrage : vous ne pouvez pas réserver la demande aux clients que vous supposez satisfaits, ni orienter la note attendue. Une plaque posée en libre accès et une phrase neutre adressée à tous respectent ces deux règles par construction, ce qui est précisément leur intérêt.</p>
+<p>Une deuxième plaque n'améliore pas le premier emplacement : elle donne une occasion de scanner à des clients qui ne passent pas devant lui. Son apport dépend donc de votre parcours client — réel si le second point capte un autre flux, à peu près nul s'il double simplement le premier. Commencez par régler un seul emplacement jusqu'à ce que vos relevés se stabilisent, puis ajoutez le second là où passent les clients que le premier ne voit pas, et comparez vos relevés avant et après.</p>
+<h3>Google autorise-t-il à demander des avis à ses clients ?</h3>
+<p>Oui. Les règles de Google permettent à un établissement de demander des avis qui reflètent une expérience réelle, et ses conseils aux professionnels suggèrent précisément d'inviter les clients à cliquer sur un lien ou à scanner un QR code. Trois limites sont à respecter. Aucune contrepartie, même symbolique : ni remise, ni boisson offerte, ni tirage au sort. Aucun tri ni orientation : la demande ne se réserve pas aux clients dont vous attendez une bonne note, et elle ne suggère ni la note ni le contenu. Aucune pression : le client reste libre de ne pas laisser d'avis. Une plaque en libre accès et une phrase neutre adressée à tous respectent ces trois règles.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
-<h2>Conclusion : le chiffre se pilote, il ne s'achète pas</h2>
-<p>Le taux de scan n'est pas une donnée technique livrée avec la plaque. C'est le résultat de trois décisions que vous prenez : où l'objet est posé, ce qui est dit au moment du paiement, et à quel moment on s'abstient de demander. Le matériel ne fait que rendre le geste possible en une seconde ; tout le reste appartient à la mise en place.</p>
-<p>La conséquence pratique est encourageante. Un établissement qui collecte peu n'a pas besoin d'un autre produit : il a besoin de déplacer sa plaque de trente centimètres et d'imposer une phrase à son équipe. C'est un travail d'une semaine, sans dépense, et c'est le seul qui produit systématiquement un doublement.</p>
-<p>Les plaques Swiipx sont livrées déjà programmées avec le lien d'avis de votre établissement : aucune application à installer, aucun code d'activation, aucun abonnement. Le <a href="/product/starter">pack Starter</a> équipe le point d'encaissement, le <a href="/product/business">pack Business</a> couvre les deux emplacements qui captent la majorité du flux, et le <a href="/product/pro">pack Pro</a> permet de couvrir plusieurs postes ou plusieurs points de vente.</p>
+<h2>Conclusion : un taux se mesure et se pilote, il ne s'achète pas</h2>
+<p>Le taux de scan n'est pas une donnée technique livrée avec la plaque. C'est le résultat de décisions que vous prenez : où l'objet est posé, ce qui est dit au moment du paiement, à quel moment la demande arrive. Le matériel rend le geste possible en un contact ; tout le reste appartient à la mise en place.</p>
+<p>La conséquence pratique est rassurante. Un établissement qui collecte peu n'a pas forcément besoin d'un autre produit : il a besoin d'un relevé mensuel, d'un changement à la fois et de la patience de comparer. C'est l'affaire de quelques minutes par mois, et c'est la seule façon d'obtenir un taux qui vous concerne vraiment : le vôtre.</p>
+<p>Les plaques Swiipx sont livrées déjà programmées avec le lien d'avis de votre établissement : aucune application à installer, aucun code d'activation, aucun abonnement. Le <a href="/product/starter">pack Starter</a> équipe le point d'encaissement, le <a href="/product/business">pack Business</a> couvre deux emplacements, par exemple la caisse et le poste de prestation, et le <a href="/product/pro">pack Pro</a> permet d'équiper plusieurs postes ou plusieurs points de vente.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900"><strong>👉 Mesurez votre propre taux dès ce mois-ci :</strong> <a href="/#product" class="underline font-semibold">découvrir les plaques NFC Swiipx</a> — paiement unique, sans abonnement, garantie à vie sur la puce et livraison en point relais offerte.</p>
 </div>
@@ -1606,9 +1575,9 @@ export const articles: Record<string, {
     title: 'Plaque NFC hôtel : transformer le check-out en avis Google',
     category: 'Secteur',
     date: '26 août 2026',
-    readTime: '11 min',
+    readTime: '12 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Un hôtelier surveille sa note Booking chaque matin et laisse sa fiche Google à l\'abandon — c\'est exactement l\'inverse qu\'il faudrait faire. Le check-out, les 6 emplacements classés, les scripts de réception et trois exemples de calcul.',
+    excerpt: 'Surveiller sa note Booking chaque matin et laisser sa fiche Google à l\'abandon, c\'est l\'inverse de ce qu\'il faudrait faire. Le check-out, les 6 emplacements passés en revue, les scripts de réception et la méthode pour estimer vos avis à partir de vos propres départs.',
     tocSections: [
       { id: 'pourquoi-hotel', label: 'Pourquoi l\'avis Google décide' },
       { id: 'booking-google', label: 'Booking, Tripadvisor ou Google ?' },
@@ -1616,7 +1585,7 @@ export const articles: Record<string, {
       { id: 'moments', label: 'Quand demander, quand se taire' },
       { id: 'scripts', label: 'Trois scripts de réception' },
       { id: 'chambre', label: 'La plaque en chambre' },
-      { id: 'calcul', label: 'Trois exemples de calcul' },
+      { id: 'calcul', label: 'Faire le calcul' },
       { id: 'avis-negatifs', label: 'Répondre aux avis négatifs' },
       { id: 'erreurs', label: 'Les 6 erreurs à éviter' },
       { id: 'faq-hotel', label: 'FAQ' },
@@ -1626,12 +1595,12 @@ export const articles: Record<string, {
 <section id="pourquoi-hotel" class="scroll-mt-28 mb-16">
 <h2>Pourquoi l'avis Google décide de la réservation d'un hôtel</h2>
 <p>Un hôtelier connaît par cœur sa note Booking. Il la surveille chaque matin, il sait à la décimale près où il se situe par rapport à l'établissement d'en face. Sa fiche Google, elle, vit sa vie : une note plus basse, moins d'avis, aucune réponse depuis huit mois. C'est précisément l'inverse de ce qu'il faudrait faire.</p>
-<p>La raison tient au parcours réel du voyageur. Une partie des clients arrive par une plateforme de réservation, mais une autre part — et c'est celle qui coûte le moins cher — tape le nom de la ville et le mot hôtel dans Google, ou cherche le nom de votre établissement après l'avoir vu ailleurs. Dans les deux cas, ce qui s'affiche en premier sur un téléphone n'est pas votre site : c'est le pack local, ces trois fiches Google encadrées d'une carte, avec une note sur cinq et un nombre d'avis.</p>
-<p><strong>Sur ces trois lignes se joue l'essentiel de votre visibilité gratuite.</strong> Un hôtel à 4,1 avec 62 avis face à un concurrent à 4,6 avec 340 avis ne perd pas seulement un affichage : il perd le clic, donc la visite de son site, donc la réservation directe — la seule qui ne lui coûte pas de commission.</p>
+<p>La raison tient au parcours réel du voyageur. Une partie des clients arrive par une plateforme de réservation, mais une autre part — et c'est celle qui coûte le moins cher — tape le nom de la ville et le mot hôtel dans Google, ou cherche le nom de votre établissement après l'avoir vu ailleurs. Dans les deux cas, ce qui s'affiche en premier sur un téléphone n'est pas forcément votre site : ce sont des fiches Google, avec une carte, une note sur cinq et un nombre d'avis.</p>
+<p><strong>Ces fiches sont votre vitrine sur Google.</strong> Un hôtel noté 4,1 avec 62 avis, affiché à côté d'un concurrent noté 4,6 avec 340 avis, part avec un handicap au moment du clic. Et un clic perdu, c'est une visite de site en moins, donc une chance en moins de réservation directe : celle qui ne lui coûte pas de commission.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> l'hôtellerie est l'un des rares secteurs où le client passe une nuit entière chez vous et repart le lendemain sans que personne ne lui ait demandé son avis. Le check-out est un moment de contact garanti, daté, avec la quasi-totalité de vos clients. Aucun autre commerce local ne dispose d'une fenêtre aussi fiable — et presque aucun hôtel ne l'utilise.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> l'hôtellerie est l'un des rares secteurs où le client passe une nuit entière chez vous, et il peut repartir le lendemain sans que personne ne lui ait demandé son avis. Le check-out est un moment de contact prévu et daté avec chaque client qui repasse par la réception. Peu de commerces disposent d'une fenêtre aussi prévisible : encore faut-il l'utiliser.</p>
 </div>
-<p>Le problème n'est pas la satisfaction : la plupart des hôtels ont des clients contents. Le problème est la friction. Un client satisfait qui repart avec ses valises ne se souviendra pas, trois jours plus tard, de chercher votre établissement sur Google pour écrire trois lignes. C'est cette friction qu'une plaque NFC posée sur le comptoir de réception supprime : le client approche son téléphone, le formulaire d'avis Google s'ouvre, l'avis est écrit avant que le taxi n'arrive.</p>
+<p>Un client satisfait n'est pas pour autant un client qui écrit : le frein, c'est la friction. Une fois reparti, il faudrait qu'il pense de lui-même à chercher votre établissement sur Google pour écrire trois lignes. C'est cette friction qu'une plaque NFC posée sur le comptoir de réception réduit : le client approche son téléphone, le formulaire d'avis Google s'ouvre, et il peut écrire tout de suite s'il le souhaite.</p>
 </section>
 
 <section id="booking-google" class="scroll-mt-28 mb-16">
@@ -1639,38 +1608,38 @@ export const articles: Record<string, {
 <p>La question revient à chaque fois : faut-il envoyer le client sur Google, sur Booking ou sur Tripadvisor ? Les trois n'ont pas la même fonction et surtout pas le même coût.</p>
 <h3>Ce que chaque plateforme vous apporte</h3>
 <ul>
-<li><strong>Booking et les autres plateformes de réservation</strong> : les avis y sont collectés automatiquement après le séjour, sans effort de votre part. Ils améliorent votre position dans un moteur où chaque réservation vous coûte une commission. Vous travaillez pour améliorer un classement dont la conversion est facturée.</li>
-<li><strong>Tripadvisor</strong> : forte notoriété, influence réelle sur la clientèle loisirs internationale, mais une audience de plus en plus captée par Google sur les recherches mobiles.</li>
-<li><strong>Google Business Profile</strong> : c'est le seul canal où un avis supplémentaire améliore une visibilité que vous ne payez pas. Il alimente le pack local, la carte, et le panneau qui s'affiche quand quelqu'un tape le nom de votre hôtel.</li>
+<li><strong>Booking et les autres plateformes de réservation</strong> : sur Booking.com, seuls les clients ayant réservé par la plateforme peuvent laisser un avis, après leur séjour, et la plateforme se rémunère par une commission versée par l'établissement (<a href="https://www.booking.com/content/how_we_work.html" target="_blank" rel="noopener noreferrer">fonctionnement décrit par Booking.com</a>). Ces avis nourrissent votre note sur un canal où chaque réservation vous est facturée.</li>
+<li><strong>Tripadvisor</strong> : une plateforme d'avis consacrée au voyage, que consulte une partie de votre clientèle.</li>
+<li><strong>Google Business Profile</strong> : la fiche permet de <a href="https://support.google.com/business/answer/7039811?hl=fr" target="_blank" rel="noopener noreferrer">gérer sans frais</a> la façon dont votre établissement apparaît dans la recherche Google et sur Maps, y compris quand quelqu'un tape le nom de votre hôtel. Et Google indique que davantage d'avis et de notes positives peuvent aider le classement local (<a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">conseils officiels de Google</a>).</li>
 </ul>
-<p>Le calcul est simple : un avis sur une plateforme de réservation renforce un canal à commission, un avis Google renforce un canal gratuit qui alimente votre réservation directe. À effort égal, l'avis Google vaut mécaniquement plus cher pour votre marge. C'est la même logique de coût par avis que nous détaillons dans notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût réel d'un avis Google</a>.</p>
+<p>Le calcul est simple : un avis sur une plateforme de réservation renforce un canal à commission, un avis Google renforce une fiche gérée sans frais, qui peut mener à une réservation directe. À effort égal, le second travaille pour un canal qui ne vous facture rien. C'est la même logique de coût par avis que nous détaillons dans notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût réel d'un avis Google</a>.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 La règle à retenir :</strong> laissez les plateformes de réservation collecter leurs avis toutes seules, elles le font très bien. Concentrez le seul geste humain dont vous disposez — la demande au comptoir — sur Google. Vous ne perdez rien côté plateformes, puisque leur relance est automatique, et vous alimentez le canal qui ne vous coûte aucune commission.</p>
+<p class="text-sm text-amber-900"><strong>💡 La règle à retenir :</strong> laissez les plateformes de réservation gérer leurs propres avis. Concentrez le seul geste humain dont vous disposez — la demande au comptoir — sur Google. Vous ne retirez rien aux plateformes, où les avis viennent des clients qui y ont réservé, et vous alimentez le canal qui ne vous coûte aucune commission.</p>
 </div>
-<p>Une précision utile : il n'est pas interdit de citer Google explicitement au moment de la demande. Ce qui est interdit, c'est de trier — de ne solliciter que les clients dont vous devinez qu'ils seront élogieux — ou d'offrir une contrepartie. Une plaque posée en évidence sur le comptoir est visible par tout le monde, ce qui la place naturellement du bon côté de la règle.</p>
+<p>Une précision utile : il n'est pas interdit de citer Google explicitement au moment de la demande. Ce qu'interdit <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">le règlement de Google</a>, c'est de solliciter des avis positifs de façon sélective — ne demander qu'aux clients dont vous devinez qu'ils seront élogieux —, d'offrir un avantage en échange d'un avis, ou d'obliger le client à rédiger son avis sur place et de faire pression en ce sens. Une plaque posée en évidence sur le comptoir est visible par tout le monde ; encore faut-il que la phrase qui l'accompagne soit la même pour tous, et sans insistance.</p>
 </section>
 
 <section id="emplacements" class="scroll-mt-28 mb-16">
-<h2>Les 6 emplacements dans un hôtel, classés par rendement</h2>
-<p>Dans un hôtel, le passage n'est pas réparti uniformément : il se concentre sur deux points de contact obligatoires, l'arrivée et le départ. Un emplacement ne vaut que par la combinaison de trois facteurs — le client passe devant, il a les mains libres, et il vient de vivre un moment positif.</p>
+<h2>Les 6 emplacements dans un hôtel, du plus favorable au moins favorable</h2>
+<p>Dans un hôtel, le passage n'est pas réparti uniformément : il se concentre sur deux points de contact obligatoires, l'arrivée et le départ. Un emplacement ne vaut que par la combinaison de trois facteurs — le client passe devant, il a les mains libres, et il vient de vivre un moment positif. Le classement ci-dessous applique ces trois critères ; c'est une appréciation, pas une mesure.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Emplacement</th><th class="border p-3 text-left">Moment</th><th class="border p-3 text-left">Rendement</th></tr></thead>
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Emplacement</th><th class="border p-3 text-left">Moment</th><th class="border p-3 text-left">Conditions réunies</th></tr></thead>
 <tbody>
-<tr><td class="border p-3"><strong>Comptoir de réception, côté client</strong></td><td class="border p-3">Check-out, restitution de la clé</td><td class="border p-3"><strong>Le meilleur, de loin</strong></td></tr>
-<tr><td class="border p-3"><strong>Salle du petit-déjeuner, près de la sortie</strong></td><td class="border p-3">Fin du petit-déjeuner</td><td class="border p-3">Très bon, sans mobiliser de personnel</td></tr>
-<tr><td class="border p-3"><strong>Chambre, sur le bureau ou le chevet</strong></td><td class="border p-3">Fin de séjour, soirée</td><td class="border p-3">Bon en volume, plus aléatoire</td></tr>
-<tr><td class="border p-3"><strong>Comptoir du bar</strong></td><td class="border p-3">Après consommation</td><td class="border p-3">Moyen, dépend du type d'hôtel</td></tr>
-<tr><td class="border p-3"><strong>Ascenseur, hall, bagagerie</strong></td><td class="border p-3">Attente</td><td class="border p-3">Faible, mais coût nul</td></tr>
-<tr><td class="border p-3"><strong>Vitrine ou porte d'entrée</strong></td><td class="border p-3">Passage</td><td class="border p-3">Très faible, à éviter</td></tr>
+<tr><td class="border p-3"><strong>Comptoir de réception, côté client</strong></td><td class="border p-3">Check-out, restitution de la clé</td><td class="border p-3"><strong>Les trois, et une phrase possible</strong></td></tr>
+<tr><td class="border p-3"><strong>Salle du petit-déjeuner, près de la sortie</strong></td><td class="border p-3">Fin du petit-déjeuner</td><td class="border p-3">Les trois, sans mobiliser de personnel</td></tr>
+<tr><td class="border p-3"><strong>Chambre, sur le bureau ou le chevet</strong></td><td class="border p-3">Fin de séjour, soirée</td><td class="border p-3">Client disponible, mais aucune demande orale</td></tr>
+<tr><td class="border p-3"><strong>Comptoir du bar</strong></td><td class="border p-3">Après consommation</td><td class="border p-3">Variable selon le type d'hôtel</td></tr>
+<tr><td class="border p-3"><strong>Ascenseur, hall, bagagerie</strong></td><td class="border p-3">Attente</td><td class="border p-3">Passage, mais rien encore de vécu à ce moment</td></tr>
+<tr><td class="border p-3"><strong>Vitrine ou porte d'entrée</strong></td><td class="border p-3">Passage</td><td class="border p-3">Aucune : à éviter</td></tr>
 </tbody>
 </table>
 </div>
-<h3>Le comptoir de réception : la seule position qui compte vraiment</h3>
-<p>La plaque doit être orientée vers le client, pas vers le réceptionniste, et posée du côté où l'on rend la clé. Le geste que vous cherchez à provoquer est un enchaînement : le client pose sa clé, le réceptionniste dit une phrase, la main du client est déjà au-dessus du comptoir. Si la plaque est à trente centimètres sur la gauche, l'enchaînement se casse et le taux de dépôt s'effondre.</p>
-<p>Attention à un piège technique fréquent en hôtellerie : les comptoirs de réception modernes intègrent souvent une structure métallique, un plateau en inox ou un bandeau d'aluminium. Une plaque NFC collée directement sur du métal ne se lit plus, ou très mal — nous expliquons pourquoi dans notre <a href="/blog/materiaux-plaque-nfc-avis-google">comparatif des matériaux de plaque NFC</a>. Testez toujours à l'endroit exact avant de coller.</p>
-<h3>Le petit-déjeuner : l'emplacement le plus sous-estimé</h3>
-<p>Un client qui termine son petit-déjeuner est assis, détendu, son téléphone est sur la table et il vient de vivre un moment agréable. C'est le seul emplacement d'un hôtel où la collecte fonctionne sans qu'aucun membre du personnel n'ait à demander quoi que ce soit. Une plaque sur le meuble du buffet, près de la desserte à plateaux, capte ce flux en continu.</p>
+<h3>Le comptoir de réception : la position à équiper en premier</h3>
+<p>La plaque doit être orientée vers le client, pas vers le réceptionniste, et posée du côté où l'on rend la clé. Le geste que vous cherchez à provoquer est un enchaînement : le client pose sa clé, le réceptionniste dit une phrase, la main du client est déjà au-dessus du comptoir. Si la plaque est à trente centimètres sur la gauche, l'enchaînement se casse.</p>
+<p>Attention à un piège technique fréquent en hôtellerie : les comptoirs de réception modernes intègrent souvent une structure métallique, un plateau en inox ou un bandeau d'aluminium. Une plaque NFC collée directement sur du métal ne se lit plus, ou très mal : le métal proche d'une antenne NFC y fait naître des courants de Foucault qui absorbent une partie de l'énergie, raison pour laquelle <a href="https://www.nxp.com/docs/en/application-note/AN11755.pdf" target="_blank" rel="noopener noreferrer">le guide de conception d'antenne de NXP</a> impose un blindage en ferrite dans un environnement métallique. Nous détaillons les conséquences pratiques dans notre <a href="/blog/materiaux-plaque-nfc-avis-google">comparatif des matériaux de plaque NFC</a>. Testez toujours à l'endroit exact avant de coller.</p>
+<h3>Le petit-déjeuner : un emplacement à ne pas oublier</h3>
+<p>Un client qui termine son petit-déjeuner est assis, détendu, son téléphone est sur la table et il vient de vivre un moment agréable. La plaque peut y être vue sans qu'aucun membre du personnel ait à demander quoi que ce soit. Posée sur le meuble du buffet, près de la desserte à plateaux, elle reste visible pendant tout le service.</p>
 <p>Pour le raisonnement complet sur le choix d'un point de pose, notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer une plaque d'avis Google</a> détaille les sept configurations types.</p>
 </section>
 
@@ -1679,19 +1648,19 @@ export const articles: Record<string, {
 <p>En hôtellerie plus qu'ailleurs, le moment de la demande fait toute la différence entre un avis 5 étoiles spontané et un client agacé.</p>
 <h3>Les 5 moments favorables</h3>
 <ul>
-<li><strong>Le check-out d'un séjour sans incident</strong>, quand le client dit spontanément que tout s'est bien passé. C'est le moment principal, celui qui produira la majorité de vos avis.</li>
-<li><strong>Un surclassement ou une faveur accordée</strong> : chambre avec vue, départ tardif offert, petit-déjeuner ajouté. Le client est en position de réciprocité naturelle, sans qu'aucune contrepartie n'ait été échangée contre un avis.</li>
-<li><strong>La résolution rapide d'un problème</strong> : une chambre changée en dix minutes, une climatisation réparée dans la soirée. Un client dont on a réglé le souci est souvent plus enthousiaste qu'un client dont le séjour a été plat.</li>
+<li><strong>Le check-out d'un séjour sans incident</strong>, quand le client dit spontanément que tout s'est bien passé. C'est le moment principal.</li>
+<li><strong>Un surclassement ou une faveur accordée</strong> : chambre avec vue, départ tardif offert, petit-déjeuner ajouté. Le client a une raison concrète d'être satisfait. La faveur ne doit jamais être présentée comme liée à l'avis : ce serait un avantage offert en échange d'un avis, ce que le règlement de Google interdit.</li>
+<li><strong>La résolution rapide d'un problème</strong> : une chambre changée en dix minutes, une climatisation réparée dans la soirée. Un client dont on a réglé le souci peut se montrer plus enthousiaste qu'un client dont le séjour a été plat.</li>
 <li><strong>La fin du petit-déjeuner</strong>, en passif, via la plaque posée près de la sortie.</li>
 <li><strong>Le retour d'un client fidèle</strong>, à qui l'on peut légitimement dire qu'on serait heureux de lire son retour après plusieurs séjours.</li>
 </ul>
 <h3>Les 3 moments où l'on ne demande jamais</h3>
 <ul>
-<li><strong>Après une réclamation non résolue</strong> ou un geste commercial refusé. Vous ne récolterez pas un avis neutre, vous récolterez un 1 étoile documenté.</li>
+<li><strong>Pendant une réclamation en cours</strong> : tant que le problème n'est pas traité, la priorité est de le régler, pas de parler d'avis. La plaque reste visible, et le client reste libre de s'en servir.</li>
 <li><strong>Lors d'un départ précipité</strong> : client en retard sur son train, groupe en train de charger un car, famille avec enfants en pleine agitation. La demande sera perçue comme une contrainte de plus.</li>
 <li><strong>Au check-in.</strong> Le client n'a rien vécu encore, et lui demander un avis à l'arrivée envoie exactement le mauvais signal sur la sincérité de la démarche.</li>
 </ul>
-<p>Ces trois abstentions ne constituent pas du filtrage d'avis : vous ne triez pas les clients selon leur satisfaction supposée, vous vous abstenez dans des contextes où la demande serait déplacée. La plaque, elle, reste visible pour tout le monde en permanence.</p>
+<p>Ces abstentions portent sur le moment, jamais sur l'opinion supposée du client : le règlement de Google interdit de solliciter des avis positifs de façon sélective. La plaque, elle, reste visible pour tout le monde en permanence, et un client mécontent reste libre de l'utiliser.</p>
 </section>
 
 <section id="scripts" class="scroll-mt-28 mb-16">
@@ -1701,51 +1670,52 @@ export const articles: Record<string, {
 <p>« J'espère que le séjour vous a plu. Si vous avez dix secondes, vous pouvez poser votre téléphone ici, ça ouvre directement notre page d'avis Google. Ça nous aide beaucoup. »</p>
 <p>Trois éléments à ne pas retirer : la formule qui laisse une porte de sortie, la durée annoncée qui doit être ridiculement courte, et le geste désigné du doigt. Le client ne doit pas avoir à deviner ce qu'on attend de lui.</p>
 <h3>Après un surclassement ou un geste commercial</h3>
-<p>« Content que la chambre vous ait convenu. Si vous voulez le dire en deux lignes sur Google, c'est ici, ça prend dix secondes. »</p>
-<p>Le lien entre la faveur et l'avis n'est jamais formulé comme une condition. On mentionne la satisfaction, pas la contrepartie.</p>
+<p>« Content que la chambre vous ait convenu. Si vous avez un instant, votre avis sur Google nous est utile, quel qu'il soit : la plaque est ici. »</p>
+<p>Le lien entre la faveur et l'avis n'est jamais formulé : la faveur n'est pas une contrepartie, et la demande reste ouverte à tous les avis, quels qu'ils soient.</p>
 <h3>Après un problème réglé</h3>
-<p>« Encore désolé pour le désagrément d'hier soir, et merci de votre patience. Si vous trouvez qu'on a bien réagi, un mot sur Google nous ferait vraiment plaisir. »</p>
+<p>« Encore désolé pour le désagrément d'hier soir, et merci de votre patience. Si vous avez un instant pour raconter votre séjour sur Google, la plaque est ici. »</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> formez vos réceptionnistes une seule fois, mais imposez la phrase à tous les check-out sans exception, sauf dans les trois cas d'abstention. Le facteur qui explique l'écart entre un hôtel qui collecte 40 avis par mois et un hôtel qui en collecte 6 n'est presque jamais la satisfaction client : c'est la régularité de la demande.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> formez vos réceptionnistes une seule fois, et faites de la phrase un réflexe à chaque check-out, hors cas d'abstention. Fixez-leur une régularité de demande, jamais un nombre d'avis à obtenir : le règlement de Google interdit de demander au personnel de solliciter un certain nombre d'avis. Et si votre fiche reçoit peu d'avis, vérifiez d'abord la régularité de la demande avant de mettre en cause la satisfaction de vos clients.</p>
 </div>
 </section>
 
 <section id="chambre" class="scroll-mt-28 mb-16">
 <h2>La plaque en chambre : intérêt réel et limites</h2>
-<p>Beaucoup d'hôteliers pensent d'abord à la chambre, puisqu'il y en a trente ou soixante. L'intuition est bonne en volume, moins bonne en rendement.</p>
-<p>Une plaque en chambre est lue par un client seul, sans personne pour formuler la demande, souvent en début de séjour au moment où il découvre la pièce — c'est-à-dire trop tôt. Le taux de dépôt y est nettement inférieur à celui du comptoir. Elle présente en revanche trois avantages réels :</p>
+<p>On pense souvent d'abord à la chambre, puisqu'il y en a des dizaines. L'intuition se comprend : c'est là que le client passe le plus de temps. Mais ce n'est pas l'endroit où la demande est la plus facile à accompagner.</p>
+<p>Une plaque en chambre est lue par un client seul, sans personne pour formuler la demande, parfois dès son arrivée, au moment où il découvre la pièce — c'est-à-dire trop tôt. Elle présente en revanche trois avantages réels :</p>
 <ul>
-<li>Elle capte les clients qui ne repassent pas par la réception au départ, ce qui est fréquent avec les dépôts de clé automatiques et les check-out express.</li>
+<li>Elle capte les clients qui ne repassent pas par la réception au départ, ce qui arrive avec les dépôts de clé automatiques et les check-out express.</li>
 <li>Elle fonctionne la nuit et le week-end, y compris dans les établissements sans réception permanente.</li>
 <li>Elle atteint le second occupant de la chambre, celui qui n'est jamais au comptoir.</li>
 </ul>
 <p>La bonne configuration consiste donc à ne pas équiper toutes les chambres, mais à combiner : une plaque au comptoir de réception, une en sortie de petit-déjeuner, et deux ou trois en chambre à titre de test avant de généraliser. Un <a href="/product/business">pack de 2 plaques</a> couvre le comptoir et le petit-déjeuner ; le <a href="/product/pro">pack de 5 plaques</a> permet d'y ajouter le bar et deux chambres pilotes.</p>
-<p>Un point de vigilance pratique : en chambre, le support doit résister au ménage quotidien et aux produits d'entretien, et l'adhésif doit tenir sur un chevet stratifié. C'est le cas d'usage typique où un autocollant fin ne passe pas l'année.</p>
+<p>Un point de vigilance pratique : en chambre, le support doit résister au ménage quotidien et aux produits d'entretien, et l'adhésif doit tenir sur un chevet stratifié. Pour une plaque en acrylique, prévenez l'équipe de ménage : <a href="https://www.plexiglas.de/en/service/processing/cleaning-plexiglas" target="_blank" rel="noopener noreferrer">les consignes d'entretien de Röhm, fabricant du PLEXIGLAS</a>, recommandent de l'eau avec un chiffon doux et déconseillent les produits contenant de l'éthanol ou d'autres alcools, l'isopropanol faisant exception.</p>
 </section>
 
 <section id="calcul" class="scroll-mt-28 mb-16">
-<h2>Trois exemples de calcul</h2>
-<p>Le raisonnement est toujours le même : nombre de départs, part des clients réellement sollicités, taux de dépôt observé sur une demande orale accompagnée d'un support sans friction.</p>
+<h2>Faire le calcul avec vos propres chiffres</h2>
+<p>Le raisonnement tient en trois termes : le nombre de départs, la part des clients réellement sollicités, et la part de ceux qui publient un avis. Les deux premiers se comptent. Le troisième ne se devine pas : il se mesure sur votre fiche, après quelques semaines de demande régulière.</p>
+<p>Exemple fictif : un hôtel de 30 chambres occupées à 70 %, avec des séjours de deux nuits, enregistre environ 315 départs par mois (30 × 0,7 × 30 nuits ÷ 2). Hypothèse de calcul : si deux clients sur trois étaient sollicités au check-out et qu'un sollicité sur dix publiait un avis, cela ferait environ 21 avis par mois. Changez une seule hypothèse — un sollicité sur vingt — et le résultat tombe à une dizaine. C'est pour cela qu'aucun chiffre générique ne remplace votre propre mesure.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Établissement</th><th class="border p-3 text-left">Départs par mois</th><th class="border p-3 text-left">Sollicités</th><th class="border p-3 text-left">Avis estimés par mois</th></tr></thead>
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Profil d'établissement</th><th class="border p-3 text-left">Ce qui aide la demande</th><th class="border p-3 text-left">Ce qui la freine</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Hôtel 3 étoiles, 30 chambres, 70 % d'occupation</td><td class="border p-3">Environ 320</td><td class="border p-3">65 %</td><td class="border p-3"><strong>25 à 40</strong></td></tr>
-<tr><td class="border p-3">Hôtel de chaîne, 80 chambres, clientèle affaires</td><td class="border p-3">Environ 900</td><td class="border p-3">45 %</td><td class="border p-3"><strong>50 à 80</strong></td></tr>
-<tr><td class="border p-3">Chambre d'hôtes, 5 chambres</td><td class="border p-3">Environ 45</td><td class="border p-3">90 %</td><td class="border p-3"><strong>8 à 14</strong></td></tr>
+<tr><td class="border p-3">Hôtel de ville, clientèle mixte</td><td class="border p-3">Clé à rendre à la réception au départ</td><td class="border p-3">Départs groupés le matin, file au comptoir</td></tr>
+<tr><td class="border p-3">Hôtel de chaîne, clientèle affaires</td><td class="border p-3">Nombre de départs</td><td class="border p-3">Séjours courts, départs matinaux et pressés, check-out express</td></tr>
+<tr><td class="border p-3">Chambre d'hôtes</td><td class="border p-3">Relation directe avec les hôtes, départ sans file</td><td class="border p-3">Petit nombre de départs</td></tr>
 </tbody>
 </table>
 </div>
-<p>Trois lectures de ce tableau. D'abord, la clientèle affaires dépose moins : le séjour est court, le départ matinal et pressé, et le voyageur n'a pas d'attachement particulier à l'établissement. On compense par le volume. Ensuite, la chambre d'hôtes affiche le meilleur taux et le plus petit volume — mais dans un village, quinze avis supplémentaires peuvent suffire à prendre la première place locale.</p>
-<p>Enfin, le rythme mensuel compte plus que le total. Une fiche qui reçoit régulièrement des avis récents est mieux traitée qu'une fiche à gros volume figée depuis deux ans. Pour savoir combien d'avis viser précisément face à vos concurrents, notre méthode de calcul du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne la formule.</p>
+<p>Dans une chambre d'hôtes de village, le nombre de départs est faible, mais l'écart à combler avec les établissements voisins l'est parfois aussi : c'est ce qu'il faut chiffrer avant de décider jusqu'où équiper l'établissement.</p>
+<p>Enfin, regardez le rythme autant que le total : chaque avis est daté, et une fiche dont les avis s'arrêtent il y a deux ans ne raconte pas le même hôtel qu'une fiche qui en reçoit chaque mois. Pour savoir combien d'avis viser précisément face à vos concurrents, notre méthode de calcul du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> donne la formule.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>💡 Ordre de grandeur :</strong> pour un hôtel de 30 chambres à 30 avis par mois, une plaque à paiement unique amortie sur trois ans revient à quelques centimes par avis collecté. La même collecte confiée à une plateforme facturée mensuellement coûte plusieurs centaines d'euros par an, pour un résultat identique côté Google.</p>
+<p class="text-sm text-amber-900"><strong>💡 Hypothèse de calcul :</strong> si une plaque à 29,90 € HT accompagnait dix avis par mois pendant trois ans, chaque avis reviendrait à moins de dix centimes. Une solution facturée par abonnement mensuel, elle, continue de coûter chaque mois, quel que soit le nombre d'avis obtenus.</p>
 </div>
 </section>
 
 <section id="avis-negatifs" class="scroll-mt-28 mb-16">
 <h2>Les 4 avis négatifs types de l'hôtellerie, et quoi répondre</h2>
-<p>Collecter davantage d'avis ne fait pas disparaître les négatifs, cela les dilue. Reste à répondre, publiquement, car cette réponse est lue par les futurs clients bien plus que par l'auteur de l'avis.</p>
+<p>Collecter davantage d'avis ne fait pas disparaître les négatifs, cela les dilue. Reste à répondre, publiquement, car cette réponse est publiée sous l'avis, à la vue de tous les futurs clients.</p>
 <h3>« Chambre bruyante, impossible de dormir »</h3>
 <p>Ne contestez jamais la perception. Reconnaissez, situez le contexte factuellement, indiquez l'action. « Nous sommes désolés que le bruit ait gâché votre nuit. Nos chambres côté rue sont plus exposées le week-end ; nous pouvons attribuer une chambre sur cour à la réservation, il suffit de le préciser. Nous avons par ailleurs engagé le remplacement des menuiseries de la façade. »</p>
 <h3>« Chambre pas assez propre »</h3>
@@ -1753,44 +1723,44 @@ export const articles: Record<string, {
 <h3>« Petit-déjeuner cher pour ce que c'est »</h3>
 <p>Assumez le positionnement sans justification défensive. Décrivez ce que contient la prestation, mentionnez l'alternative si elle existe, et n'entrez pas dans une comparaison de prix avec le café d'en face.</p>
 <h3>« Parking introuvable »</h3>
-<p>Un avis à faible enjeu émotionnel mais à forte valeur informative : votre réponse servira de renseignement à des dizaines de futurs clients. Donnez l'information précise, elle est plus utile que l'excuse.</p>
+<p>Un avis à faible enjeu émotionnel mais à forte valeur informative : votre réponse servira de renseignement aux futurs clients. Donnez l'information précise, elle est plus utile que l'excuse.</p>
 <p>La méthode complète, avec les modèles de réponse et la procédure de signalement des avis illicites, est détaillée dans notre guide sur <a href="/blog/repondre-avis-negatifs-google">comment répondre aux avis négatifs Google</a>.</p>
 </section>
 
 <section id="erreurs" class="scroll-mt-28 mb-16">
 <h2>Les 6 erreurs qui coûtent des avis en hôtellerie</h2>
 <ul>
-<li><strong>Tout miser sur les plateformes de réservation.</strong> Vous améliorez un classement dont chaque conversion vous est facturée, pendant que votre canal gratuit stagne.</li>
+<li><strong>Tout miser sur les plateformes de réservation.</strong> Vous nourrissez une note sur un canal où chaque réservation vous est facturée, pendant que votre fiche Google, gérée sans frais, stagne.</li>
 <li><strong>Demander au check-in.</strong> Le client n'a rien à raconter et la démarche paraît mécanique.</li>
 <li><strong>Placer la plaque face au réceptionniste.</strong> Elle doit être orientée client, du côté de la restitution de la clé.</li>
 <li><strong>Coller sur un plateau métallique</strong> sans avoir testé la lecture à l'endroit exact, avec au moins deux téléphones différents.</li>
-<li><strong>Ne pas répondre aux avis.</strong> En hôtellerie, l'absence de réponse est lue comme du désintérêt par le voyageur qui compare deux établissements.</li>
-<li><strong>Offrir une contrepartie</strong> — une boisson, une remise sur le prochain séjour. C'est interdit par Google et cela expose l'ensemble de votre historique d'avis à une suppression.</li>
+<li><strong>Ne pas répondre aux avis.</strong> Google rappelle que répondre montre que vous accordez de l'importance aux commentaires de vos clients ; se taire envoie le message inverse au voyageur qui compare deux établissements.</li>
+<li><strong>Offrir une contrepartie</strong> — une boisson, une remise sur le prochain séjour. C'est interdit par le règlement de Google : les avis concernés sont supprimés, et Google peut <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">restreindre la fiche</a> — plus de nouveaux avis pendant une période donnée, avis existants dépubliés, avertissement affiché aux internautes.</li>
 </ul>
-<p>Une septième, plus insidieuse : négliger le reste de la fiche. Un hôtel dont les horaires de réception, les équipements et les photos ne sont pas à jour convertit mal, même avec une bonne note. Notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a> couvre l'ensemble des champs à remplir.</p>
+<p>Une septième, plus insidieuse : négliger le reste de la fiche. Un hôtel dont les horaires de réception, les équipements et les photos ne sont pas à jour renseigne mal le voyageur, même avec une bonne note. Notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a> couvre l'ensemble des champs à remplir.</p>
 </section>
 
 <section id="faq-hotel" class="scroll-mt-28 mb-16">
 <h2>Questions fréquentes</h2>
 <h3>Un hôtel peut-il demander un avis Google alors qu'il collecte déjà des avis Booking ?</h3>
-<p>Oui, sans aucune difficulté. Les deux systèmes sont indépendants et aucune plateforme n'interdit à un établissement de solliciter un avis ailleurs. La seule règle à respecter est celle de Google : pas de contrepartie, pas de tri des clients selon leur satisfaction supposée. En pratique, laissez les plateformes de réservation envoyer leurs relances automatiques après le séjour et réservez le geste humain du comptoir à Google, qui est le seul canal sans commission.</p>
+<p>Oui. Les deux systèmes sont indépendants : les avis Booking.com sont réservés aux clients qui ont réservé par la plateforme, tandis que votre fiche Google peut recevoir l'avis de n'importe quel client. Côté Google, les règles sont claires : pas d'avantage en échange d'un avis, pas de sollicitation sélective des clients satisfaits, pas de pression pour rédiger sur place. En pratique, laissez les plateformes de réservation gérer leurs propres avis et réservez le geste humain du comptoir à Google, dont la fiche se gère sans frais.</p>
 <h3>Où placer la plaque NFC dans un hôtel ?</h3>
-<p>Le comptoir de réception, orienté vers le client et du côté où l'on rend la clé, produit à lui seul la majorité des avis. Le deuxième emplacement le plus rentable est la sortie de la salle du petit-déjeuner, qui fonctionne sans mobiliser de personnel. Les chambres arrivent ensuite, avec un rendement plus faible mais un volume important, particulièrement utiles dans les établissements pratiquant le check-out express ou le dépôt de clé automatique.</p>
+<p>D'abord sur le comptoir de réception, orientée vers le client et du côté où l'on rend la clé : c'est là qu'une phrase peut accompagner la plaque au moment du check-out. Ensuite à la sortie de la salle du petit-déjeuner, un emplacement qui ne mobilise pas de personnel. Les chambres viennent après : aucune demande orale n'y accompagne la plaque, mais elles sont utiles dans les établissements pratiquant le check-out express ou le dépôt de clé automatique.</p>
 <h3>Combien d'avis Google un hôtel peut-il espérer par mois ?</h3>
-<p>Cela dépend du nombre de départs et de la discipline de la demande. Pour un établissement de 30 chambres à 70 % d'occupation, soit environ 320 départs mensuels, une demande systématique au check-out place l'ordre de grandeur entre 25 et 40 avis par mois. Une clientèle affaires dépose moins, une chambre d'hôtes beaucoup plus en proportion. Le facteur déterminant reste la régularité : un hôtel qui demande à chaque départ collecte plusieurs fois plus qu'un hôtel qui demande quand il y pense.</p>
+<p>Personne ne peut vous le garantir : cela dépend du nombre de départs, de la part des clients sollicités et de la part de ceux qui publient, que seule votre fiche vous dira. Hypothèse de calcul : un hôtel de 30 chambres occupées à 70 %, avec des séjours de deux nuits, compte environ 315 départs par mois ; si deux clients sur trois étaient sollicités et qu'un sur dix publiait, cela ferait une vingtaine d'avis. Ce qui dépend de vous, c'est la régularité de la demande : un client jamais sollicité ne laisse un avis que s'il y pense tout seul.</p>
 <h3>Faut-il équiper toutes les chambres d'une plaque NFC ?</h3>
-<p>Ce n'est pas le meilleur investissement de départ. Le rendement par plaque est bien plus élevé au comptoir et au petit-déjeuner, parce qu'une demande orale accompagne le support. La configuration efficace consiste à équiper d'abord la réception et la salle du petit-déjeuner, puis à tester deux ou trois chambres pendant un mois pour mesurer le dépôt réel avant d'envisager un déploiement complet.</p>
+<p>Ce n'est pas par là qu'il faut commencer. Au comptoir, une phrase peut accompagner la plaque ; au petit-déjeuner, le client est assis et disponible ; en chambre, rien ne remplace la demande orale. Mieux vaut équiper d'abord la réception et la salle du petit-déjeuner, puis tester deux ou trois chambres pendant un mois pour mesurer ce qu'elles apportent réellement avant d'envisager un déploiement complet.</p>
 <h3>Une plaque NFC fonctionne-t-elle sur un comptoir de réception en métal ?</h3>
-<p>Pas directement. Une surface métallique perturbe le champ magnétique émis par le téléphone : la portée s'effondre et la lecture devient aléatoire. Deux solutions simples : décaler la plaque de quelques centimètres sur une partie non métallique du comptoir, ou la poser librement sur un socle, ce qui permet en plus de la pousser vers le client. Dans tous les cas, testez avec deux téléphones différents à l'endroit exact avant de fixer quoi que ce soit.</p>
+<p>Pas directement. Une surface métallique perturbe le champ magnétique émis par le téléphone : la portée s'effondre et la lecture devient aléatoire. Deux solutions simples : décaler la plaque sur une partie non métallique du comptoir, ou la poser librement sur un socle, ce qui permet en plus de la pousser vers le client. Dans tous les cas, testez avec deux téléphones différents à l'endroit exact avant de fixer quoi que ce soit.</p>
 <h3>Les clients étrangers peuvent-ils laisser un avis avec une plaque NFC ?</h3>
-<p>Oui. Le NFC est un standard mondial, pris en charge par l'immense majorité des smartphones vendus depuis plusieurs années, iPhone comme Android, sans réglage particulier ni application à installer. La page d'avis Google qui s'ouvre s'affiche dans la langue du compte Google du client. Pour un hôtel accueillant une clientèle internationale, c'est un avantage net sur toute solution passant par un e-mail ou un SMS, qui suppose de disposer d'un contact valide à l'étranger.</p>
+<p>Oui, si leur téléphone lit le NFC. Apple indique que les iPhone XS et modèles ultérieurs lisent les puces NFC en arrière-plan, sans application (<a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading" target="_blank" rel="noopener noreferrer">documentation Apple</a>) ; sur Android, il faut un téléphone équipé du NFC, avec la fonction activée. Pour les autres, le QR code de secours imprimé sur la plaque prend le relais. Le client rédige ensuite son avis dans la langue de son choix. Pour un hôtel accueillant une clientèle internationale, c'est un avantage sur toute solution passant par un e-mail ou un SMS, qui suppose de disposer d'un contact valide à l'étranger.</p>
 <h3>Que faire des avis Google déjà anciens et négatifs ?</h3>
-<p>Google ne supprime que les avis qui enfreignent ses règles, pas ceux qui déplaisent. Deux actions restent utiles. Répondre publiquement, même tardivement, parce que la réponse est lue par les futurs clients. Et collecter suffisamment d'avis récents pour que les anciens descendent dans la liste et pèsent de moins en moins dans la moyenne — c'est l'effet de dilution, et il est la seule réponse durable à un historique dégradé.</p>
+<p>Google ne supprime que les avis qui enfreignent ses règles : <a href="https://support.google.com/business/answer/4596773?hl=fr" target="_blank" rel="noopener noreferrer">selon son aide</a>, tout avis peut être signalé, mais seuls ceux qui ne respectent pas ses règles peuvent être supprimés. Deux actions restent utiles. Répondre publiquement, même tardivement, parce que la réponse est publiée sous l'avis, à la vue des futurs clients. Et continuer à recueillir des avis récents : plus le total grandit, moins chaque ancien avis pèse dans l'ensemble. C'est l'effet de dilution, et c'est la seule réponse durable à un historique dégradé.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : le check-out est la fenêtre la plus fiable de votre établissement</h2>
-<p>Un hôtel dispose d'un avantage que presque aucun commerce local n'a : un moment de contact garanti avec chacun de ses clients, à une date connue, dans un contexte calme. Le check-out est cette fenêtre. Elle dure quinze secondes et, dans la plupart des établissements, elle n'est pas utilisée.</p>
+<p>Un hôtel dispose d'un avantage que peu de commerces locaux ont : un moment de contact prévu avec ses clients, à une date connue. Le check-out est cette fenêtre. Elle ne dure que quelques secondes, et elle ne sert à rien si personne n'en fait une habitude.</p>
 <p>La mise en place tient en trois décisions. Une plaque orientée client sur le comptoir de réception, une phrase imposée à chaque départ sauf dans les trois cas d'abstention, et une réponse systématique aux avis publiés. Le reste — le petit-déjeuner, les chambres pilotes, le bar — s'ajoute ensuite, une fois la base en place.</p>
 <p>Les plaques Swiipx sont livrées déjà programmées avec le lien d'avis de votre établissement : aucune application à installer, aucun code d'activation, aucun abonnement. Le <a href="/product/starter">pack Starter</a> équipe le comptoir de réception, le <a href="/product/business">pack Business</a> couvre réception et petit-déjeuner, et le <a href="/product/pro">pack Pro</a> permet d'y ajouter le bar et des chambres pilotes.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
@@ -1803,9 +1773,9 @@ export const articles: Record<string, {
     title: 'Plaque NFC avis Google : acrylique, métal, bois ou PVC ? Le comparatif des matériaux',
     category: 'Comparatif',
     date: '26 août 2026',
-    readTime: '12 min',
+    readTime: '13 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Le métal bloque le NFC, le PVC jaunit, le bois se voile : le matériau décide si la plaque se lit encore dans trois ans. Comparatif des 5 supports, la vérité sur les puces NTAG213/215/216, l\'adhésif et le coût réel par mois.',
+    excerpt: 'Le métal perturbe le NFC, beaucoup de plastiques jaunissent aux UV, le bois travaille avec l\'humidité : le matériau décide si la plaque se lit et reste présentable. Comparatif des 5 supports, les puces NTAG213/215/216, l\'adhésif et le vrai poste de coût.',
     tocSections: [
       { id: 'pourquoi-materiau', label: 'Pourquoi le matériau décide' },
       { id: 'metal-probleme', label: 'Le piège du métal' },
@@ -1813,7 +1783,7 @@ export const articles: Record<string, {
       { id: 'acrylique', label: "L'acrylique et l'épaisseur" },
       { id: 'puce-nfc', label: 'NTAG213, 215 ou 216 ?' },
       { id: 'fixation', label: "L'adhésif et la fixation" },
-      { id: 'duree-de-vie', label: 'Durée de vie et coût par mois' },
+      { id: 'duree-de-vie', label: 'Ce qui use une plaque' },
       { id: 'choisir-selon-lieu', label: 'Choisir selon votre lieu' },
       { id: 'erreurs', label: "Les 6 erreurs d'achat" },
       { id: 'faq-materiaux', label: 'FAQ' },
@@ -1822,25 +1792,25 @@ export const articles: Record<string, {
     content: `
 <section id="pourquoi-materiau" class="scroll-mt-28 mb-16">
 <h2>Pourquoi le matériau d'une plaque NFC n'est pas un détail esthétique</h2>
-<p>Quand on compare deux plaques NFC pour collecter des avis Google, on regarde le prix, la couleur et le message imprimé. Le matériau, lui, passe pour un détail de finition. C'est l'inverse : <strong>le matériau conditionne trois choses qui décident du résultat</strong> — si la puce se lit ou non, combien de temps l'objet reste présentable sur un comptoir, et si l'adhésif tient au-delà de quelques semaines.</p>
+<p>Quand on compare deux plaques NFC pour collecter des avis Google, on regarde le prix, la couleur et le message imprimé. Le matériau, lui, passe pour un détail de finition. C'est l'inverse : <strong>le matériau conditionne trois choses qui décident du résultat</strong> — si la puce se lit ou non, combien de temps l'objet reste présentable sur un comptoir, et si l'adhésif tient dans la durée.</p>
 <p>Une plaque NFC est un objet passif : elle n'a ni batterie, ni écran, ni alerte. Personne dans votre équipe ne saura qu'elle a cessé de fonctionner. Un support qui se voile, un vernis qui jaunit, une puce collée sur une surface métallique qui ne répond plus : dans les trois cas, le résultat est identique et silencieux. Les avis s'arrêtent d'arriver et personne ne fait le lien.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une plaque d'avis vit sur un comptoir, c'est-à-dire l'endroit le plus maltraité d'un commerce — projections, produit désinfectant, sacs posés dessus, soleil direct en vitrine. Un support choisi pour la photo du site marchand ne survit pas à cet usage. Le bon critère d'achat n'est pas « est-ce que c'est beau sur la fiche produit », c'est « à quoi est-ce que ça ressemble dans dix-huit mois ».</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une plaque d'avis vit sur un comptoir, c'est-à-dire l'endroit le plus maltraité d'un commerce — projections, produit désinfectant, sacs posés dessus, soleil direct en vitrine. Un support choisi pour la photo du site marchand n'est pas forcément fait pour cet usage. Le bon critère d'achat n'est pas « est-ce que c'est beau sur la fiche produit », c'est « à quoi est-ce que ça ressemble dans dix-huit mois ».</p>
 </div>
-<p>Ce guide compare les cinq matériaux réellement proposés sur le marché français — acrylique, métal, bois, PVC et autocollant époxy — sur les seuls critères qui comptent : compatibilité NFC, tenue dans le temps, lisibilité et coût réel rapporté à la durée de vie.</p>
+<p>Ce guide compare les cinq matériaux réellement proposés sur le marché français — acrylique, métal, bois, PVC et autocollant époxy — sur les critères qui comptent à l'usage : compatibilité NFC, tenue dans le temps, entretien et coût.</p>
 </section>
 
 <section id="metal-probleme" class="scroll-mt-28 mb-16">
-<h2>Le métal : le piège technique que personne n'explique</h2>
-<p>C'est le point le plus important de cet article, et c'est celui qu'aucune fiche produit ne mentionne. <strong>Le NFC et le métal ne s'entendent pas.</strong></p>
-<p>Une puce NFC ne contient pas de batterie. Elle est alimentée par le champ magnétique émis par le téléphone, à 13,56 MHz, capté par une antenne en spirale de cuivre ou d'aluminium imprimée autour de la puce. Ce couplage inductif est ce qui permet d'ouvrir une page en approchant le smartphone à moins de quatre centimètres.</p>
-<p>Placez cette antenne contre une plaque métallique et le champ magnétique induit des courants de Foucault dans le métal. Ces courants absorbent l'énergie destinée à la puce et décalent la fréquence d'accord de l'antenne. Le résultat pratique : <strong>la portée s'effondre, la lecture devient aléatoire, ou la plaque ne répond plus du tout</strong>.</p>
+<h2>Le métal : le piège technique à connaître</h2>
+<p>C'est le point le plus important de cet article. <strong>Le NFC et le métal ne s'entendent pas.</strong></p>
+<p>Une puce NFC ne contient pas de batterie. Elle est alimentée par le champ magnétique émis par le téléphone, à 13,56 MHz, capté par une antenne en spirale de cuivre ou d'aluminium imprimée autour de la puce. Ce couplage inductif est ce qui permet d'ouvrir une page en approchant le smartphone tout près de la plaque : le <a href="https://nfc-forum.org/learn/nfc-technology/" target="_blank" rel="noopener noreferrer">NFC Forum</a> indique une portée allant généralement jusqu'à 2 cm.</p>
+<p>Placez cette antenne contre une plaque métallique et le champ magnétique alternatif induit des courants de Foucault dans le métal. Comme l'explique NXP, le fabricant des puces NTAG, dans une <a href="https://www.nxp.com/docs/en/application-note/AN11755.pdf" target="_blank" rel="noopener noreferrer">note d'application consacrée aux antennes NFC</a>, ces courants créent un champ opposé, absorbent de l'énergie et désaccordent l'antenne. Le résultat pratique : <strong>la portée diminue, la lecture devient aléatoire, et la plaque peut ne plus répondre du tout</strong>.</p>
 <h3>Ce qui rend une plaque métallique utilisable</h3>
 <p>Le problème a une solution industrielle : une couche de ferrite intercalée entre l'antenne et le métal, qui canalise le champ et empêche les courants de Foucault. C'est ce qu'on appelle un tag on-metal. Trois conséquences pour l'acheteur :</p>
 <ul>
 <li>La plaque coûte plus cher, la couche de ferrite étant un composant supplémentaire.</li>
-<li>La portée reste inférieure à celle d'un support non métallique, même correctement blindé : il faut souvent poser le téléphone au contact, pas l'approcher.</li>
-<li>Beaucoup de plaques vendues comme métalliques sont en réalité des plaques plastiques avec une finition aluminium ou un habillage métallisé, ce qui règle le problème technique sans le dire — ou le crée, si l'habillage est un vrai film d'aluminium.</li>
+<li>Le blindage doit être bien conçu : NXP recommande que la feuille de ferrite couvre au moins toute la surface de l'antenne, et précise que la ferrite modifie elle-même l'accord de l'antenne, qui doit donc être réglé avec la ferrite en place. Dans la simulation publiée par NXP, la distance de fonctionnement retrouve alors son niveau à l'air libre.</li>
+<li>Une plaque d'aspect métallique peut être une plaque plastique avec une finition aluminium ou un habillage métallisé. Tout dépend alors de la nature réelle de cet habillage : un vrai film métallique recrée le problème, d'où l'intérêt de tester la plaque avant de la coller.</li>
 </ul>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
 <p class="text-sm text-amber-900"><strong>💡 Le test en trente secondes :</strong> avant d'installer définitivement une plaque, testez-la avec trois téléphones différents, dont au moins un iPhone et un Android d'entrée de gamme, et testez-la <strong>posée à l'endroit exact où elle vivra</strong>. Une plaque qui fonctionne parfaitement dans la main peut ne plus rien donner une fois collée sur un comptoir à structure métallique ou sur un présentoir en inox. Le support d'accueil compte autant que la plaque elle-même.</p>
@@ -1850,43 +1820,43 @@ export const articles: Record<string, {
 
 <section id="comparatif-materiaux" class="scroll-mt-28 mb-16">
 <h2>Le comparatif des cinq matériaux</h2>
-<p>Voici les cinq familles de supports proposées sur le marché, comparées sur les critères qui déterminent le nombre d'avis effectivement collectés au bout d'un an.</p>
+<p>Voici les cinq familles de supports proposées sur le marché, comparées sur la compatibilité NFC et la tenue dans le temps.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
 <thead><tr class="bg-gray-50"><th class="border p-3 text-left">Matériau</th><th class="border p-3 text-left">Compatibilité NFC</th><th class="border p-3 text-left">Tenue dans le temps</th><th class="border p-3 text-left">Verdict</th></tr></thead>
 <tbody>
-<tr><td class="border p-3"><strong>Acrylique (PMMA)</strong></td><td class="border p-3">Excellente, transparente au champ</td><td class="border p-3">Ne jaunit pas, résiste aux UV, à l'eau et aux rayures légères</td><td class="border p-3"><strong>Le standard du comptoir</strong></td></tr>
-<tr><td class="border p-3"><strong>Métal / inox</strong></td><td class="border p-3">Mauvaise sans couche de ferrite</td><td class="border p-3">Excellente, mais rayures et traces de doigts très visibles</td><td class="border p-3">À éviter sauf tag on-metal certifié</td></tr>
-<tr><td class="border p-3"><strong>Bois</strong></td><td class="border p-3">Bonne</td><td class="border p-3">Sensible à l'humidité, se voile en cuisine et en salle de bain</td><td class="border p-3">Esthétique, fragile en usage réel</td></tr>
-<tr><td class="border p-3"><strong>PVC / ABS imprimé</strong></td><td class="border p-3">Bonne</td><td class="border p-3">Jaunit aux UV, impression qui s'efface au nettoyage</td><td class="border p-3">Le prix bas se paie en durée de vie</td></tr>
-<tr><td class="border p-3"><strong>Autocollant époxy (dôme)</strong></td><td class="border p-3">Bonne</td><td class="border p-3">Décollement des bords, se marque, se ternit</td><td class="border p-3">Dépannage, pas équipement</td></tr>
+<tr><td class="border p-3"><strong>Acrylique (PMMA)</strong></td><td class="border p-3">Bonne : matériau non métallique</td><td class="border p-3">Stable aux UV selon Röhm, fabricant du PLEXIGLAS ; craint les nettoyants à l'alcool et le frottement à sec</td><td class="border p-3"><strong>Notre choix pour le comptoir</strong></td></tr>
+<tr><td class="border p-3"><strong>Métal / inox</strong></td><td class="border p-3">Mauvaise sans couche de ferrite</td><td class="border p-3">Dépend de la finition</td><td class="border p-3">Seulement avec un tag on-metal blindé</td></tr>
+<tr><td class="border p-3"><strong>Bois</strong></td><td class="border p-3">Bonne : matériau non métallique</td><td class="border p-3">Hygroscopique : gonfle et se rétracte avec l'humidité</td><td class="border p-3">Plutôt pour les lieux secs</td></tr>
+<tr><td class="border p-3"><strong>PVC / ABS imprimé</strong></td><td class="border p-3">Bonne : matériau non métallique</td><td class="border p-3">Tenue aux UV variable selon la formulation</td><td class="border p-3">Vérifier la tenue aux UV annoncée</td></tr>
+<tr><td class="border p-3"><strong>Autocollant époxy (dôme)</strong></td><td class="border p-3">Bonne sur support non métallique</td><td class="border p-3">Mince, bords exposés aux frottements et au nettoyage</td><td class="border p-3">Solution d'appoint</td></tr>
 </tbody>
 </table>
 </div>
 <h3>Bois : le bon objet au mauvais endroit</h3>
-<p>Le bois est le matériau le plus flatteur en photo et le plus cohérent avec l'identité d'un restaurant de quartier, d'un salon ou d'un caviste. Il est aussi hygroscopique : il absorbe l'humidité de l'air, gonfle, puis se rétracte. Sur un comptoir de bar, dans une cuisine ouverte, dans un institut où l'on fait de la vapeur, une plaque en bois non traitée se voile en quelques mois et l'adhésif lâche par un coin. Dans une agence immobilière ou un cabinet, en revanche, il tient parfaitement.</p>
+<p>Le bois est le matériau le plus flatteur en photo et le plus cohérent avec l'identité d'un restaurant de quartier, d'un salon ou d'un caviste. Il est aussi hygroscopique : selon le <a href="https://cndb.org/ressources/anatomie-du-bois/" target="_blank" rel="noopener noreferrer">CNDB</a>, le bois perd ou reprend de l'humidité selon son environnement, et son retrait comme son gonflement suivent les variations de son taux d'humidité. Sur un comptoir de bar, dans une cuisine ouverte, dans un institut où l'on fait de la vapeur, une plaque en bois non protégée subit ces variations en permanence, et sa fixation avec elle. Dans une agence immobilière ou un cabinet, l'environnement est plus stable.</p>
 <h3>PVC et autocollants : le calcul qui trompe</h3>
-<p>Un autocollant NFC coûte deux à quatre euros. Il paraît donc dix fois moins cher qu'une plaque. Le calcul oublie deux choses. D'abord, sa durée de vie sur un comptoir se compte en mois, pas en années : les bords se soulèvent, la surface se raye et l'impression se ternit sous les produits de nettoyage. Ensuite et surtout, <strong>un autocollant plat ne se voit pas</strong> : il se confond avec l'inox du comptoir, et une plaque qui ne se remarque pas ne collecte rien, quel que soit le prix payé.</p>
+<p>Un autocollant NFC coûte moins cher qu'une plaque, et c'est tout son attrait. Le calcul oublie deux choses. D'abord, un autocollant mince posé sur un comptoir est exposé aux frottements et au nettoyage quotidien, par ses bords comme par sa surface imprimée. Ensuite et surtout, <strong>un autocollant plat se remarque peu</strong> : il peut se confondre avec le comptoir, et une plaque que personne ne remarque ne sert à rien, quel que soit le prix payé.</p>
 <p>Si le format autocollant vous intéresse pour sa discrétion ou sa mobilité, comparez-le plutôt à sa vraie alternative dans notre article sur le <a href="/blog/magnet-nfc-avis-google">magnet NFC et les cas où il vaut mieux qu'une plaque</a>.</p>
 </section>
 
 <section id="acrylique" class="scroll-mt-28 mb-16">
 <h2>L'acrylique, et pourquoi l'épaisseur compte</h2>
-<p>L'acrylique — de son nom technique le polyméthacrylate de méthyle, ou PMMA — est le matériau retenu par la quasi-totalité des fabricants sérieux, pour quatre raisons cumulées.</p>
+<p>L'acrylique — de son nom technique le polyméthacrylate de méthyle, ou PMMA — est le matériau que nous avons retenu, pour quatre raisons.</p>
 <ul>
-<li><strong>Il est transparent au champ magnétique.</strong> Aucune atténuation, aucune correction à apporter : la portée est celle de l'antenne, point.</li>
-<li><strong>Il ne jaunit pas.</strong> C'est sa différence majeure avec le PVC et l'ABS. Une plaque posée en vitrine, en plein soleil, garde sa teinte d'origine là où un support PVC vire à l'ivoire en une saison.</li>
-<li><strong>Il se nettoie.</strong> Un chiffon microfibre suffit, y compris dans un environnement gras d'atelier ou de cuisine.</li>
-<li><strong>Il tient la lumière.</strong> La surface renvoie la lumière ambiante, ce qui donne à l'objet une présence visuelle qu'un carton imprimé n'a pas. Sur un comptoir chargé, c'est ce qui fait qu'un client remarque la plaque sans qu'on la lui désigne.</li>
+<li><strong>Il n'est pas métallique.</strong> Il ne produit pas les courants de Foucault qui absorbent l'énergie destinée à la puce : la portée dépend de l'antenne, pas du support.</li>
+<li><strong>Il tient bien les UV.</strong> <a href="https://www.plexiglas.de/en/service/product-info/uv-resistance" target="_blank" rel="noopener noreferrer">Röhm, fabricant du PLEXIGLAS</a>, explique que son PMMA est stable aux UV dans toute son épaisseur et ne jaunit pas, alors que la plupart des plastiques jaunissent et perdent leur transparence sous l'effet des UV. La tenue exacte dépend de la formulation de chaque fabricant.</li>
+<li><strong>Il se nettoie simplement, avec le bon produit.</strong> Pour le PLEXIGLAS, <a href="https://www.plexiglas.de/en/service/processing/cleaning-plexiglas" target="_blank" rel="noopener noreferrer">Röhm recommande</a> un chiffon doux légèrement humide, déconseille les nettoyants pour vitres et les produits contenant de l'alcool, admet l'isopropanol pour désinfecter, et demande de ne jamais frotter à sec, ce qui peut rayer la surface.</li>
+<li><strong>Il tient la lumière.</strong> La surface renvoie la lumière ambiante, ce qui donne à l'objet une présence visuelle qu'un carton imprimé n'a pas et l'aide à se distinguer sur un comptoir chargé.</li>
 </ul>
-<h3>Trois millimètres, ni plus ni moins</h3>
-<p>L'épaisseur est le critère silencieux du marché. En dessous de deux millimètres, la plaque se comporte comme une feuille rigide : elle gondole légèrement, et un coin finit par se décoller. Au-delà de quatre millimètres, elle devient un bloc coûteux à expédier, sans bénéfice technique. Les plaques Swiipx sont en acrylique premium de 120 x 120 x 3 mm : le format tient dans la main, reste stable sur un plan de travail et présente une surface d'approche suffisamment large pour que le client trouve la zone de lecture du premier coup.</p>
-<p>La différence de coût entre un support fin et un support rigide correspond à quelques euros. Rapportée à trois ans d'utilisation, elle est marginale — nous avons détaillé ces fourchettes dans notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
+<h3>L'épaisseur : pourquoi 3 mm</h3>
+<p>L'épaisseur est un critère discret mais réel. Trop fine, une plaque est plus souple et supporte moins bien les manipulations ; trop épaisse, elle alourdit l'objet sans rien apporter à la lecture NFC. Les plaques Swiipx sont en acrylique premium de 120 x 120 x 3 mm : le format tient dans la main, reste stable sur un plan de travail et offre une surface d'approche large, qui laisse de la marge au geste du client.</p>
+<p>Pour les écarts de prix entre supports, voir notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a>.</p>
 </section>
 
 <section id="puce-nfc" class="scroll-mt-28 mb-16">
 <h2>Sous le matériau : la puce, et ce qui compte vraiment</h2>
-<p>Les fiches produit mettent en avant une référence de puce, généralement NTAG213, NTAG215 ou NTAG216. La différence annoncée porte sur la mémoire disponible.</p>
+<p>Les fiches produit mettent en avant une référence de puce, généralement NTAG213, NTAG215 ou NTAG216. D'après la <a href="https://www.nxp.com/docs/en/data-sheet/NTAG213_215_216.pdf" target="_blank" rel="noopener noreferrer">fiche technique de NXP</a>, leur fabricant, la différence porte sur la mémoire utilisateur.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
 <thead><tr class="bg-gray-50"><th class="border p-3 text-left">Puce</th><th class="border p-3 text-left">Mémoire utilisateur</th><th class="border p-3 text-left">Ce que cela permet</th></tr></thead>
@@ -1898,41 +1868,41 @@ export const articles: Record<string, {
 </table>
 </div>
 <p>Soyons précis, parce que le marketing du secteur entretient une confusion : <strong>pour un lien d'avis Google, la mémoire n'est pas le facteur limitant</strong>. Une URL de collecte d'avis tient largement dans les 144 octets d'une NTAG213. Choisir une NTAG215 n'apporte pas une meilleure lecture ; cela apporte de la marge, ce qui devient utile le jour où l'on veut ajouter des paramètres de suivi à l'URL ou reprogrammer la plaque pour un autre établissement.</p>
-<p>Ce qui détermine réellement la qualité de lecture, ce sont deux paramètres dont personne ne parle : <strong>la taille de l'antenne</strong> et <strong>la qualité de l'encapsulation</strong>. Une grande antenne se couple mieux au téléphone et pardonne un placement approximatif du smartphone ; une petite antenne exige que le client vise juste. Sur un comptoir, où le geste est fait en une seconde et sans regarder, cette tolérance fait toute la différence entre un avis collecté et un client qui abandonne.</p>
+<p>Au-delà de la mémoire, la qualité de lecture dépend de l'antenne et de son environnement — c'est tout le sens de la section consacrée au métal. Sur un comptoir, où le geste se fait vite et sans regarder, une plaque qui laisse de la marge au placement du téléphone facilite la tâche du client.</p>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>⚙️ Bon à savoir :</strong> les puces de la famille NTAG21x sont passives et annoncées par le fabricant pour une rétention de données de l'ordre de dix ans et environ 100 000 cycles de réécriture. Une plaque d'avis n'est programmée qu'une fois : la limite de réécriture ne sera jamais atteinte. Il n'y a rien à recharger, rien à connecter au wifi, aucune pile à remplacer — et donc aucun abonnement technique à justifier.</p>
+<p class="text-sm text-emerald-900"><strong>⚙️ Bon à savoir :</strong> les puces de la famille NTAG21x sont passives : elles tirent leur énergie du champ du téléphone, et la même fiche technique de NXP indique une durée de rétention des données de 10 ans et une endurance de 100 000 cycles d'écriture. Une plaque d'avis n'est programmée qu'une fois : la limite de réécriture ne sera jamais atteinte. Il n'y a rien à recharger, rien à connecter au wifi, aucune pile à remplacer — et donc aucun abonnement technique à justifier.</p>
 </div>
-<p>Un dernier point d'achat, souvent négligé : la plaque doit arriver <strong>déjà programmée avec votre lien d'avis</strong>. Une plaque vierge suppose de télécharger une application d'encodage, de récupérer l'URL exacte de votre formulaire d'avis Google et de verrouiller la puce en lecture seule. Ce n'est pas difficile, mais c'est le point où la moitié des achats s'arrêtent, dans un tiroir. Le sujet est développé dans notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat complet d'une plaque NFC</a>.</p>
+<p>Un dernier point d'achat, souvent négligé : la plaque doit arriver <strong>déjà programmée avec votre lien d'avis</strong>. Une plaque vierge suppose de télécharger une application d'encodage, de récupérer l'URL exacte de votre formulaire d'avis Google et de verrouiller la puce en lecture seule. Ce n'est pas difficile, mais c'est une étape de plus, qui peut suffire à laisser la plaque dans un tiroir. Le sujet est développé dans notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat complet d'une plaque NFC</a>.</p>
 </section>
 
 <section id="fixation" class="scroll-mt-28 mb-16">
 <h2>L'adhésif : le vrai point de rupture</h2>
-<p>Dans les retours d'expérience, la panne la plus fréquente n'est ni la puce ni le support. C'est la fixation. Une plaque qui se décolle est ramassée, posée près de la caisse, puis rangée dans un tiroir « en attendant » — et la collecte s'arrête là.</p>
+<p>Le point faible le plus sous-estimé n'est ni la puce ni le support : c'est la fixation. Une plaque qui se décolle risque d'être ramassée, posée près de la caisse, puis rangée dans un tiroir « en attendant » — et la collecte s'arrête là.</p>
 <h3>Les trois modes de fixation</h3>
 <ul>
-<li><strong>Adhésif double face acrylique haute performance (type 3M VHB)</strong> : la solution la plus fiable sur surface lisse et propre. Il faut dégraisser la zone à l'alcool avant pose, appuyer vingt secondes, et attendre vingt-quatre heures avant utilisation intensive pour que l'adhésion atteigne sa valeur nominale.</li>
-<li><strong>Pose libre sur socle ou chevalet</strong> : idéale quand la plaque doit être poussée vers le client au moment du paiement, ce qui est précisément le geste qui convertit le mieux. L'inconvénient est qu'un objet libre se déplace, disparaît sous un carnet et finit derrière la caisse.</li>
+<li><strong>Adhésif double face acrylique haute performance (type 3M VHB)</strong> : adapté aux surfaces lisses et propres. Pour ses rubans VHB, <a href="https://multimedia.3m.com/mws/media/2366460O/3m-vhb-tape-4941.pdf" target="_blank" rel="noopener noreferrer">3M recommande</a> de nettoyer la plupart des surfaces avec un mélange d'alcool isopropylique et d'eau (70/30) et d'appliquer une pression ferme ; à température ambiante, l'adhérence atteint environ 50 % de sa valeur finale après 20 minutes, 90 % après 24 heures et 100 % après 72 heures. Ménagez donc la plaque les premiers jours.</li>
+<li><strong>Pose libre sur socle ou chevalet</strong> : pratique quand on veut présenter la plaque au client au moment du paiement. L'inconvénient est qu'un objet libre se déplace, disparaît sous un carnet et finit derrière la caisse.</li>
 <li><strong>Vis ou fixation murale</strong> : réservée aux emplacements en accès libre, sans personnel, dans un couloir ou une salle d'attente.</li>
 </ul>
-<p>Trois surfaces posent problème et méritent d'être connues avant l'achat : le bois brut ou huilé, sur lequel l'adhésif n'accroche pas durablement ; les revêtements texturés, où le contact réel se limite aux points hauts ; et les surfaces traitées anti-graisse, courantes en restauration, conçues précisément pour que rien n'y adhère. Dans ces trois cas, le socle libre bat l'adhésif.</p>
+<p>Trois surfaces méritent de la prudence avant l'achat : le bois brut ou huilé, que 3M range parmi les matériaux poreux à sceller avant la pose d'un ruban VHB ; les revêtements texturés, parce que la tenue d'un adhésif dépend du contact réellement obtenu avec la surface ; et les surfaces traitées anti-graisse, sur lesquelles l'adhérence est à tester. Dans ces trois cas, le socle libre évite la question.</p>
 </section>
 
 <section id="duree-de-vie" class="scroll-mt-28 mb-16">
-<h2>Durée de vie réelle et coût par mois</h2>
-<p>Le prix d'achat ne dit rien tant qu'on ne le divise pas par la durée de vie. Voici l'ordre de grandeur pour un usage en comptoir, plusieurs sollicitations par jour.</p>
+<h2>Ce qui use une plaque, et le vrai poste de coût</h2>
+<p>Il n'existe pas de durée de vie valable pour tous les comptoirs : elle dépend de l'endroit où la plaque vit. Plutôt qu'un chiffre, voici les facteurs qui la font varier, et ce que vous pouvez faire pour chacun.</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Support</th><th class="border p-3 text-left">Prix indicatif</th><th class="border p-3 text-left">Durée de vie observée</th><th class="border p-3 text-left">Coût par mois</th></tr></thead>
+<thead><tr class="bg-gray-50"><th class="border p-3 text-left">Facteur</th><th class="border p-3 text-left">Ce qui se passe</th><th class="border p-3 text-left">Ce que vous pouvez faire</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Autocollant NFC époxy</td><td class="border p-3">2 à 5 €</td><td class="border p-3">6 à 12 mois</td><td class="border p-3">≈ 0,40 €</td></tr>
-<tr><td class="border p-3">Plaque PVC imprimée</td><td class="border p-3">12 à 20 €</td><td class="border p-3">12 à 24 mois</td><td class="border p-3">≈ 0,80 €</td></tr>
-<tr><td class="border p-3"><strong>Plaque acrylique 3 mm</strong></td><td class="border p-3"><strong>29,90 €</strong></td><td class="border p-3"><strong>3 à 5 ans</strong></td><td class="border p-3"><strong>≈ 0,50 €</strong></td></tr>
-<tr><td class="border p-3">Solution avec abonnement</td><td class="border p-3">0 à 20 € + mensualité</td><td class="border p-3">Tant que l'abonnement court</td><td class="border p-3">9 à 29 € par mois</td></tr>
+<tr><td class="border p-3">Surface métallique</td><td class="border p-3">Courants de Foucault et désaccord de l'antenne : la lecture se dégrade</td><td class="border p-3">Poser la plaque sur un support non métallique, ou choisir un tag blindé par ferrite</td></tr>
+<tr><td class="border p-3">Humidité et vapeur</td><td class="border p-3">Le bois gonfle et se rétracte avec son taux d'humidité</td><td class="border p-3">Préférer un support non hygroscopique en cuisine, en salon ou en institut</td></tr>
+<tr><td class="border p-3">Soleil direct</td><td class="border p-3">La plupart des plastiques jaunissent aux UV, selon Röhm, qui annonce son PMMA stable</td><td class="border p-3">Vérifier la tenue aux UV annoncée par le fabricant du support</td></tr>
+<tr><td class="border p-3">Nettoyage</td><td class="border p-3">Les nettoyants à l'alcool et le frottement à sec peuvent abîmer l'acrylique</td><td class="border p-3">Chiffon doux légèrement humide, isopropanol pour désinfecter</td></tr>
+<tr><td class="border p-3">Fixation</td><td class="border p-3">Une surface grasse, poreuse ou texturée limite l'adhérence</td><td class="border p-3">Nettoyer, presser fermement, laisser l'adhésif prendre, ou passer au socle</td></tr>
 </tbody>
 </table>
 </div>
-<p>Les trois premières lignes se tiennent dans un mouchoir de poche : sur la durée, le matériau ne fait pas de différence de coût décisive. La quatrième ligne, elle, change complètement l'échelle. Un abonnement à 19 € par mois représente 684 € sur trois ans pour un objet dont le composant coûte quelques euros — et l'arrêt du paiement peut interrompre la redirection, donc la collecte. C'est la seule ligne du tableau où le choix a un impact financier réel, et nous l'avons documentée dans notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a>.</p>
-<p class="text-sm text-gray-600"><em>Les prix indicatifs et durées de vie ci-dessus sont des ordres de grandeur constatés sur le marché français en 2026, à ajuster selon les références et l'intensité d'usage.</em></p>
+<p>Côté budget, le matériau n'est pas le poste qui change l'échelle. L'abonnement, si. Prenons une hypothèse : un abonnement à 19 € par mois représenterait 684 € sur trois ans, pour une puce passive qui n'a besoin ni de serveur ni de pile pour fonctionner — et l'arrêt du paiement peut interrompre la redirection, donc la collecte, lorsque la plaque pointe vers un lien géré par le prestataire. C'est la ligne où le choix a un impact financier réel, et nous l'avons documentée dans notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des plaques sans abonnement</a>.</p>
 </section>
 
 <section id="choisir-selon-lieu" class="scroll-mt-28 mb-16">
@@ -1943,65 +1913,65 @@ export const articles: Record<string, {
 <thead><tr class="bg-gray-50"><th class="border p-3 text-left">Environnement</th><th class="border p-3 text-left">Contrainte dominante</th><th class="border p-3 text-left">Recommandation</th></tr></thead>
 <tbody>
 <tr><td class="border p-3">Restaurant, bar, boulangerie</td><td class="border p-3">Graisse, nettoyage quotidien, comptoir inox</td><td class="border p-3">Acrylique, en pose libre ou déportée de l'inox</td></tr>
-<tr><td class="border p-3">Salon de coiffure, institut</td><td class="border p-3">Humidité, produits, vapeur</td><td class="border p-3">Acrylique — le bois se voile</td></tr>
-<tr><td class="border p-3">Garage, atelier</td><td class="border p-3">Huile, poussière, chocs</td><td class="border p-3">Acrylique 3 mm, adhésif VHB</td></tr>
-<tr><td class="border p-3">Vitrine plein sud</td><td class="border p-3">UV permanents</td><td class="border p-3">Acrylique — le PVC jaunit en une saison</td></tr>
+<tr><td class="border p-3">Salon de coiffure, institut</td><td class="border p-3">Humidité, produits, vapeur</td><td class="border p-3">Acrylique — le bois travaille avec l'humidité</td></tr>
+<tr><td class="border p-3">Garage, atelier</td><td class="border p-3">Huile, poussière, chocs</td><td class="border p-3">Acrylique 3 mm, surface dégraissée puis nettoyée avant collage</td></tr>
+<tr><td class="border p-3">Vitrine plein sud</td><td class="border p-3">UV permanents</td><td class="border p-3">Un support dont le fabricant annonce la tenue aux UV, comme le PMMA</td></tr>
 <tr><td class="border p-3">Cabinet, agence, bureau</td><td class="border p-3">Aucune contrainte forte</td><td class="border p-3">Acrylique ou bois, au choix esthétique</td></tr>
 </tbody>
 </table>
 </div>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>🎯 Combien de plaques :</strong> un point d'encaissement unique se couvre avec le <a href="/product/starter" class="font-semibold underline">Pack Starter</a>. La configuration la plus fréquente — accueil et comptoir de paiement distincts — correspond au <a href="/product/business" class="font-semibold underline">Pack Business</a>. Les établissements à plusieurs postes de vente, à plusieurs salles ou en plusieurs points de restitution passent au <a href="/product/pro" class="font-semibold underline">Pack Pro</a>. Dans les trois cas, il s'agit d'un paiement unique.</p>
+<p class="text-sm text-blue-900"><strong>🎯 Combien de plaques :</strong> un point d'encaissement unique se couvre avec le <a href="/product/starter" class="font-semibold underline">Pack Starter</a>. Si l'accueil et le comptoir de paiement sont distincts, le <a href="/product/business" class="font-semibold underline">Pack Business</a> couvre les deux. Les établissements à plusieurs postes de vente, à plusieurs salles ou en plusieurs points de restitution passent au <a href="/product/pro" class="font-semibold underline">Pack Pro</a>. Dans les trois cas, il s'agit d'un paiement unique.</p>
 </div>
 </section>
 
 <section id="erreurs" class="scroll-mt-28 mb-16">
 <h2>Les six erreurs d'achat les plus coûteuses</h2>
 <ul>
-<li><strong>Acheter une plaque métallique sans vérifier le blindage ferrite.</strong> C'est la seule erreur de cette liste qui peut rendre l'objet totalement inopérant.</li>
+<li><strong>Acheter une plaque métallique sans vérifier le blindage ferrite.</strong> C'est l'erreur qui peut rendre l'objet inopérant dès le premier jour.</li>
 <li><strong>Coller une plaque non blindée sur une surface métallique.</strong> Même effet, même silence : rien n'indique la panne, les avis cessent simplement d'arriver.</li>
-<li><strong>Choisir sur la référence de la puce plutôt que sur l'antenne.</strong> La mémoire est surdimensionnée dans tous les cas ; la tolérance de placement, elle, se ressent à chaque geste.</li>
-<li><strong>Commander une plaque vierge à programmer soi-même.</strong> Techniquement faisable, pratiquement fatal : la plaque attend dans un tiroir le jour où l'on aura le temps.</li>
-<li><strong>Poser l'adhésif sur une surface grasse ou texturée.</strong> Dégraissez à l'alcool, appuyez vingt secondes, ou passez en pose libre.</li>
-<li><strong>Payer un abonnement pour une redirection d'URL.</strong> C'est le seul poste où le surcoût se compte en centaines d'euros sur trois ans.</li>
+<li><strong>Choisir sur la référence de la puce plutôt que sur l'environnement de pose.</strong> Pour un lien d'avis, la mémoire d'une NTAG213 suffit déjà ; ce qui se ressent à chaque geste, c'est la facilité de lecture à l'endroit où la plaque est posée.</li>
+<li><strong>Commander une plaque vierge à programmer soi-même.</strong> Techniquement faisable, mais c'est une étape de plus : la plaque risque d'attendre dans un tiroir le jour où l'on aura le temps.</li>
+<li><strong>Poser l'adhésif sur une surface grasse ou texturée.</strong> Nettoyez la surface (3M recommande un mélange d'alcool isopropylique et d'eau pour ses rubans VHB), pressez fermement, ou passez en pose libre.</li>
+<li><strong>Payer un abonnement pour une redirection d'URL.</strong> C'est le poste où le surcoût peut se compter en centaines d'euros sur trois ans, comme le montre l'hypothèse d'un abonnement à 19 € par mois.</li>
 </ul>
-<p>Une septième erreur ne relève pas du matériau mais annule tout le reste : installer la plaque sans donner une phrase à l'équipe. Un objet posé sans un mot passe inaperçu, quel que soit le support. La comparaison avec les autres formats de collecte est détaillée dans notre article <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC contre QR code</a>.</p>
+<p>Une septième erreur ne relève pas du matériau mais annule tout le reste : installer la plaque sans donner une phrase à l'équipe. Un objet posé sans un mot risque de passer inaperçu, quel que soit le support. La comparaison avec les autres formats de collecte est détaillée dans notre article <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC contre QR code</a>.</p>
 </section>
 
 <section id="faq-materiaux" class="scroll-mt-28 mb-16">
 <h2>FAQ — Matériaux des plaques NFC pour avis Google</h2>
 
 <h3>Une plaque NFC en métal fonctionne-t-elle vraiment ?</h3>
-<p>Seulement si elle intègre une couche de ferrite entre l'antenne et le métal, ce qu'on appelle un tag on-metal. Sans ce blindage, le champ magnétique du téléphone induit des courants de Foucault dans le métal, qui absorbent l'énergie destinée à la puce et décalent la fréquence d'accord de l'antenne : la portée s'effondre et la lecture devient aléatoire. Même correctement blindée, une plaque métallique demande généralement de poser le téléphone au contact plutôt que de l'approcher. Sur un comptoir, où le geste se fait en une seconde et sans regarder, cette contrainte supplémentaire coûte des avis.</p>
+<p>Seulement si elle intègre une couche de ferrite entre l'antenne et le métal, ce qu'on appelle un tag on-metal. Sans ce blindage, le champ magnétique du téléphone induit des courants de Foucault dans le métal, qui absorbent de l'énergie et désaccordent l'antenne : la lecture se dégrade, jusqu'à devenir aléatoire. Avec une ferrite qui couvre au moins toute l'antenne et un accord réglé en conséquence, NXP montre en simulation que la distance de fonctionnement retrouve son niveau à l'air libre. Encore faut-il que le fabricant de la plaque ait fait ce travail : testez-la à l'endroit exact où elle sera posée.</p>
 
 <h3>Pourquoi l'acrylique plutôt que le PVC, qui coûte moins cher ?</h3>
-<p>Pour trois raisons mesurables. L'acrylique ne jaunit pas aux UV là où le PVC vire à l'ivoire en une saison derrière une vitrine. Sa surface résiste aux produits de nettoyage quotidiens qui ternissent une impression sur PVC. Enfin, un support acrylique de 3 mm reste plan alors qu'un PVC fin gondole et se décolle par un coin. Rapporté à la durée de vie, l'écart de prix initial s'efface : environ 0,50 € par mois pour une plaque acrylique tenant trois à cinq ans, contre 0,80 € pour un PVC à remplacer au bout d'un ou deux ans.</p>
+<p>Pour trois raisons. La tenue aux UV d'abord : Röhm, fabricant du PLEXIGLAS, présente son PMMA comme stable aux UV et non jaunissant, là où la plupart des plastiques jaunissent au soleil. La rigidité ensuite : une plaque de 3 mm se manipule sans se déformer, là où un support fin est plus souple. L'entretien enfin, à condition d'utiliser le bon produit : un chiffon doux légèrement humide, pas de nettoyant à l'alcool, et de l'isopropanol si vous devez désinfecter. Côté coût, l'écart d'achat pèse peu face à un abonnement, qui se paie chaque mois.</p>
 
 <h3>Faut-il une puce NTAG215 ou une NTAG213 suffit-elle ?</h3>
-<p>Pour un simple lien d'avis Google, une NTAG213 et ses 144 octets suffisent techniquement. La NTAG215, avec 504 octets, n'améliore pas la qualité de lecture : elle apporte de la marge, utile le jour où l'on ajoute des paramètres de suivi à l'URL ou où l'on reprogramme la plaque pour un autre établissement. Le vrai facteur de qualité de lecture n'est pas la mémoire mais la taille de l'antenne : une grande antenne pardonne un placement approximatif du téléphone, une petite antenne oblige le client à viser juste.</p>
+<p>Pour un simple lien d'avis Google, une NTAG213 et ses 144 octets suffisent techniquement. La NTAG215, avec 504 octets, n'améliore pas la qualité de lecture : elle apporte de la marge, utile le jour où l'on ajoute des paramètres de suivi à l'URL ou où l'on reprogramme la plaque pour un autre établissement. La qualité de lecture dépend plutôt de l'antenne et de son environnement, à commencer par la présence de métal à proximité.</p>
 
 <h3>Une plaque NFC en bois est-elle un bon choix ?</h3>
-<p>Le bois ne pose aucun problème technique : il est transparent au champ magnétique et se lit parfaitement. Son problème est physique. Le bois est hygroscopique : il absorbe l'humidité de l'air, gonfle puis se rétracte. Sur un comptoir de bar, dans une cuisine ouverte ou dans un institut de beauté où l'on produit de la vapeur, une plaque en bois se voile en quelques mois et l'adhésif lâche par un coin. Dans une agence immobilière, un cabinet ou un bureau, en revanche, elle tient sans difficulté et l'esthétique peut légitimement trancher.</p>
+<p>Le bois n'est pas métallique : il ne provoque pas les courants de Foucault qui perturbent la lecture NFC. Sa limite est ailleurs. Le bois est hygroscopique : selon le CNDB, il perd ou reprend de l'humidité selon son environnement, et son retrait comme son gonflement suivent son taux d'humidité. Sur un comptoir de bar, dans une cuisine ouverte ou dans un institut où l'on produit de la vapeur, ces variations fatiguent le support et sa fixation ; 3M range d'ailleurs le bois parmi les surfaces poreuses à sceller avant la pose d'un ruban VHB. Dans une agence immobilière, un cabinet ou un bureau, l'environnement est plus stable et l'esthétique peut légitimement trancher.</p>
 
 <h3>Combien de temps dure une plaque NFC ?</h3>
-<p>La puce n'est pas le facteur limitant : les NTAG21x sont annoncées par le fabricant pour une rétention de données de l'ordre de dix ans, et une plaque d'avis n'est programmée qu'une seule fois. C'est le support et l'adhésif qui décident. Un autocollant époxy tient six à douze mois sur un comptoir, une plaque PVC un à deux ans, une plaque acrylique de 3 mm trois à cinq ans. La panne la plus fréquente n'est d'ailleurs pas une panne électronique mais un décollement : la plaque est ramassée, posée à côté de la caisse, puis rangée dans un tiroir.</p>
+<p>Il n'existe pas de durée unique : elle dépend de l'emplacement, de l'humidité, du soleil, du nettoyage et de la fixation. Côté puce, la fiche technique de NXP indique pour les NTAG21x une rétention des données de 10 ans et une endurance de 100 000 cycles d'écriture, et une plaque d'avis n'est programmée qu'une fois. Ce sont donc surtout le support et l'adhésif qui décident. Et la panne à surveiller n'est pas électronique : c'est le décollement, après lequel la plaque est ramassée, posée à côté de la caisse, puis rangée dans un tiroir.</p>
 
 <h3>Peut-on coller une plaque NFC sur une caisse enregistreuse ou un frigo ?</h3>
 <p>Pas directement si la surface est métallique : l'effet est identique à celui d'une plaque en métal, la lecture devient aléatoire ou nulle. Deux solutions : déporter la plaque de quelques centimètres sur une surface non métallique voisine, ou la poser librement sur un socle, ce qui présente en plus l'avantage de pouvoir la pousser vers le client au moment du paiement. Dans tous les cas, testez la plaque à l'endroit exact où elle vivra, avec au moins deux téléphones différents, avant de coller quoi que ce soit.</p>
 
 <h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
-<p>Non, et c'est le poste où le choix a le plus d'impact financier. Une puce NFC est passive : elle stocke une adresse et n'a besoin d'aucun serveur, d'aucune connexion et d'aucune pile. Un abonnement à 19 € par mois représente 684 € sur trois ans pour un objet dont le composant coûte quelques euros, et l'arrêt du paiement peut interrompre la redirection donc la collecte. Les plaques Swiipx sont vendues en paiement unique à partir de 29,90 €, expédiées déjà programmées avec le lien d'avis de l'établissement.</p>
+<p>Non, et c'est le poste où le choix a le plus d'impact financier. Une puce NFC est passive : elle stocke une adresse et n'a besoin d'aucun serveur, d'aucune connexion et d'aucune pile. Un abonnement hypothétique à 19 € par mois représenterait 684 € sur trois ans, et l'arrêt du paiement peut interrompre la redirection, donc la collecte, si la plaque pointe vers un lien géré par le prestataire. Les plaques Swiipx sont vendues en paiement unique à partir de 29,90 € HT, expédiées déjà programmées avec le lien d'avis de l'établissement.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : un objet qu'on oublie, et c'est le but</h2>
-<p>Une plaque d'avis réussie est une plaque dont on ne parle plus. Elle est posée, elle est visible, elle se lit du premier coup, et trois ans plus tard elle ressemble encore à ce qu'elle était le premier jour. C'est le seul cahier des charges qui compte, et il se joue presque entièrement sur deux décisions d'achat : un support non métallique et rigide, et une puce livrée déjà programmée.</p>
-<p>Le reste — la référence exacte de la puce, la couleur, le message imprimé — se discute. Le métal non blindé et l'abonnement mensuel, eux, ne se rattrapent pas : le premier vous prive des avis sans prévenir, le second vous fait payer pendant des années une redirection qui ne coûte rien.</p>
-<p>Pour aller plus loin : notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat complet</a>, le <a href="/blog/cout-avis-google-comparatif">coût réel par avis collecté</a> selon la méthode retenue, et le <a href="/blog/ou-placer-plaque-avis-google">choix de l'emplacement</a>, qui pèse encore plus lourd que le matériau.</p>
+<p>Une plaque d'avis réussie est une plaque dont on ne parle plus. Elle est posée, elle est visible, elle se lit du premier coup, et elle reste présentable dans la durée. C'est le seul cahier des charges qui compte, et il se joue presque entièrement sur deux décisions d'achat : un support non métallique et rigide, et une puce livrée déjà programmée.</p>
+<p>Le reste — la référence exacte de la puce, la couleur, le message imprimé — se discute. Le métal non blindé et l'abonnement mensuel, eux, ne se rattrapent pas : le premier vous prive des avis sans prévenir, le second vous fait payer chaque mois ce qu'une puce programmée avec le bon lien fait sans abonnement.</p>
+<p>Pour aller plus loin : notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat complet</a>, le <a href="/blog/cout-avis-google-comparatif">coût réel par avis collecté</a> selon la méthode retenue, et le <a href="/blog/ou-placer-plaque-avis-google">choix de l'emplacement</a>, à décider en même temps que le matériau.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Le bon matériau, la bonne puce, déjà programmée</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium 120 x 120 x 3 mm, puce NTAG215, QR code de secours imprimé, adhésif 3M inclus, expédiées déjà programmées avec votre lien d'avis Google. Garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium 120 x 120 x 3 mm, puce NTAG215, QR code de secours imprimé, adhésif 3M inclus, expédiées déjà programmées avec votre lien d'avis Google. Garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT.</p>
 </div>
 </section>
     `,
@@ -2012,7 +1982,7 @@ export const articles: Record<string, {
     date: '21 août 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Sur un téléphone, une fiche Google se juge en une seconde et demie, et l\'œil voit l\'image avant la note. Les 8 types de photos classés par rendement, les formats exacts, la bonne fréquence, les 7 erreurs à éviter et un plan 30 jours.',
+    excerpt: 'Sur un téléphone, une fiche Google se compare en un coup d\'œil, photo comprise. Les 8 types de photos classés par priorité, les formats recommandés par Google, la bonne fréquence, les 7 erreurs à éviter et un plan 30 jours.',
     tocSections: [
       { id: 'pourquoi-photos', label: 'Pourquoi les photos décident' },
       { id: 'qui-publie-quoi', label: 'Trois sources de photos' },
@@ -2029,53 +1999,53 @@ export const articles: Record<string, {
     content: `
 <section id="pourquoi-photos" class="scroll-mt-28 mb-16">
 <h2>Pourquoi les photos décident du clic avant même les avis</h2>
-<p>Sur un téléphone, une fiche Google se juge en une seconde et demie. Le pouce descend, trois fiches défilent, et l'œil enregistre trois choses dans cet ordre : <strong>l'image, la note, le nombre d'avis</strong>. L'image arrive en premier parce qu'elle occupe la plus grande surface et qu'elle ne demande aucun effort de lecture. Un commerce dont la vignette est une photo floue prise de nuit par un passant a déjà perdu une partie de son avantage, même s'il affiche 4,8 étoiles.</p>
-<p>Google met en avant depuis plusieurs années un chiffre parlant : une fiche avec des photos reçoit environ <strong>42 % de demandes d'itinéraire en plus et 35 % de clics vers le site en plus</strong> qu'une fiche sans photo. C'est une statistique interne, non reproductible par un tiers : prenez-la comme un ordre de grandeur et non comme une mesure indépendante. L'ordre de grandeur suffit à trancher la question — une fiche sans photos laisse partir des clients chez le voisin.</p>
+<p>Sur un téléphone, une fiche Google se compare en un coup d'œil. Le pouce descend, plusieurs fiches défilent, et trois éléments se lisent sans effort : <strong>l'image, la note, le nombre d'avis</strong>. L'image est le seul des trois qui ne demande aucune lecture. Un commerce dont la vignette est une photo floue prise de nuit par un passant part avec un handicap, même avec une excellente note.</p>
+<p>Des chiffres circulent sur le surcroît de demandes d'itinéraire ou de clics qu'apporteraient les photos. Nous ne les reprenons pas : les pages d'aide de Google consacrées aux photos et au classement local n'en publient pas, et un chiffre général ne dirait rien de votre fiche. Le raisonnement suffit : une fiche sans photo ne montre pas au client ce qu'il va trouver, et le laisse comparer à l'aveugle.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> les photos ne font pas monter votre fiche dans le classement de la même façon que les avis. Elles agissent sur le <strong>taux de clic</strong> une fois que vous êtes affiché. Or Google observe ce taux de clic. Une fiche systématiquement ignorée dans le pack local finit par y perdre sa place, et une fiche systématiquement choisie consolide la sienne.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> la page de Google sur le <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">classement local</a> cite la pertinence, la distance et la proéminence, et indique que davantage d'avis et de notes positives peuvent améliorer le classement. Elle ne présente pas les photos comme un critère de classement : leur rôle se joue une fois la fiche affichée, pour aider le client à choisir.</p>
 </div>
-<p>Les photos et les avis ne se remplacent donc pas : ils travaillent à deux étages différents. Les avis vous font entrer dans les trois résultats affichés — c'est le sujet de notre calcul du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour apparaître dans le pack local</a>. Les photos décident de laquelle des trois fiches le client ouvre.</p>
+<p>Les photos et les avis ne se remplacent donc pas : ils travaillent à deux étages différents. Les avis peuvent vous aider à entrer dans les résultats affichés — c'est le sujet de notre calcul du <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour apparaître dans le pack local</a>. Les photos aident ensuite le client à choisir quelle fiche ouvrir.</p>
 </section>
 
 <section id="qui-publie-quoi" class="scroll-mt-28 mb-16">
 <h2>Trois sources de photos, et une seule que vous contrôlez</h2>
 <p>Beaucoup de commerçants croient que leur fiche n'affiche que ce qu'ils ont mis en ligne. C'est faux, et c'est la première chose à comprendre avant de publier quoi que ce soit.</p>
 <ul>
-<li><strong>Vos photos</strong> — celles que vous chargez depuis l'interface Google Business Profile. Elles apparaissent dans l'onglet « Par le propriétaire ».</li>
-<li><strong>Les photos des clients</strong> — chargées par n'importe quel utilisateur Google, avec ou sans avis. Elles sont les plus nombreuses sur les fiches actives et Google leur accorde une confiance particulière puisque personne ne les a mises en scène.</li>
-<li><strong>Les photos issues de Street View et des données Google</strong> — la façade capturée par une voiture Google, parfois vieille de six ans, parfois prise en travaux.</li>
+<li><strong>Vos photos</strong> — celles que vous chargez depuis l'interface Google Business Profile, identifiées comme publiées par le propriétaire.</li>
+<li><strong>Les photos des clients</strong> — chargées par des utilisateurs de Google Maps, avec ou sans avis. Personne ne les a mises en scène : elles montrent l'établissement tel que les clients l'ont vu.</li>
+<li><strong>Les images Street View</strong> — la façade vue depuis la rue, qui n'est pas forcément récente et peut avoir été prise pendant des travaux.</li>
 </ul>
-<p>Vous ne pouvez pas supprimer une photo client, sauf si elle enfreint les règles de Google (contenu hors sujet, photo d'une autre entreprise, contenu offensant, image manifestement trompeuse). Le seul levier réel est donc l'<strong>ajout</strong>, jamais la suppression : plus vous publiez de photos récentes et nettes, plus la photo malheureuse d'un client recule dans la galerie.</p>
-<p>Un détail que presque personne ne connaît : la <strong>vignette affichée dans les résultats de recherche n'est pas choisie par vous</strong>. Google la sélectionne automatiquement selon la requête, la qualité perçue de l'image et son taux d'engagement. Vous ne décidez pas laquelle sort — mais vous décidez de ce qui est dans le lot. Si vos douze meilleures photos sont toutes bonnes, la vignette sera bonne quoi qu'il arrive.</p>
+<p>Vous ne pouvez pas supprimer vous-même une photo client. Vous pouvez en revanche <a href="https://support.google.com/business/answer/6130451?hl=fr" target="_blank" rel="noopener noreferrer">la signaler et demander sa suppression</a> en choisissant un motif — Google propose notamment « Problème de confidentialité », « Photo ou vidéo ne correspondant pas au lieu », « Spam » ou « Informations personnelles » —, puis Google examine la demande, ce qui peut prendre plusieurs jours ouvrés. Le levier qui dépend entièrement de vous est donc l'<strong>ajout</strong> : des photos récentes et nettes donnent au client d'autres images que la photo malheureuse d'un client.</p>
+<p>Un détail à connaître : <strong>vous proposez une photo de couverture, mais Google ne garantit pas qu'elle s'affichera en premier</strong>. <a href="https://support.google.com/business/answer/6103862?hl=fr" target="_blank" rel="noopener noreferrer">Son aide sur les photos et vidéos</a> précise que si la photo choisie est de mauvaise qualité, ou si d'autres sources suggèrent qu'elle ne représente pas au mieux l'établissement, une photo envoyée par un utilisateur peut être sélectionnée à la place. Vous ne décidez pas seul de l'image qui sort, mais vous décidez de ce qui est dans le lot : si vos meilleures photos sont toutes bonnes, vous limitez le risque d'une mauvaise vignette.</p>
 </section>
 
 <section id="types-photos" class="scroll-mt-28 mb-16">
-<h2>Les 8 types de photos à publier, classés par rendement</h2>
-<p>Toutes les photos ne se valent pas. Certaines rassurent un client hésitant, d'autres ne servent qu'à remplir la galerie. Voici les huit catégories, classées par ce qu'elles apportent réellement à un prospect qui compare trois fiches.</p>
+<h2>Les 8 types de photos à publier, classés par priorité</h2>
+<p>Toutes les photos ne se valent pas. Certaines rassurent un client hésitant, d'autres ne servent qu'à remplir la galerie. Voici les huit catégories, dans notre ordre de priorité pour un prospect qui compare plusieurs fiches.</p>
 
 <h3>1. La façade en journée, prise depuis le trottoir ✅</h3>
-<p>C'est la photo la plus utile de toute votre fiche, et celle qui manque le plus souvent. Elle répond à la seule question angoissante du client : « est-ce que je vais trouver ? ». Cadrez comme un piéton qui arrive, enseigne lisible, numéro de rue visible si possible. Une seule photo de façade bien faite réduit les appels du type « vous êtes où exactement ? ».</p>
+<p>C'est à nos yeux la photo la plus utile de votre fiche. Elle répond à la question qui inquiète le client : « est-ce que je vais trouver ? ». Cadrez comme un piéton qui arrive, enseigne lisible, numéro de rue visible si possible. Une photo de façade bien faite peut éviter des appels du type « vous êtes où exactement ? ».</p>
 
 <h3>2. L'intérieur, depuis l'entrée</h3>
 <p>Le client veut savoir dans quoi il met les pieds. Prenez le même angle que celui qu'il aura en poussant la porte. Lumière du jour, pas de flash, personne de dos au premier plan.</p>
 
 <h3>3. Le produit ou la prestation, en situation</h3>
-<p>Une baguette qui sort du four, une coupe terminée, une voiture rendue propre, une paire de lunettes ajustée. Ce sont les photos les plus vues dans la galerie et celles que les clients agrandissent.</p>
+<p>Une baguette qui sort du four, une coupe terminée, une voiture rendue propre, une paire de lunettes ajustée. Ce sont elles qui montrent ce que le client vient chercher.</p>
 
 <h3>4. L'équipe, visage découvert</h3>
-<p>Sous-estimée dans tous les secteurs de service. Le client achète une relation, pas un local. Une photo d'équipe correcte fait plus pour la confiance que trois photos de mobilier.</p>
+<p>Facile à oublier dans les métiers de service, alors que le client y achète aussi une relation. Une photo d'équipe correcte lui montre à qui il aura affaire.</p>
 
 <h3>5. Le parking, l'accès, l'entrée PMR</h3>
-<p>Personne ne publie ça, tout le monde le cherche. Si vous avez trois places devant, montrez-les : c'est un argument de choix décisif en centre-ville.</p>
+<p>Une information pratique que le client cherche avant de se déplacer. Si vous avez des places devant, montrez-les : en centre-ville, c'est un argument de choix.</p>
 
 <h3>6. La carte, les tarifs affichés, la vitrine d'offres</h3>
-<p>Photographier son affichage tarifaire est un excellent filtre : les clients hors budget ne se déplacent pas, ceux qui viennent sont déjà d'accord sur le prix. Moins d'avis négatifs sur le tarif à l'arrivée.</p>
+<p>Photographier son affichage tarifaire sert de filtre : un client hors budget peut renoncer avant de se déplacer, et celui qui vient connaît déjà le prix. De quoi limiter les mauvaises surprises sur le tarif à l'arrivée.</p>
 
 <h3>7. Le logo et la photo de couverture</h3>
-<p>Techniques mais nécessaires : ce sont les deux seules images dont vous choisissez vraiment l'emplacement dans l'interface.</p>
+<p>Techniques mais nécessaires : ce sont les deux images auxquelles vous attribuez un rôle précis dans l'interface, même si Google ne garantit pas que la couverture s'affichera en premier.</p>
 
 <h3>8. Les photos de saison ou d'événement</h3>
-<p>Décoration de Noël, terrasse en été, nouvelle collection. Elles servent surtout à prouver que la fiche est vivante.</p>
+<p>Décoration de Noël, terrasse en été, nouvelle collection. Elles montrent que la fiche est tenue à jour.</p>
 
 <div class="overflow-x-auto">
 <table>
@@ -2098,14 +2068,14 @@ export const articles: Record<string, {
 
 <section id="combien-frequence" class="scroll-mt-28 mb-16">
 <h2>Combien de photos, et à quelle fréquence les publier</h2>
-<p>Il n'existe aucun seuil officiel communiqué par Google. La question se pose donc comme celle des avis : non pas dans l'absolu, mais <strong>par rapport aux trois fiches classées devant vous</strong>. Ouvrez-les, comptez leurs photos dans l'onglet « Par le propriétaire », et fixez-vous au-dessus de la médiane.</p>
-<p>En pratique, sur la très grande majorité des commerces locaux, la cible raisonnable est la suivante :</p>
+<p>Google ne communique aucun seuil. La question se pose donc comme celle des avis : non pas dans l'absolu, mais <strong>par rapport aux fiches classées devant vous</strong>. Ouvrez-les, comptez les photos publiées par le propriétaire, et fixez-vous au-dessus de la médiane.</p>
+<p>À défaut de repère officiel, voici notre recommandation de départ, à ajuster selon votre secteur :</p>
 <ul>
-<li><strong>Au démarrage</strong> : 15 à 25 photos, couvrant les six premiers types ci-dessus. En dessous de 10, la galerie paraît abandonnée.</li>
+<li><strong>Au démarrage</strong> : 15 à 25 photos, couvrant les six premiers types ci-dessus, pour que la galerie montre l'essentiel.</li>
 <li><strong>Ensuite</strong> : 2 à 4 nouvelles photos par mois, publiées à des dates différentes plutôt que d'un bloc.</li>
-<li><strong>Jamais</strong> : 80 photos chargées le même jour puis plus rien pendant deux ans. C'est le profil type d'une fiche créée par une agence puis abandonnée, et cela se voit.</li>
+<li><strong>À éviter</strong> : des dizaines de photos chargées le même jour puis plus rien pendant des mois. La galerie montre alors un établissement figé à une date.</li>
 </ul>
-<p>La régularité compte davantage que le volume, pour la même raison que sur les avis : elle est le signal qu'un établissement est ouvert et actif. C'est exactement la logique de vélocité décrite dans notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</p>
+<p>La régularité compte davantage que le volume : des photos récentes montrent l'établissement tel qu'il est aujourd'hui. C'est la même logique d'entretien que celle décrite dans notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</p>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
 <p class="text-sm text-amber-900"><strong>💡 La routine du vendredi :</strong> bloquez dix minutes le vendredi, tous les quinze jours. Deux photos prises avec le téléphone du comptoir, publiées dans la foulée. Sur un an, cela fait environ 50 photos récentes sans jamais y avoir consacré une demi-journée.</p>
 </div>
@@ -2113,24 +2083,23 @@ export const articles: Record<string, {
 
 <section id="formats-techniques" class="scroll-mt-28 mb-16">
 <h2>Formats, tailles et réglages : ce qui compte vraiment</h2>
-<p>Les spécifications techniques sont simples et n'ont pas beaucoup changé. Google accepte le <strong>JPG et le PNG</strong>, jusqu'à 5 Mo par fichier. Le minimum accepté est de 250 × 250 pixels, mais c'est un plancher à ignorer : en dessous de 720 × 720, l'image est agrandie par Google et perd en netteté sur les écrans récents.</p>
+<p>Les spécifications figurent dans l'aide Google Business Profile sur les photos et vidéos, citée plus haut. Pour les photos : <strong>JPG ou PNG</strong>, entre 10 Ko et 5 Mo, avec une résolution recommandée de 720 × 720 px et une résolution minimale de 250 × 250 px. Google demande aussi une photo nette, bien éclairée, sans retouches importantes ni usage excessif de filtres : l'image doit représenter la réalité.</p>
 <ul>
-<li><strong>Photo de profil et logo</strong> : 720 × 720 px, format carré. Prévoyez un recadrage circulaire sur plusieurs affichages Google : gardez l'essentiel au centre.</li>
-<li><strong>Photo de couverture</strong> : format paysage 16:9, 1080 × 608 px au minimum. C'est celle que vous proposez comme image principale — Google n'est pas obligé de la retenir comme vignette.</li>
-<li><strong>Photos de galerie</strong> : 1080 × 1080 px ou plus, JPG de bonne qualité. Inutile de charger un fichier de 12 Mo : il sera recompressé.</li>
-<li><strong>Vidéos</strong> : jusqu'à 30 secondes, 100 Mo, 720p minimum. Peu utilisées, très visibles quand elles existent.</li>
+<li><strong>Logo et photo de couverture</strong> : cette page d'aide ne publie pas de dimensions spécifiques ; appliquez les recommandations générales ci-dessus et gardez l'essentiel au centre de l'image. La couverture est celle que vous proposez comme image principale, sans garantie qu'elle s'affiche en premier.</li>
+<li><strong>Photos de galerie</strong> : visez au moins la résolution recommandée, dans la limite de 5 Mo par fichier.</li>
+<li><strong>Vidéos</strong> : jusqu'à 30 secondes, jusqu'à 75 Mo, en 720p ou plus.</li>
 </ul>
-<p>Deux croyances tenaces méritent d'être écartées. Première croyance : renommer le fichier <em>plaque-nfc-avis-google-montreuil.jpg</em> améliorerait le référencement local. Rien n'indique que Google lise le nom de fichier d'une photo de fiche ; cela ne coûte rien, mais n'en attendez aucun effet. Seconde croyance : injecter des <strong>coordonnées GPS dans les données EXIF</strong> ferait monter la fiche. Google déclare retirer les métadonnées à l'import, et l'idée relève du folklore SEO plus que de la méthode.</p>
-<p>Ce qui compte réellement tient en trois points : la photo est <strong>nette</strong>, elle est <strong>prise en lumière naturelle</strong>, elle montre <strong>votre établissement et pas une banque d'images</strong>. Les détails et les règles officielles figurent dans <a href="https://support.google.com/business/answer/6103862" target="_blank" rel="noopener noreferrer">la documentation Google sur l'ajout de photos et de vidéos</a>.</p>
+<p>Deux croyances tenaces méritent d'être écartées. Première croyance : renommer le fichier <em>plaque-nfc-avis-google-montreuil.jpg</em> améliorerait le référencement local. Seconde croyance : injecter des <strong>coordonnées GPS dans les données EXIF</strong> ferait monter la fiche. Ni l'aide de Google sur les photos, ni sa page sur le classement local ne mentionnent le nom de fichier ou les métadonnées : n'en attendez aucun effet, et consacrez plutôt ce temps à de meilleures photos.</p>
+<p>Ce qui compte réellement tient en trois points : la photo est <strong>nette</strong>, elle est <strong>prise en lumière naturelle</strong>, elle montre <strong>votre établissement et pas une banque d'images</strong>.</p>
 </section>
 
 <section id="photos-clients" class="scroll-mt-28 mb-16">
 <h2>Faire publier des photos par vos clients</h2>
-<p>Une photo client vaut plus qu'une photo professionnelle, pour la même raison qu'un avis vaut plus qu'un argumentaire : elle n'a pas été mise en scène. Sur les fiches les plus consultées d'un secteur, les photos clients sont souvent trois à dix fois plus nombreuses que celles du propriétaire.</p>
-<p>On ne peut évidemment ni acheter ni échanger une photo contre quoi que ce soit — c'est la même règle que pour les avis, et les sanctions sont les mêmes. En revanche, il se trouve que la photo arrive presque toujours <strong>au même moment que l'avis</strong> : quand le client est déjà sur le formulaire, appareil en main, Google lui propose d'ajouter une image en un bouton. Autrement dit, tout ce qui augmente le nombre d'avis augmente mécaniquement le nombre de photos clients.</p>
-<p>C'est là que le support physique change tout. Une <a href="/#product">plaque NFC posée au comptoir</a> ouvre la page d'avis en approchant le téléphone, sans application ni saisie d'adresse : le client est sur le formulaire en deux secondes, au moment précis où il est content. Le tour de la question des emplacements est fait dans notre guide des <a href="/blog/ou-placer-plaque-avis-google">7 emplacements pour une plaque avis Google</a>.</p>
+<p>Une photo client a une qualité qu'aucune photo professionnelle n'a : elle n'a pas été mise en scène. C'est la même raison qui fait qu'un avis pèse plus qu'un argumentaire.</p>
+<p>On ne peut évidemment ni acheter ni échanger une photo contre quoi que ce soit : le <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">règlement de Google sur les contenus ajoutés dans Maps</a> exige que les contributions reflètent une expérience réellement vécue et interdit les avantages offerts en échange d'un avis. En revanche, la photo peut arriver <strong>au même moment que l'avis</strong> : sur le formulaire d'avis de Google Maps, <a href="https://support.google.com/maps/answer/6230175?hl=fr" target="_blank" rel="noopener noreferrer">un bouton permet d'importer des photos</a>. Chaque avis est donc une occasion de photo.</p>
+<p>C'est là que le support physique aide. Une <a href="/#product">plaque NFC posée au comptoir</a> ouvre la page d'avis quand le client en approche son téléphone, sans application ni saisie d'adresse, au moment où il est encore sur place. Le tour de la question des emplacements est fait dans notre guide des <a href="/blog/ou-placer-plaque-avis-google">7 emplacements pour une plaque avis Google</a>.</p>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>⚙️ La phrase qui déclenche la photo :</strong> « si vous avez pris une photo tout à l'heure, vous pouvez la joindre, ça aide vraiment les gens à se décider ». Elle est neutre, ne promet rien, ne demande rien d'obligatoire — et elle double le taux de photos jointes dans la plupart des retours qui nous remontent.</p>
+<p class="text-sm text-emerald-900"><strong>⚙️ Une phrase pour évoquer la photo :</strong> « si vous avez pris une photo tout à l'heure, vous pouvez la joindre, ça aide les gens à se décider ». Elle est neutre, ne promet rien, ne demande rien d'obligatoire.</p>
 </div>
 </section>
 
@@ -2140,23 +2109,23 @@ export const articles: Record<string, {
 <li><strong>Utiliser des photos de banque d'images.</strong> Un intérieur de restaurant qui n'est pas le vôtre est le meilleur moyen de décevoir à l'arrivée, et donc de récolter un avis tiède.</li>
 <li><strong>Publier des photos prises de nuit au flash.</strong> Elles écrasent les couleurs et donnent un aspect fermé. Refaites-les en journée, cela prend cinq minutes.</li>
 <li><strong>Ne montrer que le local vide.</strong> Un commerce sans personne dedans paraît sans clients. Un peu de vie, floutée si nécessaire.</li>
-<li><strong>Charger une affiche promotionnelle en guise de photo.</strong> Google déclasse les images essentiellement composées de texte, et le client cherche votre établissement, pas une publicité.</li>
+<li><strong>Charger une affiche promotionnelle en guise de photo.</strong> Google demande des photos qui représentent la réalité, et le client cherche votre établissement, pas une publicité.</li>
 <li><strong>Laisser une photo obsolète en tête de galerie.</strong> Travaux terminés, enseigne changée, salle refaite : republiez, sinon Street View parlera pour vous.</li>
-<li><strong>Négliger la photo de couverture au motif que Google ne la retient pas toujours.</strong> Elle est utilisée dans plusieurs affichages, et c'est celle que vous maîtrisez.</li>
-<li><strong>Traiter les photos et les avis comme deux chantiers séparés.</strong> Ils se nourrissent l'un l'autre : chaque avis collecté est une occasion de photo, et chaque photo augmente la probabilité qu'on ouvre la fiche pour lire les avis.</li>
+<li><strong>Négliger la photo de couverture au motif que Google ne la retient pas toujours.</strong> C'est la photo que vous proposez comme image principale : même sans garantie d'affichage, c'est votre meilleure chance de choisir la première impression.</li>
+<li><strong>Traiter les photos et les avis comme deux chantiers séparés.</strong> Ils se nourrissent l'un l'autre : chaque avis collecté est une occasion de photo, et de bonnes photos peuvent donner envie d'ouvrir la fiche, donc de lire les avis.</li>
 </ul>
 </section>
 
 <section id="mesurer" class="scroll-mt-28 mb-16">
 <h2>Mesurer l'effet : les trois chiffres à regarder</h2>
-<p>L'interface Google Business Profile fournit des statistiques suffisantes pour trancher, à condition de ne pas regarder les mauvais indicateurs. Trois chiffres méritent d'être relevés le premier de chaque mois, dans un simple tableau :</p>
+<p>Le rapport <a href="https://support.google.com/business/answer/9918094?hl=fr" target="_blank" rel="noopener noreferrer">Performances de Google Business Profile</a> ne présente pas, dans sa page d'aide, de statistiques propres aux photos : il n'isole donc pas leur effet. Trois chiffres restent utiles à relever le premier de chaque mois, dans un simple tableau :</p>
 <ul>
-<li><strong>Les vues de la fiche</strong>, séparées entre recherche et Maps. Elles dépendent surtout de votre position, pas de vos photos.</li>
-<li><strong>Les demandes d'itinéraire et les appels</strong>. C'est le vrai indicateur d'intention. Si vos photos font leur travail, c'est ici que cela se voit en premier.</li>
-<li><strong>Le nombre de vues de vos photos comparé à celui des fiches concurrentes</strong>, que Google affiche directement.</li>
+<li><strong>Les vues</strong>, c'est-à-dire le nombre de personnes ayant consulté votre fiche. Elles dépendent d'abord de votre visibilité dans les résultats.</li>
+<li><strong>Les demandes d'itinéraire et les appels</strong>. Ce sont les indicateurs les plus proches d'une intention de venir.</li>
+<li><strong>Les clics vers votre site web</strong>, si votre fiche en affiche un.</li>
 </ul>
-<p>Comptez six à huit semaines avant de conclure quoi que ce soit, et évitez de comparer un mois d'août à un mois de novembre. Comme pour la note, les effets sont lents mais cumulatifs — c'est le même raisonnement que dans notre article sur le <a href="/blog/ameliorer-note-google">calcul du nombre d'avis nécessaire pour améliorer sa note Google</a>.</p>
-<p>Et si des photos disparaissent de votre fiche sans explication, la mécanique de modération est la même que pour les avis : elle est décrite dans <a href="/blog/avis-google-disparus">avis Google disparus, les causes et les recours</a>.</p>
+<p>Laissez passer plusieurs mois de relevés avant de conclure, et évitez de comparer un mois d'août à un mois de novembre. Ces chiffres ne diront pas ce qui revient aux photos plutôt qu'au reste de la fiche : ils indiquent une tendance — c'est le même raisonnement que dans notre article sur le <a href="/blog/ameliorer-note-google">calcul du nombre d'avis nécessaire pour améliorer sa note Google</a>.</p>
+<p>Et si des photos disparaissent de votre fiche sans explication, il peut s'agir de modération, comme pour les avis : les causes possibles sont décrites dans <a href="/blog/avis-google-disparus">avis Google disparus, les causes et les recours</a>.</p>
 </section>
 
 <section id="plan-30-jours" class="scroll-mt-28 mb-16">
@@ -2165,7 +2134,7 @@ export const articles: Record<string, {
 <ul>
 <li>Ouvrez votre fiche sur un téléphone, en navigation privée. Notez la vignette affichée : est-ce une de vos photos ou celle d'un client ?</li>
 <li>Comptez les photos des trois concurrents classés devant vous. Vous avez votre objectif chiffré.</li>
-<li>Signalez les photos clients manifestement hors sujet — c'est le seul retrait que vous pouvez obtenir.</li>
+<li>Signalez les photos clients qui relèvent d'un motif prévu par Google (photo ne correspondant pas au lieu, spam, informations personnelles, confidentialité) : c'est la seule voie de retrait.</li>
 </ul>
 <h3>Semaine 2 : la série de base</h3>
 <ul>
@@ -2188,31 +2157,31 @@ export const articles: Record<string, {
 <h2>FAQ — Photos Google Business Profile</h2>
 
 <h3>Combien de photos faut-il sur une fiche Google Business Profile ?</h3>
-<p>Google ne communique aucun seuil. La bonne cible se lit chez vos concurrents : ouvrez les trois fiches classées devant vous, comptez leurs photos publiées par le propriétaire, et placez-vous au-dessus de la médiane. En pratique, 15 à 25 photos au démarrage couvrent l'essentiel des besoins d'un commerce local, puis 2 à 4 nouvelles photos par mois suffisent à entretenir la fiche. En dessous de 10 photos, la galerie paraît abandonnée et le client passe à la fiche suivante.</p>
+<p>Google ne communique aucun seuil. La bonne cible se lit chez vos concurrents : ouvrez les fiches classées devant vous, comptez leurs photos publiées par le propriétaire, et placez-vous au-dessus de la médiane. À défaut de repère officiel, nous recommandons 15 à 25 photos au démarrage pour couvrir l'essentiel, puis 2 à 4 nouvelles photos par mois pour entretenir la fiche.</p>
 
 <h3>Quelle taille et quel format pour les photos Google Business Profile ?</h3>
-<p>JPG ou PNG, jusqu'à 5 Mo. Le minimum accepté est 250 × 250 pixels mais il faut viser au moins 720 × 720, sans quoi Google agrandit l'image et elle perd en netteté. La photo de profil et le logo se chargent en carré 720 × 720 px, en gardant l'essentiel au centre puisque plusieurs affichages appliquent un recadrage circulaire. La photo de couverture se charge en paysage 16:9, 1080 × 608 px au minimum. Pour les photos de galerie, 1080 × 1080 px est un bon compromis.</p>
+<p>Selon l'aide Google Business Profile : JPG ou PNG, entre 10 Ko et 5 Mo, résolution recommandée de 720 × 720 px et minimale de 250 × 250 px, photo nette et bien éclairée, sans retouches importantes. Pour les vidéos : jusqu'à 30 secondes, jusqu'à 75 Mo, en 720p ou plus. Google ne publie pas, sur cette page, de dimensions spécifiques pour le logo ou la photo de couverture : appliquez les mêmes recommandations et gardez l'essentiel au centre.</p>
 
 <h3>Peut-on supprimer une photo publiée par un client ?</h3>
-<p>Pas directement. Vous pouvez uniquement la signaler, et Google ne la retire que si elle enfreint ses règles : contenu hors sujet, photo d'un autre établissement, image offensante ou manifestement trompeuse. Une photo simplement peu flatteuse mais authentique restera en ligne. Le seul levier réellement efficace consiste donc à publier régulièrement des photos récentes et nettes : la galerie se réorganise et l'image gênante recule.</p>
+<p>Pas directement. Vous pouvez la signaler depuis votre fiche en choisissant un motif — Google propose notamment « Problème de confidentialité », « Photo ou vidéo ne correspondant pas au lieu », « Spam » ou « Informations personnelles » —, puis Google examine la demande, ce qui peut prendre plusieurs jours ouvrés. Une photo simplement peu flatteuse mais authentique n'entre dans aucun de ces motifs. Le levier qui dépend de vous consiste donc à publier régulièrement des photos récentes et nettes, pour que le client ait d'autres images sous les yeux.</p>
 
 <h3>Les photos font-elles monter une fiche dans le pack local ?</h3>
-<p>Pas de la même manière que les avis. Le classement local repose sur la pertinence, la distance et la proéminence, et les photos n'entrent pas directement dans ce calcul. Leur effet est indirect mais réel : elles augmentent le taux de clic sur une fiche déjà affichée, et Google observe ce comportement. Une fiche systématiquement ignorée dans le pack local finit par perdre sa place, une fiche systématiquement choisie consolide la sienne.</p>
+<p>Google ne les présente pas comme un critère de classement. Sa page sur le classement local cite la pertinence, la distance et la proéminence, et indique que davantage d'avis et de notes positives peuvent améliorer le classement ; les photos y sont évoquées comme un moyen de montrer ce que vous proposez. Leur rôle se joue donc une fois la fiche affichée, pour aider le client à choisir. Pour gagner des positions, le levier que Google cite explicitement reste les avis.</p>
 
 <h3>Faut-il ajouter des données GPS dans les photos pour le SEO local ?</h3>
-<p>Non. Cette technique circule depuis des années dans les forums SEO, mais Google indique retirer les métadonnées EXIF à l'import : les coordonnées ne survivent pas au chargement. Le temps passé à modifier les EXIF est mieux investi à photographier votre parking ou votre équipe. Il en va de même pour le nom du fichier : cela ne coûte rien de le nommer proprement, mais n'en attendez aucun gain de position.</p>
+<p>Rien ne l'indique. Cette technique circule dans les forums SEO, mais ni l'aide de Google sur les photos ni sa page sur le classement local ne mentionnent les métadonnées EXIF ou les coordonnées GPS. Le temps passé à modifier les EXIF est mieux investi à photographier votre parking ou votre équipe. Il en va de même pour le nom du fichier : cela ne coûte rien de le nommer proprement, mais n'en attendez aucun gain de position.</p>
 
 <h3>Comment obtenir des photos publiées par les clients ?</h3>
-<p>En collectant des avis. Google propose l'ajout d'une photo directement sur le formulaire d'avis : tout ce qui augmente le nombre d'avis augmente mécaniquement le nombre de photos clients. Une plaque NFC posée au comptoir ouvre ce formulaire en approchant le téléphone, sans application ni saisie. Une phrase suffit ensuite à déclencher la photo : « si vous en avez pris une tout à l'heure, vous pouvez la joindre ». En revanche, offrir une contrepartie contre une photo ou un avis est interdit et expose à la suppression de l'ensemble de vos avis.</p>
+<p>En collectant des avis. Le formulaire d'avis de Google Maps comporte un bouton pour importer des photos : chaque avis est donc une occasion de photo. Une plaque NFC posée au comptoir ouvre ce formulaire quand le client en approche son téléphone, sans application ni saisie. Une phrase peut ensuite évoquer la photo : « si vous en avez pris une tout à l'heure, vous pouvez la joindre ». En revanche, offrir une contrepartie contre un avis est interdit par le règlement de Google, qui peut alors restreindre la fiche : blocage temporaire des nouveaux avis, dépublication temporaire des avis existants, avertissement affiché aux consommateurs.</p>
 
 <h3>À quelle fréquence faut-il publier de nouvelles photos ?</h3>
-<p>Deux à quatre par mois, publiées à des dates différentes plutôt que d'un seul bloc. La régularité est le signal utile : elle indique un établissement ouvert et actif. Le schéma à éviter est celui de la fiche créée par une agence, remplie de 80 photos le premier jour puis laissée intacte pendant deux ans. Dix minutes tous les quinze jours, avec le téléphone du comptoir, suffisent à tenir le rythme sur l'année.</p>
+<p>Nous recommandons deux à quatre photos par mois, publiées à des dates différentes plutôt que d'un seul bloc : des photos récentes montrent l'établissement tel qu'il est aujourd'hui. Le schéma à éviter est celui de la galerie remplie en une journée puis laissée intacte pendant des mois. Dix minutes tous les quinze jours, avec le téléphone du comptoir, suffisent à tenir le rythme sur l'année.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : les photos ouvrent la fiche, les avis la font apparaître</h2>
-<p>Une fiche Google se joue en deux temps, et les confondre fait perdre du temps. Les avis décident si vous êtes <strong>affiché</strong> parmi les trois fiches du pack local. Les photos décident si vous êtes <strong>choisi</strong> une fois affiché. Travailler l'un sans l'autre revient soit à soigner une vitrine dans une rue sans passage, soit à attirer du monde devant un rideau baissé.</p>
-<p>La bonne nouvelle, c'est que les deux chantiers se rejoignent au même endroit : le comptoir, au moment où le client est content. Il y laisse un avis, et souvent une photo dans la foulée. Tout le reste — le format 720 × 720, la routine du vendredi, la photo du parking — n'est que de la mise en œuvre.</p>
+<p>Une fiche Google se joue en deux temps, et les confondre fait perdre du temps. Les avis peuvent vous aider à être <strong>affiché</strong> parmi les fiches du pack local : c'est ce que Google indique. Les photos aident le client à vous <strong>choisir</strong> une fois affiché. Travailler l'un sans l'autre revient soit à soigner une vitrine dans une rue sans passage, soit à attirer du monde devant un rideau baissé.</p>
+<p>La bonne nouvelle, c'est que les deux chantiers se rejoignent au même endroit : le comptoir, au moment où le client est content. Il y laisse un avis, et parfois une photo dans la foulée. Tout le reste — le format 720 × 720, la routine du vendredi, la photo du parking — n'est que de la mise en œuvre.</p>
 <p>Guides complémentaires : <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>, <a href="/blog/combien-avis-google-pack-local">combien d'avis pour le pack local</a>, <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>, ou <a href="/blog/statistiques-avis-google-2026">les statistiques avis Google 2026 sourcées</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
@@ -2228,10 +2197,10 @@ export const articles: Record<string, {
     date: '19 août 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Un opticien voit son client quatre fois, puis plus rien pendant deux ans : si l\'avis n\'est pas demandé pendant cette fenêtre, il ne le sera jamais. Le moment qui change tout, les 6 emplacements classés, les scripts magasin et trois exemples de calcul.',
+    excerpt: 'Un opticien voit son client lors de quelques rendez-vous rapprochés, puis parfois plus pendant des années : si l\'avis n\'est pas demandé pendant cette fenêtre, l\'occasion ne se représentera pas avant longtemps. Le moment qui compte, les 6 emplacements passés en revue, les scripts magasin et trois exemples de calcul fondés sur des hypothèses.',
     tocSections: [
       { id: 'pourquoi-avis-opticien', label: 'Pourquoi les avis décident' },
-      { id: 'cycle-long', label: 'Quatre visites, puis deux ans' },
+      { id: 'cycle-long', label: 'Quelques visites, puis des années' },
       { id: 'fonctionnement', label: 'Comment fonctionne la plaque' },
       { id: 'placements-opticien', label: '6 emplacements classés' },
       { id: 'moments-demander', label: 'Quand demander, quand se taire' },
@@ -2247,22 +2216,22 @@ export const articles: Record<string, {
 <section id="pourquoi-avis-opticien" class="scroll-mt-28 mb-16">
 <h2>Pourquoi les avis Google décident du choix d'un opticien</h2>
 <p>Un client qui cherche des lunettes ne peut comparer ni la qualité d'un verre progressif, ni la précision d'une prise de mesures, ni la pertinence d'un conseil de monture. Ces trois choses constituent l'essentiel de votre métier, et aucune n'est évaluable depuis un trottoir. Il lui reste deux critères visibles : la vitrine, et ce que les autres clients ont écrit.</p>
-<p>Et il les lit. <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs). Sur une requête « opticien + ville », Google n'affiche que trois fiches dans le pack local avant qu'il faille cliquer pour voir la suite. Un magasin à 23 avis noté 4,1 ne se bat pas à armes égales avec l'enseigne à 340 avis notée 4,8 installée deux rues plus loin.</p>
-<p>Deux particularités du métier rendent l'enjeu plus lourd qu'ailleurs. La première est la densité : dans la plupart des villes moyennes, le client a cinq à dix opticiens à moins de dix minutes, souvent alignés sur les mêmes verriers et les mêmes grandes marques de montures. Quand l'offre se ressemble, le classement se joue ailleurs. La seconde est le panier moyen : un équipement progressif complet se situe fréquemment entre 400 et 900 € selon la monture et l'indice des verres. Une place perdue dans le pack local ne vous coûte pas un café, elle vous coûte un équipement.</p>
+<p>Et il les lit. <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026 menée auprès de 1 350 Français représentatifs). Sur une requête « opticien + ville », Google n'affiche que quelques fiches avec la carte avant qu'il faille cliquer pour voir la suite. Un magasin à 23 avis noté 4,1 ne se bat pas à armes égales avec l'enseigne à 340 avis notée 4,8 installée deux rues plus loin.</p>
+<p>Deux particularités du métier rendent l'enjeu plus lourd qu'ailleurs. La première est la densité : là où plusieurs opticiens se partagent le même secteur, souvent alignés sur les mêmes verriers et les mêmes grandes marques de montures, le client peine à les départager sur l'offre. Quand l'offre se ressemble, le classement se joue ailleurs. La seconde est la valeur d'une vente : vous connaissez le montant de vos équipements à verres progressifs, et il est sans commune mesure avec le prix d'une plaque. Une place perdue dans les résultats locaux ne vous coûte pas un café, elle peut vous coûter un équipement.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> multipliez votre panier moyen par le nombre d'équipements qu'un client achètera chez vous sur dix ans — lui, plus son conjoint, plus ses enfants. Vous obtenez la valeur réelle d'un nouveau client, celle qu'il faut comparer au coût d'une plaque. C'est un ordre de grandeur qui n'a rien à voir avec le prix d'une paire.</p>
 </div>
 </section>
 
 <section id="cycle-long" class="scroll-mt-28 mb-16">
-<h2>Le vrai problème de l'opticien : quatre visites, puis deux ans de silence</h2>
-<p>Un restaurateur voit ses clients toutes les semaines. Un coiffeur toutes les six semaines. Un opticien, lui, concentre toute la relation sur quelques rendez-vous rapprochés — examen de vue, choix de la monture, prise de mesures, livraison, un ajustage ou deux — puis n'entend plus parler de son client pendant deux à trois ans, la plupart des contrats de complémentaire santé ne prenant en charge un nouvel équipement qu'à cette périodicité.</p>
-<p>Conséquence directe : <strong>si l'avis n'est pas demandé pendant cette fenêtre de trois semaines, il ne le sera jamais.</strong> Il n'y a pas de « prochaine fois » dans deux mois pour se rattraper. Le magasin qui compte sur le hasard collecte donc uniquement les avis spontanés — et les avis spontanés, dans l'optique, sont majoritairement écrits par des mécontents, parce que la déception y a presque toujours un montant ou un délai inscrit dessus.</p>
+<h2>Le vrai problème de l'opticien : quelques visites, puis des années sans nouvel équipement</h2>
+<p>Un restaurateur peut revoir ses habitués au fil des semaines, un coiffeur au fil des mois. Un opticien, lui, concentre l'essentiel de la relation sur quelques rendez-vous rapprochés — examen de vue, choix de la monture, prise de mesures, livraison, un ajustage ou deux. Ensuite, le prochain équipement peut se faire attendre longtemps : pour les assurés de 16 ans et plus, <a href="https://www.ameli.fr/assure/remboursements/rembourse/soins-protheses-dentaires-optique-audition/lunettes-lentilles" target="_blank" rel="noopener noreferrer">la prise en charge d'un nouvel équipement n'est renouvelable qu'au terme de deux ans</a>, sauf exceptions prévues par l'Assurance Maladie.</p>
+<p>Conséquence directe : <strong>si l'avis n'est pas demandé pendant ces quelques semaines, l'occasion ne se représentera pas avant longtemps.</strong> Il n'y a pas de « prochaine fois » dans deux mois pour se rattraper. Le magasin qui compte sur le hasard ne recueille que les avis de ceux qui pensent d'eux-mêmes à écrire, et rien ne garantit qu'ils ressemblent à l'ensemble de ses clients satisfaits.</p>
 <h3>Les 4 méthodes qui ne fonctionnent pas en magasin d'optique</h3>
 <ul>
-<li><strong>Le flyer glissé dans l'étui à lunettes</strong> : l'étui part au fond du sac à main ou de la boîte à gants. Le papier est retrouvé six mois plus tard, ou jamais.</li>
-<li><strong>Le mail de relance après livraison</strong> : il arrive une fois le client rentré chez lui, au milieu de cinquante autres messages, à un moment où l'émotion de la livraison est retombée. Et il arrive parfois juste après un problème d'adaptation aux progressifs, ce qui produit exactement l'avis que vous ne vouliez pas.</li>
-<li><strong>L'affiche A4 scotchée près de la caisse</strong> : elle devient invisible en trois jours, y compris pour votre propre équipe.</li>
+<li><strong>Le flyer glissé dans l'étui à lunettes</strong> : l'étui part au fond du sac à main ou de la boîte à gants. Le papier est retrouvé bien plus tard, ou jamais.</li>
+<li><strong>Le mail de relance après livraison</strong> : il arrive une fois le client rentré chez lui, au milieu de ses autres messages, à un moment où l'émotion de la livraison est retombée. Et il peut tomber en pleine période d'adaptation aux progressifs, au moment où le client a surtout besoin d'un rendez-vous d'ajustage.</li>
+<li><strong>L'affiche A4 scotchée près de la caisse</strong> : elle finit par devenir invisible, y compris pour votre propre équipe.</li>
 <li><strong>Le « n'hésitez pas à nous laisser un avis » lancé au moment de partir</strong> : sans objet à toucher, le client acquiesce sincèrement, y pense sur le parking, puis passe à autre chose.</li>
 </ul>
 <p>Ce qui fonctionne, c'est un objet posé exactement là où le client dépose son téléphone pour régler ou pour ranger son ancienne paire, présenté à l'instant précis où il vient de voir net. Rien d'autre.</p>
@@ -2270,22 +2239,22 @@ export const articles: Record<string, {
 
 <section id="fonctionnement" class="scroll-mt-28 mb-16">
 <h2>Comment fonctionne la plaque NFC dans un magasin d'optique</h2>
-<p>La plaque est en acrylique premium (120 × 120 × 3 mm) et contient une puce NTAG215. Le client approche son smartphone à moins de 4 cm : votre page d'avis Google s'ouvre <strong>automatiquement</strong>, sans application à installer, sans code à saisir, sans avoir à chercher votre magasin dans Maps.</p>
+<p>La plaque est en acrylique premium (120 × 120 × 3 mm) et contient une puce NTAG215. Le client approche son smartphone tout près de la plaque (<a href="https://nfc-forum.org/learn/nfc-technology/" target="_blank" rel="noopener noreferrer">le NFC Forum</a> indique une portée allant généralement jusqu'à 2 cm) : sur un téléphone compatible, votre page d'avis Google s'ouvre <strong>automatiquement</strong>, sans application à installer, sans code à saisir, sans avoir à chercher votre magasin dans Maps.</p>
 <ol>
 <li>Le client vient de chausser son nouvel équipement à la table d'ajustage</li>
 <li>L'opticien avance la plaque : « Si vous avez trente secondes, approchez votre téléphone ici »</li>
 <li>Le formulaire d'avis de votre fiche s'ouvre directement</li>
-<li>Cinq étoiles et deux lignes — c'est terminé</li>
+<li>Une note, deux lignes — c'est terminé</li>
 </ol>
-<p>Un <strong>QR code de secours</strong> est imprimé sur la plaque pour les téléphones dont le NFC est désactivé. C'est loin d'être un détail dans ce métier : la presbytie commence vers 45 ans, et une partie significative de votre clientèle a plus de 60 ans. Pour ces clients, le geste « scanner » est souvent plus familier que le geste « approcher », et il faut pouvoir proposer les deux sans hésiter.</p>
+<p>Un <strong>QR code de secours</strong> est imprimé sur la plaque pour les téléphones dont le NFC est désactivé. C'est loin d'être un détail dans ce métier : la presbytie apparaît généralement à partir de 45 ans, <a href="https://www.ameli.fr/professionnel-de-la-lpplatm/exercice-professionnel/vie-professionnelle/competences-obligations/opticiens-renouvellement-sans-ordonnance" target="_blank" rel="noopener noreferrer">rappelle l'Assurance Maladie</a>. Pour une partie de ces clients, le geste « scanner » est plus familier que le geste « approcher », et il faut pouvoir proposer les deux sans hésiter.</p>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>⚙️ Spécificité optique :</strong> la table d'ajustage est un plan de travail où l'on manipule en permanence des outils, des chiffonnettes et des produits nettoyants. L'acrylique 3 mm supporte les sprays optiques et les lingettes microfibres sans se voiler ni se rayer, contrairement à un carton plastifié ou à un chevalet imprimé qui gondole en quelques semaines.</p>
+<p class="text-sm text-emerald-900"><strong>⚙️ Spécificité optique :</strong> la table d'ajustage est un plan de travail où l'on manipule en permanence des outils, des chiffonnettes et des produits nettoyants. Vérifiez la composition de vos sprays avant d'en utiliser à proximité : pour l'acrylique, <a href="https://www.plexiglas.de/en/service/processing/cleaning-plexiglas" target="_blank" rel="noopener noreferrer">les consignes d'entretien de Röhm, fabricant du PLEXIGLAS</a>, recommandent de l'eau et un chiffon doux, et déconseillent les produits contenant de l'éthanol ou d'autres alcools, l'isopropanol faisant exception.</p>
 </div>
 </section>
 
 <section id="placements-opticien" class="scroll-mt-28 mb-16">
 <h2>Où placer la plaque en magasin d'optique : 6 emplacements classés</h2>
-<p>Le placement fait la majorité du travail. Le bon critère n'est pas la visibilité, c'est l'état du client au moment où il croise l'objet : a-t-il son téléphone en main ? Est-il assis ou debout ? Vient-il de payer, ou de découvrir un reste à charge ? Voici les six emplacements possibles, classés par rendement réel.</p>
+<p>Le placement fait la majorité du travail. Le bon critère n'est pas la visibilité, c'est l'état du client au moment où il croise l'objet : a-t-il son téléphone en main ? Est-il assis ou debout ? Vient-il de payer, ou de découvrir un reste à charge ? Voici les six emplacements possibles, classés selon ces critères : c'est une appréciation, pas une mesure.</p>
 
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
@@ -2302,93 +2271,93 @@ export const articles: Record<string, {
 </div>
 
 <h3>1. La table d'ajustage, au moment de la livraison ✅</h3>
-<p>C'est <strong>de très loin le meilleur emplacement de tout le magasin</strong>, et la raison n'a rien d'anecdotique. La livraison est le seul instant du parcours où le client obtient physiquement ce qu'il attendait : il chausse, il regarde au loin, il lit une ligne, et il voit net. C'est le pic émotionnel de toute la relation, et il se produit assis, à une table, avec l'ancienne paire et le téléphone posés devant lui. Aucun autre moment ne combine ces trois conditions.</p>
+<p>C'est <strong>l'emplacement à équiper en premier</strong>, et la raison n'a rien d'anecdotique. La livraison est le seul instant du parcours où le client obtient physiquement ce qu'il attendait : il chausse, il regarde au loin, il lit une ligne, et il voit net. C'est le pic émotionnel de toute la relation, et il se produit assis, à une table, avec l'ancienne paire et le téléphone posés devant lui. Aucun autre moment ne combine ces trois conditions.</p>
 
 <h3>2. Le comptoir de caisse, à droite du terminal de paiement</h3>
 <p>Deuxième meilleur emplacement, parce que le téléphone est déjà sorti pour le paiement sans contact. Une nuance propre au métier : dans beaucoup de magasins, le solde réglé en caisse est un reste à charge après mutuelle, c'est-à-dire le moment du parcours où le client pense au prix. Si ce reste à charge a été mal anticipé, ce n'est pas l'instant idéal — d'où l'intérêt d'équiper aussi la table d'ajustage, où la question financière est déjà derrière.</p>
 
 <h3>3. Le poste de contactologie</h3>
-<p>Sous-estimé, et pourtant très performant. Un primo-porteur qui parvient à poser et retirer seul ses lentilles après vingt minutes d'apprentissage vient de vivre une petite victoire personnelle, avec vous. Il est assis, il a les mains libres une fois terminé, et il est reconnaissant d'un temps que beaucoup de magasins ne prennent pas.</p>
+<p>Un emplacement facile à oublier. Un primo-porteur qui parvient à poser et retirer seul ses lentilles à la fin de sa séance d'apprentissage vient de vivre une petite victoire personnelle, avec vous. Il est assis, il a les mains libres une fois terminé, et il est reconnaissant d'un temps que beaucoup de magasins ne prennent pas.</p>
 
 <h3>4. Le comptoir de SAV et de petites réparations</h3>
-<p>C'est l'angle mort du secteur. Un client qui repasse faire resserrer une branche, remplacer des plaquettes ou récupérer une vis reçoit un service <strong>gratuit</strong>, en trois minutes, sans rendez-vous. Il repart content et personne ne lui demande jamais rien, précisément parce qu'il n'y a pas eu de transaction. C'est une erreur : ces visites représentent souvent plusieurs passages par jour et constituent un gisement d'avis entièrement inexploité.</p>
+<p>C'est un moment facile à négliger. Un client qui repasse faire resserrer une branche, remplacer des plaquettes ou récupérer une vis reçoit un service <strong>gratuit</strong>, en quelques minutes, sans rendez-vous. Comme il n'y a pas eu de transaction, l'idée de lui parler d'avis vient moins naturellement. Comptez ces passages pendant une semaine : vous saurez ce qu'ils représentent chez vous.</p>
 
 <h3>5. Le bureau d'examen de vue</h3>
-<p>Rendement moyen, et pour une bonne raison : le contrôle précède la vente. Solliciter un avis avant d'avoir livré l'équipement revient à demander une note à la mi-temps. À réserver aux contrôles de fin de garantie ou aux renouvellements d'ordonnance qui ne débouchent sur aucun achat, quand le client repart satisfait sans rien acheter.</p>
+<p>Emplacement moins favorable, et pour une bonne raison : le contrôle précède la vente. Solliciter un avis avant d'avoir livré l'équipement revient à demander une note à la mi-temps. À réserver aux contrôles de fin de garantie ou aux renouvellements d'ordonnance qui ne débouchent sur aucun achat, quand le client repart satisfait sans rien acheter.</p>
 
 <h3>6. La vitrine ou le mur de montures</h3>
-<p>Faible rendement. Le client qui flâne devant les montures n'a aucune expérience à raconter — il n'a encore rien vécu chez vous. La plaque y sert au mieux de signal de confiance, jamais d'outil de collecte. Notre <a href="/blog/ou-placer-plaque-avis-google">guide des 7 meilleurs emplacements</a> détaille la logique de placement, tous secteurs confondus.</p>
+<p>Emplacement peu favorable. Le client qui flâne devant les montures n'a aucune expérience à raconter — il n'a encore rien vécu chez vous. La plaque y sert au mieux de signal de confiance, jamais d'outil de collecte. Notre <a href="/blog/ou-placer-plaque-avis-google">guide des 7 meilleurs emplacements</a> détaille la logique de placement, tous secteurs confondus.</p>
 </section>
 
 <section id="moments-demander" class="scroll-mt-28 mb-16">
 <h2>Les 5 moments où l'on demande, les 4 où l'on se tait</h2>
-<p>Dans l'optique plus qu'ailleurs, le moment compte davantage que la formulation. Le même client, sollicité à quinze jours d'intervalle, écrira deux avis opposés.</p>
+<p>Dans l'optique, le moment compte au moins autant que la formulation. Le même client, sollicité à quinze jours d'intervalle, peut écrire deux avis très différents.</p>
 <h3>Les 5 moments qui fonctionnent</h3>
 <ul>
-<li><strong>La livraison de l'équipement</strong>, juste après le premier essai réussi. Le moment de référence, celui qui produit le plus d'avis et les plus détaillés.</li>
+<li><strong>La livraison de l'équipement</strong>, juste après le premier essai réussi. Le moment de référence.</li>
 <li><strong>Le premier ajustage de confort</strong>, huit à quinze jours après la livraison : le client a vécu avec ses verres, l'adaptation est faite, et vous venez de corriger gratuitement un point de gêne.</li>
 <li><strong>La fin d'un apprentissage de lentilles réussi</strong>, quand le primo-porteur repart autonome.</li>
 <li><strong>Une réparation dépannée sur place</strong> : branche resserrée, vis remplacée, verre reclipé en trois minutes et sans facture.</li>
-<li><strong>La sortie d'un équipement enfant réussi</strong>, quand un parent voit son enfant lire correctement pour la première fois. Ce sont les avis les plus émotionnels du secteur, et ceux qui convainquent le mieux les autres parents.</li>
+<li><strong>La sortie d'un équipement enfant réussi</strong>, quand un parent voit son enfant lire correctement pour la première fois. Un moment fort, pour la famille comme pour vous.</li>
 </ul>
 <h3>Les 4 situations où l'on ne demande jamais</h3>
 <ul>
 <li><strong>Pendant l'annonce du devis</strong>, tant que le reste à charge après mutuelle n'a pas été accepté sans réserve.</li>
-<li><strong>Quand la commande a du retard</strong> chez le verrier, même si le retard ne vous est pas imputable. Le client ne fera pas la distinction.</li>
+<li><strong>Quand la commande a du retard</strong> chez le verrier, même si le retard ne vous est pas imputable. Le client ne fait pas forcément la distinction.</li>
 <li><strong>Lors d'une difficulté d'adaptation aux progressifs</strong>, tant que le problème n'est pas résolu. Après résolution, en revanche, c'est un excellent moment.</li>
 <li><strong>Après un refus de prise en charge</strong> par la complémentaire santé, ou un litige de garantie encore ouvert.</li>
 </ul>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>⚠️ La règle qui protège votre fiche :</strong> on s'abstient sur le <em>contexte</em>, jamais sur le <em>client</em>. Ne pas solliciter pendant un litige ouvert est du bon sens commercial ; choisir de ne présenter la plaque qu'aux clients dont on devine qu'ils mettront cinq étoiles est un filtrage contraire aux règles de Google. La différence tient à un point : le critère doit être écrit, identique pour tout le monde, et la plaque doit rester visible en permanence sur le comptoir — personne n'est empêché de la lire.</p>
+<p class="text-sm text-amber-900"><strong>⚠️ La règle qui protège votre fiche :</strong> on s'abstient sur le <em>contexte</em>, jamais sur le <em>client</em>. Ne pas solliciter pendant un litige ouvert est du bon sens commercial ; choisir de ne présenter la plaque qu'aux clients dont on devine qu'ils mettront cinq étoiles est une sollicitation sélective, que <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">le règlement de Google</a> interdit. La différence tient à un point : le critère doit être écrit, identique pour tout le monde, et la plaque doit rester visible en permanence sur le comptoir — personne n'est empêché de la lire.</p>
 </div>
 </section>
 
 <section id="scripts-opticien" class="scroll-mt-28 mb-16">
 <h2>Les scripts à donner à l'équipe</h2>
-<p>Une seule phrase, apprise, identique pour tout le monde. Les magasins qui laissent chacun improviser obtiennent une demande formulée une fois sur cinq, et toujours par la même personne.</p>
+<p>Une seule phrase, apprise, identique pour tout le monde. Quand chacun improvise, la demande devient irrégulière et finit par reposer sur la personne la plus à l'aise.</p>
 <h3>À la table d'ajustage, après le premier essai</h3>
-<p><em>« Ça vous va très bien. Si vous êtes content du résultat, vous pouvez approcher votre téléphone de la plaque : ça ouvre notre page d'avis Google, ça prend trente secondes. Ça nous aide beaucoup. »</em></p>
-<p>Pourquoi cette formulation : elle enchaîne sur un compliment sincère lié au produit, elle décrit le geste exact, elle annonce la durée. Les trois raisons pour lesquelles un client refuse — la gêne, l'incertitude sur la manipulation, la peur que ce soit long — sont désamorcées dans la même phrase.</p>
+<p><em>« Ça vous va très bien. Si vous avez trente secondes, vous pouvez approcher votre téléphone de la plaque : ça ouvre notre page d'avis Google. Votre avis nous aide, quel qu'il soit. »</em></p>
+<p>Pourquoi cette formulation : elle enchaîne sur un compliment sincère lié au produit, elle décrit le geste exact, elle annonce la durée. Trois freins possibles — la gêne, l'incertitude sur la manipulation, la peur que ce soit long — sont traités dans la même phrase. Et elle ne présume pas de la note : la demande vaut pour tous les avis.</p>
 <h3>En caisse, une fois le solde réglé</h3>
-<p><em>« Merci beaucoup. Si tout s'est bien passé, la plaque juste là ouvre notre page d'avis Google en approchant le téléphone. Deux lignes suffisent. »</em></p>
+<p><em>« Merci beaucoup. Si vous avez un instant, la plaque juste là ouvre notre page d'avis Google en approchant le téléphone. Deux lignes suffisent. »</em></p>
 <h3>Au comptoir de réparation, après un dépannage gratuit</h3>
-<p><em>« C'est offert, bien sûr. Si vous voulez nous rendre service en retour, approchez votre téléphone de la plaque : ça ouvre notre page d'avis. »</em></p>
-<p>C'est le script le plus efficace du magasin, parce qu'il repose sur une réciprocité que le client ressent réellement à cet instant. Vous venez de rendre un service gratuit ; la contrepartie demandée est symbolique et coûte trente secondes.</p>
+<p><em>« C'est fait. Si vous avez un instant, la plaque ouvre notre page d'avis Google en approchant le téléphone. »</em></p>
+<p>Ne présentez jamais la réparation gratuite comme une faveur à rendre par un avis : lier un service offert à la publication d'un avis s'approche de l'avantage en échange d'un avis, que le règlement de Google interdit. La gratuité se suffit à elle-même, et la demande reste la même que partout ailleurs dans le magasin.</p>
 <h3>Au poste de contactologie, en fin d'apprentissage</h3>
-<p><em>« Vous êtes autonome, c'était le but. Si l'accompagnement vous a été utile, la plaque là ouvre notre page d'avis Google. »</em></p>
+<p><em>« Vous êtes autonome, c'était le but. Si vous avez un instant, la plaque là ouvre notre page d'avis Google. »</em></p>
 <div class="bg-red-50 rounded-xl p-4 border border-red-200 not-prose">
-<p class="text-sm text-red-900"><strong>🚫 Trois formulations à bannir :</strong> « laissez-nous un avis 5 étoiles » (orienter la note est interdit et se voit), « en échange je vous fais un geste sur l'étui » (toute contrepartie expose à la suppression de vos avis et à la suspension de la fiche), et « je vous le mets sur ma tablette » (plusieurs avis publiés depuis le même appareil et la même adresse IP constituent un signal de fraude classique pour les filtres automatiques de Google).</p>
+<p class="text-sm text-red-900"><strong>🚫 Trois formulations à bannir :</strong> « laissez-nous un avis 5 étoiles » (demander une note ou un contenu précis est contraire au règlement de Google), « en échange je vous fais un geste sur l'étui » (toute contrepartie est interdite : les avis concernés sont supprimés et Google peut restreindre la fiche), et « je vous le mets sur ma tablette » (le client publie depuis son propre compte Google, et le règlement interdit d'obliger quelqu'un à rédiger son avis sur place ou de faire pression en ce sens).</p>
 </div>
 </section>
 
 <section id="cas-pratiques" class="scroll-mt-28 mb-16">
 <h2>Trois exemples de calcul</h2>
-<p>Aucun de ces chiffres n'est une promesse : ce sont des calculs posés à partir d'hypothèses que vous devez remplacer par les vôtres. Refaites l'opération avec votre nombre réel de livraisons et le taux que vous constatez sur votre fiche au bout d'un mois.</p>
+<p>Ces trois magasins sont fictifs et aucun de ces chiffres n'est une promesse : ce sont des calculs posés à partir d'hypothèses que vous devez remplacer par les vôtres. Refaites l'opération avec votre nombre réel de livraisons et la part de clients qui publient, mesurée sur votre fiche au bout d'un mois.</p>
 <h3>Magasin indépendant de centre-ville</h3>
-<p>Hypothèses : 55 livraisons d'équipement par mois, 40 passages SAV, un client sur cinq qui publie quand la demande est faite, demande formulée deux fois sur trois. Le calcul donne (55 + 40) × 0,66 × 0,20, soit environ <strong>12 avis par mois</strong>. Sur douze mois, une fiche qui plafonnait à 30 avis dépasse les 170. C'est l'ordre de grandeur qui change un classement local, pas une variation de 5 avis.</p>
+<p>Hypothèses de calcul : 55 livraisons d'équipement par mois, 40 passages SAV, une demande formulée deux fois sur trois, et un client sollicité sur cinq qui publierait. Le calcul donnerait (55 + 40) × 0,66 × 0,20, soit environ <strong>12 avis par mois</strong>. Sur douze mois, une fiche partie de 30 avis dépasserait les 170. Mais il suffit que la part de clients qui publient soit d'un sur dix pour que le résultat tombe à 6 avis par mois : c'est votre mesure, pas cet exemple, qui dira où vous vous situez.</p>
 <h3>Enseigne de centre commercial</h3>
-<p>Hypothèses : 130 livraisons par mois, deux points d'encaissement, une équipe de quatre personnes. Le facteur limitant n'est plus le flux, il est la régularité : si seulement deux vendeurs sur quatre formulent la demande, vous divisez le résultat par deux quoi qu'il arrive. Avec 130 livraisons, une demande faite une fois sur deux et un publiant sur cinq, on obtient <strong>13 avis par mois</strong> — soit à peine plus que l'indépendant du dessus avec deux fois plus de clients. Le brief d'équipe vaut ici plus cher que le trafic.</p>
+<p>Hypothèses de calcul : 130 livraisons par mois, deux points d'encaissement, une équipe de quatre personnes. Ici, la régularité pèse autant que le flux : si seulement deux vendeurs sur quatre, traitant autant de livraisons que les autres, formulent la demande, le résultat est divisé par deux. Avec 130 livraisons, une demande faite une fois sur deux et un client sollicité sur cinq qui publierait, on obtiendrait <strong>13 avis par mois</strong> — à peine plus que l'indépendant du dessus, avec plus de deux fois plus de livraisons. Dans cet exemple, le brief d'équipe compte autant que le trafic.</p>
 <h3>Opticien mobile ou magasin de quartier à faible flux</h3>
-<p>Hypothèses : 20 livraisons par mois, demande systématique parce qu'il n'y a qu'une personne au magasin, un client sur quatre qui publie du fait de la relation personnelle. Résultat : <strong>5 avis par mois</strong>, soit 60 sur un an. Sur une commune de 6 000 habitants où le concurrent le mieux classé en affiche 40, cela suffit largement à prendre la première place du pack local. Pour situer votre propre seuil, notre méthode de <a href="/blog/combien-avis-google-pack-local">calcul du nombre d'avis nécessaire au pack local</a> donne le repère à viser face à vos concurrents directs.</p>
+<p>Hypothèses de calcul : 20 livraisons par mois, une demande faite à chaque livraison puisqu'une seule personne tient le magasin, et un client sur quatre qui publierait. Résultat : <strong>5 avis par mois</strong>, soit 60 sur un an. Le classement dépendant aussi de la distance et de la pertinence, personne ne peut dire à l'avance quelle place ces avis vaudraient face à un concurrent qui en affiche 40. Pour situer votre propre seuil, notre méthode de <a href="/blog/combien-avis-google-pack-local">calcul du nombre d'avis nécessaire au pack local</a> donne le repère à viser face à vos concurrents directs.</p>
 </section>
 
 <section id="roi-opticien" class="scroll-mt-28 mb-16">
 <h2>Faire le calcul : ce que coûte un avis, ce que rapporte un client</h2>
 <p>Le raisonnement tient en deux lignes, et il est particulièrement favorable dans l'optique à cause du panier moyen.</p>
-<p><strong>Côté coût.</strong> Une plaque Swiipx est un paiement unique, à partir de 29,90 EUR HT, sans abonnement ni frais mensuels. Si elle contribue à 12 avis par mois, elle a produit 144 avis au bout d'un an, puis continue les années suivantes sans que vous repayiez quoi que ce soit. Le coût unitaire par avis descend très vite sous les quelques dizaines de centimes, puis tend vers zéro. Notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût réel par avis</a> détaille le calcul face aux plateformes à abonnement, dont le coût, lui, ne baisse jamais.</p>
-<p><strong>Côté revenu.</strong> Prenez votre panier moyen — disons 420 € pour un équipement complet — et demandez-vous combien de clients supplémentaires par mois justifieraient l'investissement. La réponse est : moins d'un, une seule fois. Tout le reste est net.</p>
-<p>Le vrai gain, cependant, n'est pas dans ce calcul direct. Il est dans le classement. Passer de la sixième à la troisième position sur « opticien + votre ville » change le nombre de personnes qui poussent votre porte, tous les jours, sans que vous ayez rien à repayer. Et une fois la note installée, elle se défend surtout par le volume : notre article sur <a href="/blog/ameliorer-note-google">le calcul exact du nombre d'avis pour faire monter sa note</a> montre pourquoi agir tôt coûte des dizaines de fois moins cher qu'agir tard.</p>
+<p><strong>Côté coût.</strong> Une plaque Swiipx est un paiement unique, à partir de 29,90 EUR HT, sans abonnement ni frais mensuels. Hypothèse de calcul : si elle accompagnait dix avis par mois, elle en aurait accompagné 120 au bout d'un an, soit environ 25 centimes par avis, et ce coût continuerait de baisser chaque année où elle reste en place, sans rien repayer. Notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût réel par avis</a> détaille le calcul face aux plateformes à abonnement, dont le coût, lui, ne baisse jamais.</p>
+<p><strong>Côté revenu.</strong> Prenez votre panier moyen et comparez-le au prix de la plaque. Hypothèse de calcul : avec un panier de 420 €, une plaque à 29,90 € HT représenterait environ 7 % d'une seule vente. Encore faut-il qu'elle vous amène ce client : personne ne peut le garantir, et la marge d'une vente n'est pas son montant.</p>
+<p>L'enjeu principal, cependant, n'est pas dans ce calcul direct : il est dans la visibilité. Google indique que davantage d'avis et de notes positives peuvent aider le classement local (<a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">conseils officiels de Google</a>), et mieux vous êtes placé sur « opticien + votre ville », plus vous êtes vu par ceux qui cherchent. Une fois la note installée, elle se défend surtout par le volume : notre article sur <a href="/blog/ameliorer-note-google">le calcul exact du nombre d'avis pour faire monter sa note</a> montre pourquoi il vaut mieux agir tôt.</p>
 </section>
 
 <section id="repondre-avis" class="scroll-mt-28 mb-16">
 <h2>Répondre aux trois avis négatifs types du secteur</h2>
-<p>Répondez à 100 % des avis, sous 48 heures, négatifs compris. La réponse n'est pas écrite pour l'auteur de l'avis : elle est écrite pour les dizaines de prospects qui la liront ensuite, et elle vaut souvent plus que l'avis lui-même. Trois griefs reviennent systématiquement en optique.</p>
+<p>Répondez à tous les avis, sous 48 heures, négatifs compris. La réponse n'est pas écrite que pour l'auteur de l'avis : elle est publiée sous l'avis, à la vue de tous les futurs clients. Trois griefs propres au métier méritent une réponse préparée.</p>
 <h3>« Trois semaines pour recevoir mes lunettes »</h3>
 <p>Ne vous défaussez pas sur le verrier en première phrase, cela se lit comme une excuse. Reconnaissez le délai, expliquez brièvement ce qui allonge une fabrication sur mesure — verres progressifs personnalisés, traitements spécifiques, contrôle avant montage — et indiquez ce que vous avez changé depuis, ou ce que vous proposez maintenant : une estimation annoncée à la commande, un point d'étape à mi-parcours. Le lecteur suivant retient surtout que vous savez de quoi vous parlez.</p>
 <h3>« Beaucoup trop cher pour ce que c'est »</h3>
-<p>Ne discutez jamais votre marge en public et ne citez aucun montant. Expliquez en termes généraux ce que couvre un équipement — examen, prise de mesures individualisée, montage, ajustages et SAV illimités, garantie — puis rappelez qu'une offre 100 % Santé sans reste à charge est proposée systématiquement en magasin, et proposez un échange direct. Cette réponse est lue par tous ceux qui hésitent devant votre vitrine pour la même raison : c'est probablement la plus rentable que vous écrirez cette année.</p>
+<p>Ne discutez jamais votre marge en public et ne citez aucun montant. Expliquez en termes généraux ce que couvre un équipement — examen, prise de mesures individualisée, montage, ajustages et SAV illimités, garantie — puis rappelez qu'un équipement 100 % Santé est proposé systématiquement — l'opticien est tenu de le proposer — et qu'il est intégralement pris en charge par l'Assurance Maladie et la complémentaire santé ; proposez enfin un échange direct. Cette réponse s'adresse aussi à tous ceux qui hésitent devant votre vitrine pour la même raison.</p>
 <h3>« Je ne m'habitue pas à mes progressifs »</h3>
-<p>C'est le seul des trois où la réponse peut réellement récupérer le client. Rappelez que l'adaptation demande souvent une à trois semaines, que la période d'adaptation est prévue, et invitez la personne à repasser pour un contrôle des mesures et un ajustage — sans frais. Beaucoup de ces avis sont modifiés à la hausse après résolution, ce qui n'arrive presque jamais sur les deux autres griefs. La <a href="/blog/repondre-avis-negatifs-google">méthode complète de réponse aux avis négatifs</a>, avec des modèles prêts à l'emploi, s'applique telle quelle.</p>
+<p>C'est le seul des trois où la réponse peut réellement récupérer le client. Rappelez qu'un temps d'adaptation est normal et prévu, et invitez la personne à repasser pour un contrôle des mesures et un ajustage — sans frais. Une fois le problème réglé, l'auteur peut modifier son avis ou sa note quand il le souhaite : c'est à lui d'en décider, et ne le lui demandez jamais en échange de l'ajustage. La <a href="/blog/repondre-avis-negatifs-google">méthode complète de réponse aux avis négatifs</a>, avec des modèles prêts à l'emploi, s'applique telle quelle.</p>
 </section>
 
 <section id="plan-90-jours" class="scroll-mt-28 mb-16">
@@ -2403,16 +2372,16 @@ export const articles: Record<string, {
 <h3>Semaines 3-8 : le rythme</h3>
 <ul>
 <li>Demandez à chaque livraison, sans exception hors situations d'abstention. C'est la seule variable que vous pilotez vraiment.</li>
-<li>N'oubliez pas les passages SAV : c'est le gisement que tous vos concurrents laissent dormir.</li>
+<li>N'oubliez pas les passages SAV : c'est un moment facile à négliger.</li>
 <li>Répondez à 100 % des avis sous 48 h.</li>
 <li>Publiez un Google Post par semaine : arrivée d'une collection, opération enfants pour la rentrée, contrôle de vue sans rendez-vous, offre 100 % Santé.</li>
-<li>Ne cherchez pas à rattraper le retard d'un coup : une accélération brutale du volume est exactement le signal que les filtres anti-fraude de Google surveillent en priorité.</li>
+<li>Ne cherchez pas à rattraper le retard d'un coup, et surtout pas par des moyens interdits — avantage offert, objectif chiffré d'avis imposé à l'équipe : le règlement de Google les proscrit, et une fiche en infraction peut être restreinte.</li>
 </ul>
 <h3>Semaines 9-12 : la consolidation</h3>
 <ul>
-<li>Les effets sur le pack local deviennent visibles — comptez 4 à 8 semaines de décalage.</li>
-<li>Relisez les mots qui reviennent dans vos avis : ce sont ceux sur lesquels Google vous positionne. S'ils ne parlent que de solaires alors que vous voulez développer la contactologie, déplacez le moment où vous sollicitez.</li>
-<li>Comparez votre nombre d'avis à celui des trois magasins classés devant vous, et fixez votre rythme mensuel en conséquence.</li>
+<li>Suivez votre position sur « opticien + votre ville » : Google ne publie aucun délai, et le classement dépend aussi d'autres critères que les avis.</li>
+<li>Relisez les mots qui reviennent dans vos avis : ce sont ceux que lisent vos futurs clients. S'ils ne parlent que de solaires alors que vous voulez développer la contactologie, déplacez le moment où vous sollicitez.</li>
+<li>Comparez votre nombre d'avis à celui des magasins classés devant vous pour mesurer l'écart. Fixez à l'équipe une régularité de demande, jamais un nombre d'avis à obtenir : le règlement de Google interdit de demander au personnel de solliciter un certain nombre d'avis.</li>
 </ul>
 </section>
 
@@ -2420,22 +2389,22 @@ export const articles: Record<string, {
 <h2>FAQ — Plaque NFC pour opticien</h2>
 
 <h3>Combien d'avis Google un magasin d'optique peut-il collecter avec une plaque NFC ?</h3>
-<p>Personne ne peut vous le garantir : cela dépend de votre nombre de livraisons et de la régularité de la demande, pas de la plaque. Le calcul se pose en une minute. Un magasin qui livre 55 équipements par mois et reçoit 40 passages SAV, avec une demande formulée deux fois sur trois et un client sur cinq qui publie, obtient environ 12 avis mensuels. Si la demande n'est faite qu'une fois sur trois, le résultat est divisé par deux. C'est l'hypothèse retenue qui décide du résultat, pas le matériel.</p>
+<p>Personne ne peut vous le garantir : cela dépend de votre nombre de livraisons et de la régularité de la demande, pas de la plaque. Le calcul se pose en une minute. Hypothèse de calcul : un magasin qui livrerait 55 équipements par mois et recevrait 40 passages SAV, avec une demande formulée deux fois sur trois et un client sollicité sur cinq qui publierait, obtiendrait environ 12 avis mensuels. Si la demande n'était faite qu'une fois sur trois, le résultat serait divisé par deux. C'est l'hypothèse retenue qui décide du résultat, pas le matériel.</p>
 
 <h3>Où faut-il placer la plaque NFC dans un magasin d'optique ?</h3>
-<p>Sur la table d'ajustage, à l'endroit exact où se fait la livraison de l'équipement. C'est le seul moment du parcours où le client obtient physiquement ce qu'il attendait : il chausse, il voit net, il est assis, et son téléphone est posé devant lui. Le comptoir de caisse arrive juste derrière, à droite du terminal de paiement, puisque le téléphone y est déjà sorti. Le comptoir de SAV est le troisième emplacement, très largement sous-exploité dans le secteur.</p>
+<p>Sur la table d'ajustage, à l'endroit exact où se fait la livraison de l'équipement. C'est le seul moment du parcours où le client obtient physiquement ce qu'il attendait : il chausse, il voit net, il est assis, et son téléphone est posé devant lui. Le comptoir de caisse arrive juste derrière, à droite du terminal de paiement, puisque le téléphone y est déjà sorti. Le comptoir de SAV vient ensuite : un emplacement facile à négliger.</p>
 
 <h3>Quel est le meilleur moment pour demander un avis à un client opticien ?</h3>
 <p>À la livraison, juste après le premier essai réussi, et lors du premier ajustage de confort huit à quinze jours plus tard. À l'inverse, on ne sollicite jamais pendant l'annonce d'un devis, tant qu'une commande a du retard chez le verrier, pendant une difficulté d'adaptation aux progressifs non résolue, ou après un refus de prise en charge par la complémentaire santé. L'abstention porte sur le contexte, jamais sur le client : le critère est écrit, identique pour tous, et la plaque reste visible en permanence.</p>
 
 <h3>Peut-on offrir un étui, une remise ou un produit nettoyant contre un avis Google ?</h3>
-<p>Non, c'est formellement interdit par les règles de Google. Toute contrepartie expose à la suppression massive de vos avis, y compris les avis parfaitement légitimes, et à la suspension de votre fiche. Il est tout aussi risqué de faire rédiger l'avis sur la tablette du magasin : plusieurs avis publiés depuis le même appareil et la même adresse IP constituent un signal de fraude classique pour les filtres automatiques. Le client écrit depuis son propre téléphone et son propre compte Google, ou il n'écrit pas.</p>
+<p>Non. Le règlement de Google interdit de proposer des avantages — paiement, remises, produits ou services gratuits — en échange de la publication d'un avis. Les avis concernés sont supprimés, et Google peut restreindre la fiche : plus de nouveaux avis pendant une période donnée, avis existants dépubliés, avertissement affiché. Évitez aussi de faire rédiger l'avis sur la tablette du magasin : le règlement interdit d'obliger un client à rédiger son avis sur place ou de faire pression en ce sens. Le client écrit depuis son propre téléphone et son propre compte Google, ou il n'écrit pas.</p>
 
 <h3>Que répondre à un avis négatif sur le prix des lunettes ?</h3>
-<p>Ne discutez jamais votre marge en public et ne citez aucun montant. Expliquez en termes généraux ce que couvre un équipement — examen, prise de mesures individualisée, montage, ajustages et SAV illimités, garantie — rappelez que l'offre 100 % Santé sans reste à charge est proposée systématiquement, puis proposez un échange direct par téléphone. Cette réponse n'est pas écrite pour l'auteur de l'avis mais pour les dizaines de prospects qui hésitent devant votre vitrine exactement pour la même raison.</p>
+<p>Ne discutez jamais votre marge en public et ne citez aucun montant. Expliquez en termes généraux ce que couvre un équipement — examen, prise de mesures individualisée, montage, ajustages et SAV illimités, garantie — rappelez qu'un équipement 100 % Santé, intégralement pris en charge par l'Assurance Maladie et la complémentaire santé, est proposé systématiquement, puis proposez un échange direct par téléphone. Cette réponse n'est pas écrite pour l'auteur de l'avis mais pour les dizaines de prospects qui hésitent devant votre vitrine exactement pour la même raison.</p>
 
 <h3>La plaque NFC fonctionne-t-elle avec une clientèle âgée ?</h3>
-<p>Oui, et c'est précisément pour cela qu'un QR code de secours est imprimé sur chaque plaque. Le NFC fonctionne sur tous les iPhone depuis le modèle 7 et sur la quasi-totalité des Android récents, mais une partie de la clientèle presbyte est plus à l'aise avec le geste « scanner » qu'avec le geste « approcher ». Avoir les deux options sur le même objet évite d'avoir à choisir, et permet à l'opticien de basculer de l'un à l'autre sans que le client se sente en difficulté.</p>
+<p>Oui, et c'est précisément pour cela qu'un QR code de secours est imprimé sur chaque plaque. Apple indique que les iPhone XS et modèles ultérieurs lisent les puces NFC en arrière-plan, sans application (<a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading" target="_blank" rel="noopener noreferrer">documentation Apple</a>) ; sur Android, il faut un téléphone équipé du NFC, avec la fonction activée. Et une partie de la clientèle est plus à l'aise avec le geste « scanner » qu'avec le geste « approcher ». Avoir les deux options sur le même objet évite d'avoir à choisir, et permet à l'opticien de basculer de l'un à l'autre sans que le client se sente en difficulté.</p>
 
 <h3>Quel pack choisir pour un magasin d'optique ?</h3>
 <p>Magasin indépendant à une seule table d'ajustage et un point d'encaissement : <a href="/product/starter">Pack Starter</a>. Magasin disposant d'une table d'ajustage et d'un comptoir de caisse distincts : <a href="/product/business">Pack Business</a>, deux plaques, la configuration la plus fréquente. Magasin à plusieurs postes de vente, enseigne de centre commercial, ou magasin souhaitant équiper aussi la contactologie et le comptoir de SAV : <a href="/product/pro">Pack Pro</a>, cinq plaques.</p>
@@ -2443,9 +2412,9 @@ export const articles: Record<string, {
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : la livraison est votre meilleur moment, ne le laissez pas passer</h2>
-<p>Personne ne pousse la porte d'un opticien au hasard. Le client a comparé <strong>avant de se déplacer</strong>, sur trois fiches, en quelques dizaines de secondes, sur les deux seuls éléments qu'il pouvait évaluer : la note et le nombre d'avis. Ce que vos clients écrivent travaille pour vous tous les jours, y compris quand le rideau est baissé.</p>
-<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong> et que personne ne prend le temps d'écrire. Vos clients sont contents en repartant — vous le voyez sur leur visage à l'instant où ils chaussent leur nouvel équipement. Il leur manque trente secondes et un objet à portée de main, présenté à ce moment-là précisément. Dans deux ans, il sera trop tard.</p>
-<p>Guides complémentaires : <a href="/blog/plaque-nfc-cabinet-medical">cabinet médical et déontologie</a>, <a href="/blog/plaque-nfc-institut-beaute">institut de beauté</a>, <a href="/blog/ou-placer-plaque-avis-google">les 7 meilleurs emplacements</a>, ou notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>.</p>
+<p>83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente (étude PRESENCE 2026 menée auprès de 1 350 Français représentatifs) : votre futur client a donc de bonnes chances d'avoir comparé <strong>avant de se déplacer</strong>, sur ce qu'il pouvait voir — la note, le nombre d'avis et ce qu'ils racontent. Ce que vos clients écrivent reste en ligne tous les jours, y compris quand le rideau est baissé.</p>
+<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong> et que personne ne prend le temps d'écrire. Quand un client repart content, vous le voyez sur son visage à l'instant où il chausse son nouvel équipement. Il lui manque trente secondes et un objet à portée de main, présenté à ce moment-là précisément. Dans deux ans, l'occasion sera passée.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-cabinet-medical">cabinet médical et déontologie</a>, <a href="/blog/plaque-nfc-institut-beaute">institut de beauté</a>, <a href="/blog/ou-placer-plaque-avis-google">les 7 meilleurs emplacements</a>, ou <a href="/blog/doubler-avis-google-30-jours">notre plan d'action sur 30 jours</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque livraison en avis Google ?</strong></p>
@@ -2456,11 +2425,11 @@ export const articles: Record<string, {
   },
   'ameliorer-note-google': {
     title: 'Améliorer sa note Google : combien d\'avis 5 étoiles pour passer de 4,2 à 4,6 ?',
-    category: 'Statistiques',
+    category: 'Conseils',
     date: '17 août 2026',
     readTime: '10 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Passer de 4,2 à 4,6 sur Google n\'est pas une question de chance : c\'est une division. La formule exacte, le tableau du nombre d\'avis 5 étoiles selon votre volume, le coût réel d\'un seul avis 1 étoile et trois cas chiffrés.',
+    excerpt: 'Passer de 4,2 à 4,6 sur Google n\'est pas une question de chance : c\'est une division. La formule exacte, le tableau du nombre d\'avis 5 étoiles selon votre volume, le coût réel d\'un seul avis 1 étoile et trois exemples de calcul.',
     tocSections: [
       { id: 'note-decide', label: 'La note décide avant le clic' },
       { id: 'formule', label: 'La formule en une ligne' },
@@ -2468,7 +2437,7 @@ export const articles: Record<string, {
       { id: 'inertie', label: 'L\'inertie de la note' },
       { id: 'arrondi', label: 'L\'arrondi à la décimale' },
       { id: 'cout-avis-negatif', label: 'Le coût d\'un avis 1 étoile' },
-      { id: 'trois-cas', label: '3 cas chiffrés' },
+      { id: 'trois-cas', label: '3 exemples de calcul' },
       { id: 'rythme', label: 'Du total au rythme mensuel' },
       { id: 'erreurs', label: '5 erreurs qui bloquent' },
       { id: 'faq-note-google', label: 'FAQ' },
@@ -2477,11 +2446,11 @@ export const articles: Record<string, {
     content: `
 <section id="note-decide" class="scroll-mt-28 mb-16">
 <h2>La note décide avant même que l'on clique sur votre fiche</h2>
-<p>Dans le pack local, l'utilisateur voit trois établissements. De chacun, il ne lit d'abord que deux choses : la note sur cinq, et le nombre d'avis entre parenthèses. Le nom vient après, la photo aussi, l'adresse encore après. Cette comparaison prend moins de deux secondes et elle élimine généralement une fiche sur trois avant toute lecture d'avis.</p>
-<p><strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs). Le mot important est « consulter » : dans l'immense majorité des cas, cette consultation se résume au coup d'œil sur la note moyenne.</p>
-<p>D'où une question très concrète, que presque personne ne pose correctement : <strong>combien d'avis 5 étoiles faut-il, exactement, pour passer de 4,2 à 4,6 ?</strong> Ce n'est pas une affaire d'opinion ni de patience. C'est une division. Et le résultat surprend à peu près tout le monde la première fois.</p>
+<p>Dans le pack local, l'utilisateur voit généralement trois établissements. Pour chacun, deux chiffres se lisent sans ouvrir la fiche : la note sur cinq et le nombre d'avis entre parenthèses. Ces deux chiffres suffisent à comparer les fiches avant même d'en lire un seul avis.</p>
+<p><strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026, 1 350 Français représentatifs). L'étude ne dit pas comment ces avis sont lus ; la note moyenne, elle, est visible dès la liste des résultats, avant toute lecture.</p>
+<p>D'où une question très concrète, que presque personne ne pose correctement : <strong>combien d'avis 5 étoiles faut-il, exactement, pour passer de 4,2 à 4,6 ?</strong> Ce n'est pas une affaire d'opinion ni de patience. C'est une division.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une note Google n'est pas une impression que l'on améliore en « faisant mieux ». C'est une moyenne arithmétique. Une moyenne se pilote — à condition de savoir combien d'avis il faut collecter, et à quel rythme.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une note Google n'est pas une impression que l'on améliore en « faisant mieux ». Google indique qu'elle <a href="https://support.google.com/business/answer/4801187?hl=fr" target="_blank" rel="noopener noreferrer">correspond à la moyenne de tous les avis publiés sur Google pour l'établissement</a>, et qu'après un nouvel avis sa mise à jour peut prendre jusqu'à deux semaines. Une moyenne se pilote — à condition de savoir combien d'avis il faut collecter, et à quel rythme.</p>
 </div>
 </section>
 
@@ -2512,7 +2481,7 @@ export const articles: Record<string, {
 </tbody>
 </table>
 </div>
-<p>Lisez la ligne qui vous correspond, puis la colonne de votre ambition. Le tableau contient une mauvaise nouvelle et une bonne. La mauvaise : passer de 4,2 à 4,6 avec 200 avis au compteur est un chantier de plusieurs mois, pas une opération de deux semaines. La bonne : <strong>un premier palier à 4,4 coûte trois fois moins cher qu'un palier à 4,6</strong>, et c'est souvent lui qui vous fait franchir le seuil d'affichage qui compte pour votre secteur. Pour savoir quel niveau viser face à vos concurrents directs, notre méthode pour <a href="/blog/combien-avis-google-pack-local">calculer le seuil d'entrée dans le pack local</a> fournit le repère manquant.</p>
+<p>Lisez la ligne qui vous correspond, puis la colonne de votre ambition. Le tableau contient une mauvaise nouvelle et une bonne. La mauvaise : passer de 4,2 à 4,6 avec 200 avis au compteur demande 200 avis 5 étoiles de plus, sans un seul avis moins bien noté en chemin. La bonne : <strong>un premier palier à 4,4 demande environ trois fois moins d'avis qu'un palier à 4,6</strong> (34 contre 100 pour une fiche à 100 avis), et il peut suffire à vous placer au niveau de vos concurrents directs. Pour savoir quel niveau viser face à vos concurrents directs, notre méthode pour <a href="/blog/combien-avis-google-pack-local">calculer le seuil d'entrée dans le pack local</a> fournit le repère manquant.</p>
 </section>
 
 <section id="inertie" class="scroll-mt-28 mb-16">
@@ -2520,19 +2489,19 @@ export const articles: Record<string, {
 <p>Le facteur N dans la formule a une conséquence brutale : <strong>l'effort est strictement proportionnel au volume déjà accumulé</strong>. Une fiche à 500 avis a besoin de vingt-cinq fois plus d'avis qu'une fiche à 20 avis pour un déplacement identique. Chaque avis supplémentaire, bon ou mauvais, ajoute du poids à ce que la note dira demain.</p>
 <p>De là découlent deux conclusions qui vont dans des directions opposées, et il faut savoir laquelle vous concerne.</p>
 <ul>
-<li><strong>Votre note est basse et votre fiche est jeune ?</strong> C'est la période la plus favorable de toute la vie de votre établissement pour la corriger. Une fiche à 18 avis se redresse en quelques semaines. La même fiche, avec la même note, redressée trois ans plus tard sur 180 avis, demande dix fois le même travail.</li>
-<li><strong>Votre note est haute sur un gros volume ?</strong> Vous détenez un actif défensif que vos concurrents ne rattraperont pas facilement. Une fiche à 4,7 sur 300 avis n'est pas seulement mieux notée qu'une fiche à 4,3 sur 60 avis : elle est <em>structurellement</em> hors d'atteinte à court terme, parce que le concurrent doit produire une centaine d'avis parfaits pour espérer vous égaler.</li>
+<li><strong>Votre note est basse et votre fiche est jeune ?</strong> C'est la période la plus favorable de toute la vie de votre établissement pour la corriger. À note égale, une fiche à 18 avis a besoin de dix fois moins d'avis 5 étoiles pour se redresser que la même fiche arrivée à 180 avis.</li>
+<li><strong>Votre note est haute sur un gros volume ?</strong> Vous détenez un actif défensif que vos concurrents ne rattraperont pas facilement. Une fiche à 4,7 sur 300 avis n'est pas seulement mieux notée qu'une fiche à 4,3 sur 60 avis : elle est <em>structurellement</em> hors d'atteinte à court terme, parce que le concurrent devrait enchaîner 80 avis 5 étoiles consécutifs (60 × 0,4 ÷ 0,3) pour afficher la même note.</li>
 </ul>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>⏱️ Le coût de l'attente :</strong> chaque mois où vous ne collectez pas, vos clients mécontents, eux, continuent d'écrire. Le volume monte quand même — simplement, il monte du mauvais côté. L'inertie ne joue jamais en faveur de celui qui attend.</p>
+<p class="text-sm text-blue-900"><strong>⏱️ Le coût de l'attente :</strong> chaque mois sans collecte, les seuls avis qui arrivent sont ceux que les clients pensent à écrire d'eux-mêmes, satisfaits ou non. Le volume peut monter quand même, sans que vous ayez la main dessus. L'inertie ne joue jamais en faveur de celui qui attend.</p>
 </div>
 </section>
 
 <section id="arrondi" class="scroll-mt-28 mb-16">
-<h2>L'arrondi : visez 4,45 et non 4,50</h2>
-<p>Détail technique à fort rendement : Google n'affiche la note qu'avec une seule décimale, alors que la moyenne réelle en compte beaucoup plus. Une moyenne de 4,46 s'affiche donc 4,5. Le seuil à franchir pour <em>afficher</em> 4,5 n'est pas 4,50 : c'est 4,45.</p>
-<p>Reprenez la formule avec T = 4,45. Une fiche à 100 avis notée 4,2 a besoin de 100 × 0,25 ÷ 0,55 ≈ <strong>46 avis</strong>, contre 60 si vous aviez visé 4,50 pour de bon. Vingt-trois pour cent de travail en moins, uniquement parce que la cible a été posée au bon endroit.</p>
-<p>La symétrie est vraie et coûte cher dans l'autre sens : à 4,44 de moyenne réelle, vous affichez encore 4,4 alors que vous vous croyez arrivé. Les quelques centièmes qui manquent valent, à ce moment précis, plusieurs avis. C'est la situation classique de l'établissement qui « stagne » à 4,4 depuis des mois sans comprendre pourquoi : il est en réalité à deux ou trois avis du basculement.</p>
+<h2>L'arrondi : l'hypothèse du seuil à 4,45</h2>
+<p>Sur une fiche, la note s'affiche avec une décimale — vérifiez-le sur la vôtre —, alors que la moyenne réelle en compte davantage. La page d'aide de Google sur les notes ne précise pas comment cette décimale est obtenue. <strong>Si l'affichage suit l'arrondi usuel</strong> — c'est une hypothèse, pas une règle documentée —, une moyenne de 4,46 s'afficherait 4,5, et le seuil à franchir pour <em>afficher</em> 4,5 serait 4,45 plutôt que 4,50.</p>
+<p>Reprenez la formule avec T = 4,45. Une fiche à 100 avis notée 4,2 aurait besoin de 100 × 0,25 ÷ 0,55 ≈ <strong>46 avis</strong>, contre 60 pour une cible de 4,50 : vingt-trois pour cent d'avis en moins dans cet exemple, si l'hypothèse d'arrondi se vérifie.</p>
+<p>La même hypothèse joue dans l'autre sens : à 4,44 de moyenne réelle, la fiche afficherait encore 4,4, et les quelques centièmes qui manquent peuvent représenter plusieurs avis. Si l'affichage tronquait au lieu d'arrondir, c'est 4,50 qu'il faudrait viser : le calcul reste le même, seule la cible change.</p>
 </section>
 
 <section id="cout-avis-negatif" class="scroll-mt-28 mb-16">
@@ -2554,26 +2523,26 @@ export const articles: Record<string, {
 </table>
 </div>
 <p>Le paradoxe mérite qu'on s'y arrête : <strong>plus votre note est bonne, plus un avis 1 étoile vous coûte cher</strong>. À 4,8, un seul client furieux efface le travail de dix-neuf clients ravis. Ce n'est pas injuste, c'est mécanique — mais cela change complètement la façon dont il faut traiter le sujet.</p>
-<p>Deux leviers, et seulement deux. Le premier : <a href="/blog/repondre-avis-negatifs-google">répondre publiquement et correctement</a>, parce que la réponse est lue par tous les prospects suivants et qu'elle vaut souvent plus que l'avis lui-même. Le second : le volume régulier, qui dilue. Si l'avis est illégitime — concurrent, personne jamais venue, propos hors sujet — la <a href="/blog/faux-avis-google-signaler">procédure de signalement</a> existe, mais traitez-la comme un complément et jamais comme une stratégie de note.</p>
+<p>Deux leviers, et seulement deux. Le premier : <a href="/blog/repondre-avis-negatifs-google">répondre publiquement et correctement</a>, parce que la réponse reste visible à côté de l'avis, pour tous ceux qui le liront ensuite. Côté attentes, <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent que le gérant réponde aux avis</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 consommateurs adultes américains). Le second : le volume régulier, qui dilue. Si l'avis est illégitime — concurrent, personne jamais venue, propos hors sujet — la <a href="/blog/faux-avis-google-signaler">procédure de signalement</a> existe, mais traitez-la comme un complément et jamais comme une stratégie de note.</p>
 </section>
 
 <section id="trois-cas" class="scroll-mt-28 mb-16">
-<h2>Trois cas chiffrés</h2>
-<p>Les trois situations ci-dessous sont des hypothèses de calcul, pas des résultats constatés chez des clients. Elles servent à montrer quel ordre de grandeur découle de quelles données. La cible est exprimée en note <em>affichée</em>, donc calculée au seuil d'arrondi.</p>
+<h2>Trois exemples de calcul</h2>
+<p>Les trois situations ci-dessous sont des exemples fictifs et des hypothèses de calcul, pas des résultats mesurés chez des clients. Elles servent à montrer quel ordre de grandeur découle de quelles données. La cible est exprimée en note <em>affichée</em>, calculée au seuil de l'arrondi usuel (voir l'hypothèse de la section précédente).</p>
 <div class="overflow-x-auto not-prose my-6">
 <table class="w-full text-sm border-collapse">
-<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Situation</th><th class="border p-3 text-left">Point de départ</th><th class="border p-3 text-left">Cible affichée</th><th class="border p-3 text-left">Avis 5 ★ nécessaires</th><th class="border p-3 text-left">Délai à 10 avis/mois</th></tr></thead>
+<thead><tr class="bg-gray-100"><th class="border p-3 text-left">Situation fictive</th><th class="border p-3 text-left">Point de départ</th><th class="border p-3 text-left">Cible affichée</th><th class="border p-3 text-left">Avis 5 ★ nécessaires</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Restaurant, fiche récente</td><td class="border p-3">18 avis, note 4,1</td><td class="border p-3">4,5 (seuil 4,45)</td><td class="border p-3">12 avis</td><td class="border p-3">≈ 1,5 mois</td></tr>
-<tr><td class="border p-3">Salon de coiffure établi</td><td class="border p-3">140 avis, note 4,3</td><td class="border p-3">4,6 (seuil 4,55)</td><td class="border p-3">78 avis</td><td class="border p-3">≈ 8 mois</td></tr>
-<tr><td class="border p-3">Garage avec 3 avis 1 ★</td><td class="border p-3">46 avis, note 4,0</td><td class="border p-3">4,5 (seuil 4,45)</td><td class="border p-3">38 avis</td><td class="border p-3">≈ 4 mois</td></tr>
+<tr><td class="border p-3">Restaurant, fiche récente</td><td class="border p-3">18 avis, note 4,1</td><td class="border p-3">4,5 (seuil 4,45)</td><td class="border p-3">12 avis</td></tr>
+<tr><td class="border p-3">Salon de coiffure établi</td><td class="border p-3">140 avis, note 4,3</td><td class="border p-3">4,6 (seuil 4,55)</td><td class="border p-3">78 avis</td></tr>
+<tr><td class="border p-3">Garage avec 3 avis 1 ★</td><td class="border p-3">46 avis, note 4,0</td><td class="border p-3">4,5 (seuil 4,45)</td><td class="border p-3">38 avis</td></tr>
 </tbody>
 </table>
 </div>
 <h3>Ce que chaque ligne raconte</h3>
-<p><strong>Le restaurant</strong> est dans la meilleure position des trois, et il l'ignore probablement. Douze avis, c'est une quinzaine de jours de service avec une plaque posée sur le comptoir de l'addition. Sa note est basse parce que sa fiche est jeune, pas parce que sa cuisine est mauvaise — et une fiche jeune est un matériau malléable. Voir notre <a href="/blog/plaque-nfc-restaurant">guide restaurant</a> pour le placement en salle.</p>
-<p><strong>Le salon</strong> paie l'inertie de ses 140 avis. Huit mois, c'est long, mais c'est le prix d'un actif : une fois arrivé à 4,6 sur plus de 200 avis, il devient très difficile à déloger. La bonne décision est ici de viser d'abord 4,4, atteint en trois mois, plutôt que de fixer 4,6 et d'abandonner au deuxième mois faute de mouvement visible.</p>
-<p><strong>Le garage</strong> illustre le calcul de la section précédente. Ses trois avis 1 étoile lui coûtent, à eux seuls, l'équivalent de neuf avis 5 étoiles — soit près d'un quart de l'effort total qu'il doit fournir. Trois clients mécontents dictent quatre mois de travail. Voir notre <a href="/blog/plaque-nfc-garage-automobile">guide garage automobile</a>.</p>
+<p><strong>Le restaurant</strong> est dans la position la plus favorable des trois : douze avis 5 étoiles suffiraient à changer sa note affichée. Sa note est basse parce que sa fiche est jeune, et sur une fiche jeune chaque nouvel avis déplace nettement la moyenne. Voir notre <a href="/blog/plaque-nfc-restaurant">guide restaurant</a> pour le placement en salle.</p>
+<p><strong>Le salon</strong> paie l'inertie de ses 140 avis : il lui faut 78 avis 5 étoiles. Le délai dépend entièrement de son rythme de collecte : s'il recevait, par hypothèse, 10 avis 5 étoiles par mois, il lui faudrait environ huit mois ; à 3 par mois, plus de deux ans. Une étape intermédiaire rend l'effort plus lisible : l'affichage à 4,4 (seuil 4,35) ne demande qu'environ 11 avis 5 étoiles (140 × 0,05 ÷ 0,65). Une fois à 4,6 sur plus de 200 avis, il deviendrait très difficile à déloger.</p>
+<p><strong>Le garage</strong> illustre le calcul de la section précédente. À 4,0, il faut trois avis 5 étoiles pour neutraliser un avis 1 étoile : ses trois avis 1 étoile pèsent donc à eux seuls l'équivalent de neuf avis 5 étoiles, soit près d'un quart des 38 avis nécessaires. Voir notre <a href="/blog/plaque-nfc-garage-automobile">guide garage automobile</a>.</p>
 <p>Refaites ces calculs avec vos chiffres réels : votre nombre d'avis, votre note affichée, et une estimation honnête du nombre de clients à qui la demande sera effectivement faite chaque mois. C'est cette dernière valeur, et elle seule, qui décide du délai.</p>
 </section>
 
@@ -2581,23 +2550,23 @@ export const articles: Record<string, {
 <h2>Du nombre total au rythme mensuel : la seule variable que vous pilotez</h2>
 <p>Le nombre d'avis nécessaires est une donnée figée : il découle de votre situation actuelle et de votre cible. Le délai, lui, est un simple quotient — nombre d'avis divisé par rythme mensuel. Et ce rythme est le produit de deux facteurs seulement :</p>
 <ul>
-<li><strong>Le nombre de clients servis par mois.</strong> Vous ne pouvez pas le multiplier par trois du jour au lendemain. Ce n'est pas là que se joue la partie.</li>
-<li><strong>La proportion de ces clients qui dépose effectivement un avis.</strong> C'est ici, et uniquement ici, que se trouve le levier. Entre un établissement où personne ne demande rien et un établissement où la demande est systématique et sans friction, l'écart se compte en multiples, pas en pourcentages.</li>
+<li><strong>Le nombre de clients servis par mois.</strong> Il ne change pas du jour au lendemain. Ce n'est pas là que se joue la partie.</li>
+<li><strong>La proportion de ces clients qui dépose effectivement un avis.</strong> C'est ici que se trouve le levier : cette proportion dépend de ce que vous faites, à commencer par le fait de demander, et de demander sans compliquer la tâche du client.</li>
 </ul>
-<p>La friction est presque toujours le facteur limitant. Un client satisfait qui doit sortir son téléphone, ouvrir Google Maps, chercher le bon établissement parmi les homonymes, faire défiler jusqu'au bouton d'avis puis rédiger, abandonne massivement en cours de route. Le même client, à qui l'on tend une plaque à approcher de son téléphone pendant qu'il attend le ticket de carte bancaire, arrive directement sur le formulaire d'avis. La différence n'est pas dans sa satisfaction : elle est dans les six étapes qu'on lui a épargnées.</p>
+<p>La friction est le facteur sur lequel vous avez la main. Un client satisfait qui doit sortir son téléphone, ouvrir Google Maps, chercher le bon établissement parmi les homonymes, faire défiler jusqu'au bouton d'avis puis rédiger a de nombreuses occasions d'abandonner en cours de route. Le même client, à qui l'on tend une plaque à approcher de son téléphone pendant qu'il attend le ticket de carte bancaire, arrive directement sur le formulaire d'avis. La différence n'est pas dans sa satisfaction : elle est dans les étapes qu'on lui a épargnées.</p>
 <h3>Le coût rapporté à l'objectif</h3>
-<p>Le salon de coiffure de la section précédente a besoin de 78 avis. Un <a href="/product/business">Pack Business</a> à 54,90 EUR HT, payé une seule fois, revient à environ 0,70 EUR par avis sur cet objectif — et le compteur continue de baisser ensuite, puisqu'il n'y a rien à repayer les années suivantes. Un <a href="/product/starter">Pack Starter</a> à 29,90 EUR HT suffit pour un point d'encaissement unique ; le <a href="/product/pro">Pack Pro</a> couvre cinq emplacements. Pour comparer avec les autres méthodes de collecte, notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût réel par avis</a> chiffre six approches sur 36 mois, et notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix</a> donne les fourchettes du marché.</p>
-<p>Un dernier point sur le rythme : la régularité vaut mieux que l'intensité. Trente avis étalés sur six mois valent mieux, pour votre fiche comme pour les lecteurs, que trente avis publiés en dix jours. La fraîcheur des avis compte, et les pics anormaux attirent l'attention des filtres automatiques.</p>
+<p>Le salon de coiffure de la section précédente a besoin de 78 avis. Si ces 78 avis étaient tous collectés grâce aux plaques — une hypothèse, pas une promesse —, un <a href="/product/business">Pack Business</a> à 54,90 EUR HT, payé une seule fois, reviendrait à environ 0,70 EUR HT par avis sur cet objectif, puis de moins en moins à chaque avis suivant, puisqu'il n'y a rien à repayer. Un <a href="/product/starter">Pack Starter</a> à 29,90 EUR HT suffit pour un point d'encaissement unique ; le <a href="/product/pro">Pack Pro</a> couvre cinq emplacements. Pour comparer avec les autres méthodes de collecte, notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût réel par avis</a> chiffre six approches sur 36 mois, et notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix</a> donne les fourchettes du marché.</p>
+<p>Un dernier point sur le rythme : la régularité vaut mieux que l'intensité. Le <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">règlement de Google relatif aux contenus ajoutés dans Maps</a> range parmi les contenus interdits ceux qui présentent « des volumes ou des schémas de contributions d'avis inhabituels, témoignant de tentatives de manipulation ». Un flux étalé dans le temps, qui suit simplement votre activité, ne ressemble pas à une campagne.</p>
 </section>
 
 <section id="erreurs" class="scroll-mt-28 mb-16">
 <h2>Cinq erreurs qui bloquent la remontée d'une note</h2>
 <ul>
-<li><strong>Ne solliciter que les clients supposés contents.</strong> C'est le réflexe le plus naturel et l'un des plus risqués : ce filtrage est contraire aux <a href="https://support.google.com/contributionpolicy/answer/7400114" target="_blank" rel="noopener noreferrer">règles relatives aux contributions</a> et Google repère ces schémas statistiques. La plaque, elle, reste visible en permanence : personne n'est trié, personne n'est empêché.</li>
-<li><strong>Offrir une contrepartie.</strong> Remise, boisson offerte, tirage au sort : toute contrepartie expose à la suppression massive de vos avis, y compris les avis parfaitement légitimes, et à la suspension de la fiche. Le gain de note obtenu ainsi est le plus fragile qui soit.</li>
-<li><strong>Faire déposer les avis depuis la tablette du comptoir.</strong> Plusieurs avis publiés depuis le même appareil et la même adresse IP constituent un signal de fraude classique. Le client écrit depuis son propre téléphone et son propre compte Google, ou il n'écrit pas.</li>
-<li><strong>Tout miser sur une campagne d'un mois.</strong> Un pic de trente avis en dix jours sur une fiche qui en recevait deux par mois est exactement le profil qui déclenche un examen — et parfois la mise en pause des nouveaux avis. Voir <a href="/blog/avis-google-disparus">pourquoi des avis Google disparaissent</a>.</li>
-<li><strong>Ne pas répondre aux avis négatifs.</strong> Une note remonte, un avis 1 étoile sans réponse reste lisible pendant des années. La réponse est le seul élément de votre fiche que vous contrôlez entièrement : elle mérite plus de soin que la note elle-même.</li>
+<li><strong>Ne solliciter que les clients supposés contents.</strong> C'est le réflexe le plus naturel et l'un des plus risqués : ces mêmes règles interdisent de « solliciter des avis positifs de façon sélective ». La plaque, elle, reste visible en permanence : personne n'est trié, personne n'est empêché.</li>
+<li><strong>Offrir une contrepartie.</strong> Remise, boisson offerte, tirage au sort : le règlement interdit de « proposer des avantages (comme un paiement, des remises, des produits et/ou services gratuits) en échange de la publication d'un avis ». En cas d'engagement artificiel, Google indique pouvoir <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">restreindre la fiche</a> : blocage des nouveaux avis pendant une période donnée, dépublication temporaire des avis existants, avertissement affiché aux consommateurs. Le gain de note obtenu ainsi est le plus fragile qui soit.</li>
+<li><strong>Faire déposer les avis sur la tablette du comptoir, ou insister pour que le client écrive sur place.</strong> Le règlement de Google demande aux marchands de ne pas obliger les clients à laisser un avis sur place, ni de faire pression en ce sens. Le client écrit depuis son propre téléphone et son propre compte Google, s'il le souhaite, ou il n'écrit pas.</li>
+<li><strong>Tout miser sur une campagne d'un mois.</strong> Un afflux soudain d'avis, sans rapport avec l'activité habituelle de la fiche, peut ressembler à ce que le règlement désigne comme des volumes ou des schémas de contributions inhabituels. Mieux vaut un flux régulier qu'une opération ponctuelle. Voir <a href="/blog/avis-google-disparus">pourquoi des avis Google disparaissent</a>.</li>
+<li><strong>Ne pas répondre aux avis négatifs.</strong> Une note remonte, un avis 1 étoile sans réponse reste lisible tant qu'il est en ligne. Sous un avis, la réponse est la seule partie que vous contrôlez entièrement : elle mérite plus de soin que la note elle-même.</li>
 </ul>
 <p>Sur le reste de la fiche — catégorie, photos, horaires, publications — notre <a href="/blog/optimiser-fiche-google-business-profile">guide complet Google Business Profile</a> couvre les éléments qui pèsent sur le classement en plus de la note.</p>
 </section>
@@ -2609,7 +2578,7 @@ export const articles: Record<string, {
 <p>Autant que vous en avez déjà. La formule est n = N × (T − A) ÷ (5 − T), où N est votre nombre d'avis, A votre note actuelle et T la note visée. Avec A = 4,2 et T = 4,6, le numérateur (0,4) et le dénominateur (0,4) sont égaux : n vaut exactement N. Une fiche à 40 avis doit en collecter 40 de plus, une fiche à 200 avis en collecte 200. Ce n'est pas une coïncidence : chaque fois que la cible se situe à mi-chemin entre votre note actuelle et 5, il faut doubler le volume. Et cela suppose que tous les nouveaux avis soient des 5 étoiles ; le moindre 4 étoiles en chemin allonge la trajectoire.</p>
 
 <h3>Google arrondit-il la note affichée sur la fiche ?</h3>
-<p>Google n'affiche qu'une seule décimale, la moyenne réelle en compte davantage. Une moyenne de 4,46 s'affiche donc 4,5. Concrètement, le seuil à franchir pour afficher 4,5 n'est pas 4,50 mais 4,45 : en reprenant la formule avec T = 4,45 au lieu de 4,50, une fiche à 100 avis notée 4,2 a besoin de 46 avis 5 étoiles au lieu de 60. Près d'un quart de travail en moins, simplement parce que la cible a été posée au bon endroit. L'inverse est vrai aussi : à 4,44 réels, vous affichez encore 4,4 alors que vous vous croyez arrivé.</p>
+<p>La note s'affiche avec une décimale, mais la page d'aide de Google sur les notes ne précise pas la règle d'arrondi : elle indique seulement que la note correspond à la moyenne de tous les avis publiés et que sa mise à jour peut prendre jusqu'à deux semaines. Si l'affichage suit l'arrondi usuel — une hypothèse à vérifier sur votre fiche —, une moyenne de 4,46 s'afficherait 4,5 et le seuil pour afficher 4,5 serait 4,45 : une fiche à 100 avis notée 4,2 aurait alors besoin de 46 avis 5 étoiles au lieu de 60. À l'inverse, à 4,44 réels, elle afficherait encore 4,4. Si l'affichage tronquait au lieu d'arrondir, c'est 4,50 qu'il faudrait viser.</p>
 
 <h3>Un seul avis 1 étoile, ça coûte combien d'avis 5 étoiles ?</h3>
 <p>Le nombre d'avis 5 étoiles nécessaires pour annuler l'effet d'un avis 1 étoile vaut (A − 1) ÷ (5 − A), où A est votre note. Il ne dépend pas du tout de votre volume d'avis : à 4,0 il faut 3 avis 5 étoiles, à 4,2 il en faut 4, à 4,5 il en faut 7, à 4,6 il en faut 9 et à 4,8 il en faut 19. Autrement dit, plus votre note est haute, plus un seul avis 1 étoile vous coûte cher. C'est mécanique, et c'est la raison pour laquelle une excellente note ne se maintient qu'avec un flux d'avis régulier.</p>
@@ -2618,20 +2587,20 @@ export const articles: Record<string, {
 <p>Tout avis strictement supérieur à votre moyenne actuelle la fait monter, tout avis strictement inférieur la fait descendre. Un 4 étoiles déposé sur une fiche notée 3,8 est donc une bonne nouvelle ; le même 4 étoiles sur une fiche notée 4,6 la tire vers le bas. C'est contre-intuitif, et cela explique pourquoi les fiches très bien notées progressent si lentement : à 4,7, seuls les 5 étoiles aident encore.</p>
 
 <h3>Combien de temps faut-il pour remonter sa note Google ?</h3>
-<p>Le délai n'est pas une donnée, c'est un quotient : divisez le nombre d'avis nécessaires par le nombre d'avis que vous collectez chaque mois. Une fiche à 140 avis notée 4,3 qui vise un affichage à 4,6 a besoin d'environ 78 avis 5 étoiles : à 10 avis par mois, cela prend huit mois ; à 3 avis par mois, plus de deux ans. La seule variable réellement pilotable est le rythme mensuel, et il dépend surtout de la friction entre le client satisfait et le formulaire d'avis.</p>
+<p>Le délai n'est pas une donnée, c'est un quotient : divisez le nombre d'avis nécessaires par le nombre d'avis que vous collectez chaque mois. Une fiche à 140 avis notée 4,3 qui vise un affichage à 4,6 a besoin d'environ 78 avis 5 étoiles (au seuil de l'arrondi usuel) : si elle en recevait, par hypothèse, 10 par mois, il lui faudrait environ huit mois ; à 3 par mois, plus de deux ans. Remplacez ces hypothèses par votre propre rythme : c'est la seule variable réellement pilotable, et elle dépend surtout de la friction entre le client satisfait et le formulaire d'avis.</p>
 
 <h3>Peut-on faire supprimer un avis négatif pour remonter sa note ?</h3>
-<p>Uniquement s'il viole les règles de Google : contenu hors sujet, propos haineux, spam, conflit d'intérêts, avis déposé par quelqu'un qui n'a jamais été client. Un avis simplement sévère mais sincère ne sera pas retiré, et il ne doit pas l'être. Le signalement est donc un complément, jamais une stratégie de note : sur un avis négatif légitime, les deux seuls leviers sont la réponse publique, qui est lue par les prospects suivants, et la dilution par le volume d'avis récents.</p>
+<p>Uniquement s'il viole les règles de Google : contenu hors sujet, propos haineux, spam, conflit d'intérêts, avis déposé par quelqu'un qui n'a jamais été client. Un avis simplement sévère mais sincère ne sera pas retiré, et il ne doit pas l'être. Le signalement est donc un complément, jamais une stratégie de note : sur un avis négatif légitime, les deux seuls leviers sont la réponse publique, visible de tous ceux qui consultent l'avis, et la dilution par le volume d'avis récents.</p>
 
 <h3>Faut-il un abonnement pour collecter des avis avec une plaque NFC ?</h3>
-<p>Non. La plaque Swiipx est un paiement unique, sans frais mensuels ni renouvellement, à partir de 29,90 EUR HT. La puce NTAG215 est passive : elle n'a pas de batterie et tire son énergie du champ émis par le téléphone pendant la lecture, ce qui lui permet de fonctionner des années. Rapporté aux dizaines d'avis qu'une remontée de note demande, le coût unitaire par avis tombe sous le seuil de quelques dizaines de centimes, puis continue de baisser puisqu'il n'y a rien à repayer.</p>
+<p>Non. La plaque Swiipx est un paiement unique, sans frais mensuels ni renouvellement, à partir de 29,90 EUR HT. La puce NTAG215 est passive : elle n'a pas de batterie et tire son énergie du champ émis par le téléphone pendant la lecture, il n'y a donc rien à recharger. Et puisqu'il n'y a rien à repayer, le coût par avis baisse à chaque nouvel avis collecté.</p>
 </section>
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : une note se calcule, puis se travaille</h2>
-<p>La plupart des professionnels vivent leur note Google comme un verdict. C'est une moyenne. Elle obéit à une formule que vous pouvez poser en trente secondes sur un coin de table, et qui vous dit exactement combien d'avis vous séparent du chiffre que vos prospects verront.</p>
-<p>Trois choses à retenir. <strong>Le nombre d'avis nécessaires est proportionnel à ce que vous avez déjà</strong> : agir tôt coûte des dizaines de fois moins cher qu'agir tard. <strong>La cible se calcule au seuil d'arrondi</strong>, pas au chiffre rond : viser 4,45 plutôt que 4,50 économise près d'un quart de l'effort. <strong>Un avis 1 étoile coûte d'autant plus cher que votre note est bonne</strong> : à 4,6, il en efface neuf.</p>
-<p>Reste la seule variable que vous pilotez vraiment : le nombre de clients satisfaits qui passent réellement à l'acte. Ils sont déjà contents. Il leur manque dix secondes et un objet à portée de main au bon moment.</p>
+<p>On vit souvent sa note Google comme un verdict. C'est une moyenne. Elle obéit à une formule que vous pouvez poser en trente secondes sur un coin de table, et qui vous dit combien d'avis vous séparent du chiffre que vos prospects verront.</p>
+<p>Trois choses à retenir. <strong>Le nombre d'avis nécessaires est proportionnel à ce que vous avez déjà</strong> : agir tôt demande proportionnellement moins d'avis qu'agir tard. <strong>Si l'affichage suit l'arrondi usuel, la cible se calcule au seuil d'arrondi</strong> : dans notre exemple, viser 4,45 plutôt que 4,50 économise près d'un quart des avis. <strong>Un avis 1 étoile coûte d'autant plus cher que votre note est bonne</strong> : à 4,6, il en efface neuf.</p>
+<p>Reste la seule variable que vous pilotez vraiment : le nombre de clients satisfaits qui passent réellement à l'acte. Ils sont déjà contents. Ce qui peut leur manquer, c'est un objet à portée de main au bon moment.</p>
 <p>Pour aller plus loin : <a href="/blog/combien-avis-google-pack-local">combien d'avis pour entrer dans le pack local</a>, <a href="/blog/statistiques-avis-google-2026">les statistiques avis Google 2026</a>, <a href="/blog/obtenir-plus-avis-google">10 méthodes pour obtenir plus d'avis</a> ou notre <a href="/blog/ou-placer-plaque-avis-google">guide de placement de la plaque</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
@@ -2647,7 +2616,7 @@ export const articles: Record<string, {
     date: '15 août 2026',
     readTime: '11 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Cliniques et cabinets vétérinaires : une consultation sur deux se termine par une bonne nouvelle, l\'autre non. Où poser la plaque, à quel moment demander, quand se taire, scripts ASV et exemples de calcul.',
+    excerpt: 'Cliniques et cabinets vétérinaires : toutes les consultations ne se terminent pas par une bonne nouvelle, et la demande d\'avis doit en tenir compte. Où poser la plaque, à quel moment demander, quand se taire, scripts ASV et exemples de calcul.',
     tocSections: [
       { id: 'pourquoi-avis-veterinaire', label: 'Pourquoi les avis décident' },
       { id: 'asymetrie-clinique', label: 'Gratitude vs avis publié' },
@@ -2669,7 +2638,7 @@ export const articles: Record<string, {
 <p>Et il les lit. <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026, 1 350 répondants représentatifs). Sur une requête du type « vétérinaire + ville », Google n'affiche que trois fiches dans le pack local avant qu'il faille cliquer pour voir la suite. Une clinique avec 17 avis à 4,0 ne se bat pas à armes égales avec celle qui affiche 210 avis à 4,7 à huit cents mètres.</p>
 <p>Deux particularités du métier aggravent l'enjeu. D'abord l'urgence : un propriétaire dont le chien vomit du sang un dimanche soir ne compare pas trois cliniques, il appelle la première crédible de la liste. Ensuite la fidélité : un chat suivi de ses six mois à ses quinze ans, c'est quinze années de vaccins, de bilans gériatriques, de détartrages et d'imprévus. La fiche Google ne vous rapporte pas une consultation, elle vous rapporte un dossier.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> prenez votre chiffre d'affaires moyen par animal et par an, multipliez-le par la durée de vie de l'animal. Vous obtenez la vraie valeur d'un nouveau client — celle qu'il faut comparer au coût d'une plaque, et non le prix d'une consultation isolée. C'est ce qui rend une place gagnée dans le pack local disproportionnellement rentable en clientèle canine.</p>
+<p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> prenez votre chiffre d'affaires moyen par animal et par an, multipliez-le par la durée de vie de l'animal. Vous obtenez la vraie valeur d'un nouveau client — celle qu'il faut comparer au coût d'une plaque, et non le prix d'une consultation isolée. C'est à cette valeur-là qu'il faut rapporter une place gagnée dans le pack local.</p>
 </div>
 </section>
 
@@ -2689,16 +2658,16 @@ export const articles: Record<string, {
 
 <section id="fonctionnement" class="scroll-mt-28 mb-16">
 <h2>Comment fonctionne la plaque NFC dans une clinique</h2>
-<p>La plaque est en acrylique premium (120 × 120 × 3 mm) et contient une puce NTAG215. Le propriétaire approche son smartphone à moins de 4 cm : votre page d'avis Google s'ouvre <strong>automatiquement</strong>, sans application à installer, sans code, sans saisie d'adresse.</p>
+<p>La plaque est en acrylique premium (120 × 120 × 3 mm) et contient une puce NTAG215. Le propriétaire approche son smartphone de la plaque : le téléphone affiche aussitôt le lien vers votre page d'avis Google, <strong>sans application à installer</strong>, sans code, sans saisie d'adresse.</p>
 <ol>
 <li>Le propriétaire règle la consultation au comptoir d'accueil</li>
 <li>L'ASV avance la plaque : « Si vous avez un instant, approchez votre téléphone ici »</li>
 <li>Le formulaire d'avis de votre fiche s'ouvre directement</li>
-<li>Cinq étoiles et deux lignes — c'est terminé</li>
+<li>Une note, deux lignes — c'est terminé</li>
 </ol>
-<p>Un <strong>QR code de secours</strong> est imprimé sur la plaque pour les rares téléphones dont le NFC est désactivé : utile en clientèle vétérinaire, où la patientèle âgée est surreprésentée et où le geste « scanner » est parfois plus familier que le geste « approcher ». La solution est compatible avec tous les iPhone depuis 2016 et la quasi-totalité des Android.</p>
+<p>Un <strong>QR code de secours</strong> est imprimé sur la plaque pour les téléphones qui ne lisent pas la puce d'eux-mêmes : téléphone sans NFC ou dont le NFC est désactivé, ou iPhone antérieur à la génération XS, la première à lire les puces NFC en arrière-plan selon la documentation développeurs d'Apple. Il sert aussi aux propriétaires pour qui le geste « scanner » est plus familier que le geste « approcher ».</p>
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
-<p class="text-sm text-emerald-900"><strong>⚙️ Spécificité vétérinaire :</strong> le comptoir d'accueil d'une clinique est désinfecté plusieurs fois par jour. L'acrylique supporte les lingettes et les solutions hydro-alcooliques sans se voiler ni se décolorer, contrairement à un carton plastifié ou à une affiche papier qui gondole en deux semaines.</p>
+<p class="text-sm text-emerald-900"><strong>⚙️ Spécificité vétérinaire :</strong> le comptoir d'accueil d'une clinique est désinfecté plusieurs fois par jour, et l'acrylique ne se traite pas comme le reste du comptoir. Dans sa <a href="https://www.plexiglas.de/files/plexiglas-content/pdf/technische-informationen/211-13-Nettoyage-et-desinfection-de-PLEXIGLAS.pdf" target="_blank" rel="noopener noreferrer">fiche de nettoyage du PLEXIGLAS®</a>, le fabricant Röhm recommande de l'eau additionnée d'un peu de liquide vaisselle et un chiffon doux, précise que les produits de nettoyage ne doivent contenir ni éthanol ni alcool, et indique l'isopropanol appliqué avec un chiffon doux pour désinfecter. Prévoyez donc la plaque à part dans le protocole d'entretien, plutôt que de lui passer le produit hydro-alcoolique du comptoir.</p>
 </div>
 </section>
 
@@ -2734,7 +2703,7 @@ export const articles: Record<string, {
 <p>C'est la section qui distingue ce métier de tous les autres. Dans un garage ou une boulangerie, la question « quand demander ? » est une question d'efficacité. En clinique vétérinaire, c'est une question de décence — et une erreur de timing coûte bien plus cher qu'un avis manquant.</p>
 <h3>Les 5 moments où la demande est légitime</h3>
 <ul>
-<li><strong>La vaccination annuelle et le rappel</strong> : consultation courte, animal en bonne santé, propriétaire détendu. C'est le volume de votre clinique, et le moment le plus simple.</li>
+<li><strong>La vaccination annuelle et le rappel</strong> : consultation courte, animal en bonne santé, propriétaire détendu. Le moment revient chaque année pour chaque animal suivi, et c'est le plus simple.</li>
 <li><strong>La sortie de chirurgie de convenance</strong> (stérilisation, castration) : le propriétaire récupère un animal qui va bien après une journée d'inquiétude. Le soulagement est réel et il s'exprime volontiers.</li>
 <li><strong>Le contrôle post-opératoire favorable</strong> : retrait de fils, cicatrisation conforme. L'histoire a une fin heureuse, et le propriétaire a du recul sur l'ensemble de la prise en charge.</li>
 <li><strong>La première visite d'un chiot ou d'un chaton</strong> : identification, primo-vaccination, conseils d'alimentation. Contexte joyeux, propriétaire bavard, et souvent un nouveau client à fidéliser.</li>
@@ -2745,11 +2714,11 @@ export const articles: Record<string, {
 <li><strong>Une euthanasie</strong>, et les jours qui suivent. Aucune exception, aucun script, aucun aménagement. La règle doit être écrite dans le protocole d'accueil et connue de toute l'équipe.</li>
 <li><strong>L'annonce d'un diagnostic grave</strong> : tumeur, insuffisance rénale, maladie chronique lourde. Le propriétaire encaisse une information, pas une prestation.</li>
 <li><strong>Une hospitalisation en cours</strong> : tant que l'issue n'est pas connue, la question ne se pose pas.</li>
-<li><strong>Une urgence de nuit ou de week-end facturée au tarif de garde</strong> : le propriétaire vient de payer deux à trois fois le tarif habituel dans un moment de stress. Solliciter un avis à cet instant revient à provoquer celui que vous ne voulez pas.</li>
+<li><strong>Une urgence de nuit ou de week-end facturée au tarif de garde</strong> : le propriétaire vient de payer un tarif de garde, plus élevé que le tarif habituel, dans un moment de stress. Solliciter un avis à cet instant revient à provoquer celui que vous ne voulez pas.</li>
 <li><strong>Toute situation où le propriétaire a exprimé un désaccord</strong>, même réglé. Un litige apaisé n'est pas un litige oublié.</li>
 </ul>
 <div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
-<p class="text-sm text-amber-900"><strong>⚠️ La nuance juridique importante :</strong> s'abstenir de solliciter dans ces cinq situations, ce n'est pas filtrer les clients mécontents — pratique contraire aux règles de Google et détectable statistiquement. La différence est celle du critère : vous vous abstenez sur un <strong>contexte de soin</strong> identifiable à l'avance et applicable à tous, pas sur une opinion supposée du propriétaire. La plaque reste visible et accessible à tous en permanence sur le comptoir : personne n'est empêché de la lire.</p>
+<p class="text-sm text-amber-900"><strong>⚠️ La nuance juridique importante :</strong> s'abstenir de solliciter dans ces cinq situations, ce n'est pas filtrer les clients mécontents — le règlement de Google Maps interdit de <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">solliciter des avis positifs de façon sélective</a>. La différence est celle du critère : vous vous abstenez sur un <strong>contexte de soin</strong> identifiable à l'avance et applicable à tous, pas sur une opinion supposée du propriétaire. La plaque reste visible et accessible à tous en permanence sur le comptoir : personne n'est empêché de la lire.</p>
 </div>
 </section>
 
@@ -2757,7 +2726,7 @@ export const articles: Record<string, {
 <h2>Les scripts ASV qui marchent (et ceux qui abîment la relation)</h2>
 <p>Une plaque posée sans un mot collecte peu : le propriétaire est concentré sur son animal, pas sur le comptoir. C'est la phrase de l'auxiliaire qui transforme l'objet en proposition. Elle doit tenir en une phrase, ne créer aucune obligation, et être identique pour tous.</p>
 
-<h3>✅ Le script « encaissement » (le plus efficace)</h3>
+<h3>✅ Le script « encaissement »</h3>
 <p class="italic">« Et voilà, tout est en ordre pour Nala. Si vous avez été bien accompagnés aujourd'hui, un avis Google nous aide beaucoup — vous approchez juste votre téléphone ici, ça prend vingt secondes. »</p>
 <p>Pourquoi ça marche : le nom de l'animal personnalise sans flatter, la demande est conditionnelle (« si vous avez été bien accompagnés »), elle est bornée dans le temps, et le geste est montré plutôt qu'expliqué.</p>
 
@@ -2771,10 +2740,10 @@ export const articles: Record<string, {
 
 <h3>❌ Ce qu'il ne faut jamais faire</h3>
 <ul>
-<li><strong>Offrir une remise, un sac de croquettes ou une consultation</strong> contre un avis : violation directe des règles de Google, suppression possible de l'ensemble de vos avis et suspension de la fiche.</li>
-<li><strong>Ne présenter la plaque qu'aux clients supposés contents</strong> : ce filtrage sur l'opinion est contraire aux conditions d'utilisation et laisse des traces statistiques que Google repère.</li>
-<li><strong>Demander pendant l'annonce du devis</strong> d'une intervention lourde : le propriétaire découvre un montant à quatre chiffres, ce n'est pas le moment.</li>
-<li><strong>Faire rédiger l'avis sur la tablette de la clinique</strong> : plusieurs avis depuis la même adresse IP et le même appareil constituent un signal classique de fraude. Le propriétaire écrit depuis son téléphone, depuis son compte, ou n'écrit pas.</li>
+<li><strong>Offrir une remise, un sac de croquettes ou une consultation</strong> contre un avis : c'est strictement interdit par Google, qui peut alors <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">empêcher la fiche de recevoir de nouveaux avis, retirer les avis existants pendant une période donnée ou afficher un avertissement</a>.</li>
+<li><strong>Ne présenter la plaque qu'aux clients supposés contents</strong> : c'est solliciter des avis positifs de façon sélective, ce que le règlement de Google Maps interdit.</li>
+<li><strong>Demander pendant l'annonce du devis</strong> d'une intervention lourde : le propriétaire découvre un montant important, ce n'est pas le moment.</li>
+<li><strong>Faire rédiger l'avis sur la tablette de la clinique</strong> : l'avis doit rester celui du propriétaire, écrit depuis son téléphone et son propre compte Google, et le règlement de Google Maps demande de ne pas obliger ni pousser un client à laisser un avis sur place.</li>
 <li><strong>Insister après un premier refus</strong> : dans une relation de soin appelée à durer dix ans, un instant de gêne se paie plus cher qu'un avis.</li>
 </ul>
 </section>
@@ -2796,15 +2765,15 @@ export const articles: Record<string, {
 <ul>
 <li>190 ÷ 7, cela ferait <strong>une petite trentaine d'avis par mois</strong> dans cette hypothèse</li>
 <li>Le comptoir de délivrance apporte un flux distinct des consultations : ce sont les mêmes clients, mais captés dans un contexte plus détendu, et ils n'ont encore jamais été sollicités</li>
-<li>Côté dépense, l'équipement est un achat unique (89,90 € le <a href="/product/pro">Pack Pro</a>, cinq plaques) : il se compare à la valeur d'un dossier client, pas à un budget mensuel</li>
+<li>Côté dépense, l'équipement est un achat unique (89,90 € HT le <a href="/product/pro">Pack Pro</a>, cinq plaques) : il se compare à la valeur d'un dossier client, pas à un budget mensuel</li>
 </ul>
 
 <h3>🐈 Clinique de référé ou spécialisée</h3>
-<p>Hypothèses : volume faible (une quarantaine de cas par mois), panier moyen très élevé, part importante de cas graves. On ne sollicite que sur les contrôles post-opératoires favorables, soit une quinzaine de moments par mois. Un propriétaire sur trois accepte, parce que la prise en charge a été longue et que la reconnaissance est forte.</p>
+<p>Hypothèses : volume faible (une quarantaine de cas par mois), panier moyen très élevé, part importante de cas graves. On ne sollicite que sur les contrôles post-opératoires favorables, soit une quinzaine de moments par mois. On suppose qu'un propriétaire sur trois accepterait, parce que la prise en charge a été longue et que la reconnaissance y est souvent forte.</p>
 <ul>
 <li>15 ÷ 3, cela ferait <strong>environ 5 avis par mois</strong></li>
 <li>Sur ce type de structure, le volume compte moins que le contenu : un avis détaillé décrivant une prise en charge complexe rassure davantage un confrère référent ou un propriétaire hésitant que dix avis d'une ligne</li>
-<li>Ces avis-là sont aussi ceux qui contiennent naturellement vos mots-clés métier (« chirurgie orthopédique », « cardiologie féline »), que Google lit pour vous positionner</li>
+<li>Ces avis-là sont aussi ceux qui nomment précisément vos actes (« chirurgie orthopédique », « cardiologie féline »), ce que cherche à lire un propriétaire ou un confrère qui hésite</li>
 </ul>
 <p>Ces trois calculs ne prouvent rien : ils montrent quel ordre de grandeur découle de quelle hypothèse. Refaites-les avec votre nombre réel de consultations et votre estimation honnête de la part de clients à qui la phrase sera effectivement dite. Pour situer le nombre d'avis nécessaire face à vos concurrents, lisez notre méthode pour <a href="/blog/combien-avis-google-pack-local">calculer le seuil d'entrée dans le pack local</a>.</p>
 </section>
@@ -2816,28 +2785,28 @@ export const articles: Record<string, {
 <table class="w-full text-sm border-collapse">
 <thead><tr class="bg-gray-100"><th class="border p-3 text-left">Poste</th><th class="border p-3 text-left">Donnée ou hypothèse</th></tr></thead>
 <tbody>
-<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">54,90 €, une seule fois, sans abonnement — <em>donnée</em></td></tr>
+<tr><td class="border p-3">Coût du Pack Business (2 plaques)</td><td class="border p-3">54,90 € HT, une seule fois, sans abonnement — <em>donnée</em></td></tr>
 <tr><td class="border p-3">Usure de la plaque</td><td class="border p-3">Puce passive, pas de batterie, garantie à vie — <em>donnée</em></td></tr>
 <tr><td class="border p-3">Consultations par mois</td><td class="border p-3">95 (22 par semaine) — <em>hypothèse</em></td></tr>
 <tr><td class="border p-3">Part non sollicitable (fins de vie, annonces graves, urgences)</td><td class="border p-3">≈ 25 % du volume — <em>hypothèse, à caler sur votre activité</em></td></tr>
 <tr><td class="border p-3">Proportion qui publie un avis</td><td class="border p-3">1 propriétaire sur 6, phrase dite systématiquement — <em>hypothèse</em></td></tr>
 <tr><td class="border p-3">Avis publiés par mois</td><td class="border p-3">≈ 12 si l'hypothèse tient, ≈ 6 si la phrase est dite une fois sur deux</td></tr>
 <tr><td class="border p-3">Chiffre d'affaires annuel moyen par animal suivi</td><td class="border p-3">≈ 250 € — <em>hypothèse, à caler sur vos tarifs</em></td></tr>
-<tr><td class="border p-3"><strong>Ce que couvre un seul nouveau chien suivi 10 ans</strong></td><td class="border p-3"><strong>Plusieurs dizaines de fois le prix des deux plaques</strong></td></tr>
+<tr><td class="border p-3"><strong>Ce que représenterait un seul nouveau chien suivi 10 ans</strong></td><td class="border p-3"><strong>Environ 2 500 € de chiffre d'affaires si l'hypothèse de 250 € par an tient, soit plusieurs dizaines de fois le prix des deux plaques</strong></td></tr>
 </tbody>
 </table>
 </div>
-<p>Le chiffre que personne ne peut vous promettre, c'est le nombre de nouveaux clients : il dépend de votre densité concurrentielle, de votre position de départ dans le pack local et de ce que vos avis racontent. Ce que le calcul montre, c'est le rapport de grandeur : <strong>un seul nouveau dossier canin suivi jusqu'au bout rembourse l'équipement des dizaines de fois</strong>, et il n'y a rien à repayer ensuite. Pour les fourchettes de prix du marché, voyez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a> et notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des solutions sans abonnement</a>.</p>
+<p>Le chiffre que personne ne peut vous promettre, c'est le nombre de nouveaux clients : il dépend de votre densité concurrentielle, de votre position de départ dans le pack local et de ce que vos avis racontent. Ce que le calcul montre, c'est le rapport de grandeur : <strong>dans cette hypothèse, le chiffre d'affaires d'un seul nouveau dossier canin suivi jusqu'au bout représenterait des dizaines de fois le prix de l'équipement</strong>, et il n'y a rien à repayer ensuite. Pour les fourchettes de prix du marché, voyez notre <a href="/blog/prix-plaque-nfc-avis-google">guide des prix des plaques NFC</a> et notre <a href="/blog/plaque-avis-google-sans-abonnement">comparatif des solutions sans abonnement</a>.</p>
 </section>
 
 <section id="repondre-avis" class="scroll-mt-28 mb-16">
 <h2>Répondre aux avis : trois cas propres au métier</h2>
-<p>Collecter ne suffit pas. Google valorise les fiches actives, et <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent que le gérant réponde aux avis</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 consommateurs américains). En clinique, la réponse est lue par des dizaines de propriétaires hésitants — pas par l'auteur.</p>
+<p>Collecter ne suffit pas. <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">Google indique que les avis positifs et les réponses utiles peuvent aider un établissement à se démarquer</a>, et <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent que le gérant réponde aux avis</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 consommateurs américains). En clinique, la réponse s'adresse moins à l'auteur qu'aux propriétaires qui hésitent et la liront ensuite.</p>
 <h3>L'avis positif (30 secondes)</h3>
 <p class="italic">« Merci beaucoup pour votre retour ! Ravis que la convalescence se passe bien. À bientôt pour le contrôle — L'équipe de la Clinique X »</p>
-<p>Astuce SEO : glissez naturellement votre métier et votre ville dans une partie de vos réponses (« notre clinique vétérinaire à Colombes »). Google lit ces réponses.</p>
+<p>Astuce : personnalisez chaque réponse en reprenant un mot de l'avis, sans jamais ajouter d'information sur le dossier. Une formule copiée-collée sous tous vos avis se voit immédiatement.</p>
 <h3>L'avis « c'est trop cher »</h3>
-<p>Le grief le plus fréquent du secteur. N'argumentez jamais sur la marge, et ne détaillez jamais un dossier en public. Expliquez ce que couvre un acte en général — matériel, anesthésie, surveillance, personnel qualifié — puis proposez un échange direct. Une réponse pédagogique et calme sur ce point convertit remarquablement bien, parce que le futur lecteur se pose exactement la même question.</p>
+<p>Un grief classique du secteur. N'argumentez jamais sur la marge, et ne détaillez jamais un dossier en public. Expliquez ce que couvre un acte en général — matériel, anesthésie, surveillance, personnel qualifié — puis proposez un échange direct. Une réponse pédagogique et calme compte ici, parce que le futur lecteur se pose exactement la même question.</p>
 <h3>L'avis lié à un décès ou à une euthanasie</h3>
 <p>Le plus délicat. Ne vous justifiez pas, ne rappelez aucun élément médical, ne corrigez pas les faits en public — même quand ils sont faux. Reconnaissez la douleur, dites que vous êtes disponible pour en parler, et laissez la porte ouverte. Trois lignes, pas davantage. Le <strong>secret professionnel s'applique aussi dans une réponse Google</strong> : citer un diagnostic ou une décision du propriétaire vous expose bien plus que l'avis lui-même.</p>
 <p>Nos six modèles de réponses prêts à l'emploi, avec la procédure de signalement quand un avis est manifestement contraire aux règles, sont détaillés dans notre <a href="/blog/repondre-avis-negatifs-google">guide de réponse aux avis négatifs</a>.</p>
@@ -2854,15 +2823,15 @@ export const articles: Record<string, {
 </ul>
 <h3>Semaines 3-8 : le rythme</h3>
 <ul>
-<li>Objectif réaliste : 10 à 30 nouveaux avis par mois selon votre volume</li>
+<li>Fixez votre objectif mensuel à partir de votre propre calcul — consultations sollicitables multipliées par la part de propriétaires qui publient, selon votre hypothèse — et corrigez-le après les premières semaines</li>
 <li>Répondez à 100 % des avis sous 48 h, négatifs compris</li>
 <li>Publiez un Google Post par semaine : campagne antiparasitaire de saison, rappel de vaccination, arrivée d'un nouvel équipement, horaires de garde de l'été</li>
-<li>Ne cherchez pas à rattraper le retard d'un coup : une accélération brutale du volume est le signal que les filtres anti-fraude de Google surveillent en priorité</li>
+<li>Ne cherchez pas à rattraper le retard d'un coup : visez un flux régulier, qui reflète simplement votre activité</li>
 </ul>
 <h3>Semaines 9-12 : la consolidation</h3>
 <ul>
-<li>Les effets sur le pack local deviennent visibles (comptez 4 à 8 semaines de décalage)</li>
-<li>Relisez les mots qui reviennent dans vos avis : ce sont ceux sur lesquels Google vous positionne. S'ils ne parlent que de vaccins alors que vous voulez développer la chirurgie, ajustez le moment où vous sollicitez</li>
+<li>Suivez votre position dans le pack local sans attendre d'effet à date fixe : la distance et la pertinence comptent aussi, et aucun délai ne peut être promis</li>
+<li>Relisez les mots qui reviennent dans vos avis : ce sont ceux que lisent vos futurs clients. S'ils ne parlent que de vaccins alors que vous voulez développer la chirurgie, ajustez le moment où vous sollicitez</li>
 <li>Comparez votre nombre d'avis aux trois cliniques classées devant vous, et fixez votre rythme mensuel en conséquence</li>
 </ul>
 </section>
@@ -2871,7 +2840,7 @@ export const articles: Record<string, {
 <h2>FAQ — Plaque NFC pour clinique vétérinaire</h2>
 
 <h3>Combien d'avis Google une clinique vétérinaire peut-elle collecter avec une plaque NFC ?</h3>
-<p>Personne ne peut vous le garantir : cela dépend de votre volume de consultations et de la régularité de la demande. Le calcul se pose en une minute. Avec 95 consultations par mois, dont environ 70 sollicitables une fois retirées les situations sensibles, et un propriétaire sur six qui publie, on obtient une douzaine d'avis mensuels. Si la phrase n'est dite qu'une fois sur deux, comptez la moitié. C'est l'hypothèse retenue qui décide du résultat, pas la plaque.</p>
+<p>Personne ne peut vous le garantir : cela dépend de votre volume de consultations, de la régularité de la demande et de la part des propriétaires qui publient, que rien ne permet de fixer à l'avance. Le calcul se pose en une minute. Hypothèse de calcul : 95 consultations par mois ; si l'on retire environ un quart du volume au titre des situations sensibles, il en reste à peu près 70 sollicitables ; si un propriétaire sur six publiait, cela ferait une douzaine d'avis mensuels. Si la phrase n'est dite qu'une fois sur deux, comptez la moitié. C'est l'hypothèse retenue qui décide du résultat, pas la plaque.</p>
 
 <h3>Où placer la plaque NFC dans une clinique vétérinaire ?</h3>
 <p>Le comptoir d'accueil, à droite du terminal de paiement. C'est le seul instant de la visite où le propriétaire a les deux mains libres et son téléphone déjà sorti : partout ailleurs il tient une laisse, une caisse de transport ou un animal. Le comptoir de délivrance d'aliments et d'antiparasitaires arrive juste derrière, parce que le client y vient sans animal et hors contexte médical. Le bureau de consultation ne se justifie que pour les suivis favorables, et la salle d'attente rend peu dans ce métier.</p>
@@ -2880,13 +2849,13 @@ export const articles: Record<string, {
 <p>Oui, dès lors que la demande reste neutre, sans contrepartie et sans tri des clients. Ce qui distingue une pratique acceptable, c'est le critère d'abstention : on ne sollicite pas selon l'opinion supposée du propriétaire, mais selon le contexte de soin — jamais après une euthanasie, une annonce grave, une hospitalisation en cours ou une urgence facturée au tarif de garde. Cette règle s'applique identiquement à tous les clients, elle est écrite dans le protocole d'accueil, et la plaque reste visible en permanence sur le comptoir.</p>
 
 <h3>Que faire des avis négatifs portant sur les tarifs ?</h3>
-<p>Répondez toujours, mais jamais sur la marge et jamais sur le dossier. Expliquez en termes généraux ce que couvre un acte — matériel stérile, anesthésie, surveillance, personnel qualifié — puis proposez un échange direct par téléphone. Cette réponse est lue par des dizaines de propriétaires qui se posent la même question avant de choisir une clinique : c'est l'une des réponses les plus rentables que vous écrirez. Attention au secret professionnel, qui s'applique aussi dans une réponse publique.</p>
+<p>Répondez toujours, mais jamais sur la marge et jamais sur le dossier. Expliquez en termes généraux ce que couvre un acte — matériel stérile, anesthésie, surveillance, personnel qualifié — puis proposez un échange direct par téléphone. Cette réponse sera lue par des propriétaires qui se posent la même question avant de choisir une clinique : elle mérite d'être soignée. Attention au secret professionnel, qui s'applique aussi dans une réponse publique.</p>
 
 <h3>Peut-on offrir une réduction ou un sac de croquettes contre un avis ?</h3>
-<p>Non, c'est formellement interdit par les règles de Google. Toute contrepartie expose à la suppression massive de vos avis, y compris les avis légitimes, et à la suspension de votre fiche. Il est tout aussi risqué de faire rédiger l'avis sur la tablette de la clinique : plusieurs avis publiés depuis le même appareil et la même adresse IP constituent un signal de fraude classique. Le propriétaire écrit depuis son propre téléphone et son propre compte.</p>
+<p>Non, c'est strictement interdit par les règles de Google. En cas d'engagement artificiel, Google peut empêcher votre fiche de recevoir de nouveaux avis, retirer les avis existants pendant une période donnée ou afficher un avertissement aux internautes. Évitez aussi de faire rédiger l'avis sur la tablette de la clinique : le règlement de Google Maps demande de ne pas obliger ni pousser un client à laisser un avis sur place. Le propriétaire écrit depuis son propre téléphone et son propre compte.</p>
 
 <h3>Faut-il un abonnement pour utiliser la plaque NFC ?</h3>
-<p>Non. La plaque Swiipx est un paiement unique, sans frais mensuels ni renouvellement. La puce NTAG215 est passive : elle n'a pas de batterie et tire son énergie du champ émis par le téléphone pendant la lecture, ce qui lui permet de fonctionner des années sans entretien. Un simple passage de lingette désinfectante suffit, et l'acrylique ne se voile pas.</p>
+<p>Non. La plaque Swiipx est un paiement unique, sans frais mensuels ni renouvellement. La puce NTAG215 est passive : elle n'a pas de batterie et tire son énergie du champ émis par le téléphone pendant la lecture, ce qui lui permet de fonctionner des années sans entretien. Pour l'acrylique, suivez les consignes du fabricant du PLEXIGLAS® : eau additionnée d'un peu de liquide vaisselle et chiffon doux, sans produit de nettoyage contenant de l'éthanol ou de l'alcool.</p>
 
 <h3>Quel pack choisir pour une structure vétérinaire ?</h3>
 <p>Cabinet à praticien unique avec un seul point d'encaissement : Pack Starter. Clinique avec comptoir de paiement et comptoir de délivrance d'aliments : Pack Business (2 plaques), la configuration la plus fréquente. Clinique à plusieurs praticiens, structure avec service d'urgence, ou bureaux de consultation que vous souhaitez équiper individuellement : Pack Pro (5 plaques).</p>
@@ -2896,27 +2865,27 @@ export const articles: Record<string, {
 <h2>Conclusion : votre fiche Google est votre première consultation</h2>
 <p>Personne ne pousse la porte d'une clinique vétérinaire au hasard. Le propriétaire a choisi <strong>avant d'appeler</strong>, sur la base de ce qu'il a lu — et souvent dans l'urgence, en trente secondes, sur trois fiches. Ce que vos clients disent de vous travaille pour vous 24 h/24, y compris les nuits de garde.</p>
 <p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong> et que personne ne prend le temps d'écrire. Vos clients sont reconnaissants. Il leur manque vingt secondes et un objet à portée de main, présenté au bon moment — et, tout aussi important, jamais au mauvais.</p>
-<p>Guides complémentaires : <a href="/blog/plaque-nfc-cabinet-medical">cabinet médical et déontologie</a>, <a href="/blog/plaque-nfc-salle-de-sport">salle de sport</a>, <a href="/blog/ou-placer-plaque-avis-google">les 7 meilleurs emplacements</a>, ou notre méthode pour <a href="/blog/doubler-avis-google-30-jours">doubler vos avis en 30 jours</a>.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-cabinet-medical">cabinet médical et déontologie</a>, <a href="/blog/plaque-nfc-salle-de-sport">salle de sport</a>, <a href="/blog/ou-placer-plaque-avis-google">les 7 meilleurs emplacements</a>, ou notre <a href="/blog/doubler-avis-google-30-jours">plan d'action sur 30 jours</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque consultation réussie en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €.</p>
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à proposer un avis Google après chaque consultation réussie ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT.</p>
 </div>
 </section>
     `,
   },
   'plaque-nfc-agence-immobiliere': {
-    title: 'Plaque NFC agence immobilière : chaque signature devient un avis Google',
+    title: 'Plaque NFC agence immobilière : demander un avis Google à chaque signature',
     category: 'Secteur',
     date: '12 août 2026',
-    readTime: '12 min',
+    readTime: '13 min',
     author: 'Équipe Swiipx',
-    excerpt: 'Une agence signe 40 ventes par an et affiche 14 avis Google : nulle part ailleurs un avis manquant ne coûte aussi cher. Les 4 clients à solliciter (dont l\'acquéreur, toujours oublié), les 5 moments qui marchent, scripts négociateur et calcul sur 12 mois.',
+    excerpt: 'Une agence signe peu de ventes dans l\'année, et chacune pèse lourd : chaque occasion de demander un avis compte. Les 4 clients à solliciter (dont l\'acquéreur, souvent oublié), les 5 moments où demander, scripts négociateur et exemple de calcul sur 12 mois.',
     tocSections: [
       { id: 'enjeu-immobilier', label: 'L\'avis passe avant le mandat' },
       { id: 'probleme-structurel', label: 'Trois occasions par an' },
       { id: 'qui-solliciter', label: 'Les 4 clients à solliciter' },
-      { id: 'moments-cles', label: 'Les 5 moments qui marchent' },
+      { id: 'moments-cles', label: 'Les 5 moments où demander' },
       { id: 'emplacements', label: 'Où poser la plaque' },
       { id: 'scripts', label: 'Scripts de négociateur' },
       { id: 'calcul', label: 'Exemple de calcul sur un an' },
@@ -2928,29 +2897,29 @@ export const articles: Record<string, {
     content: `
 <section id="enjeu-immobilier" class="scroll-mt-28 mb-16">
 <h2>Dans l'immobilier, l'avis Google passe avant le mandat</h2>
-<p>Un propriétaire qui veut vendre ne pousse pas la porte de l'agence la plus proche. Il tape « agence immobilière » suivi du nom de sa ville, regarde les trois fiches du pack local, compare les notes, lit une dizaine d'avis — et décide qui il appellera. Ce tri se fait <strong>avant le premier contact</strong>, sans que vous puissiez intervenir.</p>
-<p>Le problème, c'est que dans aucun autre commerce l'écart entre la valeur d'une transaction et le nombre d'avis collectés n'est aussi grand. Un restaurant sert 200 couverts par jour et récolte des avis sans effort. Une agence immobilière signe peut-être 40 ventes dans l'année, chacune valant plusieurs milliers d'euros d'honoraires, et affiche 14 avis sur sa fiche Google. Chaque avis manquant coûte donc infiniment plus cher ici qu'ailleurs.</p>
+<p>Un propriétaire qui veut vendre ne pousse pas la porte de l'agence la plus proche. Il tape « agence immobilière » suivi du nom de sa ville, regarde les fiches du pack local, compare les notes, lit des avis — et décide qui il appellera. Ce tri se fait <strong>avant le premier contact</strong>, sans que vous puissiez intervenir.</p>
+<p>Le problème, c'est l'écart entre la valeur d'une transaction et le nombre d'occasions de demander un avis. Un restaurant voit défiler des clients tous les jours ; une agence immobilière signe quelques dizaines de ventes dans l'année, et chacune pèse lourd en honoraires. Moins de clients, c'est moins d'occasions de collecter un avis : chacune de celles qu'on laisse passer compte davantage.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>💡 L'ordre de grandeur qui change tout :</strong> si vos honoraires moyens sont de 8 000 € et qu'un seul mandat supplémentaire par trimestre vient de votre fiche Google, votre visibilité locale vous rapporte 32 000 € par an. C'est le contexte dans lequel il faut lire le prix d'une plaque NFC à 29,90 €.</p>
+<p class="text-sm text-blue-900"><strong>💡 Hypothèse de calcul :</strong> si vos honoraires moyens étaient de 8 000 € et qu'un mandat supplémentaire par trimestre venait de votre fiche Google, cela ferait 32 000 € d'honoraires sur l'année. Remplacez ces deux chiffres par les vôtres : c'est à cette échelle qu'il faut lire le prix d'une plaque NFC à 29,90 € HT.</p>
 </div>
-<p>La bonne nouvelle : vos clients sont, statistiquement, parmi les plus disposés à écrire. Une vente immobilière est un événement de vie, souvent stressant, et le soulagement de la signature crée une reconnaissance réelle envers le négociateur qui a tenu le dossier. Le problème n'est pas la satisfaction. C'est qu'on ne la demande jamais au bon moment.</p>
+<p>La bonne nouvelle : une vente immobilière est un événement de vie, souvent stressant, et le soulagement de la signature crée une reconnaissance réelle envers le négociateur qui a tenu le dossier. Le problème n'est pas la satisfaction. C'est qu'on ne la demande jamais au bon moment.</p>
 </section>
 
 <section id="probleme-structurel" class="scroll-mt-28 mb-16">
 <h2>Le problème structurel : trois occasions par an et par client</h2>
-<p>Comparons honnêtement. Un salon de coiffure voit le même client huit fois par an. Une boulangerie le voit tous les matins. Une agence immobilière voit son vendeur environ trois fois : la signature du mandat, la signature du compromis, la signature de l'acte. Entre les deux dernières, il s'écoule trois mois.</p>
+<p>Comparons honnêtement. Un salon de coiffure revoit ses clients plusieurs fois par an. Une boulangerie voit certains des siens tous les matins. Une agence immobilière voit son vendeur à trois moments clés : la signature du mandat, celle du compromis, celle de l'acte. Entre les deux dernières, l'usage est de prévoir environ trois mois.</p>
 <p>Trois conséquences directes, qu'aucune méthode de collecte ne peut ignorer :</p>
 <ul>
 <li><strong>Le volume est plafonné par votre activité, pas par votre méthode.</strong> Si vous réalisez 40 transactions par an, votre gisement d'avis est d'environ 80 personnes (vendeur + acquéreur), pas 800.</li>
 <li><strong>Rater le moment coûte un an.</strong> Le client ne repassera pas « par hasard » la semaine suivante. Si vous ne demandez pas le jour de la remise des clés, vous ne demanderez jamais.</li>
-<li><strong>Le délai tue la demande différée.</strong> Un e-mail envoyé trois jours après la signature arrive quand l'acquéreur est en plein déménagement, entre deux cartons. Le taux de réponse s'effondre.</li>
+<li><strong>Le délai tue la demande différée.</strong> Un e-mail envoyé quelques jours après la signature arrive quand l'acquéreur est en plein déménagement, entre deux cartons, et il est facile de le laisser sans suite.</li>
 </ul>
 <p>C'est exactement le cas d'usage de la plaque NFC : elle transforme un moment qui existe déjà — les vingt secondes où le client range son stylo, encore assis à votre table — en dépôt d'avis, sans e-mail, sans relance, sans application à installer.</p>
 </section>
 
 <section id="qui-solliciter" class="scroll-mt-28 mb-16">
 <h2>Les quatre clients qui peuvent laisser un avis (vous n'en sollicitez qu'un)</h2>
-<p>La plupart des agences ne demandent l'avis qu'au vendeur, parce que c'est lui qui a signé le mandat. C'est diviser son potentiel par trois ou quatre.</p>
+<p>Le réflexe est de ne demander l'avis qu'au vendeur, parce que c'est lui qui a signé le mandat. C'est laisser de côté trois des quatre profils de clients qui peuvent en écrire un.</p>
 <h3>Le vendeur</h3>
 <p>Le plus évident, et souvent le plus élogieux quand la vente s'est faite au prix et dans les délais. Son avis parle de l'estimation, de la qualité des visites filtrées, de la négociation. C'est l'avis qui convertit d'autres vendeurs — donc d'autres mandats.</p>
 <h3>L'acquéreur</h3>
@@ -2960,13 +2929,13 @@ export const articles: Record<string, {
 <h3>Le locataire</h3>
 <p>Population à fort volume, particulièrement dans les agences à dominante gestion. L'état des lieux d'entrée, dans le logement, est le moment de vérité : le locataire vient d'obtenir un logement dans un marché tendu, il est soulagé et il a son téléphone en main pour photographier les compteurs.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>📊 Le calcul du gisement :</strong> 40 transactions (40 vendeurs + 40 acquéreurs) + 120 lots en gestion (dont environ 25 % de rotation locative, soit 30 nouveaux locataires) = <strong>110 personnes sollicitables dans l'année</strong>, contre 40 si vous ne demandez qu'aux vendeurs.</p>
+<p class="text-sm text-blue-900"><strong>📊 Le calcul du gisement, sur une hypothèse :</strong> 40 transactions (40 vendeurs + 40 acquéreurs) et 120 lots en gestion. Si un quart des lots changeait de locataire dans l'année, cela ferait 30 nouveaux locataires, soit <strong>110 personnes sollicitables dans l'année</strong>, contre 40 si vous ne demandez qu'aux vendeurs. Refaites-le avec votre propre rotation locative.</p>
 </div>
 </section>
 
 <section id="moments-cles" class="scroll-mt-28 mb-16">
-<h2>Les cinq moments où le client dit oui</h2>
-<p>Le classement est celui du taux d'acceptation observé sur le terrain, du plus élevé au plus faible.</p>
+<h2>Les cinq moments où demander un avis</h2>
+<p>Ils sont classés du plus favorable au moins favorable, selon ce qui joue pour la demande : présence physique, disponibilité du client, émotion du moment. Ce classement est un raisonnement, pas une mesure.</p>
 <h3>1. La remise des clés, chez le notaire ou à l'agence</h3>
 <p>Le meilleur moment de tout le parcours. L'acquéreur vient d'obtenir son bien, il est euphorique, souvent avec son conjoint, et il a le téléphone à la main pour prendre une photo devant la porte. C'est là que la plaque doit être présentée, pas trois jours plus tard.</p>
 <h3>2. La signature du compromis à l'agence</h3>
@@ -2977,7 +2946,7 @@ export const articles: Record<string, {
 <p>Le locataire est dans le logement, téléphone en main. Une plaque de format compact dans la sacoche du gestionnaire permet la demande sur place, sans retour à l'agence.</p>
 <h3>5. La reddition de comptes annuelle du bailleur</h3>
 <p>Faible volume, mais avis très qualitatifs sur la gestion — exactement ceux qui manquent aux agences qui veulent développer leur portefeuille locatif.</p>
-<p>Le point commun de ces cinq moments : ils ont tous lieu en présence physique, et dans quatre cas sur cinq le téléphone du client est déjà sorti. C'est précisément la condition de réussite d'une collecte NFC, détaillée dans notre <a href="/blog/ou-placer-plaque-avis-google">guide des emplacements</a>.</p>
+<p>Le point commun de ces moments : le client est face à vous, disponible, avec un résultat concret sous les yeux — et quand la bonne nouvelle s'annonce par téléphone, la demande attend le rendez-vous suivant. C'est la condition d'une collecte NFC, détaillée dans notre <a href="/blog/ou-placer-plaque-avis-google">guide des emplacements</a>.</p>
 </section>
 
 <section id="emplacements" class="scroll-mt-28 mb-16">
@@ -3020,63 +2989,63 @@ export const articles: Record<string, {
 </tbody>
 </table>
 </div>
-<p>Une précision que peu de vendeurs de plaques donnent : <strong>la vitrine est le pire emplacement</strong>. Une plaque collée côté rue est lue à travers le verre par un passant qui n'a jamais été votre client — soit l'avis ne sera pas déposé, soit il le sera sans expérience derrière, ce qui est exactement le type de contribution que Google filtre.</p>
+<p>Une précision importante : <strong>la vitrine est le pire emplacement</strong>. Une plaque collée côté rue est lue à travers le verre par un passant qui n'a jamais été votre client — soit l'avis ne sera pas déposé, soit il le sera sans expérience derrière, alors que le règlement de Google Maps exclut <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">le contenu qui ne repose pas sur une expérience réelle</a>.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900"><strong>⚠️ Attention au métal :</strong> beaucoup de bureaux d'agence ont un plateau à structure métallique ou un pied central en acier. Le métal perturbe le champ NFC. Posez la plaque sur la partie stratifiée ou en bois du plateau, jamais directement sur un élément métallique, et vérifiez la lecture avant de coller définitivement.</p>
 </div>
 </section>
 
 <section id="scripts" class="scroll-mt-28 mb-16">
-<h2>Trois scripts de négociateur, testés en situation</h2>
-<p>La règle : une phrase, jamais deux. Le client accepte ou refuse en trois secondes, et insister détruit la relation que vous venez de construire pendant six mois.</p>
+<h2>Trois scripts de négociateur</h2>
+<p>La règle : une phrase, jamais deux. Le client accepte ou refuse aussitôt, et insister abîme la relation que vous avez construite pendant des mois.</p>
 <h3>Après la signature de l'acte (acquéreur)</h3>
 <p>« Félicitations, vous êtes chez vous. Si le suivi vous a plu, vous pouvez le dire en vingt secondes : vous posez votre téléphone là, ça ouvre directement Google. C'est ce qui nous permet d'être trouvés par les prochains acheteurs. »</p>
 <h3>Après le compromis (vendeur)</h3>
 <p>« On a vendu au prix, en cinq semaines. Le plus utile pour nous maintenant, c'est que d'autres propriétaires du quartier sachent que ça s'est bien passé. Vous approchez votre téléphone, ça prend vingt secondes. »</p>
 <h3>À l'état des lieux d'entrée (locataire)</h3>
 <p>« Le dossier a été validé vite, vous avez les clés. Si le passage par l'agence vous a paru simple, un mot sur Google aide énormément les autres locataires à savoir à qui s'adresser. »</p>
-<p>Trois principes communs à ces scripts : on rappelle le résultat obtenu avant de demander, on annonce la durée réelle (vingt secondes), et on explique <em>pourquoi</em> c'est utile. Ce dernier point double l'acceptation : personne n'aime rendre service sans savoir à quoi cela sert. Les formulations à éviter sont détaillées dans notre article sur les <a href="/blog/erreurs-demander-avis">erreurs classiques quand on demande un avis</a>.</p>
+<p>Trois principes communs à ces scripts : on rappelle le résultat obtenu avant de demander, on annonce la durée réelle (vingt secondes), et on explique <em>pourquoi</em> c'est utile. Ce dernier point compte : personne n'aime rendre service sans savoir à quoi cela sert. Les formulations à éviter sont détaillées dans notre article sur les <a href="/blog/erreurs-demander-avis">erreurs classiques quand on demande un avis</a>.</p>
 </section>
 
 <section id="calcul" class="scroll-mt-28 mb-16">
 <h2>Exemple de calcul : ce que cela donne sur une année</h2>
-<p>Prenons une agence de quartier réaliste : 2 négociateurs, 38 transactions par an, 110 lots en gestion.</p>
+<p><strong>Hypothèse de calcul</strong>, à refaire avec vos propres chiffres : une agence de quartier fictive, 2 négociateurs, 38 transactions par an, 110 lots en gestion.</p>
 <ul>
-<li><strong>38 vendeurs</strong> sollicités à la signature de l'acte, 45 % acceptent et déposent → 17 avis</li>
-<li><strong>38 acquéreurs</strong> sollicités à la remise des clés, 55 % acceptent et déposent → 21 avis</li>
-<li><strong>28 nouveaux locataires</strong> (rotation d'environ 25 %) sollicités à l'état des lieux, 35 % → 10 avis</li>
-<li><strong>110 bailleurs</strong>, mais seulement 30 rendez-vous physiques dans l'année, 30 % → 9 avis</li>
+<li><strong>38 vendeurs</strong>, sollicités à la signature de l'acte</li>
+<li><strong>38 acquéreurs</strong>, sollicités à la remise des clés</li>
+<li><strong>28 nouveaux locataires</strong>, sollicités à l'état des lieux, si l'on suppose qu'environ un quart des lots change de locataire dans l'année</li>
+<li><strong>30 bailleurs</strong> sur les 110, ceux que l'on rencontre physiquement dans l'année</li>
 </ul>
-<p><strong>Total : environ 57 avis sur douze mois</strong>, soit un peu moins de 5 par mois. Pour une agence qui affichait 14 avis, cela signifie passer à plus de 70 en un an — une transformation complète de la fiche.</p>
+<p>Cela fait <strong>134 personnes</strong> à qui la demande peut être faite en face. Reste la part de celles qui publieraient vraiment un avis, et personne ne la connaît à l'avance : elle dépend du moment, de la phrase et du déroulé du dossier. Si une personne sollicitée sur quatre publiait, cela ferait une trentaine d'avis sur douze mois, soit deux à trois par mois ; si c'était une sur dix, un peu plus d'une douzaine sur l'année. Pour une agence qui affichait 14 avis, la première hypothèse porterait la fiche à près de cinquante avis en un an.</p>
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900"><strong>🧮 Ce que ce calcul n'est pas :</strong> une promesse. Les taux d'acceptation utilisés ci-dessus sont des hypothèses de travail, pas une moyenne mesurée sur un panel. Refaites le calcul avec vos propres chiffres de transactions et de rotation locative : la structure du raisonnement compte plus que les pourcentages. Le facteur qui fait vraiment varier le résultat n'est pas la plaque, c'est le pourcentage de clients à qui l'on pense réellement à demander.</p>
+<p class="text-sm text-blue-900"><strong>🧮 Ce que ce calcul n'est pas :</strong> une promesse. Les proportions utilisées ci-dessus sont des hypothèses de travail, pas des mesures. Refaites le calcul avec vos propres chiffres de transactions et de rotation locative : la structure du raisonnement compte plus que les pourcentages. Le facteur qui fait vraiment varier le résultat n'est pas la plaque, c'est la part de clients à qui l'on pense réellement à demander.</p>
 </div>
-<p>Côté coût : un Pack Business à 44,90 € réparti sur 57 avis la première année revient à moins de 0,80 € par avis, et à quelques centimes dès la deuxième année puisqu'il n'y a rien à repayer. Le comparatif complet des méthodes est dans notre article sur le <a href="/blog/cout-avis-google-comparatif">coût réel d'un avis Google</a>.</p>
-<p>Pour savoir combien d'avis vous devez viser précisément dans votre ville, la méthode est détaillée dans <a href="/blog/combien-avis-google-pack-local">combien d'avis Google faut-il pour entrer dans le pack local</a> : on se compare à la médiane des trois agences déjà classées, plus 30 %.</p>
+<p>Côté coût : un Pack Business à 54,90 € HT, réparti sur la trentaine d'avis de la première hypothèse, reviendrait à moins de 2 € HT par avis la première année ; sur la douzaine de la seconde, à un peu plus de 4 € HT. Il n'y a rien à repayer les années suivantes. Le comparatif complet des méthodes est dans notre article sur le <a href="/blog/cout-avis-google-comparatif">coût réel d'un avis Google</a>.</p>
+<p>Pour fixer votre objectif dans votre ville, la méthode est détaillée dans <a href="/blog/combien-avis-google-pack-local">combien d'avis Google faut-il pour entrer dans le pack local</a> : relevez le nombre d'avis et la note des agences déjà classées, et réglez votre rythme de collecte en conséquence.</p>
 </section>
 
 <section id="avis-negatifs" class="scroll-mt-28 mb-16">
 <h2>Les trois avis négatifs types de l'immobilier</h2>
 <p>Une agence collecte forcément des avis négatifs, parce que dans toute transaction il y a un perdant : l'acquéreur dont l'offre n'a pas été retenue, le candidat locataire dont le dossier a été écarté, le vendeur dont l'estimation ne correspondait pas à son espérance.</p>
 <h3>« Ils ne rappellent jamais »</h3>
-<p>Le reproche numéro un du secteur, et souvent formulé par une personne qui n'a jamais été cliente — un candidat locataire parmi quarante. Répondez factuellement, sans nier : rappelez le volume de candidatures reçues par annonce, indiquez le canal qui garantit une réponse, et proposez un contact direct.</p>
+<p>Un reproche classique du secteur, souvent formulé par une personne qui n'a jamais été cliente — par exemple un candidat locataire dont le dossier n'a pas été retenu. Répondez factuellement, sans nier : rappelez le volume de candidatures reçues par annonce, indiquez le canal qui garantit une réponse, et proposez un contact direct.</p>
 <h3>« Honoraires excessifs »</h3>
 <p>Ne défendez jamais votre tarif dans la réponse : vous transformez votre fiche en page de négociation publique. Rappelez plutôt ce que couvre la prestation en une phrase, et invitez à en parler en rendez-vous.</p>
 <h3>« Estimation gonflée pour prendre le mandat »</h3>
 <p>Le plus dommageable, parce qu'il attaque votre crédibilité professionnelle auprès des futurs vendeurs. La réponse doit être méthodologique : mentionnez les références de vente comparables utilisées et proposez de réexaminer le dossier.</p>
 <p>Dans les trois cas, la règle est la même : répondre sous 48 heures, en public, sans jamais donner d'information sur le bien ou le dossier — le secret professionnel s'applique aussi dans une réponse Google. La méthode complète, avec modèles, est dans notre guide <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs Google</a>.</p>
-<p>Et le vrai remède reste arithmétique : un avis à 1 étoile sur 15 fait tomber la note à 4,1 ; le même sur 70 la laisse à 4,7. C'est le volume, pas la suppression, qui protège une fiche.</p>
+<p>Et le vrai remède reste arithmétique. Si tous vos autres avis sont à 5 étoiles, un avis à 1 étoile fait tomber la moyenne des notes à 4,7 sur une fiche de 15 avis, mais seulement à 4,9 sur une fiche de 70. C'est le volume, pas la suppression, qui protège une fiche.</p>
 </section>
 
 <section id="erreurs" class="scroll-mt-28 mb-16">
 <h2>Les six erreurs qui coûtent le plus cher</h2>
 <ul>
-<li><strong>Ne solliciter que le vendeur.</strong> Vous divisez votre gisement par trois. L'acquéreur et le locataire sont vos meilleurs prescripteurs auprès de leurs propres cercles.</li>
+<li><strong>Ne solliciter que le vendeur.</strong> Dans l'hypothèse du gisement plus haut, vous passez de 110 personnes à 40. L'acquéreur et le locataire ont eux aussi une expérience à raconter, et elle parle à d'autres acheteurs et locataires.</li>
 <li><strong>Demander par e-mail après la signature.</strong> Le client déménage, il ne lit pas. Le présentiel n'a aucun équivalent dans ce métier.</li>
 <li><strong>Ne pas déclarer les négociateurs sur la fiche.</strong> Beaucoup d'avis nomment le négociateur ; assurez-vous que votre fiche est complète et à jour, avec horaires, photos récentes et zone d'intervention. Tout est détaillé dans notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</li>
-<li><strong>Offrir une contrepartie.</strong> Une remise sur honoraires ou un cadeau de bienvenue contre un avis est formellement interdit par les règles de Google et expose à la suppression de l'ensemble de vos avis.</li>
-<li><strong>Filtrer les clients sollicités.</strong> Ne présenter la plaque qu'aux dossiers réussis est contraire aux conditions d'utilisation, et le déséquilibre statistique est détectable.</li>
-<li><strong>Utiliser la tablette de l'agence.</strong> Plusieurs avis déposés depuis le même appareil et la même adresse IP dans la journée est l'un des signaux de spam les plus classiques. Le client doit toujours utiliser son propre téléphone — ce que la plaque NFC impose naturellement.</li>
+<li><strong>Offrir une contrepartie.</strong> Une remise sur honoraires ou un cadeau de bienvenue contre un avis est strictement interdit par les règles de Google, qui peut alors <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">empêcher la fiche de recevoir de nouveaux avis, retirer les avis existants pendant une période donnée ou afficher un avertissement</a>.</li>
+<li><strong>Filtrer les clients sollicités.</strong> Ne présenter la plaque qu'aux dossiers réussis revient à solliciter des avis positifs de façon sélective, ce que le règlement de Google Maps interdit.</li>
+<li><strong>Utiliser la tablette de l'agence.</strong> L'avis doit rester celui du client, écrit depuis son propre téléphone et son propre compte Google, et le règlement de Google Maps demande de ne pas obliger ni pousser un client à laisser un avis sur place. La plaque NFC s'utilise précisément avec le téléphone du client.</li>
 </ul>
 </section>
 
@@ -3084,16 +3053,16 @@ export const articles: Record<string, {
 <h2>FAQ — Plaque NFC pour agence immobilière</h2>
 
 <h3>Combien d'avis Google une agence immobilière peut-elle espérer par an ?</h3>
-<p>Le plafond est fixé par votre activité, pas par la plaque. Comptez un avis possible par vendeur, par acquéreur, par nouveau locataire et par bailleur rencontré physiquement dans l'année. Sur une agence de 38 transactions et 110 lots en gestion, le gisement théorique tourne autour de 130 personnes, dont une fraction acceptera. L'exemple de calcul de cet article aboutit à environ 57 avis annuels avec des taux d'acceptation prudents. Le facteur déterminant n'est pas le volume de clients mais la systématisation de la demande à chaque signature et à chaque état des lieux.</p>
+<p>Le plafond est fixé par votre activité, pas par la plaque. Comptez un avis possible par vendeur, par acquéreur, par nouveau locataire et par bailleur rencontré physiquement dans l'année. Hypothèse de calcul : sur une agence de 38 transactions et 110 lots en gestion, le gisement tourne autour de 130 personnes ; si une sur quatre publiait, cela ferait une trentaine d'avis par an, et un peu plus d'une douzaine si c'était une sur dix. Personne ne connaît cette proportion à l'avance. Le facteur que vous maîtrisez n'est pas le volume de clients mais la systématisation de la demande à chaque signature et à chaque état des lieux.</p>
 
 <h3>Où placer la plaque NFC dans une agence immobilière ?</h3>
 <p>La table de signature est le meilleur emplacement : vendeur et acquéreur y sont assis ensemble, disponibles, au moment le plus positif du dossier. Le bureau du négociateur vient ensuite pour le volume, puisque tous les rendez-vous y passent. Le comptoir d'accueil capte les locataires et les dépôts de dossier. Évitez la vitrine : elle est lue par des passants qui n'ont jamais été clients. Attention aussi aux plateaux de bureau à structure métallique, qui perturbent le champ NFC.</p>
 
 <h3>Peut-on demander un avis à un acquéreur, qui n'est pas le client payeur ?</h3>
-<p>Oui, sans aucune réserve. Google demande que l'avis reflète une expérience réelle avec l'établissement, pas une relation contractuelle ou un paiement. Un acquéreur a visité, négocié, échangé avec vos équipes pendant des mois : son expérience est parfaitement légitime. C'est même l'avis le plus utile pour convertir les futurs acheteurs, et il est déposé au moment le plus fort du parcours, la remise des clés.</p>
+<p>Oui, sans aucune réserve. Google demande que l'avis reflète une expérience réelle avec l'établissement, pas une relation contractuelle ou un paiement. Un acquéreur a visité, négocié, échangé avec vos équipes pendant des mois : son expérience est parfaitement légitime. C'est aussi l'avis qui parle le plus directement aux futurs acheteurs, et il peut être déposé à un moment fort du parcours, la remise des clés.</p>
 
 <h3>Peut-on offrir une remise sur honoraires en échange d'un avis Google ?</h3>
-<p>Non, c'est formellement interdit. Toute contrepartie — remise sur honoraires, cadeau de bienvenue, bon d'achat — expose à la suppression de vos avis, y compris les avis légitimes, et à la suspension de la fiche. Il est tout aussi risqué de ne présenter la plaque qu'aux dossiers qui se sont bien déroulés : ce filtrage est contraire aux conditions d'utilisation et Google repère ces schémas statistiques.</p>
+<p>Non, c'est strictement interdit par les règles de Google. En cas de contrepartie — remise sur honoraires, cadeau de bienvenue, bon d'achat —, Google peut empêcher la fiche de recevoir de nouveaux avis, retirer les avis existants pendant une période donnée ou afficher un avertissement aux internautes. Ne présenter la plaque qu'aux dossiers qui se sont bien déroulés est tout aussi à proscrire : solliciter des avis positifs de façon sélective fait partie des pratiques que le règlement de Google Maps interdit.</p>
 
 <h3>Comment répondre à un avis négatif sans violer le secret professionnel ?</h3>
 <p>En ne donnant aucune information sur le bien, le prix, le dossier ou la situation de la personne, même si elle les a citées elle-même dans son avis. Répondez sur la méthode et non sur le cas : rappelez le processus suivi, reconnaissez le point de friction en une phrase, et proposez un contact direct par téléphone ou en agence. Toute la suite de l'échange doit sortir de l'espace public.</p>
@@ -3107,13 +3076,13 @@ export const articles: Record<string, {
 
 <section id="conclusion" class="scroll-mt-28 mb-16">
 <h2>Conclusion : votre fiche Google est votre première vitrine</h2>
-<p>Vous payez un loyer commercial pour une vitrine que quelques centaines de personnes longent chaque jour. Votre fiche Google, elle, est consultée par tous les propriétaires du secteur qui envisagent de vendre — et c'est là, pas devant votre devanture, que se décide l'appel que vous recevrez ou non.</p>
-<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>. Vos clients sont contents le jour de la remise des clés, ils vous le disent de vive voix, et cette parole s'évapore parce que personne ne leur a tendu vingt secondes et un objet à portée de main. Dans un métier où chaque avis pèse le prix d'un mandat, c'est la perte la plus coûteuse et la plus facile à corriger.</p>
+<p>Vous payez un loyer commercial pour une vitrine que les passants longent chaque jour. Votre fiche Google, elle, est consultée par des propriétaires du secteur qui envisagent de vendre — et c'est là, souvent avant tout contact, que se joue une partie des appels que vous recevrez ou non.</p>
+<p>La plaque NFC ne fabrique pas de la satisfaction : elle <strong>rend visible celle qui existe déjà</strong>. Vos clients sont contents le jour de la remise des clés, ils vous le disent de vive voix, et cette parole s'évapore parce que personne ne leur a tendu vingt secondes et un objet à portée de main. Dans un métier où les occasions de demander sont rares, c'est une perte facile à corriger.</p>
 <p>Guides complémentaires par métier : <a href="/blog/plaque-nfc-auto-ecole">auto-école</a>, <a href="/blog/plaque-nfc-garage-automobile">garage automobile</a>, <a href="/blog/plaque-nfc-salle-de-sport">salle de sport</a>, ou notre <a href="/blog/comment-choisir-plaque-nfc-avis-google">guide d'achat pour choisir sa plaque</a>.</p>
 
 <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
-<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à transformer chaque remise de clés en avis Google ?</strong></p>
-<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 €, livraison offerte en point relais.</p>
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à proposer un avis Google à chaque remise de clés ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT, livraison offerte en point relais.</p>
 </div>
 </section>
 `,

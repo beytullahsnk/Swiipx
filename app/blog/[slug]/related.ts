@@ -19,7 +19,7 @@ export const relatedArticles: RelatedArticle[] = [
   { slug: 'combien-de-plaques-nfc', label: 'Combien de plaques NFC faut-il ? 1, 2 ou 5' },
   { slug: 'plaque-nfc-artisan-plombier', label: 'Plaque NFC plombier et artisan : avis sans boutique' },
   { slug: 'google-posts-fiche-google-business-profile', label: 'Google Posts : publier sur sa fiche Google' },
-  { slug: 'taux-scan-plaque-nfc', label: 'Taux de scan d\'une plaque NFC : les chiffres' },
+  { slug: 'taux-scan-plaque-nfc', label: 'Taux de scan d\'une plaque NFC : le mesurer' },
   { slug: 'plaque-nfc-hotel', label: 'Plaque NFC hôtel : avis au check-out' },
   { slug: 'materiaux-plaque-nfc-avis-google', label: 'Quel matériau pour une plaque NFC ?' },
   { slug: 'photos-google-business-profile', label: 'Photos Google Business Profile : le guide' },
