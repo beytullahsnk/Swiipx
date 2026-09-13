@@ -12,6 +12,7 @@
  * Utilisation :
  *   node scripts/indexnow.mjs            # toutes les URL du sitemap
  *   node scripts/indexnow.mjs /blog/xxx  # une ou plusieurs URL précises
+ *   node scripts/indexnow.mjs --simulation  # liste sans rien transmettre
  */
 
 const HOTE = 'swiipx.fr'
@@ -25,7 +26,10 @@ async function urlsDuSitemap() {
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
 }
 
-const args = process.argv.slice(2)
+// --simulation : affiche ce qui serait transmis, sans rien envoyer. Sert à
+// vérifier le workflow GitHub sans déclencher de signalement réel.
+const simulation = process.argv.includes('--simulation')
+const args = process.argv.slice(2).filter((a) => a !== '--simulation')
 const urls = args.length
   ? args.map((u) => (u.startsWith('http') ? u : `https://${HOTE}${u.startsWith('/') ? '' : '/'}${u}`))
   : await urlsDuSitemap()
@@ -36,6 +40,12 @@ if (!urls.length) {
 }
 
 console.log(`Signalement de ${urls.length} URL à IndexNow…`)
+
+if (simulation) {
+  urls.forEach((u) => console.log('   ', u))
+  console.log(`Simulation : ${urls.length} URL listées, rien n'a été transmis.`)
+  process.exit(0)
+}
 
 const res = await fetch('https://api.indexnow.org/indexnow', {
   method: 'POST',

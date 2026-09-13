@@ -1,0 +1,66 @@
+# Prévient Bing (IndexNow) à chaque publication d'article.
+#
+# Tourne sur GitHub, pas sur le Mac : il ne dépend ni d'un ordinateur allumé,
+# ni d'une tâche installée, ni de la façon dont le push a été fait. Le script
+# attend que le déploiement Vercel soit en ligne avant de signaler quoi que ce
+# soit — voir scripts/indexnow-apres-deploiement.mjs.
+#
+# Lancement manuel (onglet Actions > IndexNow > Run workflow) : signale TOUT le
+# sitemap, par exemple après une refonte. Cocher « simulation » pour vérifier
+# sans rien transmettre.
+
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app/blog/**'
+  workflow_dispatch:
+    inputs:
+      simulation:
+        description: "Simulation : lister les URL sans rien transmettre"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+# Deux publications rapprochées s'enchaînent au lieu de s'annuler : annuler la
+# première ferait perdre son signalement.
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  signaler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Historique complet : il faut pouvoir relire seo-data.ts tel qu'il
+          # était avant le push pour savoir ce qui a changé.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Articles nouveaux, modifiés ou supprimés
+        if: github.event_name == 'push'
+        env:
+          AVANT: ${{ github.event.before }}
+          APRES: ${{ github.sha }}
+        run: node scripts/indexnow-apres-deploiement.mjs "$AVANT" "$APRES"
+
+      - name: Tout le sitemap
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          SIMULATION: ${{ inputs.simulation }}
+        run: |
+          if [ "$SIMULATION" = "true" ]; then
+            node scripts/indexnow.mjs --simulation
+          else
+            node scripts/indexnow.mjs
+          fi

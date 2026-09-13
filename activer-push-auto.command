@@ -92,8 +92,9 @@ if launchctl load "$PLIST" 2>/dev/null; then
   echo ""
   echo "Journal détaillé : ~/Library/Logs/swiipx-autopush.log"
   echo ""
+  echo "Bing est prévenu tout seul, par GitHub, à chaque article publié."
   echo "Il ne reste qu'une chose à faire à chaque nouvel article :"
-  echo "soumettre son URL dans Google Search Console."
+  echo "soumettre son URL dans Google Search Console (Google ne lit pas IndexNow)."
 else
   echo "⚠️  L'installation a échoué. Le fichier a été créé ici :"
   echo "    $PLIST"
