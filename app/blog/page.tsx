@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 43,
+    title: 'Où acheter une plaque NFC pour avis Google ? Le comparatif des 5 canaux',
+    excerpt: 'Marketplace, import direct, enseigniste local, plateforme à abonnement ou spécialiste : le canal d\'achat décide de plus de choses que le prix affiché. Les 5 canaux comparés, la checklist de 12 points, le coût réel sur 3 ans et les 7 erreurs d\'achat.',
+    category: 'Comparatif',
+    date: '14 septembre 2026',
+    dateIso: '2026-09-14',
+    readTime: '15 min',
+    slug: 'ou-acheter-plaque-nfc-avis-google',
+  },
+  {
     id: 42,
     title: 'Plaque NFC taxi et VTC : collecter des avis Google dans un véhicule',
     excerpt: 'Taxis, VTC, transferts aéroport : la course se termine sur un trottoir, avec un client debout et pressé. Les 6 emplacements exploitables dans un véhicule, la fiche en zone de service, 3 scripts de chauffeur et les 6 erreurs qui coûtent le plus d\'avis.',

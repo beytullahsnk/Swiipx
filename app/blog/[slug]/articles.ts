@@ -18,6 +18,227 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'ou-acheter-plaque-nfc-avis-google': {
+    title: 'Où acheter une plaque NFC pour avis Google ? Le comparatif des 5 canaux',
+    category: 'Comparatif',
+    date: '14 septembre 2026',
+    readTime: '15 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Marketplace, import direct, enseigniste local, plateforme à abonnement ou spécialiste : le canal d\'achat décide de plus de choses que le prix affiché. Les 5 canaux comparés, la checklist de 12 points, le coût réel sur 3 ans et les 7 erreurs d\'achat.',
+    tocSections: [
+      { id: 'pourquoi-canal-achat', label: 'Pourquoi le canal compte' },
+      { id: 'les-5-canaux', label: 'Les 5 canaux passés en revue' },
+      { id: 'marketplaces', label: 'Marketplace généraliste' },
+      { id: 'import-direct', label: 'L\'import direct depuis l\'Asie' },
+      { id: 'imprimeur-local', label: 'Imprimeur ou enseigniste local' },
+      { id: 'abonnement-ou-achat-unique', label: 'Les plateformes à abonnement' },
+      { id: 'checklist-achat', label: 'La checklist de 12 points' },
+      { id: 'cout-reel', label: 'Le coût réel sur 3 ans' },
+      { id: 'erreurs', label: 'Les 7 erreurs d\'achat' },
+      { id: 'faq-achat', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-canal-achat" class="scroll-mt-28 mb-16">
+<h2>Pourquoi le canal d'achat change plus de choses que le prix affiché</h2>
+<p>Une plaque NFC pour avis Google est un objet simple : un support, une puce, un adhésif, une URL. Vue comme ça, la question « où l'acheter ? » ressemble à une question de prix, et on la tranche en comparant trois chiffres sur trois pages produit. C'est presque toujours la mauvaise méthode, parce que le prix d'achat n'est qu'une des cinq variables qui décident si la plaque collectera des avis dans six mois.</p>
+<p>Les quatre autres sont invisibles sur une fiche produit. Qui programme la puce, et avec quelle URL exactement ? Que se passe-t-il si le lien change ou si la puce cesse de répondre ? Qui répond quand la plaque ne se lit pas sur un iPhone particulier ? Et surtout : est-ce que le fonctionnement dépend d'un service tiers qui doit rester en vie pour que l'objet continue de marcher ?</p>
+<p>Ces quatre questions ne coûtent rien tant que tout va bien. Elles coûtent la totalité de l'investissement le jour où l'une d'elles tourne mal — une plaque qui renvoie vers une page d'erreur reste collée au comptoir et continue d'être scannée, sauf qu'elle ne rapporte plus rien et que personne ne le remarque avant plusieurs semaines.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 L'ordre de grandeur à garder en tête :</strong> une plaque coûte quelques dizaines d'euros une fois. Un client supplémentaire venu de votre fiche Google vaut, selon les métiers, entre quelques dizaines et plusieurs milliers d'euros. Le raisonnement à tenir n'est donc pas « quelle est la plaque la moins chère », mais « quelle est celle qui fonctionnera encore dans deux ans sans que j'aie à y penser ». Un écart de dix euros à l'achat ne pèse rien face à trois mois de collecte perdus.</p>
+</div>
+<p>Cet article compare les cinq canaux d'achat réellement disponibles en France, avec ce que chacun apporte et ce qu'il vous laisse à la charge. L'objectif n'est pas de désigner un vainqueur universel : selon que vous équipiez un comptoir unique ou dix agences, la réponse n'est pas la même.</p>
+</section>
+
+<section id="les-5-canaux" class="scroll-mt-28 mb-16">
+<h2>Les 5 canaux d'achat, passés en revue</h2>
+<p>Voici les cinq façons d'obtenir une plaque NFC d'avis Google en France, classées par ce qu'elles demandent d'effort de votre côté.</p>
+
+<table>
+<thead>
+<tr><th>Canal</th><th>Prix indicatif</th><th>Programmation</th><th>À votre charge</th></tr>
+</thead>
+<tbody>
+<tr><td>Marketplace généraliste</td><td>10 à 25 €</td><td>À faire soi-même</td><td>Trouver l'URL, écrire la puce, verrouiller</td></tr>
+<tr><td>Import direct (Asie)</td><td>1 à 4 € l'unité</td><td>À faire soi-même</td><td>Quantité minimum, délais, douane, personnalisation</td></tr>
+<tr><td>Imprimeur ou enseigniste local</td><td>40 à 120 €</td><td>Variable</td><td>Brief technique, choix de puce, tests</td></tr>
+<tr><td>Plateforme d'avis avec abonnement</td><td>0 à 40 € + 15 à 60 €/mois</td><td>Incluse</td><td>Abonnement à vie, dépendance au service</td></tr>
+<tr><td>Spécialiste français sans abonnement</td><td>29,90 à 89,90 €</td><td>Incluse, pré-programmée</td><td>Coller la plaque</td></tr>
+</tbody>
+</table>
+
+<p>Ces fourchettes recouvrent des réalités très différentes. Une plaque à 12 € livrée vierge et une plaque à 30 € livrée programmée ne sont pas deux versions du même produit à deux prix : ce sont deux produits différents, l'un étant un composant et l'autre un dispositif prêt à l'emploi. Le détail des postes de coût est développé dans notre article sur le <a href="/blog/prix-plaque-nfc-avis-google">prix d'une plaque NFC avis Google</a>.</p>
+<h3>La ligne de partage : qui écrit la puce ?</h3>
+<p>Le vrai critère de classement n'est ni le matériau ni le design, c'est de savoir qui prend en charge l'écriture de la puce. Programmer un tag NFC n'est pas difficile — une application gratuite sur un smartphone Android suffit — mais cela suppose trois choses que la plupart des commerçants n'ont pas : récupérer la bonne URL d'avis Google (pas l'URL de la fiche, pas l'URL de la recherche, celle du formulaire d'avis), savoir écrire un enregistrement URI plutôt qu'un enregistrement texte, et penser à verrouiller la puce pour qu'un client ne puisse pas la réécrire.</p>
+<p>Chacune de ces trois étapes a son mode d'échec silencieux. Une mauvaise URL envoie le client sur la fiche sans ouvrir le formulaire : il faut alors trois clics de plus, et la moitié des gens abandonnent. Un enregistrement texte affiche une chaîne de caractères au lieu d'ouvrir le navigateur. Une puce non verrouillée peut être réécrite par n'importe qui avec un téléphone, et cela arrive plus souvent qu'on ne le croit dans les lieux passants.</p>
+</section>
+
+<section id="marketplaces" class="scroll-mt-28 mb-16">
+<h2>Acheter sur une marketplace généraliste</h2>
+<p>C'est le premier réflexe : taper « plaque NFC avis Google » sur une grande marketplace et commander celle qui a le plus d'étoiles. Le prix est bas, la livraison rapide, le retour facile. Pour un test à faible enjeu, c'est défendable.</p>
+<h3>Ce que vous obtenez réellement</h3>
+<p>Dans la majorité des cas : un support acrylique ou PVC sérigraphié « Laissez-nous un avis », avec une puce vierge ou programmée vers une URL de démonstration. La personnalisation se limite souvent à un QR code générique imprimé, parfois pointant vers un service tiers que vous ne contrôlez pas. Le vendeur est un revendeur, pas un fabricant : il ne saura pas vous dire quel modèle de puce est à l'intérieur.</p>
+<h3>Les trois points de vigilance</h3>
+<ul>
+<li><strong>Le modèle de puce n'est presque jamais indiqué.</strong> Une NTAG213 offre 144 octets utiles, ce qui suffit pour une URL courte mais devient juste dès qu'un paramètre de suivi s'ajoute. Une NTAG215 (504 octets) laisse une marge confortable. Quand la fiche produit dit seulement « puce NFC 13,56 MHz », vous ne savez pas ce que vous achetez. Le sujet est traité en détail dans notre <a href="/blog/materiaux-plaque-nfc-avis-google">comparatif des matériaux et des puces</a>.</li>
+<li><strong>Le QR code imprimé est figé.</strong> Contrairement à la puce, il ne se reprogramme pas. Si le QR renvoie vers une URL de redirection appartenant au vendeur, votre plaque dépend d'un domaine que vous ne possédez pas.</li>
+<li><strong>L'adhésif est le poste sacrifié en premier.</strong> Un adhésif d'entrée de gamme tient trois semaines sur un comptoir nettoyé au produit désinfectant. Une plaque au sol ne collecte rien.</li>
+</ul>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Le piège des avis de la fiche produit :</strong> une plaque NFC notée 4,6 sur une marketplace est notée par des acheteurs qui viennent de la recevoir, pas par des commerçants qui l'utilisent depuis un an. Les avis mesurent la qualité de l'emballage et la rapidité de livraison, presque jamais la tenue de l'adhésif à six mois ni la fiabilité de la lecture. Cherchez spécifiquement les avis datés de plus de six mois : ce sont les seuls informatifs.</p>
+</div>
+<p><strong>Pour qui c'est un bon choix :</strong> quelqu'un qui veut tester le principe pour une vingtaine d'euros, qui possède un téléphone Android, et que la programmation manuelle n'effraie pas. <strong>Pour qui c'est un mauvais choix :</strong> tout établissement qui veut que la chose fonctionne sans y revenir, ou qui doit équiper plusieurs points de vente de manière homogène.</p>
+</section>
+
+<section id="import-direct" class="scroll-mt-28 mb-16">
+<h2>L'import direct depuis l'Asie</h2>
+<p>C'est le canal le moins cher au pied levé : quelques centimes à quelques euros par unité, avec des remises fortes au volume. Pour une franchise qui équipe cent points de vente, l'écart avec un achat au détail se compte en milliers d'euros. Pour un commerce isolé, l'économie théorique disparaît presque entièrement une fois tout compté.</p>
+<h3>Ce que le prix unitaire ne dit pas</h3>
+<ul>
+<li><strong>La quantité minimum de commande.</strong> Rarement en dessous de 50 à 100 pièces pour un produit personnalisé. Un coiffeur qui a besoin de deux plaques n'a pas d'usage pour les 98 autres.</li>
+<li><strong>Le délai réel.</strong> Comptez la production, puis le transport, puis le dédouanement. Sur un envoi maritime, on parle de semaines ; sur un envoi express, le coût du transport rattrape une partie de l'économie.</li>
+<li><strong>La TVA et les droits.</strong> Depuis la réforme du commerce électronique de l'Union européenne, la TVA est due dès le premier euro sur les biens importés, et les frais de gestion du transporteur s'ajoutent. Un lot annoncé à 80 € peut coûter 140 € rendu.</li>
+<li><strong>Les allers-retours de validation.</strong> Un bon à tirer mal compris, une couleur qui dérive, un texte français mal accentué : chaque correction coûte plusieurs jours.</li>
+<li><strong>La programmation reste à faire.</strong> Cent plaques à écrire une par une, c'est une soirée entière — et cent occasions de se tromper d'URL.</li>
+</ul>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Hypothèse de calcul :</strong> supposons un lot de 100 plaques à 1,50 € l'unité, soit 150 € de marchandise. Ajoutez 60 € de transport, 42 € de TVA, 15 € de frais de dossier : vous êtes à 267 €, soit 2,67 € rendu. Sur ce lot, deux plaques vous serviront réellement : le coût par plaque utile est de 133 €. Le calcul ne bascule en faveur de l'import que si vous consommez effectivement le volume, c'est-à-dire à partir de plusieurs dizaines d'emplacements équipés. Refaites-le avec vos propres devis avant de décider.</p>
+</div>
+<p><strong>Pour qui c'est un bon choix :</strong> réseaux, franchises, groupements de plus de trente établissements, avec quelqu'un en interne capable de piloter la production et la programmation en masse. <strong>Pour qui c'est un mauvais choix :</strong> tous les autres.</p>
+</section>
+
+<section id="imprimeur-local" class="scroll-mt-28 mb-16">
+<h2>Passer par un imprimeur ou un enseigniste local</h2>
+<p>L'option la plus rassurante en apparence : un interlocuteur joignable, une commande en français, un bon à tirer validé de visu, et l'argent qui reste dans le tissu économique local. C'est aussi celle où l'écart entre les prestataires est le plus large, parce que la plaque NFC n'est pas leur métier de base.</p>
+<h3>Ce qu'un enseigniste fait très bien</h3>
+<p>La partie physique. Découpe, gravure, sérigraphie, choix du support, finition des chants, adaptation aux couleurs de votre enseigne : un professionnel du signalétique livre un objet nettement plus soigné qu'une plaque de marketplace, et il peut assortir la plaque à votre PLV existante. Si l'esthétique compte — hôtellerie haut de gamme, institut de beauté, restaurant gastronomique — c'est un vrai argument.</p>
+<h3>Ce qu'il faut vérifier avant de signer le devis</h3>
+<ul>
+<li><strong>Le NFC est-il inclus ou seulement le visuel ?</strong> Beaucoup de devis « plaque avis Google » ne comportent qu'un QR code imprimé. C'est une plaque QR, pas une plaque NFC, et le geste client n'est pas le même — la comparaison est détaillée dans notre article <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC ou QR code</a>.</li>
+<li><strong>Quel support exactement ?</strong> L'aluminium brossé est très beau et très mauvais pour le NFC : le métal perturbe le champ, sauf à intercaler un ferrite adapté, ce que peu d'enseignistes prévoient spontanément.</li>
+<li><strong>Qui programme, et la puce sera-t-elle verrouillée ?</strong> Faites écrire la réponse sur le devis.</li>
+<li><strong>Que se passe-t-il si l'URL change ?</strong> Un déménagement, un changement de raison sociale, une fiche fusionnée : il faut pouvoir réécrire la puce.</li>
+<li><strong>Le délai.</strong> Une production sur mesure prend en général une à trois semaines, contre quelques jours pour un produit en stock.</li>
+</ul>
+<p><strong>Pour qui c'est un bon choix :</strong> les établissements pour qui la plaque est aussi un élément de décor, et ceux qui ont besoin d'un format hors norme (totem, chevalet, plaque de vitrine grand format). <strong>Pour qui c'est un mauvais choix :</strong> qui veut la solution la plus rapide et la plus prévisible.</p>
+</section>
+
+<section id="abonnement-ou-achat-unique" class="scroll-mt-28 mb-16">
+<h2>Les plateformes à abonnement : le calcul à faire avant de signer</h2>
+<p>Un quatrième canal s'est développé : des plateformes de gestion d'avis qui offrent ou vendent à prix cassé un support NFC, et facturent un abonnement mensuel. Le support est parfois gratuit, parfois à 5 ou 10 €. L'abonnement, lui, va de quinze à plusieurs dizaines d'euros par mois.</p>
+<h3>Ce que l'abonnement apporte vraiment</h3>
+<p>Il faut être honnête : ces plateformes rendent des services réels. Tableau de bord de suivi, alertes sur les nouveaux avis, réponses assistées, agrégation multi-établissements, parfois filtrage des retours avant publication. Pour un réseau de vingt restaurants avec un responsable qualité, cela a du sens.</p>
+<h3>Ce que l'abonnement change pour la plaque</h3>
+<p>Le point technique décisif est celui-ci : dans la plupart de ces offres, la puce ne pointe pas vers votre page d'avis Google, mais vers une URL de redirection appartenant à la plateforme, qui renvoie ensuite vers Google. Ce détour permet le suivi statistique — et il signifie que <strong>le jour où l'abonnement s'arrête, la redirection peut cesser de fonctionner</strong>. Vous restez propriétaire d'un objet en plastique dont la fonction dépend d'un serveur que vous ne contrôlez pas.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ La question à poser par écrit avant de souscrire :</strong> « Si je résilie, la plaque continue-t-elle de rediriger vers ma page d'avis Google ? » et « Puis-je reprogrammer la puce moi-même ? ». Une réponse claire et écrite vaut mieux qu'une intuition. Certaines offres verrouillent la puce en écriture, ce qui rend le support inutilisable après résiliation.</p>
+</div>
+<h3>Un mot sur le filtrage des avis</h3>
+<p>Certaines plateformes proposent d'intercepter les clients mécontents avant qu'ils n'arrivent sur Google, en leur présentant d'abord un formulaire interne. C'est ce que le secteur appelle le review gating, et c'est contraire aux règles de Google sur les contenus trompeurs : elles interdisent de solliciter sélectivement les avis positifs. La sanction possible va du retrait des avis concernés à l'affichage d'un avertissement public sur la fiche. Notre article sur les <a href="/blog/faux-avis-google-signaler">faux avis Google</a> détaille ce que Google surveille.</p>
+<p><strong>Pour qui c'est un bon choix :</strong> les réseaux multi-sites qui ont besoin d'un pilotage centralisé et qui utiliseront réellement le tableau de bord. <strong>Pour qui c'est un mauvais choix :</strong> un commerce indépendant qui veut simplement une plaque qui marche — il paiera pendant des années des fonctions qu'il n'ouvrira pas. Le raisonnement complet est dans notre article sur la <a href="/blog/plaque-avis-google-sans-abonnement">plaque avis Google sans abonnement</a>.</p>
+</section>
+
+<section id="checklist-achat" class="scroll-mt-28 mb-16">
+<h2>La checklist de 12 points avant de commander</h2>
+<p>Quel que soit le canal retenu, voici ce qu'il faut avoir vérifié avant de valider le panier. Une fiche produit qui ne permet pas de répondre à huit de ces douze points est une fiche produit incomplète.</p>
+<h3>Sur la puce</h3>
+<ul>
+<li><strong>Le modèle est-il indiqué ?</strong> NTAG213, 215 ou 216. Un vendeur qui ne le sait pas ne fabrique pas.</li>
+<li><strong>La plaque est-elle livrée programmée ?</strong> Avec votre URL, pas une URL de démonstration.</li>
+<li><strong>La puce est-elle verrouillée en lecture seule ?</strong> Indispensable dans un lieu public.</li>
+<li><strong>Peut-on la faire reprogrammer plus tard ?</strong> Et à quelles conditions.</li>
+</ul>
+<h3>Sur le support</h3>
+<ul>
+<li><strong>Quel matériau, quelle épaisseur ?</strong> L'acrylique 3 mm est le compromis courant entre rigidité et discrétion.</li>
+<li><strong>Y a-t-il du métal dans le support ou la finition ?</strong> Si oui, un blindage ferrite est-il prévu ?</li>
+<li><strong>Quel adhésif ?</strong> Un adhésif de marque avec une référence citée est un signal de sérieux.</li>
+<li><strong>Le QR code de secours est-il présent ?</strong> Il couvre les téléphones dont le NFC est désactivé.</li>
+</ul>
+<h3>Sur le service</h3>
+<ul>
+<li><strong>Quelle garantie, et sur quoi ?</strong> Une garantie sur la puce n'est pas une garantie sur l'adhésif.</li>
+<li><strong>Y a-t-il un abonnement, même optionnel ?</strong> Et que perd-on en ne le prenant pas ?</li>
+<li><strong>Le vendeur est-il établi en France ou dans l'UE ?</strong> Cela conditionne le droit de rétractation et la facilité du SAV.</li>
+<li><strong>Le délai de livraison est-il annoncé fermement ?</strong> Un « 2 à 6 semaines » est un signal d'import à la commande.</li>
+</ul>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>✅ Le test de la question directe :</strong> écrivez au vendeur avant d'acheter et posez-lui deux questions — quel modèle de puce, et la plaque arrive-t-elle programmée avec mon lien. La rapidité et la précision de la réponse vous en apprendront plus que la fiche produit. Un délai de trois jours pour une réponse évasive préfigure exactement ce que sera le SAV.</p>
+</div>
+</section>
+
+<section id="cout-reel" class="scroll-mt-28 mb-16">
+<h2>Le coût réel sur trois ans, canal par canal</h2>
+<p>Comparer des prix d'achat n'a pas de sens quand les modèles économiques diffèrent. Voici le même besoin — deux plaques pour un commerce, un accueil et un comptoir — chiffré sur trois ans. Les montants sont des hypothèses de travail à remplacer par les devis que vous obtiendrez.</p>
+
+<table>
+<thead>
+<tr><th>Canal</th><th>Achat initial</th><th>Coût récurrent</th><th>Total 3 ans</th><th>Temps à y passer</th></tr>
+</thead>
+<tbody>
+<tr><td>Marketplace, 2 plaques vierges</td><td>~30 €</td><td>0 €</td><td>~30 €</td><td>1 à 2 h + remplacements</td></tr>
+<tr><td>Import direct, lot de 100</td><td>~270 €</td><td>0 €</td><td>~270 €</td><td>Plusieurs jours</td></tr>
+<tr><td>Enseigniste local sur mesure</td><td>~110 €</td><td>0 €</td><td>~110 €</td><td>Brief + bon à tirer</td></tr>
+<tr><td>Plateforme à 25 €/mois</td><td>~10 €</td><td>300 €/an</td><td>~910 €</td><td>Prise en main du tableau de bord</td></tr>
+<tr><td>Pack Business Swiipx</td><td>54,90 €</td><td>0 €</td><td>54,90 €</td><td>Coller la plaque</td></tr>
+</tbody>
+</table>
+
+<p>Deux enseignements se dégagent. D'abord, l'écart entre les options sans abonnement se joue sur quelques dizaines d'euros, c'est-à-dire à peu près rien à l'échelle d'un budget commercial : arbitrer entre elles au prix seul revient à optimiser la mauvaise variable. Ensuite, l'abonnement est le seul poste qui crée un écart d'ordre de grandeur — et il ne se justifie que si le tableau de bord est réellement utilisé chaque semaine.</p>
+<p>La colonne la plus intéressante est la dernière. Le temps que vous passez à programmer, retester et recoller n'apparaît sur aucune facture, mais c'est du temps pris sur votre activité. Pour un dirigeant de TPE, deux heures valent largement les quinze euros d'écart entre une plaque vierge et une plaque livrée prête. Le raisonnement s'étend aux autres dispositifs de collecte dans notre <a href="/blog/cout-avis-google-comparatif">comparatif du coût des solutions d'avis Google</a>.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs d'achat les plus fréquentes</h2>
+<ul>
+<li><strong>Acheter une plaque vierge sans avoir de smartphone Android sous la main.</strong> L'écriture d'un tag NFC depuis un iPhone est possible mais nettement plus limitée selon les applications, et beaucoup d'acheteurs découvrent le problème une fois la plaque reçue.</li>
+<li><strong>Confondre l'URL de la fiche et l'URL du formulaire d'avis.</strong> La première affiche votre établissement, la seconde ouvre directement la fenêtre de notation. C'est la deuxième qu'il faut écrire dans la puce, et elle s'obtient depuis la gestion de votre fiche Google Business Profile.</li>
+<li><strong>Choisir le métal pour l'esthétique.</strong> Aluminium brossé, laiton, inox : très beaux, et très perturbants pour la lecture NFC en l'absence de blindage. C'est la première cause de plaque déclarée défectueuse.</li>
+<li><strong>Commander une seule plaque pour un établissement qui a trois moments de contact.</strong> Le nombre de plaques dépend du nombre de moments du parcours client couverts, pas de la surface du local — voyez notre guide sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques nécessaire</a>.</li>
+<li><strong>Signer un abonnement sans avoir demandé ce qu'il advient de la plaque à la résiliation.</strong> C'est la question la plus coûteuse à ne pas poser.</li>
+<li><strong>Prendre un lot de cent plaques « parce que c'est moins cher à l'unité ».</strong> Le coût pertinent est celui des plaques réellement utilisées.</li>
+<li><strong>Acheter la plaque avant d'avoir vérifié sa fiche Google.</strong> Une fiche non revendiquée, avec des horaires faux ou une catégorie mal choisie, ne convertira pas les scans en avis. Passez d'abord par notre guide pour <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google Business Profile</a>, puis achetez.</li>
+</ul>
+</section>
+
+<section id="faq-achat" class="scroll-mt-28 mb-16">
+<h2>FAQ — Où acheter une plaque NFC pour avis Google</h2>
+
+<h3>Faut-il acheter une plaque NFC ou la fabriquer soi-même ?</h3>
+<p>La fabrication maison est possible : des tags NFC autocollants coûtent quelques dizaines de centimes, une application gratuite les programme, et un support imprimé complète l'ensemble. C'est un projet raisonnable si vous êtes à l'aise techniquement et que vous n'équipez qu'un emplacement. Les limites apparaissent à l'usage : un autocollant nu se décolle, se raye et se réécrit, et rien n'indique au client ce qu'il doit faire. Une plaque du commerce apporte trois choses que le bricolage ne donne pas — un support rigide qui tient des années, un visuel qui explique le geste sans mode d'emploi, et une puce verrouillée.</p>
+
+<h3>Une plaque NFC achetée sur une marketplace fonctionne-t-elle vraiment ?</h3>
+<p>Techniquement oui, dans la grande majorité des cas : une puce NFC est une puce NFC. Les problèmes signalés portent rarement sur la technologie elle-même et presque toujours sur trois points périphériques — une puce livrée vierge que l'acheteur n'arrive pas à programmer correctement, un adhésif qui lâche au bout de quelques semaines, et un QR code de secours pointant vers un service tiers plutôt que vers la page d'avis. Vérifiez ces trois points sur la fiche produit avant de commander.</p>
+
+<h3>Combien coûte une plaque NFC avis Google en France ?</h3>
+<p>Le marché s'étage de dix euros pour un support vierge de marketplace à une centaine d'euros pour une réalisation sur mesure chez un enseigniste. Les offres prêtes à l'emploi d'un spécialiste se situent entre trente et quatre-vingt-dix euros selon le nombre de plaques : chez Swiipx, 29,90 € pour une plaque, 54,90 € pour deux et 89,90 € pour cinq, sans abonnement. Au-delà du prix affiché, comparez ce qui est inclus : programmation, adhésif, QR de secours, garantie.</p>
+
+<h3>Vaut-il mieux acheter en France ou importer directement ?</h3>
+<p>L'import ne devient intéressant qu'à partir de plusieurs dizaines d'unités réellement utilisées, parce que le prix unitaire bas est compensé par la quantité minimum, le transport, la TVA due dès le premier euro à l'import, les frais de dossier du transporteur et le temps de programmation. Pour un commerce qui a besoin de une à cinq plaques, l'achat en France coûte moins cher tout compris et arrive en quelques jours au lieu de quelques semaines.</p>
+
+<h3>Que se passe-t-il si mon lien Google change après l'achat ?</h3>
+<p>Cela dépend entièrement du vendeur, et c'est la question à poser avant de commander. Une puce verrouillée en lecture seule ne peut pas être réécrite : il faut alors une nouvelle plaque. Une puce verrouillée par le prestataire d'un service à abonnement peut devenir inutilisable à la résiliation. Le cas se présente plus souvent qu'on ne l'imagine — changement de raison sociale, déménagement, fusion de fiches en double — donc faites écrire la réponse dans le devis ou l'échange de mails.</p>
+
+<h3>Une plaque NFC nécessite-t-elle une application côté client ?</h3>
+<p>Non, et c'est tout l'intérêt du NFC face au QR code. La lecture est native sur les iPhone depuis l'iPhone 7 sous iOS 11 et sur l'immense majorité des Android récents : le client approche son téléphone, une notification apparaît, il tape dessus et le formulaire d'avis s'ouvre. Aucune installation, aucun compte à créer. Pour les rares téléphones dont le NFC est désactivé ou absent, le QR code imprimé sur la plaque prend le relais.</p>
+
+<h3>Faut-il un abonnement pour utiliser une plaque NFC ?</h3>
+<p>Non, et c'est un choix d'offre, pas une contrainte technique. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel. Elle continue de fonctionner des années après l'achat, et la puce est garantie à vie. C'est la différence de fond avec les offres à abonnement, où l'arrêt du prélèvement peut désactiver le support que vous avez pourtant payé.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : achetez le résultat, pas l'objet</h2>
+<p>Les cinq canaux se départagent moins sur le prix que sur ce qu'ils vous laissent à faire. La marketplace vend un composant à finir soi-même. L'import vend du volume à quelqu'un qui a du volume. L'enseigniste vend du sur-mesure esthétique. La plateforme vend un service continu, avec la dépendance qui va avec. Le spécialiste sans abonnement vend un objet fini que vous collez et que vous oubliez.</p>
+<p>Aucun de ces choix n'est absurde : ils répondent à des situations différentes. Mais pour l'immense majorité des commerces indépendants — un ou deux emplacements, pas de service informatique, l'envie que ça marche dès le premier jour —, la bonne question n'est pas « quelle est la plaque la moins chère » mais « <strong>combien de mon temps vais-je devoir y consacrer, et que se passe-t-il dans deux ans</strong> ». Répondez à ces deux questions et le canal se choisit tout seul.</p>
+<p>Guides complémentaires : <a href="/blog/comment-choisir-plaque-nfc-avis-google">comment choisir sa plaque</a>, <a href="/blog/prix-plaque-nfc-avis-google">le prix d'une plaque NFC</a>, <a href="/blog/materiaux-plaque-nfc-avis-google">quel matériau choisir</a>, <a href="/blog/ou-placer-plaque-avis-google">où la placer</a>, ou notre comparatif <a href="/blog/plaque-nfc-vs-qr-code-avis-google">NFC contre QR code</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Envie d'une plaque qui arrive prête à coller ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215 pré-programmée avec votre lien d'avis Google, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. <a href="/product/starter" class="font-semibold underline">Pack Starter</a> à 29,90 €, <a href="/product/business" class="font-semibold underline">Pack Business</a> à 54,90 € et <a href="/product/pro" class="font-semibold underline">Pack Pro</a> à 89,90 €.</p>
+</div>
+</section>
+`,
+  },
   'plaque-nfc-taxi-vtc': {
     title: 'Plaque NFC taxi et VTC : collecter des avis Google dans un véhicule',
     category: 'Secteur',

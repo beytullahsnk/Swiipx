@@ -13,6 +13,7 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'ou-acheter-plaque-nfc-avis-google', label: 'Où acheter une plaque NFC avis Google ?' },
   { slug: 'plaque-nfc-taxi-vtc', label: 'Plaque NFC taxi et VTC : avis en voiture' },
   { slug: 'questions-reponses-google-business-profile', label: 'Questions/Réponses Google Business Profile' },
   { slug: 'quand-clients-laissent-avis-google', label: 'Quand vos clients laissent leurs avis Google' },
