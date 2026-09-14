@@ -27,7 +27,7 @@ const TAWK_WIDGET_ID = '1jhba3g6k'
  *
  * Le même script pose aussi `Tawk_API.onOfflineSubmit`. Un message laissé via
  * le formulaire hors ligne ne déclenche aucun webhook tawk.to : sans ce rappel,
- * personne n'était prévenu. Il transmet nom, e-mail, message et page à
+ * personne n'était prévenu. Il transmet les champs du formulaire et la page à
  * app/api/tawk-alerte, qui relaie l'alerte sur Telegram.
  */
 export default function WhatsAppButton() {
@@ -119,15 +119,20 @@ export default function WhatsAppButton() {
             window.Tawk_API.onOfflineSubmit = function(data) {
               if (typeof horsLignePrecedent === 'function') { try { horsLignePrecedent(data); } catch (e) {} }
               try {
+                // Le widget v4 passe l'objet formData de son formulaire, dont
+                // les cles dependent des champs configures : on le transmet tel
+                // quel, moins les attributs techniques, et le serveur y
+                // cherche le texte du visiteur.
+                var formulaire = {};
+                if (data && typeof data === 'object') {
+                  Object.keys(data).forEach(function(cle) {
+                    if (cle !== 'customAttributes' && cle !== 'widgetId') formulaire[cle] = data[cle];
+                  });
+                }
                 fetch('/api/tawk-alerte', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({
-                    name: data && data.name,
-                    email: data && data.email,
-                    message: data && data.message,
-                    page: window.location.pathname
-                  }),
+                  body: JSON.stringify({ formData: formulaire, page: window.location.pathname }),
                   keepalive: true
                 }).catch(function() {});
               } catch (e) {}
