@@ -12,8 +12,17 @@ import { createHmac, timingSafeEqual } from 'crypto'
  * Données transmises : nom, e-mail et message du visiteur, rien d'autre. La
  * ville et le pays figurent dans la charge utile mais ne servent pas à répondre.
  *
- * Aucune clé ici : la route (app/api/tawk-webhook/route.ts) lit le secret du
- * webhook, le jeton du bot et la conversation dans les variables Vercel.
+ * DEUX ENTRÉES. Le webhook signé (app/api/tawk-webhook/route.ts) couvre les
+ * discussions en direct et les tickets. Mais un message laissé via le
+ * formulaire hors ligne — le cas courant, puisque personne n'est connecté la
+ * plupart du temps — ne déclenche aucun webhook : ce n'est ni une discussion
+ * démarrée, ni un ticket (tawk.to ne le convertit qu'au clic d'un agent).
+ * Constaté le 2026-09-14 : deux messages hors ligne arrivés dans la boîte
+ * tawk.to, aucun appel au webhook. Ceux-là passent par le rappel navigateur
+ * onOfflineSubmit et app/api/tawk-alerte/route.ts.
+ *
+ * Aucune clé ici : les routes lisent le secret du webhook, le jeton du bot et
+ * la conversation dans les variables Vercel.
  */
 
 /** Charge utile des webhooks tawk.to — https://developer.tawk.to/webhooks/ */
@@ -79,8 +88,8 @@ export function construireMessage(evenement: EvenementTawk): string | null {
       extrait(evenement.message?.text),
     ]
   } else if (evenement.event === 'ticket:create') {
-    // Un ticket naît d'un formulaire hors ligne ou d'un e-mail envoyé à
-    // l'adresse de transfert tawk.to.
+    // Un ticket naît d'un e-mail envoyé à l'adresse de transfert tawk.to, ou
+    // d'un message hors ligne qu'un agent a converti.
     const numero = evenement.ticket?.humanId
     lignes = [
       numero ? `Nouveau ticket #${numero}` : 'Nouveau ticket',
@@ -95,6 +104,30 @@ export function construireMessage(evenement: EvenementTawk): string | null {
 
   lignes.push('', `Répondre : ${lienBoiteDeReception(evenement)}`)
   return lignes.filter((ligne): ligne is string => ligne !== null).join('\n')
+}
+
+/** Propriété tawk.to du site. Publique : elle figure aussi dans le widget. */
+const PROPRIETE_SWIIPX = '698f027e1f51081c3676f34d'
+
+/** Ce que le navigateur transmet quand un visiteur envoie le formulaire hors ligne. */
+export interface MessageHorsLigne {
+  name?: string
+  email?: string
+  message?: string
+  page?: string
+}
+
+/** Alerte pour un message laissé via le formulaire hors ligne du widget. */
+export function construireAlerteHorsLigne(saisie: MessageHorsLigne): string {
+  return [
+    'Nouveau message hors ligne sur swiipx.fr',
+    `De : ${expediteur(saisie.name, saisie.email)}`,
+    saisie.page ? `Page : ${saisie.page}` : null,
+    '',
+    extrait(saisie.message),
+    '',
+    `Répondre : ${lienBoiteDeReception({ property: { id: PROPRIETE_SWIIPX } })}`,
+  ].filter((ligne): ligne is string => ligne !== null).join('\n')
 }
 
 /** Ne jamais journaliser l'URL : elle contient le jeton du bot. */

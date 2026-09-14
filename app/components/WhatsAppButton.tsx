@@ -24,6 +24,11 @@ const TAWK_WIDGET_ID = '1jhba3g6k'
  * est prêt), un observateur limité aux enfants directs du <body> — Tawk y
  * injecte son conteneur — arrêté dès qu'il a fait son travail, et un écouteur
  * de redimensionnement. Zéro sondage périodique.
+ *
+ * Le même script pose aussi `Tawk_API.onOfflineSubmit`. Un message laissé via
+ * le formulaire hors ligne ne déclenche aucun webhook tawk.to : sans ce rappel,
+ * personne n'était prévenu. Il transmet nom, e-mail, message et page à
+ * app/api/tawk-alerte, qui relaie l'alerte sur Telegram.
  */
 export default function WhatsAppButton() {
   return (
@@ -106,6 +111,27 @@ export default function WhatsAppButton() {
               clearTimeout(t);
               t = setTimeout(appliquer, 200);
             });
+
+            // 4. Alerte Telegram pour les messages hors ligne : ils ne
+            //    declenchent aucun webhook tawk.to, seul ce rappel du
+            //    navigateur les voit passer (app/api/tawk-alerte).
+            var horsLignePrecedent = window.Tawk_API.onOfflineSubmit;
+            window.Tawk_API.onOfflineSubmit = function(data) {
+              if (typeof horsLignePrecedent === 'function') { try { horsLignePrecedent(data); } catch (e) {} }
+              try {
+                fetch('/api/tawk-alerte', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    name: data && data.name,
+                    email: data && data.email,
+                    message: data && data.message,
+                    page: window.location.pathname
+                  }),
+                  keepalive: true
+                }).catch(function() {});
+              } catch (e) {}
+            };
           })();
         `}
       </Script>
