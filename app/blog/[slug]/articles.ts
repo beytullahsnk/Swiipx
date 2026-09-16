@@ -18,6 +18,198 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'velocite-avis-google': {
+    title: 'Vélocité des avis Google : pourquoi le rythme compte plus que le total',
+    category: 'Statistiques',
+    date: '16 septembre 2026',
+    readTime: '15 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Deux fiches à 4,6 avec 212 avis peuvent raconter l\'inverse l\'une de l\'autre. La vélocité — le nombre de nouveaux avis par mois — est le seul de vos indicateurs qui soit une décision. Formule de calcul, tableau de projection, pics à risque et méthode de relevé.',
+    tocSections: [
+      { id: 'velocite-definition', label: 'Ce qu’est la vélocité' },
+      { id: 'ce-que-dit-google', label: 'Ce que Google dit vraiment' },
+      { id: 'pourquoi-fraicheur', label: 'La fraîcheur vue du client' },
+      { id: 'calculer-sa-velocite', label: 'Calculer sa vélocité' },
+      { id: 'tableau-reperes', label: 'Repères et projections' },
+      { id: 'pic-vs-regularite', label: 'Le pic contre la régularité' },
+      { id: 'trou-air', label: 'Le trou d’air' },
+      { id: 'plan-regularite', label: 'Installer un rythme régulier' },
+      { id: 'erreurs', label: 'Les 7 erreurs de rythme' },
+      { id: 'faq-velocite', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="velocite-definition" class="scroll-mt-28 mb-16">
+<h2>La vélocité des avis : la statistique que personne ne relève</h2>
+<p>Presque tous les commerçants connaissent deux chiffres sur leur fiche Google : leur note et leur nombre total d'avis. « 4,6 avec 212 avis. » Ces deux chiffres sont affichés, donc ils sont regardés. Un troisième ne l'est jamais, parce que Google ne le calcule pas pour vous : le <strong>nombre de nouveaux avis publiés par mois</strong>, et la façon dont ce nombre évolue dans le temps. C'est ce qu'on appelle la vélocité des avis.</p>
+<p>La différence entre les deux lectures est plus grande qu'elle n'en a l'air. Deux fiches affichant « 4,6 — 212 avis » peuvent raconter des histoires opposées. La première a reçu 190 avis entre 2019 et 2022, puis plus rien depuis : son total est un héritage. La seconde en reçoit six à huit par mois depuis deux ans : son total est une production. Le client qui les compare voit deux fiches identiques. Google, lui, voit deux établissements dont l'un a une activité visible et l'autre pas.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Définition :</strong> la vélocité d'avis est le nombre d'avis nouvellement publiés sur une période donnée, généralement un mois. Elle se mesure en avis par mois, pas en pourcentage. Elle n'apparaît nulle part dans l'interface Google Business Profile : c'est un relevé que vous devez tenir vous-même, et c'est précisément pour cela que la plupart des établissements l'ignorent.</p>
+</div>
+<p>Cet article ne prétend pas que la vélocité soit un critère de classement déclaré par Google — nous verrons plus loin ce que Google dit exactement, et surtout ce qu'il ne dit pas. Il défend une idée plus simple et vérifiable : <strong>le total d'avis est une conséquence, la vélocité est une décision.</strong> Vous ne pouvez pas décider d'avoir 300 avis. Vous pouvez décider d'en collecter cinq par mois, et alors le total suit tout seul.</p>
+</section>
+
+<section id="ce-que-dit-google" class="scroll-mt-28 mb-16">
+<h2>Ce que Google dit du nombre d'avis, et ce qu'il ne dit pas</h2>
+<p>Il faut être précis ici, parce que le sujet est un nid à affirmations invérifiables. La page officielle de Google sur le classement local est courte et ne parle jamais de rythme. Elle indique que les résultats locaux reposent principalement sur trois facteurs — <strong>pertinence, distance et proéminence</strong> — et range explicitement <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">le nombre d'avis et les notes positives dans la proéminence</a>. Autrement dit : davantage d'avis et de notes positives peuvent améliorer le classement local.</p>
+<p>Ce que cette page ne dit pas, il faut le dire aussi clairement : elle ne mentionne ni la fréquence de publication, ni l'ancienneté des avis, ni un quelconque bonus de fraîcheur. Toute personne qui vous affirme que « Google favorise les fiches qui reçoivent trois avis par semaine » énonce une hypothèse, pas une règle documentée. Nous n'avons connaissance d'aucune publication de Google qui établisse un seuil de rythme.</p>
+<h3>Ce qui est documenté, en revanche</h3>
+<ul>
+<li><strong>Le volume compte.</strong> C'est écrit noir sur blanc dans la proéminence : plus d'avis, plus de notes positives. Or un volume ne se constitue que d'une seule façon, en additionnant des avis dans le temps. La vélocité est le débit ; le volume est le niveau du réservoir.</li>
+<li><strong>L'engagement artificiel est sanctionné.</strong> Google décrit des mesures pouvant aller jusqu'à <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">empêcher une fiche de recevoir de nouveaux avis pendant une période donnée</a>, retirer des avis existants, ou afficher un avertissement public sur la fiche. Un afflux soudain et atypique d'avis est exactement le genre de signal qui attire ce type d'attention.</li>
+<li><strong>Les avis passent par une vérification.</strong> Google indique que les avis peuvent mettre un certain temps à apparaître, le délai de traitement pouvant aller jusqu'à quelques jours. Un avis publié n'est donc pas instantanément un avis affiché, ce qui rend tout relevé à la journée inutilisable et tout relevé au mois pertinent.</li>
+</ul>
+<p>La conclusion raisonnable est donc intermédiaire, et c'est celle que nous tenons dans tout ce blog : <strong>la régularité n'est pas un levier magique, c'est la seule méthode connue pour construire du volume sans ressembler à une manipulation.</strong> Notre article de synthèse sur les <a href="/blog/statistiques-avis-google-2026">statistiques des avis Google en 2026</a> reprend les chiffres publics disponibles et distingue, pour chacun, ce qui est mesuré de ce qui est extrapolé.</p>
+</section>
+
+<section id="pourquoi-fraicheur" class="scroll-mt-28 mb-16">
+<h2>Pourquoi la fraîcheur compte d'abord pour le lecteur</h2>
+<p>Laissons l'algorithme de côté une minute et regardons le seul juge qui décide vraiment : le client qui a votre fiche sous les yeux, à onze heures du matin, en cherchant où déjeuner ou à qui confier sa voiture.</p>
+<p>Ce client fait toujours le même geste. Il regarde la note, il regarde le nombre d'avis, puis il fait défiler les premiers avis — et il y lit une date. « Il y a 3 jours. » « Il y a 2 semaines. » Ou bien « il y a 3 ans ». Cette date est une information de nature différente des deux autres : la note et le volume disent ce que l'établissement <em>a été</em>, la date du dernier avis dit ce qu'il <em>est encore</em>.</p>
+<p>Un restaurant à 4,7 dont le dernier avis date de dix-huit mois déclenche une série de questions silencieuses. Le chef est-il toujours là ? La carte a-t-elle changé ? Est-ce seulement encore ouvert ? Aucune de ces questions n'a de réponse sur la fiche, et le client ne va pas appeler pour vérifier : il passe à la fiche suivante, celle où quelqu'un a écrit quelque chose la semaine dernière.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Le piège de la note haute et figée :</strong> une note de 4,9 obtenue sur 40 avis vieux de trois ans inspire moins confiance qu'une note de 4,5 sur 180 avis dont dix datent du mois. La première ressemble à un souvenir, la seconde à un lieu vivant. C'est contre-intuitif quand on a passé des années à protéger sa moyenne, mais c'est ce que les clients regardent.</p>
+</div>
+<h3>Trois effets concrets d'une vélocité régulière</h3>
+<ul>
+<li><strong>Elle dilue les avis négatifs.</strong> Un avis à 1 étoile reçu dans un mois à six avis se retrouve en troisième page de lecture au bout de quelques semaines. Le même avis sur une fiche à zéro nouvel avis reste en tête pendant un an, et c'est la première chose que lisent vos prochains clients. Le mécanisme de dilution de la note est détaillé dans notre guide pour <a href="/blog/ameliorer-note-google">améliorer sa note Google</a>.</li>
+<li><strong>Elle rend la note représentative de l'établissement actuel.</strong> Si vous avez changé d'équipe, refait votre salle ou corrigé un problème récurrent, seuls les avis récents le racontent. Une fiche figée continue d'afficher un établissement qui n'existe plus.</li>
+<li><strong>Elle absorbe les disparitions.</strong> Google retire régulièrement des avis, pour des raisons qui ne vous sont pas toujours communiquées. Sur une fiche à flux continu, cela passe inaperçu ; sur une fiche à l'arrêt, chaque retrait fait reculer le compteur. Nous avons consacré un article complet au sujet des <a href="/blog/avis-google-disparus">avis Google qui disparaissent</a>.</li>
+</ul>
+</section>
+
+<section id="calculer-sa-velocite" class="scroll-mt-28 mb-16">
+<h2>Calculer sa vélocité : la formule et le relevé mensuel</h2>
+<p>La formule tient en une ligne, et c'est sa seule qualité — mais elle est suffisante :</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Vélocité mensuelle = (total d'avis en fin de mois) − (total d'avis en fin de mois précédent).</strong> Rien d'autre. Vous relevez un nombre le 1er de chaque mois, vous soustrayez celui du mois d'avant, vous notez le résultat dans un tableau à deux colonnes. Douze lignes par an.</p>
+</div>
+<h3>Les quatre règles qui rendent le relevé exploitable</h3>
+<ul>
+<li><strong>Relevez le total affiché, pas les avis rédigés.</strong> Le compteur public inclut les notes sans commentaire, qui représentent une part importante des avis sur beaucoup de fiches. C'est ce nombre-là que voient vos clients et que Google additionne.</li>
+<li><strong>Relevez toujours le même jour.</strong> Le 1er du mois, ou le lundi de la première semaine. Un relevé fait le 3 puis le 27 produit deux périodes de longueurs différentes et un écart qui ne veut rien dire.</li>
+<li><strong>Attendez trois mois avant de conclure.</strong> La vérification par Google décale des publications d'un mois sur l'autre, et un mois de vacances scolaires ou de fermeture fausse complètement l'image. Trois relevés donnent une tendance ; un seul donne une impression.</li>
+<li><strong>Ne changez qu'une chose à la fois.</strong> Si vous déplacez la plaque, ajoutez un emplacement et changez la phrase dite à l'oral le même mois, vous ne saurez jamais lequel des trois a produit l'écart.</li>
+</ul>
+<h3>La vélocité brute et la vélocité rapportée au flux</h3>
+<p>Quatre avis par mois ne signifient pas la même chose pour un cabinet dentaire qui voit 300 patients et pour une boulangerie qui sert 9 000 clients. Une fois votre vélocité brute connue, rapportez-la à votre flux réel : divisez le nombre d'avis du mois par le nombre de clients servis sur le même mois. Ce ratio est le véritable indicateur de performance de votre dispositif de collecte, et c'est lui qu'il faut suivre si vous voulez savoir si vos changements produisent un effet. Notre article sur le <a href="/blog/taux-scan-plaque-nfc">taux de scan d'une plaque NFC</a> détaille l'entonnoir complet, de l'exposition à la publication, et les leviers qui agissent sur chaque étape.</p>
+<p>Un avertissement nécessaire : ce ratio n'est comparable qu'à lui-même. Nous ne connaissons aucune mesure publique fiable d'un taux moyen de publication d'avis par client servi, tous secteurs confondus, et les chiffres qui circulent sur ce point sont presque toujours des extrapolations commerciales. Votre référence, c'est votre propre mois précédent.</p>
+</section>
+
+<section id="tableau-reperes" class="scroll-mt-28 mb-16">
+<h2>Repères de vélocité : ce que vos concurrents affichent déjà</h2>
+<p>Plutôt que d'inventer des moyennes sectorielles que personne ne peut vérifier, il existe une méthode d'étalonnage gratuite et honnête : <strong>regarder les trois fiches qui sortent dans le pack local de votre ville pour votre requête principale</strong>, et compter combien d'avis elles ont reçus au cours des trois derniers mois. Les dates sont publiques, le comptage prend dix minutes, et le résultat vous concerne directement puisqu'il s'agit des établissements que vos clients comparent au vôtre.</p>
+<p>Le tableau ci-dessous est un outil de raisonnement, pas un relevé statistique : il montre comment une même vélocité produit des trajectoires très différentes selon le point de départ, et à quelle échéance un objectif de volume devient atteignable.</p>
+<table>
+<thead>
+<tr><th>Situation de départ</th><th>Vélocité</th><th>Total à 6 mois</th><th>Total à 12 mois</th><th>Ce que voit le client</th></tr>
+</thead>
+<tbody>
+<tr><td>Fiche à 40 avis, collecte arrêtée</td><td>0 / mois</td><td>40</td><td>40 ou moins</td><td>Dernier avis « il y a 1 an »</td></tr>
+<tr><td>Fiche à 40 avis, demande occasionnelle</td><td>2 / mois</td><td>52</td><td>64</td><td>Un avis récent, flux irrégulier</td></tr>
+<tr><td>Fiche à 40 avis, plaque + phrase systématique</td><td>6 / mois</td><td>76</td><td>112</td><td>Plusieurs avis du mois en cours</td></tr>
+<tr><td>Fiche à 150 avis, collecte arrêtée</td><td>0 / mois</td><td>150</td><td>150 ou moins</td><td>Gros total, rien de récent</td></tr>
+<tr><td>Fiche à 150 avis, dispositif en place</td><td>8 / mois</td><td>198</td><td>246</td><td>Fiche manifestement active</td></tr>
+<tr><td>Achat d'avis, puis arrêt</td><td>30 puis 0</td><td>Risque de suspension des avis</td><td>—</td><td>Pic atypique, avertissement possible</td></tr>
+</tbody>
+</table>
+<p>Deux lectures sautent aux yeux. D'abord, l'écart entre 2 et 6 avis par mois — qui paraît minuscule au quotidien — représente 48 avis de différence en un an, soit plus que le total de départ de la plupart des petites fiches. Ensuite, le gros total sans flux se fait rattraper : la fiche à 40 avis bien gérée passe devant la fiche à 150 avis à l'abandon en un peu plus de deux ans, et la dépasse en crédibilité perçue bien avant, puisque la date du dernier avis se lit immédiatement.</p>
+<p>Pour savoir quel niveau viser dans votre ville précisément, notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> explique comment relever les chiffres des fiches concurrentes et en déduire un objectif réaliste.</p>
+</section>
+
+<section id="pic-vs-regularite" class="scroll-mt-28 mb-16">
+<h2>Le pic contre la régularité : pourquoi l'accélération brutale se retourne</h2>
+<p>Une fois qu'on a compris que le rythme comptait, la tentation est immédiate : accélérer d'un coup. Campagne de relance massive sur tout le fichier client, opération « tout le monde note le restaurant ce week-end », ou pire, achat de lots d'avis. C'est la meilleure façon de perdre en une semaine ce qu'on a mis deux ans à construire.</p>
+<h3>Ce qu'un pic déclenche</h3>
+<p>Google décrit le contenu faux ou trompeur et l'engagement artificiel comme des infractions à son règlement, et documente les mesures possibles : suppression des contenus concernés, <strong>impossibilité pour la fiche de recevoir de nouveaux avis pendant une période donnée</strong>, retrait d'avis existants, avertissement affiché publiquement sur la fiche, voire suspension. Une fiche qui passe de trois avis par mois à soixante en dix jours, sans événement qui l'explique, présente exactement le profil que ces systèmes cherchent.</p>
+<p>Et l'ironie est cruelle : la sanction la plus courante n'est pas la suppression des avis achetés, c'est le <strong>blocage des nouveaux avis</strong>. Vous vous retrouvez avec une fiche gelée au moment précis où vous aviez enfin mis en place un dispositif de collecte honnête.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Les trois pratiques à ne jamais confondre avec de la vélocité :</strong> acheter des avis ; offrir une remise, un café ou un cadeau en échange d'un avis, que Google interdit explicitement ; et trier les clients en ne sollicitant que ceux dont on est sûr du contenu, ce que Google range parmi les sollicitations prohibées. Les trois produisent une courbe d'avis anormale et vous exposent à des mesures dont vous ne maîtrisez ni la durée ni la visibilité publique. Si vous soupçonnez un concurrent d'y recourir, notre article explique <a href="/blog/faux-avis-google-signaler">comment signaler de faux avis Google</a>.</p>
+</div>
+<h3>Les pics légitimes existent — et se justifient</h3>
+<p>Tous les pics ne sont pas suspects. Une ouverture, un déménagement, un passage à la télévision locale, un mariage de 120 couverts ou une opération portes ouvertes produisent naturellement un afflux, et cet afflux est accompagné d'autres signaux cohérents : appels, itinéraires demandés, photos publiées par les clients. Le pic problématique est celui qui arrive seul, sans aucune activité correspondante autour de lui. La règle pratique tient en une phrase : <strong>un pic d'avis doit avoir une cause que vous pourriez expliquer à un client sans gêne.</strong></p>
+</section>
+
+<section id="trou-air" class="scroll-mt-28 mb-16">
+<h2>Le trou d'air : ce qui se passe quand la collecte s'arrête</h2>
+<p>La chute de vélocité est plus fréquente que le pic, et beaucoup plus silencieuse. Personne ne reçoit d'alerte le jour où sa fiche cesse de recevoir des avis. Le commerçant s'en aperçoit six ou neuf mois plus tard, en général parce qu'un concurrent est passé devant lui.</p>
+<h3>Les cinq causes réelles d'un arrêt de collecte</h3>
+<ul>
+<li><strong>Le départ de la personne qui demandait.</strong> C'est la cause numéro un, et elle est presque toujours invisible : dans un salon, un restaurant ou un garage, la demande d'avis repose souvent sur une seule personne qui a pris l'habitude de dire la phrase. Son départ fait tomber la vélocité à zéro en trois semaines, sans que personne ne relie les deux événements.</li>
+<li><strong>La plaque décollée, déplacée ou rangée.</strong> Un support tombé derrière le comptoir lors d'un nettoyage, une plaque « provisoirement » retirée pour repeindre le mur et jamais remise, un présentoir recouvert par un chevalet de menu. Le dispositif n'est pas cassé, il n'est simplement plus vu.</li>
+<li><strong>Le changement de lien d'avis.</strong> Changement de raison sociale, fusion de deux fiches en double, déménagement : le lien programmé pointe vers une page qui n'existe plus, et personne ne s'en rend compte parce que personne ne teste sa propre plaque.</li>
+<li><strong>La saison creuse prise pour une panne.</strong> Un hôtel de bord de mer, une auto-école en août, un pâtissier en février : la baisse est normale et ne demande aucune correction. C'est la raison pour laquelle on compare un mois à ce que donnait le même mois l'an dernier, dès qu'on a un an de relevés. Notre article sur <a href="/blog/quand-clients-laissent-avis-google">les moments où les clients laissent leurs avis</a> détaille cette saisonnalité par activité.</li>
+<li><strong>La lassitude après les premiers résultats.</strong> Le dispositif fonctionne, la note monte, la vigilance retombe. C'est le scénario le plus courant à douze mois, et le seul remède connu est le relevé mensuel : un chiffre écrit dans un tableau se défend tout seul.</li>
+</ul>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Le test des trente secondes, une fois par semaine :</strong> approchez votre propre téléphone de la plaque. Vérifiez que la notification apparaît, que le lien ouvre bien votre page d'avis, et que le support est toujours à sa place, propre et orienté vers le client. Cette vérification hebdomadaire détecte quatre des cinq causes ci-dessus avant qu'elles ne coûtent un mois entier de collecte.</p>
+</div>
+</section>
+
+<section id="plan-regularite" class="scroll-mt-28 mb-16">
+<h2>Installer une vélocité régulière : la méthode en quatre points</h2>
+<p>La régularité ne vient jamais d'un effort de volonté. Elle vient de trois choses matérielles : un objet présent au bon endroit, une phrase courte que tout le monde dit, et un chiffre relevé chaque mois. Voici comment les mettre en place.</p>
+<h3>1. Un support fixe au moment de la fin de prestation</h3>
+<p>La demande d'avis ne fonctionne qu'à un instant précis : celui où la prestation vient de se terminer, où le client est encore devant vous et où son téléphone est déjà en main — souvent pour payer sans contact. Un support physique posé à cet endroit transforme une intention en geste de trois secondes. Une <a href="/product/starter">plaque NFC</a> posée à droite de la caisse, orientée vers le client, capte ce moment sans qu'on ait à y penser. Un SMS envoyé le lendemain le rate systématiquement, parce que l'émotion positive a une durée de vie de quelques minutes.</p>
+<h3>2. Une phrase de dix mots, la même pour toute l'équipe</h3>
+<p>« Si vous avez un instant, approchez votre téléphone ici, ça nous aide beaucoup. » Dix-sept mots, aucune pression, aucune contrepartie promise. L'écart mesurable entre une équipe qui dit cette phrase et une équipe qui laisse la plaque parler toute seule est le facteur le plus déterminant de toute la chaîne — et le seul qui ne coûte rien. Interdisez en revanche toute formulation sélective du type « si vous êtes content, laissez-nous un avis » : elle vous place hors des règles de Google, qui prohibent la sollicitation triée.</p>
+<h3>3. Une couverture qui suit le parcours client</h3>
+<p>Un seul point de contact couvre un seul moment. Dès qu'un établissement a un accueil <em>et</em> un poste de prestation, ou deux caisses en parallèle, un second emplacement capte des clients que le premier ne verra jamais — pas parce qu'il double l'exposition, mais parce qu'il couvre un autre instant du parcours. Le <a href="/product/business">pack de deux plaques</a> correspond à cette configuration courante ; les établissements à plusieurs postes simultanés ou à plusieurs adresses relèvent plutôt du <a href="/product/pro">pack de cinq</a>.</p>
+<h3>4. Un relevé le 1er du mois, dans le même tableau</h3>
+<p>Deux colonnes, douze lignes par an, trente secondes de travail. C'est ce relevé qui transforme la collecte d'avis en processus au lieu d'en faire une bonne résolution. Il vous dit quand la vélocité décroche, il vous dit si le changement du mois dernier a produit quelque chose, et il vous évite la seule erreur vraiment coûteuse : découvrir six mois trop tard que plus personne ne demandait rien. Complétez-le une fois par trimestre par une revue de votre fiche, en suivant notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a>.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs de rythme qui coûtent le plus cher</h2>
+<ul>
+<li><strong>Ne regarder que le total.</strong> Un total qui monte de deux avis en six mois ressemble à une progression sur la fiche, alors que c'est un arrêt. Seule la différence mensuelle le révèle.</li>
+<li><strong>Juger un dispositif sur sa première semaine.</strong> Entre le scan, la rédaction parfois différée de plusieurs jours et la vérification par Google, les premiers avis d'un nouveau dispositif arrivent rarement dans les sept premiers jours. Beaucoup d'établissements concluent à l'échec avant d'avoir la moindre donnée.</li>
+<li><strong>Lancer une campagne de rattrapage massive.</strong> Relancer 800 anciens clients le même jour produit une courbe anormale, et l'issue la plus probable n'est pas un gain de classement mais un blocage des nouveaux avis.</li>
+<li><strong>Arrêter dès que la note est bonne.</strong> Une note haute obtenue puis figée vieillit très mal : elle devient un souvenir affiché, et le premier avis négatif qui arrive ensuite reste seul en tête de liste pendant des mois.</li>
+<li><strong>Confier la demande à une seule personne.</strong> Le dispositif entier repose alors sur son planning, sa motivation et sa présence dans l'entreprise. Formez toute l'équipe, y compris les extras et les nouveaux arrivants.</li>
+<li><strong>Ne jamais tester sa propre plaque.</strong> Un lien obsolète ou un support décollé ne produit aucune alerte : la vélocité tombe à zéro en silence, et l'on croit à une baisse de satisfaction.</li>
+<li><strong>Comparer sa vélocité à celle d'un autre secteur.</strong> Une boulangerie et un cabinet d'expertise comptable n'ont ni le même flux, ni les mêmes occasions de demander. Votre seule comparaison utile, ce sont les fiches qui apparaissent à côté de la vôtre dans le pack local.</li>
+</ul>
+</section>
+
+<section id="faq-velocite" class="scroll-mt-28 mb-16">
+<h2>FAQ — Vélocité et rythme des avis Google</h2>
+
+<h3>Qu'est-ce que la vélocité des avis Google ?</h3>
+<p>C'est le nombre d'avis nouvellement publiés sur votre fiche pendant une période donnée, généralement un mois. Elle se calcule en soustrayant le total d'avis du mois précédent à celui du mois en cours. Google ne l'affiche nulle part : c'est un relevé que vous tenez vous-même, dans un tableau à deux colonnes. Contrairement à la note et au total, qui sont des résultats accumulés, la vélocité mesure ce que votre dispositif produit maintenant — et c'est le seul de ces trois chiffres sur lequel vous pouvez agir directement ce mois-ci.</p>
+
+<h3>Le rythme de publication des avis influence-t-il le classement Google ?</h3>
+<p>Google ne le dit pas. Sa page officielle sur le classement local cite trois facteurs — pertinence, distance, proéminence — et range le nombre d'avis et les notes positives dans la proéminence, sans jamais mentionner la fréquence ni l'ancienneté. Prudence donc avec les affirmations sur un prétendu bonus de fraîcheur : elles ne s'appuient sur aucune documentation. Ce qui est certain, c'est que le volume compte et qu'un volume ne se construit qu'en additionnant des avis mois après mois. La régularité n'est pas un levier caché, c'est la seule manière connue de faire monter un total sans ressembler à une manipulation.</p>
+
+<h3>Combien d'avis Google faut-il obtenir par mois ?</h3>
+<p>Il n'existe pas de bon chiffre universel : tout dépend de votre flux de clients et du niveau des fiches concurrentes de votre ville. La méthode fiable est gratuite : ouvrez les trois fiches qui sortent dans le pack local pour votre requête principale et comptez combien d'avis elles ont reçus ces trois derniers mois, les dates étant publiques. Vous obtenez un objectif qui vous concerne vraiment. À titre d'ordre de grandeur, passer de deux à six avis mensuels représente 48 avis de plus sur un an, soit davantage que le total actuel de beaucoup de petites fiches.</p>
+
+<h3>Est-ce grave de recevoir beaucoup d'avis d'un coup ?</h3>
+<p>Un afflux qui s'explique par un événement réel — ouverture, opération portes ouvertes, forte affluence saisonnière, passage dans la presse locale — s'accompagne d'autres signaux cohérents et ne pose pas de problème en soi. Le pic à surveiller est celui qui arrive isolé, sans aucune activité correspondante. Google décrit l'engagement artificiel comme une infraction à son règlement et documente des mesures allant du retrait d'avis à l'impossibilité pour la fiche d'en recevoir de nouveaux pendant une période donnée, en passant par un avertissement affiché publiquement. La règle pratique : un pic doit avoir une cause que vous pourriez expliquer à un client sans gêne.</p>
+
+<h3>Pourquoi ma fiche ne reçoit-elle plus aucun avis ?</h3>
+<p>Cinq causes couvrent la quasi-totalité des cas, et aucune n'est une baisse de satisfaction. Le départ de la personne qui posait la question, un support décollé, déplacé ou masqué par un autre objet, un lien d'avis devenu obsolète après un changement de raison sociale ou une fusion de fiches, une saison creuse normale prise pour une panne, et la lassitude qui suit les premiers bons résultats. Testez votre propre plaque avec votre téléphone : cette vérification de trente secondes identifie les causes matérielles immédiatement.</p>
+
+<h3>Faut-il relancer les anciens clients pour rattraper son retard ?</h3>
+<p>C'est la fausse bonne idée classique. Une relance massive produit exactement la courbe que les systèmes de détection cherchent, et la sanction la plus fréquente n'est pas la suppression des avis obtenus mais le blocage des nouveaux avis — vous gelez donc votre fiche au moment où vous vouliez la relancer. Par ailleurs, un client dont la visite remonte à huit mois écrit un avis vague, peu utile pour les lecteurs suivants. Il est plus rentable de capter correctement les clients de la semaine en cours, chaque semaine, que de courir après ceux de l'an dernier.</p>
+
+<h3>Une plaque NFC aide-t-elle vraiment à maintenir un rythme régulier ?</h3>
+<p>Elle agit sur le point précis où la régularité se perd : la demande elle-même. Un support fixe placé là où la prestation se termine est présent à chaque client, sans dépendre de la mémoire de qui que ce soit, et il transforme l'intention en un geste de trois secondes pendant que le téléphone est déjà en main. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel, et la puce est garantie à vie. Elle ne fabrique pas de satisfaction — elle rend visible celle qui existe déjà, mois après mois.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : arrêtez de compter vos avis, comptez leur rythme</h2>
+<p>Le total d'avis affiché sur votre fiche est un chiffre du passé. Il raconte ce que votre établissement a accumulé, parfois sous une autre direction, parfois avant un changement d'équipe ou de carte. Il ne dit rien de ce qui se passe cette semaine — et c'est pourtant cela que votre prochain client cherche à savoir en faisant défiler les dates.</p>
+<p>La vélocité est le seul de vos indicateurs d'avis qui soit une décision et non un héritage. Vous ne pouvez pas décider d'avoir 250 avis ; vous pouvez décider qu'à partir de lundi, la phrase sera dite à chaque fin de prestation, devant un support présent au bon endroit, et qu'un chiffre sera relevé le 1er de chaque mois. Six avis par mois, tenus pendant deux ans, font 144 avis — <strong>sans campagne, sans risque, et sans jamais avoir à expliquer d'où ils viennent.</strong></p>
+<p>Guides complémentaires : <a href="/blog/statistiques-avis-google-2026">statistiques des avis Google 2026</a>, <a href="/blog/combien-avis-google-pack-local">combien d'avis pour le pack local</a>, <a href="/blog/taux-scan-plaque-nfc">mesurer son taux de scan</a>, <a href="/blog/obtenir-plus-avis-google">obtenir plus d'avis Google</a> ou <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à installer un rythme d'avis qui ne retombe pas ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT.</p>
+</div>
+</section>
+`,
+  },
   'ou-acheter-plaque-nfc-avis-google': {
     title: 'Où acheter une plaque NFC pour avis Google ? Le comparatif des 5 canaux',
     category: 'Comparatif',

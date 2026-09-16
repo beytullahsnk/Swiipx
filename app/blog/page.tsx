@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 44,
+    title: 'Vélocité des avis Google : pourquoi le rythme compte plus que le total',
+    excerpt: 'Deux fiches à 4,6 avec 212 avis peuvent raconter l\'inverse l\'une de l\'autre. La vélocité — le nombre de nouveaux avis par mois — est le seul de vos indicateurs qui soit une décision. Formule de calcul, tableau de projection, pics à risque et méthode de relevé.',
+    category: 'Statistiques',
+    date: '16 septembre 2026',
+    dateIso: '2026-09-16',
+    readTime: '15 min',
+    slug: 'velocite-avis-google',
+  },
+  {
     id: 43,
     title: 'Où acheter une plaque NFC pour avis Google ? Le comparatif des 5 canaux',
     excerpt: 'Marketplace, import direct, enseigniste local, plateforme à abonnement ou spécialiste : le canal d\'achat décide de plus de choses que le prix affiché. Les 5 canaux comparés, la checklist de 12 points, le coût réel sur 3 ans et les 7 erreurs d\'achat.',
