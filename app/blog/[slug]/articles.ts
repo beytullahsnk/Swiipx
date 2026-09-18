@@ -18,6 +18,207 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'attributs-fiche-google-business-profile': {
+    title: 'Attributs Google Business Profile : le réglage de fiche que personne ne remplit',
+    category: 'SEO Local',
+    date: '18 septembre 2026',
+    readTime: '14 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Les attributs ne sont pas de la décoration : Google indique qu\'ils peuvent faire apparaître votre fiche sur des recherches associées. Les critères exacts d\'accessibilité, le délai de validation jusqu\'à 30 jours, un tableau par secteur et les 7 erreurs.',
+    tocSections: [
+      { id: 'pourquoi-attributs', label: 'Ce que ça change vraiment' },
+      { id: 'familles-attributs', label: 'Les familles d\'attributs' },
+      { id: 'accessibilite-criteres', label: 'Accessibilité : les critères' },
+      { id: 'identite-recyclage', label: 'Identité et recyclage' },
+      { id: 'attributs-clients', label: 'Ceux que vous ne remplissez pas' },
+      { id: 'comment-regler', label: 'Où les régler, et en combien de temps' },
+      { id: 'tableau-secteurs', label: 'Quels attributs selon l\'activité' },
+      { id: 'attributs-et-avis', label: 'Attributs et avis' },
+      { id: 'erreurs', label: 'Les 7 erreurs' },
+      { id: 'faq-attributs', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-attributs" class="scroll-mt-28 mb-16">
+<h2>Les attributs : le réglage de fiche que presque personne ne remplit</h2>
+<p>Il existe dans Google Business Profile une zone de réglages que la plupart des professionnels ouvrent une fois, à la création de la fiche, puis jamais plus : les <strong>attributs</strong>. Ce sont ces petites cases à cocher qui déclarent que vous avez le Wi-Fi, une terrasse, un parking accessible en fauteuil roulant, que vous acceptez la carte bancaire ou que votre entreprise est détenue par une femme.</p>
+<p>Elles passent pour de la décoration. Elles ne le sont pas. L'aide officielle de Google est explicite sur ce point : <strong><a href="https://support.google.com/business/answer/9049526?hl=fr" target="_blank" rel="noopener noreferrer">si vous ajoutez certains attributs, votre établissement pourra s'afficher en réponse à des recherches pour les lieux associés à ces attributs</a></strong>. Autrement dit, un attribut n'est pas seulement une information affichée : c'est un critère de correspondance. Une fiche qui n'a pas coché « Entrée accessible en fauteuil roulant » ne peut pas remonter pour quelqu'un qui filtre sur ce critère dans Maps, même si l'entrée est parfaitement accessible dans la réalité.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Ce que ça coûte de ne pas cocher :</strong> un attribut non renseigné n'est pas neutre, il est absent. Google ne devine pas que votre restaurant a une terrasse parce que vos photos en montrent une. Prenez dix minutes pour parcourir la liste : c'est probablement le seul travail de SEO local de votre année qui ne demande ni contenu à écrire, ni budget, ni compétence technique.</p>
+</div>
+<p>Les attributs s'affichent sur votre fiche dans la recherche Google, dans Maps et sur d'autres surfaces Google. Ils sont lus par le client au moment exact où il compare deux ou trois établissements, c'est-à-dire au moment où votre <a href="/blog/optimiser-fiche-google-business-profile">fiche Google Business Profile</a> travaille vraiment pour vous. Et contrairement aux avis, qui dépendent de vos clients, les attributs dépendent entièrement de vous : ils se règlent en une session, et ils restent.</p>
+</section>
+
+<section id="familles-attributs" class="scroll-mt-28 mb-16">
+<h2>Les familles d'attributs documentées par Google</h2>
+<p>Première chose à comprendre : <strong>vous ne verrez pas la même liste que votre voisin</strong>. Google le précise noir sur blanc — certains attributs ne peuvent être modifiés que pour certains emplacements, certains pays ou certaines catégories d'activité, et le nom des attributs peut changer au fil du temps pour mieux correspondre à la façon dont les utilisateurs recherchent des établissements.</p>
+<p>La conséquence pratique est importante : <strong>votre catégorie principale décide de vos attributs disponibles</strong>. Un salon de coiffure déclaré en « salon de beauté » n'aura pas exactement les mêmes cases qu'un salon déclaré en « salon de coiffure ». Si votre liste d'attributs vous paraît maigre, la première chose à vérifier n'est pas la liste : c'est la catégorie.</p>
+<h3>Les grands blocs que vous rencontrerez</h3>
+<ul>
+<li><strong>Accessibilité</strong> : entrée, toilettes, places assises, parking et ascenseur accessibles en fauteuil roulant, équipement pour les malentendants, boucle magnétique, diffusion audio Auracast. C'est le bloc le plus précisément documenté par Google, et le plus mal rempli.</li>
+<li><strong>Services</strong> : ce que vous proposez sur place — Wi-Fi, terrasse, livraison, vente à emporter, service au comptoir, réservation. Le contenu varie énormément selon l'activité.</li>
+<li><strong>Paiements</strong> : cartes acceptées, paiement sans contact NFC, chèques, « argent liquide seulement ». Un point trivial que les clients vérifient plus souvent qu'on ne le croit.</li>
+<li><strong>Recyclage</strong> : batteries, vêtements, appareils électroniques, bouteilles en verre, déchets domestiques dangereux, cartouches d'encre, ampoules, boîtes de conserve, sacs en plastique, bouteilles en plastique, polystyrène. Google précise qu'ajouter un attribut de recyclage fait apparaître une icône dédiée dans les résultats de recherche.</li>
+<li><strong>Identité de l'entreprise</strong> : un bloc à part, que nous détaillons plus bas, parce qu'il n'engage pas la même chose que les autres.</li>
+<li><strong>Clientèle, planification, commodités</strong> : des blocs qui apparaissent ou non selon la catégorie, et dont l'intitulé bouge d'une année sur l'autre.</li>
+</ul>
+<p>Ne cherchez pas la liste exhaustive : elle n'existe pas sous forme publique stable, précisément parce qu'elle dépend de votre catégorie et de votre pays. La bonne méthode consiste à ouvrir l'écran de modification et à parcourir ce que Google vous propose à vous.</p>
+</section>
+
+<section id="accessibilite-criteres" class="scroll-mt-28 mb-16">
+<h2>Accessibilité : les critères exacts, et pourquoi il ne faut pas cocher au hasard</h2>
+<p>Le bloc accessibilité mérite un traitement séparé pour deux raisons. D'abord parce qu'il fait l'objet de filtres actifs dans Google Maps, donc d'un vrai gain de visibilité auprès d'un public qui cherche précisément cette information. Ensuite parce que Google a publié des <strong>critères chiffrés</strong> que presque personne ne lit avant de cocher.</p>
+<h3>Ce que Google demande réellement</h3>
+<ul>
+<li><strong>Entrée accessible en fauteuil roulant</strong> : l'entrée doit mesurer <strong>un mètre de large</strong> et ne comporter aucune marche. S'il y a une ou plusieurs marches, une rampe permanente doit être installée ; si ce n'est pas possible, un système amovible doit au moins être prévu. Google précise qu'une entrée qui ne comporte que des portes tambours doit être déclarée comme non accessible.</li>
+<li><strong>Toilettes accessibles en fauteuil roulant</strong> : l'entrée des toilettes doit faire au moins un mètre de large et ne comporter aucune marche. Si l'accès à une cabine est concerné, l'entrée de la cabine elle-même doit mesurer un mètre.</li>
+<li><strong>Places assises accessibles en fauteuil roulant</strong> : aucune marche pour accéder à la zone principale, et assez d'espace pour circuler et s'asseoir à une table. Google indique explicitement que des tables hautes, à hauteur de personne debout, doivent être déclarées comme non accessibles.</li>
+<li><strong>Parking accessible en fauteuil roulant</strong> : une place réservée aux personnes à mobilité réduite, généralement marquée au sol ou signalée par un panneau selon le pays.</li>
+<li><strong>Ascenseur accessible en fauteuil roulant</strong> : plusieurs étages desservis par un ascenseur assez grand pour accueillir un fauteuil.</li>
+<li><strong>Équipé pour les malentendants</strong> : à cocher si vous proposez des appareils auditifs que les clients peuvent emprunter sur place.</li>
+<li><strong>Boucle magnétique</strong> et <strong>diffusion audio Auracast</strong> : réservés aux installations permanentes. Google note que les clients s'attendent à ce que leurs propres appareils compatibles Auracast fonctionnent chez vous, et que répondre « Non » à Auracast fait simplement disparaître l'attribut de la fiche.</li>
+</ul>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Le piège du « oui » de complaisance :</strong> cocher « entrée accessible » sur un local qui a deux marches ne vous rapporte pas un client de plus, il vous en fait perdre un, définitivement, et souvent avec un avis à une étoile à la clé. L'accessibilité est le seul bloc d'attributs où l'erreur se paie immédiatement et publiquement : la personne se déplace, constate, et repart. Mesurez votre porte avant de cocher.</p>
+</div>
+<p>Inversement, beaucoup d'établissements <strong>sous-déclarent</strong> leur accessibilité. Un commerce de plain-pied avec une porte large et un parking public disposant de places réservées à vingt mètres coche souvent zéro case, par simple méconnaissance. C'est une visibilité offerte à la concurrence sans contrepartie.</p>
+</section>
+
+<section id="identite-recyclage" class="scroll-mt-28 mb-16">
+<h2>Identité de l'entreprise et recyclage : deux blocs à manier autrement</h2>
+<h3>Les attributs d'identité</h3>
+<p>Google propose une série d'attributs qui décrivent qui détient l'entreprise : propriétaire asiatique, propriétaire d'entreprise noir, propriétaire latino-américain, détenu par une personne LGBTQ+, détenu par une personne handicapée, appartenant à des Autochtones, détenu par un vétéran, détenu par une femme, et petite entreprise.</p>
+<p>Trois points à connaître avant d'y toucher :</p>
+<ul>
+<li><strong>Vous pouvez en choisir plusieurs</strong>, et les activer ou les désactiver à tout moment.</li>
+<li><strong>C'est une déclaration publique.</strong> Google le formule ainsi : en ajoutant cet attribut, vous informez tous les utilisateurs que votre établissement est détenu par une personne ayant cette identité. Ce n'est pas un champ administratif, c'est une information affichée à chaque visiteur de la fiche.</li>
+<li><strong>« Petite entreprise » a une définition chiffrée</strong> : un chiffre d'affaires annuel inférieur à 10 millions de dollars, et les franchises en sont explicitement exclues. Google précise que cet attribut peut être défini automatiquement sur votre fiche en fonction des informations dont il dispose.</li>
+</ul>
+<p>Faut-il les cocher ? C'est une décision de positionnement, pas une décision SEO. Certains publics recherchent activement ces établissements, d'autres n'y prêteront aucune attention. Le seul mauvais choix serait de cocher une identité qui ne correspond pas à la réalité de la détention de l'entreprise.</p>
+<h3>Les attributs de recyclage</h3>
+<p>Souvent ignorés hors du commerce de détail, ils méritent un coup d'œil : Google indique qu'ajouter un attribut de recyclage fait afficher votre établissement <strong>avec une icône de recyclage dans les résultats de recherche</strong>, ce qui est l'un des rares signaux visuels qu'un professionnel peut activer lui-même sur sa ligne de résultat.</p>
+<p>Un opticien qui reprend les anciennes montures, une pharmacie qui collecte les médicaments, un bureau de tabac qui récupère les cartouches d'encre, un garage qui reprend les batteries : tous ont un attribut disponible qu'ils n'ont pas coché. Et pour les réseaux, Google indique qu'à partir de dix établissements, les attributs peuvent être importés de manière groupée, ou modifiés via les API Fiche d'établissement pour les fiches gérées par une agence.</p>
+</section>
+
+<section id="attributs-clients" class="scroll-mt-28 mb-16">
+<h2>Les attributs que vous ne remplissez pas (et que vous ne pouvez pas retirer)</h2>
+<p>C'est la partie que la plupart des guides omettent, et c'est la plus importante. L'aide de Google précise que <strong>vous pouvez modifier directement certains attributs concernant votre établissement, mais que d'autres peuvent être renseignés en fonction des informations saisies par les clients qui s'y rendent</strong>.</p>
+<p>Traduction concrète : une partie de ce qui s'affiche sur votre fiche ne vient pas de votre tableau de bord. Elle vient de ce que les visiteurs ont indiqué, répondu ou décrit. Vous ne verrez pas ces cases dans votre interface de modification, et vous ne pouvez pas les décocher.</p>
+<h3>Trois conséquences pratiques</h3>
+<ul>
+<li><strong>Votre fiche peut affirmer quelque chose que vous n'avez jamais déclaré.</strong> Si l'information est fausse, la seule voie de correction consiste à renseigner explicitement l'attribut opposé quand il est disponible, et à faire en sorte que la réalité observée sur place devienne cohérente.</li>
+<li><strong>Le volume de clients qui s'expriment compte.</strong> Une fiche que personne ne documente reste vide ou se remplit à partir d'un très petit nombre d'observations, parfois anciennes. Une fiche très fréquentée et très commentée se corrige d'elle-même avec le temps.</li>
+<li><strong>Vos avis nourrissent ce que Google comprend de votre établissement.</strong> Google produit aussi des <a href="https://support.google.com/business/answer/6088158?hl=fr" target="_blank" rel="noopener noreferrer">résumés sur les établissements dans Maps</a> et des mises à jour automatiques à partir de sources variées. Plus votre fiche est alimentée en avis récents et détaillés, moins elle dépend d'une poignée de contributions isolées.</li>
+</ul>
+<p>C'est le premier point de jonction entre deux chantiers qu'on croit séparés : <strong>remplir ses attributs relève du paramétrage, mais la fiabilité de ce que Google affiche sur vous dépend de votre flux d'avis</strong>. Nous y revenons plus bas.</p>
+</section>
+
+<section id="comment-regler" class="scroll-mt-28 mb-16">
+<h2>Où les régler, et en combien de temps ils apparaissent</h2>
+<p>La manipulation est courte. Depuis votre fiche d'établissement : <strong>Modifier la fiche</strong>, puis <strong>Plus</strong>. À côté de la catégorie d'attribut concernée — « Services », « Paiements », etc. — sélectionnez <strong>Modifier</strong>. À côté de chaque attribut, répondez <strong>Oui</strong> ou <strong>Non</strong>, puis enregistrez.</p>
+<h3>Le délai qu'il faut connaître</h3>
+<p>Google indique que <strong>l'examen des modifications dure habituellement une dizaine de minutes, mais peut parfois prendre jusqu'à 30 jours</strong>. Cette fourchette explique la moitié des messages paniqués qu'on lit dans les forums : un professionnel coche ses attributs, ne voit rien changer le lendemain, recommence, recoche, modifie autre chose en même temps, et finit par croire que sa fiche est bloquée.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>✅ La bonne méthode :</strong> faites toutes vos modifications d'attributs en une seule session, notez la date, et ne retouchez plus rien pendant au moins deux semaines. Si vous devez aussi corriger vos horaires, votre description ou votre catégorie, faites-le à un autre moment : empiler les modifications rend impossible de savoir laquelle a été retenue et laquelle a été rejetée.</p>
+</div>
+<h3>Ce qu'il faut faire juste avant</h3>
+<ul>
+<li><strong>Vérifiez votre catégorie principale.</strong> Elle conditionne la liste d'attributs disponibles. Une catégorie approximative vous prive silencieusement de la moitié des cases.</li>
+<li><strong>Renseignez vos services.</strong> Les services sont un champ distinct des attributs, souvent confondu avec eux, et Google leur consacre une page dédiée. Les deux se complètent : l'attribut dit ce que vous avez, le service dit ce que vous faites.</li>
+<li><strong>Regardez votre fiche comme un client.</strong> Ouvrez-la en navigation privée, sur mobile, et comparez ce qui s'affiche avec ce que vous avez coché. C'est la seule vérification qui compte, et c'est la même logique que pour les <a href="/blog/questions-reponses-google-business-profile">questions et réponses de votre fiche</a> : ce que vous voyez dans votre tableau de bord n'est pas ce que voit le public.</li>
+</ul>
+</section>
+
+<section id="tableau-secteurs" class="scroll-mt-28 mb-16">
+<h2>Quels attributs prioriser selon votre activité</h2>
+<p>Tous les attributs ne se valent pas pour tous les métiers. Le tableau ci-dessous est un ordre de priorité, pas une liste exhaustive : la disponibilité réelle dépend de votre catégorie et de votre pays. Il sert à savoir <strong>par quoi commencer</strong> quand on ouvre l'écran pour la première fois.</p>
+<table>
+<thead>
+<tr><th>Activité</th><th>Attributs à cocher en priorité</th><th>Bloc souvent oublié</th><th>Impact attendu</th></tr>
+</thead>
+<tbody>
+<tr><td>Restaurant, bistrot</td><td>Terrasse, vente à emporter, réservation, Wi-Fi, paiement sans contact</td><td>Places assises accessibles en fauteuil roulant</td><td>Fort — filtres Maps très utilisés</td></tr>
+<tr><td>Salon de coiffure, institut</td><td>Rendez-vous en ligne, paiement sans contact, parking</td><td>Entrée accessible, toilettes accessibles</td><td>Moyen à fort</td></tr>
+<tr><td>Cabinet médical, dentaire</td><td>Entrée et toilettes accessibles, ascenseur, parking PMR</td><td>Équipé pour les malentendants, boucle magnétique</td><td>Fort — critère décisif pour une partie des patients</td></tr>
+<tr><td>Garage, carrosserie</td><td>Paiements acceptés, rendez-vous, prêt de véhicule si proposé</td><td>Recyclage batteries et huiles</td><td>Moyen — l'icône recyclage se voit en résultat</td></tr>
+<tr><td>Commerce de détail</td><td>Retrait en magasin, livraison, paiement sans contact</td><td>Recyclage (piles, ampoules, cartouches, sacs)</td><td>Fort — icône dédiée en résultat de recherche</td></tr>
+<tr><td>Hôtel, chambres d'hôtes</td><td>Wi-Fi, parking, accessibilité complète</td><td>Identité de l'entreprise, petite entreprise</td><td>Moyen</td></tr>
+<tr><td>Artisan en zone de service</td><td>Devis gratuit si proposé, moyens de paiement</td><td>Liste courte : la catégorie limite les attributs</td><td>Faible — miser sur avis et services</td></tr>
+</tbody>
+</table>
+<p>Deux lectures ressortent de ce tableau. D'une part, <strong>les établissements qui reçoivent du public ont beaucoup plus à gagner que ceux qui se déplacent</strong> : un plombier en zone de service verra une liste d'attributs très réduite, et devra concentrer ses efforts ailleurs — sur la catégorie, les services, et surtout les avis. D'autre part, le bloc le plus systématiquement négligé n'est pas le même que le bloc le plus utile : l'accessibilité et le recyclage arrivent presque toujours en tête des oublis, alors que ce sont les deux seuls qui déclenchent respectivement un filtre Maps et une icône en résultat de recherche.</p>
+<p>Si votre objectif est d'entrer dans le pack local, gardez la hiérarchie en tête : les attributs affinent la correspondance, mais c'est le volume d'avis qui pèse dans la <a href="/blog/combien-avis-google-pack-local">course au pack local</a>.</p>
+</section>
+
+<section id="attributs-et-avis" class="scroll-mt-28 mb-16">
+<h2>Attributs et avis : un paramétrage, un flux</h2>
+<p>Il faut être honnête sur la place des attributs dans le classement local. <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">La page officielle de Google sur le classement local</a> cite trois facteurs : pertinence, distance, proéminence. Les attributs relèvent de la <strong>pertinence</strong> — ils aident Google à faire correspondre votre fiche à une requête précise. Les avis, eux, relèvent de la <strong>proéminence</strong> : Google y range explicitement le nombre d'avis et les notes positives.</p>
+<p>Ce sont donc deux leviers de nature différente, et il est utile de les opposer une bonne fois :</p>
+<ul>
+<li><strong>Les attributs sont un travail ponctuel.</strong> Trente minutes une fois, une relecture par trimestre. Ils ne s'usent pas, ne se périment pas, ne demandent rien à vos clients. Mais ils plafonnent vite : une fois tout coché, il n'y a plus rien à en tirer.</li>
+<li><strong>Les avis sont un flux.</strong> Ils ne se règlent pas, ils se collectent, chaque semaine, et ils recommencent à zéro dès qu'on arrête. Mais ils n'ont pas de plafond, et ils sont le seul des trois facteurs de classement sur lequel vous agissez tous les jours. C'est précisément le sujet de notre article sur la <a href="/blog/velocite-avis-google">vélocité des avis Google</a>.</li>
+</ul>
+<p>L'erreur courante consiste à passer un après-midi entier sur les attributs, à se sentir quitte du SEO local, et à ne toucher à rien pendant deux ans pendant que la fiche voisine accumule quatre-vingts avis. Les attributs vous rendent trouvable sur un critère précis ; les avis décident lequel des trois établissements trouvables sera appelé.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Hypothèse de calcul :</strong> supposons qu'une session d'attributs bien faite vous fasse apparaître sur un filtre Maps que vous ne captiez pas, et qu'elle vous amène deux visites par mois. C'est un gain réel, gratuit, et définitif. Maintenant supposons qu'un dispositif de collecte vous fasse passer de 2 à 6 avis mensuels : c'est 48 avis de plus sur un an, soit davantage que le total actuel de beaucoup de petites fiches. Remplacez ces chiffres par les vôtres : les deux chantiers ne jouent pas dans la même catégorie de durée, et aucun ne remplace l'autre.</p>
+</div>
+<p>La bonne séquence est simple : <strong>réglez les attributs en premier, parce que c'est fini en une session</strong>, puis installez le flux d'avis, parce que c'est ce qui occupera les douze prochains mois. Un support physique posé là où la prestation se termine — une plaque NFC à l'accueil ou en caisse — sert exactement à ça : rendre la demande d'avis systématique sans qu'elle repose sur la mémoire de qui que ce soit. Notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a> détaille les emplacements qui produisent réellement des scans.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs qui rendent ce travail inutile</h2>
+<ul>
+<li><strong>Cocher un attribut d'accessibilité qui ne correspond pas à la réalité.</strong> C'est la seule erreur de cette liste qui vous coûte un client sur place, et souvent un avis négatif. Mesurez la porte, regardez s'il y a une marche, et répondez honnêtement.</li>
+<li><strong>Ne pas vérifier sa catégorie principale avant.</strong> La catégorie détermine les attributs proposés. Un salon déclaré dans une catégorie approximative ne verra jamais la moitié des cases qui le concernent.</li>
+<li><strong>Empiler les modifications le même jour.</strong> Horaires, description, catégorie et attributs modifiés en une fois : quand une partie n'apparaît pas, impossible de savoir laquelle a été rejetée. Une session, un type de modification.</li>
+<li><strong>Croire que la fiche est bloquée au bout de 48 heures.</strong> Google annonce une dizaine de minutes en général, mais jusqu'à 30 jours dans certains cas. Attendez avant de tout recommencer.</li>
+<li><strong>Ignorer le bloc recyclage.</strong> C'est l'un des rares attributs qui déclenche une icône visible dans les résultats de recherche, et il est disponible bien au-delà des déchetteries : commerces, garages, opticiens, bureaux de tabac.</li>
+<li><strong>Confondre attributs et services.</strong> Les services sont un champ distinct, avec sa propre interface. Remplir l'un ne remplit pas l'autre, et les deux comptent pour la pertinence.</li>
+<li><strong>Considérer les attributs comme un substitut aux avis.</strong> La pertinence vous rend éligible à une requête ; la proéminence décide de votre position. Une fiche parfaitement paramétrée avec onze avis reste derrière une fiche moyennement paramétrée avec cent quarante.</li>
+</ul>
+<p>Une routine suffit à tenir tout cela : une fois par trimestre, ouvrez la fiche en navigation privée sur mobile, comparez ce qui s'affiche avec ce que vous avez coché, et vérifiez qu'aucun attribut renseigné par les visiteurs ne contredit la réalité. C'est le même réflexe que la relecture de vos <a href="/blog/photos-google-business-profile">photos de fiche Google</a> : ce qui a été juste un jour ne le reste pas indéfiniment.</p>
+</section>
+
+<section id="faq-attributs" class="scroll-mt-28 mb-16">
+<h2>FAQ — Les attributs de fiche Google Business Profile</h2>
+
+<h3>À quoi servent les attributs d'une fiche Google Business Profile ?</h3>
+<p>Ils décrivent ce que propose votre établissement — Wi-Fi, terrasse, accessibilité en fauteuil roulant, moyens de paiement — et s'affichent sur votre fiche dans la recherche Google, dans Maps et sur d'autres surfaces Google. Leur rôle ne s'arrête pas à l'affichage : Google indique dans son aide officielle que l'ajout de certains attributs permet à votre établissement de s'afficher en réponse à des recherches pour les lieux associés à ces attributs. Un attribut non coché revient donc à être absent d'un filtre, même si la caractéristique existe réellement chez vous.</p>
+
+<h3>Comment ajouter ou modifier des attributs sur sa fiche ?</h3>
+<p>Depuis votre fiche d'établissement, sélectionnez Modifier la fiche, puis Plus. À côté de la catégorie d'attribut concernée — Services, Paiements, Accessibilité — sélectionnez Modifier, répondez Oui ou Non à côté de chaque attribut, puis enregistrez. Comptez une trentaine de minutes pour une première passe complète, et faites-la en une seule session plutôt qu'en plusieurs retouches successives.</p>
+
+<h3>Combien de temps faut-il pour qu'un attribut apparaisse ?</h3>
+<p>Google indique que l'examen des modifications dure habituellement une dizaine de minutes, mais qu'il peut parfois prendre jusqu'à 30 jours. Cette fourchette très large est la principale source de confusion : beaucoup de professionnels recommencent leurs modifications au bout de deux jours, ce qui brouille le suivi sans accélérer quoi que ce soit. Notez la date de votre session et ne retouchez rien pendant au moins deux semaines.</p>
+
+<h3>Pourquoi je ne vois pas certains attributs dans mon interface ?</h3>
+<p>Parce que la liste dépend de votre catégorie d'activité, de votre pays et parfois de votre emplacement précis. Google précise également que le nom des attributs peut changer au fil du temps pour mieux correspondre à la façon dont les utilisateurs recherchent des établissements. Si votre liste vous semble anormalement courte, vérifiez d'abord votre catégorie principale : c'est elle qui ouvre ou ferme l'accès aux blocs d'attributs.</p>
+
+<h3>Certains attributs apparaissent sans que je les aie cochés : est-ce normal ?</h3>
+<p>Oui. L'aide de Google précise que vous pouvez modifier directement certains attributs, mais que d'autres peuvent être renseignés en fonction des informations saisies par les clients qui s'y rendent. Vous ne les verrez pas dans votre écran de modification et vous ne pouvez pas les retirer directement. Si une information est fausse, renseignez explicitement l'attribut opposé lorsqu'il est disponible, et assurez-vous que ce que constatent les visiteurs sur place devienne cohérent avec ce que vous déclarez.</p>
+
+<h3>Les attributs améliorent-ils le classement dans le pack local ?</h3>
+<p>Ils agissent sur la pertinence, l'un des trois facteurs cités par Google dans sa page officielle sur le classement local avec la distance et la proéminence. Concrètement, ils aident Google à faire correspondre votre fiche à une requête ou à un filtre précis. Mais ils ne remplacent pas la proéminence, dans laquelle Google range le nombre d'avis et les notes positives. Une fiche parfaitement paramétrée avec onze avis reste derrière une fiche moins soignée qui en compte cent quarante : les attributs vous rendent éligible, les avis décident du classement.</p>
+
+<h3>Par quoi commencer quand on n'a jamais touché à ses attributs ?</h3>
+<p>Dans cet ordre : vérifiez votre catégorie principale, parcourez le bloc accessibilité en mesurant réellement ce qu'il faut mesurer, cochez les moyens de paiement, regardez si un attribut de recyclage vous concerne, puis renseignez vos services qui sont un champ distinct. Ensuite, passez au seul chantier qui ne se termine jamais : la collecte d'avis. La plaque NFC Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google — aucune application à installer, aucun code d'activation, aucun frais mensuel, et la puce est garantie à vie. Elle rend la demande d'avis systématique là où le paramétrage de fiche, lui, s'arrête une fois terminé.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : trente minutes de paramétrage, puis douze mois de collecte</h2>
+<p>Les attributs sont le rare chantier de SEO local qui se termine. Pas de contenu à produire, pas de budget, pas de compétence technique : vous ouvrez un écran, vous répondez à des questions sur votre propre établissement, vous enregistrez, et le travail est fait pour l'année. Peu de leviers offrent ce rapport entre l'effort et le résultat, et c'est précisément pour ça qu'il est absurde de le laisser vide.</p>
+<p>Mais il faut savoir ce qu'on en attend. Les attributs affinent la correspondance entre votre fiche et une requête précise : ils vous rendent <strong>trouvable</strong>. Ils ne décident pas lequel des trois établissements trouvables sera appelé — ça, ce sont vos avis qui le font, et ils se construisent une semaine après l'autre.</p>
+<p>La séquence à retenir tient en une phrase : <strong>réglez ce qui se règle, puis installez ce qui se cultive</strong>. Une session sur les attributs, puis un support physique posé là où la prestation se termine, pour que la demande d'avis ne dépende plus de la mémoire de personne.</p>
+<p>Guides complémentaires : <a href="/blog/optimiser-fiche-google-business-profile">optimiser sa fiche Google</a>, <a href="/blog/google-posts-fiche-google-business-profile">publier des Google Posts</a>, <a href="/blog/seo-local-recherches-google">comprendre le SEO local</a>, ou notre article sur la <a href="/blog/velocite-avis-google">vélocité des avis</a>.</p>
+<p>Côté équipement, trois formats selon le nombre d'emplacements à couvrir : le <a href="/product/starter">Pack Starter</a> pour un point de contact unique, le <a href="/product/business">Pack Business</a> pour couvrir accueil et comptoir, et le <a href="/product/pro">Pack Pro</a> pour les établissements à plusieurs postes ou les réseaux multi-sites.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Votre fiche est bien paramétrée : reste à la remplir d'avis</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. À partir de 29,90 € HT.</p>
+</div>
+</section>
+`,
+  },
   'velocite-avis-google': {
     title: 'Vélocité des avis Google : pourquoi le rythme compte plus que le total',
     category: 'Statistiques',

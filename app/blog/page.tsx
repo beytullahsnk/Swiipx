@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 45,
+    title: 'Attributs Google Business Profile : le réglage de fiche que personne ne remplit',
+    excerpt: 'Les attributs ne sont pas de la décoration : Google indique qu\'ils peuvent faire apparaître votre fiche sur des recherches associées. Les critères exacts d\'accessibilité, le délai de validation jusqu\'à 30 jours, un tableau par secteur et les 7 erreurs.',
+    category: 'SEO Local',
+    date: '18 septembre 2026',
+    dateIso: '2026-09-18',
+    readTime: '14 min',
+    slug: 'attributs-fiche-google-business-profile',
+  },
+  {
     id: 44,
     title: 'Vélocité des avis Google : pourquoi le rythme compte plus que le total',
     excerpt: 'Deux fiches à 4,6 avec 212 avis peuvent raconter l\'inverse l\'une de l\'autre. La vélocité — le nombre de nouveaux avis par mois — est le seul de vos indicateurs qui soit une décision. Formule de calcul, tableau de projection, pics à risque et méthode de relevé.',
