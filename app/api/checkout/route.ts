@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { PACKS } from '@/lib/pricing'
+import { MARQUEUR_SWIIPX } from '@/lib/stripe-swiipx'
 
 // Initialize Stripe with secret key from environment
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -66,7 +67,9 @@ export async function POST(request: NextRequest) {
     // Build metadata: priorité businessInfo du premier item, fallback sur company global
     const firstItem = items[0]
     const biz = firstItem.businessInfo || company || null
-    const metadata: Record<string, string> = {}
+    // Marqueur Swiipx : le compte Stripe est partagé avec SkyFood et le
+    // webhook ne traite que les paiements qui le portent.
+    const metadata: Record<string, string> = { ...MARQUEUR_SWIIPX }
 
     if (biz) {
       metadata.business_name = biz.name || ''

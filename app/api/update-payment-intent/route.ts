@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { PACKS, type PackId, OPTION_REMPLACEMENT, SHIPPING_DOMICILE_CENTS } from '@/lib/pricing'
+import { MARQUEUR_SWIIPX } from '@/lib/stripe-swiipx'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2023-10-16',
@@ -47,6 +48,10 @@ export async function POST(request: NextRequest) {
 
     // Construire les metadata
     const metadata: Record<string, string> = {
+      // Cette mise à jour REMPLACE les métadonnées du PaymentIntent : le
+      // marqueur doit donc être reposé ici, sinon le webhook ne reconnaît plus
+      // la commande comme une commande Swiipx (lib/stripe-swiipx.ts).
+      ...MARQUEUR_SWIIPX,
       shipping_method: shippingMethod || 'point_relais',
       items: JSON.stringify((items || []).map((i: any) => ({ id: i.id, qty: i.qty }))),
       // Le marchand doit savoir si l'option a ete souscrite pour honorer le

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { Resend } from 'resend'
 import { PACKS, type PackId } from '@/lib/pricing'
+import { clesMetadonnees, estPaiementSwiipx } from '@/lib/stripe-swiipx'
 import {
   buildMerchantAlertHtml,
   buildMerchantAlertSubject,
@@ -281,6 +282,14 @@ export async function POST(request: NextRequest) {
 
     console.log('[Webhook] payment_intent.succeeded | PI:', paymentIntent.id, '| Amount:', paymentIntent.amount, '| Metadata keys:', Object.keys(metadata).join(','))
 
+    // Ce compte Stripe encaisse aussi pour SkyFood. Sans ce filtre, un
+    // abonnement SkyFood valait a son acheteur un « Commande confirmee —
+    // Swiipx » annoncant l'expedition d'une plaque (constate le 2026-09-19).
+    if (!estPaiementSwiipx(metadata)) {
+      console.log('[Webhook] Paiement hors Swiipx, ignore | PI:', paymentIntent.id, '| Metadata keys:', clesMetadonnees(metadata))
+      return NextResponse.json({ received: true, ignored: 'hors-swiipx' })
+    }
+
     try {
       const customerEmail = metadata.customer_email || paymentIntent.receipt_email
       const customerName = metadata.customer_name || 'Client'
@@ -420,6 +429,14 @@ export async function POST(request: NextRequest) {
   // ─── Handler legacy pour Stripe Checkout (rétrocompatibilité) ───────────
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object as Stripe.Checkout.Session
+
+    // Meme compte Stripe pour SkyFood : on ne traite qu'une commande de
+    // plaques, jamais un abonnement (mode « subscription »), jamais un
+    // paiement marque par l'autre activite. Voir lib/stripe-swiipx.ts.
+    if (session.mode !== 'payment' || !estPaiementSwiipx(session.metadata)) {
+      console.log('[Webhook] Session hors Swiipx, ignoree | Session:', session.id, '| Mode:', session.mode, '| Metadata keys:', clesMetadonnees(session.metadata))
+      return NextResponse.json({ received: true, ignored: 'hors-swiipx' })
+    }
 
     try {
       const customerEmail = session.customer_details?.email
