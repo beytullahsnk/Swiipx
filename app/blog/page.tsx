@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 46,
+    title: 'Plaque NFC pharmacie : collecter des avis Google sans sortir du cadre',
+    excerpt: 'Le code de déontologie des pharmaciens a été refondu en mars 2026 : communication élargie, mais interdiction de faire appel à des témoignages de tiers. Ce que cela change pour les avis Google d\'une officine, 6 emplacements classés, 3 scripts et les 7 erreurs.',
+    category: 'Secteur',
+    date: '21 septembre 2026',
+    dateIso: '2026-09-21',
+    readTime: '15 min',
+    slug: 'plaque-nfc-pharmacie',
+  },
+  {
     id: 45,
     title: 'Attributs Google Business Profile : le réglage de fiche que personne ne remplit',
     excerpt: 'Les attributs ne sont pas de la décoration : Google indique qu\'ils peuvent faire apparaître votre fiche sur des recherches associées. Les critères exacts d\'accessibilité, le délai de validation jusqu\'à 30 jours, un tableau par secteur et les 7 erreurs.',

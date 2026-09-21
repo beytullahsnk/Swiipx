@@ -18,6 +18,240 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-pharmacie': {
+    title: 'Plaque NFC pharmacie : collecter des avis Google sans sortir du cadre',
+    category: 'Secteur',
+    date: '21 septembre 2026',
+    readTime: '15 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Le code de déontologie des pharmaciens a été refondu en mars 2026 : communication élargie, mais interdiction de faire appel à des témoignages de tiers. Ce que cela change pour les avis Google d\'une officine, 6 emplacements classés, 3 scripts et les 7 erreurs.',
+    tocSections: [
+      { id: 'pourquoi-avis-pharmacie', label: 'Pourquoi les avis comptent' },
+      { id: 'cadre-deontologique', label: 'Le code de déontologie 2026' },
+      { id: 'plaque-et-deontologie', label: 'Ce que la plaque peut faire' },
+      { id: 'fiche-gbp-pharmacie', label: '5 réglages de fiche' },
+      { id: 'ou-poser-plaque', label: '6 emplacements classés' },
+      { id: 'moments-scripts', label: 'Quand demander, quoi dire' },
+      { id: 'cas-pratiques', label: '3 hypothèses de calcul' },
+      { id: 'repondre-avis', label: 'Répondre et secret pro' },
+      { id: 'erreurs', label: 'Les 7 erreurs' },
+      { id: 'faq-pharmacie', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-avis-pharmacie" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google comptent pour une officine</h2>
+<p>Une pharmacie n'a pas le profil d'un commerce qui se bat pour exister sur Google. Le maillage est encadré, la patientèle est un flux de proximité, et personne ne compare trois officines avant d'aller chercher une boîte d'amoxicilline. Le sujet des avis semble donc secondaire.</p>
+<p>Il l'est de moins en moins, pour trois raisons. La garde d'abord : quand une personne cherche « pharmacie de garde » un dimanche à 21 h, elle ne connaît pas les officines du secteur, elle ouvre Maps et prend la première fiche crédible. La diversification ensuite : vaccination, tests, entretiens pharmaceutiques, orthopédie, maintien à domicile, dermo-cosmétique — sur ces prestations, la patientèle choisit et se déplace. Le déménagement enfin : chaque nouvel arrivant choisit « sa » pharmacie une seule fois, dans les premières semaines, et ce choix se joue souvent sur une fiche Google.</p>
+<p>La consultation d'avis avant un déplacement est un réflexe installé : <strong><a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">83 % des Français déclarent consulter les avis avant de se rendre dans un point de vente</a></strong> (étude PRESENCE 2026, 1 350 Français représentatifs). L'étude porte sur les points de vente en général : elle ne dit rien du poids exact des avis dans le choix d'une officine. Mais elle décrit un geste devenu ordinaire, et rien n'indique que la personne qui cherche où se faire vacciner un samedi matin s'en dispense.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Ce qu'une fiche raconte vraiment :</strong> beaucoup d'officines affichent 3,4 ou 3,6 étoiles avec une quinzaine d'avis. Ce chiffre ne mesure pas la qualité du conseil pharmaceutique. Il mesure autre chose : seules les personnes suffisamment agacées pour écrire — rupture de stock, attente, ordonnance non honorée — ont pris la peine de le faire. Les centaines de patients conseillés correctement chaque semaine n'ont laissé aucune trace. Une note basse, en officine, est presque toujours un problème de collecte, pas un problème de service.</p>
+</div>
+</section>
+
+<section id="cadre-deontologique" class="scroll-mt-28 mb-16">
+<h2>Le nouveau code de déontologie des pharmaciens : ce qui a changé en mars 2026</h2>
+<p>Avant de parler d'emplacement et de méthode, il faut poser le cadre, parce qu'il vient de bouger. Le <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053618939" target="_blank" rel="noopener noreferrer">décret n° 2026-156 du 3 mars 2026 modifiant le code de déontologie des pharmaciens</a> a été publié au Journal officiel le 5 mars 2026, après une décennie de travaux engagés par l'Ordre. Il refond tout le volet information, communication et publicité.</p>
+<h3>Ce que le code ouvre</h3>
+<p>Le texte autorise désormais les pharmaciens à communiquer plus largement sur leurs compétences et leurs services, y compris sur internet. Le pharmacien est libre de communiquer sur « ses compétences, son parcours professionnel et les conditions de son exercice », à condition que cette communication soit « loyale et honnête », formulée « avec tact et mesure », et qu'elle réserve une part prépondérante aux messages de santé publique. L'ouverture est réelle : la communication d'officine n'est plus cantonnée aux mentions minimales d'installation ou de transfert.</p>
+<h3>Ce que le code ferme, et qui concerne les avis</h3>
+<p>Le même texte pose une limite : sur internet comme dans l'officine, la communication du pharmacien ne peut pas faire « appel à des témoignages de tiers », ne repose pas sur des comparaisons avec d'autres pharmaciens et n'incite pas à un recours inutile à des actes ou à des produits de santé.</p>
+<p>Cette formulation encadre <strong>la communication émise par le pharmacien</strong> : ses supports, son site, ses réseaux sociaux, ses vitrines. Elle ne supprime pas les avis publiés spontanément par les patients sur une fiche Google, que le titulaire ne contrôle ni ne publie. La distinction est nette dans un cas et délicate dans l'autre : reprendre un avis patient dans une publication de l'officine relève clairement du témoignage de tiers ; solliciter un avis, c'est autre chose, mais ce n'est pas rien non plus.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ À retenir avant toute décision :</strong> le Conseil national de l'Ordre a annoncé la publication prochaine d'une version commentée du code et de recommandations, notamment en matière de communication et de publicité. Le code précise par ailleurs que l'Ordre pourra émettre au fil de l'eau des recommandations que les pharmaciens devront prendre en compte. Cet article décrit une pratique prudente au regard du texte publié ; il ne remplace pas l'avis de votre conseil régional, qui reste le bon interlocuteur en cas de doute.</p>
+</div>
+</section>
+
+<section id="plaque-et-deontologie" class="scroll-mt-28 mb-16">
+<h2>Ce qu'une plaque NFC fait — et ce qu'elle ne doit pas faire en officine</h2>
+<p>Une plaque NFC pour avis Google est un objet volontairement pauvre : un support acrylique contenant une puce programmée avec une URL, celle de votre page d'avis Google. Le patient approche son téléphone, la page s'ouvre, il écrit ce qu'il veut ou il referme. Ni application, ni compte, ni collecte de données par le support, ni intermédiaire entre le patient et Google.</p>
+<p>C'est cette pauvreté technique qui la rend compatible avec un cadre exigeant. Une plaque ne filtre pas, ne trie pas, n'oriente pas le contenu et ne récompense rien. Comparée aux dispositifs à abonnement qui proposent de « qualifier » le patient avant de l'envoyer sur Google, elle fait exactement une chose : raccourcir le chemin.</p>
+<h3>Les quatre règles à tenir</h3>
+<ul>
+<li><strong>Aucune contrepartie, jamais.</strong> Ni remise, ni échantillon, ni point fidélité contre un avis. C'est interdit par Google, qui peut en retour retirer des avis, empêcher la fiche d'en recevoir de nouveaux pendant une période donnée ou afficher un avertissement public.</li>
+<li><strong>Aucune sollicitation liée à une délivrance ou à un acte.</strong> Ni après une ordonnance, ni après une vaccination, un test ou un entretien pharmaceutique. Le lien entre un acte de santé et une demande de témoignage public est exactement ce qu'il faut éviter — et le patient n'a de toute façon aucune envie d'associer son traitement à un avis en ligne.</li>
+<li><strong>Un support neutre, jamais une vitrine à témoignages.</strong> La plaque indique « Votre avis sur Google », pas « Nos patients nous notent 4,8/5 ».</li>
+<li><strong>Le secret professionnel prime sur tout.</strong> Le code rappelle que le secret couvre tout ce qui est venu à la connaissance du pharmacien dans l'exercice de sa profession : ce qui lui a été confié et ce qu'il a vu, entendu ou compris. Cela change la manière de répondre aux avis, on y revient plus bas.</li>
+</ul>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ La ligne de conduite en une phrase :</strong> un support neutre, placé sur une zone de l'officine sans acte de santé, sans contrepartie, sans mise en avant d'avis existants, et dont le message porte sur l'accueil et les services — pas sur les médicaments. Si un élément de votre dispositif ne tient pas dans cette phrase, retirez-le.</p>
+</div>
+</section>
+
+<section id="fiche-gbp-pharmacie" class="scroll-mt-28 mb-16">
+<h2>La fiche Google d'une pharmacie : cinq réglages qui comptent</h2>
+<p>Collecter des avis sur une fiche mal paramétrée revient à remplir un seau percé. <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">Google classe les résultats locaux selon trois facteurs : pertinence, distance et proéminence</a>, et range le nombre d'avis et les notes positives dans la proéminence. La distance ne dépend pas de vous ; la pertinence se règle dans les champs de la fiche ; la proéminence se construit semaine après semaine.</p>
+<h3>1. La catégorie principale</h3>
+<p>« Pharmacie » est l'évidence, mais elle ne suffit pas si votre officine a une activité marquée en orthopédie, en matériel médical ou en maintien à domicile. Les catégories secondaires ouvrent des requêtes que la principale ne couvre pas, et déterminent aussi la liste d'attributs disponibles.</p>
+<h3>2. Les horaires exceptionnels</h3>
+<p>Le champ le plus rentable d'une fiche de pharmacie, et le plus négligé. Jours fériés, ponts, fermeture annuelle, semaine de garde : chaque écart non déclaré produit un déplacement inutile, et un déplacement inutile produit un avis à une étoile qui n'a rien à voir avec votre travail. Bloquez trente minutes en début d'année pour saisir tous les jours fériés d'un coup.</p>
+<h3>3. Les services</h3>
+<p>Vaccination, test antigénique, entretien pharmaceutique, préparation de piluliers, location de matériel, orthopédie. Renseigner ces prestations une par une, c'est dire à Google ce que vous faites au-delà du mot « pharmacie ». Notre <a href="/blog/optimiser-fiche-google-business-profile">guide d'optimisation de la fiche Google Business Profile</a> détaille champ par champ.</p>
+<h3>4. Les attributs</h3>
+<p>Accessibilité en fauteuil roulant, entrée de plain-pied, parking, moyens de paiement : ces cases cochées peuvent faire apparaître votre fiche sur des recherches associées et sur des filtres. Pour une officine dont une part de la patientèle est âgée ou à mobilité réduite, le bloc accessibilité n'est pas décoratif. Voir nos <a href="/blog/attributs-fiche-google-business-profile">attributs de fiche Google Business Profile</a>.</p>
+<h3>5. Les photos</h3>
+<p>Façade lisible depuis la rue, croix visible, intérieur clair. Une officine trouvée sur Maps se reconnaît d'abord à sa façade : une photo prise de nuit ou de travers coûte des entrées. Voir notre guide sur les <a href="/blog/photos-google-business-profile">photos de fiche Google Business Profile</a>.</p>
+</section>
+
+<section id="ou-poser-plaque" class="scroll-mt-28 mb-16">
+<h2>Où poser la plaque dans une officine : 6 emplacements classés</h2>
+<p>Une pharmacie a une contrainte que peu de commerces connaissent : l'essentiel du parcours se déroule dans un moment de santé, parfois intime, souvent pressé, et le comptoir est un lieu de confidentialité. Le bon emplacement est celui où le patient est disponible, téléphone potentiellement en main, et hors du temps de l'acte.</p>
+
+<h3>1. Le comptoir de parapharmacie ou la caisse libre-service ✅</h3>
+<p>Le meilleur emplacement, et de loin. Le client y règle une crème solaire, un dentifrice ou un complément : ni ordonnance, ni donnée de santé, ni confidentialité en jeu. Il attend quelques secondes pendant l'encaissement, son téléphone est déjà sorti pour le paiement sans contact. La plaque se pose à plat, côté client, près du terminal.</p>
+
+<h3>2. Le comptoir d'orthopédie ou de matériel médical</h3>
+<p>Excellent second emplacement dans les officines qui ont un espace dédié. Le temps passé y est long — essayage d'un bas de contention, réglage d'un déambulateur — et la relation est explicitement une prestation de service. Placez la plaque sur le plan latéral, pas entre vous et la personne.</p>
+
+<h3>3. La zone d'attente assise</h3>
+<p>Bon rendement, mais il faut un support incliné à hauteur d'œil, pas une plaque à plat sur une table basse. L'attente est le seul moment de l'officine où le patient a du temps et son téléphone en main. Attention toutefois : une personne qui patiente depuis dix minutes est rarement dans de bonnes dispositions. Ce placement fonctionne dans les officines fluides, beaucoup moins dans celles qui saturent.</p>
+
+<h3>4. Le point de retrait de commande</h3>
+<p>Récupérer une commande arrivée dans les délais est un moment franchement positif : vous avez rendu un service identifiable. Une plaque sur ce comptoir capte une satisfaction précise, et c'est en général sur ces services qu'un avis rédigé sera le plus utile aux lecteurs suivants.</p>
+
+<h3>5. Le comptoir d'ordonnance ⚠️</h3>
+<p>Techniquement le plus passant, déontologiquement le plus délicat : une plaque posée là associe visuellement la demande d'avis à la délivrance. Si vous choisissez de l'y placer malgré tout, mettez-la en bout de comptoir, hors du champ de l'échange, et ne prononcez jamais de phrase de sollicitation pendant une délivrance. Beaucoup de titulaires préfèrent s'en abstenir, et c'est un choix défendable.</p>
+
+<h3>6. La vitrine extérieure ❌</h3>
+<p>Sans intérêt. Personne ne s'arrête devant une vitrine de pharmacie pour approcher son téléphone d'un adhésif, et une plaque derrière une vitre épaisse pose en plus un problème de distance de lecture. La vitrine sert aux horaires et à la garde, pas aux avis.</p>
+
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Le piège du métal :</strong> beaucoup de comptoirs d'officine sont en inox, en aluminium ou intègrent une plaque métallique sous le stratifié. Le métal génère des courants de Foucault qui absorbent le champ et désaccordent l'antenne : la lecture devient aléatoire selon l'angle du téléphone. C'est la première cause de plaque jugée défectueuse. Testez avant de coller. Notre article sur les <a href="/blog/materiaux-plaque-nfc-avis-google">matériaux de plaque NFC</a> détaille les surfaces compatibles, et celui sur <a href="/blog/ou-placer-plaque-avis-google">où placer sa plaque</a> donne la méthode générale.</p>
+</div>
+</section>
+
+<section id="moments-scripts" class="scroll-mt-28 mb-16">
+<h2>Quand demander, quand se taire, et comment le formuler</h2>
+<p>Dans une officine, la question n'est pas seulement « quand demander » mais « à qui il est correct de demander ». La règle de tri est déontologique autant que commerciale : <strong>on sollicite sur le service, jamais sur le soin</strong>.</p>
+<h3>Les trois situations favorables</h3>
+<ul>
+<li><strong>Un achat de confort ou de parapharmacie</strong>, réglé en libre-service ou au comptoir dédié : aucun acte de santé, aucune donnée sensible, un client disponible.</li>
+<li><strong>Un service rendu qui sort de l'ordinaire</strong> : une commande obtenue en 24 h, un dépannage avant un départ, un matériel livré à domicile. Le patient vous remercie de lui-même : c'est la seule fenêtre où une phrase est naturelle.</li>
+<li><strong>Un patient fidèle qui exprime spontanément sa satisfaction.</strong> Il vient depuis dix ans, il le dit, et il n'a jamais pensé que cela puisse s'écrire quelque part.</li>
+</ul>
+<h3>Les quatre situations où l'on ne dit rien</h3>
+<ul>
+<li>Pendant ou après une délivrance sur ordonnance, quelle qu'elle soit.</li>
+<li>Après une vaccination, un test, un entretien pharmaceutique ou tout acte réalisé à l'officine.</li>
+<li>Face à un patient visiblement affecté, fatigué, ou accompagnant un proche malade.</li>
+<li>Après une rupture de stock, un refus de délivrance, une attente longue ou un litige de remboursement : relancer un mécontent, c'est lui rappeler d'écrire.</li>
+</ul>
+<h3>Trois formulations pour toute l'équipe</h3>
+<p><strong>Au comptoir parapharmacie :</strong> « Si vous avez trente secondes, vous pouvez approcher votre téléphone ici, ça ouvre notre page Google. » Neutre, factuelle, sans demander de note ni orienter le contenu.</p>
+<p><strong>Après un service rendu :</strong> « Merci, c'est gentil. Si vous voulez le dire en ligne, il y a ça sur le comptoir. » On rebondit sur un remerciement existant, on ne le provoque pas.</p>
+<p><strong>Pour un patient fidèle :</strong> « Vous savez qu'on a une page Google ? Un mot de votre part nous aiderait, mais uniquement si le cœur vous en dit. » L'échappatoire explicite fait partie du script : c'est elle qui rend la demande acceptable dans un cadre de santé.</p>
+<p>Deux formulations à bannir : « mettez-nous cinq étoiles » et « si vous êtes content, laissez un avis, sinon venez nous voir ». La première oriente la note, la seconde organise un filtrage que Google considère comme une manipulation. Notre article sur les <a href="/blog/erreurs-demander-avis">erreurs quand on demande un avis</a> revient sur ces réflexes.</p>
+</section>
+
+<section id="cas-pratiques" class="scroll-mt-28 mb-16">
+<h2>Trois hypothèses de calcul pour une officine</h2>
+<p>Personne ne peut vous annoncer un nombre d'avis par mois : cela dépend du flux, de la part de clients sollicités et de la proportion de sollicités qui publient — que rien ne permet de fixer à l'avance. Les trois lignes ci-dessous sont des <strong>hypothèses de calcul</strong>, à remplacer par ce que donnent vos premières semaines.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead>
+<tr class="bg-gray-100">
+<th class="border border-gray-300 p-2 text-left">Profil d'officine</th>
+<th class="border border-gray-300 p-2 text-left">Clients / mois</th>
+<th class="border border-gray-300 p-2 text-left">Sollicitations possibles</th>
+<th class="border border-gray-300 p-2 text-left">Avis / mois (hyp. 1 sur 10)</th>
+<th class="border border-gray-300 p-2 text-left">Sur 12 mois</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-gray-300 p-2">Rurale, 1 comptoir</td>
+<td class="border border-gray-300 p-2">1 800</td>
+<td class="border border-gray-300 p-2">250 (hors ordonnance)</td>
+<td class="border border-gray-300 p-2">2 à 3</td>
+<td class="border border-gray-300 p-2">24 à 36</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="border border-gray-300 p-2">De quartier, 2 comptoirs</td>
+<td class="border border-gray-300 p-2">3 500</td>
+<td class="border border-gray-300 p-2">600 (parapharmacie + services)</td>
+<td class="border border-gray-300 p-2">5 à 7</td>
+<td class="border border-gray-300 p-2">60 à 84</td>
+</tr>
+<tr>
+<td class="border border-gray-300 p-2">Centre commercial</td>
+<td class="border border-gray-300 p-2">7 000</td>
+<td class="border border-gray-300 p-2">1 400 (fort libre-service)</td>
+<td class="border border-gray-300 p-2">12 à 16</td>
+<td class="border border-gray-300 p-2">144 à 192</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Ce tableau ne montre pas un résultat garanti, mais une hiérarchie : le facteur décisif n'est pas le nombre de clients servis, c'est le nombre de clients <strong>qu'il est légitime de solliciter</strong>. Une officine rurale à faible flux mais forte relation dépassera souvent une officine de passage qui ne dit jamais la phrase.</p>
+<p>Pour fixer votre objectif réel, faites l'exercice gratuit : ouvrez les fiches des deux ou trois officines de votre zone, comptez leurs avis et regardez les dates des cinq derniers. Notre article sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis nécessaire pour entrer dans le pack local</a> détaille la méthode, et celui sur la <a href="/blog/velocite-avis-google">vélocité des avis Google</a> explique pourquoi le rythme mensuel compte davantage que le total affiché.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Le calcul qui protège :</strong> à 20 avis et 3,9 de moyenne, un seul avis à 1 étoile fait perdre environ 0,15 point, et il faut ensuite cinq avis à 5 étoiles pour revenir au point de départ. En officine, où les avis négatifs portent souvent sur des choses que vous ne contrôlez pas — rupture nationale, refus de prise en charge, délai de commande —, le volume est la seule protection réelle. Le détail du calcul est dans notre article sur <a href="/blog/ameliorer-note-google">l'amélioration de la note Google</a>.</p>
+</div>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Répondre aux avis en pharmacie : le secret professionnel change tout</h2>
+<p>Répondre est attendu : <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">89 % des consommateurs attendent que le gérant réponde aux avis</a> (BrightLocal, Local Consumer Review Survey 2026, 1 002 consommateurs américains). Mais en officine, une réponse mal calibrée fait courir un risque que les autres commerces n'ont pas.</p>
+<p>Le nouveau code rappelle que le secret professionnel couvre tout ce qui est venu à la connaissance du pharmacien dans l'exercice de sa profession : ce qui lui a été confié, et ce qu'il a vu, entendu ou compris. La règle d'écriture en découle : <strong>vous ne confirmez jamais publiquement qu'une personne est votre patient, ni ce qu'elle est venue chercher</strong>. Même pour vous défendre. Même quand l'avis est injuste et que la rectification tient en une phrase.</p>
+<h3>« Ils ont refusé de me délivrer mon traitement »</h3>
+<p>Ne discutez ni l'ordonnance, ni le produit, ni la situation. Rappelez le principe général — une délivrance obéit à des règles de sécurité que le pharmacien applique, parfois contre l'envie du patient — et proposez un échange direct. Le lecteur suivant ne cherche pas qui a raison : il vérifie que vous êtes rigoureux et joignable.</p>
+<h3>« Produit en rupture, déplacement pour rien »</h3>
+<p>L'avis le plus fréquent, et celui sur lequel vous avez le moins de prise. Expliquez le mécanisme sans vous justifier à l'excès — une tension d'approvisionnement n'est pas une négligence d'officine — et indiquez le réflexe utile : un appel avant de se déplacer, ou une commande qui arrive en 24 h.</p>
+<h3>« Accueil désagréable »</h3>
+<p>Le seul type d'avis où la réponse doit être courte et sans explication. Remerciez, dites que ce n'est pas la manière dont vous voulez recevoir, indiquez que le point sera vu en équipe. Toute tentative de contextualiser en public se lit comme une contestation. La méthode complète est dans notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs Google</a>, et les cas de faux avis dans celui sur <a href="/blog/faux-avis-google-signaler">signaler un faux avis Google</a>.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs qui coûtent le plus cher en officine</h2>
+<ul>
+<li><strong>Solliciter après une délivrance.</strong> L'erreur la plus fréquente et la plus problématique : elle associe un acte de santé à une demande de témoignage public, met le patient mal à l'aise, et produit des avis qui décrivent des situations médicales sur une page publique.</li>
+<li><strong>Afficher des extraits d'avis dans l'officine ou sur le site.</strong> Reprendre un témoignage de patient dans sa propre communication est précisément ce que le code interdit.</li>
+<li><strong>Offrir quoi que ce soit contre un avis.</strong> Échantillon, remise, point fidélité : interdit par Google, qui peut retirer des avis, bloquer les nouveaux avis de la fiche pendant une période donnée ou afficher un avertissement public.</li>
+<li><strong>Coller la plaque sur un comptoir métallique.</strong> Lecture aléatoire, équipe qui conclut que le produit ne marche pas, dispositif abandonné en trois semaines.</li>
+<li><strong>Ne pas déclarer les horaires exceptionnels.</strong> Un jour férié non renseigné ne coûte pas une vente : il coûte un avis à une étoile écrit par quelqu'un qui s'est déplacé pour rien un dimanche.</li>
+<li><strong>Former le titulaire et personne d'autre.</strong> Sur une équipe de six, si seuls deux préparateurs disent la phrase, vous perdez les deux tiers du gisement sans jamais le voir dans les chiffres.</li>
+<li><strong>Arrêter après le premier bon résultat.</strong> Passer de 14 à 40 avis en un trimestre donne le sentiment que le sujet est réglé. Il ne l'est jamais : une fiche qui cesse de collecter redevient en un an une fiche dont les derniers avis datent d'un an.</li>
+</ul>
+</section>
+
+<section id="faq-pharmacie" class="scroll-mt-28 mb-16">
+<h2>FAQ — Plaque NFC et avis Google pour une pharmacie</h2>
+
+<h3>Une pharmacie a-t-elle le droit de demander des avis Google à ses patients ?</h3>
+<p>Le code de déontologie des pharmaciens, refondu par le décret n° 2026-156 du 3 mars 2026, ne traite pas explicitement de la sollicitation d'avis en ligne. Il pose en revanche que la communication du pharmacien, sur internet comme dans l'officine, ne peut pas faire appel à des témoignages de tiers, ne repose pas sur des comparaisons avec d'autres pharmaciens et n'incite pas à un recours inutile à des actes ou produits de santé. Cette limite vise ce que le pharmacien publie lui-même, pas les avis déposés spontanément par des patients sur une fiche Google. La pratique prudente consiste donc à disposer un support neutre, sans contrepartie, hors des actes de santé, et à ne jamais reprendre d'avis dans sa propre communication. Le Conseil national de l'Ordre a annoncé des recommandations à venir sur la communication et la publicité : en cas de doute sur votre situation, votre conseil régional est le bon interlocuteur.</p>
+
+<h3>Où placer la plaque dans une officine sans gêner la confidentialité ?</h3>
+<p>Au comptoir de parapharmacie ou à la caisse libre-service en priorité : aucun acte de santé, aucune donnée sensible, un client disponible pendant l'encaissement. Le comptoir d'orthopédie ou de matériel médical constitue un excellent second emplacement, parce que la relation y est explicitement une prestation de service. La zone d'attente assise fonctionne dans les officines fluides. Le comptoir d'ordonnance est le plus passant mais le plus délicat : si vous y placez une plaque, mettez-la en bout de comptoir, hors du champ de l'échange. La vitrine extérieure, elle, ne collecte rien.</p>
+
+<h3>Combien d'avis Google une pharmacie peut-elle espérer par mois ?</h3>
+<p>Aucun chiffre ne peut être annoncé à l'avance : tout dépend de votre flux, du nombre de clients qu'il est légitime de solliciter et de la part d'entre eux qui publie réellement. Hypothèse de calcul : une officine de quartier servant 3 500 clients par mois, dont 600 sur des achats de confort ou des services hors ordonnance, qui solliciterait la moitié de ces 600 et dont un sollicité sur dix publierait, obtiendrait une trentaine d'avis par an. Remplacez cette part par ce que donnent vos premières semaines, puis comparez au nombre d'avis des officines de votre zone — les dates de publication sont visibles sur chaque fiche.</p>
+
+<h3>Peut-on répondre à un avis sans violer le secret professionnel ?</h3>
+<p>Oui, à condition de ne jamais confirmer publiquement qu'une personne est votre patient ni ce qu'elle est venue chercher. Le code précise que le secret couvre tout ce qui est venu à la connaissance du pharmacien dans l'exercice de sa profession : ce qui lui a été confié et ce qu'il a vu, entendu ou compris. Concrètement, on répond sur le principe général — les règles d'une délivrance, le mécanisme d'une rupture d'approvisionnement — et on propose un échange direct pour le reste. Une réponse qui se défend en donnant des détails est plus dommageable que l'avis lui-même.</p>
+
+<h3>La plaque NFC fonctionne-t-elle sur un comptoir en inox ?</h3>
+<p>Mal, et parfois pas du tout. Le métal génère des courants de Foucault qui absorbent le champ magnétique et désaccordent l'antenne de la puce : la lecture devient aléatoire selon l'angle du téléphone. C'est la première cause de plaque jugée défectueuse. Beaucoup de comptoirs d'officine sont en inox ou intègrent une plaque métallique sous le stratifié : testez avant de coller, et choisissez sinon une zone en résine, en bois ou en verre.</p>
+
+<h3>Faut-il une plaque par comptoir dans une officine ?</h3>
+<p>Dans une officine à plusieurs postes, oui : un support unique ne couvre qu'un parcours sur trois ou quatre. Le découpage utile est généralement caisse ou parapharmacie, orthopédie ou matériel médical, et point de retrait de commande. Une officine de centre commercial avec un fort libre-service a intérêt à équiper chaque caisse. Le pack de 2 plaques couvre deux comptoirs, le pack de 5 une officine complète avec une plaque de rechange. Notre article sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques nécessaires</a> détaille le raisonnement.</p>
+
+<h3>Faut-il un abonnement pour utiliser une plaque NFC en pharmacie ?</h3>
+<p>Non. La plaque Swiipx est un achat unique, expédiée déjà programmée avec votre lien d'avis Google : aucune application à installer, aucun code d'activation, aucun frais mensuel, et la puce est garantie à vie. C'est une différence de fond avec les offres à abonnement, où l'arrêt du prélèvement peut désactiver un support pourtant payé — et où la plateforme s'intercale entre le patient et Google, parfois pour filtrer les avis selon la satisfaction déclarée, une pratique que Google considère comme une manipulation.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : un support neutre, au bon comptoir, et rien de plus</h2>
+<p>Une officine ne perd pas des avis parce que ses patients sont mécontents. Elle en perd parce que les seuls clients qui écrivent sont ceux qui se sont heurtés à une rupture ou à une attente, et parce que rien, dans le parcours, ne propose aux autres de dire quoi que ce soit.</p>
+<p>Le cadre déontologique n'interdit pas de corriger ce déséquilibre : il interdit d'en faire une vitrine. Un support neutre posé au comptoir de parapharmacie, une phrase dite sur un service rendu et jamais sur un acte de santé, aucune contrepartie, aucun avis affiché en boutique — c'est étroit, et c'est suffisant. Le reste est une affaire de régularité : quelques avis par mois, tous les mois, valent mieux qu'une campagne de trois semaines qui laisse ensuite la fiche figée pendant deux ans.</p>
+<p>Guides complémentaires : <a href="/blog/plaque-nfc-cabinet-medical">cabinet médical</a>, <a href="/blog/plaque-nfc-opticien">opticien</a>, <a href="/blog/plaque-nfc-veterinaire">vétérinaire</a>, ou notre comparatif <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC ou QR code</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à équiper vos comptoirs ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, adhésif 3M inclus, QR code de secours, garantie à vie, <strong>sans abonnement</strong>. Le <a href="/product/starter">pack Starter</a> pour un comptoir, le <a href="/product/business">pack Business</a> pour deux, le <a href="/product/pro">pack Pro</a> pour une officine complète. À partir de 29,90 €.</p>
+</div>
+</section>
+`,
+  },
   'attributs-fiche-google-business-profile': {
     title: 'Attributs Google Business Profile : le réglage de fiche que personne ne remplit',
     category: 'SEO Local',
