@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { construireAlerteHorsLigne, envoyerTelegram, ErreurTelegram, variableEnv } from '@/lib/tawk-telegram'
+import {
+  construireAlerteHorsLigne,
+  envoyerTelegram,
+  ErreurTelegram,
+  interrogerTelegram,
+  variableEnv,
+} from '@/lib/tawk-telegram'
 
 /**
  * Alerte Telegram pour les messages laissés via le formulaire hors ligne du
@@ -77,6 +83,33 @@ function texteDuVisiteur(formulaire: Record<string, unknown>): string | undefine
   if (reponses.length === 0) return undefined
   if (reponses.length === 1) return reponses[0][1]
   return champ(reponses.map(([libelle, texte]) => (libelle ? `${libelle} : ${texte}` : texte)).join('\n'), 3000)
+}
+
+/**
+ * Point de contrôle : à quel bot appartient le jeton enregistré dans Vercel,
+ * et que répond Telegram pour la conversation configurée. Aucun secret n'en
+ * sort — le nom d'utilisateur d'un bot est public, et de l'identifiant de
+ * conversation seuls les trois derniers chiffres sont montrés, pour comparer
+ * avec celui qu'on croit avoir enregistré.
+ */
+export async function GET() {
+  const jeton = variableEnv('TELEGRAM_BOT_TOKEN')
+  const conversation = variableEnv('TELEGRAM_CHAT_ID')
+  if (!jeton || !conversation) {
+    return NextResponse.json({ configure: false, manquantes: [!jeton && 'TELEGRAM_BOT_TOKEN', !conversation && 'TELEGRAM_CHAT_ID'].filter(Boolean) }, { status: 503 })
+  }
+
+  const bot = await interrogerTelegram(jeton, 'getMe')
+  const chat = await interrogerTelegram(jeton, 'getChat', { chat_id: conversation })
+
+  return NextResponse.json({
+    configure: true,
+    bot: bot.ok ? { nom: bot.result?.username } : { erreur: bot.description },
+    conversation: chat.ok
+      ? { ok: true, type: chat.result?.type }
+      : { ok: false, motif: chat.description },
+    identifiantEnregistre: `…${conversation.slice(-3)} (${conversation.length} caractères)`,
+  })
 }
 
 export async function POST(request: NextRequest) {

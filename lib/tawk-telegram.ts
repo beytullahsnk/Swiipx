@@ -157,6 +157,30 @@ export class ErreurTelegram extends Error {
   }
 }
 
+/**
+ * Interroge une méthode de l'API Telegram et renvoie sa réponse telle quelle.
+ * Sert au point de contrôle : savoir à quel bot appartient le jeton
+ * enregistré, et si la conversation configurée lui est accessible.
+ */
+export async function interrogerTelegram(
+  jeton: string,
+  methode: string,
+  corps?: Record<string, string>,
+): Promise<{ ok: boolean; result?: Record<string, unknown>; description?: string }> {
+  try {
+    const reponse = await fetch(`https://api.telegram.org/bot${jeton}/${methode}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(corps ?? {}),
+      signal: AbortSignal.timeout(8000),
+    })
+    const lu = (await reponse.json()) as { ok?: boolean; result?: Record<string, unknown>; description?: string }
+    return { ok: lu.ok === true, result: lu.result, description: lu.description }
+  } catch (erreur) {
+    return { ok: false, description: erreur instanceof Error ? erreur.message : String(erreur) }
+  }
+}
+
 /** Ne jamais journaliser l'URL : elle contient le jeton du bot. */
 export async function envoyerTelegram(texte: string, jeton: string, conversation: string): Promise<void> {
   const reponse = await fetch(`https://api.telegram.org/bot${jeton}/sendMessage`, {
