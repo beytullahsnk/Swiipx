@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { construireAlerteHorsLigne, envoyerTelegram, ErreurTelegram } from '@/lib/tawk-telegram'
+import { construireAlerteHorsLigne, envoyerTelegram, ErreurTelegram, variableEnv } from '@/lib/tawk-telegram'
 
 /**
  * Alerte Telegram pour les messages laissés via le formulaire hors ligne du
@@ -84,8 +84,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Origine refusée' }, { status: 403 })
   }
 
-  const jeton = process.env.TELEGRAM_BOT_TOKEN
-  const conversation = process.env.TELEGRAM_CHAT_ID
+  const jeton = variableEnv('TELEGRAM_BOT_TOKEN')
+  const conversation = variableEnv('TELEGRAM_CHAT_ID')
   if (!jeton || !conversation) {
     console.error('[tawk.to hors ligne] Relais non configuré')
     return NextResponse.json({ error: 'Relais non configuré' }, { status: 503 })

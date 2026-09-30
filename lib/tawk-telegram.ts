@@ -131,6 +131,19 @@ export function construireAlerteHorsLigne(saisie: MessageHorsLigne): string {
 }
 
 /**
+ * Valeur d'une variable d'environnement, nettoyée de ce qu'un copier-coller
+ * dans Vercel y laisse : espaces autour, guillemets, saut de ligne final. Une
+ * espace en trop dans TELEGRAM_CHAT_ID et Telegram répond « chat not found »,
+ * sans que rien ne distingue ce cas d'un identifiant réellement faux.
+ */
+export function variableEnv(nom: string): string | undefined {
+  const brut = process.env[nom]
+  if (!brut) return undefined
+  const propre = brut.trim().replace(/^["']+|["']+$/g, '').trim()
+  return propre || undefined
+}
+
+/**
  * Refus de l'API Telegram : le code et le libellé qu'elle renvoie, jamais le
  * jeton. Les trois cas courants : 401 « Unauthorized » (jeton faux ou
  * revoque), 400 « Bad Request: chat not found » (mauvais identifiant de

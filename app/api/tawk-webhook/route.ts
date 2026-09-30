@@ -4,6 +4,7 @@ import {
   envoyerTelegram,
   ErreurTelegram,
   signatureValide,
+  variableEnv,
   type EvenementTawk,
 } from '@/lib/tawk-telegram'
 
@@ -26,9 +27,9 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 export async function POST(request: NextRequest) {
-  const secret = process.env.TAWK_WEBHOOK_SECRET
-  const jeton = process.env.TELEGRAM_BOT_TOKEN
-  const conversation = process.env.TELEGRAM_CHAT_ID
+  const secret = variableEnv('TAWK_WEBHOOK_SECRET')
+  const jeton = variableEnv('TELEGRAM_BOT_TOKEN')
+  const conversation = variableEnv('TELEGRAM_CHAT_ID')
 
   if (!secret || !jeton || !conversation) {
     const manquantes = [
