@@ -130,6 +130,20 @@ export function construireAlerteHorsLigne(saisie: MessageHorsLigne): string {
   ].filter((ligne): ligne is string => ligne !== null).join('\n')
 }
 
+/**
+ * Refus de l'API Telegram : le code et le libellé qu'elle renvoie, jamais le
+ * jeton. Les trois cas courants : 401 « Unauthorized » (jeton faux ou
+ * revoque), 400 « Bad Request: chat not found » (mauvais identifiant de
+ * conversation), 403 « Forbidden: bot was blocked by the user » ou « bot can't
+ * initiate conversation with a user » (le bot n'a jamais ete demarre).
+ */
+export class ErreurTelegram extends Error {
+  constructor(readonly statut: number, readonly description: string) {
+    super(`Telegram a répondu ${statut} : ${description}`)
+    this.name = 'ErreurTelegram'
+  }
+}
+
 /** Ne jamais journaliser l'URL : elle contient le jeton du bot. */
 export async function envoyerTelegram(texte: string, jeton: string, conversation: string): Promise<void> {
   const reponse = await fetch(`https://api.telegram.org/bot${jeton}/sendMessage`, {
@@ -146,6 +160,12 @@ export async function envoyerTelegram(texte: string, jeton: string, conversation
   })
   if (!reponse.ok) {
     const detail = await reponse.text().catch(() => '')
-    throw new Error(`Telegram a répondu ${reponse.status} : ${detail.slice(0, 300)}`)
+    let description = detail.slice(0, 300)
+    try {
+      const lu: unknown = JSON.parse(detail)
+      const annonce = (lu as { description?: unknown })?.description
+      if (typeof annonce === 'string') description = annonce
+    } catch {}
+    throw new ErreurTelegram(reponse.status, description)
   }
 }

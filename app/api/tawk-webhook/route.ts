@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import {
   construireMessage,
   envoyerTelegram,
+  ErreurTelegram,
   signatureValide,
   type EvenementTawk,
 } from '@/lib/tawk-telegram'
@@ -64,7 +65,10 @@ export async function POST(request: NextRequest) {
   try {
     await envoyerTelegram(texte, jeton, conversation)
   } catch (erreur) {
-    console.error('[tawk.to] Envoi Telegram en échec :', idEvenement, erreur instanceof Error ? erreur.message : erreur)
+    const description = erreur instanceof ErreurTelegram
+      ? `${erreur.statut} ${erreur.description}`
+      : erreur instanceof Error ? erreur.message : String(erreur)
+    console.error('[tawk.to] Envoi Telegram en échec :', idEvenement, description)
     return NextResponse.json({ error: 'Envoi Telegram en échec' }, { status: 502 })
   }
 

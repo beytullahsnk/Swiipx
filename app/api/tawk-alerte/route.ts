@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { construireAlerteHorsLigne, envoyerTelegram } from '@/lib/tawk-telegram'
+import { construireAlerteHorsLigne, envoyerTelegram, ErreurTelegram } from '@/lib/tawk-telegram'
 
 /**
  * Alerte Telegram pour les messages laissés via le formulaire hors ligne du
@@ -139,8 +139,15 @@ export async function POST(request: NextRequest) {
       conversation,
     )
   } catch (erreur) {
-    console.error('[tawk.to hors ligne] Envoi Telegram en échec :', erreur instanceof Error ? erreur.message : erreur)
-    return NextResponse.json({ error: 'Envoi Telegram en échec' }, { status: 502 })
+    const statut = erreur instanceof ErreurTelegram ? erreur.statut : undefined
+    const description = erreur instanceof ErreurTelegram
+      ? erreur.description
+      : erreur instanceof Error ? erreur.message : String(erreur)
+    console.error('[tawk.to hors ligne] Envoi Telegram en échec :', statut ?? '-', description)
+    // Le motif vient de Telegram — jeton, conversation, bot bloqué — et ne
+    // contient aucun secret. Le renvoyer évite d'avoir à ouvrir les journaux
+    // Vercel pour comprendre pourquoi une alerte n'est pas arrivée.
+    return NextResponse.json({ error: 'Envoi Telegram en échec', telegram: { statut, description } }, { status: 502 })
   }
 
   console.log('[tawk.to hors ligne] Alerte envoyée')
