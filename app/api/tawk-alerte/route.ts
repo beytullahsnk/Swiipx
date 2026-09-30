@@ -101,6 +101,21 @@ export async function GET() {
 
   const bot = await interrogerTelegram(jeton, 'getMe')
   const chat = await interrogerTelegram(jeton, 'getChat', { chat_id: conversation })
+  const webhook = await interrogerTelegram(jeton, 'getWebhookInfo')
+  const enAttente = await interrogerTelegram(jeton, 'getUpdates', { limit: '20' })
+
+  // Les conversations que ce bot connaît, réduites à leurs trois derniers
+  // chiffres : assez pour voir si l'identifiant enregistré est le bon, sans
+  // publier celui de qui que ce soit. Ce bot peut être le canal client de
+  // tawk.to, donc des visiteurs peuvent figurer ici.
+  const connues = Array.isArray(enAttente.result)
+    ? [...new Set(
+        (enAttente.result as Array<Record<string, any>>)
+          .map((maj) => maj?.message?.chat?.id ?? maj?.my_chat_member?.chat?.id)
+          .filter((identifiant) => identifiant !== undefined && identifiant !== null)
+          .map((identifiant) => String(identifiant)),
+      )]
+    : []
 
   return NextResponse.json({
     configure: true,
@@ -109,6 +124,12 @@ export async function GET() {
       ? { ok: true, type: chat.result?.type }
       : { ok: false, motif: chat.description },
     identifiantEnregistre: `…${conversation.slice(-3)} (${conversation.length} caractères)`,
+    // Un webhook posé sur le bot (tawk.to en pose un sur son canal client)
+    // detourne les messages : getUpdates ne voit alors plus rien.
+    webhookSurLeBot: webhook.ok ? Boolean((webhook.result as Record<string, unknown>)?.url) : webhook.description,
+    conversationsConnues: enAttente.ok
+      ? connues.map((identifiant) => ({ fin: `…${identifiant.slice(-3)}`, correspond: identifiant === conversation }))
+      : enAttente.description,
   })
 }
 
