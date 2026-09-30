@@ -13,6 +13,8 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'note-google-ideale', label: 'Note Google idéale : viser 4,5, pas 5,0' },
+  { slug: 'sms-email-ou-plaque-nfc-avis-google', label: 'SMS, e-mail ou plaque NFC pour les avis' },
   { slug: 'plaque-nfc-pharmacie', label: 'Plaque NFC pharmacie : avis et déontologie' },
   { slug: 'attributs-fiche-google-business-profile', label: 'Attributs Google Business Profile : le guide' },
   { slug: 'velocite-avis-google', label: 'Vélocité des avis Google : le rythme' },

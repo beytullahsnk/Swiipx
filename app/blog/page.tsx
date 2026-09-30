@@ -46,6 +46,26 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 48,
+    title: 'Note Google idéale : pourquoi 4,6 étoiles convertissent mieux que 5,0',
+    excerpt: 'Faut-il viser 5 étoiles sur Google ? Non : la probabilité d\'achat culmine entre 4,0 et 4,7, et 31 % des clients exigent 4,5. Seuils 2026, calcul de la note, formule et tableau pour savoir combien d\'avis 5 étoiles il faut pour remonter, et stratégie par zone de note.',
+    category: 'Statistiques',
+    date: '25 septembre 2026',
+    dateIso: '2026-09-25',
+    readTime: '15 min',
+    slug: 'note-google-ideale',
+  },
+  {
+    id: 47,
+    title: 'SMS, e-mail ou plaque NFC : quelle méthode pour obtenir des avis Google ?',
+    excerpt: 'SMS, e-mail, demande orale ou plaque NFC : les 4 canaux pour demander des avis Google comparés sur le coût, la friction, le cadre légal (article L34-5, RGPD) et les règles Google. Tableau, hypothèse de calcul sur 12 mois et le canal adapté à chaque métier.',
+    category: 'Comparatif',
+    date: '23 septembre 2026',
+    dateIso: '2026-09-23',
+    readTime: '15 min',
+    slug: 'sms-email-ou-plaque-nfc-avis-google',
+  },
+  {
     id: 46,
     title: 'Plaque NFC pharmacie : collecter des avis Google sans sortir du cadre',
     excerpt: 'Le code de déontologie des pharmaciens a été refondu en mars 2026 : communication élargie, mais interdiction de faire appel à des témoignages de tiers. Ce que cela change pour les avis Google d\'une officine, 6 emplacements classés, 3 scripts et les 7 erreurs.',
