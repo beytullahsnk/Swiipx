@@ -41,6 +41,7 @@ export type AnalyticsEvent =
   // Parcours des articles (app/blog/[slug]/ConversionArticle.tsx)
   | 'view_promotion'
   | 'select_promotion'
+  | 'dismiss_promotion'
 
 declare global {
   interface Window {

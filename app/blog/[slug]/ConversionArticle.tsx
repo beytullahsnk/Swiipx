@@ -28,7 +28,7 @@ import { NOM_PACK } from '@/lib/product-schema'
  * 1. l'encart, après la première section : la proposition arrive quand le
  *    lecteur a compris le problème, dans la zone que la plupart voient ;
  * 2. la barre mobile : une fois l'encart dépassé, l'achat reste à un geste
- *    pendant toute la lecture ; on peut la masquer ;
+ *    pendant toute la lecture ; cliquable en entier, on peut la fermer ;
  * 3. la carte en colonne, sur ordinateur : masquée tant que l'encart est à
  *    l'écran, pour ne jamais afficher deux fois le même message ;
  * 4. la fin d'article : le choix du pack, pour ceux qui lisent jusqu'au bout.
@@ -157,7 +157,17 @@ export function EncartProduit({ slug }: { slug: string }) {
   )
 }
 
-/** 2. Barre mobile : visible une fois l'encart dépassé, jusqu'à la fin de l'article. */
+/**
+ * 2. Barre mobile : visible une fois l'encart dépassé, jusqu'à la fin de
+ * l'article.
+ *
+ * Toute la barre est un lien, pas seulement le bouton « Voir » : sur
+ * téléphone, on touche une zone, pas un bouton de 40 px. La croix reste, à
+ * part : sur un article de vingt écrans, une barre impossible à fermer finit
+ * par agacer, et la fermeture est mesurée (dismiss_promotion) pour savoir si
+ * elle gêne. Elle est hors du lien, avec sa propre zone de toucher, pour ne
+ * jamais ouvrir la page par erreur.
+ */
 export function BarreProduitMobile({ slug }: { slug: string }) {
   const encart = usePosition('[data-encart-produit]', 'apres')
   const fin = usePosition('[data-fin-article]', 'avant')
@@ -176,6 +186,7 @@ export function BarreProduitMobile({ slug }: { slug: string }) {
 
   const masquer = () => {
     setMasquee(true)
+    track('dismiss_promotion', promotion('barre_mobile_article', slug))
     try {
       sessionStorage.setItem(CLE_BARRE_MASQUEE, '1')
     } catch {
@@ -192,30 +203,33 @@ export function BarreProduitMobile({ slug }: { slug: string }) {
       }`}
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
-      <div className="mx-3 mb-3 flex items-center gap-3 rounded-2xl border border-gray-200 bg-white px-3 py-2.5 shadow-[0_-4px_24px_rgba(0,0,0,0.12)]">
-        <div className="relative h-11 w-11 flex-shrink-0 overflow-hidden rounded-lg">
-          <Image src={PHOTO} alt="" fill sizes="44px" className="object-cover" />
-        </div>
-        <div className="min-w-0 flex-1">
-          {/* Texte court : à 375 px, « Plaque NFC avis Google » et « livrée
-              programmée » étaient tronqués à côté du bouton. */}
-          <p className="truncate text-sm font-bold text-gray-900">Plaque avis Google</p>
-          <p className="truncate text-xs text-gray-600">Dès {PRIX_MINIMUM}</p>
-        </div>
+      <div className="mx-3 mb-3 flex items-center rounded-2xl border border-gray-200 bg-white shadow-[0_-4px_24px_rgba(0,0,0,0.12)]">
         <Link
           href="/#product"
           tabIndex={visible ? 0 : -1}
+          aria-label={`Voir les packs de plaques NFC avis Google, dès ${PRIX_MINIMUM}`}
           onClick={() => clicPromotion('barre_mobile_article', slug, '/#product')}
-          className="flex-shrink-0 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white"
+          className="flex min-w-0 flex-1 items-center gap-3 rounded-l-2xl py-2.5 pl-3 pr-2 active:bg-gray-50"
         >
-          Voir
+          <span className="relative h-11 w-11 flex-shrink-0 overflow-hidden rounded-lg">
+            <Image src={PHOTO} alt="" fill sizes="44px" className="object-cover" />
+          </span>
+          <span className="min-w-0 flex-1">
+            {/* Texte court : à 375 px, « Plaque NFC avis Google » et « livrée
+                programmée » étaient tronqués à côté du bouton. */}
+            <span className="block truncate text-sm font-bold text-gray-900">Plaque avis Google</span>
+            <span className="block truncate text-xs text-gray-600">Dès {PRIX_MINIMUM}</span>
+          </span>
+          <span aria-hidden="true" className="flex-shrink-0 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white">
+            Voir
+          </span>
         </Link>
         <button
           type="button"
           onClick={masquer}
           tabIndex={visible ? 0 : -1}
           aria-label="Masquer"
-          className="-mr-1 flex-shrink-0 p-1.5 text-gray-400 hover:text-gray-600"
+          className="flex h-11 w-10 flex-shrink-0 items-center justify-center rounded-r-2xl text-gray-400 hover:text-gray-600"
         >
           <X className="h-4 w-4" aria-hidden="true" />
         </button>
