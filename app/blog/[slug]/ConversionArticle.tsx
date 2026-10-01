@@ -76,21 +76,42 @@ function useAffichage<T extends Element>(emplacement: Emplacement, slug: string,
   return ref
 }
 
-/** Position d'un repère de la page par rapport à l'écran : pas encore atteint, à l'écran, ou dépassé. */
+/**
+ * Position d'un repère de la page par rapport à l'écran : pas encore atteint,
+ * à l'écran, ou dépassé.
+ *
+ * Recalculée au défilement, une fois par image au plus, et non par un
+ * IntersectionObserver : celui-ci ne signale que les entrées et sorties de
+ * l'écran. Un saut (lien du sommaire, retour en haut, défilement très
+ * rapide) fait passer un repère d'« au-dessus » à « en dessous » sans qu'il
+ * traverse l'écran, et l'état restait figé : constaté le 2026-10-01, la
+ * barre mobile ne revenait pas après un retour depuis le bas de page.
+ */
 function usePosition(selecteur: string, siAbsent: Position): Position {
   const [position, setPosition] = useState<Position>('avant')
   useEffect(() => {
     const element = document.querySelector(selecteur)
-    if (!element || typeof IntersectionObserver === 'undefined') {
+    if (!element) {
       setPosition(siAbsent)
       return
     }
-    const observateur = new IntersectionObserver(([entree]) => {
-      if (entree.isIntersecting) setPosition('visible')
-      else setPosition(entree.boundingClientRect.top < 0 ? 'apres' : 'avant')
-    })
-    observateur.observe(element)
-    return () => observateur.disconnect()
+    let image = 0
+    const calculer = () => {
+      image = 0
+      const cadre = element.getBoundingClientRect()
+      setPosition(cadre.bottom < 0 ? 'apres' : cadre.top > window.innerHeight ? 'avant' : 'visible')
+    }
+    const demander = () => {
+      if (!image) image = requestAnimationFrame(calculer)
+    }
+    calculer()
+    window.addEventListener('scroll', demander, { passive: true })
+    window.addEventListener('resize', demander)
+    return () => {
+      window.removeEventListener('scroll', demander)
+      window.removeEventListener('resize', demander)
+      if (image) cancelAnimationFrame(image)
+    }
   }, [selecteur, siAbsent])
   return position
 }
@@ -176,8 +197,10 @@ export function BarreProduitMobile({ slug }: { slug: string }) {
           <Image src={PHOTO} alt="" fill sizes="44px" className="object-cover" />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-bold text-gray-900">Plaque NFC avis Google</p>
-          <p className="truncate text-xs text-gray-600">Dès {PRIX_MINIMUM} · livrée programmée</p>
+          {/* Texte court : à 375 px, « Plaque NFC avis Google » et « livrée
+              programmée » étaient tronqués à côté du bouton. */}
+          <p className="truncate text-sm font-bold text-gray-900">Plaque avis Google</p>
+          <p className="truncate text-xs text-gray-600">Dès {PRIX_MINIMUM}</p>
         </div>
         <Link
           href="/#product"
