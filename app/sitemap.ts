@@ -47,10 +47,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const MODIF_COMMERCIAL = '2026-08-07'   // accueil, fiches produit, pages secteur
   const MODIF_LEGAL = '2026-08-05'        // CGV, livraison, retours, mentions legales
   const MODIF_EDITORIAL = '2026-08-17'    // /blog et pages de contenu
+  const dernierArticle = articles
+    .map((a) => a.dateModified || a.date)
+    .filter((d): d is string => typeof d === 'string')
+    .sort()
+    .pop() ?? MODIF_EDITORIAL
 
   const staticPages = [
     { url: BASE_URL, lastModified: MODIF_COMMERCIAL, changeFrequency: 'weekly' as const, priority: 1 },
-    { url: `${BASE_URL}/blog`, lastModified: MODIF_EDITORIAL, changeFrequency: 'weekly' as const, priority: 0.8 },
+    // /blog liste les articles : il change a chaque publication. Sa date suit
+    // donc l'article le plus recent, sans quoi Google le croirait fige au
+    // 17/08 alors qu'un nouvel article y apparait trois fois par semaine.
+    { url: `${BASE_URL}/blog`, lastModified: dernierArticle > MODIF_EDITORIAL ? dernierArticle : MODIF_EDITORIAL, changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${BASE_URL}/a-propos`, lastModified: MODIF_EDITORIAL, changeFrequency: 'monthly' as const, priority: 0.6 },
     { url: `${BASE_URL}/contact`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${BASE_URL}/livraison`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.4 },

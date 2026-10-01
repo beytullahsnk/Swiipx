@@ -9,7 +9,7 @@
 # sitemap, par exemple après une refonte. Cocher « simulation » pour vérifier
 # sans rien transmettre.
 
-name: IndexNow
+name: Indexation (Bing et Google)
 
 on:
   push:
@@ -63,4 +63,18 @@ jobs:
             node scripts/indexnow.mjs --simulation
           else
             node scripts/indexnow.mjs
+          fi
+
+      # Google ne lit pas IndexNow : on lui renvoie le sitemap par l'API Search
+      # Console, une fois le deploiement en ligne (l'etape precedente l'attend).
+      # Sans le secret GSC_SERVICE_ACCOUNT_JSON, l'etape s'arrete sans erreur.
+      - name: Google — sitemap renvoyé à Search Console
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          SIMULATION: ${{ inputs.simulation }}
+        run: |
+          if [ "$SIMULATION" = "true" ]; then
+            node scripts/google-sitemap.mjs --simulation
+          else
+            node scripts/google-sitemap.mjs
           fi
