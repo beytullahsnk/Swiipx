@@ -1,0 +1,27 @@
+# Signale qu'un article a été proposé par la routine de rédaction.
+#
+# La routine Claude Code (lundi, mercredi, vendredi) pousse chaque article sur
+# une branche claude/article-AAAA-MM-JJ-<slug>. Ce workflow ne contrôle rien
+# lui-même : il est lu dans la branche proposée, qui pourrait l'avoir modifié.
+# Il sert de déclencheur. À sa fin, GitHub lance « Publication des articles »
+# dans sa version de main, hors d'atteinte de la branche.
+
+name: Article proposé
+
+on:
+  push:
+    branches: ['claude/article-**']
+
+permissions:
+  contents: read
+
+jobs:
+  signaler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Article reçu
+        env:
+          BRANCHE: ${{ github.ref_name }}
+          COMMIT: ${{ github.sha }}
+        run: echo "Article proposé sur $BRANCHE ($COMMIT) ; contrôles et publication dans « Publication des articles »."

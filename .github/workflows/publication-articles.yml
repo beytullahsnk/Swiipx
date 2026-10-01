@@ -1,0 +1,198 @@
+# Contrôle puis met en ligne les articles proposés par la routine de rédaction.
+#
+# POURQUOI UNE BRANCHE ET NON UN PUSH SUR MAIN : la routine (Claude Code,
+# lundi, mercredi et vendredi, voir docs/articles/CONSIGNES.md) rédige sans
+# relecture humaine. Elle propose donc son article sur une branche
+# claude/article-…, et c'est ce workflow qui publie, seulement si :
+#   1. la branche ne touche que les fichiers d'un article ;
+#   2. le code compile (TypeScript, comme au build Vercel) ;
+#   3. scripts/verifier-articles.mjs passe : sécurité du HTML, cohérence des
+#      cinq fichiers, règles éditoriales (prix HT, sources, iPhone…), et
+#      liens externes vivants, ce que seul GitHub peut vérifier (le réseau de
+#      la routine est filtré).
+# Si un contrôle échoue, rien n'est publié, GitHub envoie l'e-mail d'échec et
+# la branche reste en place pour examen.
+#
+# POURQUOI workflow_run : ce fichier est toujours lu dans sa version de main,
+# jamais dans celle de la branche proposée. Une branche ne peut donc ni
+# assouplir les contrôles ni modifier ce qui la publie.
+#
+# Une branche claude/article-essai-… passe les contrôles sans être publiée :
+# pour tester la chaîne sans rien mettre en ligne.
+
+name: Publication des articles
+
+on:
+  workflow_run:
+    workflows: ['Article proposé']
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publication-articles
+  cancel-in-progress: false
+
+jobs:
+  controler:
+    name: Contrôles
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      startsWith(github.event.workflow_run.head_branch, 'claude/article-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    outputs:
+      essai: ${{ steps.perimetre.outputs.essai }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      # Contrôle écrit ici, dans la version de main de ce fichier : il décide
+      # de ce que l'on accepte d'exécuter ensuite (npm, tsc, le script de
+      # contrôle, que la branche ne peut donc pas avoir modifiés).
+      - name: La branche ne touche que les fichiers d'un article
+        id: perimetre
+        env:
+          BRANCHE: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          set -euo pipefail
+          BASE="$(git merge-base origin/main HEAD)"
+          FICHIERS="$(git diff --name-only "$BASE" HEAD)"
+          if [ -z "$FICHIERS" ]; then
+            echo "::error::Aucun article dans cette branche. Message de la routine : $(git log -1 --format=%s HEAD)"
+            git log -1 --format=%B HEAD
+            exit 1
+          fi
+          AUTORISES='app/blog/[slug]/articles.ts
+          app/blog/[slug]/seo-data.ts
+          app/blog/[slug]/related.ts
+          app/blog/page.tsx
+          public/llms.txt
+          docs/articles/SUJETS.md'
+          AUTORISES="$(echo "$AUTORISES" | sed 's/^ *//')"
+          HORS="$(echo "$FICHIERS" | grep -vxF "$AUTORISES" || true)"
+          if [ -n "$HORS" ]; then
+            echo "::error::Fichiers hors du périmètre d'un article : $(echo $HORS)"
+            exit 1
+          fi
+          if [ -n "$(git rev-list --merges "$BASE"..HEAD)" ]; then
+            echo "::error::La branche contient un commit de fusion : historique linéaire attendu."
+            exit 1
+          fi
+          echo "Fichiers modifiés :"
+          echo "$FICHIERS"
+          case "$BRANCHE" in
+            claude/article-essai-*) echo "essai=true" >> "$GITHUB_OUTPUT" ;;
+            *) echo "essai=false" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      # --ignore-scripts : aucun script d'installation n'est exécuté ; tsc et
+      # le contrôle n'en ont pas besoin.
+      - name: Dépendances
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: TypeScript
+        run: npx tsc --noEmit
+
+      - name: Règles des articles et liens externes
+        run: node scripts/verifier-articles.mjs --depuis origin/main --liens
+
+  publier:
+    name: Mise en ligne
+    needs: controler
+    if: needs.controler.outputs.essai == 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    outputs:
+      avant: ${{ steps.fusion.outputs.avant }}
+      apres: ${{ steps.fusion.outputs.apres }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Publication sur main
+        id: fusion
+        env:
+          BRANCHE: ${{ github.event.workflow_run.head_branch }}
+          PROPOSE: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          git fetch -q origin "refs/heads/$BRANCHE"
+          if [ "$(git rev-parse FETCH_HEAD)" != "$PROPOSE" ]; then
+            echo "La branche a reçu un commit plus récent : son propre passage le publiera."
+            exit 0
+          fi
+          git fetch -q origin main
+          AVANT="$(git rev-parse origin/main)"
+          if git merge-base --is-ancestor "$AVANT" "$PROPOSE"; then
+            # Cas courant : main n'a pas bougé pendant la rédaction.
+            git push origin "$PROPOSE:refs/heads/main"
+            APRES="$PROPOSE"
+          else
+            # main a avancé entre-temps : l'article est rejoué par-dessus, puis
+            # recontrôlé, car le mélange des deux n'a jamais été vérifié.
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git checkout -q -B publication "$PROPOSE"
+            if ! git rebase -q origin/main; then
+              git rebase --abort || true
+              echo "::error::L'article entre en conflit avec des modifications récentes de main : à intégrer à la main."
+              exit 1
+            fi
+            echo "rejoue=oui" >> "$GITHUB_OUTPUT"
+            APRES="$(git rev-parse HEAD)"
+          fi
+          echo "avant=$AVANT" >> "$GITHUB_OUTPUT"
+          echo "apres=$APRES" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-node@v4
+        if: steps.fusion.outputs.rejoue == 'oui'
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Contrôles de l'article rejoué sur main
+        if: steps.fusion.outputs.rejoue == 'oui'
+        run: |
+          set -euo pipefail
+          npm ci --ignore-scripts --no-audit --no-fund
+          npx tsc --noEmit
+          node scripts/verifier-articles.mjs --depuis origin/main
+          git push origin HEAD:refs/heads/main
+
+      - name: Branche proposée retirée
+        if: steps.fusion.outputs.apres != ''
+        env:
+          BRANCHE: ${{ github.event.workflow_run.head_branch }}
+        run: git push origin --delete "$BRANCHE" || echo "Branche déjà retirée."
+
+  # Les publications faites par ce workflow ne déclenchent pas d'elles-mêmes
+  # l'action « Indexation » (GitHub ne relance pas de workflow sur un push de
+  # son propre jeton) : on l'appelle donc ici, avec les commits concernés.
+  indexation:
+    name: Indexation
+    needs: publier
+    if: needs.publier.outputs.apres != ''
+    permissions:
+      contents: read
+    uses: ./.github/workflows/indexnow.yml
+    with:
+      avant: ${{ needs.publier.outputs.avant }}
+      apres: ${{ needs.publier.outputs.apres }}
+    secrets: inherit

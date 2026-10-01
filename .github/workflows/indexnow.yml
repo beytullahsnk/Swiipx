@@ -8,6 +8,11 @@
 # Lancement manuel (onglet Actions > IndexNow > Run workflow) : signale TOUT le
 # sitemap, par exemple après une refonte. Cocher « simulation » pour vérifier
 # sans rien transmettre.
+#
+# Appel par « Publication des articles » (workflow_call) : les articles mis en
+# ligne par la routine sont poussés sur main par le jeton de GitHub, qui ne
+# déclenche aucun workflow. Ce workflow-là appelle donc celui-ci lui-même, en
+# indiquant les commits avant et après la publication.
 
 name: Indexation (Bing et Google)
 
@@ -22,6 +27,16 @@ on:
         description: "Simulation : lister les URL sans rien transmettre"
         type: boolean
         default: false
+  workflow_call:
+    inputs:
+      avant:
+        description: "Commit de main avant la publication"
+        type: string
+        required: true
+      apres:
+        description: "Commit de main après la publication"
+        type: string
+        required: true
 
 permissions:
   contents: read
@@ -39,6 +54,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ inputs.apres || github.sha }}
           # Historique complet : il faut pouvoir relire seo-data.ts tel qu'il
           # était avant le push pour savoir ce qui a changé.
           fetch-depth: 0
@@ -48,10 +64,10 @@ jobs:
           node-version: '20'
 
       - name: Articles nouveaux, modifiés ou supprimés
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' || inputs.apres != ''
         env:
-          AVANT: ${{ github.event.before }}
-          APRES: ${{ github.sha }}
+          AVANT: ${{ inputs.avant || github.event.before }}
+          APRES: ${{ inputs.apres || github.sha }}
         run: node scripts/indexnow-apres-deploiement.mjs "$AVANT" "$APRES"
 
       - name: Tout le sitemap
