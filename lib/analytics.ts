@@ -38,6 +38,9 @@ export type AnalyticsEvent =
   | 'checkout_error'
   | 'express_checkout_shown'
   | 'express_checkout_used'
+  // Parcours des articles (app/blog/[slug]/ConversionArticle.tsx)
+  | 'view_promotion'
+  | 'select_promotion'
 
 declare global {
   interface Window {

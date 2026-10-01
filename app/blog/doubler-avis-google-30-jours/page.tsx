@@ -5,8 +5,7 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 import ArticleToc from '../[slug]/ArticleToc'
-import ArticleAds from '../[slug]/ArticleAds'
-import { getRelatedArticles } from '../[slug]/related'
+import { BarreProduitMobile, CarteProduitColonne, EncartProduit, FinArticle } from '../[slug]/ConversionArticle'
 
 /* ─────────────────────────────────────────────
    Table of Contents - sections de l'article
@@ -29,50 +28,11 @@ export default function DoublerAvisGoogle30Jours() {
   return (
     <div className="min-h-screen bg-white">
 
-      {/* ═══════════════════════════════════════════
-          BANNIÈRE PUB SWIIPX (haut de page)
-          ═══════════════════════════════════════════ */}
-      <section className="bg-accent pt-32 pb-10 relative overflow-hidden">
-        <div className="absolute left-6 top-32 hidden lg:block">
-          <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-            <Image src="/product-thumb-2.jpg" alt="Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours" width={192} height={192} className="w-full h-full object-cover" />
-          </div>
-        </div>
-        <div className="absolute right-6 top-32 hidden lg:block">
-          <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-            <Image src="/product-thumb-1.jpg" alt="Un client approche son iPhone de la plaque Swiipx posée sur le comptoir, à côté du terminal de paiement : la notification NFC s'affiche à l'écran" width={192} height={192} className="w-full h-full object-cover" />
-          </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
-          <p className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mb-4">
-            Boostez vos avis Google<br />avec Swiipx dès aujourd&apos;hui
-          </p>
-          <p className="text-gray-800 mb-6 max-w-xl mx-auto">
-            Commandez votre plaque NFC et commencez à collecter des avis en 10 secondes. 
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/#product"
-              className="px-8 py-3 bg-gray-900 text-white font-bold rounded-full hover:bg-gray-800 transition-colors shadow-lg"
-            >
-              Découvrir nos plaques avis Google
-            </Link>
-            <Link
-              href="/#how-it-works"
-              className="px-8 py-3 bg-white text-gray-900 font-bold rounded-full border-2 border-gray-900 hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"
-            >
-              <span>▶</span>
-              <span>Comment ça marche ?</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      {/* Banniere avant le titre retiree : voir app/blog/[slug]/ConversionArticle.tsx. */}
       {/* ═══════════════════════════════════════════
           HEADER DE L'ARTICLE
           ═══════════════════════════════════════════ */}
-      <section className="border-b border-gray-200 py-16">
+      <section className="border-b border-gray-200 pt-28 pb-12 sm:pt-32 sm:pb-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-2 text-sm text-gray-500 mb-6 uppercase tracking-wider font-semibold">
             <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
@@ -130,38 +90,6 @@ export default function DoublerAvisGoogle30Jours() {
                 SOMMAIRE
               </p>
               <ArticleToc sections={tocSections} />
-
-              {/* Bloc CTA Produit */}
-              <div className="border-t border-gray-200 pt-6">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-100">
-                  <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-4">
-                    <Image
-                      src="/product-main.jpg"
-                      alt="Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="text-sm font-bold text-gray-900 mb-1">
-                    Plaque NFC Swiipx
-                  </p>
-                  <p className="text-xs text-gray-600 mb-3 leading-relaxed">
-                    Livrée déjà programmée avec le lien d&apos;avis de votre établissement. Installation en 30 secondes.
-                  </p>
-                  {/* Aucun prix barre : les tarifs ont augmente, afficher une
-                      reduction serait une reduction fictive. */}
-                  <p className="text-lg font-bold text-primary mb-3">29,90 €</p>
-                  <Link
-                    href="/#product"
-                    className="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-blue-700 transition-colors text-sm shadow-md hover:shadow-lg"
-                  >
-                    Voir la plaque avis Google →
-                  </Link>
-                  <p className="text-center text-xs text-gray-500 mt-2">
-                    Livraison offerte en point relais · Garantie à vie
-                  </p>
-                </div>
-              </div>
             </div>
           </aside>
 
@@ -220,6 +148,8 @@ export default function DoublerAvisGoogle30Jours() {
                 </p>
               </div>
             </section>
+
+            <EncartProduit slug={SLUG} />
 
             {/* ────────────────────────────────────
                 Section 2 : Phase 1 — GMB
@@ -682,7 +612,7 @@ export default function DoublerAvisGoogle30Jours() {
 
                 <div className="border-b border-gray-100 pb-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Combien coûte une plaque NFC Swiipx ?</h3>
-                  <p className="text-gray-700 leading-relaxed">À partir de 29,90&nbsp;€ pour une plaque. Le <Link href="/#product" className="text-primary font-medium hover:underline">pack 2 plaques</Link> (le plus populaire) est à 54,90&nbsp;€ et le pack 5 plaques à 89,90&nbsp;€. Aucun abonnement mensuel, aucun frais caché. La plaque fonctionne immédiatement et dure plusieurs années.</p>
+                  <p className="text-gray-700 leading-relaxed">À partir de 29,90&nbsp;€&nbsp;HT pour une plaque. Le <Link href="/#product" className="text-primary font-medium hover:underline">pack 2 plaques</Link> (le plus populaire) est à 54,90&nbsp;€ et le pack 5 plaques à 89,90&nbsp;€. Aucun abonnement mensuel, aucun frais caché. La plaque fonctionne immédiatement et dure plusieurs années.</p>
                 </div>
 
                 <div className="border-b border-gray-100 pb-6">
@@ -702,17 +632,21 @@ export default function DoublerAvisGoogle30Jours() {
               </div>
             </section>
 
+            <FinArticle slug={SLUG} secteur={null} />
+
           </article>
 
-          {/* ── COLONNE DROITE : ADS carousel au scroll ── */}
+          {/* ── COLONNE DROITE : carte produit ── */}
           <aside className="hidden lg:block">
             <div className="sticky top-36">
-              <ArticleAds related={getRelatedArticles(SLUG)} />
+              <CarteProduitColonne slug={SLUG} />
             </div>
           </aside>
 
         </div>
       </div>
+
+      <BarreProduitMobile slug={SLUG} />
     </div>
   )
 }
