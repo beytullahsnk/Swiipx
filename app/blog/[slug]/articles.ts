@@ -18,6 +18,232 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'lien-avis-google': {
+    title: 'Lien d\'avis Google : le trouver, le partager, le tester (et ne pas y toucher)',
+    category: 'SEO Local',
+    date: '1er octobre 2026',
+    readTime: '16 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Le lien d\'avis Google ouvre directement le formulaire de notation de votre fiche. Où le récupérer, comment le distinguer du lien de fiche, le tester sur iPhone et Android, le partager, et pourquoi ne jamais le raccourcir ni le filtrer.',
+    tocSections: [
+      { id: 'pourquoi-lien-avis', label: 'Pourquoi ce lien compte' },
+      { id: 'definition-lien-avis', label: 'Lien d\'avis ou lien de fiche' },
+      { id: 'trouver-lien-avis', label: 'Trouver son lien pas à pas' },
+      { id: 'place-id', label: 'La méthode du Place ID' },
+      { id: 'tester-lien', label: 'Tester avant de diffuser' },
+      { id: 'ne-pas-modifier', label: 'Pourquoi ne pas le modifier' },
+      { id: 'partager-lien', label: 'Où le partager' },
+      { id: 'quand-lien-change', label: 'Quand le lien change' },
+      { id: 'erreurs-lien-avis', label: 'Les 7 erreurs' },
+      { id: 'faq-lien-avis', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-lien-avis" class="scroll-mt-28 mb-16">
+<h2>Pourquoi le lien d'avis Google mérite qu'on s'y arrête</h2>
+<p>Demander un avis à un client satisfait, c'est facile. Obtenir qu'il le publie vraiment, c'est une autre affaire. Entre le moment où il dit « oui, bien sûr » et celui où il appuie sur « Publier », il y a un chemin : sortir le téléphone, ouvrir Google, taper le nom de l'établissement, trouver la bonne fiche parmi celles du quartier, faire défiler jusqu'aux avis, repérer le bouton pour en écrire un. Chaque étape est une occasion d'abandonner, et la plupart des clients abandonnent sans même s'en rendre compte : ils comptent le faire « ce soir », puis l'oublient.</p>
+<p>Le lien d'avis Google supprime ce chemin. C'est une adresse web qui ouvre directement le formulaire de notation de votre fiche, avec les étoiles à cocher et la zone de texte. Le client n'a plus rien à chercher : il note, il écrit s'il le souhaite, il publie. Tout le reste de votre dispositif de collecte (ticket de caisse, e-mail de remerciement, SMS, QR code, plaque NFC) repose sur ce lien. S'il est faux, cassé ou mal choisi, tout le dispositif tombe avec lui, souvent en silence.</p>
+<p>Les clients ne sont pas réticents par principe. Selon l'<a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">enquête Local Consumer Review Survey 2026 de BrightLocal</a>, 78 % des consommateurs interrogés disent avoir été sollicités pour laisser un avis au cours des douze derniers mois, et 28 % déclarent qu'ils en écrivent « toujours » un quand on le leur demande, contre 16 % l'année précédente. L'enquête porte sur des consommateurs anglo-saxons et ne se transpose pas telle quelle à la France, mais elle dit une chose utile : la demande est devenue normale, et c'est la facilité du geste qui fait la différence.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 En une phrase :</strong> le lien d'avis Google est l'adresse qui ouvre directement le formulaire de notation de votre fiche ; il se récupère gratuitement depuis votre fiche d'établissement, il se teste avant d'être diffusé, et il ne se modifie pas, parce que chaque transformation ajoute un risque de panne ou de non-conformité.</p>
+</div>
+<p>Ce guide détaille où trouver ce lien, comment le reconnaître, comment le tester sur plusieurs téléphones, pourquoi il ne faut ni le raccourcir avec un service tiers ni le faire passer par un filtre, et ce qu'il faut faire le jour où il change. Il s'adresse aux commerçants, artisans, restaurateurs et indépendants qui gèrent eux-mêmes leur fiche Google.</p>
+</section>
+
+<section id="definition-lien-avis" class="scroll-mt-28 mb-16">
+<h2>Lien d'avis, lien de fiche, lien Maps : ne pas les confondre</h2>
+<p>Trois liens différents circulent autour d'une fiche Google, et la confusion entre eux est la première cause de dispositifs de collecte qui ne rapportent rien. Ils mènent tous « à votre fiche », mais pas au même endroit, et le résultat pour le client n'a rien à voir.</p>
+<h3>Le lien de la fiche</h3>
+<p>C'est l'adresse que l'on obtient en appuyant sur « Partager » depuis Google Maps. Elle ouvre votre fiche : photos, horaires, itinéraire, avis existants. Elle est parfaite pour indiquer où vous trouver, mais elle n'ouvre pas le formulaire d'avis. Le client qui la reçoit doit encore faire défiler la fiche, trouver l'onglet des avis et le bouton pour en rédiger un. Sur un téléphone, c'est souvent là qu'il décroche.</p>
+<h3>Le lien d'avis</h3>
+<p>C'est celui qui nous intéresse. Il ouvre directement la fenêtre de notation de votre établissement, avec les cinq étoiles et la zone de commentaire. Google le fournit lui-même depuis la fiche d'établissement : l'aide officielle décrit la démarche dans sa page <a href="https://support.google.com/business/answer/16816815?hl=fr" target="_blank" rel="noopener noreferrer">Créer un lien ou un QR code pour demander des avis</a>. C'est ce lien, et lui seul, qu'il faut placer derrière un QR code, une plaque NFC, un e-mail ou un SMS de remerciement.</p>
+<h3>Le lien construit avec le Place ID</h3>
+<p>Il existe une troisième forme, très répandue chez les prestataires et dans les tutoriels : une adresse construite à partir de l'identifiant unique de votre établissement dans la base de Google, le Place ID. Elle a la forme <code>search.google.com/local/writereview?placeid=</code> suivie de l'identifiant. Elle ouvre elle aussi le formulaire d'avis. Ce format n'est toutefois pas présenté par l'aide de la fiche d'établissement comme la méthode de référence : c'est une solution de repli, utile quand on ne peut pas accéder à la gestion de la fiche, que nous détaillons plus bas.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Lien</th><th class="text-left p-3 border-b">Où il mène</th><th class="text-left p-3 border-b">Usage recommandé</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Lien de partage Maps</td><td class="p-3 border-b">La fiche complète</td><td class="p-3 border-b">Site web, signature d'e-mail, « venir nous voir »</td></tr>
+<tr><td class="p-3 border-b">Lien d'avis fourni par Google</td><td class="p-3 border-b">Le formulaire de notation</td><td class="p-3 border-b">QR code, plaque NFC, ticket, SMS, e-mail de remerciement</td></tr>
+<tr><td class="p-3">Lien construit avec le Place ID</td><td class="p-3">Le formulaire de notation</td><td class="p-3">Solution de repli, sans accès à la gestion de la fiche</td></tr>
+</tbody>
+</table>
+</div>
+<p>Une règle simple en découle : avant de diffuser un lien, ouvrez-le et regardez ce qui s'affiche. Si vous voyez la fiche entière, vous avez un lien de fiche. Si vous voyez directement les étoiles à cocher, vous avez un lien d'avis.</p>
+</section>
+
+<section id="trouver-lien-avis" class="scroll-mt-28 mb-16">
+<h2>Trouver son lien d'avis Google, pas à pas</h2>
+<p>Le lien d'avis se récupère depuis la gestion de votre fiche d'établissement. Il faut donc être connecté avec le compte Google qui gère la fiche, et que celle-ci soit active et validée. Une fiche non validée n'offre pas les outils de gestion, et le lien proposé ailleurs risque de pointer vers une fiche que vous ne contrôlez pas.</p>
+<h3>Depuis un ordinateur</h3>
+<ol>
+<li>Connectez-vous au compte Google qui gère la fiche, puis cherchez le nom de votre établissement sur Google : le panneau de gestion de la fiche s'affiche en haut des résultats.</li>
+<li>Repérez la fonction dédiée aux avis : selon les versions de l'interface, elle s'appelle « Demander des avis », ou se trouve sous « Voir les avis » puis « Recevoir plus d'avis ».</li>
+<li>Une fenêtre s'ouvre avec le lien et un QR code. Copiez le lien, ou enregistrez l'image du QR code.</li>
+<li>Collez le lien dans un document où vous rangez les informations de votre fiche : vous en aurez besoin plus tard.</li>
+</ol>
+<p>L'aide de Google indique que la génération du QR code d'avis se fait depuis un navigateur sur ordinateur, et non depuis un appareil mobile. La démarche complète figure dans la page <a href="https://support.google.com/business/answer/16816815?hl=fr" target="_blank" rel="noopener noreferrer">Créer un lien ou un QR code pour demander des avis</a>, qui reste la référence : les intitulés des boutons changent régulièrement, la logique reste la même.</p>
+<h3>Depuis un téléphone</h3>
+<p>Depuis l'application Google Maps ou la recherche Google sur mobile, en étant connecté au bon compte, la gestion de la fiche propose aussi de partager le formulaire d'avis. Le lien peut être copié et envoyé par message. Si vous ne trouvez pas le bouton, passez par un ordinateur : c'est plus fiable, et vous aurez le QR code en prime.</p>
+<h3>Si vous gérez plusieurs fiches</h3>
+<p>Chaque établissement a sa propre fiche, donc son propre lien d'avis. Un commerçant qui exploite deux boutiques doit récupérer deux liens, un par fiche, et ne jamais les mélanger : un avis laissé sur la mauvaise fiche décrit une expérience qui n'a pas eu lieu à cet endroit, ce qui n'aide ni le client suivant ni vous. Vérifiez à chaque fois, en haut de la fenêtre, le nom et l'adresse de la fiche dont vous copiez le lien.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Méthode :</strong> créez une fiche mémo d'une page avec le nom exact de l'établissement, l'adresse, le compte Google gestionnaire, le lien d'avis, la date à laquelle vous l'avez récupéré et la liste des supports où il est utilisé (QR code, plaque, modèle d'e-mail, signature). Le jour où quelque chose change, vous saurez immédiatement quoi mettre à jour.</p>
+</div>
+</section>
+
+<section id="place-id" class="scroll-mt-28 mb-16">
+<h2>La méthode de repli : construire le lien avec le Place ID</h2>
+<p>Il arrive qu'on n'ait pas accès à la gestion de la fiche : le gestionnaire est un ancien associé, une agence qui ne répond plus, ou la fiche est en cours de récupération. Dans ce cas, on peut construire un lien d'avis à partir du Place ID, l'identifiant que Google attribue à chaque lieu de sa base cartographique.</p>
+<h3>Ce qu'est le Place ID</h3>
+<p>La documentation destinée aux développeurs décrit les <a href="https://developers.google.com/maps/documentation/places/web-service/place-id" target="_blank" rel="noopener noreferrer">Place IDs</a> comme des identifiants textuels uniques des lieux de la base Google Places, utilisés par les différentes interfaces de Google Maps Platform. La même page fournit un outil de recherche : on tape le nom et l'adresse de l'établissement, on clique sur le bon repère, et l'identifiant s'affiche.</p>
+<h3>Construire et vérifier le lien</h3>
+<ol>
+<li>Récupérez le Place ID de votre établissement avec l'outil de Google.</li>
+<li>Ajoutez-le à la fin de l'adresse <code>https://search.google.com/local/writereview?placeid=</code>.</li>
+<li>Ouvrez le lien obtenu : le formulaire d'avis doit s'afficher avec le nom exact de votre établissement.</li>
+<li>Si le nom affiché n'est pas le vôtre, ou si une adresse proche apparaît, vous avez récupéré l'identifiant d'un autre lieu : recommencez.</li>
+</ol>
+<h3>Les limites de cette méthode</h3>
+<p>La documentation de Google précise qu'un Place ID peut changer avec les mises à jour de la base de Google Maps, et qu'un identifiant peut devenir obsolète, par exemple quand un établissement ferme ou déménage. Elle recommande d'ailleurs aux développeurs de rafraîchir les identifiants de plus de douze mois. Pour un commerçant, la conséquence est simple : un lien construit à la main se vérifie régulièrement, et dès que vous retrouvez l'accès à la gestion de la fiche, remplacez-le par le lien fourni par Google.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Ne réglez pas un problème d'accès par un contournement :</strong> si vous ne gérez plus votre fiche, la vraie solution est d'en reprendre la gestion. Sans accès, vous ne pouvez ni répondre aux avis, ni corriger vos horaires, ni signaler un avis abusif. Le lien construit avec le Place ID dépanne quelques semaines ; il ne remplace pas la maîtrise de votre fiche.</p>
+</div>
+</section>
+
+<section id="tester-lien" class="scroll-mt-28 mb-16">
+<h2>Tester son lien avant de le diffuser</h2>
+<p>Un lien d'avis se teste comme on teste une serrure avant de remettre les clés. Une fois imprimé sur mille tickets, gravé dans un QR code collé en vitrine ou programmé dans une plaque, une erreur coûte cher à corriger et, surtout, elle ne se voit pas : les clients qui tombent sur une page d'erreur ne viennent pas vous le dire. Ils referment simplement leur navigateur.</p>
+<h3>Le protocole en cinq essais</h3>
+<ol>
+<li><strong>Sur votre ordinateur, en navigation privée.</strong> Vous voyez ce que voit un client qui n'est pas connecté à votre compte. Google lui demandera de se connecter pour publier : c'est normal, un avis est toujours rattaché à un compte.</li>
+<li><strong>Sur un iPhone</strong> d'un proche ou d'un collègue, connecté à son propre compte Google.</li>
+<li><strong>Sur un téléphone Android</strong>, avec l'application Google Maps installée : le lien peut alors s'ouvrir dans l'application plutôt que dans le navigateur.</li>
+<li><strong>Depuis le support final</strong> : scannez le QR code imprimé, approchez un téléphone de la plaque NFC, cliquez sur le lien depuis l'e-mail réellement envoyé, pas depuis le brouillon.</li>
+<li><strong>Après une semaine</strong>, refaites un essai rapide. Un support qui fonctionnait le premier jour peut avoir été recouvert, déplacé ou abîmé.</li>
+</ol>
+<p>À chaque essai, vérifiez trois choses : le nom affiché est bien celui de votre établissement, l'adresse est la bonne, et la fenêtre de notation s'ouvre directement. Arrêtez-vous avant de publier : votre propre avis sur votre établissement serait un conflit d'intérêts que les règles de Google interdisent.</p>
+<h3>Le cas particulier de la plaque NFC</h3>
+<p>Pour une plaque NFC, testez avec plusieurs modèles de téléphones. Les iPhone XR, XS, SE de 2e génération et les modèles suivants lisent la puce sans application. Sur les iPhone 7, 8 et X, il faut ouvrir le Lecteur de tag NFC depuis le centre de contrôle. Sur Android, le NFC doit être activé dans les réglages. Un QR code imprimé sur la plaque couvre les autres téléphones : testez-le aussi. Notre article sur les <a href="/blog/plaque-nfc-vs-qr-code-avis-google">différences entre plaque NFC et QR code</a> détaille les forces de chaque technologie.</p>
+</section>
+
+<section id="ne-pas-modifier" class="scroll-mt-28 mb-16">
+<h2>Pourquoi il ne faut pas modifier son lien d'avis</h2>
+<p>Une fois le lien en main, la tentation est grande de l'arranger : le raccourcir pour qu'il tienne sur un ticket, le faire passer par un outil de suivi pour compter les clics, ou l'insérer dans un petit questionnaire qui « trie » les clients avant de les envoyer vers Google. Chacune de ces transformations a un coût, et certaines sont interdites.</p>
+<h3>Les raccourcisseurs et les redirections : un maillon de plus qui peut casser</h3>
+<p>Un lien raccourci par un service tiers ne mène pas directement à Google : il passe d'abord par le serveur de ce service, qui redirige ensuite le client. Si le service ferme, change ses conditions, supprime les liens inactifs ou passe à un modèle payant, votre lien cesse de fonctionner, alors que votre fiche Google, elle, n'a pas bougé.</p>
+<p>Google lui-même en a donné l'exemple avec son propre raccourcisseur. Le <a href="https://developers.googleblog.com/en/google-url-shortener-links-will-no-longer-be-available/" target="_blank" rel="noopener noreferrer">blog Google for Developers</a> a annoncé la fin des liens goo.gl, avec une date butoir au 25 août 2025, avant d'assouplir sa décision : seuls les liens jugés inactifs ont été désactivés, et les liens goo.gl générés par les applications Google, comme le partage depuis Maps, continuent de fonctionner. Cet épisode montre qu'une adresse courte dépend entièrement de la volonté de celui qui l'héberge. Pour un QR code collé sur un comptoir ou une puce programmée, mieux vaut un lien qui va directement chez Google, sans intermédiaire.</p>
+<h3>Les paramètres ajoutés : un risque d'erreur pour un bénéfice faible</h3>
+<p>Ajouter des paramètres de suivi à la fin du lien pour mesurer d'où viennent les clics est une pratique courante en marketing. Sur un lien d'avis, le bénéfice est faible : Google ne vous transmet pas la provenance des avis, et le seul indicateur qui compte se lit directement sur la fiche, le nombre d'avis reçus. Le risque, lui, est réel : une faute de frappe, un caractère mal encodé, et le lien ouvre une page d'erreur. Si vous voulez comparer deux supports, comparez plutôt le rythme des avis avant et après leur installation.</p>
+<h3>Le filtrage des clients : interdit par Google</h3>
+<p>C'est le point le plus important. Certains outils proposent de placer une étape avant le lien : le client note d'abord son expérience sur une page intermédiaire, et seuls ceux qui donnent une bonne note sont envoyés vers Google, les autres étant dirigés vers un formulaire privé. Cette pratique a un nom dans le métier, le « gating », et elle est contraire aux règles de Google.</p>
+<p>Le <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">règlement de Google sur les contenus interdits</a> range dans la manipulation des notes le fait de décourager ou d'interdire les avis négatifs, et celui de solliciter de manière sélective les avis positifs. La page consacrée au <a href="https://support.google.com/contributionpolicy/answer/11414422?hl=fr" target="_blank" rel="noopener noreferrer">faux engagement</a> rappelle que les contributions doivent refléter une expérience réellement vécue, et qu'offrir une contrepartie en échange d'un avis n'est pas admis.</p>
+<p>Les conséquences sont décrites dans la page de Google sur les <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">restrictions appliquées aux fiches pour non-respect des règles</a> : en plus du retrait des avis non conformes, la fiche peut se voir empêchée de recevoir de nouveaux avis pendant une période donnée, ses avis existants peuvent cesser d'être affichés, et un avertissement peut prévenir les internautes que de faux avis ont été supprimés. Autrement dit, le filtre qui devait protéger votre note peut faire disparaître tous vos avis.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ La règle qui protège votre fiche :</strong> le même lien, sans étape intermédiaire, pour tous vos clients, qu'ils aient l'air ravis ou non. Pas de contrepartie, pas de tri, pas d'avis de proches ou de salariés. C'est aussi ce qui donne de la valeur à votre note : elle reflète l'avis de votre clientèle réelle.</p>
+</div>
+<p>Le droit français va dans le même sens. La fiche pratique de la DGCCRF <a href="https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/avis-en-ligne-attention-aux-faux-commentaires" target="_blank" rel="noopener noreferrer">Avis en ligne : attention aux faux commentaires</a> rappelle que publier de faux avis ou modifier de vrais avis constitue une pratique commerciale trompeuse, sanctionnée pénalement. Notre article sur les <a href="/blog/faux-avis-google-signaler">faux avis Google et leur signalement</a> traite le sujet en détail.</p>
+</section>
+
+<section id="partager-lien" class="scroll-mt-28 mb-16">
+<h2>Où et comment partager son lien d'avis</h2>
+<p>Un lien d'avis n'a de valeur que s'il arrive dans la main du client au bon moment : quand l'expérience est terminée, qu'elle s'est bien passée, et qu'il a quelques secondes devant lui. L'aide de Google cite elle-même plusieurs canaux dans sa page sur la <a href="https://support.google.com/business/answer/3474050?hl=fr" target="_blank" rel="noopener noreferrer">gestion des avis clients</a> et dans celle sur la création du lien : les tickets de caisse, les e-mails de remerciement, la fin d'une conversation, ou un QR code imprimé et affiché en boutique.</p>
+<h3>Les canaux à distance</h3>
+<ul>
+<li><strong>L'e-mail de remerciement</strong>, envoyé après une prestation ou une livraison. Une phrase, un lien, rien d'autre. Évitez les grands boutons d'étoiles colorées qui laissent croire que le client note dans l'e-mail.</li>
+<li><strong>Le SMS</strong>, pour les métiers où le client a laissé son numéro (artisans, garages, instituts). Court, personnalisé, envoyé le jour même.</li>
+<li><strong>La signature d'e-mail</strong>, discrète, pour les échanges réguliers avec des clients.</li>
+<li><strong>Le site web</strong>, sur la page de contact ou en pied de page : utile, mais peu efficace seul, car le client qui visite votre site n'a pas encore vécu l'expérience.</li>
+</ul>
+<p>Nous comparons ces canaux dans l'article <a href="/blog/sms-email-ou-plaque-nfc-avis-google">SMS, e-mail ou plaque NFC : quelle méthode pour obtenir des avis Google</a>.</p>
+<h3>Les canaux sur place</h3>
+<ul>
+<li><strong>Le ticket de caisse</strong>, avec un QR code imprimé. Il part dans la poche du client, qui le retrouvera ou non.</li>
+<li><strong>Le QR code affiché</strong> en vitrine, en caisse ou sur les tables. Il demande d'ouvrir l'appareil photo et de viser.</li>
+<li><strong>La plaque NFC</strong>, posée là où le client attend ou paie : il approche son téléphone, le formulaire s'ouvre. Pour savoir où la poser, voir notre guide sur <a href="/blog/ou-placer-plaque-avis-google">l'emplacement d'une plaque d'avis Google</a>.</li>
+<li><strong>La carte de visite NFC</strong>, pour les métiers qui se déplacent chez le client. Voir notre article sur la <a href="/blog/carte-nfc-avis-google">carte NFC pour avis Google</a>.</li>
+</ul>
+<h3>Une hypothèse de calcul pour fixer les idées</h3>
+<p>Hypothèse de calcul, avec des valeurs d'illustration à remplacer par les vôtres : prenons un commerce qui reçoit 60 clients par jour, ouvert 25 jours par mois. Si la demande orale et le support conduisent 2 clients sur 100 à publier un avis, cela fait environ 30 avis par mois. Si le chemin vers le formulaire est plus long (le client doit chercher la fiche lui-même) et qu'un seul client sur 100 va au bout, on tombe à environ 15 avis par mois. Ces taux sont fictifs ; le raisonnement, lui, ne l'est pas : à demande égale, chaque étape supprimée entre le client et le formulaire augmente le nombre d'avis qui arrivent réellement sur votre fiche.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Scénario fictif</th><th class="text-left p-3 border-b">Clients par mois</th><th class="text-left p-3 border-b">Clients qui publient (sur 100)</th><th class="text-left p-3 border-b">Avis par mois</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Le client cherche la fiche lui-même</td><td class="p-3 border-b">1 500</td><td class="p-3 border-b">1</td><td class="p-3 border-b">15</td></tr>
+<tr><td class="p-3">Le lien d'avis ouvre directement le formulaire</td><td class="p-3">1 500</td><td class="p-3">2</td><td class="p-3">30</td></tr>
+</tbody>
+</table>
+</div>
+<p>Le même raisonnement s'applique à votre propre situation : comptez vos clients mensuels, observez votre rythme d'avis actuel pendant un mois, puis installez un support avec le lien direct et comparez. Pour aller plus loin sur la régularité des avis, voir notre article sur la <a href="/blog/velocite-avis-google">vélocité des avis Google</a>.</p>
+</section>
+
+<section id="quand-lien-change" class="scroll-mt-28 mb-16">
+<h2>Quand le lien change : déménagement, nouvelle fiche, fusion</h2>
+<p>Un lien d'avis est stable tant que la fiche à laquelle il est rattaché existe et reste la même. La plupart des commerces garderont le même lien pendant des années. Certains événements obligent toutefois à vérifier, et parfois à tout remplacer.</p>
+<h3>Le déménagement</h3>
+<p>Quand un établissement change d'adresse, la bonne pratique est de modifier l'adresse de la fiche existante plutôt que d'en créer une nouvelle : la fiche conserve alors ses avis et son historique. Après le changement, testez à nouveau votre lien d'avis. S'il ouvre toujours le formulaire avec le bon nom, vos supports restent valables.</p>
+<h3>La fiche recréée ou dupliquée</h3>
+<p>Si une nouvelle fiche a été créée (changement de propriétaire mal géré, doublon, fiche supprimée puis recréée), elle a son propre lien d'avis, et les anciens supports pointent vers l'ancienne fiche, éventuellement fermée. Il faut alors récupérer le nouveau lien et mettre à jour chaque support listé dans votre fiche mémo : modèles d'e-mails, QR codes imprimés, plaques programmées. Un support physique programmé avec l'ancien lien ne suit pas : il doit être reprogrammé ou remplacé. Notre article sur les <a href="/blog/avis-google-disparus">avis Google disparus</a> aborde aussi les cas de fusion de fiches.</p>
+<h3>Le changement de nom</h3>
+<p>Un changement d'enseigne déclaré sur la fiche existante ne change pas, en principe, la fiche elle-même. Le lien continue de mener au formulaire, avec le nouveau nom. Testez quand même : c'est le moment idéal pour vérifier tous vos supports.</p>
+<h3>Plusieurs établissements</h3>
+<p>Un réseau de boutiques, un restaurant avec un service traiteur doté de sa propre fiche, un professionnel qui exerce dans deux cabinets : chaque fiche a son lien, et chaque support doit porter le lien du lieu où il est installé. C'est un point à vérifier à la commande d'un lot de supports : sur un lot de plaques NFC, il faut pouvoir programmer un lien différent par plaque. C'est ce que permet le <a href="/product/pro">Pack Pro Swiipx</a> : chacune des cinq plaques peut pointer vers le lien d'avis d'un établissement différent. Notre article <a href="/blog/combien-de-plaques-nfc">combien de plaques NFC prévoir</a> aide à dimensionner un équipement multi-sites.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Le réflexe :</strong> à chaque événement touchant votre fiche (déménagement, changement de nom, de propriétaire, de compte gestionnaire), ouvrez votre fiche mémo, testez le lien d'avis et cochez un à un les supports qui l'utilisent. Dix minutes de vérification évitent des mois de supports morts.</p>
+</div>
+</section>
+
+<section id="erreurs-lien-avis" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs les plus fréquentes avec un lien d'avis</h2>
+<h3>1. Diffuser le lien de la fiche au lieu du lien d'avis</h3>
+<p>Le client arrive sur la fiche complète et doit chercher le bouton. C'est l'erreur la plus courante, et la plus facile à éviter : ouvrez le lien et regardez si les étoiles s'affichent directement.</p>
+<h3>2. Copier le lien d'un autre établissement</h3>
+<p>Une fiche homonyme dans une autre ville, l'ancien commerce qui occupait le local, une enseigne voisine : en construisant un lien à la main ou en le récupérant depuis une recherche, on peut se tromper de lieu. Vérifiez toujours le nom et l'adresse dans la fenêtre d'avis.</p>
+<h3>3. Raccourcir le lien avec un service tiers</h3>
+<p>Le lien dépend alors d'un intermédiaire qui peut disparaître. Si vous avez besoin d'un lien court, utilisez celui que Google fournit, ou un QR code, qui se moque de la longueur de l'adresse.</p>
+<h3>4. Faire passer le lien par un filtre de satisfaction</h3>
+<p>Interdit par les règles de Google, comme vu plus haut, et exposé à des restrictions sur la fiche. Le même lien pour tous les clients, sans exception.</p>
+<h3>5. Imprimer avant d'avoir testé</h3>
+<p>Mille tickets ou cent cartes de visite avec un lien faux, c'est une dépense perdue et une période sans avis. Testez sur deux téléphones au minimum avant toute impression ou programmation.</p>
+<h3>6. Oublier les supports après un changement de fiche</h3>
+<p>Le lien a changé, l'e-mail automatique a été mis à jour, mais le QR code en vitrine pointe toujours vers l'ancienne fiche. D'où l'intérêt de tenir la liste des supports.</p>
+<h3>7. Associer le lien à une contrepartie</h3>
+<p>« Un café offert pour un avis », « 10 euros de remise contre une note » : interdit par Google, et contraire à la loyauté qu'impose le droit de la consommation. Le lien se propose, il ne s'achète pas. Pour la manière de formuler la demande, voir notre article sur les <a href="/blog/erreurs-demander-avis">erreurs à éviter en demandant un avis</a>.</p>
+</section>
+
+<section id="faq-lien-avis" class="scroll-mt-28 mb-16">
+<h2>Questions fréquentes sur le lien d'avis Google</h2>
+<h3>Où trouver son lien d'avis Google ?</h3>
+<p>Dans la gestion de votre fiche d'établissement, connecté avec le compte qui la gère. Cherchez le nom de votre établissement sur Google, puis utilisez la fonction « Demander des avis » ou, selon l'interface, « Voir les avis » puis « Recevoir plus d'avis ». Une fenêtre affiche le lien à copier et un QR code. La génération du QR code se fait depuis un ordinateur.</p>
+<h3>Le lien d'avis Google est-il gratuit ?</h3>
+<p>Oui. Google fournit gratuitement le lien et le QR code depuis la fiche d'établissement. Aucun abonnement ni outil payant n'est nécessaire pour l'obtenir. Ce qui peut avoir un coût, ce sont les supports qui le diffusent : impression, carte ou plaque NFC.</p>
+<h3>Quelle différence entre le lien de la fiche et le lien d'avis ?</h3>
+<p>Le lien de la fiche, obtenu avec le bouton Partager de Google Maps, ouvre la fiche complète : photos, horaires, itinéraire. Le lien d'avis ouvre directement le formulaire de notation. Pour collecter des avis, c'est toujours le lien d'avis qu'il faut utiliser, car il évite au client de chercher le bouton.</p>
+<h3>Peut-on créer un lien d'avis sans accès à la fiche ?</h3>
+<p>Oui, en construisant une adresse à partir du Place ID de l'établissement, que Google permet de retrouver avec un outil destiné aux développeurs. C'est une solution de repli : le Place ID peut changer avec les mises à jour de Google Maps, et sans accès à la fiche vous ne pouvez ni répondre aux avis ni corriger vos informations. Mieux vaut reprendre la gestion de la fiche.</p>
+<h3>Le lien d'avis Google peut-il changer ?</h3>
+<p>Il reste stable tant que la fiche existe et reste la même. Il faut le vérifier après un déménagement, un changement de nom ou de propriétaire, et le remplacer si une nouvelle fiche a été créée. Dans ce cas, chaque support qui utilise l'ancien lien doit être mis à jour, reprogrammé ou remplacé.</p>
+<h3>Peut-on raccourcir son lien d'avis ?</h3>
+<p>C'est déconseillé avec un service tiers : le lien dépend alors d'un intermédiaire qui peut fermer ou désactiver les liens, comme Google l'a fait avec son propre raccourcisseur goo.gl pour les liens inactifs. Utilisez le lien fourni par Google tel quel, ou un QR code, qui n'a pas besoin d'une adresse courte.</p>
+<h3>Peut-on n'envoyer le lien qu'aux clients satisfaits ?</h3>
+<p>Non. Le règlement de Google interdit de solliciter de manière sélective les avis positifs et de décourager les avis négatifs. Un questionnaire qui trie les clients avant de les envoyer vers Google expose la fiche au retrait d'avis, au blocage temporaire de nouveaux avis ou à un avertissement public. Le même lien doit être proposé à tous les clients, sans contrepartie.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : un lien simple, testé et laissé tel quel</h2>
+<p>Le lien d'avis Google est la pièce la plus modeste de votre stratégie d'avis, et la plus fragile. Il ne coûte rien, il se récupère en deux minutes depuis la fiche d'établissement, et pourtant c'est souvent lui qui explique qu'un dispositif ne rapporte rien : lien de fiche au lieu du lien d'avis, adresse raccourcie qui ne répond plus, fiche recréée dont personne n'a mis à jour les supports.</p>
+<p>Trois règles suffisent. Récupérez le lien depuis votre fiche, et notez où vous l'utilisez. Testez-le sur plusieurs téléphones et sur chaque support avant de le diffuser. Ne le modifiez pas : ni raccourcisseur, ni redirection, ni filtre de satisfaction, et le même lien pour tous vos clients. Le reste relève de la demande elle-même : le bon moment, la bonne phrase, le bon emplacement. Notre guide pour <a href="/blog/obtenir-plus-avis-google">obtenir plus d'avis Google</a> reprend ces étapes.</p>
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Vous avez votre lien d'avis : et si vos clients l'ouvraient d'un simple geste ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215 programmée avec votre lien d'avis Google, adhésif 3M inclus, QR code de secours, garantie à vie sur la puce, <strong>sans abonnement</strong>. <a href="/product/starter" class="font-semibold underline">Pack Starter</a> à 29,90 € HT, <a href="/product/business" class="font-semibold underline">Pack Business</a> à 54,90 € HT et <a href="/product/pro" class="font-semibold underline">Pack Pro</a> à 89,90 € HT.</p>
+</div>
+</section>
+`,
+  },
   'note-google-ideale': {
     title: 'Note Google idéale : pourquoi 4,6 étoiles convertissent mieux que 5,0',
     category: 'Statistiques',

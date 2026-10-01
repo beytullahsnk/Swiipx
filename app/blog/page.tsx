@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 49,
+    title: 'Lien d\'avis Google : le trouver, le partager, le tester (et ne pas y toucher)',
+    excerpt: 'Le lien d\'avis Google ouvre directement le formulaire de notation de votre fiche. Où le récupérer, comment le distinguer du lien de fiche, le tester sur iPhone et Android, le partager, et pourquoi ne jamais le raccourcir ni le filtrer.',
+    category: 'SEO Local',
+    date: '1er octobre 2026',
+    dateIso: '2026-10-01',
+    readTime: '16 min',
+    slug: 'lien-avis-google',
+  },
+  {
     id: 48,
     title: 'Note Google idéale : pourquoi 4,6 étoiles convertissent mieux que 5,0',
     excerpt: 'Faut-il viser 5 étoiles sur Google ? Non : la probabilité d\'achat culmine entre 4,0 et 4,7, et 31 % des clients exigent 4,5. Seuils 2026, calcul de la note, formule et tableau pour savoir combien d\'avis 5 étoiles il faut pour remonter, et stratégie par zone de note.',

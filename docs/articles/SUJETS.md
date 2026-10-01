@@ -45,7 +45,7 @@ Les slugs indiqués sont des propositions. Les articles déjà publiés figurent
 
 ## SEO Local et fiche Google
 
-- [ ] **Lien d'avis Google** (`lien-avis-google`)
+- [x] **Lien d'avis Google** (`lien-avis-google`) : proposé le 2026-10-01, slug `lien-avis-google`
   - Où le trouver dans la fiche, le partager, le tester.
   - Pourquoi il ne faut pas le modifier.
 - [ ] **Créer sa fiche Google Business Profile, pas à pas** (`creer-fiche-google-business-profile`)

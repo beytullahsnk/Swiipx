@@ -26,6 +26,23 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'lien-avis-google': {
+    title: 'Lien d\'avis Google : le trouver, le partager, le tester',
+    description: 'Où trouver son lien d\'avis Google, le différencier du lien de fiche, le tester sur plusieurs téléphones et pourquoi ne jamais le raccourcir ni le filtrer.',
+    keywords: 'lien avis google, lien d avis google, trouver lien avis google, partager lien avis google, lien direct avis google, place id avis google, writereview placeid, qr code avis google, demander des avis google, lien fiche google',
+    date: '2026-10-01',
+    dateModified: '2026-10-01',
+    category: 'SEO Local',
+    faq: [
+      { q: 'Où trouver son lien d\'avis Google ?', a: 'Dans la gestion de votre fiche d\'établissement, connecté avec le compte qui la gère. Cherchez le nom de votre établissement sur Google, puis utilisez la fonction « Demander des avis » ou, selon l\'interface, « Voir les avis » puis « Recevoir plus d\'avis ». Une fenêtre affiche le lien à copier et un QR code. La génération du QR code se fait depuis un ordinateur.' },
+      { q: 'Le lien d\'avis Google est-il gratuit ?', a: 'Oui. Google fournit gratuitement le lien et le QR code depuis la fiche d\'établissement. Aucun abonnement ni outil payant n\'est nécessaire pour l\'obtenir. Ce qui peut avoir un coût, ce sont les supports qui le diffusent : impression, carte ou plaque NFC.' },
+      { q: 'Quelle différence entre le lien de la fiche et le lien d\'avis ?', a: 'Le lien de la fiche, obtenu avec le bouton Partager de Google Maps, ouvre la fiche complète : photos, horaires, itinéraire. Le lien d\'avis ouvre directement le formulaire de notation. Pour collecter des avis, c\'est toujours le lien d\'avis qu\'il faut utiliser, car il évite au client de chercher le bouton.' },
+      { q: 'Peut-on créer un lien d\'avis sans accès à la fiche ?', a: 'Oui, en construisant une adresse à partir du Place ID de l\'établissement, que Google permet de retrouver avec un outil destiné aux développeurs. C\'est une solution de repli : le Place ID peut changer avec les mises à jour de Google Maps, et sans accès à la fiche vous ne pouvez ni répondre aux avis ni corriger vos informations. Mieux vaut reprendre la gestion de la fiche.' },
+      { q: 'Le lien d\'avis Google peut-il changer ?', a: 'Il reste stable tant que la fiche existe et reste la même. Il faut le vérifier après un déménagement, un changement de nom ou de propriétaire, et le remplacer si une nouvelle fiche a été créée. Dans ce cas, chaque support qui utilise l\'ancien lien doit être mis à jour, reprogrammé ou remplacé.' },
+      { q: 'Peut-on raccourcir son lien d\'avis ?', a: 'C\'est déconseillé avec un service tiers : le lien dépend alors d\'un intermédiaire qui peut fermer ou désactiver les liens, comme Google l\'a fait avec son propre raccourcisseur goo.gl pour les liens inactifs. Utilisez le lien fourni par Google tel quel, ou un QR code, qui n\'a pas besoin d\'une adresse courte.' },
+      { q: 'Peut-on n\'envoyer le lien qu\'aux clients satisfaits ?', a: 'Non. Le règlement de Google interdit de solliciter de manière sélective les avis positifs et de décourager les avis négatifs. Un questionnaire qui trie les clients avant de les envoyer vers Google expose la fiche au retrait d\'avis, au blocage temporaire de nouveaux avis ou à un avertissement public. Le même lien doit être proposé à tous les clients, sans contrepartie.' },
+    ],
+  },
   'note-google-ideale': {
     title: 'Note Google idéale : pourquoi 4,6 étoiles vaut mieux que 5,0',
     description: 'Quelle note Google viser ? L\'achat culmine entre 4,0 et 4,7 étoiles, 31 % des clients exigent 4,5. Seuils 2026, formule et tableau pour remonter sa note.',
