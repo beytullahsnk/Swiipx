@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 50,
+    title: 'Plaque NFC fleuriste : des avis Google toute l\'année, pas seulement à la Saint-Valentin',
+    excerpt: 'Saint-Valentin, fête des mères, Toussaint : les pics d\'un fleuriste sont aussi ceux où naissent les avis négatifs. Chiffres Val\'hor, réglages de fiche, 5 emplacements, deuil et livraisons : la méthode pour collecter sans maladresse.',
+    category: 'Secteur',
+    date: '2 octobre 2026',
+    dateIso: '2026-10-02',
+    readTime: '16 min',
+    slug: 'plaque-nfc-fleuriste',
+  },
+  {
     id: 49,
     title: 'Lien d\'avis Google : le trouver, le partager, le tester (et ne pas y toucher)',
     excerpt: 'Le lien d\'avis Google ouvre directement le formulaire de notation de votre fiche. Où le récupérer, comment le distinguer du lien de fiche, le tester sur iPhone et Android, le partager, et pourquoi ne jamais le raccourcir ni le filtrer.',

@@ -8,7 +8,7 @@ Les slugs indiqués sont des propositions. Les articles déjà publiés figurent
 
 ## Secteur : « plaque NFC + métier »
 
-- [ ] **Fleuriste** (`plaque-nfc-fleuriste`)
+- [x] **Fleuriste** (`plaque-nfc-fleuriste`) : proposé le 2026-10-02, slug `plaque-nfc-fleuriste`
   - Pics de fêtes : Saint-Valentin, fête des mères, Toussaint.
   - Livraisons de bouquets, emplacement en caisse.
 - [ ] **Food truck** (`plaque-nfc-food-truck`)

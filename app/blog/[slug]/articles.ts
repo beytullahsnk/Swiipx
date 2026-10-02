@@ -18,6 +18,244 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-fleuriste': {
+    title: 'Plaque NFC fleuriste : des avis Google toute l\'année, pas seulement à la Saint-Valentin',
+    category: 'Secteur',
+    date: '2 octobre 2026',
+    readTime: '16 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Saint-Valentin, fête des mères, Toussaint : les pics d\'un fleuriste sont aussi ceux où naissent les avis négatifs. Chiffres Val\'hor, réglages de fiche, 5 emplacements, deuil et livraisons : la méthode pour collecter sans maladresse.',
+    tocSections: [
+      { id: 'pourquoi-avis-fleuriste', label: 'Pourquoi les avis comptent' },
+      { id: 'clientele-fleuriste', label: 'La clientèle en chiffres' },
+      { id: 'calendrier-fleuriste', label: 'Le calendrier des pics' },
+      { id: 'fiche-gbp-fleuriste', label: '5 réglages de fiche' },
+      { id: 'ou-poser-plaque', label: '5 emplacements classés' },
+      { id: 'moments-scripts', label: 'Quand demander, quoi dire' },
+      { id: 'commandes-livraisons', label: 'Commandes et livraisons' },
+      { id: 'hypotheses-calcul', label: '3 hypothèses de calcul' },
+      { id: 'repondre-avis', label: 'Répondre aux avis' },
+      { id: 'erreurs', label: 'Les 7 erreurs' },
+      { id: 'faq-fleuriste', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-avis-fleuriste" class="scroll-mt-28 mb-16">
+<h2>Pourquoi les avis Google comptent pour un fleuriste</h2>
+<p>Un fleuriste vend un produit que le client ne peut pas comparer à l'avance. Il ne connaît ni la fraîcheur des tiges, ni le soin apporté à la composition, ni la ponctualité de la livraison. Il achète une promesse, souvent pour quelqu'un d'autre, souvent pour un moment qui compte : un anniversaire, une naissance, des excuses, un deuil. Quand il ne connaît pas encore de fleuriste dans le quartier, il cherche « fleuriste » sur son téléphone, regarde trois fiches et choisit celle qui inspire confiance.</p>
+<p>Ce geste de vérification est devenu banal. Selon l'<a href="https://presence.fr/les-avis-en-ligne-en-2026-83-des-francais-les-consultent-80-en-deposent-un-incontournable-de-lexperience-client/" target="_blank" rel="noopener noreferrer">étude PRESENCE 2026 sur les avis en ligne</a>, menée auprès de 1 350 Français représentatifs, 83 % des Français consultent les avis clients. L'étude ne mesure pas le cas particulier des fleuristes, mais elle décrit un réflexe général, et rien n'indique que l'achat d'un bouquet y échappe, surtout quand l'acheteur commande pour une personne qui habite dans une autre ville et qu'il doit choisir un artisan qu'il n'a jamais vu.</p>
+<p>Le métier a aussi une particularité qui pèse sur la note : ses temps forts sont brutaux. Une boutique qui sert ses habitués à un rythme tranquille une bonne partie de l'année se retrouve, la veille de la Saint-Valentin ou de la fête des mères, avec une file sur le trottoir, des commandes à livrer dans tout le secteur et une équipe à bout. C'est précisément dans ces journées que naissent les avis négatifs (attente, bouquet différent de la photo, livraison tardive), alors que les dizaines de clients ravis repartent sans rien écrire.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 En une phrase :</strong> la fiche Google d'un fleuriste se juge sur quelques jours de pic par an, et seule une collecte régulière, toute l'année, empêche ces journées tendues de résumer à elles seules la réputation de la boutique.</p>
+</div>
+</section>
+
+<section id="clientele-fleuriste" class="scroll-mt-28 mb-16">
+<h2>Ce que disent les chiffres sur la clientèle des fleuristes</h2>
+<p>Avant de choisir où poser une plaque et quand parler d'avis, il faut savoir qui entre dans une boutique de fleurs et pourquoi. L'interprofession de l'horticulture, Val'hor, publie chaque année les résultats du panel de consommateurs Kantar réalisé avec FranceAgriMer. Ces données décrivent des comportements nationaux : elles ne disent rien de votre boutique, mais elles éclairent les moments à ne pas manquer.</p>
+<h3>Une clientèle large, qui revient</h3>
+<p>D'après la synthèse <a href="https://www.valhor.fr/actualites/achats-des-francais-en-vegetaux-chez-le-fleuriste-10-infos" target="_blank" rel="noopener noreferrer">« Achats des Français en végétaux chez le fleuriste : 10 infos »</a> publiée par Val'hor, 28 % des foyers français font au moins un achat par an chez un fleuriste, et 47 % des foyers acheteurs y réalisent jusqu'à 10 achats dans l'année. Le fleuriste concentre 46 % des dépenses en fleurs coupées. Autrement dit, une boutique de quartier voit passer à la fois des clients de passage et une base d'habitués qui reviennent plusieurs fois par an : deux publics qu'on ne sollicite pas de la même façon.</p>
+<h3>Le samedi et les occasions personnelles</h3>
+<p>La même <a href="https://www.valhor.fr/actualites/achats-des-francais-en-vegetaux-chez-le-fleuriste-10-infos" target="_blank" rel="noopener noreferrer">synthèse Val'hor</a> indique que le samedi représente 20 % des dépenses de la semaine chez le fleuriste, que les principales fêtes calendaires pèsent 16 % des dépenses réalisées chez lui, et que les occasions personnelles (anniversaires, invitations, mariages, célébrations de proches) en représentent 38 %. Le chiffre est contre-intuitif : les grandes fêtes font les journées les plus chargées, mais ce sont les achats ordinaires, répartis sur l'année, qui font l'essentiel de l'activité.</p>
+<p>Val'hor le confirme sous un autre angle dans son analyse <a href="https://www.valhor.fr/actualites/achats-des-vegetaux-occasions-personnelles-vs-fetes-calendaires" target="_blank" rel="noopener noreferrer">« occasions personnelles vs fêtes calendaires »</a> : les occasions personnelles représentent 72 % des dépenses en végétaux offerts, contre 28 % pour les fêtes calendaires, et un foyer sur deux fait au moins un achat pour une occasion personnelle dans l'année, contre un sur trois pour une fête calendaire.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Ce que cela change pour la collecte :</strong> le meilleur gisement d'avis n'est pas la file d'attente du 14 février, mais le client du samedi matin qui choisit tranquillement un bouquet pour un dîner. Il a du temps, il a vu votre travail de près, et il est souvent un habitué. C'est lui qu'il faut équiper en priorité, toute l'année.</p>
+</div>
+</section>
+
+<section id="calendrier-fleuriste" class="scroll-mt-28 mb-16">
+<h2>Le calendrier du fleuriste : préparer chaque pic</h2>
+<p>Les pics ne sont pas des moments de collecte idéaux, mais ce sont ceux où la fiche est le plus regardée par des clients qui ne vous connaissent pas. Il faut donc les préparer en amont : une fiche à jour, une note solide, des avis récents. Voici ce que disent les chiffres publics sur les principales occasions.</p>
+<h3>La Saint-Valentin</h3>
+<p>Selon la page <a href="https://www.valhor.fr/actualites/fleurs-et-plantes-achetees-pour-les-fetes" target="_blank" rel="noopener noreferrer">« Fleurs et plantes achetées pour les fêtes »</a> de Val'hor, 1,2 million de foyers ont acheté des fleurs ou des plantes pour le 14 février 2026, avec un budget moyen de 25,70 €, et le fleuriste est de loin le premier circuit avec 59 % des dépenses en végétaux pour cette occasion. C'est la fête où le fleuriste indépendant pèse le plus,, et celle où de nombreux acheteurs occasionnels cherchent une boutique sur Google le jour même.</p>
+<h3>La fête des mères</h3>
+<p>La même <a href="https://www.valhor.fr/actualites/fleurs-et-plantes-achetees-pour-les-fetes" target="_blank" rel="noopener noreferrer">page Val'hor sur les fêtes</a> indique que 8 % des foyers achètent des fleurs ou des plantes pour la fête des mères, pour un budget moyen de 17 euros, et qu'en 2025 les fleurs coupées ont représenté 63 % des dépenses. En France, la fête des mères tombe le dernier dimanche de mai, et elle est décalée au premier dimanche de juin quand elle coïncide avec la Pentecôte : vérifiez la date chaque année avant de programmer vos horaires et vos publications.</p>
+<h3>La Toussaint</h3>
+<p>La Toussaint est la fête du chrysanthème, mais pas forcément celle du fleuriste. D'après l'<a href="https://www.franceagrimer.fr/sites/default/files/rdd/documents/Infographie%20Toussaint%202022_2.pdf" target="_blank" rel="noopener noreferrer">infographie FranceAgriMer sur les achats de la Toussaint 2022</a>, 3,3 millions de foyers, soit 11,7 % des foyers, ont acheté des fleurs ou des plantes pour cette occasion. Val'hor précise dans son analyse des <a href="https://www.valhor.fr/actualites/achats-des-francais-en-chrysanthemes-pour-le-cimetiere" target="_blank" rel="noopener noreferrer">achats de chrysanthèmes pour le cimetière</a> que le chrysanthème représente 63 % des quantités achetées à la Toussaint, et que les trois premiers circuits sont la jardinerie ou le libre-service agricole, la grande distribution, puis le fleuriste.</p>
+<p>Pour un fleuriste, la Toussaint est donc une fête concurrentielle, où le client compare avec la jardinerie et le supermarché. C'est aussi une période où beaucoup d'achats sont liés au souvenir d'un proche disparu : on y revient plus bas, parce que cela change la manière de parler d'avis.</p>
+<h3>Le 1er mai, Noël et les mariages</h3>
+<p>Le muguet du 1er mai, les compositions de fin d'année et la saison des mariages complètent le calendrier. Chacune de ces périodes a son public : le client pressé du muguet, l'hôte qui commande un centre de table pour le réveillon, les futurs mariés qui préparent leur décoration des mois à l'avance. Ce dernier public est particulièrement précieux pour les avis : il a passé du temps avec vous, il a vu le résultat le jour J, et il est souvent ravi de le dire, à condition qu'on le lui propose au bon moment, c'est-à-dire après l'événement.</p>
+</section>
+
+<section id="fiche-gbp-fleuriste" class="scroll-mt-28 mb-16">
+<h2>La fiche Google d'un fleuriste : cinq réglages avant de collecter</h2>
+<p>Collecter des avis sur une fiche mal paramétrée revient à remplir un seau percé. L'aide Google explique que les <a href="https://support.google.com/business/answer/7091?hl=fr" target="_blank" rel="noopener noreferrer">résultats locaux reposent principalement sur la pertinence, la distance et la proéminence</a>, et range le nombre d'avis et les notes positives parmi les éléments de proéminence. La distance ne dépend pas de vous. La pertinence se règle dans les champs de la fiche. La proéminence se construit avis après avis.</p>
+<h3>1. Une adresse et une zone desservie</h3>
+<p>Un fleuriste qui reçoit en boutique et qui livre est ce que Google appelle un établissement mixte. Les <a href="https://support.google.com/business/answer/3038177?hl=fr" target="_blank" rel="noopener noreferrer">consignes de représentation des établissements sur Google</a> demandent, dans ce cas, d'indiquer l'adresse de la boutique et la zone desservie. La page d'aide <a href="https://support.google.com/business/answer/9157481?hl=fr" target="_blank" rel="noopener noreferrer">consacrée aux zones desservies des établissements mixtes</a> explique comment la définir. Renseignez les communes où vous livrez réellement : une zone gonflée attire des commandes que vous ne pourrez pas honorer, et donc des avis négatifs.</p>
+<h3>2. La catégorie principale</h3>
+<p>« Fleuriste » est la catégorie évidente. Les catégories secondaires servent à décrire une activité marquée en plus : décoration florale pour mariages et événements, vente de plantes, compositions de deuil. Ne cochez que ce que vous proposez vraiment : une catégorie secondaire sans activité réelle ne rapporte rien et brouille la fiche.</p>
+<h3>3. Les horaires exceptionnels</h3>
+<p>C'est le réglage le plus rentable pour un fleuriste. Ouvertures le dimanche de la fête des mères, le 1er mai ou le 14 février, fermetures après les fêtes de fin d'année : chaque écart non déclaré produit un déplacement inutile, et un déplacement inutile produit un avis à une étoile. L'aide Google explique comment <a href="https://support.google.com/business/answer/6303076?hl=fr" target="_blank" rel="noopener noreferrer">définir des horaires d'ouverture exceptionnels</a> et conseille de confirmer les horaires des jours fériés, même quand ils sont identiques aux horaires habituels.</p>
+<h3>4. Les photos</h3>
+<p>Peu de commerces ont autant à montrer. Une vitrine de saison, quelques bouquets représentatifs de vos prix courants, une composition de mariage, l'intérieur de la boutique : ces photos font le travail de vente avant même que le client n'entre. Évitez les images de catalogue qui ne viennent pas de votre atelier, puisque le client comparera avec ce qu'il recevra. Notre guide sur les <a href="/blog/photos-google-business-profile">photos de la fiche Google Business Profile</a> détaille les formats et la fréquence.</p>
+<h3>5. Les produits et les posts</h3>
+<p>Les bouquets de saison, l'abonnement floral si vous en proposez un, les compositions de deuil avec leurs fourchettes de prix : présentés dans la fiche, ils répondent aux questions avant l'appel. Avant chaque fête, un post annonçant les horaires et la date limite de commande évite une bonne part des déceptions.</p>
+</section>
+
+<section id="ou-poser-plaque" class="scroll-mt-28 mb-16">
+<h2>Où poser la plaque dans une boutique de fleurs : 5 emplacements classés</h2>
+<p>Une boutique de fleurs a deux contraintes qu'on oublie souvent : l'eau est partout, et le comptoir est encombré de papier, de rubans et de tiges coupées. Le bon emplacement est celui où le client attend quelques secondes, téléphone en main, sur une surface sèche et dégagée.</p>
+<h3>1. La caisse, côté client ✅</h3>
+<p>Le meilleur emplacement. Le client paie, souvent en sans contact : son téléphone est déjà sorti. Posez la plaque à plat, à côté du terminal de paiement, sur une zone que vous ne mouillez pas en manipulant les bouquets. C'est là que se joue l'essentiel de la collecte.</p>
+<h3>2. Le plan de travail où le bouquet est composé</h3>
+<p>Quand le client attend que vous composiez son bouquet, il regarde vos gestes pendant plusieurs minutes. C'est le moment où il est le plus admiratif de votre travail. Une plaque posée en bout de plan de travail, hors des éclaboussures, capte ce moment. Attention cependant : un plan de travail humide abîme l'adhésif et encombre la plaque. Si votre table de composition est en permanence mouillée, préférez un support debout.</p>
+<h3>3. Le comptoir de retrait des commandes</h3>
+<p>Le client qui vient chercher un bouquet commandé la veille, ou une décoration de table pour le soir, découvre le résultat au moment du retrait. S'il est content, il le dit sur-le-champ : c'est la fenêtre idéale. Si le retrait se fait à la caisse, la plaque de la caisse suffit.</p>
+<h3>4. L'espace mariage ou événement</h3>
+<p>Dans les boutiques qui reçoivent les futurs mariés autour d'une table, avec un book de réalisations, une plaque sur cette table est utile, mais pas lors du premier rendez-vous. Elle sert surtout au moment où les mariés reviennent, après l'événement, régler le solde ou rapporter des contenants.</p>
+<h3>5. La vitrine ❌</h3>
+<p>Sans intérêt. Personne ne s'arrête devant une vitrine pour approcher son téléphone d'une vitre, et la distance de lecture d'une puce NFC est de quelques centimètres. La vitrine sert aux horaires et aux promesses de saison, pas aux avis.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Eau et métal :</strong> collez la plaque sur une surface propre et sèche, jamais sur un plateau qui reste humide. Évitez aussi les comptoirs en métal ou en zinc, fréquents dans les boutiques de fleurs : le métal perturbe le champ de la puce et rend la lecture aléatoire. Testez avec deux ou trois téléphones avant de coller. Notre article sur les <a href="/blog/materiaux-plaque-nfc-avis-google">matériaux de plaque NFC</a> détaille les surfaces compatibles, et celui sur <a href="/blog/ou-placer-plaque-avis-google">où placer une plaque d'avis Google</a> donne la méthode générale.</p>
+</div>
+</section>
+
+<section id="moments-scripts" class="scroll-mt-28 mb-16">
+<h2>Quand demander un avis, quand se taire, et quoi dire</h2>
+<p>Chez un fleuriste, le tri des moments ne se fait pas sur la satisfaction supposée du client (ce serait une sélection que Google interdit), mais sur la décence de la situation. On propose la même chose à tout le monde, sauf quand le contexte rend la demande déplacée.</p>
+<h3>Les situations favorables</h3>
+<ul>
+<li><strong>Le bouquet du quotidien</strong>, choisi sans urgence un samedi matin : le client a vu votre travail, il a le temps, il repart content.</li>
+<li><strong>Le retrait d'une commande</strong>, quand le client découvre la composition qu'il a commandée.</li>
+<li><strong>Le retour des mariés ou des organisateurs</strong>, après l'événement, quand ils viennent régler le solde ou vous remercier.</li>
+<li><strong>Le client fidèle</strong> qui vient chaque semaine et qui n'a jamais pensé que son avis pouvait aider quelqu'un.</li>
+</ul>
+<h3>Les situations où l'on ne dit rien</h3>
+<ul>
+<li><strong>Une commande de deuil</strong> : couronne, gerbe, composition pour des obsèques. La personne en face de vous traverse un moment difficile, et aucune demande, aussi neutre soit-elle, n'y a sa place. La plaque peut rester sur le comptoir, mais personne ne la mentionne.</li>
+<li><strong>Les achats de la Toussaint liés à une tombe</strong>, pour la même raison.</li>
+<li><strong>Le pic de la Saint-Valentin ou de la fête des mères</strong>, quand la file déborde : la plaque fait son travail seule, et l'équipe se concentre sur le service.</li>
+<li><strong>Après un raté</strong> : bouquet abîmé, retard de livraison, erreur de commande. On règle d'abord le problème. Demander un avis à ce moment ne ferait que rappeler au client qu'il peut écrire.</li>
+</ul>
+<h3>Trois formulations pour l'équipe</h3>
+<p><strong>À la caisse :</strong> « Si vous avez trente secondes, vous pouvez approcher votre téléphone ici, ça ouvre notre page Google. » Neutre, sans demander de note.</p>
+<p><strong>Au retrait d'une commande :</strong> « Ça vous plaît ? Si vous voulez le dire en ligne, il suffit d'approcher votre téléphone de la plaque. » On rebondit sur la réaction du client, sans la provoquer.</p>
+<p><strong>Aux mariés, après l'événement :</strong> « Merci de nous avoir fait confiance. Si vous avez envie de raconter comment ça s'est passé, votre avis aidera d'autres couples à se décider. » Un avis détaillé de mariés est l'un des plus utiles qu'une boutique puisse recevoir.</p>
+<p>À bannir : « mettez-nous cinq étoiles », et toute phrase du type « si vous êtes content, laissez un avis, sinon parlez-nous-en d'abord ». Les <a href="https://support.google.com/business/answer/3474122?hl=fr" target="_blank" rel="noopener noreferrer">conseils de Google pour obtenir des avis</a> excluent de décourager les avis négatifs ou de solliciter sélectivement les avis positifs. Notre article sur les <a href="/blog/erreurs-demander-avis">erreurs quand on demande un avis</a> revient sur ces réflexes.</p>
+</section>
+
+<section id="commandes-livraisons" class="scroll-mt-28 mb-16">
+<h2>Commandes et livraisons : le client qui n'entre pas dans la boutique</h2>
+<p>Une partie de l'activité d'un fleuriste se fait à distance : commandes par téléphone, sur le site, ou par une chaîne de transmission florale, puis livraison chez un destinataire. La plaque ne touche pas ces clients-là, et c'est normal : elle est faite pour le comptoir. Il faut donc un autre canal, et surtout ne pas se tromper de personne.</p>
+<h3>Le destinataire n'est pas le client</h3>
+<p>La personne qui reçoit le bouquet n'a rien commandé et ne connaît souvent pas la boutique. Glisser une demande d'avis dans le bouquet, c'est demander à quelqu'un qui n'a vécu que la fin du parcours de juger un service qu'il n'a pas acheté. C'est aussi gênant pour l'acheteur, dont le cadeau se transforme en support publicitaire. La carte qui accompagne un bouquet doit rester celle du message de l'acheteur.</p>
+<h3>Le bon canal : le message de confirmation à l'acheteur</h3>
+<p>L'acheteur, lui, a vécu toute l'expérience : la commande, le conseil, la confirmation de livraison. C'est à lui qu'on peut proposer de laisser un avis, une fois la livraison faite. Google permet de <a href="https://support.google.com/business/answer/16816815?hl=fr" target="_blank" rel="noopener noreferrer">créer un lien ou un QR code pour demander des avis</a> depuis la fiche : ajoutez ce lien dans le message qui confirme la livraison, sans relance insistante. Notre guide sur le <a href="/blog/lien-avis-google">lien d'avis Google</a> explique où le trouver et comment le tester.</p>
+<h3>Les commandes passées par une chaîne de transmission florale</h3>
+<p>Quand la commande arrive par un réseau de transmission, le client a acheté auprès de la plateforme, qui vous confie l'exécution. Vous n'avez en général ni son contact direct, ni la maîtrise du message qu'il reçoit. N'essayez pas de contourner ce cadre : concentrez la collecte sur les clients que vous servez directement, en boutique, par téléphone ou sur votre propre site.</p>
+<p>Pour comparer les canaux à distance, notre article <a href="/blog/sms-email-ou-plaque-nfc-avis-google">SMS, e-mail ou plaque NFC</a> détaille les forces et les limites de chacun.</p>
+</section>
+
+<section id="hypotheses-calcul" class="scroll-mt-28 mb-16">
+<h2>Trois hypothèses de calcul pour une boutique de fleurs</h2>
+<p>Personne ne peut vous annoncer un nombre d'avis par mois : cela dépend de votre fréquentation, de la part de clients à qui la plaque est proposée et de la part de ceux qui publient vraiment. Les lignes ci-dessous sont des <strong>hypothèses de calcul</strong>, avec des valeurs d'illustration (un avis publié pour cinquante clients à qui la plaque est proposée) : remplacez-les par vos propres chiffres après quelques semaines.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border-collapse">
+<thead>
+<tr class="bg-gray-100">
+<th class="border border-gray-300 p-2 text-left">Profil de boutique (fictif)</th>
+<th class="border border-gray-300 p-2 text-left">Clients en boutique / mois</th>
+<th class="border border-gray-300 p-2 text-left">Clients à qui l'on propose</th>
+<th class="border border-gray-300 p-2 text-left">Avis / mois (hyp. 1 sur 50)</th>
+<th class="border border-gray-300 p-2 text-left">Sur 12 mois</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="border border-gray-300 p-2">Petite ville, 1 personne</td>
+<td class="border border-gray-300 p-2">500</td>
+<td class="border border-gray-300 p-2">150</td>
+<td class="border border-gray-300 p-2">3</td>
+<td class="border border-gray-300 p-2">environ 36</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="border border-gray-300 p-2">Quartier de ville, 2 personnes</td>
+<td class="border border-gray-300 p-2">1 200</td>
+<td class="border border-gray-300 p-2">400</td>
+<td class="border border-gray-300 p-2">8</td>
+<td class="border border-gray-300 p-2">environ 96</td>
+</tr>
+<tr>
+<td class="border border-gray-300 p-2">Centre-ville passant, 4 personnes</td>
+<td class="border border-gray-300 p-2">2 500</td>
+<td class="border border-gray-300 p-2">800</td>
+<td class="border border-gray-300 p-2">16</td>
+<td class="border border-gray-300 p-2">environ 192</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Ce tableau ne promet aucun résultat. Il montre une hiérarchie : ce qui compte n'est pas la taille de la boutique, mais le nombre de clients à qui l'on propose réellement de laisser un avis, mois après mois. Une boutique de petite ville où la fleuriste dit la phrase à chaque habitué dépassera souvent une boutique passante où personne ne la dit.</p>
+<p>Pour fixer un objectif réaliste, ouvrez les fiches des deux ou trois fleuristes les plus proches, comptez leurs avis et regardez les dates des cinq derniers. Notre article sur la <a href="/blog/velocite-avis-google">vélocité des avis Google</a> explique pourquoi le rythme compte davantage que le total, et celui sur le <a href="/blog/combien-avis-google-pack-local">nombre d'avis pour entrer dans le pack local</a> détaille la méthode de comparaison.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Le calcul qui protège après une fête :</strong> hypothèse de calcul pour une fiche à 25 avis et 4,6 de moyenne. Deux avis à 1 étoile laissés après une Saint-Valentin chargée font tomber la moyenne à environ 4,3 (25 avis à 4,6 plus 2 avis à 1, divisés par 27). Avec 120 avis à 4,6, les deux mêmes avis ne la font descendre qu'à environ 4,5. Le volume accumulé pendant les mois calmes est la seule protection contre les journées difficiles.</p>
+</div>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Répondre aux avis d'un fleuriste</h2>
+<p>Répondre est attendu : selon le <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">Local Consumer Review Survey 2026 de BrightLocal</a>, 89 % des consommateurs attendent qu'un commerce réponde aux avis. L'enquête porte sur des consommateurs américains, mais le principe vaut aussi pour vos lecteurs : la réponse s'adresse moins à l'auteur de l'avis qu'aux futurs clients qui le lisent.</p>
+<h3>« Le bouquet ne ressemblait pas à la photo »</h3>
+<p>Le reproche le plus fréquent dans le métier. Les fleurs varient selon les arrivages et la saison : expliquez-le simplement, sans vous retrancher derrière cette explication. Dites ce que vous faites pour l'éviter (prévenir le client quand une variété manque, proposer une alternative) et invitez à reprendre contact.</p>
+<h3>« Livraison en retard le jour de la fête des mères »</h3>
+<p>Ne cherchez pas d'excuse générale sur l'affluence. Reconnaissez le retard, présentez vos excuses et proposez un échange direct. Si une date limite de commande existait, rappelez-la pour les lecteurs suivants, sans reprocher au client de l'avoir dépassée.</p>
+<h3>« Fleurs fanées au bout de deux jours »</h3>
+<p>Proposez d'en parler en boutique, et profitez de la réponse pour donner un conseil d'entretien utile à tous (eau fraîche, recoupe des tiges, éloignement des sources de chaleur), sans laisser entendre que le client est responsable.</p>
+<h3>Les avis liés à un deuil</h3>
+<p>Si un avis, positif ou négatif, évoque des obsèques, répondez avec une grande sobriété : remerciez, présentez vos condoléances si la personne l'a mentionné, et n'entrez dans aucun détail sur la commande ni sur le défunt. La discrétion fait partie du service.</p>
+<p>La méthode complète est dans notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs Google</a>.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs qui coûtent le plus cher à un fleuriste</h2>
+<ul>
+<li><strong>Offrir quelque chose contre un avis.</strong> Une rose, une remise, un point de fidélité : le <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr-CA" target="_blank" rel="noopener noreferrer">règlement de Google sur les contenus interdits</a> exclut toute contrepartie, et les fiches en infraction s'exposent à des <a href="https://support.google.com/business/answer/14114287?hl=fr" target="_blank" rel="noopener noreferrer">restrictions</a> : blocage temporaire des nouveaux avis ou avertissement affiché sur la fiche.</li>
+<li><strong>Ne proposer l'avis qu'aux clients enchantés.</strong> Choisir à qui l'on tend la plaque selon sa réaction revient à solliciter sélectivement les avis positifs, ce que Google exclut. La plaque est là pour tous les clients.</li>
+<li><strong>Demander un avis lors d'une commande de deuil.</strong> C'est l'erreur qui blesse le plus, et celle qui se raconte.</li>
+<li><strong>Glisser une demande d'avis dans un bouquet livré.</strong> Le destinataire n'est pas le client, et le cadeau devient une publicité.</li>
+<li><strong>Oublier les horaires exceptionnels.</strong> Un dimanche de fête des mères non déclaré, c'est des clients devant un rideau fermé ou, à l'inverse, des clients qui ne viennent pas alors que vous êtes ouvert.</li>
+<li><strong>Coller la plaque sur un plan de travail humide ou métallique.</strong> Lecture aléatoire, adhésif qui se décolle, équipe qui conclut que cela ne marche pas.</li>
+<li><strong>Ne collecter qu'avant les fêtes.</strong> Une campagne de trois semaines en janvier laisse une fiche figée le reste de l'année. Ce sont les avis réguliers, mois après mois, qui protègent la note quand arrive une journée difficile.</li>
+</ul>
+</section>
+
+<section id="faq-fleuriste" class="scroll-mt-28 mb-16">
+<h2>FAQ : plaque NFC et avis Google pour un fleuriste</h2>
+
+<h3>Où placer une plaque NFC dans une boutique de fleurs ?</h3>
+<p>À la caisse, côté client, à côté du terminal de paiement : le client a déjà son téléphone en main pour payer. Le bout du plan de travail où vous composez les bouquets est un bon second emplacement, à condition qu'il reste sec. Le comptoir de retrait des commandes et la table de rendez-vous des mariés complètent le dispositif. Évitez la vitrine, les surfaces humides et les comptoirs en métal ou en zinc, qui perturbent la lecture de la puce.</p>
+
+<h3>Quand demander un avis à un client fleuriste ?</h3>
+<p>Au moment où le client découvre ou emporte son bouquet, quand il n'est pas pressé : un achat du samedi, le retrait d'une commande, le retour des mariés après l'événement. On ne demande rien lors d'une commande de deuil, pendant un pic de fête où la file déborde, ni après un raté qu'il faut d'abord régler. La demande doit être la même pour tous les clients, sans sélection selon leur satisfaction.</p>
+
+<h3>Peut-on demander un avis à la personne qui reçoit le bouquet ?</h3>
+<p>Ce n'est pas recommandé. Le destinataire n'a pas commandé et ne connaît souvent pas la boutique : il ne peut juger qu'une partie du service, et la demande transforme le cadeau en publicité. Proposez plutôt à l'acheteur de laisser un avis, par exemple en ajoutant votre lien d'avis Google dans le message qui confirme la livraison.</p>
+
+<h3>Faut-il indiquer une zone de livraison sur sa fiche Google ?</h3>
+<p>Oui, si vous livrez. Google considère un fleuriste qui reçoit en boutique et qui livre comme un établissement mixte : ses consignes demandent d'indiquer l'adresse de la boutique et la zone desservie. Limitez cette zone aux communes où vous livrez réellement, pour éviter des commandes que vous ne pourriez pas honorer.</p>
+
+<h3>Peut-on offrir une fleur en échange d'un avis Google ?</h3>
+<p>Non. Le règlement de Google interdit toute contrepartie en échange d'un avis, qu'il s'agisse d'un paiement, d'une remise ou d'un produit offert, même symbolique. Une fiche en infraction peut voir ses nouveaux avis bloqués pendant un temps ou afficher un avertissement public. La seule demande admise est une invitation neutre, faite à tous les clients.</p>
+
+<h3>La plaque NFC fonctionne-t-elle avec tous les téléphones ?</h3>
+<p>Les iPhone XR, XS, SE de 2e génération et tous les modèles suivants lisent la puce sans application. Sur les iPhone 7, 8 et X, il faut ouvrir le Lecteur de tag NFC depuis le centre de contrôle. Sur Android, le NFC doit être activé. Pour les autres téléphones, la plaque Swiipx porte un QR code de secours imprimé qui ouvre la même page d'avis.</p>
+
+<h3>Combien de plaques faut-il pour une boutique de fleurs ?</h3>
+<p>Une plaque suffit à une petite boutique dont tout se joue à la caisse. Deux plaques couvrent la caisse et le plan de travail ou le comptoir de retrait. Une boutique avec un espace mariage, ou plusieurs boutiques, peut aller plus loin : avec le Pack Pro, chaque plaque peut pointer vers un lien différent, par exemple pour chaque établissement. Notre article sur le <a href="/blog/combien-de-plaques-nfc">nombre de plaques nécessaires</a> détaille le raisonnement.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : collecter toute l'année pour tenir pendant les fêtes</h2>
+<p>Un fleuriste ne manque pas de clients satisfaits. Il manque d'un moyen simple de leur proposer de le dire, au moment où ils tiennent leur bouquet et ont leur téléphone en main. Sans ce moyen, la fiche se remplit surtout des avis écrits après une journée de fête tendue, et donne une image qui ne correspond pas au travail du reste de l'année.</p>
+<p>La méthode tient en quelques gestes : une fiche à jour avec sa zone desservie et ses horaires exceptionnels, une plaque à la caisse sur une surface sèche, une phrase neutre dite à tous les clients, le silence devant une commande de deuil, aucune contrepartie, et une réponse à chaque avis. Le reste est une affaire de régularité. Pour aller plus loin, lisez nos guides consacrés à la <a href="/blog/plaque-nfc-boulangerie">boulangerie</a>, à l'<a href="/blog/plaque-nfc-institut-beaute">institut de beauté</a> et à la question de <a href="/blog/quand-clients-laissent-avis-google">savoir quand les clients laissent un avis Google</a>.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à équiper la caisse de votre boutique avant les prochaines fêtes ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215 programmée avec votre lien d'avis Google, adhésif 3M inclus, QR code de secours, garantie à vie sur la puce, <strong>sans abonnement</strong>. <a href="/product/starter" class="font-semibold underline">Pack Starter</a> à 29,90 € HT, <a href="/product/business" class="font-semibold underline">Pack Business</a> à 54,90 € HT et <a href="/product/pro" class="font-semibold underline">Pack Pro</a> à 89,90 € HT.</p>
+</div>
+</section>
+`,
+  },
   'lien-avis-google': {
     title: 'Lien d\'avis Google : le trouver, le partager, le tester (et ne pas y toucher)',
     category: 'SEO Local',

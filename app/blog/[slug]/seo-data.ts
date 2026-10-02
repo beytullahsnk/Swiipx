@@ -26,6 +26,23 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'plaque-nfc-fleuriste': {
+    title: 'Plaque NFC fleuriste : collecter des avis Google toute l\'année',
+    description: 'Fleuriste : où poser une plaque NFC d\'avis Google, quand demander (et jamais pour un deuil), livraisons, zone desservie, horaires de fête. Chiffres Val\'hor sourcés.',
+    keywords: 'plaque nfc fleuriste, avis google fleuriste, fleuriste avis clients, fiche google fleuriste, zone desservie fleuriste, horaires fete des meres google, saint valentin fleuriste avis, demander avis fleuriste, plaque avis google boutique de fleurs',
+    date: '2026-10-02',
+    dateModified: '2026-10-02',
+    category: 'Secteur',
+    faq: [
+      { q: 'Où placer une plaque NFC dans une boutique de fleurs ?', a: 'À la caisse, côté client, à côté du terminal de paiement : le client a déjà son téléphone en main pour payer. Le bout du plan de travail où vous composez les bouquets est un bon second emplacement, à condition qu\'il reste sec. Le comptoir de retrait des commandes et la table de rendez-vous des mariés complètent le dispositif. Évitez la vitrine, les surfaces humides et les comptoirs en métal ou en zinc, qui perturbent la lecture de la puce.' },
+      { q: 'Quand demander un avis à un client fleuriste ?', a: 'Au moment où le client découvre ou emporte son bouquet, quand il n\'est pas pressé : un achat du samedi, le retrait d\'une commande, le retour des mariés après l\'événement. On ne demande rien lors d\'une commande de deuil, pendant un pic de fête où la file déborde, ni après un raté qu\'il faut d\'abord régler. La demande doit être la même pour tous les clients, sans sélection selon leur satisfaction.' },
+      { q: 'Peut-on demander un avis à la personne qui reçoit le bouquet ?', a: 'Ce n\'est pas recommandé. Le destinataire n\'a pas commandé et ne connaît souvent pas la boutique : il ne peut juger qu\'une partie du service, et la demande transforme le cadeau en publicité. Proposez plutôt à l\'acheteur de laisser un avis, par exemple en ajoutant votre lien d\'avis Google dans le message qui confirme la livraison.' },
+      { q: 'Faut-il indiquer une zone de livraison sur sa fiche Google ?', a: 'Oui, si vous livrez. Google considère un fleuriste qui reçoit en boutique et qui livre comme un établissement mixte : ses consignes demandent d\'indiquer l\'adresse de la boutique et la zone desservie. Limitez cette zone aux communes où vous livrez réellement, pour éviter des commandes que vous ne pourriez pas honorer.' },
+      { q: 'Peut-on offrir une fleur en échange d\'un avis Google ?', a: 'Non. Le règlement de Google interdit toute contrepartie en échange d\'un avis, qu\'il s\'agisse d\'un paiement, d\'une remise ou d\'un produit offert, même symbolique. Une fiche en infraction peut voir ses nouveaux avis bloqués pendant un temps ou afficher un avertissement public. La seule demande admise est une invitation neutre, faite à tous les clients.' },
+      { q: 'La plaque NFC fonctionne-t-elle avec tous les téléphones ?', a: 'Les iPhone XR, XS, SE de 2e génération et tous les modèles suivants lisent la puce sans application. Sur les iPhone 7, 8 et X, il faut ouvrir le Lecteur de tag NFC depuis le centre de contrôle. Sur Android, le NFC doit être activé. Pour les autres téléphones, la plaque Swiipx porte un QR code de secours imprimé qui ouvre la même page d\'avis.' },
+      { q: 'Combien de plaques faut-il pour une boutique de fleurs ?', a: 'Une plaque suffit à une petite boutique dont tout se joue à la caisse. Deux plaques couvrent la caisse et le plan de travail ou le comptoir de retrait. Une boutique avec un espace mariage, ou plusieurs boutiques, peut aller plus loin : avec le Pack Pro, chaque plaque peut pointer vers un lien différent, par exemple pour chaque établissement. Notre article sur le nombre de plaques nécessaires détaille le raisonnement.' },
+    ],
+  },
   'lien-avis-google': {
     title: 'Lien d\'avis Google : le trouver, le partager, le tester',
     description: 'Où trouver son lien d\'avis Google, le différencier du lien de fiche, le tester sur plusieurs téléphones et pourquoi ne jamais le raccourcir ni le filtrer.',
