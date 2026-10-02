@@ -13,6 +13,7 @@ export default function Footer() {
       { name: 'Pack Starter — 1 plaque', href: '/product/starter' },
       { name: 'Pack Business — 2 plaques', href: '/product/business' },
       { name: 'Pack Pro — 5 plaques', href: '/product/pro' },
+      { name: 'Devis multi-établissements', href: '/devis' },
       { name: 'Comment ça marche', href: '/#how-it-works' },
       { name: 'FAQ', href: '/#faq' },
     ],

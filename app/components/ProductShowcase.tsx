@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect, useRef } from 'react'
-import { Building2, Check, ChevronDown, ChevronLeft, ChevronRight, Gift, MapPin, Package, Shield, ShoppingCart, Truck } from 'lucide-react'
+import { Building2, Check, ChevronDown, ChevronLeft, ChevronRight, MapPin, Package, Shield, ShoppingCart, Truck } from 'lucide-react'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart } from '../store/cart'
 import { useCompanyStore } from '../store/company'
 import BusinessAutocomplete, { BusinessInfo } from './BusinessAutocomplete'
 import ClientLogos from './ClientLogos'
+import Reassurance from './Reassurance'
 import { track } from '../../lib/analytics'
 import Link from 'next/link'
 import { PACKS, formatHt, unitPriceCents } from '../../lib/pricing'
@@ -141,7 +142,7 @@ export default function ProductShowcase() {
       id: 'guarantee',
       title: 'Garantie & Retours',
       icon: Shield,
-      content: 'Garantie à vie contre tout défaut de fabrication. Support client prioritaire inclus. Guide d\'utilisation et templates de scripts offerts.',
+      content: 'Garantie à vie sur la puce NFC : si la plaque cesse de fonctionner sans mauvaise utilisation, nous la remplaçons gratuitement. Satisfait ou remboursé pendant 90 jours, en plus du droit de rétractation de 14 jours, pour une plaque ni utilisée ni collée.',
     },
   ]
 
@@ -443,16 +444,8 @@ export default function ProductShowcase() {
                 className="flex justify-center"
               />
 
-              {/* Garantie 14 jours */}
-              <div className="flex items-start space-x-2.5 p-3 bg-green-50 border border-green-200 rounded-lg">
-                <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <div className="text-sm">
-                  <p className="font-semibold text-green-900">Satisfait ou remboursé sous 90 jours</p>
-                  <p className="text-green-700 text-xs">Retour gratuit, plaque non collée — remboursement intégral.</p>
-                </div>
-              </div>
+              {/* Réassurance au point de décision : uniquement des engagements des CGV. */}
+              <Reassurance />
             </div>
 
             {/* Payment Methods */}
@@ -503,28 +496,6 @@ export default function ProductShowcase() {
                   </motion.div>
                 </div>
               ))}
-            </div>
-
-            {/* Additional Trust Signals */}
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 space-y-3">
-              <p className="font-bold text-gray-900 flex items-center space-x-2">
-                <Gift className="w-5 h-5 text-primary" />
-                <span>Offre spéciale livraison offerte en point relais</span>
-              </p>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start space-x-2">
-                  <Check className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Guide complet offert (valeur 29€)</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <Check className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Configuration personnalisée incluse</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <Check className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Support prioritaire 7j/7</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

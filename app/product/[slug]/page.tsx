@@ -3,15 +3,16 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import {
   Star, Check, ShoppingCart, Truck, Shield,
-  ChevronLeft, ChevronRight, Package, MapPin, Gift, Minus, Plus, ArrowRight
+  ChevronLeft, ChevronRight, Package, MapPin, Minus, Plus, ArrowRight
 } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { useCart, CartItem } from '../../store/cart'
 import ClientLogos from '../../components/ClientLogos'
+import Reassurance from '../../components/Reassurance'
 import CustomerReviews from '../../components/CustomerReviews'
 import { reviewsPourPack } from '../../data/reviews'
 import { TVA, type PackSlug } from '@/lib/pricing'
@@ -216,7 +217,7 @@ function getInfoSections(slug: string) {
       id: 'guarantee',
       title: 'Garantie & Retours',
       icon: Shield,
-      content: `Garantie à vie contre tout défaut de fabrication. Remplacement gratuit en cas de défaillance technique. Droit de rétractation de 14 jours (produit non utilisé, non collé, emballage intact). Support client réactif par email.`,
+      content: `Garantie à vie sur la puce NFC : si la plaque cesse de fonctionner sans mauvaise utilisation, nous la remplaçons gratuitement. Satisfait ou remboursé pendant 90 jours, en plus du droit de rétractation de 14 jours, pour une plaque ni utilisée ni collée.`,
     },
   ]
 }
@@ -238,6 +239,19 @@ export default function ProductDetailPage() {
     if (!p) return
     track('view_item', { item_id: slugToCartId[slug], item_name: p.name, value: p.price, currency: 'EUR' })
   }, [slug])
+
+  // Barre d'achat fixe sur téléphone, visible dès que le bouton principal
+  // n'est plus à l'écran : la galerie le repousse sous la ligne de flottaison,
+  // et l'accueil a déjà la même barre (stratégie du 2026-10-02).
+  const boutonPrincipal = useRef<HTMLButtonElement>(null)
+  const [barreAchat, setBarreAchat] = useState(false)
+  useEffect(() => {
+    const bouton = boutonPrincipal.current
+    if (!bouton || typeof IntersectionObserver === 'undefined') return
+    const observateur = new IntersectionObserver(([entree]) => setBarreAchat(!entree.isIntersecting), { threshold: 0 })
+    observateur.observe(bouton)
+    return () => observateur.disconnect()
+  }, [product])
 
   if (!product) {
     return (
@@ -510,6 +524,7 @@ export default function ProductDetailPage() {
 
             {/* Add to Cart CTA */}
             <button
+              ref={boutonPrincipal}
               onClick={handleAddToCart}
               aria-label={`Ajouter ${quantity} ${product.name} au panier`}
               className="w-full py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center space-x-3"
@@ -517,6 +532,9 @@ export default function ProductDetailPage() {
               <ShoppingCart className="w-6 h-6" />
               <span>Ajouter au panier — {((product.price * quantity) / (1 + TVA)).toFixed(2).replace('.', ',')}€ HT</span>
             </button>
+
+            {/* Réassurance au point de décision : uniquement des engagements des CGV. */}
+            <Reassurance />
 
             {/* Preuve sociale : logos clients, pas de noms en clair */}
             <ClientLogos
@@ -579,28 +597,6 @@ export default function ProductDetailPage() {
               </Accordion>
             </div>
 
-            {/* Special Offer Box */}
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 space-y-3">
-              <p className="font-bold text-gray-900 flex items-center space-x-2">
-                <Gift className="w-5 h-5 text-primary" />
-                <span>Offre spéciale livraison offerte en point relais</span>
-              </p>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start space-x-2">
-                  <Check className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Guide complet offert (valeur 29€)</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <Check className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Configuration personnalisée incluse</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <Check className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Support prioritaire 7j/7</span>
-                </li>
-              </ul>
-            </div>
-
             {/* Payment Methods */}
             <div className="flex items-center justify-center space-x-4 py-4 border-t border-gray-200">
               <span className="text-sm text-gray-500">Paiement sécurisé</span>
@@ -638,6 +634,23 @@ export default function ProductDetailPage() {
         {/* Section "Comparer les autres packs" — internal linking SEO + cross-sell */}
         <RelatedProducts currentSlug={slug} />
       </div>
+
+      {barreAchat && (
+        <div className="fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] p-3 lg:hidden" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}>
+          <div className="flex items-center justify-between max-w-lg mx-auto gap-3">
+            <p className="flex-shrink-0 text-lg font-bold text-gray-900">
+              {((product.price * quantity) / (1 + TVA)).toFixed(2).replace('.', ',')}€ <span className="text-sm font-semibold text-gray-500">HT</span>
+            </p>
+            <button
+              onClick={handleAddToCart}
+              className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-base bg-primary text-white hover:bg-blue-700 active:scale-[0.98] transition-all"
+            >
+              <ShoppingCart className="w-5 h-5" aria-hidden="true" />
+              Ajouter au panier
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

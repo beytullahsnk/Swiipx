@@ -7,6 +7,8 @@ import { ArrowRight, X } from 'lucide-react'
 import { track } from '@/lib/analytics'
 import { LOWEST_PRICE_CENTS, PACK_LIST, formatHt } from '@/lib/pricing'
 import { NOM_PACK } from '@/lib/product-schema'
+import ClientLogos from '@/app/components/ClientLogos'
+import type { ContexteArticle, TypeArticle } from './contexte'
 
 /**
  * Parcours de conversion des articles de blog.
@@ -33,10 +35,14 @@ import { NOM_PACK } from '@/lib/product-schema'
  *    l'écran, pour ne jamais afficher deux fois le même message ;
  * 4. la fin d'article : le choix du pack, pour ceux qui lisent jusqu'au bout.
  *
+ * Depuis le 2026-10-02, leur message suit le sujet de l'article (contexte.ts) :
+ * le métier et l'endroit où poser la plaque pour un article secteur, le prix
+ * pour un comparatif, etc.
+ *
  * MESURE : événements e-commerce standard de GA4, view_promotion à
  * l'affichage et select_promotion au clic, avec l'emplacement en
- * creative_slot. Ils permettent de comparer les quatre emplacements et de
- * supprimer celui qui ne sert pas.
+ * creative_slot et le type d'article en promotion_name. Ils permettent de
+ * comparer les emplacements, et les messages d'un type d'article à l'autre.
  */
 
 type Emplacement = 'encart_article' | 'colonne_article' | 'barre_mobile_article' | 'fin_article'
@@ -47,16 +53,16 @@ const PHOTO = '/product-main.jpg'
 const ALT_PHOTO = 'Plaque Swiipx « Laissez-nous votre avis » : logo Google, zone NFC et QR code de secours'
 const CLE_BARRE_MASQUEE = 'swiipx-barre-article-masquee'
 
-function promotion(emplacement: Emplacement, slug: string) {
-  return { creative_slot: emplacement, promotion_id: slug, promotion_name: 'plaque_nfc' }
+function promotion(emplacement: Emplacement, slug: string, type: TypeArticle) {
+  return { creative_slot: emplacement, promotion_id: slug, promotion_name: type }
 }
 
-function clicPromotion(emplacement: Emplacement, slug: string, destination: string) {
-  track('select_promotion', { ...promotion(emplacement, slug), destination })
+function clicPromotion(emplacement: Emplacement, slug: string, type: TypeArticle, destination: string) {
+  track('select_promotion', { ...promotion(emplacement, slug, type), destination })
 }
 
 /** Envoie view_promotion une seule fois, quand la moitié de l'élément est à l'écran. */
-function useAffichage<T extends Element>(emplacement: Emplacement, slug: string, actif = true) {
+function useAffichage<T extends Element>(emplacement: Emplacement, slug: string, type: TypeArticle, actif = true) {
   const ref = useRef<T>(null)
   useEffect(() => {
     const element = ref.current
@@ -64,7 +70,7 @@ function useAffichage<T extends Element>(emplacement: Emplacement, slug: string,
     const observateur = new IntersectionObserver(
       ([entree]) => {
         if (entree.isIntersecting) {
-          track('view_promotion', promotion(emplacement, slug))
+          track('view_promotion', promotion(emplacement, slug, type))
           observateur.disconnect()
         }
       },
@@ -72,7 +78,7 @@ function useAffichage<T extends Element>(emplacement: Emplacement, slug: string,
     )
     observateur.observe(element)
     return () => observateur.disconnect()
-  }, [emplacement, slug, actif])
+  }, [emplacement, slug, type, actif])
   return ref
 }
 
@@ -117,8 +123,8 @@ function usePosition(selecteur: string, siAbsent: Position): Position {
 }
 
 /** 1. Encart placé après la première section de l'article. */
-export function EncartProduit({ slug }: { slug: string }) {
-  const ref = useAffichage<HTMLElement>('encart_article', slug)
+export function EncartProduit({ slug, contexte }: { slug: string; contexte: ContexteArticle }) {
+  const ref = useAffichage<HTMLElement>('encart_article', slug, contexte.type)
   return (
     <aside
       ref={ref}
@@ -131,25 +137,24 @@ export function EncartProduit({ slug }: { slug: string }) {
           <Image src={PHOTO} alt={ALT_PHOTO} fill sizes="96px" className="object-cover" />
         </div>
         <div className="min-w-0">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">La solution Swiipx</p>
-          <p className="font-bold leading-snug text-gray-900">
-            Une plaque NFC livrée déjà programmée avec votre lien d&apos;avis Google
-          </p>
-          <p className="mt-1 text-sm leading-relaxed text-gray-600">
-            Vos clients approchent leur téléphone, la page d&apos;avis s&apos;ouvre. Sans application, sans abonnement.
-          </p>
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">{contexte.accroche}</p>
+          <p className="font-bold leading-snug text-gray-900">{contexte.titre}</p>
+          <p className="mt-1 text-sm leading-relaxed text-gray-600">{contexte.texte}</p>
         </div>
       </div>
+      {/* Preuve sociale réelle, seulement quand des clients du même secteur
+          nous ont transmis leur logo (app/data/clients.ts). */}
+      {contexte.logosClients && <ClientLogos variante="compact" afficherSecteurs={false} className="mt-4 flex" />}
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-gray-600">
           <span className="font-bold text-gray-900">Dès {PRIX_MINIMUM}</span> · expédiée sous 24 h ouvrées
         </p>
         <Link
           href="/#product"
-          onClick={() => clicPromotion('encart_article', slug, '/#product')}
+          onClick={() => clicPromotion('encart_article', slug, contexte.type, '/#product')}
           className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-700"
         >
-          Voir les packs
+          {contexte.cta}
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
       </div>
@@ -168,7 +173,7 @@ export function EncartProduit({ slug }: { slug: string }) {
  * elle gêne. Elle est hors du lien, avec sa propre zone de toucher, pour ne
  * jamais ouvrir la page par erreur.
  */
-export function BarreProduitMobile({ slug }: { slug: string }) {
+export function BarreProduitMobile({ slug, contexte }: { slug: string; contexte: ContexteArticle }) {
   const encart = usePosition('[data-encart-produit]', 'apres')
   const fin = usePosition('[data-fin-article]', 'avant')
   const [masquee, setMasquee] = useState(true)
@@ -182,11 +187,11 @@ export function BarreProduitMobile({ slug }: { slug: string }) {
   }, [])
 
   const visible = !masquee && encart === 'apres' && fin === 'avant'
-  const ref = useAffichage<HTMLDivElement>('barre_mobile_article', slug, visible)
+  const ref = useAffichage<HTMLDivElement>('barre_mobile_article', slug, contexte.type, visible)
 
   const masquer = () => {
     setMasquee(true)
-    track('dismiss_promotion', promotion('barre_mobile_article', slug))
+    track('dismiss_promotion', promotion('barre_mobile_article', slug, contexte.type))
     try {
       sessionStorage.setItem(CLE_BARRE_MASQUEE, '1')
     } catch {
@@ -207,17 +212,17 @@ export function BarreProduitMobile({ slug }: { slug: string }) {
         <Link
           href="/#product"
           tabIndex={visible ? 0 : -1}
-          aria-label={`Voir les packs de plaques NFC avis Google, dès ${PRIX_MINIMUM}`}
-          onClick={() => clicPromotion('barre_mobile_article', slug, '/#product')}
+          aria-label={`${contexte.barre} : voir les packs, dès ${PRIX_MINIMUM}`}
+          onClick={() => clicPromotion('barre_mobile_article', slug, contexte.type, '/#product')}
           className="flex min-w-0 flex-1 items-center gap-3 rounded-l-2xl py-2.5 pl-3 pr-2 active:bg-gray-50"
         >
           <span className="relative h-11 w-11 flex-shrink-0 overflow-hidden rounded-lg">
             <Image src={PHOTO} alt="" fill sizes="44px" className="object-cover" />
           </span>
           <span className="min-w-0 flex-1">
-            {/* Texte court : à 375 px, « Plaque NFC avis Google » et « livrée
-                programmée » étaient tronqués à côté du bouton. */}
-            <span className="block truncate text-sm font-bold text-gray-900">Plaque avis Google</span>
+            {/* Titre court (24 caractères au plus) : à 375 px, il partage la
+                ligne avec le bouton. */}
+            <span className="block truncate text-sm font-bold text-gray-900">{contexte.barre}</span>
             <span className="block truncate text-xs text-gray-600">Dès {PRIX_MINIMUM}</span>
           </span>
           <span aria-hidden="true" className="flex-shrink-0 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white">
@@ -239,10 +244,10 @@ export function BarreProduitMobile({ slug }: { slug: string }) {
 }
 
 /** 3. Carte en colonne, sur ordinateur : masquée tant que l'encart est à l'écran. */
-export function CarteProduitColonne({ slug }: { slug: string }) {
+export function CarteProduitColonne({ slug, contexte }: { slug: string; contexte: ContexteArticle }) {
   const encart = usePosition('[data-encart-produit]', 'avant')
   const visible = encart !== 'visible'
-  const ref = useAffichage<HTMLDivElement>('colonne_article', slug, visible)
+  const ref = useAffichage<HTMLDivElement>('colonne_article', slug, contexte.type, visible)
 
   return (
     <div
@@ -255,27 +260,37 @@ export function CarteProduitColonne({ slug }: { slug: string }) {
       <div className="relative mb-4 aspect-square w-full overflow-hidden rounded-xl bg-gray-50">
         <Image src={PHOTO} alt={ALT_PHOTO} fill sizes="280px" className="object-cover" />
       </div>
-      <p className="font-bold text-gray-900">Plaque NFC avis Google</p>
-      <p className="mt-1 text-sm leading-relaxed text-gray-600">
-        Livrée déjà programmée avec le lien d&apos;avis de votre établissement. Sans application, sans abonnement.
-      </p>
+      <p className="font-bold text-gray-900">{contexte.barre}</p>
+      <p className="mt-1 text-sm leading-relaxed text-gray-600">{contexte.resume}</p>
       <p className="mt-3 text-lg font-bold text-primary">Dès {PRIX_MINIMUM}</p>
       <Link
         href="/#product"
         tabIndex={visible ? 0 : -1}
-        onClick={() => clicPromotion('colonne_article', slug, '/#product')}
+        onClick={() => clicPromotion('colonne_article', slug, contexte.type, '/#product')}
         className="mt-3 block w-full rounded-lg bg-primary py-3 text-center text-sm font-bold text-white transition-colors hover:bg-blue-700"
       >
-        Voir les packs
+        {contexte.cta}
       </Link>
       <p className="mt-2 text-center text-xs text-gray-500">Livraison offerte en point relais · Garantie à vie</p>
     </div>
   )
 }
 
-/** 4. Fin d'article : le choix du pack, et la page du secteur quand elle existe. */
-export function FinArticle({ slug, secteur }: { slug: string; secteur: { slug: string; label: string } | null }) {
-  const ref = useAffichage<HTMLElement>('fin_article', slug)
+/**
+ * 4. Fin d'article : le choix du pack, avec celui qui convient au métier de
+ * l'article mis en avant, la page du secteur quand elle existe, et le devis
+ * pour qui équipe plusieurs établissements.
+ */
+export function FinArticle({
+  slug,
+  secteur,
+  contexte,
+}: {
+  slug: string
+  secteur: { slug: string; label: string } | null
+  contexte: ContexteArticle
+}) {
+  const ref = useAffichage<HTMLElement>('fin_article', slug, contexte.type)
   return (
     <section
       ref={ref}
@@ -284,38 +299,61 @@ export function FinArticle({ slug, secteur }: { slug: string; secteur: { slug: s
       className="mt-12 rounded-2xl border border-gray-200 p-5 sm:p-6"
     >
       <h2 id="fin-article-titre" className="text-xl font-bold text-gray-900 sm:text-2xl">
-        Équipez votre établissement
+        {contexte.titreFin}
       </h2>
       <p className="mt-2 leading-relaxed text-gray-600">
         Chaque plaque arrive programmée avec le lien d&apos;avis Google de votre établissement. Choisissez selon le
         nombre d&apos;emplacements à équiper :
       </p>
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
-        {PACK_LIST.map((pack) => (
-          <Link
-            key={pack.slug}
-            href={`/product/${pack.slug}`}
-            onClick={() => clicPromotion('fin_article', slug, `/product/${pack.slug}`)}
-            className="block rounded-xl border border-gray-200 p-4 transition-colors hover:border-primary hover:bg-blue-50"
-          >
-            <span className="block font-bold text-gray-900">{NOM_PACK[pack.slug]}</span>
-            <span className="block text-sm text-gray-600">
-              {pack.plaques} plaque{pack.plaques > 1 ? 's' : ''}
-            </span>
-            <span className="mt-2 block font-bold text-primary">{formatHt(pack.priceCents)}</span>
-          </Link>
-        ))}
+        {PACK_LIST.map((pack) => {
+          const conseille = pack.slug === contexte.packConseille
+          return (
+            <Link
+              key={pack.slug}
+              href={`/product/${pack.slug}`}
+              onClick={() => clicPromotion('fin_article', slug, contexte.type, `/product/${pack.slug}`)}
+              className={`block rounded-xl border p-4 transition-colors hover:border-primary hover:bg-blue-50 ${
+                conseille ? 'border-primary bg-blue-50/60' : 'border-gray-200'
+              }`}
+            >
+              {conseille && (
+                <span className="mb-2 inline-block rounded-full bg-primary px-2.5 py-0.5 text-xs font-bold text-white">
+                  Conseillé
+                </span>
+              )}
+              <span className="block font-bold text-gray-900">{NOM_PACK[pack.slug]}</span>
+              <span className="block text-sm text-gray-600">
+                {pack.plaques} plaque{pack.plaques > 1 ? 's' : ''}
+              </span>
+              {conseille && contexte.raisonPack && (
+                <span className="mt-1 block text-xs text-gray-600">{contexte.raisonPack}</span>
+              )}
+              <span className="mt-2 block font-bold text-primary">{formatHt(pack.priceCents)}</span>
+            </Link>
+          )
+        })}
       </div>
       <p className="mt-4 text-sm text-gray-500">Paiement unique, sans abonnement · Livraison offerte en point relais</p>
-      {secteur && (
+      <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+        {secteur && (
+          <Link
+            href={`/secteur/${secteur.slug}`}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+          >
+            {secteur.label}
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        )}
         <Link
-          href={`/secteur/${secteur.slug}`}
-          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+          href="/devis"
+          onClick={() => clicPromotion('fin_article', slug, contexte.type, '/devis')}
+          className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
         >
-          {secteur.label}
+          Plusieurs établissements ? Demander un devis
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
-      )}
+      </div>
     </section>
   )
 }

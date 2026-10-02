@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/blog`, lastModified: dernierArticle > MODIF_EDITORIAL ? dernierArticle : MODIF_EDITORIAL, changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${BASE_URL}/a-propos`, lastModified: MODIF_EDITORIAL, changeFrequency: 'monthly' as const, priority: 0.6 },
     { url: `${BASE_URL}/contact`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${BASE_URL}/devis`, lastModified: '2026-10-02', changeFrequency: 'monthly' as const, priority: 0.6 },
     { url: `${BASE_URL}/livraison`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.4 },
     { url: `${BASE_URL}/retours`, lastModified: MODIF_LEGAL, changeFrequency: 'monthly' as const, priority: 0.4 },
     { url: `${BASE_URL}/cgv`, lastModified: MODIF_LEGAL, changeFrequency: 'yearly' as const, priority: 0.3 },

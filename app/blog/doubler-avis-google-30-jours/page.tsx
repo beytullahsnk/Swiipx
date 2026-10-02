@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ArticleToc from '../[slug]/ArticleToc'
 import { BarreProduitMobile, CarteProduitColonne, EncartProduit, FinArticle } from '../[slug]/ConversionArticle'
+import { contexteArticle } from '../[slug]/contexte'
 
 /* ─────────────────────────────────────────────
    Table of Contents - sections de l'article
@@ -21,6 +22,7 @@ const tocSections = [
 ]
 
 const SLUG = 'doubler-avis-google-30-jours'
+const CONTEXTE = contexteArticle(SLUG, 'Stratégie')
 
 export const dynamic = 'force-static'
 
@@ -149,7 +151,7 @@ export default function DoublerAvisGoogle30Jours() {
               </div>
             </section>
 
-            <EncartProduit slug={SLUG} />
+            <EncartProduit slug={SLUG} contexte={CONTEXTE} />
 
             {/* ────────────────────────────────────
                 Section 2 : Phase 1 — GMB
@@ -632,21 +634,21 @@ export default function DoublerAvisGoogle30Jours() {
               </div>
             </section>
 
-            <FinArticle slug={SLUG} secteur={null} />
+            <FinArticle slug={SLUG} secteur={null} contexte={CONTEXTE} />
 
           </article>
 
           {/* ── COLONNE DROITE : carte produit ── */}
           <aside className="hidden lg:block">
             <div className="sticky top-36">
-              <CarteProduitColonne slug={SLUG} />
+              <CarteProduitColonne slug={SLUG} contexte={CONTEXTE} />
             </div>
           </aside>
 
         </div>
       </div>
 
-      <BarreProduitMobile slug={SLUG} />
+      <BarreProduitMobile slug={SLUG} contexte={CONTEXTE} />
     </div>
   )
 }

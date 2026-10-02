@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import { Minus, Plus, Trash2, ShoppingBag } from 'lucide-react'
 import { useCart } from '../store/cart'
-import { formatHt } from '@/lib/pricing'
+import { PACKS, formatHt } from '@/lib/pricing'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import {
@@ -41,6 +41,15 @@ export default function SideCart() {
     })
     closeCart()
     router.push('/checkout')
+  }
+
+  // Au-delà de 5 plaques, c'est souvent un réseau d'établissements : un devis
+  // permet d'attribuer à chaque plaque le lien de son propre établissement.
+  const plaques = items.reduce((total, item) => total + (PACKS[item.id]?.plaques ?? 0) * item.qty, 0)
+  const allerAuDevis = () => {
+    track('select_promotion', { creative_slot: 'panier', promotion_id: 'devis', promotion_name: 'devis_multi_etablissements', destination: '/devis' })
+    closeCart()
+    router.push('/devis')
   }
 
   const handleViewCart = () => {
@@ -162,6 +171,17 @@ export default function SideCart() {
             <p className="text-sm text-gray-500">
               Livraison et TVA calculées au paiement
             </p>
+
+            {plaques > 5 && (
+              <button
+                type="button"
+                onClick={allerAuDevis}
+                className="w-full rounded-lg border border-blue-200 bg-blue-50 p-3 text-left text-sm text-blue-900 hover:bg-blue-100 transition-colors"
+              >
+                <span className="font-semibold">Vous équipez plusieurs établissements ?</span> Demandez un devis : chaque plaque
+                pointe vers son propre établissement, réponse sous 24 h ouvrées.
+              </button>
+            )}
 
             <div className="space-y-3">
               <Button

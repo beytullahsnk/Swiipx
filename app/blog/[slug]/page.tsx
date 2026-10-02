@@ -6,6 +6,7 @@ import { articles } from './articles'
 import { getRelatedArticles, secteurDeLArticle } from './related'
 import ArticleToc from './ArticleToc'
 import { BarreProduitMobile, CarteProduitColonne, EncartProduit, FinArticle } from './ConversionArticle'
+import { contexteArticle } from './contexte'
 
 /**
  * Server Component.
@@ -41,6 +42,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   const filteredRelated = getRelatedArticles(params.slug)
   const secteur = secteurDeLArticle(params.slug)
+  const contexte = contexteArticle(params.slug, article.category)
 
   // L'encart produit s'insere apres la premiere section (6 a 17 % du contenu
   // selon l'article) : assez tot pour etre vu, la plupart des lecteurs partant
@@ -126,13 +128,13 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           {/* ── COLONNE CENTRE : CONTENU ── */}
           <article data-article className="max-w-none min-w-0">
             <div className={PROSE} dangerouslySetInnerHTML={{ __html: debutContenu }} />
-            <EncartProduit slug={params.slug} />
+            <EncartProduit slug={params.slug} contexte={contexte} />
             {suiteContenu && <div className={PROSE} dangerouslySetInnerHTML={{ __html: suiteContenu }} />}
 
             {/* Le choix du pack, puis la page du secteur. Le lien vers la page
                 secteur reste dans le corps de l'article : depuis un article de
                 fond sur le meme sujet, il porte plus qu'un lien de pied de page. */}
-            <FinArticle slug={params.slug} secteur={secteur} />
+            <FinArticle slug={params.slug} secteur={secteur} contexte={contexte} />
 
             {/* Section Articles Connexes (visible sur tous les écrans) */}
             <div className="mt-16 pt-10 border-t-2 border-gray-100">
@@ -162,14 +164,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           {/* ── COLONNE DROITE : carte produit ── */}
           <aside className="hidden lg:block">
             <div className="sticky top-36">
-              <CarteProduitColonne slug={params.slug} />
+              <CarteProduitColonne slug={params.slug} contexte={contexte} />
             </div>
           </aside>
 
         </div>
       </div>
 
-      <BarreProduitMobile slug={params.slug} />
+      <BarreProduitMobile slug={params.slug} contexte={contexte} />
     </div>
   )
 }
