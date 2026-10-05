@@ -64,7 +64,7 @@ Les slugs indiqués sont des propositions. Les articles déjà publiés figurent
 
 ## Comparatif
 
-- [ ] **Avis Google, Tripadvisor ou Trustpilot : où concentrer ses efforts** (`avis-google-tripadvisor-trustpilot`)
+- [x] **Avis Google, Tripadvisor ou Trustpilot : où concentrer ses efforts** (`avis-google-tripadvisor-trustpilot`) : proposé le 2026-10-05, slug `avis-google-tripadvisor-trustpilot`
 - [ ] **NTAG213, NTAG215 ou NTAG216 : quelle puce pour une plaque d'avis** (`ntag213-ntag215-ntag216`)
   - S'appuyer sur les fiches techniques NXP.
 - [ ] **Créer soi-même un QR code d'avis Google, et ses limites** (`qr-code-avis-google-gratuit`)

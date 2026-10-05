@@ -26,6 +26,23 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'avis-google-tripadvisor-trustpilot': {
+    title: 'Avis Google, Tripadvisor ou Trustpilot : quelle plateforme ?',
+    description: 'Google, Tripadvisor ou Trustpilot : public, règles de collecte, modération, coût et loi française. La grille par métier pour choisir où demander vos avis.',
+    keywords: 'avis google ou tripadvisor, trustpilot ou google, plateforme avis clients, tripadvisor restaurant, trustpilot commerce, comparatif plateformes avis',
+    date: '2026-10-05',
+    dateModified: '2026-10-05',
+    category: 'Comparatif',
+    faq: [
+      { q: 'Faut-il être présent sur Google, Tripadvisor et Trustpilot à la fois ?', a: 'Non. La plupart des commerces de proximité n\'ont besoin que de Google. Tripadvisor s\'ajoute pour les restaurants, hébergements et activités qui reçoivent une clientèle de passage, et Trustpilot concerne surtout les entreprises qui vendent à distance. Mieux vaut une fiche bien entretenue que trois fiches à moitié vides.' },
+      { q: 'Mon commerce peut-il avoir une fiche Tripadvisor ?', a: 'Tripadvisor référence les hébergements, les restaurants et les attractions ou activités. Un commerce de détail, un artisan ou un cabinet n\'entrent pas dans ces catégories. Si votre établissement y figure déjà, vous pouvez revendiquer gratuitement la fiche pour répondre aux avis et mettre à jour vos informations.' },
+      { q: 'Puis-je proposer une remise aux clients qui laissent un avis ?', a: 'Non, sur aucune des trois plateformes. Google, Tripadvisor et Trustpilot interdisent toute contrepartie en échange d\'un avis, qu\'il s\'agisse d\'argent, de remise, de cadeau ou de traitement particulier. Les avis ainsi obtenus peuvent être retirés et la fiche sanctionnée.' },
+      { q: 'Ai-je le droit de ne demander un avis qu\'aux clients contents ?', a: 'Non. Les trois plateformes interdisent la sollicitation sélective : il faut proposer de laisser un avis à tous les clients, de la même manière. Trustpilot admet une sélection neutre, par exemple un client sur trois, si vous ne pouvez pas inviter tout le monde.' },
+      { q: 'Trustpilot est-il utile pour un commerce de proximité ?', a: 'Rarement. Trustpilot évalue des entreprises rattachées à un site web et sert surtout aux clients qui hésitent à acheter à distance. Un client qui cherche un commerce près de chez lui consulte d\'abord Google Maps. Si vous vendez aussi en ligne, Trustpilot peut compléter votre fiche Google.' },
+      { q: 'Une plaque NFC peut-elle servir pour plusieurs plateformes ?', a: 'Une plaque ouvre un seul lien. Il est plus efficace de la consacrer à votre plateforme principale, en général Google, et de solliciter la plateforme secondaire autrement, par exemple par e-mail après la visite. Les plaques Swiipx sont livrées programmées avec le lien d\'avis Google de votre établissement.' },
+      { q: 'Que dit la loi française sur les avis en ligne ?', a: 'L\'article L111-7-2 du Code de la consommation oblige les sites qui publient des avis à informer loyalement sur leur modération. La DGCCRF rappelle que publier de faux avis ou modifier ceux des clients est une pratique commerciale trompeuse, quelle que soit la plateforme utilisée.' },
+    ],
+  },
   'plaque-nfc-fleuriste': {
     title: 'Plaque NFC fleuriste : collecter des avis Google toute l\'année',
     description: 'Fleuriste : où poser une plaque NFC d\'avis Google, quand demander (et jamais pour un deuil), livraisons, zone desservie, horaires de fête. Chiffres Val\'hor sourcés.',

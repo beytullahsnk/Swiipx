@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 51,
+    title: 'Avis Google, Tripadvisor ou Trustpilot : où concentrer vos efforts ?',
+    excerpt: 'Google, Tripadvisor et Trustpilot ne servent pas les mêmes clients. Public, règles de collecte, modération, coût et loi française : la grille par métier pour choisir votre plateforme d\'avis prioritaire sans vous disperser.',
+    category: 'Comparatif',
+    date: '5 octobre 2026',
+    dateIso: '2026-10-05',
+    readTime: '15 min',
+    slug: 'avis-google-tripadvisor-trustpilot',
+  },
+  {
     id: 50,
     title: 'Plaque NFC fleuriste : des avis Google toute l\'année, pas seulement à la Saint-Valentin',
     excerpt: 'Saint-Valentin, fête des mères, Toussaint : les pics d\'un fleuriste sont aussi ceux où naissent les avis négatifs. Chiffres Val\'hor, réglages de fiche, 5 emplacements, deuil et livraisons : la méthode pour collecter sans maladresse.',

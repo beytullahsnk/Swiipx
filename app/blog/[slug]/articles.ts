@@ -18,6 +18,232 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'avis-google-tripadvisor-trustpilot': {
+    title: 'Avis Google, Tripadvisor ou Trustpilot : où concentrer vos efforts ?',
+    category: 'Comparatif',
+    date: '5 octobre 2026',
+    readTime: '15 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Google, Tripadvisor et Trustpilot ne servent pas les mêmes clients. Public, règles de collecte, modération, coût et loi française : la grille par métier pour choisir votre plateforme d\'avis prioritaire sans vous disperser.',
+    tocSections: [
+      { id: 'dilemme', label: 'Le dilemme du commerçant' },
+      { id: 'trois-plateformes', label: 'Ce que sont les trois plateformes' },
+      { id: 'qui-consulte', label: 'Qui consulte quoi' },
+      { id: 'regles-collecte', label: 'Les règles de collecte' },
+      { id: 'moderation', label: 'Modération et faux avis' },
+      { id: 'couts', label: 'Ce que ça coûte' },
+      { id: 'par-secteur', label: 'La grille par activité' },
+      { id: 'loi-france', label: 'Ce que dit la loi' },
+      { id: 'organiser', label: 'Organiser vos demandes' },
+      { id: 'faq-plateformes-avis', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="dilemme" class="scroll-mt-28 mb-16">
+<h2>Trois plateformes, une seule équipe : le dilemme du commerçant</h2>
+<p>Vous tenez un restaurant, une boutique, un cabinet ou un petit hôtel. Votre fiche Google affiche quelques dizaines d'avis. Un client vous parle de Tripadvisor, un commercial vous propose un abonnement Trustpilot, et un fournisseur vous conseille de « soigner votre présence partout ». Sur le papier, chaque plateforme a ses arguments. Dans la réalité, vous avez une caisse à tenir, des clients à servir et très peu de minutes par jour pour penser à votre réputation en ligne.</p>
+<p>La question n'est donc pas de savoir quelle plateforme est « la meilleure » dans l'absolu. Elle est de savoir où chaque demande d'avis que vous faites rapporte le plus, compte tenu de votre métier, de vos clients et du temps dont vous disposez. Demander un avis a un coût : quelques secondes de conversation, un support à placer, un client à qui l'on ne peut pas demander trois choses à la fois. Disperser ces demandes sur trois sites, c'est souvent obtenir trois fiches à moitié vides au lieu d'une fiche solide.</p>
+<p>Cet article compare Google, Tripadvisor et Trustpilot sur des critères concrets : qui consulte chaque plateforme, quelles règles encadrent la collecte d'avis, comment les avis sont modérés, ce que cela coûte, et ce que la loi française impose à tous. Il se termine par une grille de décision par type d'activité et une méthode pour organiser vos demandes sans enfreindre aucune règle.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 En une phrase :</strong> pour un commerce de proximité, Google reste la plateforme prioritaire parce qu'elle alimente directement la recherche locale et Google Maps ; Tripadvisor devient un second canal sérieux pour la restauration, l'hébergement et les activités touristiques ; Trustpilot concerne surtout les entreprises qui vendent à distance.</p>
+</div>
+</section>
+
+<section id="trois-plateformes" class="scroll-mt-28 mb-16">
+<h2>Ce que sont vraiment Google, Tripadvisor et Trustpilot</h2>
+<p>Les trois services affichent des étoiles et des commentaires, ce qui laisse croire qu'ils sont interchangeables. Ils ne le sont pas : ils n'ont ni le même public, ni la même logique, ni le même rôle dans le parcours de vos clients.</p>
+<h3>Google : les avis au cœur de la recherche locale</h3>
+<p>Les avis Google sont rattachés à votre fiche d'établissement (Google Business Profile). Ils s'affichent dans les résultats de recherche, dans le pack local (les trois établissements mis en avant sous la carte) et dans Google Maps. Leur particularité est d'être lus au moment précis où le client choisit où aller : il tape « boulangerie ouverte dimanche » ou « garage près de moi », et la note apparaît à côté de votre nom avant même qu'il ait cliqué.</p>
+<p>Google explique dans son aide que le classement local repose sur trois critères : la pertinence, la distance et la notoriété. Pour la notoriété, la page <a href="https://support.google.com/business/answer/7091?hl=fr-CA" target="_blank" rel="noopener noreferrer">Astuces pour améliorer votre classement local sur Google</a> précise que le nombre d'avis reçus et les notes entrent en ligne de compte, et qu'il n'existe aucun moyen de payer pour obtenir un meilleur classement. Autrement dit, vos avis Google ne servent pas seulement à rassurer : ils participent à votre visibilité.</p>
+<h3>Tripadvisor : le guide des voyageurs et des sorties</h3>
+<p>Tripadvisor est une plateforme de voyage. On y trouve des hébergements, des restaurants et des activités (visites, attractions, loisirs). Son public cherche moins « le commerce le plus proche » que « le meilleur endroit où dîner ce soir dans une ville que je ne connais pas ». Le classement des établissements d'une ville et les distinctions annuelles y jouent un rôle important.</p>
+<p>Tous les métiers n'y ont pas leur place. D'après la page officielle <a href="https://www.tripadvisor.com/TripAdvisorInsights/claimyourbusiness" target="_blank" rel="noopener noreferrer">Claim Your Business on Tripadvisor</a>, la plateforme référence gratuitement les hébergements, les restaurants et les attractions. Un plombier, une pharmacie ou un cabinet comptable n'ont donc rien à y faire.</p>
+<h3>Trustpilot : la confiance dans les entreprises</h3>
+<p>Trustpilot évalue des entreprises, pas des lieux. Les fiches sont rattachées à un nom de domaine (le site web de l'entreprise) plutôt qu'à une adresse. Le modèle est pensé pour la vente en ligne et les services à distance : un consommateur qui hésite à commander sur un site qu'il ne connaît pas va vérifier ce qu'en disent les autres acheteurs.</p>
+<p>Trustpilot est une plateforme ouverte : n'importe quel consommateur peut y laisser un avis sur une entreprise, invité ou non. Son aide distingue d'ailleurs les avis « vérifiés », rattachés à une transaction parce qu'ils ont été recueillis par une invitation automatique de l'entreprise, et les avis « non sollicités » rédigés sans intervention de l'entreprise, comme l'explique la page <a href="https://help.trustpilot.com/s/article/Trustpilots-review-labels" target="_blank" rel="noopener noreferrer">Trustpilot's review labels</a>.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ À retenir :</strong> Google répond à « où aller près d'ici ? », Tripadvisor à « où dîner, dormir ou sortir dans cette ville ? », Trustpilot à « puis-je faire confiance à cette entreprise ? ». Votre plateforme prioritaire est celle qui correspond à la question que se posent vos clients juste avant de choisir.</p>
+</div>
+</section>
+
+<section id="qui-consulte" class="scroll-mt-28 mb-16">
+<h2>Qui consulte chaque plateforme, et à quel moment</h2>
+<p>Le bon critère pour choisir n'est pas le nombre d'utilisateurs revendiqué par chaque service, mais le moment où vos propres clients le consultent. Un avis lu au moment de la décision vaut beaucoup plus qu'un avis lu par curiosité, après coup.</p>
+<h3>Google domine la recherche d'un commerce local</h3>
+<p>L'enquête annuelle de BrightLocal sur les avis consommateurs, la <a href="https://www.brightlocal.com/research/local-consumer-review-survey-2025/" target="_blank" rel="noopener noreferrer">Local Consumer Review Survey 2025</a>, place Google loin devant les autres plateformes pour la recherche d'avis sur des commerces locaux, et le décrit comme la plateforme jugée la plus fiable dans l'ensemble des secteurs étudiés. L'étude porte sur des consommateurs américains : elle ne se transpose pas chiffre pour chiffre en France, mais la logique est la même partout où Google Maps sert de carte et d'annuaire.</p>
+<p>La raison est mécanique. La plupart des recherches de commerces passent par un moteur de recherche ou une application de cartographie, et la note Google s'affiche dans ces deux endroits sans aucun clic supplémentaire. Le client n'a pas besoin d'aller chercher vos avis : ils viennent à lui.</p>
+<h3>Tripadvisor rivalise avec Google dans l'hébergement</h3>
+<p>La même enquête BrightLocal relève une exception notable : pour les établissements d'hébergement, Tripadvisor rivalise avec Google en matière de confiance. C'est cohérent avec l'usage de la plateforme. Un voyageur qui prépare un séjour compare des hôtels sur plusieurs jours, lit des avis détaillés, regarde les photos des clients, et le classement Tripadvisor de la ville fait partie de ses repères.</p>
+<p>Pour un restaurant situé dans une zone touristique, le raisonnement est proche : une partie de la clientèle arrive de l'extérieur, ne connaît pas le quartier et utilise Tripadvisor comme guide. Pour un restaurant de quartier fréquenté par des habitués et des salariés des environs, Google reste en revanche le premier réflexe.</p>
+<h3>Trustpilot progresse, mais sur un autre terrain</h3>
+<p>BrightLocal note aussi que l'usage de Trustpilot progresse d'année en année dans son enquête. Ce n'est pas une raison pour qu'un salon de coiffure ou une boulangerie s'y intéresse : la plateforme sert d'abord à juger des entreprises avec lesquelles on traite à distance (boutiques en ligne, assurances, banques, services par abonnement, déménageurs, artisans qui travaillent sur devis à l'échelle d'une région).</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Le test le plus simple :</strong> demandez à vos dix prochains clients comment ils vous ont trouvé. Si la réponse est « sur Google Maps » ou « en passant devant », votre priorité est claire. Si plusieurs parlent de Tripadvisor ou d'un guide de voyage, ce second canal mérite votre attention.</p>
+</div>
+</section>
+
+<section id="regles-collecte" class="scroll-mt-28 mb-16">
+<h2>Les règles de collecte : sur ce point, les trois plateformes disent la même chose</h2>
+<p>Avant de choisir où concentrer vos efforts, il faut savoir ce que vous avez le droit de faire. Bonne nouvelle : les trois plateformes partagent les mêmes interdits, et ils sont simples à retenir. Mauvaise nouvelle : les enfreindre sur l'une d'elles expose aux mêmes sanctions que sur les autres, et parfois à des poursuites.</p>
+<h3>Google : pas de contrepartie, pas de faux engagement</h3>
+<p>Le règlement de Google Maps sur le <a href="https://support.google.com/contributionpolicy/answer/11414422?hl=fr" target="_blank" rel="noopener noreferrer">faux engagement</a> interdit les avis qui ne reflètent pas une expérience réelle, les avis payés en argent ou en nature, et le fait de publier depuis plusieurs comptes. La page <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">Contenus interdits et soumis à des restrictions</a> ajoute que les commerçants ne doivent pas encourager des avis qui ne correspondent pas à une expérience authentique. Les avis incités ou biaisés sont retirés.</p>
+<h3>Tripadvisor : pas d'incitation, pas de tri</h3>
+<p>Tripadvisor interdit aux propriétaires d'offrir quoi que ce soit en échange d'un avis : remise, surclassement, traitement particulier. La <a href="https://www.tripadvisor.com/Trust-l9ebaWaKhDeo.html" target="_blank" rel="noopener noreferrer">FAQ sur la fraude destinée aux propriétaires</a> rappelle aussi qu'il est interdit de solliciter uniquement les clients qui ont passé un bon moment. Son outil gratuit d'envoi d'e-mails, <a href="https://www.tripadvisor.com/ReviewExpress" target="_blank" rel="noopener noreferrer">Review Express</a>, suppose que les adresses importées soient celles de vrais clients, sans sélection orientée.</p>
+<h3>Trustpilot : inviter tout le monde de la même façon</h3>
+<p>Le <a href="https://help.trustpilot.com/s/article/Quick-guide-to-Trustpilot-s-Guidelines-for-Businesses?language=en_US" target="_blank" rel="noopener noreferrer">guide rapide des règles pour les entreprises</a> de Trustpilot est explicite : une entreprise peut inviter ses clients à donner leur avis, mais ne doit ni influencer ce qu'ils écrivent, ni offrir de récompense, ni n'inviter que les clients satisfaits. Si vous ne pouvez pas inviter tout le monde, Trustpilot recommande une méthode de sélection neutre, par exemple un client sur trois. Une déclaration d'impartialité est demandée avant chaque import de fichier clients.</p>
+<p>Le tableau ci-dessous résume ces règles, d'après les pages officielles citées dans les trois paragraphes précédents.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Pratique</th><th class="text-left p-3 border-b">Google</th><th class="text-left p-3 border-b">Tripadvisor</th><th class="text-left p-3 border-b">Trustpilot</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Demander un avis à tous vos clients</td><td class="p-3 border-b">Autorisé</td><td class="p-3 border-b">Autorisé</td><td class="p-3 border-b">Autorisé et encouragé</td></tr>
+<tr><td class="p-3 border-b">Offrir une remise ou un cadeau contre un avis</td><td class="p-3 border-b">Interdit</td><td class="p-3 border-b">Interdit</td><td class="p-3 border-b">Interdit</td></tr>
+<tr><td class="p-3 border-b">Ne solliciter que les clients satisfaits</td><td class="p-3 border-b">Interdit (avis biaisés)</td><td class="p-3 border-b">Interdit</td><td class="p-3 border-b">Interdit</td></tr>
+<tr><td class="p-3 border-b">Faire écrire des avis par des proches ou des salariés</td><td class="p-3 border-b">Interdit</td><td class="p-3 border-b">Interdit</td><td class="p-3 border-b">Interdit</td></tr>
+<tr><td class="p-3">Outil officiel de collecte</td><td class="p-3">Lien et QR code d'avis de la fiche</td><td class="p-3">Review Express (e-mails)</td><td class="p-3">Invitations automatiques ou manuelles</td></tr>
+</tbody>
+</table>
+</div>
+<p>En pratique, la règle commune tient en une phrase : demandez à tout le monde, de la même manière, sans rien offrir, et laissez chacun écrire ce qu'il veut. Notre article sur <a href="/blog/erreurs-demander-avis">les erreurs qui font sanctionner une fiche</a> détaille les pièges les plus fréquents côté Google.</p>
+</section>
+
+<section id="moderation" class="scroll-mt-28 mb-16">
+<h2>Modération et faux avis : ce que publient les plateformes</h2>
+<p>Un avis n'a de valeur que si les lecteurs y croient. Les trois plateformes publient chaque année des chiffres sur les contenus qu'elles retirent. Ils ne sont pas comparables entre eux (périmètres, méthodes et définitions diffèrent), mais ils montrent l'ampleur du travail de modération et la probabilité qu'une pratique douteuse soit détectée.</p>
+<h3>Google</h3>
+<p>D'après le bilan 2024 relayé par <a href="https://www.seroundtable.com/google-maps-spam-fighting-2024-39186.html" target="_blank" rel="noopener noreferrer">Search Engine Roundtable</a>, Google a bloqué ou retiré plus de 240 millions d'avis contraires à son règlement en 2024, la grande majorité avant même leur publication. Le même bilan fait état de plus de 12 millions de fiches d'établissement frauduleuses supprimées ou bloquées, et de restrictions de publication appliquées à plus de 900 000 comptes.</p>
+<h3>Tripadvisor</h3>
+<p>Le <a href="https://tripadvisor.mediaroom.com/2025-03-18-Tripadvisors-2025-Transparency-Report-reveals-strong-review-submissions-and-improved-fraud-detection" target="_blank" rel="noopener noreferrer">rapport de transparence 2025 de Tripadvisor</a> indique que la plateforme a reçu 31,1 millions d'avis en 2024 et en a rejeté ou retiré plus de 2,7 millions jugés frauduleux, contre 2 millions l'année précédente. Le « review boosting », c'est-à-dire des avis positifs publiés par le propriétaire, ses salariés ou des personnes liées à l'établissement, représente 54 % de la fraude détectée. Tripadvisor dit aussi avoir retiré 214 000 avis générés par intelligence artificielle.</p>
+<h3>Trustpilot</h3>
+<p>Selon son <a href="https://corporate.trustpilot.com/press/news/trust-report-2025" target="_blank" rel="noopener noreferrer">Trust Report 2025</a>, Trustpilot a retiré 4,5 millions de faux avis en 2024, soit 7,4 % des avis soumis cette année-là, dont 90 % automatiquement. La plateforme indique recevoir près de 200 000 avis par jour, tous passés au crible d'un système de détection automatique avant publication.</p>
+<p>Le tableau suivant rassemble ces chiffres pour l'année 2024, tels que publiés par <a href="https://www.seroundtable.com/google-maps-spam-fighting-2024-39186.html" target="_blank" rel="noopener noreferrer">Search Engine Roundtable pour Google</a>, par <a href="https://tripadvisor.mediaroom.com/2025-03-18-Tripadvisors-2025-Transparency-Report-reveals-strong-review-submissions-and-improved-fraud-detection" target="_blank" rel="noopener noreferrer">Tripadvisor</a> et par <a href="https://corporate.trustpilot.com/press/news/trust-report-2025" target="_blank" rel="noopener noreferrer">Trustpilot</a>.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Plateforme</th><th class="text-left p-3 border-b">Contenus retirés en 2024</th><th class="text-left p-3 border-b">Précision publiée</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Google</td><td class="p-3 border-b">Plus de 240 millions d'avis bloqués ou retirés</td><td class="p-3 border-b">La grande majorité avant publication</td></tr>
+<tr><td class="p-3 border-b">Tripadvisor</td><td class="p-3 border-b">Plus de 2,7 millions d'avis frauduleux</td><td class="p-3 border-b">Sur 31,1 millions d'avis reçus</td></tr>
+<tr><td class="p-3">Trustpilot</td><td class="p-3">4,5 millions de faux avis</td><td class="p-3">7,4 % des avis soumis</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ce que cela change pour vous : sur les trois plateformes, une pratique interdite a de bonnes chances d'être repérée, et la sanction ne touche pas seulement l'avis concerné. Google retire les avis concernés et peut restreindre des comptes, Tripadvisor annonce pénaliser les établissements qui trient leurs contacts, et Trustpilot indique prendre des mesures contre les entreprises qui ne collectent pas leurs avis de façon neutre. Si vous êtes victime de faux avis, notre guide pour <a href="/blog/faux-avis-google-signaler">signaler un faux avis Google</a> explique la marche à suivre.</p>
+</section>
+
+<section id="couts" class="scroll-mt-28 mb-16">
+<h2>Ce que coûte chaque plateforme</h2>
+<p>Le coût d'une plateforme d'avis se compte en euros, mais aussi en temps : créer la fiche, la tenir à jour, répondre aux avis, organiser la collecte. Les trois services ont un socle gratuit, avec des options payantes très différentes.</p>
+<h3>Google : gratuit, sans formule premium</h3>
+<p>La fiche Google Business Profile est gratuite, la collecte d'avis aussi, et Google précise dans son aide sur le <a href="https://support.google.com/business/answer/7091?hl=fr-CA" target="_blank" rel="noopener noreferrer">classement local</a> qu'il est impossible de payer pour être mieux classé. Les seules dépenses éventuelles sont indirectes : publicité Google Ads (qui n'agit pas sur les avis), outils tiers, ou supports physiques pour inviter vos clients à laisser un avis.</p>
+<h3>Tripadvisor : fiche gratuite, options marketing payantes</h3>
+<p>Revendiquer et gérer sa fiche Tripadvisor est gratuit, tout comme l'outil Review Express. La page <a href="https://www.tripadvisor.com/TripAdvisorInsights/claimyourbusiness" target="_blank" rel="noopener noreferrer">Claim Your Business</a> présente la revendication comme la première étape pour accéder à l'espace de gestion et à ses produits, gratuits et payants. Avant de souscrire une option payante, vérifiez précisément ce qu'elle apporte : aucune ne vous dispense des règles de collecte décrites plus haut.</p>
+<h3>Trustpilot : gratuit avec un quota, puis abonnement</h3>
+<p>Trustpilot propose une formule gratuite avec un nombre limité d'invitations par mois, puis plusieurs abonnements dont le prix dépend des fonctionnalités et du volume d'invitations, détaillés sur la page <a href="https://business.trustpilot.com/pricing" target="_blank" rel="noopener noreferrer">Trustpilot Pricing &amp; Plans</a>. Ces tarifs évoluent : vérifiez-les directement avant de vous engager. Pour une entreprise locale qui reçoit ses clients en personne, l'abonnement est rarement justifié.</p>
+<h3>Le vrai coût : votre attention</h3>
+<p>Hypothèse de calcul, à remplacer par vos propres chiffres : supposons que vous consacriez 20 minutes par semaine à répondre aux avis et à relancer la collecte. Sur une seule plateforme, ces 20 minutes suffisent à répondre à chaque avis et à vérifier que votre support d'avis fonctionne. Réparties sur trois plateformes, elles tombent à moins de 7 minutes par fiche : assez pour survoler, pas pour entretenir. C'est l'argument principal en faveur de la concentration.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 En résumé :</strong> Google et Tripadvisor sont gratuits pour l'essentiel, Trustpilot l'est avec un quota d'invitations. Le poste de dépense le plus lourd n'est pas l'abonnement : c'est le temps passé à entretenir chaque fiche. Pour un comparatif chiffré du coût d'un avis selon la méthode de collecte, voyez notre article sur <a href="/blog/cout-avis-google-comparatif">le vrai coût d'un avis Google</a>.</p>
+</div>
+</section>
+
+<section id="par-secteur" class="scroll-mt-28 mb-16">
+<h2>La grille de décision par type d'activité</h2>
+<p>Voici une grille de lecture qui découle des sections précédentes : public de chaque plateforme, catégories admises par Tripadvisor, logique de Trustpilot. Elle ne remplace pas votre connaissance de vos clients, mais elle évite les deux erreurs les plus fréquentes : négliger Google, et s'éparpiller.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Activité</th><th class="text-left p-3 border-b">Priorité</th><th class="text-left p-3 border-b">Second canal</th><th class="text-left p-3 border-b">À éviter</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Restaurant de quartier, boulangerie, bar</td><td class="p-3 border-b">Google</td><td class="p-3 border-b">Tripadvisor si clientèle de passage</td><td class="p-3 border-b">Trustpilot</td></tr>
+<tr><td class="p-3 border-b">Restaurant en zone touristique</td><td class="p-3 border-b">Google</td><td class="p-3 border-b">Tripadvisor, activement</td><td class="p-3 border-b">Trustpilot</td></tr>
+<tr><td class="p-3 border-b">Hôtel, chambre d'hôtes, camping</td><td class="p-3 border-b">Google et Tripadvisor</td><td class="p-3 border-b">Plateformes de réservation</td><td class="p-3 border-b">Trustpilot</td></tr>
+<tr><td class="p-3 border-b">Activité de loisirs, visite, attraction</td><td class="p-3 border-b">Google et Tripadvisor</td><td class="p-3 border-b">Aucun en priorité</td><td class="p-3 border-b">Trustpilot</td></tr>
+<tr><td class="p-3 border-b">Commerce de proximité, salon, institut</td><td class="p-3 border-b">Google</td><td class="p-3 border-b">Aucun en priorité</td><td class="p-3 border-b">Tripadvisor (hors catégorie)</td></tr>
+<tr><td class="p-3 border-b">Artisan, garage, profession de santé</td><td class="p-3 border-b">Google</td><td class="p-3 border-b">Aucun en priorité</td><td class="p-3 border-b">Tripadvisor (hors catégorie)</td></tr>
+<tr><td class="p-3">Boutique en ligne, service à distance</td><td class="p-3">Trustpilot</td><td class="p-3">Google si accueil physique</td><td class="p-3">Tripadvisor</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Restaurants : Google d'abord, Tripadvisor selon votre clientèle</h3>
+<p>Un restaurant a presque toujours intérêt à faire de Google sa priorité : c'est là que se décident les sorties de dernière minute, depuis un téléphone, à quelques rues de chez vous. Tripadvisor devient un second canal utile quand une part visible de vos clients vient d'ailleurs (touristes, voyageurs d'affaires, visiteurs d'un week-end). Nos conseils de placement et de formulation pour la salle sont réunis dans l'article <a href="/blog/plaque-nfc-restaurant">plaque NFC restaurant</a> et sur la page <a href="/secteur/restaurant">dédiée aux restaurants</a>.</p>
+<h3>Hôtels et hébergements : deux plateformes de premier rang</h3>
+<p>Pour un hôtel, la grille change : Google et Tripadvisor sont tous deux consultés au moment de la décision, et les plateformes de réservation ajoutent leurs propres avis, collectés automatiquement après le séjour. La stratégie la plus raisonnable consiste à laisser les plateformes de réservation travailler seules, à confier Tripadvisor aux e-mails de Review Express, et à réserver la demande en personne, au départ du client, à Google. Notre guide <a href="/blog/plaque-nfc-hotel">plaque NFC hôtel</a> détaille ce moment du check-out.</p>
+<h3>Commerces, artisans, santé : Google, sans hésitation</h3>
+<p>Un coiffeur, un opticien, un plombier ou un kinésithérapeute ne sont pas des destinations touristiques et n'ont pas de fiche Tripadvisor à entretenir. Trustpilot ne correspond pas non plus à leur clientèle, qui choisit un prestataire près de chez elle. Toute l'énergie doit aller vers la fiche Google : avis, réponses, photos, horaires. Les professions réglementées ajoutent leurs propres règles déontologiques, à vérifier auprès de leur ordre.</p>
+<h3>Entreprises en ligne : Trustpilot devient pertinent</h3>
+<p>Si vous vendez principalement en ligne, vos clients ne passent pas par Google Maps. Ils jugent votre sérieux sur votre site, sur les moteurs de recherche et sur les plateformes d'avis d'entreprises. Trustpilot y a sa place, en complément d'une fiche Google si vous avez un point de retrait ou un local qui reçoit du public.</p>
+</section>
+
+<section id="loi-france" class="scroll-mt-28 mb-16">
+<h2>Ce que la loi française impose, quelle que soit la plateforme</h2>
+<p>Choisir une plateforme ne change pas vos obligations. En France, les avis en ligne sont encadrés par le Code de la consommation, et les pratiques déloyales sont poursuivies par la DGCCRF quel que soit le site sur lequel elles ont lieu.</p>
+<h3>Les obligations des plateformes</h3>
+<p>L'<a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049571119" target="_blank" rel="noopener noreferrer">article L111-7-2 du Code de la consommation</a> impose à toute personne dont l'activité consiste à collecter, modérer ou diffuser des avis de consommateurs de délivrer une information loyale sur ses modalités de publication et de traitement : les avis font-ils l'objet d'un contrôle, et si oui, selon quelles caractéristiques principales. Google, Tripadvisor et Trustpilot sont concernés à ce titre, ce qui explique les pages d'information et les rapports de transparence cités plus haut.</p>
+<h3>Les obligations des commerçants</h3>
+<p>La fiche pratique de la DGCCRF <a href="https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/avis-en-ligne-attention-aux-faux-commentaires" target="_blank" rel="noopener noreferrer">Avis en ligne : attention aux faux commentaires</a> rappelle que publier de faux avis ou modifier ceux des consommateurs constitue une pratique commerciale trompeuse. Cela vaut pour un avis rédigé par vous-même, par un proche, par un salarié ou par un prestataire payé pour cela, et sur n'importe quelle plateforme.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Une règle simple :</strong> ce qui est interdit sur Google l'est aussi sur Tripadvisor et Trustpilot, et ce que les plateformes interdisent, la loi le sanctionne souvent. Multiplier les plateformes ne crée pas de zone grise : cela multiplie seulement les endroits où une erreur peut être relevée.</p>
+</div>
+<p>Pour savoir comment réagir sereinement aux critiques, quelle que soit la plateforme, notre méthode pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs</a> s'applique aussi à Tripadvisor et Trustpilot : réponse rapide, factuelle, sans données personnelles, tournée vers la solution.</p>
+</section>
+
+<section id="organiser" class="scroll-mt-28 mb-16">
+<h2>Organiser vos demandes d'avis sur une ou deux plateformes</h2>
+<p>Une fois la plateforme prioritaire choisie, reste à organiser la collecte. Le principe directeur : un moment, un canal, une seule demande. Un client à qui l'on demande un avis sur Google puis sur Tripadvisor finit souvent par ne rien écrire du tout.</p>
+<h3>Une plateforme principale, en personne</h3>
+<p>La demande la plus efficace se fait de vive voix, au moment où le client est satisfait : en fin de repas, au retrait d'une commande, au moment de payer. C'est aussi la plus contraignante, parce qu'elle doit être courte. Réservez-la à votre plateforme principale. Dans la plupart des commerces, c'est Google, et le support le plus simple est celui qui ouvre directement le formulaire d'avis : le lien d'avis de votre fiche, sous forme de QR code ou de puce NFC. Notre guide sur <a href="/blog/lien-avis-google">le lien d'avis Google</a> explique où le trouver et comment le tester.</p>
+<h3>Une plateforme secondaire, à distance</h3>
+<p>Si vous avez retenu un second canal, confiez-le à un moment différent : un e-mail après le séjour pour Tripadvisor via Review Express, une invitation automatique après la livraison pour Trustpilot. Les deux plateformes prévoient ces envois, à condition de les adresser à tous les clients sans tri.</p>
+<h3>Une routine courte, toutes les semaines</h3>
+<ul>
+<li>Lire et répondre à chaque nouvel avis sur la plateforme principale.</li>
+<li>Vérifier que le support d'avis (plaque, QR code, lien) ouvre toujours la bonne page.</li>
+<li>Jeter un œil à la plateforme secondaire, répondre aux avis qui le demandent.</li>
+<li>Noter les remarques récurrentes et les transmettre à l'équipe : c'est la partie la plus utile des avis.</li>
+</ul>
+<h3>Scénario fictif : une crêperie dans une ville touristique</h3>
+<p>Prenons une crêperie fictive, dans le centre d'une petite ville qui accueille des visiteurs l'été. L'hiver, ses clients sont surtout des habitants ; l'été, une bonne partie sont de passage. L'équipe pose un support d'avis Google près de la caisse et le mentionne au moment de l'addition, toute l'année, à tous les clients. Elle revendique sa fiche Tripadvisor, répond aux avis qui y arrivent, mais ne la sollicite pas en salle. Elle ignore Trustpilot. Résultat attendu de cette organisation (sans promesse de chiffres) : une fiche Google alimentée régulièrement, une fiche Tripadvisor entretenue, et une seule phrase à retenir pour le personnel.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ La méthode en trois lignes :</strong> une plateforme principale sollicitée en personne auprès de tous les clients ; au plus une plateforme secondaire sollicitée à distance, elle aussi sans tri ; une réponse à chaque avis, partout où vous êtes présent.</p>
+</div>
+<p>Pour aller plus loin sur les chiffres qui comptent côté Google (volume, rythme, note), consultez nos <a href="/blog/statistiques-avis-google-2026">statistiques sourcées sur les avis Google</a>.</p>
+</section>
+
+<section id="faq-plateformes-avis" class="scroll-mt-28 mb-16">
+<h2>Questions fréquentes</h2>
+<h3>Faut-il être présent sur Google, Tripadvisor et Trustpilot à la fois ?</h3>
+<p>Non. La plupart des commerces de proximité n'ont besoin que de Google. Tripadvisor s'ajoute pour les restaurants, hébergements et activités qui reçoivent une clientèle de passage, et Trustpilot concerne surtout les entreprises qui vendent à distance. Mieux vaut une fiche bien entretenue que trois fiches à moitié vides.</p>
+<h3>Mon commerce peut-il avoir une fiche Tripadvisor ?</h3>
+<p>Tripadvisor référence les hébergements, les restaurants et les attractions ou activités. Un commerce de détail, un artisan ou un cabinet n'entrent pas dans ces catégories. Si votre établissement y figure déjà, vous pouvez revendiquer gratuitement la fiche pour répondre aux avis et mettre à jour vos informations.</p>
+<h3>Puis-je proposer une remise aux clients qui laissent un avis ?</h3>
+<p>Non, sur aucune des trois plateformes. Google, Tripadvisor et Trustpilot interdisent toute contrepartie en échange d'un avis, qu'il s'agisse d'argent, de remise, de cadeau ou de traitement particulier. Les avis ainsi obtenus peuvent être retirés et la fiche sanctionnée.</p>
+<h3>Ai-je le droit de ne demander un avis qu'aux clients contents ?</h3>
+<p>Non. Les trois plateformes interdisent la sollicitation sélective : il faut proposer de laisser un avis à tous les clients, de la même manière. Trustpilot admet une sélection neutre, par exemple un client sur trois, si vous ne pouvez pas inviter tout le monde.</p>
+<h3>Trustpilot est-il utile pour un commerce de proximité ?</h3>
+<p>Rarement. Trustpilot évalue des entreprises rattachées à un site web et sert surtout aux clients qui hésitent à acheter à distance. Un client qui cherche un commerce près de chez lui consulte d'abord Google Maps. Si vous vendez aussi en ligne, Trustpilot peut compléter votre fiche Google.</p>
+<h3>Une plaque NFC peut-elle servir pour plusieurs plateformes ?</h3>
+<p>Une plaque ouvre un seul lien. Il est plus efficace de la consacrer à votre plateforme principale, en général Google, et de solliciter la plateforme secondaire autrement, par exemple par e-mail après la visite. Les plaques Swiipx sont livrées programmées avec le lien d'avis Google de votre établissement.</p>
+<h3>Que dit la loi française sur les avis en ligne ?</h3>
+<p>L'article L111-7-2 du Code de la consommation oblige les sites qui publient des avis à informer loyalement sur leur modération. La DGCCRF rappelle que publier de faux avis ou modifier ceux des clients est une pratique commerciale trompeuse, quelle que soit la plateforme utilisée.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : concentrer pour mieux construire</h2>
+<p>Google, Tripadvisor et Trustpilot ne se font pas vraiment concurrence : ils répondent à des questions différentes, posées à des moments différents. Pour un commerce local, Google est la plateforme qui pèse au moment du choix et qui participe à votre visibilité dans la recherche locale. Tripadvisor mérite un effort réel quand vous accueillez des voyageurs ou des visiteurs. Trustpilot est l'outil des entreprises qui vendent à distance.</p>
+<p>Sur toutes les plateformes, les règles sont les mêmes : demander à tous les clients, sans contrepartie, sans tri, et laisser chacun s'exprimer librement. La loi française et la modération des plateformes rendent les raccourcis risqués et de plus en plus visibles. La méthode qui fonctionne est la plus simple : une plateforme principale sollicitée en personne, au plus une plateforme secondaire sollicitée à distance, et une réponse à chaque avis.</p>
+<p>Si votre priorité est Google, le support physique fait une grande partie du travail : il transforme la phrase « un petit avis nous aiderait » en un geste de deux secondes, au comptoir ou sur la table.</p>
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Vous avez choisi Google comme plateforme prioritaire ? Donnez à vos clients le moyen le plus simple d'y laisser un avis.</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215 programmée avec votre lien d'avis Google, adhésif 3M inclus, QR code de secours, garantie à vie sur la puce, <strong>sans abonnement</strong>. <a href="/product/starter" class="font-semibold underline">Pack Starter</a> à 29,90 € HT, <a href="/product/business" class="font-semibold underline">Pack Business</a> à 54,90 € HT et <a href="/product/pro" class="font-semibold underline">Pack Pro</a> à 89,90 € HT.</p>
+</div>
+</section>
+`,
+  },
   'plaque-nfc-fleuriste': {
     title: 'Plaque NFC fleuriste : des avis Google toute l\'année, pas seulement à la Saint-Valentin',
     category: 'Secteur',
