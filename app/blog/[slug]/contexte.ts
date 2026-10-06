@@ -163,6 +163,14 @@ const SECTEURS: Record<string, Secteur> = {
     pack: 'business',
     raison: 'Poste de coiffage et caisse',
   },
+  'plaque-nfc-fleuriste': {
+    metier: 'fleuristes',
+    barre: 'Plaque pour fleuriste',
+    titre: 'À plat près du terminal de paiement, sur une zone que les bouquets ne mouillent pas',
+    titreFin: 'Équipez votre boutique',
+    pack: 'business',
+    raison: 'Caisse et plan de travail',
+  },
   'plaque-nfc-restaurant': {
     metier: 'restaurants',
     barre: 'Plaque pour restaurant',
