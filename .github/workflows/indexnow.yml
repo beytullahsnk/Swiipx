@@ -27,6 +27,10 @@ on:
         description: "Simulation : lister les URL sans rien transmettre"
         type: boolean
         default: false
+      google_seul:
+        description: "Google seulement : renvoyer le sitemap à Search Console, sans rien signaler à Bing"
+        type: boolean
+        default: false
   workflow_call:
     inputs:
       avant:
@@ -40,6 +44,9 @@ on:
 
 permissions:
   contents: read
+  # Jeton d'identité GitHub (OIDC), échangé contre un accès Google d'une heure :
+  # voir l'étape « Google — identité de GitHub » plus bas.
+  id-token: write
 
 # Deux publications rapprochées s'enchaînent au lieu de s'annuler : annuler la
 # première ferait perdre son signalement.
@@ -71,7 +78,7 @@ jobs:
         run: node scripts/indexnow-apres-deploiement.mjs "$AVANT" "$APRES"
 
       - name: Tout le sitemap
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' && !inputs.google_seul
         env:
           SIMULATION: ${{ inputs.simulation }}
         run: |
@@ -83,9 +90,30 @@ jobs:
 
       # Google ne lit pas IndexNow : on lui renvoie le sitemap par l'API Search
       # Console, une fois le deploiement en ligne (l'etape precedente l'attend).
-      # Sans le secret GSC_SERVICE_ACCOUNT_JSON, l'etape s'arrete sans erreur.
+      #
+      # SANS CLE : GitHub prouve son identite a Google (federation d'identite du
+      # projet Google Cloud « swiipx », pool « github »), qui lui confie pour
+      # une heure le compte technique swiipx-sitemap, utilisateur « Acces total »
+      # de swiipx.fr dans Search Console. Google n'accepte que les depots du
+      # compte beytullahsnk, branche main ; et seul le depot Swiipx peut
+      # emprunter ce compte. Aucune cle a stocker, a copier ni a renouveler.
+      # Un echec ici ne fait pas echouer la publication : l'article est en
+      # ligne et Bing est deja prevenu. Il apparait en avertissement.
+      - name: Google — identité de GitHub (sans clé)
+        id: google
+        continue-on-error: true
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/649737599394/locations/global/workloadIdentityPools/github/providers/github-actions
+          service_account: swiipx-sitemap@swiipx.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/webmasters
+          create_credentials_file: false
+
       - name: Google — sitemap renvoyé à Search Console
+        continue-on-error: true
         env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.google.outputs.access_token }}
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
           SIMULATION: ${{ inputs.simulation }}
         run: |

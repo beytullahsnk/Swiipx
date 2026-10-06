@@ -191,6 +191,7 @@ jobs:
     if: needs.publier.outputs.apres != ''
     permissions:
       contents: read
+      id-token: write   # accès Google sans clé, voir indexnow.yml
     uses: ./.github/workflows/indexnow.yml
     with:
       avant: ${{ needs.publier.outputs.avant }}

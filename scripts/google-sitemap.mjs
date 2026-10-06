@@ -14,11 +14,17 @@
  * (app/sitemap.ts) : c'est ce qui lui signale ce qui est nouveau. Le moment
  * de l'indexation reste à sa discrétion.
  *
- * IDENTIFIANTS : un compte de service Google, dont la clé JSON est stockée
- * dans le secret GitHub GSC_SERVICE_ACCOUNT_JSON — jamais dans le dépôt, qui
- * est public. Le compte doit être ajouté comme utilisateur « Complet » de la
- * propriété dans Search Console. Sans ce secret, le script s'arrête sans
- * erreur : il ne doit pas faire échouer la notification de Bing.
+ * IDENTIFIANTS, deux façons :
+ * - GOOGLE_ACCESS_TOKEN (celle en place depuis le 2026-10-07) : un accès
+ *   Google d'une heure, obtenu sans clé par le workflow (étape « Google —
+ *   identité de GitHub », fédération d'identité du projet Google Cloud
+ *   « swiipx »). Il agit au nom du compte technique
+ *   swiipx-sitemap@swiipx.iam.gserviceaccount.com, utilisateur « Accès total »
+ *   de swiipx.fr dans Search Console ;
+ * - à défaut, GSC_SERVICE_ACCOUNT_JSON : la clé JSON d'un compte de service,
+ *   en secret GitHub, jamais dans le dépôt, qui est public.
+ * Sans l'un ni l'autre, le script s'arrête sans erreur : il ne doit pas faire
+ * échouer la notification de Bing.
  *
  * Usage : node scripts/google-sitemap.mjs [--simulation]
  */
@@ -61,13 +67,12 @@ export async function jetonDAcces(cle, maintenant = Math.floor(Date.now() / 1000
   return corps.access_token
 }
 
-export async function renvoyerSitemap(cle) {
-  const jeton = await jetonDAcces(cle)
+export async function renvoyerSitemap(jeton, compte) {
   const envoi = await fetch(API, { method: 'PUT', headers: { Authorization: `Bearer ${jeton}` } })
   if (!envoi.ok) {
     const detail = await envoi.text().catch(() => '')
     const conseil = envoi.status === 403
-      ? ` Vérifiez que ${cle.client_email} est utilisateur « Complet » de ${PROPRIETE} dans Search Console.`
+      ? ` Vérifiez que ${compte} est utilisateur « Accès total » de ${PROPRIETE} dans Search Console.`
       : ''
     throw new Error(`Search Console a répondu ${envoi.status}.${conseil} ${detail.slice(0, 300)}`)
   }
@@ -79,10 +84,23 @@ export async function renvoyerSitemap(cle) {
   return etat
 }
 
+const COMPTE_SANS_CLE = 'swiipx-sitemap@swiipx.iam.gserviceaccount.com'
+
 async function principal() {
+  const jetonFourni = (process.env.GOOGLE_ACCESS_TOKEN || '').trim()
+  if (jetonFourni) {
+    if (simulation) {
+      console.log(`Simulation : le sitemap ${SITEMAP} serait renvoyé à ${PROPRIETE} par ${COMPTE_SANS_CLE} (accès sans clé).`)
+      return
+    }
+    const etat = await renvoyerSitemap(jetonFourni, COMPTE_SANS_CLE)
+    afficher(etat, 'accès sans clé')
+    return
+  }
   const brut = process.env.GSC_SERVICE_ACCOUNT_JSON
   if (!brut || !brut.trim()) {
-    console.log('Search Console non configuré (secret GSC_SERVICE_ACCOUNT_JSON absent) : étape ignorée.')
+    const message = "Search Console non prévenu : ni accès sans clé (voir l'étape « Google — identité de GitHub »), ni secret GSC_SERVICE_ACCOUNT_JSON."
+    console.log(process.env.GITHUB_ACTIONS === 'true' ? `::warning::${message}` : message)
     return
   }
   let cle
@@ -98,8 +116,12 @@ async function principal() {
     console.log(`Simulation : le sitemap ${SITEMAP} serait renvoyé à ${PROPRIETE} par ${cle.client_email}.`)
     return
   }
-  const etat = await renvoyerSitemap(cle)
-  console.log(`Sitemap renvoyé à Google Search Console (${PROPRIETE}).`)
+  const etat = await renvoyerSitemap(await jetonDAcces(cle), cle.client_email)
+  afficher(etat, 'clé de compte de service')
+}
+
+function afficher(etat, moyen) {
+  console.log(`Sitemap renvoyé à Google Search Console (${PROPRIETE}, ${moyen}).`)
   if (etat) {
     console.log(`   Dernière soumission : ${etat.lastSubmitted || '-'} | dernier téléchargement par Google : ${etat.lastDownloaded || '-'} | erreurs : ${etat.errors ?? 0} | avertissements : ${etat.warnings ?? 0}`)
   }
