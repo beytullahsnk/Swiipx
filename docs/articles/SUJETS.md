@@ -17,12 +17,9 @@ Recherches des trois derniers mois sur lesquelles swiipx.fr apparaît déjà, sa
 
 Le calculateur `/outils/calculateur-avis-google` répond à « calculateur avis google », « calcul note google » et « combien d'avis google pour augmenter la note » : pas d'article sur ces recherches.
 
-### En attente d'une décision de l'équipe : ne pas traiter
+### Hors sujet : ne pas traiter
 
-- **Plaque NFC Tripadvisor.** 644 impressions sur 3 mois, réparties sur 17 variantes (« plaque nfc tripadvisor sans contact », « plaque qr code nfc tripadvisor »…), positions 24 à 55.
-- **Plaque NFC pour la carte du restaurant.** « plaque nfc carte restaurant » : 117 impressions, position 12,8.
-
-Swiipx ne vend aujourd'hui que des plaques programmées avec le lien d'avis Google. Un article sur ces sujets décevrait le lecteur tant que l'offre n'existe pas.
+- **Plaque NFC Tripadvisor** (644 impressions sur 3 mois, 17 variantes) et **plaque NFC pour la carte du restaurant** (117 impressions) : l'équipe a décidé le 7 octobre 2026 de ne pas proposer ces produits. Aucun article ne doit viser ces recherches.
 
 ## Secteur : « plaque NFC + métier »
 

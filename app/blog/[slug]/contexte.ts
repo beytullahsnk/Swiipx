@@ -171,6 +171,14 @@ const SECTEURS: Record<string, Secteur> = {
     pack: 'business',
     raison: 'Caisse et plan de travail',
   },
+  'plaque-nfc-food-truck': {
+    metier: 'food trucks',
+    barre: 'Plaque pour food truck',
+    titre: 'Sur la tablette de service, à côté du terminal, jamais directement sur la tôle',
+    titreFin: 'Équipez votre camion',
+    pack: 'business',
+    raison: "Tablette de service et zone d'attente",
+  },
   'plaque-nfc-restaurant': {
     metier: 'restaurants',
     barre: 'Plaque pour restaurant',
