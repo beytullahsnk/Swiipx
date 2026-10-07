@@ -26,6 +26,23 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'plaque-nfc-food-truck': {
+    title: 'Plaque NFC food truck : avis Google, fiche et emplacement',
+    description: 'Food truck et avis Google : régler une fiche sans adresse fixe, poser la plaque NFC loin du métal, quand demander un avis, privatisations et erreurs à éviter.',
+    keywords: 'plaque nfc food truck, avis google food truck, fiche google food truck, food truck google business profile, food truck zone desservie',
+    date: '2026-10-07',
+    dateModified: '2026-10-07',
+    category: 'Secteur',
+    faq: [
+      { q: 'Un food truck sans adresse fixe peut-il avoir une fiche Google ?', a: 'Oui, en général. La solution la plus répandue consiste à créer une fiche d\'établissement de services de proximité, avec l\'adresse de l\'entreprise masquée et une zone desservie limitée aux communes où le camion stationne. Les consignes de Google ne traitent pas explicitement des food trucks, mais elles excluent de la carte les activités sans emplacement permanent : ne créez pas une fiche par emplacement.' },
+      { q: 'Où coller une plaque NFC sur un food truck ?', a: 'Sur la tablette de service, côté client, à côté du terminal de paiement. Si la tablette est en métal, posez d\'abord un support en bois ou en acrylique, car le métal perturbe la lecture de la puce. Évitez la carrosserie. Testez avec plusieurs téléphones avant de coller, et rangez les supports amovibles à la fin de chaque service.' },
+      { q: 'Faut-il indiquer chaque emplacement du camion sur Google ?', a: 'Non. La fiche ne liste pas les emplacements un par un : elle indique une zone desservie, composée des communes où vous stationnez réellement. Le planning de la semaine se publie dans un post de la fiche, sur vos réseaux et sur votre site, et se met à jour dès qu\'un emplacement change.' },
+      { q: 'Comment afficher des horaires qui changent selon les jours ?', a: 'Affichez les horaires de votre semaine type, puis utilisez les horaires exceptionnels pour les écarts courts : jour férié, événement, sortie annulée. Si l\'activité est saisonnière, Google prévoit d\'indiquer les horaires habituels pendant la saison. Une sortie annulée se signale le jour même.' },
+      { q: 'Peut-on offrir une boisson en échange d\'un avis Google ?', a: 'Non. Le règlement de Google interdit les avis publiés en échange d\'un avantage, qu\'il s\'agisse d\'un paiement, d\'une remise ou d\'un produit offert, même symbolique. La seule demande admise est une invitation neutre, faite à tous les clients, sans choisir ceux qui ont l\'air satisfaits.' },
+      { q: 'La plaque NFC fonctionne-t-elle avec tous les téléphones ?', a: 'Les iPhone XR, XS, SE de 2e génération et tous les modèles suivants lisent la puce sans application. Sur les iPhone 7, 8 et X, il faut ouvrir le Lecteur de tag NFC depuis le centre de contrôle. Sur Android, le NFC doit être activé. Pour les autres téléphones, la plaque Swiipx porte un QR code de secours imprimé qui ouvre la même page d\'avis.' },
+      { q: 'Combien de plaques faut-il pour un food truck ?', a: 'Une plaque suffit à la plupart des camions, posée sur la tablette de service. Une deuxième sert quand le comptoir de retrait est distinct de celui de la commande, ou pour un présentoir dans la zone d\'attente. Un exploitant de plusieurs camions avec des fiches distinctes peut choisir le Pack Pro, où chaque plaque peut pointer vers un lien différent.' },
+    ],
+  },
   'avis-google-tripadvisor-trustpilot': {
     title: 'Avis Google, Tripadvisor ou Trustpilot : quelle plateforme ?',
     description: 'Google, Tripadvisor ou Trustpilot : public, règles de collecte, modération, coût et loi française. La grille par métier pour choisir où demander vos avis.',

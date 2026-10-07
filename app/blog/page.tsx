@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 52,
+    title: 'Plaque NFC food truck : des avis Google pour un commerce qui change de place',
+    excerpt: 'Un food truck n\'a ni vitrine ni adresse fixe : sa fiche Google est le seul repère de ses clients. Zone desservie, horaires, autorisations, plaque loin du métal, privatisations : la méthode pour collecter des avis sans enfreindre les règles.',
+    category: 'Secteur',
+    date: '7 octobre 2026',
+    dateIso: '2026-10-07',
+    readTime: '17 min',
+    slug: 'plaque-nfc-food-truck',
+  },
+  {
     id: 51,
     title: 'Avis Google, Tripadvisor ou Trustpilot : où concentrer vos efforts ?',
     excerpt: 'Google, Tripadvisor et Trustpilot ne servent pas les mêmes clients. Public, règles de collecte, modération, coût et loi française : la grille par métier pour choisir votre plateforme d\'avis prioritaire sans vous disperser.',

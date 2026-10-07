@@ -18,6 +18,244 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'plaque-nfc-food-truck': {
+    title: 'Plaque NFC food truck : des avis Google pour un commerce qui change de place',
+    category: 'Secteur',
+    date: '7 octobre 2026',
+    readTime: '17 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Un food truck n\'a ni vitrine ni adresse fixe : sa fiche Google est le seul repère de ses clients. Zone desservie, horaires, autorisations, plaque loin du métal, privatisations : la méthode pour collecter des avis sans enfreindre les règles.',
+    tocSections: [
+      { id: 'pourquoi-avis-food-truck', label: 'Pourquoi les avis comptent' },
+      { id: 'fiche-google-food-truck', label: 'Une fiche Google sans adresse fixe' },
+      { id: 'zone-adresse-horaires', label: 'Adresse, zone et horaires' },
+      { id: 'autorisations-emplacements', label: 'Les autorisations d\'emplacement' },
+      { id: 'ou-poser-plaque', label: '5 emplacements classés' },
+      { id: 'moments-scripts', label: 'Quand demander, quoi dire' },
+      { id: 'evenements-marches', label: 'Marchés et privatisations' },
+      { id: 'hypotheses-calcul', label: '3 hypothèses de calcul' },
+      { id: 'repondre-avis', label: 'Répondre aux avis' },
+      { id: 'erreurs', label: 'Les 7 erreurs' },
+      { id: 'faq-food-truck', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="pourquoi-avis-food-truck" class="scroll-mt-28 mb-16">
+<h2>Pourquoi une plaque NFC food truck change la collecte d'avis Google</h2>
+<p>Une plaque NFC food truck permet au client de laisser un avis Google en approchant son téléphone du comptoir du camion, pendant qu'il attend sa commande ou juste après l'avoir reçue. C'est le seul moment où il est à portée de main : quelques minutes plus tard, il a mangé, il est reparti, et le camion aussi.</p>
+<p>Un food truck vit d'une contrainte que n'a aucun restaurant : il change de place. Le mardi midi devant une zone d'activités, le jeudi soir sur la place d'un village, le samedi sur un marché, le dimanche sur un événement privé. Le client qui découvre le camion ne sait pas où le retrouver la semaine suivante. Pour lui, la fiche Google est souvent le seul repère durable : c'est là qu'il vérifie si la cuisine vaut le détour, puis là qu'il cherche où le camion stationne aujourd'hui.</p>
+<p>La fiche pèse donc plus lourd que pour un commerce installé, qui bénéficie de sa vitrine et du bouche-à-oreille du quartier. Or le food truck a moins d'occasions de récolter des avis. Le service est rapide, la file avance, l'équipe tient souvent à une ou deux personnes, et personne n'a le temps de glisser une phrase sur Google entre deux commandes. Les clients satisfaits repartent avec leur barquette sans rien écrire, et la fiche ne reflète pas le travail fourni.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 En une phrase :</strong> pour un food truck, la plaque NFC se pose sur le comptoir de service, loin du métal, et ne sert qu'à condition que la fiche Google soit bien réglée (zone desservie, adresse masquée, horaires tenus à jour), puisque c'est cette fiche que le client retrouve une fois le camion reparti.</p>
+</div>
+<p>Ce guide détaille la façon de représenter un camion sur Google, les autorisations d'emplacement qui conditionnent ce que vous affichez, l'endroit où poser la plaque sur un véhicule, les moments où proposer l'avis, les événements privés, des hypothèses de calcul et les erreurs à éviter.</p>
+</section>
+
+<section id="fiche-google-food-truck" class="scroll-mt-28 mb-16">
+<h2>Un food truck peut-il avoir une fiche Google ?</h2>
+<p>Oui, un food truck peut avoir une fiche d'établissement Google, à condition de respecter les critères d'éligibilité : être en contact direct avec ses clients aux horaires affichés, et représenter l'entreprise telle qu'elle existe. En pratique, la plupart des camions sans emplacement fixe se présentent comme un établissement qui dessert une zone, avec une adresse masquée.</p>
+<h3>Ce que disent les consignes de Google</h3>
+<p>Les <a href="https://support.google.com/business/answer/3038177?hl=fr" target="_blank" rel="noopener noreferrer">consignes relatives à la représentation de votre établissement sur Google</a> posent la règle de base : seules les entreprises en contact direct avec leurs clients pendant les horaires d'ouverture indiqués peuvent avoir une fiche. Elles demandent aussi que l'adresse ou la zone desservie soient exactes, et que le nom corresponde à celui que les clients connaissent, sur la signalétique et les documents de l'entreprise. Pour un camion, le nom est celui qui figure sur la carrosserie et sur les tickets, sans mot-clé ajouté.</p>
+<p>La page <a href="https://support.google.com/business/answer/13763036?hl=fr" target="_blank" rel="noopener noreferrer">Éligibilité des établissements et consignes applicables aux propriétaires</a> précise un point qui concerne directement les camions : les établissements saisonniers sont acceptés s'ils disposent d'une signalétique permanente sur place, mais les activités saisonnières ou périodiques sans emplacement permanent, ainsi que les événements ponctuels, ne sont pas admis sur la carte. Autrement dit, Google ne veut pas d'un repère sur la carte pour chaque place où le camion se gare de temps en temps.</p>
+<h3>Une zone grise, pas une interdiction</h3>
+<p>Les consignes de Google ne contiennent pas de paragraphe consacré aux food trucks. Le cabinet spécialisé Whitespark le relève dans son article <a href="https://whitespark.ca/blog/are-food-trucks-eligible-for-a-google-business-profile/" target="_blank" rel="noopener noreferrer">« Are food trucks eligible for a Google Business Profile? »</a>, qui décrit la solution habituellement retenue : une fiche d'établissement de services de proximité, créée à partir de l'adresse de l'entreprise, masquée au public, avec une zone desservie. C'est une lecture d'experts, pas une règle écrite par Google : relisez les consignes officielles avant de créer la fiche, car elles évoluent.</p>
+<h3>Trois situations, trois réglages</h3>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Votre situation</th><th class="text-left p-3 border-b">Réglage le plus cohérent</th><th class="text-left p-3 border-b">Point de vigilance</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Camion qui tourne sur plusieurs emplacements dans la semaine</td><td class="p-3 border-b">Établissement de services de proximité : adresse de l'entreprise masquée, zone desservie limitée aux communes où vous stationnez</td><td class="p-3 border-b">Ne pas créer une fiche par emplacement</td></tr>
+<tr><td class="p-3 border-b">Camion installé à demeure sur un même terrain, avec une enseigne fixe</td><td class="p-3 border-b">Fiche avec l'adresse de ce lieu, visible, et horaires réels</td><td class="p-3 border-b">Avoir l'autorisation d'occuper ce lieu et une signalétique permanente</td></tr>
+<tr><td class="p-3">Restaurant ou laboratoire qui reçoit des clients, plus un camion</td><td class="p-3">Fiche du restaurant à son adresse, avec une zone desservie si le camion se déplace</td><td class="p-3">Le camion ne justifie pas, à lui seul, une seconde fiche</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ce tableau résume une méthode de décision, pas une garantie de validation : c'est Google qui accepte ou non la fiche, et il peut demander une vérification. Dans le doute, partez du réglage le plus simple et le plus fidèle à la réalité.</p>
+</section>
+
+<section id="zone-adresse-horaires" class="scroll-mt-28 mb-16">
+<h2>Comment régler l'adresse, la zone desservie et les horaires d'un food truck ?</h2>
+<p>Masquez l'adresse de l'entreprise si les clients n'y viennent pas, indiquez comme zone desservie les seules communes où le camion stationne réellement, et affichez des horaires que vous tenez. Ces trois réglages évitent les déplacements inutiles, première source d'avis à une étoile pour un commerce mobile.</p>
+<h3>L'adresse : présente pour Google, cachée pour le public</h3>
+<p>La page d'aide de Google sur les <a href="https://support.google.com/business/answer/9157481?hl=fr" target="_blank" rel="noopener noreferrer">zones desservies</a> distingue deux cas. L'établissement de services de proximité ne reçoit pas ses clients sur place : il peut ne pas afficher son adresse et indiquer à la place la zone qu'il dessert. L'établissement mixte reçoit des clients sur place et se déplace ou livre aussi : il affiche son adresse et sa zone. Si votre adresse administrative est votre domicile, ou un local où personne ne mange, ne la rendez pas visible : un client finirait par sonner chez vous.</p>
+<h3>La zone : là où vous êtes vraiment</h3>
+<p>Listez les communes, ou les quartiers d'une grande ville, où le camion stationne au moins une fois par semaine ou par mois. N'y ajoutez pas les villes voisines « pour être vu » : Google les affiche comme des lieux desservis, des clients s'y attendent à vous trouver, et la déception se paie en avis. La même page d'aide de Google explique comment modifier la zone : mettez-la à jour à chaque fois que vous gagnez ou perdez un emplacement régulier.</p>
+<h3>Les horaires : ceux de la semaine type</h3>
+<p>Un camion qui sert le midi du lundi au vendredi et deux soirs par semaine affiche ces créneaux. Les consignes de Google demandent d'indiquer les horaires pendant lesquels vous êtes disponible pour vos clients, et prévoient, pour les activités saisonnières, de définir des horaires habituels pendant la saison. Les écarts ponctuels passent par les <a href="https://support.google.com/business/answer/6303076?hl=fr" target="_blank" rel="noopener noreferrer">horaires d'ouverture exceptionnels</a>, que Google réserve aux modifications courtes (jours fériés, événements, fermeture temporaire de quelques jours).</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ La panne et la pluie :</strong> un camion qui ne sort pas à cause d'une panne, d'une météo trop mauvaise ou d'un emplacement annulé doit le signaler le jour même. Une fermeture exceptionnelle sur la fiche, plus un message sur vos réseaux, coûte deux minutes. Un client qui fait le trajet pour rien écrit plus volontiers qu'un client satisfait.</p>
+</div>
+<h3>Le planning de la semaine</h3>
+<p>La fiche ne sait pas afficher « mardi place du marché, jeudi zone d'activités ». Pour ce planning, la fiche offre les posts : une publication en début de semaine qui liste les emplacements et les horaires répond à la question que se posent vos habitués. Notre guide sur les <a href="/blog/google-posts-fiche-google-business-profile">Google Posts</a> détaille le format et la fréquence. Pensez aussi à la description de la fiche et à votre site, s'il existe, pour indiquer où trouver le planning à jour.</p>
+</section>
+
+<section id="autorisations-emplacements" class="scroll-mt-28 mb-16">
+<h2>Ce que les autorisations d'emplacement changent pour votre fiche Google</h2>
+<p>Votre fiche ne doit afficher que les lieux et les horaires que vos autorisations vous permettent d'occuper. Un permis de stationnement est personnel, limité dans le temps et révocable : une zone desservie ou un planning construit sur des emplacements non autorisés expose à des annulations, donc à des clients déçus.</p>
+<h3>Le permis de stationnement</h3>
+<p>Le ministère de l'Économie explique, dans sa page <a href="https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/gerer-un-commerce/commercants-vous-avez-besoin-dune-autorisation-pour-occuper-le-domaine-public" target="_blank" rel="noopener noreferrer">« Commerçants : vous avez besoin d'une autorisation pour occuper le domaine public »</a>, qu'un camion de restauration installé sur la voie publique sans emprise au sol relève du permis de stationnement. La demande se fait auprès de l'autorité chargée de la police de la circulation, en général la mairie, ou la préfecture pour certaines routes nationales et départementales. L'autorisation est personnelle, accordée pour une durée déterminée, révocable, et donne lieu à une redevance fixée par la commune.</p>
+<p>La DGCCRF rappelle de son côté, dans sa fiche sur les <a href="https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/ventes-sur-la-voie-publique-autorisations-necessaires" target="_blank" rel="noopener noreferrer">ventes sur la voie publique et les autorisations nécessaires</a>, que vendre sur l'espace public suppose une autorisation préalable. Sur un terrain privé (parking d'entreprise, cour d'un commerce, domaine viticole), c'est l'accord du propriétaire qui compte : le règlement de votre commune peut aussi s'appliquer, renseignez-vous en mairie.</p>
+<h3>La carte de commerçant ambulant</h3>
+<p>Selon la fiche <a href="https://bpifrance-creation.fr/activites-reglementees/commerce-ambulant" target="_blank" rel="noopener noreferrer">« Commerce ambulant » de Bpifrance Création</a>, un professionnel qui exerce son activité commerciale ou artisanale hors de la commune de son domicile ou de son établissement principal doit détenir une carte de commerçant ou d'artisan ambulant. Elle se demande à la chambre de commerce et d'industrie (CCI) pour une activité commerciale, ou à la chambre de métiers et de l'artisanat (CMA) pour une activité artisanale, et elle est valable 4 ans.</p>
+<h3>Ce qu'il faut en tirer pour la fiche</h3>
+<ul>
+<li><strong>La zone desservie suit vos autorisations</strong>, pas vos envies : une commune où vous n'avez ni permis ni accord privé n'a rien à faire dans la liste.</li>
+<li><strong>Un emplacement révoqué se retire tout de suite</strong> du planning publié et, s'il était le seul dans sa commune, de la zone desservie.</li>
+<li><strong>Les horaires affichés respectent ceux de l'autorisation</strong> : un permis limité à la pause de midi ne permet pas d'annoncer un service du soir au même endroit.</li>
+</ul>
+<p>Ces règles varient d'une commune à l'autre et peuvent changer : cet article ne remplace pas la lecture de vos autorisations ni l'avis de votre mairie ou de votre chambre consulaire.</p>
+</section>
+
+<section id="ou-poser-plaque" class="scroll-mt-28 mb-16">
+<h2>Où poser la plaque NFC sur un food truck : 5 emplacements classés</h2>
+<p>Le meilleur emplacement est la tablette de service, côté client, à côté du terminal de paiement et sur une surface qui n'est pas en métal. Un camion est une caisse métallique : c'est la contrainte principale, avant même la pluie et le soleil. Testez chaque emplacement avec plusieurs téléphones avant de coller.</p>
+<h3>1. La tablette de service, à côté du terminal ✅</h3>
+<p>Le client paie, souvent en sans contact : son téléphone est déjà dans sa main. Posez la plaque à plat sur la tablette extérieure, à portée de main, du côté où il se tient. Si la tablette est en inox ou en tôle, ce qui est fréquent, ne collez pas la plaque directement dessus : fixez d'abord un support non métallique (une planchette en bois, un présentoir en acrylique) et posez la plaque sur ce support, ou utilisez un chevalet.</p>
+<h3>2. La zone d'attente de la commande</h3>
+<p>Entre la commande et le retrait, le client attend plusieurs minutes, souvent debout, souvent le téléphone en main. Un présentoir posé sur une table ou un mange-debout près du camion capte ce temps mort. Cette option suppose de rentrer le présentoir à chaque fin de service.</p>
+<h3>3. Le passe-plat ou le comptoir de retrait</h3>
+<p>Quand le comptoir de retrait est distinct de celui de la commande, c'est le moment où le client découvre son plat. Une plaque à cet endroit fonctionne bien, à condition qu'elle ne gêne pas le passage des barquettes et qu'elle reste à l'écart des projections de sauce et de graisse.</p>
+<h3>4. Le tableau du menu, à hauteur de main</h3>
+<p>Une ardoise ou un panneau de menu en bois posé au sol, devant le camion, peut accueillir la plaque à hauteur de main. L'emplacement touche les clients qui lisent la carte, plus rarement ceux qui ont déjà mangé. Il dépanne quand la tablette est trop étroite.</p>
+<h3>5. La carrosserie ❌</h3>
+<p>À proscrire. Collée sur la tôle, la puce lit mal ou pas du tout, et le client qui approche son téléphone sans résultat ne réessaie pas. La carrosserie sert à votre nom, à votre menu et à l'adresse de votre planning, pas à la plaque.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ Métal, pluie et rangement :</strong> le métal perturbe le champ de la puce et rend la lecture aléatoire. Testez avec deux ou trois téléphones, iPhone et Android, avant de coller. Placez la plaque à l'abri de l'auvent quand c'est possible, et si elle est sur un support amovible, rangez-la dans le camion à la fin de chaque service : un présentoir qui reste dehors finit par tomber, se rayer ou disparaître. Notre article sur les <a href="/blog/materiaux-plaque-nfc-avis-google">matériaux de plaque NFC</a> détaille les surfaces compatibles.</p>
+</div>
+<p>Le QR code imprimé sur la plaque prend le relais quand un téléphone ne lit pas la puce. Les iPhone XR, XS, SE de 2e génération et tous les modèles suivants lisent la puce sans application. Sur les iPhone 7, 8 et X, il faut ouvrir le Lecteur de tag NFC depuis le centre de contrôle. Sur Android, le NFC doit être activé.</p>
+</section>
+
+<section id="moments-scripts" class="scroll-mt-28 mb-16">
+<h2>Quand proposer un avis pendant un service de food truck, et quoi dire</h2>
+<p>Proposez l'avis au moment où vous tendez la commande ou quand le client revient vous dire que c'était bon, et jamais pendant un coup de feu où la file s'allonge. La même phrase neutre est dite à tous les clients, sans choisir ceux qui ont l'air ravis : Google interdit la sollicitation sélective.</p>
+<h3>Les moments favorables</h3>
+<ul>
+<li><strong>Le retrait de la commande</strong>, quand le service est calme : le client voit son plat, il a encore son téléphone en main après avoir payé.</li>
+<li><strong>Le client qui revient au comptoir</strong> pour remercier, jeter sa barquette ou reprendre une boisson : il vient de manger, il a un avis tout frais.</li>
+<li><strong>L'habitué du mardi midi</strong>, que vous connaissez par son prénom et qui n'a jamais pensé que son avis aiderait le camion à trouver de nouveaux clients.</li>
+<li><strong>La fin d'un service sur un nouvel emplacement</strong>, où personne ne vous connaît encore : les premiers clients sont ceux dont l'avis rassurera les suivants.</li>
+</ul>
+<h3>Les moments où l'on ne dit rien</h3>
+<ul>
+<li><strong>Le coup de feu de midi et quart</strong>, quand la file déborde : la plaque fait son travail seule, l'équipe se concentre sur la cuisine.</li>
+<li><strong>Après une erreur</strong> : commande oubliée, plat froid, attente trop longue. On règle d'abord le problème, sans parler d'avis.</li>
+<li><strong>Pendant un événement privé</strong> où vous servez les invités d'un client : ce sont ses invités, pas les vôtres (voir la section suivante).</li>
+</ul>
+<h3>Trois formulations pour le comptoir</h3>
+<p><strong>Au retrait :</strong> « Bon appétit ! Si vous avez une minute après, vous pouvez approcher votre téléphone ici, ça ouvre notre page Google. » Neutre, sans demander de note.</p>
+<p><strong>Au client qui revient :</strong> « Merci, ça fait plaisir. Si vous voulez le dire en ligne, la plaque est là. Ça aide les gens à nous trouver d'une semaine à l'autre. » On rebondit sur la remarque du client, sans la provoquer.</p>
+<p><strong>À un habitué :</strong> « Vous venez souvent, votre avis compte pour ceux qui ne nous connaissent pas encore. Si un jour vous avez trente secondes, c'est ici. » Une seule fois suffit : on ne relance pas un habitué à chaque passage.</p>
+<p>À bannir : « mettez-nous cinq étoiles », une boisson offerte contre un avis, et toute phrase du type « si vous avez aimé, laissez un avis, sinon dites-le-nous ». Les <a href="https://support.google.com/business/answer/3474122?hl=fr" target="_blank" rel="noopener noreferrer">conseils de Google pour obtenir plus d'avis</a> excluent de décourager les avis négatifs et de solliciter seulement les avis positifs. Le <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=fr" target="_blank" rel="noopener noreferrer">règlement de Google sur les contenus interdits</a> exclut les avis publiés en échange d'un avantage, qu'il s'agisse d'un paiement, d'une remise ou d'un produit offert. Les avis de vos proches et de vos salariés sont aussi exclus : ils ne décrivent pas une expérience de client.</p>
+</section>
+
+<section id="evenements-marches" class="scroll-mt-28 mb-16">
+<h2>Marchés, festivals et privatisations : qui peut laisser un avis ?</h2>
+<p>Sur un marché ou un festival, tout client qui achète au camion peut laisser un avis, et la plaque fonctionne comme ailleurs. Lors d'une privatisation, c'est l'organisateur qui vous a choisi et payé : c'est à lui qu'on propose de laisser un avis, après l'événement, par un message avec votre lien d'avis Google.</p>
+<h3>Les marchés et les festivals</h3>
+<p>Le client d'un marché ou d'un festival est un vrai client du camion. La seule difficulté est la cadence : sur un festival, la file ne s'arrête pas, et aucune phrase n'a le temps d'être dite. La plaque posée sur la tablette suffit. Le client qui découvre le camion ce jour-là n'a souvent aucun autre moyen de vous retrouver : la fiche Google, avec son planning et ses avis, devient le lien entre l'événement et la semaine suivante.</p>
+<h3>Les privatisations : mariages, entreprises, anniversaires</h3>
+<p>Quand vous servez les invités d'un mariage ou le personnel d'une entreprise, les convives ne vous ont pas choisi et ne vous ont rien payé. Tendre une plaque à chaque invité, c'est transformer la fête de votre client en support publicitaire, et l'organisateur peut le prendre mal. Laissez la plaque rangée, ou posée sans que personne ne la mentionne si l'organisateur est d'accord.</p>
+<p>L'organisateur, lui, a vécu toute la prestation : le devis, la préparation, le service, le rangement. C'est son avis qui aidera le prochain couple ou le prochain comité d'entreprise à se décider. Google permet de <a href="https://support.google.com/business/answer/16816815?hl=fr" target="_blank" rel="noopener noreferrer">créer un lien ou un QR code pour demander des avis</a> depuis la fiche : envoyez ce lien dans le message de remerciement, le lendemain de l'événement, sans relance insistante. Notre guide sur le <a href="/blog/lien-avis-google">lien d'avis Google</a> explique où le trouver et comment le tester.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Méthode pour les privatisations :</strong> préparez un modèle de message de remerciement contenant le lien d'avis, envoyez-le à chaque organisateur le lendemain de l'événement, quel que soit le déroulé, et notez la date d'envoi dans votre carnet de commandes. Le même message pour tous évite toute sélection.</p>
+</div>
+<h3>Le camion partagé entre plusieurs activités</h3>
+<p>Certains exploitants ont un restaurant et un camion, ou deux camions sous deux noms différents. Chaque établissement qui a sa propre fiche a son propre lien d'avis : une plaque doit pointer vers la fiche de l'activité que le client vient de découvrir. Avec le Pack Pro, chaque plaque peut pointer vers un lien différent, ce qui permet d'équiper chaque établissement avec le bon lien.</p>
+</section>
+
+<section id="hypotheses-calcul" class="scroll-mt-28 mb-16">
+<h2>Combien d'avis un food truck peut-il espérer ? Trois hypothèses de calcul</h2>
+<p>Personne ne peut annoncer un nombre d'avis par mois à un food truck : tout dépend du nombre de couverts, de la part de clients à qui la plaque est proposée et de la part qui publie vraiment. Les lignes ci-dessous sont des hypothèses de calcul, avec des valeurs d'illustration à remplacer par les vôtres.</p>
+<p>Hypothèse de calcul retenue pour l'exemple : un avis publié pour cinquante clients à qui l'on propose la plaque. Les profils sont fictifs.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Profil de camion (fictif)</th><th class="text-left p-3 border-b">Couverts / mois</th><th class="text-left p-3 border-b">Clients à qui l'on propose</th><th class="text-left p-3 border-b">Avis / mois (hyp. 1 sur 50)</th><th class="text-left p-3 border-b">Sur 12 mois</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Camion de village, 3 services par semaine</td><td class="p-3 border-b">600</td><td class="p-3 border-b">200</td><td class="p-3 border-b">4</td><td class="p-3 border-b">environ 48</td></tr>
+<tr><td class="p-3 border-b">Camion de zone d'activités, 5 midis par semaine</td><td class="p-3 border-b">1 500</td><td class="p-3 border-b">400</td><td class="p-3 border-b">8</td><td class="p-3 border-b">environ 96</td></tr>
+<tr><td class="p-3">Camion urbain, midis et soirs, plus événements</td><td class="p-3">3 000</td><td class="p-3">750</td><td class="p-3">15</td><td class="p-3">environ 180</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ce tableau ne promet aucun résultat. Il montre une hiérarchie : ce qui compte est le nombre de clients à qui l'on propose réellement de laisser un avis, plus que le nombre total de couverts. Un camion de village où l'on dit la phrase à chaque habitué peut rattraper un camion urbain où personne n'a le temps de la dire. Pour un camion saisonnier, raisonnez sur les mois d'activité, pas sur douze mois.</p>
+<h3>Pourquoi le rythme compte autant que le total</h3>
+<p>Selon le <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer">Local Consumer Review Survey 2026 de BrightLocal</a>, mené auprès de plus de 1 000 consommateurs américains, 74 % des consommateurs cherchent des avis écrits au cours des trois derniers mois, et 32 % veulent des avis des deux dernières semaines. La même enquête indique que 31 % des consommateurs n'utilisent que des établissements notés 4,5 étoiles ou plus. L'enquête ne porte pas sur la France, mais elle rappelle qu'une fiche dont le dernier avis date de la saison précédente rassure moins qu'une fiche alimentée chaque semaine. Notre article sur la <a href="/blog/velocite-avis-google">vélocité des avis Google</a> développe ce point.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 Le calcul qui protège d'un mauvais jour :</strong> hypothèse de calcul pour une fiche à 20 avis et 4,7 de moyenne. Deux avis à 1 étoile laissés après un service raté (panne de friteuse, file interminable) font tomber la moyenne à environ 4,4 (20 avis à 4,7 plus 2 avis à 1, divisés par 22). Avec 100 avis à 4,7, les deux mêmes avis ne la font descendre qu'à environ 4,6. Pour faire vos propres calculs, utilisez notre <a href="/outils/calculateur-avis-google">calculateur d'avis Google</a>.</p>
+</div>
+</section>
+
+<section id="repondre-avis" class="scroll-mt-28 mb-16">
+<h2>Comment répondre aux avis d'un food truck ?</h2>
+<p>Répondez à chaque avis, positif ou négatif, en quelques lignes, en remerciant, en reconnaissant le problème s'il y en a un et en rappelant où retrouver le camion. La réponse s'adresse autant aux futurs clients qui la liront qu'à l'auteur de l'avis : elle montre que le camion est suivi par quelqu'un.</p>
+<h3>« Vingt-cinq minutes d'attente pour un burger »</h3>
+<p>Un reproche classique dans un métier où tout se joue en une heure. Ne vous abritez pas derrière l'affluence : reconnaissez l'attente, expliquez ce que vous changez (précommande, menu réduit aux heures de pointe, renfort le vendredi) et proposez au client de revenir à un créneau plus calme, que vous pouvez indiquer.</p>
+<h3>« Le camion n'était pas là »</h3>
+<p>Ce reproche révèle souvent un planning ou des horaires mal tenus. Excusez-vous sans détour, expliquez la raison si elle est simple (panne, emplacement annulé par la mairie) et indiquez où le planning à jour est publié. Puis corrigez la fiche : c'est l'avis qui révèle le réglage oublié.</p>
+<h3>« Portions trop petites pour le prix »</h3>
+<p>Ne discutez pas le ressenti du client. Rappelez ce que comprend le menu, ce que coûtent les produits que vous choisissez si c'est un argument de votre cuisine, et invitez à en parler au comptoir la prochaine fois.</p>
+<h3>Les avis positifs</h3>
+<p>Remerciez avec une phrase personnalisée qui reprend un détail de l'avis (le plat cité, l'emplacement), et ajoutez où trouver le camion cette semaine. Évitez la même formule copiée sous chaque avis. La méthode complète pour les cas difficiles est dans notre guide pour <a href="/blog/repondre-avis-negatifs-google">répondre aux avis négatifs Google</a>.</p>
+<h3>L'avis qui n'apparaît pas</h3>
+<p>Un client peut vous dire qu'il a laissé un avis que vous ne voyez pas. Google consacre une page d'aide aux <a href="https://support.google.com/business/answer/10313341?hl=fr" target="_blank" rel="noopener noreferrer">avis manquants ou retardés</a> : renvoyez-y plutôt que de demander au client de recommencer, ce qui peut produire un doublon.</p>
+</section>
+
+<section id="erreurs" class="scroll-mt-28 mb-16">
+<h2>Les 7 erreurs qui coûtent des avis à un food truck</h2>
+<p>Les erreurs les plus coûteuses pour un food truck tiennent à la fiche Google mal tenue (zone trop large, horaires faux, planning absent) et à la manière de demander les avis (contrepartie, sélection des clients). Chacune se corrige en quelques minutes, et chacune, laissée telle quelle, produit des avis négatifs évitables.</p>
+<ul>
+<li><strong>Offrir une boisson ou un dessert contre un avis.</strong> Le règlement de Google interdit toute contrepartie, même symbolique. Les fiches en infraction s'exposent au retrait des avis concernés et à des restrictions.</li>
+<li><strong>Ne tendre la plaque qu'aux clients qui ont l'air contents.</strong> C'est une sollicitation sélective, que Google exclut. La plaque est là pour tous.</li>
+<li><strong>Créer une fiche par emplacement.</strong> Google n'admet pas les activités sans emplacement permanent sur la carte, et des fiches multiples dispersent les avis.</li>
+<li><strong>Afficher une zone desservie trop large.</strong> Les clients d'une commune où vous ne venez jamais finissent par le dire.</li>
+<li><strong>Oublier de signaler une sortie annulée.</strong> Le client qui se déplace pour rien est celui qui écrit.</li>
+<li><strong>Coller la plaque sur la tôle ou l'inox.</strong> Lecture aléatoire, clients qui abandonnent, et une équipe qui conclut que la plaque ne marche pas.</li>
+<li><strong>Demander un avis aux invités d'une privatisation.</strong> C'est l'organisateur qu'il faut solliciter, après l'événement.</li>
+</ul>
+<p>Pour la méthode générale de placement, notre article sur <a href="/blog/plaque-nfc-restaurant">la plaque NFC au restaurant</a> complète celui-ci, et la page <a href="/secteur/restaurant">dédiée aux restaurants</a> présente les usages en salle.</p>
+</section>
+
+<section id="faq-food-truck" class="scroll-mt-28 mb-16">
+<h2>FAQ : plaque NFC et avis Google pour un food truck</h2>
+
+<h3>Un food truck sans adresse fixe peut-il avoir une fiche Google ?</h3>
+<p>Oui, en général. La solution la plus répandue consiste à créer une fiche d'établissement de services de proximité, avec l'adresse de l'entreprise masquée et une zone desservie limitée aux communes où le camion stationne. Les consignes de Google ne traitent pas explicitement des food trucks, mais elles excluent de la carte les activités sans emplacement permanent : ne créez pas une fiche par emplacement.</p>
+
+<h3>Où coller une plaque NFC sur un food truck ?</h3>
+<p>Sur la tablette de service, côté client, à côté du terminal de paiement. Si la tablette est en métal, posez d'abord un support en bois ou en acrylique, car le métal perturbe la lecture de la puce. Évitez la carrosserie. Testez avec plusieurs téléphones avant de coller, et rangez les supports amovibles à la fin de chaque service.</p>
+
+<h3>Faut-il indiquer chaque emplacement du camion sur Google ?</h3>
+<p>Non. La fiche ne liste pas les emplacements un par un : elle indique une zone desservie, composée des communes où vous stationnez réellement. Le planning de la semaine se publie dans un post de la fiche, sur vos réseaux et sur votre site, et se met à jour dès qu'un emplacement change.</p>
+
+<h3>Comment afficher des horaires qui changent selon les jours ?</h3>
+<p>Affichez les horaires de votre semaine type, puis utilisez les horaires exceptionnels pour les écarts courts : jour férié, événement, sortie annulée. Si l'activité est saisonnière, Google prévoit d'indiquer les horaires habituels pendant la saison. Une sortie annulée se signale le jour même.</p>
+
+<h3>Peut-on offrir une boisson en échange d'un avis Google ?</h3>
+<p>Non. Le règlement de Google interdit les avis publiés en échange d'un avantage, qu'il s'agisse d'un paiement, d'une remise ou d'un produit offert, même symbolique. La seule demande admise est une invitation neutre, faite à tous les clients, sans choisir ceux qui ont l'air satisfaits.</p>
+
+<h3>La plaque NFC fonctionne-t-elle avec tous les téléphones ?</h3>
+<p>Les iPhone XR, XS, SE de 2e génération et tous les modèles suivants lisent la puce sans application. Sur les iPhone 7, 8 et X, il faut ouvrir le Lecteur de tag NFC depuis le centre de contrôle. Sur Android, le NFC doit être activé. Pour les autres téléphones, la plaque Swiipx porte un QR code de secours imprimé qui ouvre la même page d'avis.</p>
+
+<h3>Combien de plaques faut-il pour un food truck ?</h3>
+<p>Une plaque suffit à la plupart des camions, posée sur la tablette de service. Une deuxième sert quand le comptoir de retrait est distinct de celui de la commande, ou pour un présentoir dans la zone d'attente. Un exploitant de plusieurs camions avec des fiches distinctes peut choisir le Pack Pro, où chaque plaque peut pointer vers un lien différent.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : une fiche fidèle et une plaque sur la tablette</h2>
+<p>Un food truck récolte ses avis en quelques minutes par client, sur la tablette de service, à condition que sa fiche Google dise vrai sur la zone, les horaires et le planning. La plaque NFC rend le geste immédiat ; la fiche bien tenue évite que les avis parlent surtout de rendez-vous manqués.</p>
+<p>La méthode tient en quelques gestes : une fiche d'établissement de services de proximité, adresse masquée et zone limitée aux communes autorisées ; des horaires tenus et des sorties annulées signalées le jour même ; un planning publié chaque semaine ; une plaque sur la tablette, loin du métal ; une phrase neutre pour tous ; aucune contrepartie ; un message à l'organisateur après chaque privatisation ; une réponse à chaque avis. Le reste est une affaire de régularité, service après service.</p>
+
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Prêt à équiper la tablette de votre camion avant la prochaine saison ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215 programmée avec votre lien d'avis Google, adhésif 3M inclus, QR code de secours, garantie à vie sur la puce, <strong>sans abonnement</strong>. <a href="/product/starter" class="font-semibold underline">Pack Starter</a> à 29,90 € HT, <a href="/product/business" class="font-semibold underline">Pack Business</a> à 54,90 € HT et <a href="/product/pro" class="font-semibold underline">Pack Pro</a> à 89,90 € HT.</p>
+</div>
+</section>
+`,
+  },
   'avis-google-tripadvisor-trustpilot': {
     title: 'Avis Google, Tripadvisor ou Trustpilot : où concentrer vos efforts ?',
     category: 'Comparatif',

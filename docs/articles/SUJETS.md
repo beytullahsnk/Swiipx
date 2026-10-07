@@ -29,7 +29,7 @@ Swiipx ne vend aujourd'hui que des plaques programmées avec le lien d'avis Goog
 - [x] **Fleuriste** (`plaque-nfc-fleuriste`) : proposé le 2026-10-02, slug `plaque-nfc-fleuriste`
   - Pics de fêtes : Saint-Valentin, fête des mères, Toussaint.
   - Livraisons de bouquets, emplacement en caisse.
-- [ ] **Food truck** (`plaque-nfc-food-truck`)
+- [x] **Food truck** (`plaque-nfc-food-truck`) : proposé le 2026-10-07, slug `plaque-nfc-food-truck`
   - Emplacements tournants, fiche Google sans adresse fixe (zone desservie).
   - Plaque sur le comptoir du camion.
 - [ ] **Cabinet dentaire** (`plaque-nfc-dentiste`)
