@@ -6,6 +6,24 @@ Elle peut aussi écarter un sujet, trop proche d'un article existant ou faute de
 
 Les slugs indiqués sont des propositions. Les articles déjà publiés figurent dans `app/blog/[slug]/seo-data.ts` : ne pas les refaire.
 
+## Priorités Search Console (relevé du 7 octobre 2026)
+
+Recherches des trois derniers mois sur lesquelles swiipx.fr apparaît déjà, sans page qui y réponde vraiment. Les sujets correspondants sont en tête de leur catégorie, marqués « priorité Search Console ».
+
+| Recherches (impressions sur 3 mois, position moyenne) | Sujet |
+| --- | --- |
+| « combien de temps pour qu'un avis google apparaisse », « délai publication avis google », « temps de validation avis google » et deux variantes (60 au total, positions 7 à 18) | Délai de publication d'un avis Google |
+| « plaque avis google gratuit » (16, position 10,6) | Créer soi-même un QR code d'avis Google |
+
+Le calculateur `/outils/calculateur-avis-google` répond à « calculateur avis google », « calcul note google » et « combien d'avis google pour augmenter la note » : pas d'article sur ces recherches.
+
+### En attente d'une décision de l'équipe : ne pas traiter
+
+- **Plaque NFC Tripadvisor.** 644 impressions sur 3 mois, réparties sur 17 variantes (« plaque nfc tripadvisor sans contact », « plaque qr code nfc tripadvisor »…), positions 24 à 55.
+- **Plaque NFC pour la carte du restaurant.** « plaque nfc carte restaurant » : 117 impressions, position 12,8.
+
+Swiipx ne vend aujourd'hui que des plaques programmées avec le lien d'avis Google. Un article sur ces sujets décevrait le lecteur tant que l'offre n'existe pas.
+
 ## Secteur : « plaque NFC + métier »
 
 - [x] **Fleuriste** (`plaque-nfc-fleuriste`) : proposé le 2026-10-02, slug `plaque-nfc-fleuriste`
@@ -48,6 +66,11 @@ Les slugs indiqués sont des propositions. Les articles déjà publiés figurent
 - [x] **Lien d'avis Google** (`lien-avis-google`) : proposé le 2026-10-01, slug `lien-avis-google`
   - Où le trouver dans la fiche, le partager, le tester.
   - Pourquoi il ne faut pas le modifier.
+- [ ] **Délai de publication d'un avis Google : combien de temps pour qu'il apparaisse ?** (`delai-publication-avis-google`), priorité Search Console
+  - Mot-clé principal : « délai publication avis google ».
+  - Ce que Google dit de la publication et de la modération des avis, l'avis visible par son auteur seul, les causes de retard.
+  - Que répondre au client dont l'avis n'apparaît pas.
+  - Distinct de `avis-google-disparus`, qui traite des avis retirés après publication.
 - [ ] **Créer sa fiche Google Business Profile, pas à pas** (`creer-fiche-google-business-profile`)
 - [ ] **Validation de la fiche** (`verification-fiche-google-business-profile`)
   - Méthodes proposées par Google, délais, refus fréquents.
@@ -65,11 +88,12 @@ Les slugs indiqués sont des propositions. Les articles déjà publiés figurent
 ## Comparatif
 
 - [x] **Avis Google, Tripadvisor ou Trustpilot : où concentrer ses efforts** (`avis-google-tripadvisor-trustpilot`) : proposé le 2026-10-05, slug `avis-google-tripadvisor-trustpilot`
+- [ ] **Créer soi-même un QR code d'avis Google, et ses limites** (`qr-code-avis-google-gratuit`), priorité Search Console
+  - Mot-clé principal : « qr code avis google gratuit ».
+  - Angle : ce que l'on peut faire gratuitement, à partir de ce que Google propose lui-même (sources de l'aide Google), puis les limites.
+  - Distinct de `plaque-nfc-vs-qr-code-avis-google`.
 - [ ] **NTAG213, NTAG215 ou NTAG216 : quelle puce pour une plaque d'avis** (`ntag213-ntag215-ntag216`)
   - S'appuyer sur les fiches techniques NXP.
-- [ ] **Créer soi-même un QR code d'avis Google, et ses limites** (`qr-code-avis-google-gratuit`)
-  - Angle : le faire soi-même.
-  - Distinct de `plaque-nfc-vs-qr-code-avis-google`.
 - [ ] **Programmer une puce NFC soi-même** (`programmer-puce-nfc-soi-meme`)
   - Applications, verrouillage de la puce, pièges.
 - [ ] **Logiciels de gestion des avis : ce qu'ils font et combien ils coûtent** (`logiciels-gestion-avis`)

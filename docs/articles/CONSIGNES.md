@@ -52,6 +52,7 @@ Ne jamais les contredire et ne rien leur ajouter. Les sources de vérité dans l
   - aucune note ni aucun avis sur Swiipx ;
   - aucun résultat obtenu par des clients Swiipx (« nos clients gagnent X avis ») ;
   - aucun témoignage, aucune étude de cas présentée comme réelle.
+- **Faits de terrain.** `docs/articles/TERRAIN.md` réunit les constats de l'équipe Swiipx : questions posées par les clients, essais réalisés. Les citer tels quels quand ils servent le sujet, sans en tirer de chiffre ni les généraliser. Aucun autre fait vécu ne peut être avancé.
 
 ## 2. Règles non négociables
 
@@ -85,13 +86,16 @@ Ne jamais les contredire et ne rien leur ajouter. Les sources de vérité dans l
 
 ## 3. Choisir le sujet
 
-1. Ouvrir `docs/articles/SUJETS.md` et repérer la catégorie de chacun des quatre derniers articles : ce sont les premiers éléments de `blogPosts` dans `app/blog/page.tsx`.
-2. Choisir, parmi Secteur, SEO Local, Comparatif et Statistiques, la catégorie publiée il y a le plus longtemps. Conseils peut remplacer Statistiques quand le sujet s'y prête.
-3. Prendre le premier sujet non coché de cette catégorie.
+1. Repérer la catégorie des cinq derniers articles : ce sont les cinq premiers éléments de `blogPosts` dans `app/blog/page.tsx`. Statistiques et Conseils comptent ensemble.
+2. Sur six articles, la répartition visée est : 2 Secteur, 2 Comparatif, 1 SEO Local, 1 Statistiques ou Conseils. Choisir la catégorie qui manque à ces cinq derniers articles pour l'atteindre. Si plusieurs manquent, prendre celle publiée il y a le plus longtemps. Conseils peut remplacer Statistiques quand le sujet s'y prête.
+   - Pourquoi cette répartition : les pages secteur et les comparatifs répondent à des recherches d'achat. De juillet à octobre 2026, ce sont elles qui ont reçu les clics de Google (taxi-VTC, coût des avis, matériaux, prix).
+   - Les questions pratiques sur la fiche Google trouvent de plus en plus leur réponse directement dans les résultats de Google, sans clic vers le site.
+3. Ouvrir `docs/articles/SUJETS.md` et prendre le premier sujet non coché de cette catégorie. Les sujets marqués « priorité Search Console » sont placés en tête : le site apparaît déjà sur ces recherches, sans page qui y réponde.
 4. Vérifier qu'aucun article existant ne répond déjà à la même recherche : comparer avec les titres et mots-clés de `app/blog/[slug]/seo-data.ts`.
 5. Si le sujet est trop proche d'un article existant, ou si les sources sont trop faibles, passer au suivant. Noter la raison sous le sujet écarté dans `SUJETS.md`.
 6. Si la catégorie est épuisée, proposer un sujet nouveau répondant aux mêmes critères et l'ajouter à `SUJETS.md`.
-7. Le slug est court, fait des mots-clés principaux, sans date ni mots vides inutiles.
+7. Fixer le mot-clé principal (partie 5). Le slug le reprend, sans date ni mots vides inutiles.
+8. Ne jamais prendre pour mot-clé principal « plaque NFC avis Google » ni « plaque avis Google » : ces requêtes reviennent à la page d'accueil, et un article qui les viserait lui ferait concurrence. De même, le calculateur (`/outils/calculateur-avis-google`) répond seul au calcul du nombre d'avis nécessaires pour une note.
 
 ## 4. Rechercher
 
@@ -104,10 +108,35 @@ Ne jamais les contredire et ne rien leur ajouter. Les sources de vérité dans l
 
 Modèles à lire avant d'écrire : `note-google-ideale` et `plaque-nfc-pharmacie` dans `app/blog/[slug]/articles.ts`.
 
+### Mot-clé principal
+
+Un article répond à une seule intention de recherche. Il l'exprime par son mot-clé principal : une requête précise de 3 à 6 mots, telle qu'un commerçant la taperait (« plaque nfc fleuriste », « délai publication avis google »).
+
+- C'est le premier élément de `motsCles` dans la fiche. Les suivants sont des variantes de la même intention, pas d'autres sujets.
+- Chacun de ses mots figure dans `titreSeo`, de préférence au début. Le contrôle le vérifie.
+- Il figure aussi dans le titre affiché et dans la première phrase de l'article.
+
+### Être repris par Google et par les moteurs IA
+
+Les aperçus IA de Google, ChatGPT, Perplexity ou Copilot citent des passages courts qui répondent seuls à une question. Chaque section doit en offrir un.
+
+1. **Encadré « En une phrase ».** Il est obligatoire dans la première section (modèle plus bas). Il donne la réponse directe à la question du titre, en 50 mots au plus, sans renvoyer au reste de l'article. Le contrôle le vérifie.
+2. **Paragraphe-réponse.** Sous chaque `<h2>` (sauf la FAQ), le premier élément est un paragraphe de 40 à 60 mots qui répond à la question du titre.
+   - Il commence par la réponse, pas par une mise en contexte.
+   - Il se comprend sans le reste de l'article.
+   - Les listes, tableaux et `<h3>` viennent après.
+   - Le contrôle exige un `<p>` de 25 à 110 mots à cette place.
+3. **Titres explicites.** Formuler les `<h2>` comme la question ou l'affirmation que le lecteur cherche (« Combien de temps faut-il pour qu'un avis apparaisse ? »), pas comme un titre de chapitre (« Les délais »).
+4. **FAQ.** La première phrase de chaque réponse répond (oui, non, un délai, un chiffre), la suite nuance.
+5. **Un apport propre.** Chaque article contient au moins un élément qu'on ne trouve pas tel quel dans les premiers résultats de recherche : tableau comparatif ou de décision, calcul expliqué, méthode pas à pas, liste de contrôle, ou fait de `docs/articles/TERRAIN.md`. Reformuler les pages concurrentes n'apporte rien.
+6. **Des phrases citables.**
+   - Un fait par phrase, avec un sujet explicite : « Google publie l'avis… », plutôt que « il le publie… ».
+   - Le chiffre et sa source dans le même paragraphe (partie 2).
+
 ### Structure
 
 - **Longueur** : 3 500 à 4 500 mots de texte visible. Le contrôle exige au moins 2 500 mots.
-- **Sections** : 9 à 12 balises `<section id="…" class="scroll-mt-28 mb-16">`, chacune avec un `<h2>` puis des `<h3>`.
+- **Sections** : 9 à 12 balises `<section id="…" class="scroll-mt-28 mb-16">`. Chacune contient un `<h2>`, son paragraphe-réponse, puis des `<h3>`.
   - La première section pose le problème du lecteur.
   - Une section FAQ, avec un `id` qui commence par `faq-`, contient 7 questions en `<h3>`, chacune suivie de sa réponse en `<p>`. Le balisage FAQ de Google est extrait automatiquement de ce texte.
   - La dernière section a l'`id` `conclusion` et se termine par l'encadré d'appel à l'action (modèle ci-dessous).
@@ -122,6 +151,8 @@ Modèles à lire avant d'écrire : `note-google-ideale` et `plaque-nfc-pharmacie
 - **Liens internes** : 4 à 6 articles du blog, sous la forme `/blog/<slug>` avec un slug existant dans `seo-data.ts`.
 - **Lien vers l'offre** : au moins un vers `/product/starter`, `/product/business`, `/product/pro` ou `/#product`.
 - **Pages secteur** : `/secteur/restaurant`, `/secteur/salon-coiffure` ou `/secteur/cabinet-medical`, quand le sujet s'y prête.
+- **Accueil** : au plus un lien dans le texte vers `/`, avec pour texte exact « plaque NFC avis Google ». La fin de chaque article en contient déjà un.
+- **Calculateur** : un lien vers `/outils/calculateur-avis-google` quand l'article parle de note, de moyenne ou du nombre d'avis nécessaire.
 - **Liens externes** : `<a href="https://…" target="_blank" rel="noopener noreferrer">texte</a>`.
 
 ### Modèles de balisage
@@ -168,7 +199,8 @@ Appel à l'action final, adapté au sujet :
 
 - `contenu.html` : le HTML de l'article ;
 - `fiche.json` : la fiche, dont les champs sont décrits en tête de `scripts/ajouter-article.mjs`. Rappels :
-  - `titreSeo` fait au plus 65 caractères ;
+  - `motsCles` commence par le mot-clé principal (partie 5) ;
+  - `titreSeo` fait au plus 65 caractères et contient chaque mot du mot-clé principal ;
   - `descriptionSeo` fait de 110 à 170 caractères ;
   - `libelleLien` fait au plus 70 caractères ;
   - `resumeLlms` est un résumé détaillé du contenu, comme les autres lignes de `public/llms.txt` ;

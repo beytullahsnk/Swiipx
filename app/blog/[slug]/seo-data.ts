@@ -82,7 +82,7 @@ export const seoData: Record<string, ArticleSeo> = {
     description: 'Quelle note Google viser ? L\'achat culmine entre 4,0 et 4,7 étoiles, 31 % des clients exigent 4,5. Seuils 2026, formule et tableau pour remonter sa note.',
     keywords: 'note google ideale, quelle note google viser, note google 4.5, note google 5 etoiles suspecte, calcul note google, remonter sa note google, combien d avis pour augmenter sa note google, moyenne avis google, seuil note avis clients, statistiques note avis',
     date: '2026-09-25',
-    dateModified: '2026-09-25',
+    dateModified: '2026-10-07',
     category: 'Statistiques',
     faq: [
       { q: 'Quelle est la note Google idéale pour un commerce ?', a: 'Une note comprise entre 4,5 et 4,8, portée par au moins une vingtaine d\'avis récents. Les recherches du Spiegel Research Center montrent que la probabilité d\'achat culmine entre 4,0 et 4,7 étoiles puis baisse à l\'approche de 5,0, jugée trop belle pour être vraie. L\'enquête BrightLocal 2026 indique par ailleurs que 31 % des consommateurs n\'utilisent qu\'un commerce noté 4,5 ou plus, alors que seuls 10 % exigent 5 étoiles.' },
@@ -368,7 +368,7 @@ export const seoData: Record<string, ArticleSeo> = {
     description: 'Combien d\'avis 5 étoiles pour passer de 4,2 à 4,6 sur Google ? La formule exacte, le tableau par volume, le coût d\'un avis 1 étoile et 3 exemples de calcul.',
     keywords: 'ameliorer note google, augmenter sa note google, remonter note google, moyenne avis google, calcul note google, note fiche google business profile, nombre avis google necessaire, avis 5 etoiles google, impact avis negatif note google, note google 4 6',
     date: '2026-08-17',
-    dateModified: '2026-09-13',
+    dateModified: '2026-10-07',
     category: 'Conseils',
     faq: [
       { q: 'Combien d\'avis 5 étoiles faut-il pour passer de 4,2 à 4,6 sur Google ?', a: 'Autant que vous en avez déjà. La formule est n = N x (T - A) / (5 - T), où N est votre nombre d\'avis, A votre note actuelle et T la note visée. Avec A = 4,2 et T = 4,6, le numérateur (0,4) et le dénominateur (0,4) sont égaux : n vaut exactement N. Une fiche à 40 avis doit en collecter 40 de plus, une fiche à 200 avis en collecte 200. Ce n\'est pas une coïncidence : chaque fois que la cible se situe à mi-chemin entre votre note actuelle et 5, il faut doubler le volume. Et cela suppose que tous les nouveaux avis soient des 5 étoiles ; le moindre 4 étoiles en chemin allonge la trajectoire.' },
@@ -464,11 +464,11 @@ export const seoData: Record<string, ArticleSeo> = {
     ],
   },
   'magnet-nfc-avis-google': {
-    title: 'Magnet NFC avis Google : quand il vaut mieux qu\'une plaque',
-    description: 'Magnet NFC pour les avis Google : sur quelles surfaces il tient, pourquoi le métal perturbe la puce, ses vraies limites, et quand une plaque reste plus adaptée.',
+    title: 'Magnet NFC avis Google : ce qu\'il faut savoir avant d\'acheter',
+    description: 'Un magnet NFC pour vos avis Google tient-il sur un comptoir, une vitrine, un frigo ? Surfaces compatibles, effet du métal sur la puce et quand préférer une plaque.',
     keywords: 'magnet nfc avis google, magnet nfc restaurant, aimant nfc avis google, magnet avis google, magnet nfc food truck, nfc sur metal, tag nfc anti metal, magnet nfc frigo commerce',
     date: '2026-08-07',
-    dateModified: '2026-08-07',
+    dateModified: '2026-10-07',
     category: 'Comparatif',
     faq: [
       { q: 'Un magnet NFC fonctionne-t-il vraiment sur une surface métallique ?', a: 'Oui, à condition qu\'il soit conçu pour. Le métal placé derrière l\'antenne y induit des courants de Foucault qui créent un champ opposé et désaccordent la puce : un tag NFC ordinaire collé sur du métal devient illisible ou très capricieux. Les magnets corrects intègrent une couche de ferrite entre l\'antenne et le support, qui canalise les lignes de champ magnétique et isole la puce du métal. Vérifiez la mention « anti-métal » ou « on-metal » avant d\'acheter, et testez sur la surface réelle dès la réception.' },
@@ -717,11 +717,11 @@ export const seoData: Record<string, ArticleSeo> = {
     ],
   },
   'prix-plaque-nfc-avis-google': {
-    title: 'Prix plaque NFC avis Google : le vrai budget',
-    description: 'Prix d\'une plaque NFC avis Google en 2026 : fourchettes par qualité, packs multi-plaques, facteurs de prix. Le bon budget : 35-60 € par plaque.',
+    title: 'Prix plaque NFC avis Google 2026 : ce que vous payez vraiment',
+    description: 'Combien coûte une plaque NFC pour les avis Google ? Achat unique ou abonnement, ce qui fait varier le prix, coût sur 3 ans. Chez Swiipx : dès 29,90 € HT.',
     keywords: 'prix plaque nfc avis google, combien coute plaque nfc, tarif plaque avis google, plaque nfc pas cher, prix plaque google, cout plaque nfc avis',
     date: '2026-05-12',
-    dateModified: '2026-07-28',
+    dateModified: '2026-10-07',
     category: 'Comparatif',
     faq: [
       { q: 'Quel est le bon prix pour une plaque NFC professionnelle en 2026 ?', a: 'Entre 35 et 50 € pour une plaque pro de qualité : acrylique 3 mm, NTAG215, QR de secours, garantie à vie, personnalisation incluse. En dessous, qualité douteuse. Au-dessus, vous payez surtout l\'esthétique.' },
@@ -747,11 +747,11 @@ export const seoData: Record<string, ArticleSeo> = {
     ],
   },
   'plaque-nfc-vs-qr-code-avis-google': {
-    title: 'Plaque NFC ou QR code : lequel convertit ?',
-    description: 'Plaque NFC ou QR code pour collecter des avis Google ? Comparatif 2026 : geste demandé au client, prix, compatibilité, durabilité du support.',
+    title: 'Plaque NFC ou QR code pour les avis Google : lequel choisir ?',
+    description: 'NFC ou QR code pour récolter des avis Google : geste demandé au client, téléphones compatibles, prix et durabilité du support. Le comparatif point par point.',
     keywords: 'plaque nfc vs qr code, qr code avis google, plaque nfc avis google, comparatif nfc qr, avis google nfc, taux conversion qr code, plaque nfc france, comparer nfc qr',
     date: '2026-05-10',
-    dateModified: '2026-09-13',
+    dateModified: '2026-10-07',
     category: 'Comparatif',
     faq: [
       { q: 'Plaque NFC ou QR code : quelle différence pour le client ?', a: 'Le NFC demande deux gestes : approcher le téléphone de la plaque, puis toucher la notification. Le QR code en demande cinq : sortir le téléphone, ouvrir l\'appareil photo, cadrer le code, attendre la détection, puis toucher la notification. Les deux mènent à la même page d\'avis Google, mais le QR suppose en plus que le client décide de scanner.' },
@@ -804,11 +804,11 @@ export const seoData: Record<string, ArticleSeo> = {
     ],
   },
   'nfc-avis-clients': {
-    title: 'NFC et avis clients : le guide complet 2026',
-    description: 'Collecter plus d\'avis Google avec une plaque NFC : fonctionnement, placement par métier, mise en place en 20 minutes et scripts équipe. Guide 2026.',
+    title: 'NFC et avis clients : comment ça marche, étape par étape',
+    description: 'Comment une puce NFC ouvre la page d\'avis Google d\'un geste : fonctionnement, téléphones compatibles, mise en place, placement par métier et scripts pour l\'équipe.',
     keywords: 'NFC avis clients, plaque NFC avis google, collecte avis NFC, NFC vs QR code, plaque avis restaurant, NFC commerce, avis google automatique',
     date: '2025-11-02',
-    dateModified: '2026-09-13',
+    dateModified: '2026-10-07',
     category: 'Technologie',
     faq: [
       { q: 'Comment fonctionne une plaque NFC pour les avis Google ?', a: 'La plaque NFC contient une puce programmée avec le lien direct vers votre page d\'avis Google. Quand un client approche son smartphone, le lien s\'ouvre automatiquement sans application ni scan. Le client n\'a plus qu\'à rédiger son avis et publier.' },

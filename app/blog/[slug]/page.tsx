@@ -127,6 +127,24 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
           {/* ── COLONNE CENTRE : CONTENU ── */}
           <article data-article className="max-w-none min-w-0">
+            {/* Sommaire sur téléphone et tablette : la colonne de gauche n'apparaît
+                qu'à partir de 1024 px, ces lecteurs n'avaient donc aucun sommaire.
+                Replié, il ne prend qu'une ligne ; ses ancres servent aussi à Google,
+                qui peut proposer un accès direct à une section dans ses résultats. */}
+            {article.tocSections.length > 0 && (
+              <details className="mb-8 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 lg:hidden">
+                <summary className="cursor-pointer text-sm font-bold uppercase tracking-wider text-gray-900">Sommaire</summary>
+                <ol className="mt-3 space-y-2 text-sm">
+                  {article.tocSections.map((section, i) => (
+                    <li key={section.id}>
+                      <a href={`#${section.id}`} className="text-gray-700 hover:text-primary">
+                        {i + 1}. {section.label}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </details>
+            )}
             <div className={PROSE} dangerouslySetInnerHTML={{ __html: debutContenu }} />
             <EncartProduit slug={params.slug} contexte={contexte} />
             {suiteContenu && <div className={PROSE} dangerouslySetInnerHTML={{ __html: suiteContenu }} />}

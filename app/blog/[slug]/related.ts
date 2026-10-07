@@ -60,7 +60,7 @@ export const relatedArticles: RelatedArticle[] = [
   { slug: 'plaque-nfc-vs-qr-code-avis-google', label: 'Plaque NFC vs QR Code : comparatif 2026' },
   { slug: 'doubler-avis-google-30-jours', label: 'Doubler vos avis Google en 30 jours' },
   { slug: 'obtenir-plus-avis-google', label: "10 méthodes pour obtenir plus d'avis Google" },
-  { slug: 'nfc-avis-clients', label: 'NFC : la nouvelle arme pour vos avis' },
+  { slug: 'nfc-avis-clients', label: 'NFC et avis clients : comment ça marche' },
   { slug: 'seo-local-recherches-google', label: 'SEO Local : grimper en tête des recherches' },
   { slug: 'avis-clients-influencent-business', label: 'Les avis influencent votre business' },
   { slug: 'booster-visibilite-locale', label: '5 astuces visibilité locale' },

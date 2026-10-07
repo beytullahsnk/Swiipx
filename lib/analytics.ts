@@ -44,6 +44,8 @@ export type AnalyticsEvent =
   | 'dismiss_promotion'
   // Demandes de devis multi-établissements (app/devis)
   | 'generate_lead'
+  // Outils (app/outils)
+  | 'calculator_used'
 
 declare global {
   interface Window {

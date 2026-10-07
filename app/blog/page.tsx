@@ -524,7 +524,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    title: 'NFC : la nouvelle arme pour vos avis clients',
+    title: 'NFC et avis clients : comment ça marche, étape par étape',
     excerpt: 'Guide 2026 pour collecter plus d’avis Google avec une plaque NFC : fonctionnement, mise en place, placements par métier, scripts, erreurs à éviter, ROI et FAQ.',
     category: 'Technologie',
     date: '2 novembre 2025',

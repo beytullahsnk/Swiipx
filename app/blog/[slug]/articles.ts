@@ -823,6 +823,7 @@ export const articles: Record<string, {
 <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
 <p class="text-sm text-emerald-900"><strong>⚙️ Faites votre calcul maintenant :</strong> ouvrez votre fiche, notez votre nombre d'avis et votre note, appliquez la formule avec l'objectif du palier suivant (4,0 puis 4,5), ajoutez 25 % de marge. Divisez ensuite par le nombre d'avis que vous obtenez chaque mois. Le résultat vous dit en combien de mois vous changerez de palier au rythme actuel, et combien il faut accélérer pour y arriver avant la haute saison.</p>
 </div>
+<p>Pour éviter le calcul à la main, notre <a href="/outils/calculateur-avis-google">calculateur d'avis Google</a> applique cette formule à vos propres chiffres, y compris quand vos prochains avis ne sont pas tous à 5 étoiles.</p>
 </section>
 
 <section id="note-volume-fraicheur" class="scroll-mt-28 mb-16">
@@ -4421,6 +4422,7 @@ export const articles: Record<string, {
 <div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
 <p class="text-sm text-blue-900"><strong>📊 À retenir :</strong> une note Google n'est pas une impression que l'on améliore en « faisant mieux ». Google indique qu'elle <a href="https://support.google.com/business/answer/4801187?hl=fr" target="_blank" rel="noopener noreferrer">correspond à la moyenne de tous les avis publiés sur Google pour l'établissement</a>, et qu'après un nouvel avis sa mise à jour peut prendre jusqu'à deux semaines. Une moyenne se pilote — à condition de savoir combien d'avis il faut collecter, et à quel rythme.</p>
 </div>
+<p>Pour faire le calcul avec vos propres chiffres, utilisez notre <a href="/outils/calculateur-avis-google">calculateur d'avis Google</a> : note actuelle, nombre d'avis, note visée, et le résultat s'affiche.</p>
 </section>
 
 <section id="formule" class="scroll-mt-28 mb-16">
@@ -10382,7 +10384,7 @@ export const articles: Record<string, {
     `,
   },
   'nfc-avis-clients': {
-    title: 'NFC : la nouvelle arme pour vos avis clients',
+    title: 'NFC et avis clients : comment ça marche, étape par étape',
     category: 'Technologie',
     date: '2 novembre 2025',
     readTime: '8 min',
@@ -10416,6 +10418,7 @@ export const articles: Record<string, {
 <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 not-prose">
 <p class="text-sm text-gray-700"><strong>À retenir :</strong> le NFC ne “crée” pas la satisfaction. Il transforme une satisfaction existante en preuve publique, au bon moment.</p>
 </div>
+<p>Vous cherchez directement le support ? Notre <a href="/">plaque NFC avis Google</a> arrive programmée avec votre lien d'avis, sans application ni abonnement.</p>
 </section>
 
 <section id="quest-ce-nfc" class="scroll-mt-28 mb-16">

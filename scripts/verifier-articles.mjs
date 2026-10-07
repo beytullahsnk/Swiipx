@@ -206,6 +206,12 @@ function ascii(t) {
 }
 
 const ISO = /^\d{4}-\d{2}-\d{2}$/
+// « vs » vaut « ou » : « plaque nfc vs qr code » et « Plaque NFC ou QR code » visent la même recherche.
+const MOTS_VIDES = new Set('de la le les des du d l un une et ou vs versus a au aux en dans chez pour par sur avec sans quel quelle quels quelles comment pourquoi combien est ce qui que qu vos votre nos notre mon ma mes son sa ses leur leurs'.split(' '))
+/** Mots porteurs de sens, sans accents ni pluriel en « s » : « Plaques NFC » et « plaque nfc » se valent. */
+function motsSignificatifs(t) {
+  return ascii(t.toLowerCase()).split(/[^a-z0-9]+/).filter((w) => w && !MOTS_VIDES.has(w)).map((w) => w.replace(/s$/, ''))
+}
 const aujourdhui = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date())
 const hier = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(Date.now() - 86400000))
 
@@ -611,6 +617,28 @@ async function principal() {
       if (s.faq.length < 5 || s.faq.length > 8) erreur(`${ou} : ${s.faq.length} questions dans seo-data.ts (5 à 8)`)
       if (json(questions.map((x) => x.q)) !== json(s.faq.map((f) => texte(f.q)))) erreur(`${ou} : les questions de seo-data.ts doivent être exactement les <h3> de la section FAQ, dans l'ordre`)
       else questions.forEach((x, i) => { if (x.a !== texte(s.faq[i].a)) erreur(`${ou} : la réponse FAQ n° ${i + 1} de seo-data.ts diffère du texte affiché`) })
+    }
+
+    // GEO, depuis le 2026-10-07 (docs/articles/CONSIGNES.md, partie 5) :
+    // les moteurs génératifs reprennent des réponses courtes et autonomes,
+    // placées sous des titres explicites, et Google classe une page sur une
+    // intention : le titre porte le mot-clé principal.
+    const motCle = s.keywords.split(',')[0].trim()
+    const motsTitre = new Set(motsSignificatifs(s.title))
+    const absents = motsSignificatifs(motCle).filter((w) => !motsTitre.has(w))
+    if (!motCle) erreur(`${ou} : aucun mot-clé principal (premier de la liste des mots-clés)`)
+    else if (absents.length) erreur(`${ou} : le titre SEO doit contenir le mot-clé principal « ${motCle} » (manque : ${absents.join(', ')})`)
+    const premiereSection = a.content.slice(0, a.content.indexOf('</section>'))
+    if (!/En une phrase|En bref/i.test(premiereSection)) erreur(`${ou} : la première section doit contenir l'encadré « En une phrase » (la réponse directe)`)
+    for (const m of a.content.matchAll(/<section id="([^"]+)"[^>]*>\s*<h2>[\s\S]*?<\/h2>\s*(<[a-z0-9]+)/g)) {
+      if (m[1].startsWith('faq')) continue
+      if (m[2] !== '<p') {
+        erreur(`${ou} : sous le titre de #${m[1]}, commencer par un paragraphe-réponse de 40 à 60 mots avant la liste ou les sous-titres`)
+        continue
+      }
+      const debut = m.index + m[0].length - m[2].length
+      const n = texte(a.content.slice(debut, a.content.indexOf('</p>', debut))).split(' ').length
+      if (n < 25 || n > 110) erreur(`${ou} : le paragraphe sous le titre de #${m[1]} fait ${n} mots : viser 40 à 60 (25 à 110 tolérés)`)
     }
 
     // Maillage : d'autres articles, et l'offre.

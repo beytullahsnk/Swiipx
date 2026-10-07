@@ -20,7 +20,8 @@
  *   extrait         chapeau, sous le titre et sur la carte du blog
  *   titreSeo        balise <title>, 65 caractères au plus
  *   descriptionSeo  meta description, 110 à 170 caractères
- *   motsCles        mots-clés séparés par des virgules
+ *   motsCles        mots-clés séparés par des virgules ; le premier est le mot-clé
+ *                   principal, dont chaque mot doit figurer dans titreSeo
  *   libelleLien     texte court des liens « Articles connexes », 70 caractères au plus
  *   resumeLlms      résumé détaillé pour public/llms.txt (les accents sont retirés ici)
  *   sommaire        [{ id, label }], une entrée par <section>, dans l'ordre

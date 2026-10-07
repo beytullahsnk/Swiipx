@@ -29,6 +29,7 @@ export default function Footer() {
     swiipx: [
       { name: 'À propos', href: '/a-propos' },
       { name: 'Blog', href: '/blog' },
+      { name: "Calculateur d'avis Google", href: '/outils/calculateur-avis-google' },
       { name: 'Contactez-nous', href: '/contact' },
       { name: 'Mentions légales', href: '/mentions-legales' },
       { name: 'CGV', href: '/cgv' },

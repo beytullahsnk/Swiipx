@@ -158,6 +158,18 @@ export function EncartProduit({ slug, contexte }: { slug: string; contexte: Cont
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
       </div>
+      {(contexte.type === 'statistiques' || contexte.type === 'fiche_google') && (
+        <p className="mt-3 border-t border-gray-200 pt-3 text-sm text-gray-600">
+          Combien d&apos;avis vous faut-il pour atteindre votre note ?{' '}
+          <Link
+            href="/outils/calculateur-avis-google"
+            onClick={() => clicPromotion('encart_article', slug, contexte.type, '/outils/calculateur-avis-google')}
+            className="font-semibold text-primary hover:underline"
+          >
+            Calculez-le
+          </Link>
+        </p>
+      )}
     </aside>
   )
 }
@@ -301,9 +313,18 @@ export function FinArticle({
       <h2 id="fin-article-titre" className="text-xl font-bold text-gray-900 sm:text-2xl">
         {contexte.titreFin}
       </h2>
+      {/* Lien vers l'accueil avec la requête principale en texte d'ancre, depuis
+          chaque article : Search Console montrait « plaque nfc avis google »
+          répartie entre l'accueil, les fiches produit et un ancien article,
+          aucune page ne dépassant la 9e place. Tous les articles désignent
+          désormais la même page pour cette requête. */}
       <p className="mt-2 leading-relaxed text-gray-600">
-        Chaque plaque arrive programmée avec le lien d&apos;avis Google de votre établissement. Choisissez selon le
-        nombre d&apos;emplacements à équiper :
+        Chaque{' '}
+        <Link href="/" className="font-semibold text-primary hover:underline">
+          plaque NFC avis Google
+        </Link>{' '}
+        arrive programmée avec le lien d&apos;avis de votre établissement. Choisissez selon le nombre d&apos;emplacements
+        à équiper :
       </p>
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
         {PACK_LIST.map((pack) => {

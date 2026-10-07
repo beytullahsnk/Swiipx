@@ -29,7 +29,7 @@ export default function HeroSection() {
 
             {/* Headline — positionnement : prête à l'emploi (vs concurrents à app) */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.05] tracking-tight">
-              La plaque avis Google{' '}
+              La plaque NFC avis Google{' '}
               <span className="text-primary">prête à l&apos;emploi</span>
             </h1>
 
