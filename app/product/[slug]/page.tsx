@@ -283,7 +283,7 @@ export default function ProductDetailPage() {
       quantity,
       value: product.price * quantity,
       currency: 'EUR',
-      source: 'product_page',
+      emplacement: 'product_page',
     })
   }
 

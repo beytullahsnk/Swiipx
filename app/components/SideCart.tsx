@@ -28,7 +28,7 @@ export default function SideCart() {
       value: toEuros(totalCents()),
       currency: 'EUR',
       items_count: totalItems(),
-      source: 'side_cart',
+      emplacement: 'side_cart',
     })
   }, [isOpen])
 
@@ -37,7 +37,7 @@ export default function SideCart() {
       value: toEuros(totalCents()),
       currency: 'EUR',
       items_count: totalItems(),
-      source: 'side_cart',
+      emplacement: 'side_cart',
     })
     closeCart()
     router.push('/checkout')
