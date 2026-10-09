@@ -85,7 +85,7 @@ Le calculateur `/outils/calculateur-avis-google` répond à « calculateur avis 
 ## Comparatif
 
 - [x] **Avis Google, Tripadvisor ou Trustpilot : où concentrer ses efforts** (`avis-google-tripadvisor-trustpilot`) : proposé le 2026-10-05, slug `avis-google-tripadvisor-trustpilot`
-- [ ] **Créer soi-même un QR code d'avis Google, et ses limites** (`qr-code-avis-google-gratuit`), priorité Search Console
+- [x] **Créer soi-même un QR code d'avis Google, et ses limites** (`qr-code-avis-google-gratuit`), priorité Search Console : proposé le 2026-10-09, slug `qr-code-avis-google-gratuit`
   - Mot-clé principal : « qr code avis google gratuit ».
   - Angle : ce que l'on peut faire gratuitement, à partir de ce que Google propose lui-même (sources de l'aide Google), puis les limites.
   - Distinct de `plaque-nfc-vs-qr-code-avis-google`.

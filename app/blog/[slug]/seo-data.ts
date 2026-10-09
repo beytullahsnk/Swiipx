@@ -26,6 +26,23 @@ export type ArticleSeo = {
 }
 
 export const seoData: Record<string, ArticleSeo> = {
+  'qr-code-avis-google-gratuit': {
+    title: 'QR code avis Google gratuit : le créer et ses limites',
+    description: 'Obtenir gratuitement le QR code d\'avis Google depuis sa fiche, éviter les codes dynamiques qui expirent, l\'imprimer lisible et savoir quand le gratuit ne suffit plus.',
+    keywords: 'qr code avis google gratuit, qr code avis google, creer qr code avis google, generer qr code avis google, plaque avis google gratuit, qr code statique dynamique, imprimer qr code avis, quishing qr code',
+    date: '2026-10-09',
+    dateModified: '2026-10-09',
+    category: 'Comparatif',
+    faq: [
+      { q: 'Le QR code d\'avis Google est-il vraiment gratuit ?', a: 'Oui. Google le fournit sans frais depuis la gestion de votre fiche d\'établissement, avec le lien d\'avis. Aucun abonnement ni outil tiers n\'est nécessaire pour l\'obtenir. Ce qui peut coûter de l\'argent, c\'est le support qui le porte : impression, plastification, présentoir ou plaque.' },
+      { q: 'Pourquoi je ne trouve pas le QR code sur mon téléphone ?', a: 'Parce que Google indique que les QR codes d\'avis se génèrent pour l\'instant depuis un navigateur sur ordinateur. Sur mobile, vous pouvez en général copier le lien d\'avis, mais pas télécharger le code. Connectez-vous sur un ordinateur avec le compte qui gère la fiche.' },
+      { q: 'Un QR code d\'avis Google peut-il expirer ?', a: 'Non, pas celui de Google : il contient directement votre lien d\'avis et fonctionne tant que la fiche reste la même. Les codes dynamiques de certains générateurs, en revanche, peuvent être désactivés à la fin d\'un essai gratuit. Un déménagement ou une nouvelle fiche impose aussi de vérifier le code.' },
+      { q: 'Faut-il un générateur de QR code pour les avis Google ?', a: 'Non. Google fournit déjà le code. Un générateur ne sert que si vous voulez un autre format d\'image, et il doit alors produire un code statique, sans compte ni redirection. Un code dynamique n\'apporte rien d\'utile pour un lien d\'avis qui ne change pas.' },
+      { q: 'Quelle taille donner à un QR code d\'avis sur un comptoir ?', a: 'Quelques centimètres de côté suffisent pour une lecture à faible distance, en suivant la règle pratique d\'un côté égal à environ un dixième de la distance de lecture. Laissez une marge blanche autour du code et testez-le depuis l\'endroit où se tient le client.' },
+      { q: 'Peut-on mettre son logo au centre du QR code ?', a: 'C\'est possible, mais déconseillé pour un premier support. La correction d\'erreur du QR code compense une petite partie masquée, mais un logo trop grand ou mal placé rend le code illisible sur certains téléphones. Un code sans logo, avec votre nom écrit à côté, reste plus sûr.' },
+      { q: 'Peut-on offrir une réduction aux clients qui scannent le QR code ?', a: 'Non. Le règlement de Google interdit d\'offrir une contrepartie, comme un paiement, une remise ou un produit gratuit, en échange d\'un avis. Il interdit aussi de solliciter seulement les clients satisfaits. Le QR code doit être proposé à tous les clients, sans promesse ni tri préalable.' },
+    ],
+  },
   'plaque-nfc-food-truck': {
     title: 'Plaque NFC food truck : avis Google, fiche et emplacement',
     description: 'Food truck et avis Google : régler une fiche sans adresse fixe, poser la plaque NFC loin du métal, quand demander un avis, privatisations et erreurs à éviter.',

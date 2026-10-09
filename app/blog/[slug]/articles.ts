@@ -18,6 +18,238 @@ export const articles: Record<string, {
   tocSections: { id: string; label: string }[]
   content: string
 }> = {
+  'qr-code-avis-google-gratuit': {
+    title: 'QR code avis Google gratuit : le créer soi-même, l\'imprimer, et ses limites',
+    category: 'Comparatif',
+    date: '9 octobre 2026',
+    readTime: '16 min',
+    author: 'Équipe Swiipx',
+    excerpt: 'Google fournit gratuitement le QR code de votre fiche d\'avis. Où le télécharger, pourquoi éviter les codes dynamiques des générateurs en essai, comment l\'imprimer lisible, le protéger du quishing, et quand passer à un support durable.',
+    tocSections: [
+      { id: 'qr-code-gratuit-possible', label: 'Un QR code gratuit, c\'est possible' },
+      { id: 'qr-code-google-officiel', label: 'Le QR code officiel de Google' },
+      { id: 'generateur-statique-dynamique', label: 'Statique ou dynamique' },
+      { id: 'imprimer-qr-code', label: 'Imprimer un code lisible' },
+      { id: 'supports-gratuits', label: 'Les supports gratuits' },
+      { id: 'controle-avant-affichage', label: 'Vérifier avant d\'afficher' },
+      { id: 'detournement-qr-code', label: 'Le risque de quishing' },
+      { id: 'limites-qr-code-gratuit', label: 'Les limites du gratuit' },
+      { id: 'gratuit-ou-payant', label: 'Gratuit, payant ou NFC' },
+      { id: 'faq-qr-code-gratuit', label: 'FAQ' },
+      { id: 'conclusion', label: 'Conclusion' },
+    ],
+    content: `
+<section id="qr-code-gratuit-possible" class="scroll-mt-28 mb-16">
+<h2>Peut-on avoir un QR code d'avis Google gratuit ?</h2>
+<p>Oui : un QR code d'avis Google gratuit se récupère directement depuis votre fiche d'établissement, sans passer par un générateur en ligne. Google le fournit avec le lien d'avis, et il ouvre le formulaire de notation de votre fiche. Ce qui coûte parfois de l'argent, ce n'est pas le code, c'est le support qui le porte.</p>
+<p>La question revient souvent chez les commerçants qui découvrent les plaques et présentoirs d'avis vendus en ligne : faut-il vraiment payer pour un QR code ? Beaucoup tapent « plaque avis Google gratuit » ou « QR code avis Google gratuit » dans l'espoir de trouver une solution sans dépense. Cette solution existe, et elle est même plus fiable que bien des outils qui se disent gratuits.</p>
+<p>Le piège n'est pas là où on l'attend. Le code fourni par Google ne coûte rien et ne s'éteint pas. En revanche, les générateurs de QR code « gratuits » trouvés en tête des résultats de recherche proposent souvent des codes dits dynamiques, qui passent par leurs serveurs et peuvent cesser de fonctionner à la fin d'une période d'essai. Et un QR code bien généré peut rester sans effet s'il est trop petit, mal imprimé, mal placé ou collé derrière une caisse où personne ne le voit.</p>
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900"><strong>📊 En une phrase :</strong> le QR code d'avis Google gratuit se télécharge depuis votre fiche d'établissement sur ordinateur ; imprimez-le assez grand, avec une marge blanche, testez-le sur plusieurs téléphones, et évitez les générateurs dont les codes dynamiques s'éteignent à la fin de l'essai.</p>
+</div>
+<p>Ce guide compare les solutions gratuites entre elles, puis avec les supports payants : le code officiel de Google, les générateurs en ligne, l'impression maison, et les supports NFC. Il donne les règles d'impression, une liste de contrôle avant affichage, et une grille pour décider quand le gratuit suffit et quand il atteint ses limites.</p>
+</section>
+
+<section id="qr-code-google-officiel" class="scroll-mt-28 mb-16">
+<h2>Comment obtenir le QR code officiel de Google, sans rien payer ?</h2>
+<p>Google génère le QR code d'avis depuis la gestion de votre fiche d'établissement, connecté avec le compte qui la gère. Vous ouvrez les avis, choisissez l'option pour recevoir plus d'avis, puis téléchargez l'image du code. Selon l'aide Google, cette génération se fait pour l'instant depuis un navigateur sur ordinateur, pas sur mobile.</p>
+<h3>Les étapes, telles que Google les décrit</h3>
+<p>La page d'aide de Google consacrée aux demandes d'avis (<a href="https://support.google.com/business/answer/16816815?hl=fr" target="_blank" rel="noopener noreferrer">aide Google Business Profile</a>) décrit le parcours suivant. Les libellés peuvent varier selon la version de l'interface, mais la logique reste la même :</p>
+<ol>
+<li>Connectez-vous, sur un ordinateur, avec le compte Google qui gère la fiche de l'établissement.</li>
+<li>Affichez votre fiche, puis sélectionnez « Voir les avis ».</li>
+<li>Choisissez « Recevoir plus d'avis », puis l'icône de partage.</li>
+<li>Copiez le lien, ou enregistrez le QR code avec un clic droit, puis « Enregistrer l'image sous ».</li>
+</ol>
+<p>La même page suggère plusieurs usages du lien et du code : le mentionner sur les reçus, dans les e-mails de remerciement, à la fin d'un échange avec le client, ou imprimer le QR code pour l'afficher dans le magasin. Google ne facture rien pour cela, et aucun abonnement n'est demandé.</p>
+<h3>Pourquoi le code de Google est le meilleur point de départ</h3>
+<p>Le QR code fourni par Google encode directement le lien d'avis de votre fiche. Il ne passe par aucun intermédiaire : pas de serveur tiers, pas de compte chez un prestataire, pas de redirection à maintenir. Tant que la fiche existe et reste la même, le code continue de mener au bon formulaire. C'est exactement ce que l'on attend d'un support imprimé, qui doit fonctionner pendant des années sans intervention.</p>
+<p>Si vous avez seulement besoin du lien, notre guide sur le <a href="/blog/lien-avis-google">lien d'avis Google</a> détaille où le trouver, comment le distinguer du lien de partage de la fiche et comment le tester. Le QR code n'est que la traduction de ce lien en image : tout ce qui vaut pour le lien vaut pour le code.</p>
+<h3>Ce qu'il faut faire si l'option n'apparaît pas</h3>
+<p>Le cas le plus fréquent est un compte qui n'est pas propriétaire ni gestionnaire de la fiche. Sans accès à la gestion, l'option de demande d'avis ne s'affiche pas. Il faut alors récupérer l'accès à la fiche, ou demander au propriétaire de vous ajouter comme gestionnaire. Une fiche non validée peut aussi limiter les fonctions disponibles. Dans tous les cas, mieux vaut régler l'accès plutôt que contourner le problème avec un lien bricolé : sans accès, vous ne pourrez ni répondre aux avis ni corriger vos informations.</p>
+</section>
+
+<section id="generateur-statique-dynamique" class="scroll-mt-28 mb-16">
+<h2>Générateur de QR code gratuit : pourquoi se méfier des codes dynamiques ?</h2>
+<p>Un générateur en ligne peut proposer un code statique, qui contient directement votre lien, ou un code dynamique, qui renvoie d'abord vers ses propres serveurs. Le code statique fonctionne indéfiniment. Le code dynamique dépend du prestataire : chez certains éditeurs, il est désactivé à la fin de l'essai gratuit si vous ne passez pas à une offre payante.</p>
+<h3>Statique ou dynamique : la différence qui compte</h3>
+<p>Un QR code statique est une image qui contient l'adresse elle-même. Le téléphone qui le lit ouvre directement cette adresse, sans rien demander à personne. Un QR code dynamique contient une adresse courte appartenant au générateur, qui redirige ensuite vers votre lien. Cette redirection permet de changer la destination après impression et de compter les scans, mais elle crée une dépendance : si le compte s'arrête, la redirection s'arrête aussi.</p>
+<h3>Ce que dit la documentation d'un éditeur connu</h3>
+<p>L'éditeur QR Code Generator l'écrit clairement dans son centre d'aide. À la fin de l'essai gratuit, ses codes dynamiques sont désactivés et renvoient vers une page de service au lieu de la destination prévue (<a href="https://support.qr-code-generator.com/hc/en-us/articles/7665046137613" target="_blank" rel="noopener noreferrer">documentation QR Code Generator sur la fin de l'essai</a>). Les codes statiques créés sur le même compte, eux, restent actifs sans limite de durée (<a href="https://support.qr-code-generator.com/hc/en-us/articles/7665040427405-Will-my-Static-QR-Codes-expire-at-the-end-of-the-free-trial" target="_blank" rel="noopener noreferrer">page d'aide sur les codes statiques</a>). L'éditeur précise aussi qu'un code dynamique ne peut pas être converti en code statique.</p>
+<p>Concrètement, un commerçant qui imprime un code dynamique créé pendant un essai, le colle sur son comptoir, puis laisse l'essai expirer, se retrouve avec un support qui envoie ses clients vers une page qui n'a rien à voir avec ses avis. Personne ne le prévient : le client scanne, tombe sur une page inattendue, et repart sans laisser d'avis.</p>
+<div class="bg-amber-50 rounded-xl p-4 border border-amber-200 not-prose">
+<p class="text-sm text-amber-900"><strong>⚠️ À retenir :</strong> pour un avis Google, vous n'avez besoin ni de suivi des scans ni de changer la destination. Le lien d'avis de votre fiche ne change pas tant que la fiche reste la même. Un code statique, ou mieux le code fourni par Google, suffit.</p>
+</div>
+<h3>Comment reconnaître un code statique</h3>
+<p>Avant de télécharger un code depuis un générateur, vérifiez trois points :</p>
+<ul>
+<li><strong>Le type annoncé.</strong> Le générateur doit indiquer « statique » ou « static ». Si l'outil vous demande de créer un compte pour obtenir le code, c'est souvent le signe d'un code dynamique.</li>
+<li><strong>L'adresse lue.</strong> Scannez le code avec votre téléphone, sans ouvrir la page : l'adresse affichée doit être celle de Google, pas un domaine court appartenant au générateur.</li>
+<li><strong>Les conditions de l'offre.</strong> Durée de l'essai, nombre de scans autorisés, renouvellement automatique : lisez-les avant d'imprimer quoi que ce soit.</li>
+</ul>
+</section>
+
+<section id="imprimer-qr-code" class="scroll-mt-28 mb-16">
+<h2>Comment imprimer un QR code d'avis lisible par tous les téléphones ?</h2>
+<p>Un QR code lisible tient à quatre réglages : une taille adaptée à la distance de lecture, une marge blanche tout autour, un contraste net entre modules sombres et fond clair, et une impression sans bavure. Le code fourni par Google contient déjà tout ce qu'il faut ; il ne faut ni le recadrer, ni le déformer, ni le décorer.</p>
+<h3>La taille : penser à la distance du client</h3>
+<p>Une règle pratique très répandue relie la taille du code à la distance à laquelle on le scanne : le côté du code fait environ un dixième de cette distance. Le guide de <a href="https://wavecnct.com/fr/blog/quelle-est-la-taille-minimale-d-un-qr-code-le-guide-complet" target="_blank" rel="noopener noreferrer">Wavecnct sur la taille minimale d'un QR code</a> donne ainsi environ 2 cm de côté pour un code tenu en main, autour de 20 cm de distance, et environ 10 cm pour une affiche lue à un mètre. Le même guide recommande de dimensionner le code pour la distance la plus défavorable, pas la plus courante.</p>
+<p>Pour un comptoir ou une caisse, où le client se tient à une soixantaine de centimètres, un code de 6 à 8 cm de côté laisse de la marge : c'est une application de la même règle, à vérifier par un essai. Sur un ticket de caisse ou une carte remise en main propre, quelques centimètres suffisent, à condition que l'impression soit nette.</p>
+<h3>La marge blanche : ne jamais la couper</h3>
+<p>Un QR code a besoin d'une zone vide tout autour de lui, appelée zone de silence. Selon le <a href="https://pyqrcode.readthedocs.io/en/latest/glossary.html" target="_blank" rel="noopener noreferrer">glossaire de la bibliothèque PyQRCode</a>, qui reprend la norme, cette zone doit faire quatre modules de large, un module étant l'un des petits carrés du code. Un cadre décoratif, un texte ou le bord d'un chevalet collé contre le code peuvent empêcher la lecture. Laissez donc une bordure blanche d'au moins quatre modules sur chaque côté, et ne recadrez pas l'image téléchargée au ras du motif.</p>
+<h3>Le contraste et les couleurs</h3>
+<p>Les lecteurs de QR codes cherchent des modules sombres sur un fond clair. Un code noir sur fond blanc reste le choix le plus sûr. Un code aux couleurs de votre enseigne peut fonctionner, à condition que les modules restent nettement plus foncés que le fond. Évitez les codes inversés (clair sur fond sombre), les dégradés et les fonds photographiques derrière le motif. Évitez aussi les supports brillants placés sous un éclairage direct : un reflet sur un plastique glacé peut masquer une partie du code.</p>
+<h3>La correction d'erreur : utile, mais pas magique</h3>
+<p>Les QR codes intègrent une correction d'erreur qui permet de lire un code partiellement abîmé. Le même <a href="https://pyqrcode.readthedocs.io/en/latest/glossary.html" target="_blank" rel="noopener noreferrer">glossaire PyQRCode</a> décrit quatre niveaux : L, qui restaure environ 7 % des données, M environ 15 %, Q environ 25 % et H environ 30 %. Ces niveaux expliquent pourquoi certains générateurs permettent d'ajouter un logo au centre : la correction compense la partie masquée. Mais elle a des limites. Une rayure sur l'un des trois grands carrés d'angle, qui servent au repérage, peut suffire à rendre le code illisible, quel que soit le niveau choisi.</p>
+<h3>L'impression maison</h3>
+<p>Une imprimante de bureau convient, à condition d'imprimer en qualité normale ou supérieure et de vérifier qu'aucun module ne bave. Enregistrez le code en PNG à sa taille d'origine, puis agrandissez-le dans votre logiciel de mise en page sans le lisser, plutôt que de partir d'une capture d'écran floue. Une plastification protège la feuille de l'humidité et des doigts, au prix de reflets possibles : testez le code après plastification, pas seulement avant.</p>
+</section>
+
+<section id="supports-gratuits" class="scroll-mt-28 mb-16">
+<h2>Sur quels supports placer un QR code d'avis gratuit ?</h2>
+<p>Les supports gratuits ou presque sont nombreux : ticket de caisse, facture, e-mail de remerciement, affichette imprimée au bureau, carte de visite déjà commandée, chevalet de table fait maison. Chacun a ses forces et ses faiblesses. Le bon choix dépend du moment où votre client est satisfait et du temps qu'il passe dans votre établissement.</p>
+<p>Le tableau ci-dessous classe les supports courants selon leur coût et leur durée de vie. Les appréciations sont qualitatives et données à titre indicatif : elles dépendent de votre commerce, de votre clientèle et de l'usure réelle des supports.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Support</th><th class="text-left p-3 border-b">Coût</th><th class="text-left p-3 border-b">Moment touché</th><th class="text-left p-3 border-b">Point faible</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Ticket de caisse ou facture</td><td class="p-3 border-b">Nul si le logiciel le permet</td><td class="p-3 border-b">Après le paiement</td><td class="p-3 border-b">Ticket souvent jeté ou refusé</td></tr>
+<tr><td class="p-3 border-b">E-mail ou SMS de remerciement</td><td class="p-3 border-b">Nul ou faible</td><td class="p-3 border-b">Plus tard, hors de l'établissement</td><td class="p-3 border-b">Suppose un contact et le consentement adapté</td></tr>
+<tr><td class="p-3 border-b">Affichette imprimée au bureau</td><td class="p-3 border-b">Une feuille et de l'encre</td><td class="p-3 border-b">Sur place, en attente</td><td class="p-3 border-b">Devient invisible, s'abîme vite</td></tr>
+<tr><td class="p-3 border-b">Chevalet de table fait maison</td><td class="p-3 border-b">Faible</td><td class="p-3 border-b">Pendant le repas ou l'attente</td><td class="p-3 border-b">Se renverse, se tache, se perd</td></tr>
+<tr><td class="p-3 border-b">Carte de visite</td><td class="p-3 border-b">Faible si déjà commandée</td><td class="p-3 border-b">Au départ du client</td><td class="p-3 border-b">Rangée puis oubliée</td></tr>
+<tr><td class="p-3">Plaque NFC avec QR code</td><td class="p-3">Achat unique</td><td class="p-3">Sur place, au comptoir</td><td class="p-3">N'est pas gratuite</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Le ticket et la facture</h3>
+<p>Le ticket de caisse a l'avantage d'arriver juste après le paiement, au moment où la prestation est terminée. Encore faut-il que le client le prenne : beaucoup de commerces ne l'impriment plus que sur demande. Pour les artisans et les professions qui envoient une facture, le QR code imprimé en pied de document, accompagné d'une phrase simple, reste une solution gratuite et durable.</p>
+<h3>L'affichette et le chevalet</h3>
+<p>L'affichette imprimée au bureau est la solution la plus répandue, et la plus vite oubliée. Une feuille scotchée près de la caisse se fond dans le décor en quelques jours, se décolle, jaunit au soleil. Un chevalet de table fait maison, glissé dans un porte-menu, tient mieux, mais il se renverse et se tache. Ces supports restent utiles pour démarrer, à condition de les remplacer dès qu'ils s'abîment.</p>
+<h3>L'emplacement compte plus que le support</h3>
+<p>Un QR code, gratuit ou non, ne sert que s'il se trouve là où le client a son téléphone en main et quelques secondes devant lui : comptoir de paiement, table, zone d'attente, poste de retrait. Notre guide sur <a href="/blog/ou-placer-plaque-avis-google">où placer une plaque d'avis Google</a> détaille les emplacements par type de commerce ; les mêmes règles valent pour une affichette.</p>
+</section>
+
+<section id="controle-avant-affichage" class="scroll-mt-28 mb-16">
+<h2>Comment vérifier un QR code d'avis avant de l'afficher ?</h2>
+<p>Un QR code d'avis se vérifie en trois temps : avant l'impression, en scannant l'image à l'écran ; après l'impression, sur le support final et à la distance réelle ; puis quelques jours plus tard, une fois le support en place. Chaque essai doit ouvrir le formulaire de notation de votre fiche, et non la fiche entière.</p>
+<div class="bg-emerald-50 rounded-xl p-4 border border-emerald-200 not-prose">
+<p class="text-sm text-emerald-900"><strong>⚙️ Méthode :</strong> testez avec au moins un iPhone et un Android, idéalement un téléphone ancien, avec un compte Google connecté et un autre déconnecté. Notez la date du test sur votre liste de supports.</p>
+</div>
+<h3>La liste de contrôle</h3>
+<ol>
+<li><strong>Destination.</strong> Le scan ouvre le formulaire d'avis de votre établissement, avec les étoiles à cocher, et le nom affiché est bien le vôtre.</li>
+<li><strong>Adresse.</strong> Avant d'ouvrir la page, l'adresse proposée par l'appareil photo est un domaine Google, pas un domaine de générateur ou de raccourcisseur.</li>
+<li><strong>Distance.</strong> Le code se lit depuis l'endroit où le client se tient réellement, sans qu'il ait à se pencher ni à zoomer.</li>
+<li><strong>Lumière.</strong> Le code se lit sous l'éclairage du magasin, y compris aux heures où le soleil frappe le comptoir ou la vitrine.</li>
+<li><strong>Marge.</strong> Aucun cadre, texte ou bord de support ne touche le motif.</li>
+<li><strong>Phrase d'accompagnement.</strong> Une phrase courte et neutre explique à quoi sert le code, par exemple « Votre avis sur Google nous aide : scannez ce code ».</li>
+<li><strong>Suivi.</strong> Le support figure sur votre liste des endroits où votre lien d'avis est utilisé, pour le retrouver en cas de changement de fiche.</li>
+</ol>
+<h3>Le contrôle dans la durée</h3>
+<p>Un support imprimé vieillit : l'encre pâlit, la plastification se raye, un coin se décolle. Refaites un essai de lecture à intervalles réguliers, par exemple à chaque changement de saison, et après tout événement qui touche la fiche (déménagement, changement de nom, nouvelle fiche). Si le code ne mène plus au bon formulaire, remplacez le support plutôt que d'attendre qu'un client vous le signale.</p>
+</section>
+
+<section id="detournement-qr-code" class="scroll-mt-28 mb-16">
+<h2>Un QR code d'avis affiché peut-il être détourné ?</h2>
+<p>Oui : un QR code imprimé et affiché en libre accès peut être recouvert par un autocollant frauduleux qui mène vers une autre page. Cette fraude porte un nom, le quishing, contraction de QR code et de phishing. Elle vise surtout les paiements, mais tout code exposé au public peut être concerné. Un contrôle visuel régulier suffit à s'en prémunir.</p>
+<h3>Comment fonctionne le quishing</h3>
+<p>La police fédérale belge décrit le principe dans sa page « <a href="https://www.police.be/5998/fr/node/26907" target="_blank" rel="noopener noreferrer">Quishing : attention aux faux QR codes</a> » : l'escroc colle son propre code par-dessus un code légitime, et la personne qui le scanne arrive sur une page frauduleuse. Une fiche de prévention de la gendarmerie du Morbihan, publiée sur le <a href="https://www.morbihan.gouv.fr/contenu/telechargement/69533/541373/file/202401_GGD56_Quishing-1.pdf" target="_blank" rel="noopener noreferrer">site de la préfecture</a>, appelle de son côté à vérifier l'adresse du site affiché après le scan et à se méfier des codes posés sur un autocollant. Selon un <a href="https://selectra.info/telecom/actualites/marche/qr-code-arnaque-quishing-verifier-avant-scanner" target="_blank" rel="noopener noreferrer">article de Selectra</a> qui cite le dispositif Cybermalveillance.gouv.fr, ce type d'hameçonnage revient régulièrement dans l'actualité depuis 2023, tout en restant marginal par rapport à l'hameçonnage par e-mail ou SMS.</p>
+<h3>Ce que cela change pour un commerçant</h3>
+<p>Un QR code d'avis ne sert pas à payer, et il intéresse moins les escrocs qu'un parcmètre. Mais votre client ne fait pas la différence : s'il scanne un code collé sur votre comptoir et arrive sur une page qui lui demande ses identifiants ou sa carte bancaire, c'est votre établissement qu'il associera à l'incident. Quelques réflexes limitent le risque :</p>
+<ul>
+<li>placez le code là où vous le voyez depuis votre poste de travail, plutôt que dans un coin isolé ;</li>
+<li>regardez-le en ouvrant et en fermant : un autocollant ajouté par-dessus se remarque ;</li>
+<li>préférez un support où le code est imprimé dans la matière ou sous une surface lisse, plutôt qu'une feuille sur laquelle on peut coller n'importe quoi ;</li>
+<li>scannez-le vous-même de temps en temps, en vérifiant que l'adresse affichée est bien celle de Google.</li>
+</ul>
+<p>Le formulaire d'avis Google ne demande jamais de données bancaires. Si un client vous signale une page qui en demande après avoir scanné votre code, retirez immédiatement le support et vérifiez qu'il n'a pas été recouvert.</p>
+</section>
+
+<section id="limites-qr-code-gratuit" class="scroll-mt-28 mb-16">
+<h2>Quelles sont les limites d'un QR code d'avis gratuit ?</h2>
+<p>Le QR code gratuit a trois limites principales : il demande au client plusieurs gestes (ouvrir l'appareil photo, cadrer, toucher le lien), il dépend d'un support imprimé qui s'use et finit par passer inaperçu, et il ne fait rien tout seul. Il fonctionne bien pour démarrer ; il montre ses limites quand le volume de clients augmente.</p>
+<h3>Le nombre de gestes</h3>
+<p>Pour lire un QR code, le client doit sortir son téléphone, ouvrir l'appareil photo ou un lecteur, viser le code, attendre que le téléphone le détecte, puis toucher le lien qui s'affiche. Ce n'est pas difficile, mais chaque étape est une occasion de renoncer, surtout à un comptoir où le client a déjà ses sacs, sa monnaie et son reçu en main. Notre comparatif <a href="/blog/plaque-nfc-vs-qr-code-avis-google">plaque NFC ou QR code</a> détaille la différence de parcours entre les deux technologies.</p>
+<h3>L'usure et l'invisibilité</h3>
+<p>Une feuille imprimée au bureau n'est pas conçue pour rester des mois à côté d'une caisse. L'humidité, les doigts, le soleil et les produits de nettoyage l'abîment. Surtout, l'œil s'habitue : un support que l'on voit tous les jours finit par disparaître, pour l'équipe comme pour les clients habitués. Un QR code que personne ne remarque ne coûte rien, mais ne rapporte rien non plus.</p>
+<h3>Le code ne demande rien à votre place</h3>
+<p>Aucun support, gratuit ou payant, ne remplace la demande orale. Un QR code affiché seul attend que le client prenne l'initiative ; un QR code montré par le commerçant au bon moment, avec une phrase simple, change la donne. Notre article sur les <a href="/blog/erreurs-demander-avis">erreurs à éviter quand on demande un avis</a> rappelle les formulations qui fonctionnent et celles qui mettent mal à l'aise.</p>
+<h3>Les règles de Google s'appliquent quel que soit le support</h3>
+<p>Le règlement de Google sur les contenus interdits (<a href="https://support.google.com/contributionpolicy/answer/7400114" target="_blank" rel="noopener noreferrer">règles relatives aux contributions</a>) interdit d'offrir une contrepartie (paiement, remise, produit ou service gratuit) en échange d'un avis, de décourager les avis négatifs, et de solliciter de manière sélective les avis positifs. Il demande aussi de ne pas exiger ni presser les clients de laisser une note sur place. Un QR code ne doit donc pas être accompagné d'une promesse de café offert, ni proposé seulement aux clients qui ont l'air contents, ni précédé d'un questionnaire qui trie les clients avant de les envoyer vers Google. Le même code, pour tous, sans contrepartie.</p>
+</section>
+
+<section id="gratuit-ou-payant" class="scroll-mt-28 mb-16">
+<h2>QR code gratuit, générateur payant ou plaque NFC : que choisir ?</h2>
+<p>Le QR code officiel de Google, imprimé soigneusement, suffit à un commerce qui démarre ou qui voit peu de clients sur place. Un générateur payant n'apporte rien d'utile pour les avis Google. Une plaque NFC avec QR code de secours se justifie quand le comptoir voit passer du monde chaque jour et que le support doit durer sans entretien.</p>
+<h3>La grille de décision</h3>
+<p>Le tableau suivant résume les trois options. Les appréciations sont qualitatives et données à titre indicatif, à adapter à votre situation.</p>
+<div class="overflow-x-auto not-prose my-6">
+<table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+<thead class="bg-gray-50">
+<tr><th class="text-left p-3 border-b">Critère</th><th class="text-left p-3 border-b">QR code Google imprimé</th><th class="text-left p-3 border-b">Générateur avec abonnement</th><th class="text-left p-3 border-b">Plaque NFC avec QR code</th></tr>
+</thead>
+<tbody>
+<tr><td class="p-3 border-b">Coût du code</td><td class="p-3 border-b">Gratuit</td><td class="p-3 border-b">Abonnement pour garder les codes dynamiques actifs</td><td class="p-3 border-b">Inclus dans l'achat</td></tr>
+<tr><td class="p-3 border-b">Dépendance à un tiers</td><td class="p-3 border-b">Aucune, hors Google</td><td class="p-3 border-b">Oui, pour les codes dynamiques</td><td class="p-3 border-b">Aucune si la puce contient le lien Google</td></tr>
+<tr><td class="p-3 border-b">Gestes pour le client</td><td class="p-3 border-b">Appareil photo, cadrage, lien</td><td class="p-3 border-b">Identiques</td><td class="p-3 border-b">Approcher le téléphone (ou scanner le QR code)</td></tr>
+<tr><td class="p-3 border-b">Durée de vie du support</td><td class="p-3 border-b">Celle de la feuille</td><td class="p-3 border-b">Celle de la feuille</td><td class="p-3 border-b">Support rigide prévu pour durer</td></tr>
+<tr><td class="p-3 border-b">Suivi des scans</td><td class="p-3 border-b">Non</td><td class="p-3 border-b">Oui</td><td class="p-3 border-b">Non</td></tr>
+<tr><td class="p-3">Adapté à</td><td class="p-3">Démarrage, faible passage, factures</td><td class="p-3">Campagnes marketing, pas aux avis</td><td class="p-3">Comptoir fréquenté, usage quotidien</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Hypothèse de calcul : ce que coûte vraiment le gratuit</h3>
+<p>Hypothèse de calcul, avec des valeurs d'illustration à remplacer par les vôtres : prenons une boutique qui réimprime et replastifie son affichette quatre fois par an parce qu'elle s'abîme, et qui y consacre à chaque fois un quart d'heure. Cela représente une heure par an, plus l'encre et les pochettes. Le coût en argent reste faible ; le vrai coût est ailleurs, dans les semaines où l'affichette, tachée ou décollée, n'est plus scannée par personne sans que l'équipe s'en aperçoive.</p>
+<p>À l'inverse, une plaque NFC est un achat unique. Chez Swiipx, le <a href="/product/starter">Pack Starter</a> comprend une plaque à 29,90 € HT, le <a href="/product/business">Pack Business</a> deux plaques à 54,90 € HT et le <a href="/product/pro">Pack Pro</a> cinq plaques à 89,90 € HT, sans abonnement. La question n'est pas de savoir si le gratuit coûte zéro euro, mais s'il est vu et utilisé chaque jour.</p>
+<h3>Quand le gratuit suffit</h3>
+<ul>
+<li>Vous démarrez et voulez tester la demande d'avis avant d'investir.</li>
+<li>Vos clients passent peu de temps sur place, et vous les recontactez par facture ou e-mail.</li>
+<li>Vous travaillez surtout à domicile ou à distance, sans comptoir.</li>
+</ul>
+<h3>Quand passer à un support durable</h3>
+<ul>
+<li>Votre comptoir voit passer des clients toute la journée et l'affichette s'use vite.</li>
+<li>Vous voulez un support qui reste propre et visible sans entretien.</li>
+<li>Vous voulez que les clients équipés en NFC n'aient qu'à approcher leur téléphone, avec un QR code de secours pour les autres.</li>
+</ul>
+<p>Si vous envisagez un support durable, notre comparatif des <a href="/blog/materiaux-plaque-nfc-avis-google">matériaux de plaques NFC</a> aide à choisir entre acrylique, bois, PVC et métal, et notre article sur la <a href="/blog/plaque-avis-google-sans-abonnement">plaque d'avis Google sans abonnement</a> explique pourquoi un support d'avis n'a pas besoin de paiement récurrent.</p>
+<h3>Ce que propose une plaque NFC Swiipx</h3>
+<p>Une plaque Swiipx est en acrylique premium de 120 × 120 mm et 3 mm d'épaisseur. Elle contient une puce NTAG215 et porte un QR code de secours imprimé ; elle est livrée déjà programmée avec le lien d'avis Google de votre établissement, avec un adhésif 3M. Il n'y a ni application, ni code d'activation, ni abonnement. Les iPhone XR, XS, SE de 2e génération et tous les modèles suivants lisent la puce sans application ; sur les iPhone 7, 8 et X, il faut ouvrir le Lecteur de tag NFC depuis le centre de contrôle ; sur Android, le NFC doit être activé. Le QR code couvre les autres téléphones.</p>
+</section>
+
+<section id="faq-qr-code-gratuit" class="scroll-mt-28 mb-16">
+<h2>Questions fréquentes sur le QR code d'avis Google gratuit</h2>
+<h3>Le QR code d'avis Google est-il vraiment gratuit ?</h3>
+<p>Oui. Google le fournit sans frais depuis la gestion de votre fiche d'établissement, avec le lien d'avis. Aucun abonnement ni outil tiers n'est nécessaire pour l'obtenir. Ce qui peut coûter de l'argent, c'est le support qui le porte : impression, plastification, présentoir ou plaque.</p>
+<h3>Pourquoi je ne trouve pas le QR code sur mon téléphone ?</h3>
+<p>Parce que Google indique que les QR codes d'avis se génèrent pour l'instant depuis un navigateur sur ordinateur. Sur mobile, vous pouvez en général copier le lien d'avis, mais pas télécharger le code. Connectez-vous sur un ordinateur avec le compte qui gère la fiche.</p>
+<h3>Un QR code d'avis Google peut-il expirer ?</h3>
+<p>Non, pas celui de Google : il contient directement votre lien d'avis et fonctionne tant que la fiche reste la même. Les codes dynamiques de certains générateurs, en revanche, peuvent être désactivés à la fin d'un essai gratuit. Un déménagement ou une nouvelle fiche impose aussi de vérifier le code.</p>
+<h3>Faut-il un générateur de QR code pour les avis Google ?</h3>
+<p>Non. Google fournit déjà le code. Un générateur ne sert que si vous voulez un autre format d'image, et il doit alors produire un code statique, sans compte ni redirection. Un code dynamique n'apporte rien d'utile pour un lien d'avis qui ne change pas.</p>
+<h3>Quelle taille donner à un QR code d'avis sur un comptoir ?</h3>
+<p>Quelques centimètres de côté suffisent pour une lecture à faible distance, en suivant la règle pratique d'un côté égal à environ un dixième de la distance de lecture. Laissez une marge blanche autour du code et testez-le depuis l'endroit où se tient le client.</p>
+<h3>Peut-on mettre son logo au centre du QR code ?</h3>
+<p>C'est possible, mais déconseillé pour un premier support. La correction d'erreur du QR code compense une petite partie masquée, mais un logo trop grand ou mal placé rend le code illisible sur certains téléphones. Un code sans logo, avec votre nom écrit à côté, reste plus sûr.</p>
+<h3>Peut-on offrir une réduction aux clients qui scannent le QR code ?</h3>
+<p>Non. Le règlement de Google interdit d'offrir une contrepartie, comme un paiement, une remise ou un produit gratuit, en échange d'un avis. Il interdit aussi de solliciter seulement les clients satisfaits. Le QR code doit être proposé à tous les clients, sans promesse ni tri préalable.</p>
+</section>
+
+<section id="conclusion" class="scroll-mt-28 mb-16">
+<h2>Conclusion : le gratuit fonctionne, à condition d'être bien fait</h2>
+<p>Le QR code d'avis Google gratuit existe, et c'est le meilleur point de départ : il vient de Google, ne dépend d'aucun prestataire et ne s'éteint pas. Ses limites tiennent au support et aux gestes demandés au client, pas au code lui-même. Bien imprimé, bien placé et testé, il rend de vrais services.</p>
+<p>Récapitulons. Téléchargez le code depuis votre fiche, sur ordinateur. Évitez les codes dynamiques des générateurs en essai gratuit. Imprimez-le assez grand, avec une marge blanche et un contraste net. Testez-le sur plusieurs téléphones, à la distance réelle, puis régulièrement. Surveillez qu'aucun autocollant ne vienne le recouvrir. Et proposez-le à tous vos clients, sans contrepartie ni tri. Le jour où l'affichette s'use plus vite qu'elle ne rapporte, un support durable prend le relais, comme une <a href="/">plaque NFC avis Google</a> qui associe puce et QR code.</p>
+<div class="bg-blue-50 rounded-xl p-6 border border-blue-200 not-prose">
+<p class="text-sm text-blue-900 mb-3"><strong>🎯 Votre affichette s'use plus vite qu'elle ne vous rapporte d'avis ?</strong></p>
+<p class="text-sm text-blue-900">Découvrez les <a href="/#product" class="font-semibold underline">plaques NFC Swiipx</a> : acrylique premium, puce NTAG215 programmée avec votre lien d'avis Google, adhésif 3M inclus, QR code de secours, garantie à vie sur la puce, <strong>sans abonnement</strong>. <a href="/product/starter" class="font-semibold underline">Pack Starter</a> à 29,90 € HT, <a href="/product/business" class="font-semibold underline">Pack Business</a> à 54,90 € HT et <a href="/product/pro" class="font-semibold underline">Pack Pro</a> à 89,90 € HT.</p>
+</div>
+</section>
+`,
+  },
   'plaque-nfc-food-truck': {
     title: 'Plaque NFC food truck : des avis Google pour un commerce qui change de place',
     category: 'Secteur',

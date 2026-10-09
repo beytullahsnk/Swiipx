@@ -46,6 +46,16 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 53,
+    title: 'QR code avis Google gratuit : le créer soi-même, l\'imprimer, et ses limites',
+    excerpt: 'Google fournit gratuitement le QR code de votre fiche d\'avis. Où le télécharger, pourquoi éviter les codes dynamiques des générateurs en essai, comment l\'imprimer lisible, le protéger du quishing, et quand passer à un support durable.',
+    category: 'Comparatif',
+    date: '9 octobre 2026',
+    dateIso: '2026-10-09',
+    readTime: '16 min',
+    slug: 'qr-code-avis-google-gratuit',
+  },
+  {
     id: 52,
     title: 'Plaque NFC food truck : des avis Google pour un commerce qui change de place',
     excerpt: 'Un food truck n\'a ni vitrine ni adresse fixe : sa fiche Google est le seul repère de ses clients. Zone desservie, horaires, autorisations, plaque loin du métal, privatisations : la méthode pour collecter des avis sans enfreindre les règles.',

@@ -13,6 +13,7 @@ export interface RelatedArticle {
  * titre à rallonge n'apporte rien.
  */
 export const relatedArticles: RelatedArticle[] = [
+  { slug: 'qr-code-avis-google-gratuit', label: 'QR code avis Google gratuit : le créer et ses limites' },
   { slug: 'plaque-nfc-food-truck', label: 'Plaque NFC pour food truck' },
   { slug: 'avis-google-tripadvisor-trustpilot', label: 'Avis Google, Tripadvisor ou Trustpilot : où concentrer ses efforts' },
   { slug: 'plaque-nfc-fleuriste', label: 'Plaque NFC pour fleuriste : avis Google toute l\'année' },
